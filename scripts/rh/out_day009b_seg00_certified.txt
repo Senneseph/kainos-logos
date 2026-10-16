@@ -1,0 +1,10 @@
+P-0.8 ECHO: W0=100000.0 W1=300000.0 width=200000.0
+  DT=5.0e-04 (n=400000000)  DT2=2.5e-04 (n=800000000)  CHUNK=32768  MAXN=219
+  t_end check: W0+DT*n = 300000.000000  (must equal W1=300000.0)
+  twin floor 0.002954 (dt/floor = 0.169)  anchor N(W0)=138065
+  expected wall ~ 0.2 h at 1.40e+06 samples/s (measured)
+engine gate GPU-vs-host max |diff| = 6.541e-10 (tol 1e-6)
+[dt  seg00 seg (100000, 300000)] flips=328590  N_now=466655  elapsed 73 s  rate 5.47e+06/s
+[dt2 seg00 seg (100000, 300000)] flips=328590  N_now=466655  elapsed 146 s  rate 5.48e+06/s
+  [seg00] N(300000) dt=466655 dt2=466655 agree=True  min_gap(dt2)=0.005750
+DONE: extension 328590 zeros on (1e5, 300000], min gap 0.005750; files zeros_T300000_ext_* written.

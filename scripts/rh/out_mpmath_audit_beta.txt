@@ -1,0 +1,22 @@
+(a) real-rotation check, dps=50 (Im must be ~ machine 0):
+    t =    1   Im[e^{i psi/2} beta] = 1.35613e-52
+    t =    3   Im[e^{i psi/2} beta] = 1.79092e-51
+    t =    7   Im[e^{i psi/2} beta] = 7.19341e-51
+    t =   15   Im[e^{i psi/2} beta] = 2.0346e-50
+    t =   25   Im[e^{i psi/2} beta] = 3.35119e-50
+    max = 3.35e-50   -> rotation VALID
+(b0) no missed zero below the first: min |beta(1/2+it)|, t in (0, 5.9), dps=25, dt=0.005:
+    min = 0.155912 at t = 5.9   (large ==> no missed zero below 6.0209489)
+(b) first on-line beta zeros (dps=50 bisection on the rotated real form):
+    sign crossings (dps=25 scan, dt=0.02): 10
+    beta zero 1:  t = 6.020948904697597
+    beta zero 2:  t = 10.24377030416655
+    beta zero 3:  t = 12.98809801231242
+(c) mirror-sum energy I12 for L12(s) = (1 + 2^{-s}) beta(s):
+    on-line beta zero t=6.020948905 : |L12| = 1.167e-39   I12 = 2.725e-78
+    on-line beta zero t=10.2437703 : |L12| = 3.611e-39   I12 = 2.608e-77
+    on-line beta zero t=12.98809801 : |L12| = 2.38e-39   I12 = 1.133e-77
+    leak zero s0 = i*pi/ln2 = 4.53236014183 i :
+        |L12(s0)|       = 1.229e-50   (exact algebraic zero: 2^{-s0} = e^{-i pi} = -1)
+        |L12(1 - s0-c)| = 0.569255   (mirror slot EMPTY)
+        I12(s0)         = 0.324052   > 0  (the broken mirror, as a positive number)

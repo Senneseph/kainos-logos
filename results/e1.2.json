@@ -1,0 +1,542 @@
+{
+  "config": {
+    "baseline_accuracy": 0.35,
+    "commit": "unknown",
+    "corpus": "data/regex/compositional_set.jsonl",
+    "dataset_hash": "ea7c0970774d3c5021e687519088748a5a40806b23867f41fddcffc534fa9d8f",
+    "margin": 0.65,
+    "n_records": 40,
+    "per_item": [
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-\\s[A-Za-z]{2}",
+        "id": "comp_000",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-\\s[A-Za-z]{2}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-[A-Za-z]{2}$",
+        "id": "comp_001",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-[A-Za-z]{2}$"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "^-$",
+        "id": "comp_002",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^-$"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z]-[A-Za-z]{0,5}",
+        "id": "comp_003",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]-[A-Za-z]{0,5}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-\\+(?:foo|bar)",
+        "id": "comp_004",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-\\+(?:foo|bar)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-\\s?[A-Za-z]{0,2}",
+        "id": "comp_005",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-\\s?[A-Za-z]{0,2}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z]{2}[A-Za-z]+-",
+        "id": "comp_006",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]{2}[A-Za-z]+-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^[A-Za-z]{2}(?:on|off)"
+        },
+        "expected": "^[A-Za-z]{2}(?:on|off)",
+        "id": "comp_007",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^[A-Za-z]{2}(?:on|off)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-[A-Za-z]",
+        "id": "comp_008",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-[A-Za-z]"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "\\d{3}(?i)[A-Za-z]*"
+        },
+        "expected": "\\d{3}(?i)[A-Za-z]*",
+        "id": "comp_009",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\d{3}(?i)[A-Za-z]*"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^\\d+[A-Za-z]"
+        },
+        "expected": "^\\d+[A-Za-z]",
+        "id": "comp_010",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^\\d+[A-Za-z]"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-[A-Za-z]{0,2}\\(",
+        "id": "comp_011",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-[A-Za-z]{0,2}\\("
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-.\\s?",
+        "id": "comp_012",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-.\\s?"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^\\d{4}[A-Za-z]"
+        },
+        "expected": "^\\d{4}[A-Za-z]",
+        "id": "comp_013",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^\\d{4}[A-Za-z]"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "\\(-[A-Za-z]{2}",
+        "id": "comp_014",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\(-[A-Za-z]{2}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^(?i)(?:[A-Za-z]|\\s)"
+        },
+        "expected": "^(?i)(?:[A-Za-z]|\\s)",
+        "id": "comp_015",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^(?i)(?:[A-Za-z]|\\s)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "\\s?-\\s",
+        "id": "comp_016",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\s?-\\s"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-\\d+(?i)",
+        "id": "comp_017",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-\\d+(?i)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "\\w(?i)(?:foo|bar)"
+        },
+        "expected": "\\w(?i)(?:foo|bar)",
+        "id": "comp_018",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\w(?i)(?:foo|bar)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "(?i)[A-Za-z](?:foo|bar)"
+        },
+        "expected": "(?i)[A-Za-z](?:foo|bar)",
+        "id": "comp_019",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)[A-Za-z](?:foo|bar)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z][A-Za-z]{2}-",
+        "id": "comp_020",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z][A-Za-z]{2}-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "(?i)-$",
+        "id": "comp_021",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)-$"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-(?i)\\d+",
+        "id": "comp_022",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-(?i)\\d+"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "--\\d+",
+        "id": "comp_023",
+        "pipeline": {
+          "ok": true,
+          "pcre": "--\\d+"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "[A-Za-z]{2}(?i)(?:foo|bar)"
+        },
+        "expected": "[A-Za-z]{2}(?i)(?:foo|bar)",
+        "id": "comp_024",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]{2}(?i)(?:foo|bar)"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "(?i)-",
+        "id": "comp_025",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^\\s*[A-Za-z]*"
+        },
+        "expected": "^\\s*[A-Za-z]*",
+        "id": "comp_026",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^\\s*[A-Za-z]*"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "(?i)-(?:\\d{3})",
+        "id": "comp_027",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)-(?:\\d{3})"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z]-",
+        "id": "comp_028",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z](?i)-",
+        "id": "comp_029",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z](?i)-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "(?i)\\d{4}"
+        },
+        "expected": "(?i)\\d{4}",
+        "id": "comp_030",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)\\d{4}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "(?i)\\d(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))"
+        },
+        "expected": "(?i)\\d(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))",
+        "id": "comp_031",
+        "pipeline": {
+          "ok": true,
+          "pcre": "(?i)\\d(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "[A-Za-z]{2}hello\\d+"
+        },
+        "expected": "[A-Za-z]{2}hello\\d+",
+        "id": "comp_032",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]{2}hello\\d+"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-(?i)$",
+        "id": "comp_033",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-(?i)$"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "-\\s[A-Za-z]{2}",
+        "id": "comp_034",
+        "pipeline": {
+          "ok": true,
+          "pcre": "-\\s[A-Za-z]{2}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "\\d{3,}(?i)\\s"
+        },
+        "expected": "\\d{3,}(?i)\\s",
+        "id": "comp_035",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\d{3,}(?i)\\s"
+        }
+      },
+      {
+        "baseline": {
+          "note": "",
+          "ok": true,
+          "pcre": "^[A-Za-z]{0,5}\\d{4}"
+        },
+        "expected": "^[A-Za-z]{0,5}\\d{4}",
+        "id": "comp_036",
+        "pipeline": {
+          "ok": true,
+          "pcre": "^[A-Za-z]{0,5}\\d{4}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": ".-\\d{3}",
+        "id": "comp_037",
+        "pipeline": {
+          "ok": true,
+          "pcre": ".-\\d{3}"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "\\d{3}hello-",
+        "id": "comp_038",
+        "pipeline": {
+          "ok": true,
+          "pcre": "\\d{3}hello-"
+        }
+      },
+      {
+        "baseline": {
+          "note": "cannot emit UnresolvedRef for 'hyphen' \u2014 resolve it first (candidates: none)",
+          "ok": false,
+          "pcre": null
+        },
+        "expected": "[A-Za-z]{2}\\d-",
+        "id": "comp_039",
+        "pipeline": {
+          "ok": true,
+          "pcre": "[A-Za-z]{2}\\d-"
+        }
+      }
+    ],
+    "seed": 42
+  },
+  "evidence": [
+    "results/phase-1/e1.2.json"
+  ],
+  "hypothesis": "the pipeline composes known operators into NOVEL combinations (compositional generalization, C1) at accuracy >= 0.8 and beats the no-CODEX DirectBaseline by a margin >= 0.1",
+  "metric": "pipeline composition accuracy on the compositional set (vs baseline, margin recorded)",
+  "name": "e1.2",
+  "passed": true,
+  "threshold": ">= 0.8 and >= baseline + 0.1",
+  "value": 1.0
+}

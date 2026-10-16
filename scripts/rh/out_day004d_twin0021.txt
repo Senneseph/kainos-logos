@@ -1,0 +1,19 @@
+dt=0.0025 walk: 360000001 points
+  ... 0 M pts (0 s)
+  ... 51 M pts (15 s)
+  ... 102 M pts (30 s)
+  ... 154 M pts (44 s)
+  ... 205 M pts (59 s)
+  ... 256 M pts (73 s)
+  ... 307 M pts (88 s)
+  ... 358 M pts (102 s)
+batched eval: 103 s
+N(1e6) @ dt=0.0021 = 1747142   (dt=0.005: 1747142 ; dt=0.02: 1747104)
+offset dt=0.0021 vs dt=0.005: final +0 (expected ~+1, i.e. <1 residual twin pair @0.005)
+difference events: 1
+recovered zero positions (dt=0.0025 grid): 1
+  first few: 100000.7425
+
+S(1e6) @ dt=0.0021 = -2.5086   (expect -2.5 +- 1 residual twin)
+
+total 112 s

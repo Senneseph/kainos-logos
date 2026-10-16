@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kainos/exchange/assertion-delta/1",
+  "title": "AssertionDelta — one semantic transaction of the distributed CODEX exchange",
+  "description": "The exchange unit is a semantic transaction, never a raw mutation: an Assertion (mirroring contract `kainos/codex/1` v1 — keep in sync; see $defs) plus the sender's node identity and an ISO-8601 timestamp. Merge semantics (idempotent, conflict-preserving, never averaging) live in `kainos.exchange.protocol`; the schema is the shape contract at every wire boundary. House style: self-contained, internal $refs only (same as codex.schema.json / ir.schema.json).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assertion", "node_id", "timestamp"],
+  "properties": {
+    "assertion": {
+      "description": "A CODEX assertion per the v1 contract (assertion-level fields mirror `kainos/codex/1` verbatim), with its mandatory provenance (ADR-0008).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "subject", "relation", "object", "status", "provenance"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "subject": { "$ref": "#/$defs/TermRef" },
+        "relation": { "$ref": "#/$defs/TermRef" },
+        "object": { "anyOf": [{ "$ref": "#/$defs/TermRef" }, { "type": "string" }] },
+        "polarity": { "type": "boolean" },
+        "context": { "type": "object" },
+        "validity": { "anyOf": [{ "$ref": "#/$defs/Interval" }, { "type": "null" }] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "status": { "enum": ["candidate", "established", "disputed", "obsolete", "hypothesis", "ambiguous", "contradicted", "inapplicable"] },
+        "provenance": { "$ref": "#/$defs/Provenance" },
+        "exception": { "anyOf": [{ "enum": ["unseen", "unresolved", "ambiguous", "conflicting", "unverified", "requires_context", "impossible"] }, { "type": "null" }] }
+      }
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The sending node's identity (provenance of the transaction itself)."
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "ISO-8601 send time, e.g. \"2026-08-21T00:00:00+00:00\".",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.,][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    }
+  },
+  "$defs": {
+    "TermRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri"],
+      "properties": {
+        "uri": { "type": "string", "minLength": 1 },
+        "media_type": { "type": ["string", "null"] },
+        "version": { "type": ["string", "null"] },
+        "hash": { "type": ["string", "null"] },
+        "retrieved_at": { "type": ["string", "null"] },
+        "authority": { "type": ["string", "null"] }
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "observer"],
+      "properties": {
+        "source": { "$ref": "#/$defs/Source" },
+        "observer": { "type": "string", "minLength": 1 },
+        "derived": { "type": "boolean" },
+        "verified": { "type": "boolean" },
+        "evidence": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": ["string", "null"] },
+        "to": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

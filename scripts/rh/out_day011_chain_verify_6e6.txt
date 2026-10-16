@@ -1,0 +1,7 @@
+list zeros_T6000000_ext_full.txt: 12193869 zeros, min 14.134725 max 5999999.897000
+strict monotone: OK   min gap 0.002300 at t=4316832.467
+twin-floor margin: min gap 0.0023 vs floor 0.002954 (day-4)
+splice at 3e5: first 466655 zeros IDENTICAL to certified list
+S_file(6e6) float = -2.934949  (O(1) expected; |S|>30 suspicious)
+RVM main(6e6) float = 12193871.9349   N - main = -2.9349 (day-3 convention S)
+CHAIN-VERIFY: PASS (float-level; dps cert is a later batch)

@@ -1,0 +1,20 @@
+zero file: /work/scripts/rh/zeros_T100000.txt
+zeros read: 138065  first: 14.134725141734695
+V1 n=   10: |main*prod - zeta| = 2.50190923545095343391455875564
+V1 n=   50: |main*prod - zeta| = 0.895879255982875482968802991978
+V1 n=  200: |main*prod - zeta| = 0.355366213998198605774687311389
+V1 n= 1000: |main*prod - zeta| = 0.115864469463543070129102450706
+V1 n= 2000: |main*prod - zeta| = 0.0702363383148279363484213097916
+
+V2 t=10.0 n=  500: Im(e^i*var * main * prod) = 0.01996   |x - zeta| = 0.189
+V2 t=10.0 n= 1000: Im(e^i*var * main * prod) = 0.01198   |x - zeta| = 0.1159
+V2 t=10.0 n= 1500: Im(e^i*var * main * prod) = 0.008871   |x - zeta| = 0.08657
+V2 t=14.134725142 n=  500: Im(e^i*var * main * prod) = -4.297e-12   |x - zeta| = 5.435e-11
+V2 t=14.134725142 n= 1000: Im(e^i*var * main * prod) = -2.471e-12   |x - zeta| = 3.257e-11
+V2 t=14.134725142 n= 1500: Im(e^i*var * main * prod) = -1.798e-12   |x - zeta| = 2.412e-11
+V2 t=100.0 n=  500: Im(e^i*var * main * prod) = -3.088e+4   |x - zeta| = 2.694e+5
+V2 t=100.0 n= 1000: Im(e^i*var * main * prod) = -259.5   |x - zeta| = 3607.0
+V2 t=100.0 n= 1500: Im(e^i*var * main * prod) = -33.2   |x - zeta| = 609.6
+V2 t=1000.0 n=  500: Im(e^i*var * main * prod) = 1.252e+679   |x - zeta| = 1.373e+679
+V2 t=1000.0 n= 1000: Im(e^i*var * main * prod) = -4.899e+341   |x - zeta| = 7.433e+341
+V2 t=1000.0 n= 1500: Im(e^i*var * main * prod) = -2.297e+245   |x - zeta| = 4.45e+245

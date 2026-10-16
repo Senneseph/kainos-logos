@@ -1,0 +1,1 @@
+walk pid 1212940 log out_day009b_zero_walk_1e5_6e6_gpu.txt

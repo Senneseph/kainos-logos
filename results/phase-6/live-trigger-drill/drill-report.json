@@ -1,0 +1,263 @@
+{
+  "date": "2026-08-22T03:55:44.120660+00:00",
+  "drill": "#156 live trigger drill",
+  "drill_closed_at": "2026-08-22T03:57:19.368545+00:00",
+  "frozen_script_hash": "50d5cfbd6308cab4",
+  "git_head": "ca14368a0510de0f55bc0e068ca4831f2b8155a6",
+  "mechanics_checks": {
+    "allowlist_not_applied": true,
+    "convergence": {
+      "converged": false,
+      "converged_at_session": null
+    },
+    "dedup_holds": true,
+    "dispute_fired_S02": true,
+    "final_store": {
+      "beyond_cap": [],
+      "line_end": 70,
+      "open_disputes": [
+        "cs-fS0206:45->46",
+        "cs-fS0240:45->47"
+      ],
+      "total": 174
+    },
+    "hermetic_no_posts": true,
+    "out_of_allowlist_S03": true,
+    "run2_divergence_documented": "ticket bodies embed the per-run report path by payload design (official E6.3 run files no tickets, so L7 is unaffected); all store/session state byte-identical",
+    "run2_identical_mod_runroot_paths": true,
+    "run2_raw_identical": false,
+    "stalled_persist_fired": true
+  },
+  "posted": {
+    "dispute:cs-fS0206:45->46": {
+      "kind": "open-dispute",
+      "posted_at": "2026-08-22T03:57:16.640514+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] open dispute at session end: cs-fS0206:45->46",
+      "wp": 223
+    },
+    "dispute:cs-fS0240:45->47": {
+      "kind": "open-dispute",
+      "posted_at": "2026-08-22T03:57:16.758663+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] open dispute at session end: cs-fS0240:45->47",
+      "wp": 224
+    },
+    "proposal:3:count-successor": {
+      "kind": "out-of-allowlist",
+      "posted_at": "2026-08-22T03:57:16.873507+00:00",
+      "severity": "medium",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] out-of-allowlist proposal at S03",
+      "wp": 225
+    },
+    "stalled:add-two-digit": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:17.220145+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: add-two-digit",
+      "wp": 228
+    },
+    "stalled:add-within-10": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:17.104338+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: add-within-10",
+      "wp": 227
+    },
+    "stalled:compare-numbers": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:17.581035+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: compare-numbers",
+      "wp": 231
+    },
+    "stalled:count-successor": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:16.988875+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: count-successor",
+      "wp": 226
+    },
+    "stalled:mult-within-100": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:17.459865+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: mult-within-100",
+      "wp": 230
+    },
+    "stalled:sub-within-30": {
+      "kind": "stalled-persist",
+      "posted_at": "2026-08-22T03:57:17.338184+00:00",
+      "severity": "high",
+      "subject": "[tutor loop \u00b7 LIVE DRILL #156] stall persisted after fix: sub-within-30",
+      "wp": 229
+    }
+  },
+  "reconciled": true,
+  "script": {
+    "hammer": "13 * 13 is what?",
+    "s2_lines": [
+      "after 40 comes 41",
+      "after 41 comes 42",
+      "after 42 comes 43",
+      "after 43 comes 44",
+      "after 44 comes 45",
+      "after 45 comes 46",
+      "after 46 comes 47",
+      "after 47 comes 48",
+      "after 48 comes 49",
+      "after 49 comes 50",
+      "after 50 comes 51",
+      "after 51 comes 52",
+      "after 52 comes 53",
+      "after 53 comes 54",
+      "after 54 comes 55",
+      "after 55 comes 56",
+      "after 56 comes 57",
+      "after 57 comes 58",
+      "after 58 comes 59",
+      "after 59 comes 60",
+      "after 60 comes 61",
+      "after 61 comes 62",
+      "after 62 comes 63",
+      "after 63 comes 64",
+      "after 64 comes 65",
+      "after 65 comes 66",
+      "after 66 comes 67",
+      "after 67 comes 68",
+      "after 68 comes 69",
+      "after 69 comes 70",
+      "what comes after 22?",
+      "what comes after 22?",
+      "what comes after 22?",
+      "what comes after 22?",
+      "0 + 1 is what?",
+      "10 + 1 is what?",
+      "subtraction is walking backward",
+      "comparison is walking the line",
+      "12 + 5 is what?",
+      "after 45 comes 47"
+    ],
+    "wrong_lesson": "after 45 comes 47"
+  },
+  "tickets": [
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S02 (open-dispute): evidence S02, cs-fS0206:45->46. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "dispute:cs-fS0206:45->46",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] open dispute at session end: cs-fS0206:45->46"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S02 (open-dispute): evidence S02, cs-fS0240:45->47. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "dispute:cs-fS0240:45->47",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] open dispute at session end: cs-fS0240:45->47"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S03 (out-of-allowlist): evidence S03, {\"action\": \"raise-line-cap\", \"concept\": \"count-successor\", \"reason\": \"drill P3: the student looks comfortable near the cap; try 80\"}. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "proposal:3:count-successor",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "medium",
+      "subject": "[tutor loop] out-of-allowlist proposal at S03"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session, fix-S03:count-successor. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:count-successor",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: count-successor"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:add-within-10",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: add-within-10"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:add-two-digit",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: add-two-digit"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:sub-within-30",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: sub-within-30"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:mult-within-100",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: mult-within-100"
+    },
+    {
+      "assignee": "Jesse Miller",
+      "body": "session S04 (stalled-persist): evidence S03, S04: second consecutive stalled session. Loop results: /home/jsmille/Projects/kainos-logos/results/phase-6/live-trigger-drill/e6.3-run1/loop-report.json. The loop is paused here; this change needs owner approval.",
+      "dedup_key": "stalled:compare-numbers",
+      "posted": false,
+      "project": "Kainos-Logos",
+      "severity": "high",
+      "subject": "[tutor loop] stall persisted after fix: compare-numbers"
+    }
+  ],
+  "trigger_fires": {
+    "open-dispute": [
+      "S02:dispute:cs-fS0206:45->46",
+      "S02:dispute:cs-fS0240:45->47",
+      "S03:dispute:cs-fS0206:45->46",
+      "S03:dispute:cs-fS0240:45->47",
+      "S04:dispute:cs-fS0206:45->46",
+      "S04:dispute:cs-fS0240:45->47",
+      "S05:dispute:cs-fS0206:45->46",
+      "S05:dispute:cs-fS0240:45->47",
+      "S06:dispute:cs-fS0206:45->46",
+      "S06:dispute:cs-fS0240:45->47"
+    ],
+    "out-of-allowlist": [
+      "S03:proposal:3:count-successor"
+    ],
+    "stalled-persist": [
+      "S04:stalled:count-successor",
+      "S04:stalled:add-within-10",
+      "S04:stalled:add-two-digit",
+      "S04:stalled:sub-within-30",
+      "S04:stalled:mult-within-100",
+      "S04:stalled:compare-numbers",
+      "S05:stalled:count-successor",
+      "S05:stalled:add-within-10",
+      "S05:stalled:add-two-digit",
+      "S05:stalled:sub-within-30",
+      "S05:stalled:mult-within-100",
+      "S05:stalled:compare-numbers",
+      "S06:stalled:count-successor",
+      "S06:stalled:add-within-10",
+      "S06:stalled:add-two-digit",
+      "S06:stalled:sub-within-30",
+      "S06:stalled:mult-within-100",
+      "S06:stalled:compare-numbers"
+    ]
+  }
+}

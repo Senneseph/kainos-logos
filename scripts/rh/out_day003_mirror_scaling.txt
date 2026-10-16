@@ -1,0 +1,46 @@
+== M1  the mirror scale |chi(s)| on the critical line ==
+  t =      1 : |chi(1/2+it)| - 1 = -2.22e-16
+  t =      7 : |chi(1/2+it)| - 1 = -5.15e-14
+  t =     14 : |chi(1/2+it)| - 1 = -9.59e-14
+  t =     25 : |chi(1/2+it)| - 1 = +5.68e-14
+  t =     57 : |chi(1/2+it)| - 1 = +1.42e-14
+  t =    143 : |chi(1/2+it)| - 1 = -2.27e-13
+  t =    400 : |chi(1/2+it)| - 1 = -2.27e-13
+  t =   1000 : |chi(1/2+it)| - 1 = -9.09e-13   (log form)
+  t =  10000 : |chi(1/2+it)| - 1 = +0.00e+00   (log form)
+  t = 1000000 : |chi(1/2+it)| - 1 = +2.33e-10   (log form)
+  max deviation from 1 over grid = 2.33e-10   (DERIVED identity, measured: on the line the mirror is pure PHASE)
+
+== M2  the scale off the line (grid, log form, all t) ==
+  |chi(sigma+it)| :  1.0000 = the line
+  t =   5.0000 : 1.0000 0.9886 0.9773 0.9551 0.9335 0.9125 0.9022 1.0116 1.0233 1.0470 1.0713 1.0959 1.1084
+  t =  14.1347 : 1.0000 1.0414 1.0844 1.1760 1.2753 1.3830 1.4403 0.9603 0.9221 0.8503 0.7841 0.7231 0.6943
+  t =  57.0000 : 1.0000 1.1166 1.2467 1.5543 1.9378 2.4159 2.6975 0.8956 0.8021 0.6434 0.5161 0.4139 0.3707
+  t = 143.0000 : 1.0000 1.1691 1.3668 1.8682 2.5536 3.4903 4.0806 0.8553 0.7316 0.5353 0.3916 0.2865 0.2451
+  t = 1000.0000 : 1.0000 1.2885 1.6603 2.7565 4.5766 7.5985 9.7908 0.7761 0.6023 0.3628 0.2185 0.1316 0.1021
+  t = 10000.0000 : 1.0000 1.4457 2.0902 4.3688 9.1316 19.0866 27.5943 0.6917 0.4784 0.2289 0.1095 0.0524 0.0362
+  sigma:    0.50    0.45    0.40    0.30    0.20    0.10    0.05    0.55    0.60    0.70    0.80    0.90    0.95
+  recurrence check |chi(s)| |chi(1-s)| = 1: max deviation = 2.05e-12  [DERIVED from the FE, measured]
+  min | |chi|-1 | off the line (whole grid, 72 points) = 1.144e-02
+  reading: |chi| crosses 1 off the line (<1 on one side, >1 on the other, by the
+  reciprocal).  The line is the ONLY isometric locus on this grid  [CONJECTURE, measured];
+  and a near-zero candidate in a |chi| < 1 region gets AMPLIFIED by the mirror step
+  (|f(MS)| = |f(s)|/|chi(s)|) -- the owner's 'scale down' as near-zero dynamics.)
+
+== M3  no shrinking chain: the mirrors are involutions ==
+  leak point s0 = i*pi/ln2 : apply M, then M again:
+    M(s0)      = (1.0, -4.532360)   |L12| = 0.569255 (EMPTY mirror slot, measured)
+    M(M(s0))   = (+0.000000, +4.532360) = s0 exactly  (Klein four: each mirror has order 2) -- no scale accumulates
+    raw scale at the two slots: |chi(s0)| = 8.4932e-01 , |chi(M s0)| = 1.1774e+00   (product 1.0000e+00: finite)
+    (finite -- the COMPLETED function, not the raw one, is the exactly self-reciprocal object; no scale accumulates because the orbit is finite)
+
+== M4  who leaves the gap empty: finite factor vs prime (Euler) part ==
+  FINITE factor  (1 + 2^{-s}) :  at s0       = 3.22e-16   (EXACT algebraic zero: 2^{-s0} = e^{-i pi} = -1)
+                                at mirror    = 0.5000   (NOT a zero -- the factor is 'alive' there)
+  PRIME part beta(s)          :  at s0       = 1.438708 (finite, irrelevant -- the factor already zeroed L12)
+                                at mirror    = 1.138511  (tail bound 4.6e-07)
+  product at the mirror slot  : 0.569255 = |L12(mirror)|  (matches the measured 0.569255 from day-002)
+  CONCLUSION (measured): the empty mirror slot is empty because the PRIME
+  (Euler) part beta is O(1) = 1.1385 there -- the finite factor 2 broke the
+  orbit, and no zero of the prime part arrives to fill the slot.  The gap
+  is a property of the factorization, as the owner suspected.

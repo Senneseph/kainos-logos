@@ -1,0 +1,12 @@
+P-0.8 ECHO: W0=5900000.0 W1=6000000.0 width=100000.0  ANCHOR=zeros_T5900000_ext_full.txt
+  resume anchor: N(W0)=11974855 from zeros_T5900000_ext_full.txt
+  DT=5.0e-04 (n=200000000)  DT2=2.5e-04 (n=400000000)  CHUNK=32768  MAXN=978
+  t_end check: W0+DT*n = 6000000.000000  (must equal W1=6000000.0)
+  twin floor 0.002954 (dt/floor = 0.169)  anchor N(W0)=138065
+  expected wall ~ 0.1 h at 1.40e+06 samples/s (measured)
+resuming: base count N0=11974855 (certified list up to W0)
+engine gate GPU-vs-host max |diff| = 8.568e-08 (tol 1e-6)
+[dt  seg00 seg (5900000, 6000000)] flips=219014  N_now=12193869  elapsed 213 s  rate 9.40e+05/s
+[dt2 seg00 seg (5900000, 6000000)] flips=219014  N_now=12193869  elapsed 434 s  rate 9.22e+05/s
+  [seg00] N(6000000) dt=12193869 dt2=12193869 agree=True  min_gap(dt2)=0.009750
+DONE: extension 219014 zeros on (5900000, 6000000], min gap 0.009750; files zeros_T6000000_ext_* written.

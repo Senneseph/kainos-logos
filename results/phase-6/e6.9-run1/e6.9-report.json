@@ -1,0 +1,3759 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_no_paper_text": {
+      "bad": [],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 65
+    },
+    "p2_honest_gaps_interleave": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_seam_facts": {
+      "bad": [],
+      "derived_refs": 41,
+      "pass": true,
+      "seam_facts": 26
+    },
+    "p4_walls_beds": {
+      "bad": [],
+      "bed_refs": 16,
+      "pass": true
+    },
+    "p5_conjecture_never_premise": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_joint_band_end": {
+      "bad": [],
+      "pass": true
+    },
+    "p7_bed_crosscheck": {
+      "bad": [],
+      "pass": true
+    },
+    "p8_mastery_determinism": {
+      "bad": [],
+      "final_total": 636,
+      "line_end": 72,
+      "mastery": {
+        "adjoin-i": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "char-cutout": {
+          "correct": 2,
+          "state": "practicing"
+        },
+        "chebotarev": {
+          "correct": 2,
+          "state": "practicing"
+        },
+        "class-bound": {
+          "correct": 3,
+          "state": "practicing"
+        },
+        "cm-conj": {
+          "correct": 4,
+          "state": "practicing"
+        },
+        "cyclotomic-cubic": {
+          "correct": 2,
+          "state": "practicing"
+        },
+        "disc-rd": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "frattini": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "golod-shaf": {
+          "correct": 4,
+          "state": "practicing"
+        },
+        "hajir-maire": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "minkowski-embed": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "mod4-split": {
+          "correct": 8,
+          "state": "practicing"
+        },
+        "number-field": {
+          "correct": 2,
+          "state": "practicing"
+        },
+        "pnt-ap": {
+          "correct": 2,
+          "state": "practicing"
+        },
+        "prime-split": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "shafarevich": {
+          "correct": 2,
+          "state": "practicing"
+        }
+      },
+      "new_events": 61,
+      "new_facts": [
+        "curriculum:adjoin-i",
+        "curriculum:char-cutout",
+        "curriculum:chebotarev",
+        "curriculum:class-bound",
+        "curriculum:cm-conj",
+        "curriculum:cyclotomic-cubic",
+        "curriculum:disc-rd",
+        "curriculum:frattini",
+        "curriculum:golod-shaf",
+        "curriculum:hajir-maire",
+        "curriculum:minkowski-embed",
+        "curriculum:mod4-split",
+        "curriculum:number-field",
+        "curriculum:pnt-ap",
+        "curriculum:prereq:adjoin-i>disc-rd",
+        "curriculum:prereq:char-cutout>cyclotomic-cubic",
+        "curriculum:prereq:chebotarev>prime-split",
+        "curriculum:prereq:class-bound>number-field",
+        "curriculum:prereq:cm-conj>number-field",
+        "curriculum:prereq:cyclotomic-cubic>disc-rd",
+        "curriculum:prereq:cyclotomic-cubic>prime-split",
+        "curriculum:prereq:disc-rd>number-field",
+        "curriculum:prereq:frattini>number-field",
+        "curriculum:prereq:golod-shaf>frattini",
+        "curriculum:prereq:hajir-maire>class-bound",
+        "curriculum:prereq:hajir-maire>golod-shaf",
+        "curriculum:prereq:hajir-maire>shafarevich",
+        "curriculum:prereq:minkowski-embed>number-field",
+        "curriculum:prereq:mod4-split>prime-split",
+        "curriculum:prereq:number-field>count-successor",
+        "curriculum:prereq:pnt-ap>chebotarev",
+        "curriculum:prereq:prime-split>number-field",
+        "curriculum:prereq:shafarevich>golod-shaf",
+        "curriculum:prereq:shafarevich>number-field",
+        "curriculum:prime-split",
+        "curriculum:shafarevich",
+        "lemma:adjoini",
+        "lemma:apbound",
+        "lemma:charcutout",
+        "lemma:chebot",
+        "lemma:classbound",
+        "lemma:cmunit",
+        "lemma:cyclotomic",
+        "lemma:discrim",
+        "lemma:fratin",
+        "lemma:gstest",
+        "lemma:hajir",
+        "lemma:minkembed",
+        "lemma:mod4minusone",
+        "lemma:numberfields",
+        "lemma:primesplit",
+        "lemma:shafbound"
+      ],
+      "pass": true,
+      "run_identity": "7db7bf12b725afb0",
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 523,
+        "seed_total": 523
+      }
+    }
+  },
+  "passed": 9,
+  "script_hash": "76ab560ecd45cb9c",
+  "seam_facts": {
+    "adjoini": {
+      "essence": "it is the exact sub-fact that keeps the root discriminant small: the new field stays within a factor of two",
+      "kind": "lemma",
+      "source_lines": "Step 4 (L693\u2013700)",
+      "statement": "adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one"
+    },
+    "apbound": {
+      "essence": "it keeps the base discriminant small: the log of the relative discriminant stays O of l log l",
+      "kind": "lemma",
+      "source_lines": "eq. (6) (L628\u2013631)",
+      "statement": "the product of the first l primes that are one mod three grows like e to the O of l log l"
+    },
+    "charcutout": {
+      "essence": "it is the exact sub-fact that gives the base discriminant: conductor multiplicity for coprime conductors",
+      "kind": "lemma",
+      "source_lines": "A.5 (L786\u2013800), Prop 3.2 (L508\u2013527)",
+      "statement": "an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes"
+    },
+    "chebot": {
+      "essence": "it is the existence engine \u2014 the primes that split the way the tower needs, with the bad ones excluded",
+      "kind": "lemma",
+      "source_lines": "Prop 3.6 (L565\u2013575)",
+      "statement": "chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded"
+    },
+    "classbound": {
+      "essence": "it is the pigeonhole door \u2014 a bounded class group makes the many norm-one elements pile up into few classes",
+      "kind": "lemma",
+      "source_lines": "Prop 3.7 (L582\u2013587)",
+      "statement": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size"
+    },
+    "cmunit": {
+      "essence": "it is the shape of the norm-one set \u2014 the unit-length lattice the window probes for",
+      "kind": "lemma",
+      "source_lines": "A.4 (L775\u2013782)",
+      "statement": "an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared"
+    },
+    "cyclotomic": {
+      "essence": "it is the base of the tower \u2014 l independent cubic pieces whose galois group has l generators",
+      "kind": "lemma",
+      "source_lines": "Prop 3.2 (L508\u2013527), A.11 (L805\u2013812)",
+      "statement": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed"
+    },
+    "discrim": {
+      "essence": "it is the bookkeeping that keeps the tower's arithmetic small at every level",
+      "kind": "lemma",
+      "source_lines": "A.6 (L800\u2013812), L530",
+      "statement": "the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant"
+    },
+    "fratin": {
+      "essence": "it is the bookkeeping of generators \u2014 d of a group is the number of its independent directions",
+      "kind": "lemma",
+      "source_lines": "Prop 3.3 (L545\u2013550), A.8 (L814\u2013822)",
+      "statement": "burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed"
+    },
+    "gstest": {
+      "essence": "it is the engine that turns many generators and few relations into an infinite group",
+      "kind": "lemma",
+      "source_lines": "Prop 3.4 (L554\u2013557), A.9 (L824\u2013827)",
+      "statement": "the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above"
+    },
+    "hajir": {
+      "essence": "it is the meta lemma of the arithmetic half \u2014 the criterion the geometric lemma feeds into",
+      "kind": "lemma",
+      "source_lines": "L82, Remark 3.1 (L481\u2013495)",
+      "statement": "the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound"
+    },
+    "minkembed": {
+      "essence": "it is the coordinate map that turns norm bounds into lattice point counts",
+      "kind": "lemma",
+      "source_lines": "L218\u2013224 (eq. 10)",
+      "statement": "the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm"
+    },
+    "mod4minusone": {
+      "essence": "it is the arithmetic door \u2014 many primes of the right shape split at both steps of the tower",
+      "kind": "lemma",
+      "source_lines": "eq. (2) region (L280\u2013295); square tables = the house bed",
+      "statement": "x squared plus one equals zero modulo an odd prime q has a solution exactly when q is one modulo four, and it feeds the tower: when q is one mod four and splits in the lower field then q splits in the field with i adjoined, since x squared plus one splits over the residue field"
+    },
+    "numberfields": {
+      "essence": "it is the ground under the whole tower \u2014 embeddings, the totally real condition, and the integer norm fact the packing step cites",
+      "kind": "lemma",
+      "source_lines": "A.1 (L748\u2013753), L443",
+      "statement": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one"
+    },
+    "primesplit": {
+      "essence": "it names the bad primes \u2014 the finite set every source statement must exclude",
+      "kind": "lemma",
+      "source_lines": "A.2 (L754\u2013766)",
+      "statement": "a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list"
+    },
+    "shafbound": {
+      "essence": "it caps the relation count against the generator count \u2014 the upper line of the golod shafarevich comparison",
+      "kind": "lemma",
+      "source_lines": "Prop 3.5 (L559\u2013563), A.10 (L828\u2013835)",
+      "statement": "shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero"
+    }
+  },
+  "seed": "results/phase-6/e6.8-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "number-field",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: Number fields: embeddings, totally real, the integer norm",
+        "nearest_plan": [
+          "teach it first: the Number fields: embeddings, totally real, the integer norm lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 Number fields: embeddings, totally real, the integer norm is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "numberfields"
+      },
+      "surface": "state the numberfields rule"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "number-field",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:numberfields"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:numberfields"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:numberfields",
+          "turn:S02:02",
+          "source:numberfields"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one"
+      },
+      "surface": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "number-field",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:numberfields"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one",
+        "evidence": [
+          "lemma:numberfields"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "numberfields"
+      },
+      "surface": "state the numberfields rule"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "prime-split",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:primesplit"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:primesplit"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:primesplit",
+          "turn:S02:04",
+          "source:primesplit"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list"
+      },
+      "surface": "a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "prime-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:primesplit"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list",
+        "evidence": [
+          "lemma:primesplit"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a rational prime in a field extension either splits into several distinct primes, stays inert, or ramifies, and the ramified primes are exactly the ones that divide the discriminant, a finite list",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "primesplit"
+      },
+      "surface": "state the primesplit rule"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: The 1 mod 4 primes: the minus-one square and the K = L(i) link",
+        "nearest_plan": [
+          "teach it first: the The 1 mod 4 primes: the minus-one square and the K = L(i) link lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 The 1 mod 4 primes: the minus-one square and the K = L(i) link is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 5,
+        "x": 2
+      },
+      "surface": "does 2 squared plus one vanish modulo 5?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:mod4minusone"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:mod4minusone"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "x squared plus one equals zero modulo an odd prime q has a solution exactly when q is one modulo four, and it feeds the tower: when q is one mod four and splits in the lower field then q splits in the field with i adjoined, since x squared plus one splits over the residue field",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:mod4minusone",
+          "turn:S02:07",
+          "source:mod4minusone"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "x squared plus one equals zero modulo an odd prime q has a solution exactly when q is one modulo four, and it feeds the tower: when q is one mod four and splits in the lower field then q splits in the field with i adjoined, since x squared plus one splits over the residue field"
+      },
+      "surface": "x squared plus one equals zero modulo an odd prime q has a solution exactly when q is one modulo four, and it feeds the tower: when q is one mod four and splits in the lower field then q splits in the field with i adjoined, since x squared plus one splits over the residue field"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 2 squared plus one is 1 times 5",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "2 squared plus one is 5, and that is exactly 1 times 5 \u2014 the table says yes.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 5,
+        "x": 2
+      },
+      "surface": "does 2 squared plus one vanish modulo 5?"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the residue is 2",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "1 squared plus one is 2, which is below 7 \u2014 the table says no.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 7,
+        "x": 1
+      },
+      "surface": "does 1 squared plus one vanish modulo 7?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0110:9->10",
+        "cs-fS0109:8->9",
+        "cs-fS0108:7->8",
+        "cs-fS0107:6->7",
+        "cs-fS0106:5->6",
+        "cs-fS0105:4->5",
+        "cs-fS0104:3->4",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the residue is 3 after taking one lot of 7",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0110:9->10",
+          "cs-fS0109:8->9",
+          "cs-fS0108:7->8",
+          "cs-fS0107:6->7",
+          "cs-fS0106:5->6",
+          "cs-fS0105:4->5",
+          "cs-fS0104:3->4",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "3 squared plus one is 10; taking one lot of 7 (7) leaves the residue 3 \u2014 the table says no.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 7,
+        "x": 3
+      },
+      "surface": "does 3 squared plus one vanish modulo 7?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 5 squared plus one is 2 times 13",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "5 squared plus one is 26, and that is exactly 2 times 13 \u2014 the table says yes.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 13,
+        "x": 5
+      },
+      "surface": "does 5 squared plus one vanish modulo 13?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 4 squared plus one is 1 times 17",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "4 squared plus one is 17, and that is exactly 1 times 17 \u2014 the table says yes.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 17,
+        "x": 4
+      },
+      "surface": "does 4 squared plus one vanish modulo 17?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the residue is 10",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "3 squared plus one is 10, which is below 11 \u2014 the table says no.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 11,
+        "x": 3
+      },
+      "surface": "does 3 squared plus one vanish modulo 11?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0137:36->37",
+        "cs-fS0136:35->36",
+        "cs-fS0135:34->35",
+        "cs-fS0134:33->34",
+        "cs-fS0133:32->33",
+        "cs-fS0132:31->32",
+        "cs-fS0131:30->31",
+        "cs-fS0130:29->30",
+        "cs-fS0129:28->29",
+        "cs-fS0128:27->28",
+        "cs-fS0127:26->27",
+        "cs-fS0126:25->26",
+        "cs-fS0125:24->25",
+        "cs-fS0124:23->24",
+        "cs-fS0123:22->23",
+        "cs-fS0122:21->22",
+        "cs-fS0121:20->21",
+        "cs-fS0120:19->20",
+        "cs-fS0119:18->19",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the residue is 18 after taking one lot of 19",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0137:36->37",
+          "cs-fS0136:35->36",
+          "cs-fS0135:34->35",
+          "cs-fS0134:33->34",
+          "cs-fS0133:32->33",
+          "cs-fS0132:31->32",
+          "cs-fS0131:30->31",
+          "cs-fS0130:29->30",
+          "cs-fS0129:28->29",
+          "cs-fS0128:27->28",
+          "cs-fS0127:26->27",
+          "cs-fS0126:25->26",
+          "cs-fS0125:24->25",
+          "cs-fS0124:23->24",
+          "cs-fS0123:22->23",
+          "cs-fS0122:21->22",
+          "cs-fS0121:20->21",
+          "cs-fS0120:19->20",
+          "cs-fS0119:18->19",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "6 squared plus one is 37; taking one lot of 19 (19) leaves the residue 18 \u2014 the table says no.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 19,
+        "x": 6
+      },
+      "surface": "does 6 squared plus one vanish modulo 19?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disc-rd",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:discrim"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:discrim"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:discrim",
+          "turn:S02:15",
+          "source:discrim"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant"
+      },
+      "surface": "the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disc-rd",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:discrim"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant",
+        "evidence": [
+          "lemma:discrim"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the absolute discriminant of a tower multiplies up the levels by the norm of the relative discriminant, the root discriminant is the discriminant raised to the reciprocal of the degree, and a step that ramifies nowhere does not change the root discriminant",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "discrim"
+      },
+      "surface": "state the discrim rule"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "adjoin-i",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:adjoini"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:adjoini"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:adjoini",
+          "turn:S02:17",
+          "source:adjoini"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one"
+      },
+      "surface": "adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "adjoin-i",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:adjoini"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one",
+        "evidence": [
+          "lemma:adjoini"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: adjoining i to a number field changes the relative discriminant by a factor that divides four, only the prime two can ramify since x squared plus one gets a double root only in even residue characteristic, and so the root discriminant of the new field is at most twice the old one",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "adjoini"
+      },
+      "surface": "state the adjoini rule"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "number-field",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:numberfields"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one",
+        "evidence": [
+          "lemma:numberfields"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a number field is a finite extension of the rationals, its embeddings into the complex numbers are all different, a field is totally real when every embedding lands in the reals, and the norm of a nonzero algebraic integer is a nonzero integer of absolute value at least one",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "numberfields"
+      },
+      "surface": "state the numberfields rule"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cyclotomic-cubic",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:cyclotomic"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:cyclotomic"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:cyclotomic",
+          "turn:S03:02",
+          "source:cyclotomic"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed"
+      },
+      "surface": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cyclotomic-cubic",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cyclotomic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed",
+        "evidence": [
+          "lemma:cyclotomic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "cyclotomic"
+      },
+      "surface": "state the cyclotomic rule"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cyclotomic-cubic",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cyclotomic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is the base of the tower \u2014 l independent cubic pieces whose galois group has l generators",
+        "evidence": [
+          "lemma:cyclotomic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it is the base of the tower \u2014 l independent cubic pieces whose galois group has l generators",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "cyclotomic"
+      },
+      "surface": "what is the cyclotomic for"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "char-cutout",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:charcutout"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:charcutout"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:charcutout",
+          "turn:S03:05",
+          "source:charcutout"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes"
+      },
+      "surface": "an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "char-cutout",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:charcutout"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes",
+        "evidence": [
+          "lemma:charcutout"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: an order three character cuts out the unique cyclic cubic subfield fixed by its kernel, and for characters whose conductors are pairwise coprime the conductors multiply, which is why the discriminant of the base field is the square of the product of the ramified primes",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "charcutout"
+      },
+      "surface": "state the charcutout rule"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "char-cutout",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:charcutout"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is the exact sub-fact that gives the base discriminant: conductor multiplicity for coprime conductors",
+        "evidence": [
+          "lemma:charcutout"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it is the exact sub-fact that gives the base discriminant: conductor multiplicity for coprime conductors",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "charcutout"
+      },
+      "surface": "what is the charcutout for"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: The class group under the root-discriminant bound",
+        "nearest_plan": [
+          "teach it first: the The class group under the root-discriminant bound lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 The class group under the root-discriminant bound is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "m": 2,
+        "mode": "holes",
+        "p": 5
+      },
+      "surface": "what is the biggest hole guaranteed when 5 items go into 2 holes?"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:classbound"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:classbound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:classbound",
+          "turn:S03:09",
+          "source:classbound"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size"
+      },
+      "surface": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0103:2->3",
+        "lemma:classbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0103:2->3",
+          "lemma:classbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the biggest hole is guaranteed to hold 3 \u2014 2 lots of 2 leave 1 over, and the 3th lot does not fit, so that leftover has to land in one hole.",
+      "slots": {
+        "m": 2,
+        "mode": "holes",
+        "p": 5
+      },
+      "surface": "what is the biggest hole guaranteed when 5 items go into 2 holes?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0103:2->3",
+        "lemma:classbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0103:2->3",
+          "lemma:classbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the biggest hole is guaranteed to hold 3 \u2014 2 lots of 3 leave 1 over, and the 3th lot does not fit, so that leftover has to land in one hole.",
+      "slots": {
+        "m": 3,
+        "mode": "holes",
+        "p": 7
+      },
+      "surface": "what is the biggest hole guaranteed when 7 items go into 3 holes?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:classbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size",
+        "evidence": [
+          "lemma:classbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "classbound"
+      },
+      "surface": "state the classbound rule"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "chebotarev",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:chebot"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:chebot"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:chebot",
+          "turn:S03:13",
+          "source:chebot"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded"
+      },
+      "surface": "chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "chebotarev",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:chebot"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded",
+        "evidence": [
+          "lemma:chebot"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: chebotarev's density theorem says the primes whose frobenius class is a prescribed element exist in infinitely many, and the finitely many ramified primes may be excluded",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "chebot"
+      },
+      "surface": "state the chebot rule"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "chebotarev",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:chebot"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is the existence engine \u2014 the primes that split the way the tower needs, with the bad ones excluded",
+        "evidence": [
+          "lemma:chebot"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it is the existence engine \u2014 the primes that split the way the tower needs, with the bad ones excluded",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "chebot"
+      },
+      "surface": "what is the chebot for"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "pnt-ap",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:apbound"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:apbound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the product of the first l primes that are one mod three grows like e to the O of l log l",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:apbound",
+          "turn:S03:16",
+          "source:apbound"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the product of the first l primes that are one mod three grows like e to the O of l log l"
+      },
+      "surface": "the product of the first l primes that are one mod three grows like e to the O of l log l"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "pnt-ap",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:apbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the product of the first l primes that are one mod three grows like e to the O of l log l",
+        "evidence": [
+          "lemma:apbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the product of the first l primes that are one mod three grows like e to the O of l log l",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "apbound"
+      },
+      "surface": "state the apbound rule"
+    },
+    "S03:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "pnt-ap",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:apbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it keeps the base discriminant small: the log of the relative discriminant stays O of l log l",
+        "evidence": [
+          "lemma:apbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it keeps the base discriminant small: the log of the relative discriminant stays O of l log l",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "apbound"
+      },
+      "surface": "what is the apbound for"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "frattini",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:fratin"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:fratin"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:fratin",
+          "turn:S04:01",
+          "source:fratin"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed"
+      },
+      "surface": "burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "frattini",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fratin"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed",
+        "evidence": [
+          "lemma:fratin"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: burnside's basis theorem reads the generator count of a pro three group off its frattini quotient, and killing generators in the frattini quotient keeps the generator count fixed while the relation count grows by at most the number killed",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "fratin"
+      },
+      "surface": "state the fratin rule"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: The GS test: at most d squared over four relations = infinite",
+        "nearest_plan": [
+          "teach it first: the The GS test: at most d squared over four relations = infinite lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 The GS test: at most d squared over four relations = infinite is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "d": 3,
+        "mode": "gsay",
+        "r": 2
+      },
+      "surface": "does the gs test say infinite for 3 generators and 2 relations?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:gstest"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:gstest"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:gstest",
+          "turn:S04:04",
+          "source:gstest"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above"
+      },
+      "surface": "the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 four times r is 8, at most d squared, 9, so the test says infinite",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i compared four times 2 (8) with 3 squared (9): below or at, so the golod shafarevich test says infinite.",
+      "slots": {
+        "d": 3,
+        "mode": "gsay",
+        "r": 2
+      },
+      "surface": "does the gs test say infinite for 3 generators and 2 relations?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 four times r is 12, at most d squared, 25, so the test says infinite",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i compared four times 3 (12) with 5 squared (25): below or at, so the golod shafarevich test says infinite.",
+      "slots": {
+        "d": 5,
+        "mode": "gsay",
+        "r": 3
+      },
+      "surface": "does the gs test say infinite for 5 generators and 3 relations?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the test is silent, four times r is 24, above d squared, 9",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i compared four times 6 (24) with 3 squared (9): above, so the test is silent \u2014 it proves nothing either way.",
+      "slots": {
+        "d": 3,
+        "mode": "gsay",
+        "r": 6
+      },
+      "surface": "does the gs test say infinite for 3 generators and 6 relations?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above",
+        "evidence": [
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the golod shafarevich test says a pro three group on d generators with r relations is infinite whenever r is at most d squared divided by four, and it is silent when r is above",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "gstest"
+      },
+      "surface": "state the gstest rule"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shafarevich",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:shafbound"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:shafbound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:shafbound",
+          "turn:S04:09",
+          "source:shafbound"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero"
+      },
+      "surface": "shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shafarevich",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shafbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero",
+        "evidence": [
+          "lemma:shafbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: shafarevich's bound says that for a totally real cubic base field without the cube roots of unity the relation count of its maximal unramified pro three extension is at most the generator count plus an absolute constant c zero",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "shafbound"
+      },
+      "surface": "state the shafbound rule"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shafarevich",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shafbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it caps the relation count against the generator count \u2014 the upper line of the golod shafarevich comparison",
+        "evidence": [
+          "lemma:shafbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it caps the relation count against the generator count \u2014 the upper line of the golod shafarevich comparison",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "shafbound"
+      },
+      "surface": "what is the shafbound for"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cm-conj",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:cmunit"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:cmunit"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:cmunit",
+          "turn:S04:12",
+          "source:cmunit"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared"
+      },
+      "surface": "an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cm-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "lemma:cmunit"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "25",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "lemma:cmunit"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "3 squared plus 4 squared is 25 \u2014 i checked both squares on the line and added them.",
+      "slots": {
+        "a": 3,
+        "b": 4,
+        "mode": "sumsq"
+      },
+      "surface": "what is 3 squared plus 4 squared?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cm-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "lemma:cmunit"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "25",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "lemma:cmunit"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "3 squared plus 4 squared is 25 \u2014 i checked both squares on the line and added them.",
+      "slots": {
+        "a": 3,
+        "b": 4,
+        "mode": "sumsq"
+      },
+      "surface": "what is 3 squared plus 4 squared?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cm-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "lemma:cmunit"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "50",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "lemma:cmunit"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "1 squared plus 7 squared is 50 \u2014 i checked both squares on the line and added them.",
+      "slots": {
+        "a": 1,
+        "b": 7,
+        "mode": "sumsq"
+      },
+      "surface": "what is 1 squared plus 7 squared?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cm-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cmunit"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared",
+        "evidence": [
+          "lemma:cmunit"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: an element that multiplies with its conjugate to one has absolute value one in every complex embedding, it sits on the unit circle in every view, and the integer check in the ring with i is that three squared plus four squared is five squared",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "cmunit"
+      },
+      "surface": "state the cmunit rule"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "minkowski-embed",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:minkembed"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:minkembed"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:minkembed",
+          "turn:S04:17",
+          "source:minkembed"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm"
+      },
+      "surface": "the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "minkowski-embed",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:minkembed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm",
+        "evidence": [
+          "lemma:minkembed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the minkowski embedding sends a field of degree f into f dimensional complex space, and the product of the conjugates of an element is the square root of the absolute value of its norm",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "minkembed"
+      },
+      "surface": "state the minkembed rule"
+    },
+    "S04:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "hajir-maire",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:hajir"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:hajir"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:hajir",
+          "turn:S04:19",
+          "source:hajir"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound"
+      },
+      "surface": "the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound"
+    },
+    "S04:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "hajir-maire",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:hajir"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound",
+        "evidence": [
+          "lemma:hajir"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the hajir maire tower method says an infinite tower of unramified extensions of a totally real field exists when the generator count outgrows the relation cap at the levels, with the class group contribution controlled by the pigeonhole bound",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "hajir"
+      },
+      "surface": "state the hajir rule"
+    },
+    "S04:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shafarevich",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of shafbound is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:shafbound:no-proof-object-in-store-at-S04:21"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of shafbound is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "whydeep",
+        "slug": "shafbound"
+      },
+      "surface": "explain why the shafbound holds"
+    },
+    "S04:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of gstest is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:gstest:no-proof-object-in-store-at-S04:22"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of gstest is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "whydeep",
+        "slug": "gstest"
+      },
+      "surface": "explain why the gstest holds"
+    },
+    "S04:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "64",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two to the 6 is 64 \u2014 i doubled 6 times on the line, every step cited.",
+      "slots": {
+        "e": 6,
+        "mode": "duopow"
+      },
+      "surface": "how large is two raised to the 6?"
+    },
+    "S04:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: two to the 7 is 128, past my line which ends at 72 \u2014 the bound names a growth rate, not a number i can hold",
+        "evidence": [
+          "duopow:7:128-off-line-72-at-S04:24"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 two to the 7 is 128, past my line which ends at 72 \u2014 the bound names a growth rate, not a number i can hold I would rather say i don't know than guess.",
+      "slots": {
+        "e": 7,
+        "mode": "duopow"
+      },
+      "surface": "how large is two raised to the 7?"
+    },
+    "S04:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:26": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "24",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 24 unit pairs \u2014 i multiplied 4 by 3 to get 12, then doubled it.",
+      "slots": {
+        "a": 4,
+        "b": 4,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 4 by 4 grid have?"
+    },
+    "S04:27": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 2 squared plus one is 1 times 5",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "2 squared plus one is 5, and that is exactly 1 times 5 \u2014 the table says yes.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 5,
+        "x": 2
+      },
+      "surface": "does 2 squared plus one vanish modulo 5?"
+    },
+    "S04:28": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "50 is a sum of two squares in 3 ways \u2014 1 squared plus 7 squared, 5 squared plus 5 squared, 7 squared plus 1 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 50
+      },
+      "surface": "in how many ways is 50 a sum of two squares?"
+    },
+    "S04:29": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: proving the unit pairs grow to a power above one is not a capability i have been taught",
+        "evidence": [
+          "savant-wall:power-growth:no-capability-yet-at-S04:29"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 proving the unit pairs grow to a power above one is not a capability i have been taught I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    }
+  },
+  "value": "PASS e6.9: 9/9"
+}

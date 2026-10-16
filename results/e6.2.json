@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "033cd45",
+    "dataset_hash": "fef771e00e5ed982",
+    "seed": "deterministic (scripted teacher; no randomness anywhere in the ladder)"
+  },
+  "evidence": [
+    "results/phase-6/e6.2-run1/session-S05.json",
+    "results/phase-6/e6.2-run1/session-S06.json",
+    "results/phase-6/e6.2-run1/session-S07.json",
+    "results/phase-6/e6.2-run1/session-S08.json",
+    "results/phase-6/e6.2-run1/session-S09.json",
+    "results/phase-6/e6.2-run1/codeX-S09.json",
+    "results/phase-6/e6.2-run2/codeX-S09.json"
+  ],
+  "hypothesis": "A system whose knowledge is a provenance-mandatory CODEX, taught the arithmetic ladder across five continuing sessions (the e6.1 store never reset), grasps each new concept EXACTLY when its rule enters the store \u2014 subtraction by walk-back, multiplication by composed repeated addition, comparison by walking \u2014 and it grasps the lattice AND its boundary: the two composition operations reach EXACTLY as far as the number line (every in-line instance derives with citations, including the boundary-maximal 70-70=0 and 10*7=70), and the first out-of-line instances stop at the boundary with distinct correct articulations (walk-off / beyond-line / line-end), never a fabricated value and no value beyond the line in the store; every turn is contract-valid, every proof re-plays offline, the dispute and repeated-conflict discipline continues over the carried conflict history, and the whole 135-turn run is deterministic, byte-identical on re-execution, and continuous with the official e6.1 store.",
+  "metric": "acceptance checks passed (0-8)",
+  "name": "e6.2",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

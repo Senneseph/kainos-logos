@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kainos/codex/1",
+  "title": "Kainos CODEX assertion — v1",
+  "description": "Structural contract mirroring kainos.codex.models.Assertion (the dataclasses are the implementation source of truth; this schema is the contract). Any field change is a breaking change requiring a version bump (kainos/codex/2) + ADR. ADR-0008: no bare-edge escape hatch — provenance.source is required here by schema as well as by the model.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "subject", "relation", "object", "status", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "subject": { "$ref": "#/$defs/TermRef" },
+    "relation": { "$ref": "#/$defs/TermRef" },
+    "object": { "anyOf": [{ "$ref": "#/$defs/TermRef" }, { "type": "string" }] },
+    "polarity": { "type": "boolean" },
+    "context": { "type": "object" },
+    "validity": { "anyOf": [{ "$ref": "#/$defs/Interval" }, { "type": "null" }] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "status": {
+      "enum": [
+        "candidate",
+        "established",
+        "disputed",
+        "obsolete",
+        "hypothesis",
+        "ambiguous",
+        "contradicted",
+        "inapplicable"
+      ]
+    },
+    "provenance": { "$ref": "#/$defs/Provenance" },
+    "exception": {
+      "anyOf": [
+        {
+          "enum": [
+            "unseen",
+            "unresolved",
+            "ambiguous",
+            "conflicting",
+            "unverified",
+            "requires_context",
+            "impossible"
+          ]
+        },
+        { "type": "null" }
+      ]
+    }
+  },
+  "$defs": {
+    "TermRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri"],
+      "properties": {
+        "uri": { "type": "string", "minLength": 1 },
+        "media_type": { "type": ["string", "null"] },
+        "version": { "type": ["string", "null"] },
+        "hash": { "type": ["string", "null"] },
+        "retrieved_at": { "type": ["string", "null"] },
+        "authority": { "type": ["string", "null"] }
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "observer"],
+      "properties": {
+        "source": { "$ref": "#/$defs/Source" },
+        "observer": { "type": "string", "minLength": 1 },
+        "derived": { "type": "boolean" },
+        "verified": { "type": "boolean" },
+        "evidence": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": ["string", "null"] },
+        "to": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

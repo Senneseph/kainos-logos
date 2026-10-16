@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "a573d01b8ea4c6edf30c694dcaf3ad4a420342bd",
+    "dataset_hash": null,
+    "final_total": 523,
+    "line_end_final": 72,
+    "script_hash": "f51491fbc980ebd8",
+    "seed": "results/phase-6/e6.7-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.8-run1/session-S02.json",
+    "results/phase-6/e6.8-run1/session-S03.json",
+    "results/phase-6/e6.8-run1/session-S04.json",
+    "results/phase-6/e6.8-run1/codeX-S04.json"
+  ],
+  "hypothesis": "The unit-distance problem band (S4) learns on the NEW theorem/lemma seam: the nine lemma facts and the erdosguess CONJECTURE are ESTABLISHED declared-source facts in the same codex store (no schema change); the student can STATE each one exactly, report the conjecture's status (open \u2014 never citable as a derivation premise, P5), and derive the empirical bed on the frozen 0..72 line (grid 3x3=12 / 4x4=24 / 5x5=40 / 6x6=60; two-square counts 25->4, 50->3; unit-circle meetings (1,1)->2, (2,0)->1, (1,2)->0 by the d2 rule); the confounders (flat / convex / generic norms) are stored and REFUTED as different-norm facts, never a refutation of the euclidean conjecture; the JOINT band-end ends on the measured walls \u2014 the power-growth probe (the proof is S6/S7) and the 7x7 grid wall (84 > 72, the line is frozen \u2014 the line extension is a separate pre-registration) \u2014 both honest needs_info with zero evidence; the paper never reaches the student (the frozen denylist scan over the whole script, P0); two runs byte-identical.",
+  "metric": "S4 checks passed (P0..P8)",
+  "name": "e6.8",
+  "passed": true,
+  "skipped": false,
+  "threshold": "9/9",
+  "value": "PASS e6.8: 9/9"
+}

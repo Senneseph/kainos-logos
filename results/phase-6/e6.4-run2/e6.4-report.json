@@ -1,0 +1,1944 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 42
+    },
+    "p2_ab_arc": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_parse_not_content": {
+      "bad": [],
+      "pass": true,
+      "twin_pairs": [
+        [
+          "S02:04",
+          "S02:05"
+        ],
+        [
+          "S02:08",
+          "S02:09"
+        ],
+        [
+          "S02:11",
+          "S02:12"
+        ],
+        [
+          "S02:17",
+          "S02:18"
+        ],
+        [
+          "S03:02",
+          "S03:03"
+        ],
+        [
+          "S03:06",
+          "S03:07"
+        ],
+        [
+          "S04:07",
+          "S04:08"
+        ]
+      ]
+    },
+    "p4_reauditable_facts": {
+      "bad": [],
+      "established": 6,
+      "facts": 7,
+      "pass": true,
+      "superseded": 1
+    },
+    "p5_grammar_first": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_honest_unknowns": {
+      "ambiguous_refs": [
+        "S02:01",
+        "S02:02",
+        "S02:13",
+        "S03:09",
+        "S04:09"
+      ],
+      "bad": [],
+      "pass": true
+    },
+    "p7_continuity_determinism": {
+      "bad": [],
+      "det_arm": true,
+      "fabrication_events": [],
+      "files": [
+        "codeX-S01.json",
+        "codeX-S02.json",
+        "codeX-S03.json",
+        "codeX-S04.json",
+        "session-S02.json",
+        "session-S03.json",
+        "session-S04.json"
+      ],
+      "line_end_final": 72,
+      "pass": true,
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 182,
+        "seed_total": 182
+      }
+    },
+    "p8_surface_wall": {
+      "bad": [],
+      "pass": true,
+      "phrasology": {
+        "concept": "phrasology",
+        "correct_derivations": 17,
+        "events": 24,
+        "prereq_gaps": [],
+        "state": "stable",
+        "unresolved_conflicts": 0
+      }
+    }
+  },
+  "passed": 8,
+  "script_hash": "03f00f1f04a9e040",
+  "seed": "results/phase-6/e6.3-run1/codeX-S03.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": null,
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "honestly, i don't know what that phrasing means to me yet \u2014 teach me the mapping. did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "surface": "what is the sum of 6 and 7?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": null,
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "honestly, i don't know what that phrasing means to me yet \u2014 teach me the mapping. did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "surface": "what number follows 11?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S02:03"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S02:03"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "what is the sum of {a} and {b}?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S02:03",
+          "turn:S02:03"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"what is the sum of {a} and {b}?\" as \"{a} + {b} is what?\".",
+      "surface": "the phrasing \"what is the sum of {a} and {b}?\" is the same as \"{a} + {b} is what?\""
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:03",
+      "response_ir": {
+        "answer": "13",
+        "evidence": [
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13"
+        ],
+        "parse_source": "lexicon:phrasing:S02:03",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 13.",
+      "surface": "what is the sum of 6 and 7?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "13",
+        "evidence": [
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 13.",
+      "surface": "6 + 7 is what?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "24",
+        "evidence": [
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 24.",
+      "surface": "19 + 5 is what?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S02:07"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S02:07"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "what number follows {n}?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S02:07",
+          "turn:S02:07"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"what number follows {n}?\" as \"what comes after {n}?\".",
+      "surface": "the phrasing \"what number follows {n}?\" is the same as \"what comes after {n}?\""
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0112:11->12"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:07",
+      "response_ir": {
+        "answer": "12",
+        "evidence": [
+          "cs-fS0112:11->12"
+        ],
+        "parse_source": "lexicon:phrasing:S02:07",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 12.",
+      "surface": "what number follows 11?"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0112:11->12"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "12",
+        "evidence": [
+          "cs-fS0112:11->12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 12.",
+      "surface": "what comes after 11?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S02:10"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S02:10"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "how many are left if you take {b} away from {a}?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S02:10",
+          "turn:S02:10"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"how many are left if you take {b} away from {a}?\" as \"{a} - {b} is what?\".",
+      "surface": "the phrasing \"how many are left if you take {b} away from {a}?\" is the same as \"{a} - {b} is what?\""
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0116:15->16",
+        "cs-fS0115:14->15",
+        "cs-fS0114:13->14",
+        "cs-fS0113:12->13",
+        "cs-fS0112:11->12",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:10",
+      "response_ir": {
+        "answer": "11",
+        "evidence": [
+          "cs-fS0116:15->16",
+          "cs-fS0115:14->15",
+          "cs-fS0114:13->14",
+          "cs-fS0113:12->13",
+          "cs-fS0112:11->12",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:10",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 11.",
+      "surface": "how many are left if you take 5 away from 16?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0116:15->16",
+        "cs-fS0115:14->15",
+        "cs-fS0114:13->14",
+        "cs-fS0113:12->13",
+        "cs-fS0112:11->12",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "11",
+        "evidence": [
+          "cs-fS0116:15->16",
+          "cs-fS0115:14->15",
+          "cs-fS0114:13->14",
+          "cs-fS0113:12->13",
+          "cs-fS0112:11->12",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 11.",
+      "surface": "16 - 5 is what?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": null,
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "honestly, i don't know what that phrasing means to me yet \u2014 teach me the mapping. did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "surface": "is 25 bigger than 6?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S02:14"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S02:14"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "is {a} bigger than {b}?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S02:14",
+          "turn:S02:14"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"is {a} bigger than {b}?\" as \"{a} - {b} is what?\".",
+      "surface": "the phrasing \"is {a} bigger than {b}?\" is the same as \"{a} - {b} is what?\""
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0117:16->17",
+        "cs-fS0116:15->16",
+        "cs-fS0115:14->15",
+        "cs-fS0114:13->14",
+        "cs-fS0113:12->13",
+        "cs-fS0112:11->12",
+        "cs-fS0111:10->11",
+        "cs-fS0110:9->10",
+        "cs-fS0109:8->9",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:14",
+      "response_ir": {
+        "answer": "8",
+        "evidence": [
+          "cs-fS0117:16->17",
+          "cs-fS0116:15->16",
+          "cs-fS0115:14->15",
+          "cs-fS0114:13->14",
+          "cs-fS0113:12->13",
+          "cs-fS0112:11->12",
+          "cs-fS0111:10->11",
+          "cs-fS0110:9->10",
+          "cs-fS0109:8->9",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:14",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 8.",
+      "surface": "is 17 bigger than 9?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S02:16"
+      ],
+      "kind": "correction",
+      "memory_diff": [
+        "phrasing:S02:16",
+        "phrasing:S02:14"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "parse_source": "grammar",
+        "replacement": "\"is {a} bigger than {b}?\" is \"is {a} larger than {b}?\" (mapping opened)",
+        "superseded": "\"is {a} bigger than {b}?\" was \"{a} - {b} is what?\" (mapping closed)"
+      },
+      "response_text": "corrected \u2014 from now on i understand \"is {a} bigger than {b}?\" as \"is {a} larger than {b}?\" (the old mapping is closed).",
+      "surface": "no \u2014 that was a mistake; the phrasing \"is {a} bigger than {b}?\" is the same as \"is {a} larger than {b}?\""
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:16",
+      "response_ir": {
+        "answer": "yes \u2014 17 is 8 steps beyond 9",
+        "evidence": [
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:16",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 17 is 8 steps beyond 9.",
+      "surface": "is 17 bigger than 9?"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 17 is 8 steps beyond 9",
+        "evidence": [
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 17 is 8 steps beyond 9.",
+      "surface": "is 17 larger than 9?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S03:01"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S03:01"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "what do you get when you count {a}, {b} times?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S03:01",
+          "turn:S03:01"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"what do you get when you count {a}, {b} times?\" as \"{a} * {b} is what?\".",
+      "surface": "the phrasing \"what do you get when you count {a}, {b} times?\" is the same as \"{a} * {b} is what?\""
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:01",
+      "response_ir": {
+        "answer": "42",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S03:01",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 42.",
+      "surface": "what do you get when you count 6, 7 times?"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "42",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 42.",
+      "surface": "6 * 7 is what?"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "phrasology",
+      "contract_valid": true,
+      "grounded": [
+        "phrasing:S03:04"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S03:04"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the number after {a} is {b}",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S03:04",
+          "turn:S03:04"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"the number after {a} is {b}\" as \"after {a} comes {b}\".",
+      "surface": "the phrasing \"the number after {a} is {b}\" is the same as \"after {a} comes {b}\""
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0305:70->71"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0305:70->71"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 70 comes 71",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0305:70->71",
+          "turn:S03:05"
+        ]
+      },
+      "response_text": "yes \u2014 after 70 comes 71; noted.",
+      "surface": "after 70 comes 71"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0216:55->56"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0216:55->56"
+      ],
+      "parse_source": "lexicon:phrasing:S03:04",
+      "response_ir": {
+        "ack": "after 55 comes 56",
+        "epistemic_state": "established",
+        "parse_source": "lexicon:phrasing:S03:04",
+        "provenance": [
+          "cs-fS0216:55->56",
+          "turn:S03:06"
+        ]
+      },
+      "response_text": "yes \u2014 after 55 comes 56, just as i have it.",
+      "surface": "the number after 55 is 56"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0216:55->56"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0216:55->56"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 55 comes 56",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0216:55->56",
+          "turn:S03:07"
+        ]
+      },
+      "response_text": "yes \u2014 after 55 comes 56, just as i have it.",
+      "surface": "after 55 comes 56"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:10",
+      "response_ir": {
+        "answer": "needs_info: i cannot do 100 - 3 (my number line ends at 71)",
+        "evidence": [
+          "line-end:sub-within-30:a=100:b=3:my-number-line-ends-at-71-at-S03:08"
+        ],
+        "parse_source": "lexicon:phrasing:S02:10",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't do 100 - 3 \u2014 my number line ends at 71, so i don't even have 100 to start from. I would rather say i don't know than guess.",
+      "surface": "how many are left if you take 3 away from 100?"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": null,
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "honestly, i don't know what that phrasing means to me yet \u2014 teach me the mapping. did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "surface": "could you explain what the number 7 means?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:03",
+      "response_ir": {
+        "answer": "21",
+        "evidence": [
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21"
+        ],
+        "parse_source": "lexicon:phrasing:S02:03",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 21.",
+      "surface": "what is the sum of 12 and 9?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0305:70->71"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:07",
+      "response_ir": {
+        "answer": "71",
+        "evidence": [
+          "cs-fS0305:70->71"
+        ],
+        "parse_source": "lexicon:phrasing:S02:07",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 71.",
+      "surface": "what number follows 70?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:16",
+      "response_ir": {
+        "answer": "no \u2014 52 is 4 steps beyond 48",
+        "evidence": [
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:16",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 52 is 4 steps beyond 48.",
+      "surface": "is 48 bigger than 52?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:01",
+      "response_ir": {
+        "answer": "63",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S03:01",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 63.",
+      "surface": "what do you get when you count 9, 7 times?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:03",
+      "response_ir": {
+        "answer": "8",
+        "evidence": [
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8"
+        ],
+        "parse_source": "lexicon:phrasing:S02:03",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 8.",
+      "surface": "what is the sum of 4 and 4?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0206:45->46"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:07",
+      "response_ir": {
+        "answer": "46",
+        "evidence": [
+          "cs-fS0206:45->46"
+        ],
+        "parse_source": "lexicon:phrasing:S02:07",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 46.",
+      "surface": "what number follows 45?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0120:19->20",
+        "cs-fS0119:18->19",
+        "cs-fS0118:17->18",
+        "cs-fS0117:16->17",
+        "cs-fS0116:15->16",
+        "cs-fS0115:14->15",
+        "cs-fS0114:13->14",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:10",
+      "response_ir": {
+        "answer": "13",
+        "evidence": [
+          "cs-fS0120:19->20",
+          "cs-fS0119:18->19",
+          "cs-fS0118:17->18",
+          "cs-fS0117:16->17",
+          "cs-fS0116:15->16",
+          "cs-fS0115:14->15",
+          "cs-fS0114:13->14",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:10",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 13.",
+      "surface": "how many are left if you take 7 away from 20?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:16",
+      "response_ir": {
+        "answer": "yes \u2014 64 is 39 steps beyond 25",
+        "evidence": [
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:16",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 64 is 39 steps beyond 25.",
+      "surface": "is 64 bigger than 25?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:01",
+      "response_ir": {
+        "answer": "30",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S03:01",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 30.",
+      "surface": "what do you get when you count 5, 6 times?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0406:71->72"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0406:71->72"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 71 comes 72",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0406:71->72",
+          "turn:S04:06"
+        ]
+      },
+      "response_text": "yes \u2014 after 71 comes 72; noted.",
+      "surface": "after 71 comes 72"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0201:40->41"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0201:40->41"
+      ],
+      "parse_source": "lexicon:phrasing:S03:04",
+      "response_ir": {
+        "ack": "after 40 comes 41",
+        "epistemic_state": "established",
+        "parse_source": "lexicon:phrasing:S03:04",
+        "provenance": [
+          "cs-fS0201:40->41",
+          "turn:S04:07"
+        ]
+      },
+      "response_text": "yes \u2014 after 40 comes 41, just as i have it.",
+      "surface": "the number after 40 is 41"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0201:40->41"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0201:40->41"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 40 comes 41",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0201:40->41",
+          "turn:S04:08"
+        ]
+      },
+      "response_text": "yes \u2014 after 40 comes 41, just as i have it.",
+      "surface": "after 40 comes 41"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": null,
+      "contract_valid": true,
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "honestly, i don't know what that phrasing means to me yet \u2014 teach me the mapping. did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "surface": "how tall is the number 5, exactly?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "grounded": [
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:03",
+      "response_ir": {
+        "answer": "60",
+        "evidence": [
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60"
+        ],
+        "parse_source": "lexicon:phrasing:S02:03",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 60.",
+      "surface": "what is the sum of 30 and 30?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "attention": null,
+      "concept": "count-successor",
+      "contract_valid": true,
+      "grounded": [
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:16",
+      "response_ir": {
+        "answer": "neither \u2014 7 is 7",
+        "evidence": [
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "lexicon:phrasing:S02:16",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "neither \u2014 7 is 7, so i would walk zero steps.",
+      "surface": "is 7 bigger than 7?"
+    }
+  },
+  "value": 1.0
+}

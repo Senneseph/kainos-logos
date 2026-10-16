@@ -1,0 +1,40 @@
+{
+  "config": {
+    "arm": {
+      "backend": "none",
+      "codec": "canonical",
+      "note": "hermetic: the live LLM is the separately-labelled addendum (X6)"
+    },
+    "checks": 5,
+    "checks_passed": 5,
+    "commit": "d5c0f40",
+    "dataset_hash": null,
+    "grammar_sha": "sha256:0854c8984949c6b2e373162bfc015d7d80284381403ab42538d194c707d3ca9d",
+    "runs": [
+      "e5.4-clean-v0",
+      "e5.4-clean-v1",
+      "e5.4-clean-v2",
+      "e5.4-false-v0",
+      "e5.4-false-v1",
+      "e5.4-false-v2"
+    ],
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-5/e5.4.json",
+    "results/phase-5/e5.4-false-v1-drop.json",
+    "results/phase-5/e5.4-clean-v0.json",
+    "results/phase-5/e5.4-clean-v1.json",
+    "results/phase-5/e5.4-clean-v2.json",
+    "results/phase-5/e5.4-false-v0.json",
+    "results/phase-5/e5.4-false-v1.json",
+    "results/phase-5/e5.4-false-v2.json"
+  ],
+  "hypothesis": "The E5.1 acceptance (redundancy separation, the false-belief probe, disputed-pair preservation, zero audit violations) survives the natural-language message surface EXACTLY on the SKIP (canonical-codec) arm, with store content bit-identical to the structured arm modulo the surface's own audit log; a surface drop is honest and measured (the frozen X3 perturbation), never silent.",
+  "metric": "acceptance checks passed (X1..X5)",
+  "name": "e5.4",
+  "passed": true,
+  "skipped": false,
+  "threshold": "5/5",
+  "value": 1.0
+}

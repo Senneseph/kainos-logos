@@ -1,0 +1,104 @@
+[
+  {
+    "id": "q_alive",
+    "surface": "Is it alive?",
+    "kind": "property_probe",
+    "property": "alive"
+  },
+  {
+    "id": "q_made",
+    "surface": "Was it made by humans?",
+    "kind": "property_probe",
+    "property": "manufactured"
+  },
+  {
+    "id": "q_edible",
+    "surface": "Is it edible?",
+    "kind": "property_probe",
+    "property": "edible"
+  },
+  {
+    "id": "q_wheels",
+    "surface": "Does it have wheels?",
+    "kind": "property_probe",
+    "property": "has_wheels"
+  },
+  {
+    "id": "q_wheel_count",
+    "surface": "How many wheels does it have?",
+    "kind": "property_probe",
+    "property": "wheel_count"
+  },
+  {
+    "id": "q_carry",
+    "surface": "Can it carry a person?",
+    "kind": "property_probe",
+    "property": "can_carry_person"
+  },
+  {
+    "id": "q_engine",
+    "surface": "Does it have an engine?",
+    "kind": "property_probe",
+    "property": "has_engine"
+  },
+  {
+    "id": "q_doors",
+    "surface": "Does it have doors?",
+    "kind": "property_probe",
+    "property": "has_doors"
+  },
+  {
+    "id": "q_water",
+    "surface": "Does it live in or operate in water?",
+    "kind": "property_probe",
+    "property": "lives_in_water"
+  },
+  {
+    "id": "q_green",
+    "surface": "Is it green?",
+    "kind": "property_probe",
+    "property": "is_green"
+  },
+  {
+    "id": "q_cat_animals",
+    "surface": "Is it an animal?",
+    "kind": "category_probe",
+    "category": "animals"
+  },
+  {
+    "id": "q_cat_people",
+    "surface": "Is it a person?",
+    "kind": "category_probe",
+    "category": "people"
+  },
+  {
+    "id": "q_cat_foods",
+    "surface": "Is it food?",
+    "kind": "category_probe",
+    "category": "foods"
+  },
+  {
+    "id": "q_cat_vehicles",
+    "surface": "Is it a vehicle?",
+    "kind": "category_probe",
+    "category": "vehicles"
+  },
+  {
+    "id": "q_cat_objects",
+    "surface": "Is it an object?",
+    "kind": "category_probe",
+    "category": "objects"
+  },
+  {
+    "id": "q_cat_places",
+    "surface": "Is it a place?",
+    "kind": "category_probe",
+    "category": "places"
+  },
+  {
+    "id": "q_cat_plants",
+    "surface": "Is it a plant?",
+    "kind": "category_probe",
+    "category": "plants"
+  }
+]

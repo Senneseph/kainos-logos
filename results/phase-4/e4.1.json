@@ -1,0 +1,307 @@
+{
+  "arms": {
+    "A": {
+      "branches": [
+        [
+          "nationality",
+          "dane",
+          2
+        ]
+      ],
+      "checks": [
+        {
+          "detail": "status=solved, n=1",
+          "name": "A1 unique solution",
+          "passed": true
+        },
+        {
+          "detail": "[{\"cigar\": \"dunhill\", \"color\": \"yellow\", \"drink\": \"water\", \"nationality\": \"norwegian\", \"pet\": \"cats\"}, {\"cigar\": \"blends\", \"color\": \"blue\", \"drink\": \"tea\", \"nationality\": \"dane\", \"pet\": \"horses\"}, {\"cigar\": \"pall_mall\", \"color\": \"red\", \"drink\": \"milk\", \"nationality\": \"brit\", \"pet\": \"birds\"}, {\"cigar\": \"prince\", \"color\": \"green\", \"drink\": \"coffee\", \"nationality\": \"german\", \"pet\": \"fish\"}, {\"cigar\": \"blue_master\", \"color\": \"white\", \"drink\": \"beer\", \"nationality\": \"swede\", \"pet\": \"dogs\"}]",
+          "name": "A2 grid = ground truth",
+          "passed": true
+        },
+        {
+          "detail": "fish at position 4: {'color': 'green', 'nationality': 'german', 'drink': 'coffee', 'cigar': 'prince', 'pet': 'fish'}",
+          "name": "A3 who owns the fish: the German, house 4",
+          "passed": true
+        },
+        {
+          "detail": "all proofs replay to their assignments",
+          "name": "A4 proof chains replay",
+          "passed": true
+        }
+      ],
+      "fish_answer": {
+        "cell": {
+          "cigar": "prince",
+          "color": "green",
+          "drink": "coffee",
+          "nationality": "german",
+          "pet": "fish"
+        },
+        "position": 4
+      },
+      "n_solutions": 1,
+      "status": "solved"
+    },
+    "B": {
+      "checks": [
+        {
+          "detail": "status=solved, pet column={1: 'cats', 2: 'horses', 3: 'birds', 4: 'pet:u1', 5: 'dogs'}",
+          "name": "B1 grid completes uniquely with typed placeholder",
+          "passed": true
+        },
+        {
+          "detail": "gaps=[('pet', 'pet:u1', 4)]",
+          "name": "B2 exact gap statement (typed-but-unknown, no guess)",
+          "passed": true
+        },
+        {
+          "detail": "outside-vocabulary names: []",
+          "name": "B3 no hallucination (named terms subset of given vocabulary)",
+          "passed": true
+        }
+      ],
+      "gap": {
+        "dim": "pet",
+        "placeholder": "pet:u1",
+        "pos": 4,
+        "statement": "the pet at position 4 is a member of the pet vocabulary I was not given a term for (1 such term(s) total); providing that name would let me name this cell \u2014 I will not invent one"
+      },
+      "grid": [
+        {
+          "cigar": "dunhill",
+          "color": "yellow",
+          "drink": "water",
+          "nationality": "norwegian",
+          "pet": "cats"
+        },
+        {
+          "cigar": "blends",
+          "color": "blue",
+          "drink": "tea",
+          "nationality": "dane",
+          "pet": "horses"
+        },
+        {
+          "cigar": "pall_mall",
+          "color": "red",
+          "drink": "milk",
+          "nationality": "brit",
+          "pet": "birds"
+        },
+        {
+          "cigar": "prince",
+          "color": "green",
+          "drink": "coffee",
+          "nationality": "german",
+          "pet": "pet:u1"
+        },
+        {
+          "cigar": "blue_master",
+          "color": "white",
+          "drink": "beer",
+          "nationality": "swede",
+          "pet": "dogs"
+        }
+      ],
+      "status": "solved"
+    },
+    "C": {
+      "capped": false,
+      "checks": [
+        {
+          "detail": "status=underdetermined, n=2, capped=False",
+          "name": "C1 dropping the clue yields EXACTLY two solutions (a minimal counterexample pair)",
+          "passed": true
+        },
+        {
+          "detail": "undetermined={'pet/horses': [2, 4], 'pet/fish': [2, 4]}",
+          "name": "C2 reported undetermined facts == EXACT countermodel variation (determined cells match the true solution)",
+          "passed": true
+        },
+        {
+          "detail": "4 resolving facts: ['fish (pet) is at position 2', 'fish (pet) is at position 4', 'horses (pet) is at position 2', 'horses (pet) is at position 4']; truth_reachable=True",
+          "name": "C3 named resolving facts: all canonical At over actually-undetermined cells, each restores uniqueness, and the true answer remains reachable",
+          "passed": true
+        }
+      ],
+      "dropped_clue": "#11: horses (pet) is next to dunhill (cigar)",
+      "n_solutions": 2,
+      "resolving_facts": [
+        "fish (pet) is at position 2",
+        "fish (pet) is at position 4",
+        "horses (pet) is at position 2",
+        "horses (pet) is at position 4"
+      ],
+      "solutions": [
+        [
+          {
+            "cigar": "dunhill",
+            "color": "yellow",
+            "drink": "water",
+            "nationality": "norwegian",
+            "pet": "cats"
+          },
+          {
+            "cigar": "blends",
+            "color": "blue",
+            "drink": "tea",
+            "nationality": "dane",
+            "pet": "fish"
+          },
+          {
+            "cigar": "pall_mall",
+            "color": "red",
+            "drink": "milk",
+            "nationality": "brit",
+            "pet": "birds"
+          },
+          {
+            "cigar": "prince",
+            "color": "green",
+            "drink": "coffee",
+            "nationality": "german",
+            "pet": "horses"
+          },
+          {
+            "cigar": "blue_master",
+            "color": "white",
+            "drink": "beer",
+            "nationality": "swede",
+            "pet": "dogs"
+          }
+        ],
+        [
+          {
+            "cigar": "dunhill",
+            "color": "yellow",
+            "drink": "water",
+            "nationality": "norwegian",
+            "pet": "cats"
+          },
+          {
+            "cigar": "blends",
+            "color": "blue",
+            "drink": "tea",
+            "nationality": "dane",
+            "pet": "horses"
+          },
+          {
+            "cigar": "pall_mall",
+            "color": "red",
+            "drink": "milk",
+            "nationality": "brit",
+            "pet": "birds"
+          },
+          {
+            "cigar": "prince",
+            "color": "green",
+            "drink": "coffee",
+            "nationality": "german",
+            "pet": "fish"
+          },
+          {
+            "cigar": "blue_master",
+            "color": "white",
+            "drink": "beer",
+            "nationality": "swede",
+            "pet": "dogs"
+          }
+        ]
+      ],
+      "status": "underdetermined",
+      "truth_reachable": true
+    },
+    "D": {
+      "added_clue": "#16: The Norwegian lives in the fifth house",
+      "certificate": [
+        {
+          "clue": 9,
+          "text": "norwegian (nationality) is at position 1"
+        },
+        {
+          "clue": 16,
+          "text": "norwegian (nationality) is at position 5"
+        }
+      ],
+      "checks": [
+        {
+          "detail": "status=no_solution, certificate(0-based)=[8, 15]",
+          "name": "D1 unsatisfiable, with certificate = exactly the two Norwegian clues",
+          "passed": true
+        },
+        {
+          "detail": "per-member satisfiable=True, base solved=True; reason: nationality/norwegian wiped out by clue#15: norwegian (nationality) is at position 5",
+          "name": "D2 certificate is inclusion-minimal (removing any member is satisfiable) and the base puzzle is solvable",
+          "passed": true
+        }
+      ],
+      "status": "no_solution"
+    },
+    "E": {
+      "branches": [
+        [
+          "wall",
+          "blue",
+          2
+        ]
+      ],
+      "checks": [
+        {
+          "detail": "status=solved, n=1",
+          "name": "E1 the 4x4 transfer puzzle (new dimension names) is solved uniquely by the same core",
+          "passed": true
+        },
+        {
+          "detail": "grid match=True; all proofs replay to their assignments",
+          "name": "E2 transfer grid = ground truth and its proof chains replay",
+          "passed": true
+        }
+      ],
+      "grid": [
+        {
+          "meal": "rice",
+          "music": "cello",
+          "person": "ada",
+          "wall": "green"
+        },
+        {
+          "meal": "salmon",
+          "music": "drums",
+          "person": "cy",
+          "wall": "blue"
+        },
+        {
+          "meal": "lamb",
+          "music": "jazz",
+          "person": "dee",
+          "wall": "gold"
+        },
+        {
+          "meal": "tofu",
+          "music": "piano",
+          "person": "ben",
+          "wall": "red"
+        }
+      ],
+      "n_solutions": 1,
+      "status": "solved"
+    },
+    "F": {
+      "reason": "optional LLM surface arm not requested (set KAINOS_E41_LLM=1 + OLLAMA_ENDPOINT); the deterministic core run is the verdict for e4.1",
+      "status": "SKIPPED"
+    }
+  },
+  "checks": 14,
+  "checks_passed": 14,
+  "experiment": "constraint-propagation robustness under degradation (Einstein's riddle, n-dim core)",
+  "name": "e4.1",
+  "notes": [
+    "arm A: 4/4 checks pass",
+    "arm B: 3/3 checks pass",
+    "arm C: 3/3 checks pass",
+    "arm D: 2/2 checks pass",
+    "arm E: 2/2 checks pass"
+  ],
+  "passed": true
+}

@@ -1,0 +1,7 @@
+zeros used: 12519
+t0=14000.0 dt=0.5 G=12000.0 zeros=12519
+d log|X|/dt = 3.56373   (should be small, O(1))
+d arg(X)/dt = 8.71178
+N(14000.0)=14950  N(14000.5)=14950  dN=0  pi*dN/dt = 0.0
+=> if darg/dt ~ +pi*dN/dt (+ small smooth): winding is +pi per zero (2K convention), and the separated formula's H-step sign is +pi.
+=> if darg/dt ~ -pi*dN/dt: winding is -pi; flip the H step.

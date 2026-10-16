@@ -1,0 +1,259 @@
+{
+  "bands": [
+    {
+      "aligned_physics": [],
+      "band": "k-5",
+      "concepts": [
+        "count-successor",
+        "add-within-10",
+        "add-two-digit",
+        "sub-within-30",
+        "mult-within-100",
+        "compare-numbers",
+        "shape-triangle",
+        "shape-square",
+        "shape-rectangle",
+        "shape-circle"
+      ],
+      "domains": [
+        "arithmetic",
+        "geometry"
+      ],
+      "evidence": [
+        "e6.5"
+      ],
+      "name": "band-1",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [
+        "kinematics"
+      ],
+      "band": "6-8",
+      "concepts": [
+        "alg-inverse-1step",
+        "alg-inverse-mul",
+        "alg-two-step",
+        "kin-distance",
+        "kin-position",
+        "kin-solve-time",
+        "kin-rate"
+      ],
+      "domains": [
+        "algebra"
+      ],
+      "evidence": [
+        "e6.6"
+      ],
+      "name": "band-2",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [
+        "vectors",
+        "statics"
+      ],
+      "band": "9-12",
+      "concepts": [
+        "geom-perimeter",
+        "geom-area",
+        "geom-area-triangle",
+        "stat-net-1d",
+        "stat-moment",
+        "stat-balance"
+      ],
+      "domains": [
+        "geometry-advanced"
+      ],
+      "evidence": [
+        "e6.7"
+      ],
+      "name": "band-3",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [
+        "mechanics"
+      ],
+      "band": "9-12",
+      "concepts": [],
+      "domains": [
+        "calculus"
+      ],
+      "evidence": [],
+      "name": "band-4",
+      "status": "declared"
+    },
+    {
+      "aligned_physics": [
+        "probabilistic physics"
+      ],
+      "band": "college-1",
+      "concepts": [],
+      "domains": [
+        "statistics"
+      ],
+      "evidence": [],
+      "name": "band-5",
+      "status": "declared"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "unit-distance",
+        "grid-lattice",
+        "gaussian-int",
+        "circle-pair-2",
+        "kst-bound",
+        "sst-bound",
+        "erdos-conj",
+        "norm-flat",
+        "norm-convex",
+        "norm-generic"
+      ],
+      "domains": [
+        "unit-distance"
+      ],
+      "evidence": [
+        "e6.8"
+      ],
+      "name": "savant-1",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "number-field",
+        "prime-split",
+        "mod4-split",
+        "disc-rd",
+        "adjoin-i",
+        "cyclotomic-cubic",
+        "char-cutout",
+        "class-bound",
+        "chebotarev",
+        "pnt-ap",
+        "frattini",
+        "golod-shaf",
+        "shafarevich",
+        "cm-conj",
+        "minkowski-embed",
+        "hajir-maire"
+      ],
+      "domains": [
+        "number-fields"
+      ],
+      "evidence": [
+        "e6.9"
+      ],
+      "name": "savant-2",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "window-setup",
+        "averaging",
+        "projection",
+        "packing",
+        "slack-margins",
+        "criterion-chain"
+      ],
+      "domains": [
+        "geometric-criterion"
+      ],
+      "evidence": [
+        "e6.10"
+      ],
+      "name": "savant-3",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "tower-base",
+        "tower-group",
+        "tower-primes",
+        "tower-class",
+        "disproof"
+      ],
+      "domains": [
+        "tower"
+      ],
+      "evidence": [
+        "e6.11"
+      ],
+      "name": "savant-4",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "zeta-series",
+        "zeta-cont",
+        "func-eq",
+        "critical-strip",
+        "prime-count",
+        "pnt",
+        "rv-count",
+        "s-of-t",
+        "riemann"
+      ],
+      "domains": [
+        "rh"
+      ],
+      "evidence": [
+        "e6.12"
+      ],
+      "name": "rh-1",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [
+        "psi-eq",
+        "pi-eq",
+        "st-eq",
+        "li-criterion",
+        "polya-hilbert",
+        "lindelof",
+        "zero-free",
+        "pnt-error",
+        "hardy-line",
+        "zero-density"
+      ],
+      "domains": [
+        "rh"
+      ],
+      "evidence": [
+        "e6.13"
+      ],
+      "name": "rh-2",
+      "status": "implemented"
+    },
+    {
+      "aligned_physics": [],
+      "band": "college-1",
+      "concepts": [],
+      "domains": [
+        "rh"
+      ],
+      "evidence": [
+        "e6.14"
+      ],
+      "name": "rh-3",
+      "status": "implemented"
+    }
+  ],
+  "validation": {
+    "bands": 12,
+    "implemented": 10,
+    "problems": []
+  }
+}

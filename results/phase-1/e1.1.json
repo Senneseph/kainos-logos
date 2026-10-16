@@ -1,0 +1,396 @@
+{
+  "accuracy": 1.0,
+  "config": {
+    "corpus": "data/regex/seed_corpus.jsonl",
+    "corpus_hash": "e68db0bb2b6deb278a1640d4900f9d2c4b25ff958892a0babc129e17106d09f2",
+    "n_records": 55,
+    "seed": 0
+  },
+  "per_item": [
+    {
+      "expected": "\\d+",
+      "id": "q_one_or_more",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d+"
+    },
+    {
+      "expected": "[A-Za-z]*",
+      "id": "q_zero_or_more",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]*"
+    },
+    {
+      "expected": "\\s?",
+      "id": "q_optional",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\s?"
+    },
+    {
+      "expected": "[A-Za-z]{2}",
+      "id": "q_exactly",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]{2}"
+    },
+    {
+      "expected": "\\d{3,}",
+      "id": "q_at_least",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{3,}"
+    },
+    {
+      "expected": "[A-Za-z]{0,5}",
+      "id": "q_at_most",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]{0,5}"
+    },
+    {
+      "expected": "\\d{2,4}",
+      "id": "q_between",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{2,4}"
+    },
+    {
+      "expected": "[A-Za-z]{3,6}",
+      "id": "q_from_to",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]{3,6}"
+    },
+    {
+      "expected": "\\d{4}",
+      "id": "q_bare_numeral",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{4}"
+    },
+    {
+      "expected": "\\d?",
+      "id": "q_optional_maybe",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d?"
+    },
+    {
+      "expected": "\\s?",
+      "id": "q_optional_optionally",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\s?"
+    },
+    {
+      "expected": "\\d",
+      "id": "c_digit",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d"
+    },
+    {
+      "expected": "[A-Za-z]",
+      "id": "c_letter",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]"
+    },
+    {
+      "expected": "\\w",
+      "id": "c_word",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\w"
+    },
+    {
+      "expected": "\\s",
+      "id": "c_whitespace",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\s"
+    },
+    {
+      "expected": "\\s",
+      "id": "c_whitespace_variant",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\s"
+    },
+    {
+      "expected": ".",
+      "id": "c_anything",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "."
+    },
+    {
+      "expected": "^\\d+",
+      "id": "a_start",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^\\d+"
+    },
+    {
+      "expected": "^[A-Za-z]+",
+      "id": "a_beginning_variant",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^[A-Za-z]+"
+    },
+    {
+      "expected": "[A-Za-z]+$",
+      "id": "a_end",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]+$"
+    },
+    {
+      "expected": "^\\d{3}-[A-Za-z]{2}$",
+      "id": "a_both",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^\\d{3}-[A-Za-z]{2}$"
+    },
+    {
+      "expected": "^$",
+      "id": "a_empty_string",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^$"
+    },
+    {
+      "expected": "hello",
+      "id": "l_plain",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "hello"
+    },
+    {
+      "expected": "\\.",
+      "id": "l_metachar_dot",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\."
+    },
+    {
+      "expected": "\\+",
+      "id": "l_metachar_plus",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\+"
+    },
+    {
+      "expected": "\\(",
+      "id": "l_metachar_open_paren",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\("
+    },
+    {
+      "expected": "-",
+      "id": "l_metachar_dash",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "-"
+    },
+    {
+      "expected": "-",
+      "id": "l_dash_via_codex",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "-"
+    },
+    {
+      "expected": "(?:\\d|[A-Za-z])",
+      "id": "alt_two",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d|[A-Za-z])"
+    },
+    {
+      "expected": "(?:\\d|[A-Za-z]|\\s)",
+      "id": "alt_three",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d|[A-Za-z]|\\s)"
+    },
+    {
+      "expected": "(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))",
+      "id": "alt_nested",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))"
+    },
+    {
+      "expected": "(?:foo|bar)",
+      "id": "alt_literals",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:foo|bar)"
+    },
+    {
+      "expected": "\\d(?:[A-Za-z]|\\s)",
+      "id": "alt_then_seq",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d(?:[A-Za-z]|\\s)"
+    },
+    {
+      "expected": "(?:\\d{3})",
+      "id": "g_basic",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d{3})"
+    },
+    {
+      "expected": "(?:\\d[A-Za-z])",
+      "id": "g_seq",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d[A-Za-z])"
+    },
+    {
+      "expected": "(?:\\d|(?:\\d{2}[A-Za-z]))",
+      "id": "g_in_alt",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?:\\d|(?:\\d{2}[A-Za-z]))"
+    },
+    {
+      "expected": "(?i)[A-Za-z]",
+      "id": "f_ci_class",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)[A-Za-z]"
+    },
+    {
+      "expected": "(?i)(?:foo|bar)",
+      "id": "f_ci_alternative",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)(?:foo|bar)"
+    },
+    {
+      "expected": "(?i)^[A-Za-z]$",
+      "id": "f_ci_anchored",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)^[A-Za-z]$"
+    },
+    {
+      "expected": "(?i)(?:ab)",
+      "id": "f_ci_group",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)(?:ab)"
+    },
+    {
+      "expected": "\\d{3}-",
+      "id": "canon_1",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{3}-"
+    },
+    {
+      "expected": "(?i)\\d{3}-(?:foo|bar)",
+      "id": "canon_2",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)\\d{3}-(?:foo|bar)"
+    },
+    {
+      "expected": "\\d+-\\d+-\\d+",
+      "id": "combo_version",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d+-\\d+-\\d+"
+    },
+    {
+      "expected": "\\w+\\s\\w+",
+      "id": "combo_word_sep",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\w+\\s\\w+"
+    },
+    {
+      "expected": "\\d{3}.\\d{3}",
+      "id": "combo_any_fill",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{3}.\\d{3}"
+    },
+    {
+      "expected": "[A-Za-z]{2}\\d\\s[A-Za-z]",
+      "id": "combo_connectors",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]{2}\\d\\s[A-Za-z]"
+    },
+    {
+      "expected": "^\\d{4}-\\d{4}$",
+      "id": "combo_ip_like",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^\\d{4}-\\d{4}$"
+    },
+    {
+      "expected": "^[A-Za-z]{2}-\\d+$",
+      "id": "combo_deep_seq",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "^[A-Za-z]{2}-\\d+$"
+    },
+    {
+      "expected": "\\w.\\w",
+      "id": "combo_word_word",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\w.\\w"
+    },
+    {
+      "expected": "\\d{10}",
+      "id": "combo_exactly_ten",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d{10}"
+    },
+    {
+      "expected": "\\s(?:on|off)",
+      "id": "combo_on_off",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\s(?:on|off)"
+    },
+    {
+      "expected": "\\d\\s*\\d",
+      "id": "combo_space_runs",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "\\d\\s*\\d"
+    },
+    {
+      "expected": "[A-Za-z]+\\d{3}",
+      "id": "combo_letters_digits",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]+\\d{3}"
+    },
+    {
+      "expected": "(?i)^\\d+-\\d+$",
+      "id": "combo_ci_phone_like",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "(?i)^\\d+-\\d+$"
+    },
+    {
+      "expected": "[A-Za-z]{2,}\\s[A-Za-z]{0,2}",
+      "id": "combo_bounded_letters",
+      "judge": "PASS: full-match on every positive, no match on every negative",
+      "ok": true,
+      "pcre": "[A-Za-z]{2,}\\s[A-Za-z]{0,2}"
+    }
+  ]
+}

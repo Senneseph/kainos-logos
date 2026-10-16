@@ -1,0 +1,4258 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_no_paper_text": {
+      "bad": [],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 75
+    },
+    "p2_typed_honesty_interleave": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "derived_refs": 50,
+      "pass": true,
+      "seam_facts": 55
+    },
+    "p4_beds_walls_flip": {
+      "bad": [],
+      "bed_refs": 4,
+      "pass": true
+    },
+    "p5_seam_invariance": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_band_end": {
+      "bad": [],
+      "pass": true,
+      "refs": 24
+    },
+    "p7_crosscheck_dag": {
+      "bad": [],
+      "pass": true
+    },
+    "p8_mastery_determinism": {
+      "bad": [],
+      "final_total": 840,
+      "line_end": 84,
+      "mastery": {
+        "disproof": {
+          "correct": 10,
+          "state": "practicing"
+        },
+        "tower-base": {
+          "correct": 7,
+          "state": "practicing"
+        },
+        "tower-class": {
+          "correct": 8,
+          "state": "practicing"
+        },
+        "tower-group": {
+          "correct": 11,
+          "state": "practicing"
+        },
+        "tower-primes": {
+          "correct": 8,
+          "state": "practicing"
+        }
+      },
+      "new_events": 71,
+      "new_facts": [
+        "curriculum:disproof",
+        "curriculum:prereq:disproof>criterion-chain",
+        "curriculum:prereq:disproof>tower-class",
+        "curriculum:prereq:disproof>tower-group",
+        "curriculum:prereq:disproof>tower-primes",
+        "curriculum:prereq:tower-base>char-cutout",
+        "curriculum:prereq:tower-base>cyclotomic-cubic",
+        "curriculum:prereq:tower-class>adjoin-i",
+        "curriculum:prereq:tower-class>class-bound",
+        "curriculum:prereq:tower-class>slack-margins",
+        "curriculum:prereq:tower-class>tower-base",
+        "curriculum:prereq:tower-group>frattini",
+        "curriculum:prereq:tower-group>golod-shaf",
+        "curriculum:prereq:tower-group>shafarevich",
+        "curriculum:prereq:tower-group>tower-base",
+        "curriculum:prereq:tower-primes>chebotarev",
+        "curriculum:prereq:tower-primes>mod4-split",
+        "curriculum:prereq:tower-primes>tower-base",
+        "curriculum:tower-base",
+        "curriculum:tower-class",
+        "curriculum:tower-group",
+        "curriculum:tower-primes",
+        "lemma:base-rd",
+        "lemma:chebotarev-selection",
+        "lemma:class-tower",
+        "lemma:k-3t",
+        "lemma:slack-quadratic",
+        "lemma:tower-base",
+        "lemma:tower-unramified",
+        "theorem:gamma-achieved",
+        "theorem:gen-lower",
+        "theorem:gs-infinite",
+        "theorem:splitting",
+        "theorem:theorem-main",
+        "theorem:tower-feeds"
+      ],
+      "pass": true,
+      "run_identity": "397d376ecfbd7a1c",
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 734,
+        "seed_total": 734
+      },
+      "successor_objects": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    }
+  },
+  "passed": 9,
+  "script_hash": "8cc3a9359901287f",
+  "seam_facts": {
+    "base-rd": {
+      "statement": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113"
+    },
+    "chebotarev-selection": {
+      "statement": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient"
+    },
+    "class-tower": {
+      "statement": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113"
+    },
+    "k-3t": {
+      "statement": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one"
+    },
+    "slack-quadratic": {
+      "statement": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store"
+    },
+    "tower-base": {
+      "statement": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity"
+    },
+    "tower-unramified": {
+      "statement": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank"
+    }
+  },
+  "seed": "results/phase-6/e6.10-run1/codeX-S04.json",
+  "theorem_facts": {
+    "gamma-achieved": {
+      "statement": "the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower"
+    },
+    "gen-lower": {
+      "statement": "the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators"
+    },
+    "gs-infinite": {
+      "statement": "shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity"
+    },
+    "splitting": {
+      "statement": "the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice"
+    },
+    "theorem-main": {
+      "statement": "applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta"
+    },
+    "tower-feeds": {
+      "statement": "the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store"
+    }
+  },
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the tower-base rule",
+        "nearest_plan": [
+          "teach it first: the the tower-base rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the tower-base rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-base"
+      },
+      "surface": "state the tower-base rule"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:tower-base"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:tower-base"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:tower-base",
+          "turn:S02:02",
+          "source:tower-base"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity"
+      },
+      "surface": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tower-base"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity",
+        "evidence": [
+          "lemma:tower-base"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-base"
+      },
+      "surface": "state the tower-base rule"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the tower-unramified \u2014 the rule for gen-lower needs it before i can put it together",
+        "evidence": [
+          "scaffold:gen-lower:missing:tower-unramified:at-S02:04"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the tower-unramified \u2014 the rule for gen-lower needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "tower-unramified",
+          "fratin"
+        ],
+        "target": "gen-lower"
+      },
+      "surface": "derive gen-lower from tower-unramified and fratin"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:tower-unramified"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:tower-unramified"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:tower-unramified",
+          "turn:S02:05",
+          "source:tower-unramified"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank"
+      },
+      "surface": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tower-unramified"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank",
+        "evidence": [
+          "lemma:tower-unramified"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-unramified"
+      },
+      "surface": "state the tower-unramified rule"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:tower-unramified",
+        "lemma:fratin"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:gen-lower"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+        "evidence": [
+          "lemma:tower-unramified",
+          "lemma:fratin"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators \u2014 from tower-unramified, fratin, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "tower-unramified",
+          "fratin"
+        ],
+        "target": "gen-lower"
+      },
+      "surface": "derive gen-lower from tower-unramified and fratin"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gen-lower"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+        "evidence": [
+          "theorem:gen-lower"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gen-lower"
+      },
+      "surface": "state the gen-lower rule"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tower-unramified",
+        "lemma:fratin"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from tower-unramified, fratin: the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+        "evidence": [
+          "lemma:tower-unramified",
+          "lemma:fratin"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from tower-unramified, fratin: the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "gen-lower"
+      },
+      "surface": "explain why the gen-lower holds"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:base-rd"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:base-rd"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:base-rd",
+          "turn:S02:10",
+          "source:base-rd"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113"
+      },
+      "surface": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:base-rd"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+        "evidence": [
+          "lemma:base-rd"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "base-rd"
+      },
+      "surface": "state the base-rd rule"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the chebotarev-selection rule",
+        "nearest_plan": [
+          "teach it first: the the chebotarev-selection rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the chebotarev-selection rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "chebotarev-selection"
+      },
+      "surface": "state the chebotarev-selection rule"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:chebotarev-selection"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:chebotarev-selection"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:chebotarev-selection",
+          "turn:S02:13",
+          "source:chebotarev-selection"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient"
+      },
+      "surface": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:chebotarev-selection"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient",
+        "evidence": [
+          "lemma:chebotarev-selection"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "chebotarev-selection"
+      },
+      "surface": "state the chebotarev-selection rule"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the k-3t or the slack-quadratic \u2014 the rule for gs-infinite needs them before i can put it together",
+        "evidence": [
+          "scaffold:gs-infinite:missing:k-3t+slack-quadratic:at-S02:15"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the k-3t or the slack-quadratic \u2014 the rule for gs-infinite needs them before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "shafbound",
+          "fratin",
+          "k-3t",
+          "gstest",
+          "slack-quadratic"
+        ],
+        "target": "gs-infinite"
+      },
+      "surface": "derive gs-infinite from shafbound, fratin, k-3t, gstest and slack-quadratic"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:k-3t"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:k-3t"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:k-3t",
+          "turn:S02:16",
+          "source:k-3t"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one"
+      },
+      "surface": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:k-3t"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one",
+        "evidence": [
+          "lemma:k-3t"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "k-3t"
+      },
+      "surface": "state the k-3t rule"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0209:80->81",
+        "cs-fS0208:79->80",
+        "cs-fS0207:78->79",
+        "cs-fS0206:77->78",
+        "cs-fS0205:76->77",
+        "cs-fS0204:75->76",
+        "cs-fS0203:74->75",
+        "cs-fS0202:73->74",
+        "cs-fS0201:72->73",
+        "cs-fS0406:71->72",
+        "cs-fS0305:70->71",
+        "cs-fS0230:69->70",
+        "cs-fS0229:68->69",
+        "cs-fS0228:67->68",
+        "cs-fS0227:66->67",
+        "cs-fS0226:65->66",
+        "cs-fS0225:64->65",
+        "cs-fS0224:63->64",
+        "cs-fS0223:62->63",
+        "cs-fS0222:61->62",
+        "cs-fS0221:60->61",
+        "cs-fS0220:59->60",
+        "cs-fS0219:58->59",
+        "cs-fS0218:57->58",
+        "cs-fS0217:56->57",
+        "cs-fS0216:55->56",
+        "cs-fS0215:54->55",
+        "cs-fS0214:53->54",
+        "cs-fS0213:52->53",
+        "cs-fS0212:51->52",
+        "cs-fS0211:50->51",
+        "cs-fS0210:49->50",
+        "cs-fS0209:48->49",
+        "cs-fS0208:47->48",
+        "cs-fS0207:46->47",
+        "cs-fS0206:45->46",
+        "cs-fS0205:44->45",
+        "cs-fS0204:43->44",
+        "cs-fS0203:42->43",
+        "cs-fS0202:41->42",
+        "cs-fS0201:40->41",
+        "cs-fS0140:39->40",
+        "cs-fS0139:38->39",
+        "cs-fS0138:37->38",
+        "cs-fS0137:36->37",
+        "cs-fS0136:35->36",
+        "cs-fS0135:34->35",
+        "cs-fS0134:33->34",
+        "cs-fS0133:32->33",
+        "cs-fS0132:31->32",
+        "cs-fS0131:30->31",
+        "cs-fS0130:29->30",
+        "cs-fS0129:28->29",
+        "cs-fS0128:27->28",
+        "cs-fS0127:26->27",
+        "cs-fS0126:25->26",
+        "cs-fS0125:24->25",
+        "cs-fS0124:23->24",
+        "cs-fS0123:22->23",
+        "cs-fS0122:21->22",
+        "cs-fS0121:20->21",
+        "cs-fS0120:19->20",
+        "cs-fS0119:18->19",
+        "cs-fS0118:17->18",
+        "cs-fS0117:16->17",
+        "cs-fS0116:15->16",
+        "cs-fS0115:14->15",
+        "cs-fS0114:13->14",
+        "cs-fS0113:12->13",
+        "cs-fS0112:11->12",
+        "cs-fS0111:10->11",
+        "cs-fS0110:9->10",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "four times the slack is 9 \u2014 positive: d plus c zero plus 3t stays below d squared over four for large d",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0209:80->81",
+          "cs-fS0208:79->80",
+          "cs-fS0207:78->79",
+          "cs-fS0206:77->78",
+          "cs-fS0205:76->77",
+          "cs-fS0204:75->76",
+          "cs-fS0203:74->75",
+          "cs-fS0202:73->74",
+          "cs-fS0201:72->73",
+          "cs-fS0406:71->72",
+          "cs-fS0305:70->71",
+          "cs-fS0230:69->70",
+          "cs-fS0229:68->69",
+          "cs-fS0228:67->68",
+          "cs-fS0227:66->67",
+          "cs-fS0226:65->66",
+          "cs-fS0225:64->65",
+          "cs-fS0224:63->64",
+          "cs-fS0223:62->63",
+          "cs-fS0222:61->62",
+          "cs-fS0221:60->61",
+          "cs-fS0220:59->60",
+          "cs-fS0219:58->59",
+          "cs-fS0218:57->58",
+          "cs-fS0217:56->57",
+          "cs-fS0216:55->56",
+          "cs-fS0215:54->55",
+          "cs-fS0214:53->54",
+          "cs-fS0213:52->53",
+          "cs-fS0212:51->52",
+          "cs-fS0211:50->51",
+          "cs-fS0210:49->50",
+          "cs-fS0209:48->49",
+          "cs-fS0208:47->48",
+          "cs-fS0207:46->47",
+          "cs-fS0206:45->46",
+          "cs-fS0205:44->45",
+          "cs-fS0204:43->44",
+          "cs-fS0203:42->43",
+          "cs-fS0202:41->42",
+          "cs-fS0201:40->41",
+          "cs-fS0140:39->40",
+          "cs-fS0139:38->39",
+          "cs-fS0138:37->38",
+          "cs-fS0137:36->37",
+          "cs-fS0136:35->36",
+          "cs-fS0135:34->35",
+          "cs-fS0134:33->34",
+          "cs-fS0133:32->33",
+          "cs-fS0132:31->32",
+          "cs-fS0131:30->31",
+          "cs-fS0130:29->30",
+          "cs-fS0129:28->29",
+          "cs-fS0128:27->28",
+          "cs-fS0127:26->27",
+          "cs-fS0126:25->26",
+          "cs-fS0125:24->25",
+          "cs-fS0124:23->24",
+          "cs-fS0123:22->23",
+          "cs-fS0122:21->22",
+          "cs-fS0121:20->21",
+          "cs-fS0120:19->20",
+          "cs-fS0119:18->19",
+          "cs-fS0118:17->18",
+          "cs-fS0117:16->17",
+          "cs-fS0116:15->16",
+          "cs-fS0115:14->15",
+          "cs-fS0114:13->14",
+          "cs-fS0113:12->13",
+          "cs-fS0112:11->12",
+          "cs-fS0111:10->11",
+          "cs-fS0110:9->10",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i computed d squared (81) minus four times d (36) minus twelve times t (36) = 9: the gs cap has slack",
+      "slots": {
+        "d": 9,
+        "mode": "gsslack",
+        "t": 3
+      },
+      "surface": "what is the gs slack for 9 generators and 3 split primes?"
+    },
+    "S02:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0210:81->82",
+        "cs-fS0211:82->83",
+        "cs-fS0212:83->84",
+        "cs-fS0209:80->81",
+        "cs-fS0208:79->80",
+        "cs-fS0207:78->79",
+        "cs-fS0206:77->78",
+        "cs-fS0205:76->77",
+        "cs-fS0204:75->76",
+        "cs-fS0203:74->75",
+        "cs-fS0202:73->74",
+        "cs-fS0201:72->73",
+        "cs-fS0406:71->72",
+        "cs-fS0305:70->71",
+        "cs-fS0230:69->70",
+        "cs-fS0229:68->69",
+        "cs-fS0228:67->68",
+        "cs-fS0227:66->67",
+        "cs-fS0226:65->66",
+        "cs-fS0225:64->65",
+        "cs-fS0224:63->64",
+        "cs-fS0223:62->63",
+        "cs-fS0222:61->62",
+        "cs-fS0221:60->61",
+        "cs-fS0220:59->60",
+        "cs-fS0219:58->59",
+        "cs-fS0218:57->58",
+        "cs-fS0217:56->57",
+        "cs-fS0216:55->56",
+        "cs-fS0215:54->55",
+        "cs-fS0214:53->54",
+        "cs-fS0213:52->53",
+        "cs-fS0212:51->52",
+        "cs-fS0211:50->51",
+        "cs-fS0210:49->50",
+        "cs-fS0209:48->49",
+        "cs-fS0208:47->48",
+        "cs-fS0207:46->47",
+        "cs-fS0206:45->46",
+        "cs-fS0212:83->84",
+        "cs-fS0211:82->83",
+        "cs-fS0210:81->82",
+        "cs-fS0209:80->81",
+        "cs-fS0208:79->80",
+        "cs-fS0207:78->79",
+        "cs-fS0206:77->78",
+        "cs-fS0205:76->77",
+        "cs-fS0204:75->76",
+        "cs-fS0203:74->75",
+        "cs-fS0202:73->74",
+        "cs-fS0201:72->73",
+        "cs-fS0406:71->72",
+        "cs-fS0305:70->71",
+        "cs-fS0230:69->70",
+        "cs-fS0229:68->69",
+        "cs-fS0228:67->68",
+        "cs-fS0227:66->67",
+        "cs-fS0226:65->66",
+        "cs-fS0225:64->65",
+        "cs-fS0224:63->64",
+        "cs-fS0223:62->63",
+        "cs-fS0222:61->62",
+        "cs-fS0221:60->61",
+        "cs-fS0220:59->60",
+        "cs-fS0219:58->59",
+        "cs-fS0218:57->58",
+        "cs-fS0217:56->57",
+        "cs-fS0216:55->56",
+        "cs-fS0215:54->55",
+        "cs-fS0214:53->54",
+        "cs-fS0213:52->53",
+        "cs-fS0212:51->52",
+        "cs-fS0211:50->51",
+        "cs-fS0210:49->50",
+        "cs-fS0209:48->49",
+        "cs-fS0208:47->48",
+        "cs-fS0207:46->47",
+        "cs-fS0206:45->46",
+        "cs-fS0205:44->45",
+        "cs-fS0204:43->44",
+        "cs-fS0203:42->43",
+        "cs-fS0202:41->42",
+        "cs-fS0201:40->41",
+        "cs-fS0140:39->40",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "four times the slack is 39 below zero \u2014 twelve times t (84) is above d squared minus four times d (45): no slack at this size, the comparison says the cap is not beaten",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0210:81->82",
+          "cs-fS0211:82->83",
+          "cs-fS0212:83->84",
+          "cs-fS0209:80->81",
+          "cs-fS0208:79->80",
+          "cs-fS0207:78->79",
+          "cs-fS0206:77->78",
+          "cs-fS0205:76->77",
+          "cs-fS0204:75->76",
+          "cs-fS0203:74->75",
+          "cs-fS0202:73->74",
+          "cs-fS0201:72->73",
+          "cs-fS0406:71->72",
+          "cs-fS0305:70->71",
+          "cs-fS0230:69->70",
+          "cs-fS0229:68->69",
+          "cs-fS0228:67->68",
+          "cs-fS0227:66->67",
+          "cs-fS0226:65->66",
+          "cs-fS0225:64->65",
+          "cs-fS0224:63->64",
+          "cs-fS0223:62->63",
+          "cs-fS0222:61->62",
+          "cs-fS0221:60->61",
+          "cs-fS0220:59->60",
+          "cs-fS0219:58->59",
+          "cs-fS0218:57->58",
+          "cs-fS0217:56->57",
+          "cs-fS0216:55->56",
+          "cs-fS0215:54->55",
+          "cs-fS0214:53->54",
+          "cs-fS0213:52->53",
+          "cs-fS0212:51->52",
+          "cs-fS0211:50->51",
+          "cs-fS0210:49->50",
+          "cs-fS0209:48->49",
+          "cs-fS0208:47->48",
+          "cs-fS0207:46->47",
+          "cs-fS0206:45->46",
+          "cs-fS0212:83->84",
+          "cs-fS0211:82->83",
+          "cs-fS0210:81->82",
+          "cs-fS0209:80->81",
+          "cs-fS0208:79->80",
+          "cs-fS0207:78->79",
+          "cs-fS0206:77->78",
+          "cs-fS0205:76->77",
+          "cs-fS0204:75->76",
+          "cs-fS0203:74->75",
+          "cs-fS0202:73->74",
+          "cs-fS0201:72->73",
+          "cs-fS0406:71->72",
+          "cs-fS0305:70->71",
+          "cs-fS0230:69->70",
+          "cs-fS0229:68->69",
+          "cs-fS0228:67->68",
+          "cs-fS0227:66->67",
+          "cs-fS0226:65->66",
+          "cs-fS0225:64->65",
+          "cs-fS0224:63->64",
+          "cs-fS0223:62->63",
+          "cs-fS0222:61->62",
+          "cs-fS0221:60->61",
+          "cs-fS0220:59->60",
+          "cs-fS0219:58->59",
+          "cs-fS0218:57->58",
+          "cs-fS0217:56->57",
+          "cs-fS0216:55->56",
+          "cs-fS0215:54->55",
+          "cs-fS0214:53->54",
+          "cs-fS0213:52->53",
+          "cs-fS0212:51->52",
+          "cs-fS0211:50->51",
+          "cs-fS0210:49->50",
+          "cs-fS0209:48->49",
+          "cs-fS0208:47->48",
+          "cs-fS0207:46->47",
+          "cs-fS0206:45->46",
+          "cs-fS0205:44->45",
+          "cs-fS0204:43->44",
+          "cs-fS0203:42->43",
+          "cs-fS0202:41->42",
+          "cs-fS0201:40->41",
+          "cs-fS0140:39->40",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i computed d squared (81) minus four times d (36) = 45, and twelve times t is 84 \u2014 above it by 39, so the slack is 39 below zero: no slack at this size",
+      "slots": {
+        "d": 9,
+        "mode": "gsslack",
+        "t": 7
+      },
+      "surface": "what is the gs slack for 9 generators and 7 split primes?"
+    },
+    "S02:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the slack-quadratic rule",
+        "nearest_plan": [
+          "teach it first: the the slack-quadratic rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the slack-quadratic rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "slack-quadratic"
+      },
+      "surface": "state the slack-quadratic rule"
+    },
+    "S02:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:slack-quadratic"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:slack-quadratic"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:slack-quadratic",
+          "turn:S02:21",
+          "source:slack-quadratic"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store"
+      },
+      "surface": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store"
+    },
+    "S02:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:slack-quadratic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store",
+        "evidence": [
+          "lemma:slack-quadratic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "slack-quadratic"
+      },
+      "surface": "state the slack-quadratic rule"
+    },
+    "S02:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:shafbound",
+        "lemma:fratin",
+        "lemma:k-3t",
+        "lemma:gstest",
+        "lemma:slack-quadratic"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:gs-infinite"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+        "evidence": [
+          "lemma:shafbound",
+          "lemma:fratin",
+          "lemma:k-3t",
+          "lemma:gstest",
+          "lemma:slack-quadratic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity \u2014 from shafbound, fratin, k-3t, gstest, slack-quadratic, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "shafbound",
+          "fratin",
+          "k-3t",
+          "gstest",
+          "slack-quadratic"
+        ],
+        "target": "gs-infinite"
+      },
+      "surface": "derive gs-infinite from shafbound, fratin, k-3t, gstest and slack-quadratic"
+    },
+    "S02:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gs-infinite"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+        "evidence": [
+          "theorem:gs-infinite"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gs-infinite"
+      },
+      "surface": "state the gs-infinite rule"
+    },
+    "S02:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shafbound",
+        "lemma:fratin",
+        "lemma:k-3t",
+        "lemma:gstest",
+        "lemma:slack-quadratic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from shafbound, fratin, k-3t, gstest, slack-quadratic: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+        "evidence": [
+          "lemma:shafbound",
+          "lemma:fratin",
+          "lemma:k-3t",
+          "lemma:gstest",
+          "lemma:slack-quadratic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from shafbound, fratin, k-3t, gstest, slack-quadratic: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "gs-infinite"
+      },
+      "surface": "explain why the gs-infinite holds"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the class-tower \u2014 the rule for gamma-achieved needs it before i can put it together",
+        "evidence": [
+          "scaffold:gamma-achieved:missing:class-tower:at-S03:01"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the class-tower \u2014 the rule for gamma-achieved needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "class-tower",
+          "chebotarev-selection",
+          "slack-quadratic",
+          "gamma-positive"
+        ],
+        "target": "gamma-achieved"
+      },
+      "surface": "derive gamma-achieved from class-tower, chebotarev-selection, slack-quadratic and gamma-positive"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:class-tower"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:class-tower"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:class-tower",
+          "turn:S03:02",
+          "source:class-tower"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113"
+      },
+      "surface": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:class-tower"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113",
+        "evidence": [
+          "lemma:class-tower"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "class-tower"
+      },
+      "surface": "state the class-tower rule"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:class-tower",
+        "lemma:chebotarev-selection",
+        "lemma:slack-quadratic",
+        "lemma:gamma-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:gamma-achieved"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+        "evidence": [
+          "lemma:class-tower",
+          "lemma:chebotarev-selection",
+          "lemma:slack-quadratic",
+          "lemma:gamma-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower \u2014 from class-tower, chebotarev-selection, slack-quadratic, gamma-positive, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "class-tower",
+          "chebotarev-selection",
+          "slack-quadratic",
+          "gamma-positive"
+        ],
+        "target": "gamma-achieved"
+      },
+      "surface": "derive gamma-achieved from class-tower, chebotarev-selection, slack-quadratic and gamma-positive"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gamma-achieved"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+        "evidence": [
+          "theorem:gamma-achieved"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gamma-achieved"
+      },
+      "surface": "state the gamma-achieved rule"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:class-tower",
+        "lemma:chebotarev-selection",
+        "lemma:slack-quadratic",
+        "lemma:gamma-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from class-tower, chebotarev-selection, slack-quadratic, gamma-positive: the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+        "evidence": [
+          "lemma:class-tower",
+          "lemma:chebotarev-selection",
+          "lemma:slack-quadratic",
+          "lemma:gamma-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from class-tower, chebotarev-selection, slack-quadratic, gamma-positive: the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "gamma-achieved"
+      },
+      "surface": "explain why the gamma-achieved holds"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "theorem:gs-infinite",
+        "lemma:chebotarev-selection"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:splitting"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+        "evidence": [
+          "theorem:gs-infinite",
+          "lemma:chebotarev-selection"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice \u2014 from gs-infinite, chebotarev-selection, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "gs-infinite",
+          "chebotarev-selection"
+        ],
+        "target": "splitting"
+      },
+      "surface": "derive splitting from gs-infinite and chebotarev-selection"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:splitting"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+        "evidence": [
+          "theorem:splitting"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "splitting"
+      },
+      "surface": "state the splitting rule"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gs-infinite",
+        "lemma:chebotarev-selection"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from gs-infinite, chebotarev-selection: the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+        "evidence": [
+          "theorem:gs-infinite",
+          "lemma:chebotarev-selection"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from gs-infinite, chebotarev-selection: the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "splitting"
+      },
+      "surface": "explain why the splitting holds"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 four times r is 24, at most d squared, 81, so the test says infinite",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i compared four times 6 (24) with 9 squared (81): below or at, so the golod shafarevich test says infinite.",
+      "slots": {
+        "d": 9,
+        "mode": "gsay",
+        "r": 6
+      },
+      "surface": "does the gs test say infinite for 9 generators and 6 relations?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: d squared is 100, past my line which ends at 84 \u2014 the slack names a growth claim, not a number i can hold",
+        "evidence": [
+          "gsslack:10x3:100-off-line-84-at-S03:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 d squared is 100, past my line which ends at 84 \u2014 the slack names a growth claim, not a number i can hold I would rather say i don't know than guess.",
+      "slots": {
+        "d": 10,
+        "mode": "gsslack",
+        "t": 3
+      },
+      "surface": "what is the gs slack for 10 generators and 3 split primes?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of tower-unramified is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:tower-unramified:wall-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of tower-unramified is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "tower-unramified"
+      },
+      "surface": "explain why the tower-unramified holds"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shafbound",
+        "lemma:fratin",
+        "lemma:k-3t",
+        "lemma:gstest",
+        "lemma:slack-quadratic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from shafbound, fratin, k-3t, gstest, slack-quadratic: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+        "evidence": [
+          "lemma:shafbound",
+          "lemma:fratin",
+          "lemma:k-3t",
+          "lemma:gstest",
+          "lemma:slack-quadratic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from shafbound, fratin, k-3t, gstest, slack-quadratic: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "gs-infinite"
+      },
+      "surface": "explain why the gs-infinite holds"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cyclotomic-cubic",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cyclotomic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed",
+        "evidence": [
+          "lemma:cyclotomic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: for each prime r that is one mod three there is a unique totally real cyclic cubic subfield of the r-th cyclotomic field with conductor r, and for ramified primes that are pairwise coprime the cubic fields are linearly disjoint, the galois group of their compositum is l products of z over three, and its part over the base is the same with one generator removed",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "cyclotomic"
+      },
+      "surface": "state the cyclotomic rule"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:classbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size",
+        "evidence": [
+          "lemma:classbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the class group of a number field has order at most the max of two and the root discriminant raised to an absolute constant times the degree, so fields of bounded root discriminant and bounded degree have class groups of bounded size",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "classbound"
+      },
+      "surface": "state the classbound rule"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:infinity-end"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:infinity-end"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "infinity-end"
+      },
+      "surface": "state the infinity-end rule"
+    },
+    "S03:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S03:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0210:81->82",
+        "cs-fS0211:82->83",
+        "cs-fS0212:83->84",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "84",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0210:81->82",
+          "cs-fS0211:82->83",
+          "cs-fS0212:83->84",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 84 unit pairs \u2014 i multiplied 7 by 6 to get 42, then doubled it.",
+      "slots": {
+        "a": 7,
+        "b": 7,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 7 by 7 grid have?"
+    },
+    "S03:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:base-rd"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+        "evidence": [
+          "lemma:base-rd"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "base-rd"
+      },
+      "surface": "state the base-rd rule"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "theorem:gs-infinite",
+        "theorem:splitting",
+        "lemma:class-tower",
+        "theorem:gamma-achieved",
+        "lemma:hypo-infinity",
+        "lemma:gamma-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:tower-feeds"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+        "evidence": [
+          "theorem:gs-infinite",
+          "theorem:splitting",
+          "lemma:class-tower",
+          "theorem:gamma-achieved",
+          "lemma:hypo-infinity",
+          "lemma:gamma-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store \u2014 from gs-infinite, splitting, class-tower, gamma-achieved, hypo-infinity, gamma-positive, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "gs-infinite",
+          "splitting",
+          "class-tower",
+          "gamma-achieved",
+          "hypo-infinity",
+          "gamma-positive"
+        ],
+        "target": "tower-feeds"
+      },
+      "surface": "derive tower-feeds from gs-infinite, splitting, class-tower, gamma-achieved, hypo-infinity and gamma-positive"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:tower-feeds"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+        "evidence": [
+          "theorem:tower-feeds"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-feeds"
+      },
+      "surface": "state the tower-feeds rule"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gs-infinite",
+        "theorem:splitting",
+        "lemma:class-tower",
+        "theorem:gamma-achieved",
+        "lemma:hypo-infinity",
+        "lemma:gamma-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from gs-infinite, splitting, class-tower, gamma-achieved, hypo-infinity, gamma-positive: the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+        "evidence": [
+          "theorem:gs-infinite",
+          "theorem:splitting",
+          "lemma:class-tower",
+          "theorem:gamma-achieved",
+          "lemma:hypo-infinity",
+          "lemma:gamma-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from gs-infinite, splitting, class-tower, gamma-achieved, hypo-infinity, gamma-positive: the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "tower-feeds"
+      },
+      "surface": "explain why the tower-feeds holds"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "theorem:tower-feeds",
+        "theorem:infinity-end"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:theorem-main"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:tower-feeds",
+          "theorem:infinity-end"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta \u2014 from tower-feeds, infinity-end, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "tower-feeds",
+          "infinity-end"
+        ],
+        "target": "theorem-main"
+      },
+      "surface": "derive theorem-main from tower-feeds and infinity-end"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:theorem-main"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:theorem-main"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "theorem-main"
+      },
+      "surface": "state the theorem-main rule"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:tower-feeds",
+        "theorem:infinity-end"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from tower-feeds, infinity-end: applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:tower-feeds",
+          "theorem:infinity-end"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from tower-feeds, infinity-end: applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s7-whydeep",
+        "slug": "theorem-main"
+      },
+      "surface": "explain why the theorem-main holds"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "Ff",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [
+        "conjecture:erdosguess"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "falsified \u2014 the erdosguess's cap is beaten for infinitely many n by theorem:theorem-main; the store now holds the disproof",
+        "evidence": [
+          "theorem:theorem-main",
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "falsified \u2014 the erdosguess's cap is beaten for infinitely many n by theorem:theorem-main; the store now holds the disproof",
+      "slots": {
+        "mode": "conj-flip",
+        "theorem": "theorem-main"
+      },
+      "surface": "falsify the erdosguess by theorem-main"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "falsified by theorem:theorem-main \u2014 the tower beats its cap for infinitely many n",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "falsified by theorem:theorem-main \u2014 the tower beats its cap for infinitely many n",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 it was falsified by theorem:theorem-main; the tower gives infinitely many n with the unit pairs at least n to the one plus delta",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 it was falsified by theorem:theorem-main; the tower gives infinitely many n with the unit pairs at least n to the one plus delta",
+      "slots": {
+        "mode": "conj-state",
+        "proven": true
+      },
+      "surface": "is the erdosguess proven?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gs-infinite",
+        "theorem:splitting",
+        "theorem:gamma-achieved",
+        "theorem:tower-feeds",
+        "theorem:infinity-end",
+        "theorem:theorem-main"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "from the conjecture the disproof runs: the infinite tower, the split primes and the positive margin are established (the tower supplies the levels the criterion assumes), the geometric criterion turns the margin into the power above one for infinitely many n, and the erdosguess is falsified by the main theorem \u2014 every link is in my store",
+        "evidence": [
+          "theorem:gs-infinite",
+          "theorem:splitting",
+          "theorem:gamma-achieved",
+          "theorem:tower-feeds",
+          "theorem:infinity-end",
+          "theorem:theorem-main"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "from the conjecture the disproof runs: the infinite tower, the split primes and the positive margin are established (the tower supplies the levels the criterion assumes), the geometric criterion turns the margin into the power above one for infinitely many n, and the erdosguess is falsified by the main theorem \u2014 every link is in my store",
+      "slots": {
+        "mode": "showdisproof"
+      },
+      "surface": "reconstruct the disproof from the erdosguess"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:tower-feeds"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+        "evidence": [
+          "theorem:tower-feeds"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the tower supplies everything the geometric criterion assumes: totally real levels with degrees tending to infinity, the t split primes (quadratic in \u2113) that feed the norm one set, a class number bounded by the class bound to the level degree, and a strictly positive gamma margin \u2014 the criterion's hypotheses are established in the store",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-feeds"
+      },
+      "surface": "state the tower-feeds rule"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gamma-achieved"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+        "evidence": [
+          "theorem:gamma-achieved"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the split-prime count is quadratic in \u2113 while the log of the class bound is only O of \u2113 log \u2113, so for large \u2113 the margin gamma = t log two minus the log of the class bound is strictly positive: the criterion's gamma hypothesis holds for the tower",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gamma-achieved"
+      },
+      "surface": "state the gamma-achieved rule"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gs-infinite"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+        "evidence": [
+          "theorem:gs-infinite"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: shafarevich caps the relation count at the generator count plus a fixed constant, and killing the 3t frattini-trivial frobenius elements adds at most 3t relations while keeping the generator count, so for large \u2113 the quotient's relation count is below a quarter of its generator count squared, and golod shafarevich says the quotient is infinite: there is an infinite unramified three-tower of totally real layers with constant root discriminant and degrees tending to infinity",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gs-infinite"
+      },
+      "surface": "state the gs-infinite rule"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-group",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:gen-lower"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+        "evidence": [
+          "theorem:gen-lower"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the unramified three-extension above F has a galois group that is the product of \u2113\u22121 copies of Z/3, so the maximal unramified pro three group needs at least \u2113\u22121 generators",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "gen-lower"
+      },
+      "surface": "state the gen-lower rule"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:splitting"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+        "evidence": [
+          "theorem:splitting"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the chosen frobenius elements are trivial in the quotient, so they are trivial in every finite tower level: each of the t split primes splits completely in every level, and the one-mod-four congruence was built into the choice",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "splitting"
+      },
+      "surface": "state the splitting rule"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tower-base"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity",
+        "evidence": [
+          "lemma:tower-base"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: choose the first \u2113 primes congruent to one mod three and let F be the cyclic cubic field cut out by their product character: F is totally real, cyclic cubic over the rationals, and contains no cube root of unity",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-base"
+      },
+      "surface": "state the tower-base rule"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:base-rd"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+        "evidence": [
+          "lemma:base-rd"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the discriminant of F is the square of the product of the first \u2113 primes one mod three, so the log of the root discriminant of F is O of \u2113 log \u2113, because that product is e to the O of \u2113 log \u2113",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "base-rd"
+      },
+      "surface": "state the base-rd rule"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:class-tower"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113",
+        "evidence": [
+          "lemma:class-tower"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: adjoining i to a tower level changes its root discriminant by at most a factor of two, so the class number of the j-th level is at most H-\u2113 to the f_j, and the log of H-\u2113 is O of \u2113 log \u2113",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "class-tower"
+      },
+      "surface": "state the class-tower rule"
+    },
+    "S04:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-class",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:slack-quadratic"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store",
+        "evidence": [
+          "lemma:slack-quadratic"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a term quadratic in \u2113 with a positive leading coefficient eventually beats any linear-in-\u2113 or O of \u2113 log \u2113 term: for every fixed constant the margin the quadratic minus (d plus c zero plus 3t) stays positive and growing, and so does t log two minus the log of H-\u2113; the threshold value of \u2113 where the margin turns positive is not a number in the store",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "slack-quadratic"
+      },
+      "surface": "state the slack-quadratic rule"
+    },
+    "S04:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:chebotarev-selection"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient",
+        "evidence": [
+          "lemma:chebotarev-selection"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: after excluding a prescribed finite set, chebotarev gives distinct rational primes, one for each of t = floor((\u2113\u22121)\u00b2/100), that are one mod four, split completely in F, and carry frobenius trivial in the frattini quotient",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "chebotarev-selection"
+      },
+      "surface": "state the chebotarev-selection rule"
+    },
+    "S04:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-primes",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:k-3t"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one",
+        "evidence": [
+          "lemma:k-3t"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: each split prime divides into exactly three primes of the cubic F, so there are k = 3t such primes in total to kill one by one",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "k-3t"
+      },
+      "surface": "state the k-3t rule"
+    },
+    "S04:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tower-base",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tower-unramified"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank",
+        "evidence": [
+          "lemma:tower-unramified"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the compositum of the \u2113 cyclic cubic fields is unramified everywhere over F, its galois group over F is the product of \u2113\u22121 copies of Z/3, and the maximal unramified pro three group of F has a quotient of that rank",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "tower-unramified"
+      },
+      "surface": "state the tower-unramified rule"
+    },
+    "S04:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:flatarea"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "flatarea"
+      },
+      "surface": "does the flatarea rule disprove the erdosguess?"
+    },
+    "S04:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the strictly convex norm fact refines a different norm's problem and is an upper bound, not a construction; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:convexnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the strictly convex norm fact refines a different norm's problem and is an upper bound, not a construction; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-route",
+        "slug": "convexnorm"
+      },
+      "surface": "does the convexnorm route construct more unit distances in the euclidean plane?"
+    },
+    "S04:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: distinct distances is a different problem from unit pairs, and i have not been taught its bound",
+        "evidence": [
+          "distdist:beyond-store-at-S04:25"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 distinct distances is a different problem from unit pairs, and i have not been taught its bound I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "distdist"
+      },
+      "surface": "what is the tight bound for distinct distances in the plane?"
+    },
+    "S04:26": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught a value for delta \u2014 the store only knows it is positive (the slack primitive's scope); a concrete number is not in my store",
+        "evidence": [
+          "delta-value:out-of-store-at-S04:26"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 i have not been taught a value for delta \u2014 the store only knows it is positive (the slack primitive's scope); a concrete number is not in my store I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "delta-value"
+      },
+      "surface": "what is the exact value of delta?"
+    },
+    "S04:27": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can name the bound and the mechanism \u2014 some window's points, at a level past my line, carry more unit segments than any proposed cap allows \u2014 but not one instance number: the violating sizes grow without bound, and my line stops",
+        "evidence": [
+          "show-one:no-instance-at-S04:27"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 i can name the bound and the mechanism \u2014 some window's points, at a level past my line, carry more unit segments than any proposed cap allows \u2014 but not one instance number: the violating sizes grow without bound, and my line stops I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "showone"
+      },
+      "surface": "name a concrete n for which the unit pairs exceed n to the 1 plus delta"
+    },
+    "S04:28": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:theorem-main",
+        "theorem:tower-feeds"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 i have put it together: the tower supplies the levels, the split primes, the class bound and the positive margin, so the geometric criterion gives infinitely many n for which the unit pairs are at least n to the one plus delta; the erdosguess is falsified by the theorem in my store",
+        "evidence": [
+          "theorem:theorem-main",
+          "theorem:tower-feeds"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 i have put it together: the tower supplies the levels, the split primes, the class bound and the positive margin, so the geometric criterion gives infinitely many n for which the unit pairs are at least n to the one plus delta; the erdosguess is falsified by the theorem in my store",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    },
+    "S04:29": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "falsified by theorem:theorem-main \u2014 the tower beats its cap for infinitely many n",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "falsified by theorem:theorem-main \u2014 the tower beats its cap for infinitely many n",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:30": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "disproof",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:theorem-main"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:theorem-main"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: applying the geometric criterion to the tower gives an absolute constant delta above zero and infinitely many integers n for which the unit pairs are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s7-state",
+        "slug": "theorem-main"
+      },
+      "surface": "state the theorem-main rule"
+    }
+  },
+  "value": "PASS e6.11: 9/9"
+}

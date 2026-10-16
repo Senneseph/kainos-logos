@@ -1,0 +1,2192 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 48
+    },
+    "p2_honest_gaps_interleave": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_claimant_arc": {
+      "bad": [],
+      "pass": true
+    },
+    "p4_shape_phrasology": {
+      "bad": [],
+      "pass": true
+    },
+    "p5_grounding": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_line_discipline_seed": {
+      "bad": [],
+      "line_end_final": 72,
+      "pass": true,
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 245,
+        "seed_total": 245
+      }
+    },
+    "p7_joint_band_end": {
+      "bad": [],
+      "pass": true,
+      "table": {
+        "S04:01": {
+          "answer": "3",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:02": {
+          "answer": "3",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:03": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:04": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:05": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:06": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:07": {
+          "answer": "none",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:08": {
+          "answer": "none",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:09": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:10": {
+          "answer": "4",
+          "domain": "G",
+          "ok": true
+        },
+        "S04:11": {
+          "answer": "needs_info: i have no established fact for what comes after 72",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:12": {
+          "answer": "35",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:13": {
+          "answer": "43",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:14": {
+          "answer": "36",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:15": {
+          "answer": "yes \u2014 51 is 4 steps beyond 47",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:16": {
+          "answer": "after 45 comes 46",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:17": {
+          "answer": "72",
+          "domain": "N",
+          "ok": true
+        },
+        "S04:18": {
+          "answer": "none",
+          "domain": "G",
+          "ok": true
+        }
+      }
+    },
+    "p8_mastery_determinism": {
+      "bad": [],
+      "det_arm": true,
+      "files": [
+        "codeX-S01.json",
+        "codeX-S02.json",
+        "codeX-S03.json",
+        "codeX-S04.json",
+        "session-S02.json",
+        "session-S03.json",
+        "session-S04.json"
+      ],
+      "final_store_total": 309,
+      "mastery": {
+        "add-two-digit": "stable",
+        "add-within-10": "stable",
+        "compare-numbers": "stable",
+        "count-successor": "stable",
+        "mult-within-100": "stable",
+        "shape-circle": "stable",
+        "shape-rectangle": "stable",
+        "shape-square": "stable",
+        "shape-triangle": "stable",
+        "sub-within-30": "stable"
+      },
+      "pass": true
+    }
+  },
+  "passed": 8,
+  "script_hash": "97d1c38f79841deb",
+  "seed": "results/phase-6/e6.4-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0219:58->59"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "59",
+        "evidence": [
+          "cs-fS0219:58->59"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 59.",
+      "slots": {
+        "mode": "succ",
+        "n": 58
+      },
+      "surface": "what comes after 58?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the triangle's definition",
+        "nearest_plan": [
+          "teach it first: \u201cthe triangle has 3 sides and 3 corners\u201d"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the triangle's definition is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "triangle"
+      },
+      "surface": "how many sides does a triangle have?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the triangle has 3 sides and 3 corners",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cap:shape-triangle:def:S02:03",
+          "turn:S02:03"
+        ]
+      },
+      "response_text": "noted \u2014 the triangle: from now on i can do that.",
+      "slots": {
+        "corners": 3,
+        "shape": "triangle",
+        "sides": 3
+      },
+      "surface": "the triangle has 3 sides and 3 corners"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "triangle"
+      },
+      "surface": "how many sides does a triangle have?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "triangle"
+      },
+      "surface": "how many corners does a triangle have?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "42",
+        "evidence": [
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 42.",
+      "slots": {
+        "a": 17,
+        "b": 25,
+        "mode": "add"
+      },
+      "surface": "17 + 25 is what?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": null,
+      "contract_valid": true,
+      "domain": "B",
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": null,
+      "response_ir": {
+        "candidates": [
+          "a lesson about a number (after N comes M)",
+          "a question about a number (what comes after N / A + B is what)"
+        ],
+        "clarifying_question": "i did not catch that"
+      },
+      "response_text": "i did not catch that \u2014 did you mean (1) a lesson about a number ('after N comes M'), or (2) a question about a number ('what comes after N', or 'A + B is what')?",
+      "slots": {},
+      "surface": "how many edges does a pentagon have?"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:08"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cap:shape-square:def:S02:08"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the square has 4 sides and 3 corners",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cap:shape-square:def:S02:08",
+          "turn:S02:08"
+        ]
+      },
+      "response_text": "noted \u2014 the square: from now on i can do that.",
+      "slots": {
+        "corners": 3,
+        "shape": "square",
+        "sides": 4
+      },
+      "surface": "the square has 4 sides and 3 corners"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:08"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-square:def:S02:08"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the square has 3 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "square"
+      },
+      "surface": "how many corners does a square have?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:10"
+      ],
+      "kind": "correction",
+      "memory_diff": [
+        "cap:shape-square:def:S02:10",
+        "cap:shape-square:def:S02:08"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "parse_source": "grammar",
+        "replacement": "the square has 4 sides and 4 corners (claim opened)",
+        "superseded": "the square has 4 sides and 3 corners (claim closed)"
+      },
+      "response_text": "corrected \u2014 the square has 4 sides and 4 corners (the old claim is closed).",
+      "slots": {
+        "corners": 4,
+        "shape": "square",
+        "sides": 4
+      },
+      "surface": "no \u2014 that was a mistake; the square has 4 sides and 4 corners"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:10"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-square:def:S02:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the square has 4 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "square"
+      },
+      "surface": "how many corners does a square have?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "72",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 72.",
+      "slots": {
+        "a": 9,
+        "b": 8,
+        "mode": "mult"
+      },
+      "surface": "9 * 8 is what?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "phrasology",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "phrasing:S02:13"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S02:13"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "how many edges does a {shape} have?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S02:13",
+          "turn:S02:13"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"how many edges does a {shape} have?\" as \"how many sides does a {shape} have?\".",
+      "slots": {
+        "canon": "how many sides does a {shape} have?",
+        "new": "how many edges does a {shape} have?"
+      },
+      "surface": "the phrasing \"how many edges does a {shape} have?\" is the same as \"how many sides does a {shape} have?\""
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:13",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "lexicon:phrasing:S02:13",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 sides.",
+      "slots": {
+        "mode": "shape-sides",
+        "shape": "triangle"
+      },
+      "surface": "how many edges does a triangle have?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the rectangle's definition",
+        "nearest_plan": [
+          "teach it first: \u201cthe rectangle has 4 sides and 4 corners\u201d"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the rectangle's definition is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "rectangle"
+      },
+      "surface": "how many sides does a rectangle have?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the rectangle has 4 sides and 4 corners",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cap:shape-rectangle:def:S02:16",
+          "turn:S02:16"
+        ]
+      },
+      "response_text": "noted \u2014 the rectangle: from now on i can do that.",
+      "slots": {
+        "corners": 4,
+        "shape": "rectangle",
+        "sides": 4
+      },
+      "surface": "the rectangle has 4 sides and 4 corners"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the circle's definition",
+        "nearest_plan": [
+          "teach it first: \u201cthe circle has no sides and no corners\u201d"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the circle's definition is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "circle"
+      },
+      "surface": "how many sides does a circle have?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the circle has no sides and no corners",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cap:shape-circle:def:S03:02",
+          "turn:S03:02"
+        ]
+      },
+      "response_text": "noted \u2014 the circle: from now on i can do that.",
+      "slots": {
+        "shape": "circle"
+      },
+      "surface": "the circle has no sides and no corners"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "circle"
+      },
+      "surface": "how many sides does a circle have?"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "circle"
+      },
+      "surface": "how many corners does a circle have?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0133:32->33",
+        "cs-fS0132:31->32",
+        "cs-fS0131:30->31",
+        "cs-fS0130:29->30",
+        "cs-fS0129:28->29",
+        "cs-fS0128:27->28",
+        "cs-fS0127:26->27",
+        "cs-fS0126:25->26",
+        "cs-fS0125:24->25",
+        "cs-fS0124:23->24",
+        "cs-fS0123:22->23",
+        "cs-fS0122:21->22",
+        "cs-fS0121:20->21",
+        "cs-fS0120:19->20",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "19",
+        "evidence": [
+          "cs-fS0133:32->33",
+          "cs-fS0132:31->32",
+          "cs-fS0131:30->31",
+          "cs-fS0130:29->30",
+          "cs-fS0129:28->29",
+          "cs-fS0128:27->28",
+          "cs-fS0127:26->27",
+          "cs-fS0126:25->26",
+          "cs-fS0125:24->25",
+          "cs-fS0124:23->24",
+          "cs-fS0123:22->23",
+          "cs-fS0122:21->22",
+          "cs-fS0121:20->21",
+          "cs-fS0120:19->20",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 19.",
+      "slots": {
+        "a": 33,
+        "b": 14,
+        "mode": "sub"
+      },
+      "surface": "33 - 14 is what?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "phrasology",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "phrasing:S03:06"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "phrasing:S03:06"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "how many points does a {shape} have?",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "phrasing:S03:06",
+          "turn:S03:06"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i understand \"how many points does a {shape} have?\" as \"how many sides does a {shape} have?\".",
+      "slots": {
+        "canon": "how many sides does a {shape} have?",
+        "new": "how many points does a {shape} have?"
+      },
+      "surface": "the phrasing \"how many points does a {shape} have?\" is the same as \"how many sides does a {shape} have?\""
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:06",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "lexicon:phrasing:S03:06",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 sides.",
+      "slots": {
+        "mode": "shape-sides",
+        "shape": "triangle"
+      },
+      "surface": "how many points does a triangle have?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "phrasology",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "phrasing:S03:08"
+      ],
+      "kind": "correction",
+      "memory_diff": [
+        "phrasing:S03:08",
+        "phrasing:S03:06"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "parse_source": "grammar",
+        "replacement": "\"how many points does a {shape} have?\" is \"how many corners does a {shape} have?\" (mapping opened)",
+        "superseded": "\"how many points does a {shape} have?\" was \"how many sides does a {shape} have?\" (mapping closed)"
+      },
+      "response_text": "corrected \u2014 from now on i understand \"how many points does a {shape} have?\" as \"how many corners does a {shape} have?\" (the old mapping is closed).",
+      "slots": {
+        "canon": "how many corners does a {shape} have?",
+        "new": "how many points does a {shape} have?"
+      },
+      "surface": "no \u2014 that was a mistake; the phrasing \"how many points does a {shape} have?\" is the same as \"how many corners does a {shape} have?\""
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:08",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "lexicon:phrasing:S03:08",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no corners.",
+      "slots": {
+        "mode": "shape-corners",
+        "shape": "circle"
+      },
+      "surface": "how many points does a circle have?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "36",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 36.",
+      "slots": {
+        "a": 6,
+        "b": 6,
+        "mode": "mult"
+      },
+      "surface": "6 * 6 is what?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 38 is 9 steps beyond 29",
+        "evidence": [
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 38 is 9 steps beyond 29.",
+      "slots": {
+        "a": 38,
+        "b": 29,
+        "mode": "cmp"
+      },
+      "surface": "is 38 larger than 29?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "phrasology",
+      "contract_valid": true,
+      "domain": "B",
+      "grounded": [],
+      "kind": "ambiguous",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "candidates": [
+          "one of my canonical patterns: what comes after {n}? | {a} + {b} is what? | {a} - {b} is what? | {a} * {b} is what? | is {a} larger than {b}? | after {a} comes {b} | how many sides does a {shape} have? | how many corners does a {shape} have?"
+        ],
+        "clarifying_question": "i can't take that as a mapping \u2014 the new template's slot names must be exactly my canonical slot names, each used once",
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't take that as a mapping \u2014 the new template's slot names must be exactly my canonical slot names, each used once",
+      "slots": {
+        "canon": "what comes after {n}?",
+        "new": "how many sides does a {shape} have?"
+      },
+      "surface": "the phrasing \"how many sides does a {shape} have?\" is the same as \"what comes after {n}?\""
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-rectangle:def:S02:16"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the rectangle has 4 sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "rectangle"
+      },
+      "surface": "how many sides does a rectangle have?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0224:63->64"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:07",
+      "response_ir": {
+        "answer": "64",
+        "evidence": [
+          "cs-fS0224:63->64"
+        ],
+        "parse_source": "lexicon:phrasing:S02:07",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 64.",
+      "slots": {
+        "mode": "succ",
+        "n": 63
+      },
+      "surface": "what number follows 63?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "triangle"
+      },
+      "surface": "how many sides does a triangle have?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-triangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-triangle:def:S02:03"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cap:shape-triangle:def:S02:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the triangle has 3 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "triangle"
+      },
+      "surface": "how many corners does a triangle have?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:10"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-square:def:S02:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the square has 4 sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "square"
+      },
+      "surface": "how many sides does a square have?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:10"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-square:def:S02:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the square has 4 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "square"
+      },
+      "surface": "how many corners does a square have?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-rectangle:def:S02:16"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the rectangle has 4 sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "rectangle"
+      },
+      "surface": "how many sides does a rectangle have?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-rectangle:def:S02:16"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the rectangle has 4 corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "rectangle"
+      },
+      "surface": "how many corners does a rectangle have?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no sides.",
+      "slots": {
+        "mode": "shape",
+        "property": "sides",
+        "shape": "circle"
+      },
+      "surface": "how many sides does a circle have?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no corners.",
+      "slots": {
+        "mode": "shape",
+        "property": "corners",
+        "shape": "circle"
+      },
+      "surface": "how many corners does a circle have?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-square",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-square:def:S02:10"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:13",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-square:def:S02:10"
+        ],
+        "parse_source": "lexicon:phrasing:S02:13",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the square has 4 sides.",
+      "slots": {
+        "mode": "shape-sides",
+        "shape": "square"
+      },
+      "surface": "how many edges does a square have?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-rectangle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-rectangle:def:S02:16"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:08",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cap:shape-rectangle:def:S02:16"
+        ],
+        "parse_source": "lexicon:phrasing:S03:08",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the rectangle has 4 corners.",
+      "slots": {
+        "mode": "shape-corners",
+        "shape": "rectangle"
+      },
+      "surface": "how many points does a rectangle have?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have no established fact for what comes after 72",
+        "evidence": [
+          "absence-audit:count-successor:succ-of(72):no-established-at-S04:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly: i don't know what comes after 72 yet \u2014 i would rather say i don't know than guess.",
+      "slots": {
+        "mode": "succ",
+        "n": 72
+      },
+      "surface": "what comes after 72?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "add-within-10",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "35",
+        "evidence": [
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 35.",
+      "slots": {
+        "a": 26,
+        "b": 9,
+        "mode": "add"
+      },
+      "surface": "26 + 9 is what?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0228:67->68",
+        "cs-fS0227:66->67",
+        "cs-fS0226:65->66",
+        "cs-fS0225:64->65",
+        "cs-fS0224:63->64",
+        "cs-fS0223:62->63",
+        "cs-fS0222:61->62",
+        "cs-fS0221:60->61",
+        "cs-fS0220:59->60",
+        "cs-fS0219:58->59",
+        "cs-fS0218:57->58",
+        "cs-fS0217:56->57",
+        "cs-fS0216:55->56",
+        "cs-fS0215:54->55",
+        "cs-fS0214:53->54",
+        "cs-fS0213:52->53",
+        "cs-fS0212:51->52",
+        "cs-fS0211:50->51",
+        "cs-fS0210:49->50",
+        "cs-fS0209:48->49",
+        "cs-fS0208:47->48",
+        "cs-fS0207:46->47",
+        "cs-fS0206:45->46",
+        "cs-fS0205:44->45",
+        "cs-fS0204:43->44",
+        "cap:sub-within-30:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "43",
+        "evidence": [
+          "cs-fS0228:67->68",
+          "cs-fS0227:66->67",
+          "cs-fS0226:65->66",
+          "cs-fS0225:64->65",
+          "cs-fS0224:63->64",
+          "cs-fS0223:62->63",
+          "cs-fS0222:61->62",
+          "cs-fS0221:60->61",
+          "cs-fS0220:59->60",
+          "cs-fS0219:58->59",
+          "cs-fS0218:57->58",
+          "cs-fS0217:56->57",
+          "cs-fS0216:55->56",
+          "cs-fS0215:54->55",
+          "cs-fS0214:53->54",
+          "cs-fS0213:52->53",
+          "cs-fS0212:51->52",
+          "cs-fS0211:50->51",
+          "cs-fS0210:49->50",
+          "cs-fS0209:48->49",
+          "cs-fS0208:47->48",
+          "cs-fS0207:46->47",
+          "cs-fS0206:45->46",
+          "cs-fS0205:44->45",
+          "cs-fS0204:43->44",
+          "cap:sub-within-30:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 43.",
+      "slots": {
+        "a": 68,
+        "b": 25,
+        "mode": "sub"
+      },
+      "surface": "68 - 25 is what?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cap:mult-within-100:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "36",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cap:mult-within-100:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 36.",
+      "slots": {
+        "a": 4,
+        "b": 9,
+        "mode": "mult"
+      },
+      "surface": "4 * 9 is what?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cap:compare-numbers:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 51 is 4 steps beyond 47",
+        "evidence": [
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cap:compare-numbers:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 51 is 4 steps beyond 47.",
+      "slots": {
+        "a": 51,
+        "b": 47,
+        "mode": "cmp"
+      },
+      "surface": "is 51 larger than 47?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0206:45->46"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0206:45->46"
+      ],
+      "parse_source": "lexicon:phrasing:S03:04",
+      "response_ir": {
+        "ack": "after 45 comes 46",
+        "epistemic_state": "established",
+        "parse_source": "lexicon:phrasing:S03:04",
+        "provenance": [
+          "cs-fS0206:45->46",
+          "turn:S04:16"
+        ]
+      },
+      "response_text": "yes \u2014 after 45 comes 46, just as i have it.",
+      "slots": {
+        "a": 45,
+        "b": 46
+      },
+      "surface": "the number after 45 is 46"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "N",
+      "grounded": [
+        "cs-fS0406:71->72"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S02:07",
+      "response_ir": {
+        "answer": "72",
+        "evidence": [
+          "cs-fS0406:71->72"
+        ],
+        "parse_source": "lexicon:phrasing:S02:07",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that is 72.",
+      "slots": {
+        "mode": "succ",
+        "n": 71
+      },
+      "surface": "what number follows 71?"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shape-circle",
+      "contract_valid": true,
+      "domain": "G",
+      "grounded": [
+        "cap:shape-circle:def:S03:02"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "lexicon:phrasing:S03:08",
+      "response_ir": {
+        "answer": "none",
+        "evidence": [
+          "cap:shape-circle:def:S03:02"
+        ],
+        "parse_source": "lexicon:phrasing:S03:08",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the circle has no corners.",
+      "slots": {
+        "mode": "shape-corners",
+        "shape": "circle"
+      },
+      "surface": "how many points does a circle have?"
+    }
+  },
+  "value": 1.0
+}

@@ -1,0 +1,33 @@
+{
+  "assertion_values_retained": [
+    "hibernates=no",
+    "hibernates=yes"
+  ],
+  "config": {
+    "injected_source": "e2.5_injection/1",
+    "reconcile": true,
+    "world": "bear/polar_bear + hibernates (injected, provenance e2.5_injection/1)"
+  },
+  "consolidate_stats": {
+    "disputed_pairs": 1,
+    "game_id": "e2.5_game",
+    "kept_candidate": 0,
+    "processed": 1,
+    "promoted": 0,
+    "skipped_unknown": 0
+  },
+  "declaration": "as_declares_dimension_hibernates",
+  "dimension": "dim:hibernates",
+  "disputed_after": 0,
+  "disputed_before_reconcile": 2,
+  "distinct_contexts": 2,
+  "established_after": 2,
+  "experiment": "e2.5",
+  "hypothesis": "a repeated conflict yields a new context TERM, not a blended weight (P6)",
+  "new_terms": 1,
+  "passed": true,
+  "reexpressed": [
+    "as_e2.5_game_0_q_hibernates",
+    "as_e25_polar_bear_hibernates"
+  ]
+}

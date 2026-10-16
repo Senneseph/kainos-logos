@@ -1,0 +1,568 @@
+{
+  "note": "LIVE ADDENDUM \u2014 not the official run. Real Ollama arms (qwen-test:latest, 27B Q8, temperature 0) through the typed E6.3 seams; small demo budget (2 sessions x 12 turns, line cap 16). The official run is the det arm (results/phase-6/e6.3-run{1,2}).",
+  "model": "qwen-test:latest",
+  "wall_seconds": 23,
+  "author_calls": 24,
+  "analyzer_calls": 2,
+  "author_log": [
+    {
+      "calls": 1,
+      "out": "after 0 comes 1",
+      "secs": 1.5
+    },
+    {
+      "calls": 2,
+      "out": "after 0 comes 1",
+      "secs": 1.4
+    },
+    {
+      "calls": 3,
+      "out": "after 0 comes 1",
+      "secs": 0.7
+    },
+    {
+      "calls": 4,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 5,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 6,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 7,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 8,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 9,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 10,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 11,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 12,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 13,
+      "out": "after 0 comes 1",
+      "secs": 1.7
+    },
+    {
+      "calls": 14,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 15,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 16,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 17,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 18,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 19,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 20,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 21,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 22,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 23,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    },
+    {
+      "calls": 24,
+      "out": "after 0 comes 1",
+      "secs": 0.8
+    }
+  ],
+  "analyzer_log": [
+    {
+      "session": 1,
+      "out": "answer=none"
+    },
+    {
+      "session": 2,
+      "out": "answer=none"
+    }
+  ],
+  "convergence": {
+    "converged": false,
+    "converged_at_session": null
+  },
+  "arm": {
+    "author": "llm",
+    "analyzer": "llm",
+    "llm_arm": "llm",
+    "llm_dropped": []
+  },
+  "sessions": [
+    {
+      "session": 1,
+      "turns": 12,
+      "records": [
+        {
+          "turn": "S01:01",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:02",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:03",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:04",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:05",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:06",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:07",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:08",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:09",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:10",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:11",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S01:12",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        }
+      ],
+      "diagnosis": {
+        "session": 1,
+        "turns": 12,
+        "concepts": {
+          "add-two-digit": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "add-within-10": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "compare-numbers": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "count-successor": {
+            "state": "exposed",
+            "correct_derivations": 0,
+            "events": 12,
+            "prereq_gaps": [],
+            "unresolved_conflicts": 0
+          },
+          "mult-within-100": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "add-two-digit",
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "sub-within-30": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          }
+        },
+        "gaps_session": 0,
+        "boundary_contacts": 0,
+        "status": "progressing",
+        "converged": false,
+        "line_end": 1,
+        "stalled": [],
+        "proposals": [],
+        "fix": null,
+        "fix_applied_next_session": false,
+        "llm_proposal": null,
+        "triggers": []
+      }
+    },
+    {
+      "session": 2,
+      "turns": 12,
+      "records": [
+        {
+          "turn": "S02:01",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:02",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:03",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:04",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:05",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:06",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:07",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:08",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:09",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:10",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:11",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        },
+        {
+          "turn": "S02:12",
+          "author_kind": "llm-line",
+          "author_reason": "llm authoring arm",
+          "surface": "after 0 comes 1",
+          "kind": "assertion",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "attention": null
+        }
+      ],
+      "diagnosis": {
+        "session": 2,
+        "turns": 12,
+        "concepts": {
+          "add-two-digit": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "add-within-10": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "compare-numbers": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "count-successor": {
+            "state": "exposed",
+            "correct_derivations": 0,
+            "events": 24,
+            "prereq_gaps": [],
+            "unresolved_conflicts": 0
+          },
+          "mult-within-100": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "add-two-digit",
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          },
+          "sub-within-30": {
+            "state": "unexposed",
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "unresolved_conflicts": 0
+          }
+        },
+        "gaps_session": 0,
+        "boundary_contacts": 0,
+        "status": "progressing",
+        "converged": false,
+        "line_end": 1,
+        "stalled": [],
+        "proposals": [],
+        "fix": null,
+        "fix_applied_next_session": false,
+        "llm_proposal": null,
+        "triggers": []
+      }
+    }
+  ],
+  "tickets": []
+}

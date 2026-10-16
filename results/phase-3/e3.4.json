@@ -1,0 +1,136 @@
+{
+  "config": {
+    "commit": "4105668",
+    "ports": [
+      "text",
+      "synthetic_vision"
+    ],
+    "scene": {
+      "objects": [
+        {
+          "id": "box",
+          "positions": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              4.0,
+              4.0,
+              4.0
+            ]
+          ]
+        }
+      ],
+      "t": [
+        "t1",
+        "t2"
+      ]
+    },
+    "text": "John moved the box"
+  },
+  "consolidated_entities": [
+    "box"
+  ],
+  "consolidation": {
+    "box": {
+      "assertion_ids": [
+        "as_cons_e34_box_synthetic_vision",
+        "as_cons_e34_box_text"
+      ],
+      "modalities": [
+        "modality_synthetic_vision",
+        "modality_text"
+      ]
+    }
+  },
+  "entity_consolidated": true,
+  "passed": true,
+  "pattern_matched_cross_modal": true,
+  "patterns": {
+    "text": {
+      "actor": "john",
+      "from": null,
+      "object": "box",
+      "pattern": "TRANSFER",
+      "to": null
+    },
+    "vision": {
+      "actor": null,
+      "from": "(0.0,0.0,0.0)",
+      "object": "box",
+      "pattern": "TRANSFER",
+      "to": "(4.0,4.0,4.0)"
+    }
+  },
+  "shared_entities": [
+    "box"
+  ],
+  "text_ir": {
+    "entities": [
+      {
+        "id": "john",
+        "labels": [
+          "John"
+        ],
+        "type": "agent"
+      },
+      {
+        "id": "box",
+        "labels": [
+          "box"
+        ],
+        "type": "object"
+      }
+    ],
+    "kind": "state",
+    "relationships": [
+      {
+        "object": "box",
+        "relation": "moved",
+        "subject": "john"
+      }
+    ]
+  },
+  "vision_ir": {
+    "entities": [
+      {
+        "id": "box",
+        "labels": [
+          "box"
+        ],
+        "type": "object"
+      }
+    ],
+    "kind": "state",
+    "relationships": [
+      {
+        "context": {
+          "t": "t1",
+          "xyz": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "object": "(0.0,0.0,0.0)",
+        "relation": "located_at",
+        "subject": "box"
+      },
+      {
+        "context": {
+          "t": "t2",
+          "xyz": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "object": "(4.0,4.0,4.0)",
+        "relation": "located_at",
+        "subject": "box"
+      }
+    ]
+  }
+}

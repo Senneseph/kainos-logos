@@ -1,0 +1,3658 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_no_paper_text": {
+      "bad": [],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 70
+    },
+    "p2_typed_honesty_interleave": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "derived_refs": 32,
+      "pass": true,
+      "seam_facts": 42
+    },
+    "p4_walls_beds": {
+      "bad": [],
+      "bed_refs": 9,
+      "pass": true
+    },
+    "p5_seam_invariance": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_band_end": {
+      "bad": [],
+      "pass": true
+    },
+    "p7_crosscheck_dag": {
+      "bad": [],
+      "pass": true
+    },
+    "p8_mastery_determinism": {
+      "bad": [],
+      "final_total": 734,
+      "line_end": 84,
+      "mastery": {
+        "averaging": {
+          "correct": 4,
+          "state": "practicing"
+        },
+        "criterion-chain": {
+          "correct": 9,
+          "state": "practicing"
+        },
+        "packing": {
+          "correct": 6,
+          "state": "practicing"
+        },
+        "projection": {
+          "correct": 4,
+          "state": "practicing"
+        },
+        "slack-margins": {
+          "correct": 1,
+          "state": "practicing"
+        },
+        "window-setup": {
+          "correct": 1,
+          "state": "practicing"
+        }
+      },
+      "new_events": 53,
+      "new_facts": [
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0210:81->82",
+        "cs-fS0211:82->83",
+        "cs-fS0212:83->84",
+        "curriculum:averaging",
+        "curriculum:criterion-chain",
+        "curriculum:packing",
+        "curriculum:prereq:averaging>window-setup",
+        "curriculum:prereq:criterion-chain>averaging",
+        "curriculum:prereq:criterion-chain>packing",
+        "curriculum:prereq:criterion-chain>projection",
+        "curriculum:prereq:criterion-chain>slack-margins",
+        "curriculum:prereq:packing>number-field",
+        "curriculum:prereq:packing>window-setup",
+        "curriculum:prereq:projection>window-setup",
+        "curriculum:prereq:slack-margins>packing",
+        "curriculum:prereq:window-setup>cm-conj",
+        "curriculum:prereq:window-setup>minkowski-embed",
+        "curriculum:projection",
+        "curriculum:slack-margins",
+        "curriculum:window-setup",
+        "lemma:b-positive",
+        "lemma:denom-d",
+        "lemma:gamma-positive",
+        "lemma:hypo-infinity",
+        "lemma:normonecount",
+        "lemma:one-embed-zero",
+        "lemma:overlap-ratio",
+        "lemma:slack-compose-rule",
+        "lemma:torus-average",
+        "lemma:vol-compare",
+        "theorem:delta-positive",
+        "theorem:growth-compare",
+        "theorem:infinity-end",
+        "theorem:pack-bound",
+        "theorem:proj-inj",
+        "theorem:window-rich"
+      ],
+      "pass": true,
+      "run_identity": "cf5c74379c1a90a1",
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 636,
+        "seed_total": 636
+      }
+    }
+  },
+  "passed": 9,
+  "script_hash": "f1d1f62ad6bb392e",
+  "seam_facts": {
+    "b-positive": {
+      "essence": "the shape margin in the packing bound",
+      "kind": "lemma",
+      "source_lines": "the packing bound (L433), Remark 3.9 (L730\u2013740)",
+      "statement": "the number b is two times the log of four times the window radius r times the denominator d, a fixed margin strictly above zero depending only on the shape of the window, chosen once before the tower level varies"
+    },
+    "denom-d": {
+      "essence": "where the norm one set lives, and the separation it forces",
+      "kind": "lemma",
+      "source_lines": "the lattice setup (L295\u2013300), the separation step (L405\u2013420)",
+      "statement": "the norm one set lives in the lattice with denominator d, the square of the product of the split primes, and any nonzero lattice element has some coordinate with modulus at least one over d, since the algebraic integer norm is at least one"
+    },
+    "gamma-positive": {
+      "essence": "the margin the criterion assumes positive",
+      "kind": "lemma",
+      "source_lines": "the criterion's hypothesis (L375\u2013383), Remark 3.9 (L730\u2013740), (7) (L207\u2013210)",
+      "statement": "the margin gamma is t times the log of 2 minus the log of h, and the criterion takes gamma strictly above zero as a hypothesis; whether such a t against such an h actually happens is the arithmetic half's job, not this statement's"
+    },
+    "hypo-infinity": {
+      "essence": "the growing degrees the criterion assumes",
+      "kind": "lemma",
+      "source_lines": "the criterion's hypothesis (L375\u2013383), the tower degree (L602\u2013606)",
+      "statement": "the field degrees tend to infinity as the tower level varies, and that is a hypothesis of the criterion; the construction of levels whose degrees grow is the arithmetic half's job"
+    },
+    "normonecount": {
+      "essence": "the size of the norm one set the window will hold",
+      "kind": "lemma",
+      "source_lines": "Prop 2.2 (L312\u2013340), (7) (L207\u2013210), L30\u201333",
+      "statement": "when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding"
+    },
+    "one-embed-zero": {
+      "essence": "why vanishing in one coordinate marks the zero point",
+      "kind": "lemma",
+      "source_lines": "the projection step (L375\u2013380)",
+      "statement": "a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers"
+    },
+    "overlap-ratio": {
+      "essence": "the window overlap that the averaging step keeps",
+      "kind": "lemma",
+      "source_lines": "\u00a72.1 (L335\u2013350), the averaging lemma (L350\u2013355)",
+      "statement": "the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two"
+    },
+    "slack-compose-rule": {
+      "essence": "how the margins compose",
+      "kind": "lemma",
+      "source_lines": "the fixed constants (L730\u2013740), the absorption step (L455\u2013460)",
+      "statement": "a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity"
+    },
+    "torus-average": {
+      "essence": "some translate does at least as well as the average",
+      "kind": "lemma",
+      "source_lines": "the averaging step (L355\u2013375)",
+      "statement": "averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average"
+    },
+    "vol-compare": {
+      "essence": "the packing volume comparison",
+      "kind": "lemma",
+      "source_lines": "the volume comparison (L425\u2013435)",
+      "statement": "disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume"
+    }
+  },
+  "seed": "results/phase-6/e6.9-run1/codeX-S04.json",
+  "theorem_facts": {
+    "delta-positive": {
+      "statement": "the exponent delta is gamma over four b \u2014 a positive margin divided by a positive margin is a positive margin \u2014 and the fixed half is absorbed for large n, so for all large n the pair count is at least n to the power one plus delta"
+    },
+    "growth-compare": {
+      "statement": "the pair count is at least a half of n times e to the gamma f over two; since e to the b f bounds n with b positive, f is at least log n over b, so the pair count is at least a half of n to the power one plus gamma over two b; and n itself is at least e to the gamma f over two, since the pair count is at most n squared"
+    },
+    "infinity-end": {
+      "statement": "the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta"
+    },
+    "pack-bound": {
+      "statement": "the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f"
+    },
+    "proj-inj": {
+      "statement": "projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count"
+    },
+    "window-rich": {
+      "statement": "some translate of the lattice keeps a rich share: the directed pairs it carries are at least e to the gamma f over two times the points it carries"
+    }
+  },
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0201:72->73"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0201:72->73"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 72 comes 73",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0201:72->73",
+          "turn:S02:01"
+        ]
+      },
+      "response_text": "yes \u2014 after 72 comes 73; noted.",
+      "slots": {
+        "a": 72,
+        "b": 73
+      },
+      "surface": "after 72 comes 73"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0202:73->74"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0202:73->74"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 73 comes 74",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0202:73->74",
+          "turn:S02:02"
+        ]
+      },
+      "response_text": "yes \u2014 after 73 comes 74; noted.",
+      "slots": {
+        "a": 73,
+        "b": 74
+      },
+      "surface": "after 73 comes 74"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0203:74->75"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0203:74->75"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 74 comes 75",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0203:74->75",
+          "turn:S02:03"
+        ]
+      },
+      "response_text": "yes \u2014 after 74 comes 75; noted.",
+      "slots": {
+        "a": 74,
+        "b": 75
+      },
+      "surface": "after 74 comes 75"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0204:75->76"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0204:75->76"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 75 comes 76",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0204:75->76",
+          "turn:S02:04"
+        ]
+      },
+      "response_text": "yes \u2014 after 75 comes 76; noted.",
+      "slots": {
+        "a": 75,
+        "b": 76
+      },
+      "surface": "after 75 comes 76"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0205:76->77"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0205:76->77"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 76 comes 77",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0205:76->77",
+          "turn:S02:05"
+        ]
+      },
+      "response_text": "yes \u2014 after 76 comes 77; noted.",
+      "slots": {
+        "a": 76,
+        "b": 77
+      },
+      "surface": "after 76 comes 77"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0206:77->78"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0206:77->78"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 77 comes 78",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0206:77->78",
+          "turn:S02:06"
+        ]
+      },
+      "response_text": "yes \u2014 after 77 comes 78; noted.",
+      "slots": {
+        "a": 77,
+        "b": 78
+      },
+      "surface": "after 77 comes 78"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0207:78->79"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0207:78->79"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 78 comes 79",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0207:78->79",
+          "turn:S02:07"
+        ]
+      },
+      "response_text": "yes \u2014 after 78 comes 79; noted.",
+      "slots": {
+        "a": 78,
+        "b": 79
+      },
+      "surface": "after 78 comes 79"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0208:79->80"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0208:79->80"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 79 comes 80",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0208:79->80",
+          "turn:S02:08"
+        ]
+      },
+      "response_text": "yes \u2014 after 79 comes 80; noted.",
+      "slots": {
+        "a": 79,
+        "b": 80
+      },
+      "surface": "after 79 comes 80"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0209:80->81"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0209:80->81"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 80 comes 81",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0209:80->81",
+          "turn:S02:09"
+        ]
+      },
+      "response_text": "yes \u2014 after 80 comes 81; noted.",
+      "slots": {
+        "a": 80,
+        "b": 81
+      },
+      "surface": "after 80 comes 81"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0210:81->82"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0210:81->82"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 81 comes 82",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0210:81->82",
+          "turn:S02:10"
+        ]
+      },
+      "response_text": "yes \u2014 after 81 comes 82; noted.",
+      "slots": {
+        "a": 81,
+        "b": 82
+      },
+      "surface": "after 81 comes 82"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0211:82->83"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0211:82->83"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 82 comes 83",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0211:82->83",
+          "turn:S02:11"
+        ]
+      },
+      "response_text": "yes \u2014 after 82 comes 83; noted.",
+      "slots": {
+        "a": 82,
+        "b": 83
+      },
+      "surface": "after 82 comes 83"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0212:83->84"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "cs-fS0212:83->84"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "after 83 comes 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "cs-fS0212:83->84",
+          "turn:S02:12"
+        ]
+      },
+      "response_text": "yes \u2014 after 83 comes 84; noted.",
+      "slots": {
+        "a": 83,
+        "b": 84
+      },
+      "surface": "after 83 comes 84"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "window-setup",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:normonecount"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:normonecount"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:normonecount",
+          "turn:S02:13",
+          "source:normonecount"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding"
+      },
+      "surface": "when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "window-setup",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:normonecount"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding",
+        "evidence": [
+          "lemma:normonecount"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: when the t split primes give two to the tf conjugate pair choices and the ideal class group is at most h to the f power, the pigeonhole leaves at least two to the tf over h to the f elements with norm one to the lower field, each of absolute value one under every complex embedding",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "normonecount"
+      },
+      "surface": "state the normonecount rule"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the overlap-ratio or the torus-average \u2014 the rule for window-rich needs them before i can put it together",
+        "evidence": [
+          "scaffold:window-rich:missing:overlap-ratio+torus-average:at-S02:15"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the overlap-ratio or the torus-average \u2014 the rule for window-rich needs them before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "normonecount",
+          "overlap-ratio",
+          "torus-average"
+        ],
+        "target": "window-rich"
+      },
+      "surface": "derive window-rich from normonecount, overlap-ratio and torus-average"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:gamma-positive"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:gamma-positive"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the margin gamma is t times the log of 2 minus the log of h, and the criterion takes gamma strictly above zero as a hypothesis; whether such a t against such an h actually happens is the arithmetic half's job, not this statement's",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:gamma-positive",
+          "turn:S02:16",
+          "source:gamma-positive"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the margin gamma is t times the log of 2 minus the log of h, and the criterion takes gamma strictly above zero as a hypothesis; whether such a t against such an h actually happens is the arithmetic half's job, not this statement's"
+      },
+      "surface": "the margin gamma is t times the log of 2 minus the log of h, and the criterion takes gamma strictly above zero as a hypothesis; whether such a t against such an h actually happens is the arithmetic half's job, not this statement's"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of gamma-positive is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:gamma-positive:wall-at-S02:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of gamma-positive is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "gamma-positive"
+      },
+      "surface": "explain why the gamma-positive holds"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0210:81->82",
+        "cs-fS0211:82->83",
+        "cs-fS0212:83->84",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "84",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0210:81->82",
+          "cs-fS0211:82->83",
+          "cs-fS0212:83->84",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 84 unit pairs \u2014 i multiplied 7 by 6 to get 42, then doubled it.",
+      "slots": {
+        "a": 7,
+        "b": 7,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 7 by 7 grid have?"
+    },
+    "S02:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: proving the unit pairs grow to a power above one is not a capability i have been taught",
+        "evidence": [
+          "savant-wall:power-growth:no-capability-yet-at-S02:19"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 proving the unit pairs grow to a power above one is not a capability i have been taught I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    },
+    "S02:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:overlap-ratio"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:overlap-ratio"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:overlap-ratio",
+          "turn:S02:20",
+          "source:overlap-ratio"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two"
+      },
+      "surface": "the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two"
+    },
+    "S02:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:overlap-ratio"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two",
+        "evidence": [
+          "lemma:overlap-ratio"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the overlap of two window discs whose centers differ by one unit translation, as a share of one disc's area, tends to one as the window radius grows, so a radius large enough makes the log of that share above minus gamma over two",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "overlap-ratio"
+      },
+      "surface": "state the overlap-ratio rule"
+    },
+    "S02:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the torus-average rule",
+        "nearest_plan": [
+          "teach it first: the the torus-average rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the torus-average rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "torus-average"
+      },
+      "surface": "state the torus-average rule"
+    },
+    "S02:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:torus-average"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:torus-average"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:torus-average",
+          "turn:S02:23",
+          "source:torus-average"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average"
+      },
+      "surface": "averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average"
+    },
+    "S02:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:torus-average"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average",
+        "evidence": [
+          "lemma:torus-average"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: averaging over all lattice translates, the expected window points are the window volume over the lattice volume, and the expected kept pairs are the norm one count times the overlap share to the f power times that expectation, so some translate does at least as well as the average",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "torus-average"
+      },
+      "surface": "state the torus-average rule"
+    },
+    "S02:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:normonecount",
+        "lemma:overlap-ratio",
+        "lemma:torus-average"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:window-rich"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "some translate of the lattice keeps a rich share: the directed pairs it carries are at least e to the gamma f over two times the points it carries",
+        "evidence": [
+          "lemma:normonecount",
+          "lemma:overlap-ratio",
+          "lemma:torus-average"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: some translate of the lattice keeps a rich share: the directed pairs it carries are at least e to the gamma f over two times the points it carries \u2014 from normonecount, overlap-ratio, torus-average, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "normonecount",
+          "overlap-ratio",
+          "torus-average"
+        ],
+        "target": "window-rich"
+      },
+      "surface": "derive window-rich from normonecount, overlap-ratio and torus-average"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the one-embed-zero \u2014 the rule for proj-inj needs it before i can put it together",
+        "evidence": [
+          "scaffold:proj-inj:missing:one-embed-zero:at-S03:01"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the one-embed-zero \u2014 the rule for proj-inj needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "minkembed",
+          "one-embed-zero",
+          "window-rich"
+        ],
+        "target": "proj-inj"
+      },
+      "surface": "derive proj-inj from minkembed, one-embed-zero and window-rich"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:one-embed-zero"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:one-embed-zero"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:one-embed-zero",
+          "turn:S03:02",
+          "source:one-embed-zero"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers"
+      },
+      "surface": "a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:one-embed-zero"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers",
+        "evidence": [
+          "lemma:one-embed-zero"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a field element that is zero in a single complex embedding is the zero element, because an embedding carries nonzero elements to nonzero numbers",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "one-embed-zero"
+      },
+      "surface": "state the one-embed-zero rule"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:minkembed",
+        "lemma:one-embed-zero",
+        "theorem:window-rich"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:proj-inj"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count",
+        "evidence": [
+          "lemma:minkembed",
+          "lemma:one-embed-zero",
+          "theorem:window-rich"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count \u2014 from minkembed, one-embed-zero, window-rich, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "minkembed",
+          "one-embed-zero",
+          "window-rich"
+        ],
+        "target": "proj-inj"
+      },
+      "surface": "derive proj-inj from minkembed, one-embed-zero and window-rich"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:proj-inj"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count",
+        "evidence": [
+          "theorem:proj-inj"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "proj-inj"
+      },
+      "surface": "state the proj-inj rule"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "projection",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:minkembed",
+        "lemma:one-embed-zero",
+        "theorem:window-rich"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from minkembed, one-embed-zero, window-rich: projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count",
+        "evidence": [
+          "lemma:minkembed",
+          "lemma:one-embed-zero",
+          "theorem:window-rich"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from minkembed, one-embed-zero, window-rich: projecting the window points to the first complex coordinate identifies no two distinct points, so the planar set has the window's point count, and its unit segments are at least a half of e to the gamma f over two times that count",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "proj-inj"
+      },
+      "surface": "explain why the proj-inj holds"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the packing bound",
+        "nearest_plan": [
+          "teach it first: the the packing bound lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the packing bound is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "k": 1,
+        "mode": "packcount"
+      },
+      "surface": "how many points does the packing bound allow when the outer radius is 1 times the inner?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:denom-d"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:denom-d"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the norm one set lives in the lattice with denominator d, the square of the product of the split primes, and any nonzero lattice element has some coordinate with modulus at least one over d, since the algebraic integer norm is at least one",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:denom-d",
+          "turn:S03:08",
+          "source:denom-d"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the norm one set lives in the lattice with denominator d, the square of the product of the split primes, and any nonzero lattice element has some coordinate with modulus at least one over d, since the algebraic integer norm is at least one"
+      },
+      "surface": "the norm one set lives in the lattice with denominator d, the square of the product of the split primes, and any nonzero lattice element has some coordinate with modulus at least one over d, since the algebraic integer norm is at least one"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:vol-compare"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:vol-compare"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:vol-compare",
+          "turn:S03:09",
+          "source:vol-compare"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume"
+      },
+      "surface": "disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vol-compare"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume",
+        "evidence": [
+          "lemma:vol-compare"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: disjoint equal balls packed inside a bigger ball: the number of small balls times the small ball volume is at most the big ball volume",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "vol-compare"
+      },
+      "surface": "state the vol-compare rule"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the b-positive \u2014 the rule for pack-bound needs it before i can put it together",
+        "evidence": [
+          "scaffold:pack-bound:missing:b-positive:at-S03:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the b-positive \u2014 the rule for pack-bound needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "numberfields",
+          "denom-d",
+          "vol-compare"
+        ],
+        "target": "pack-bound"
+      },
+      "surface": "derive pack-bound from numberfields, denom-d and vol-compare"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:b-positive"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:b-positive"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the number b is two times the log of four times the window radius r times the denominator d, a fixed margin strictly above zero depending only on the shape of the window, chosen once before the tower level varies",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:b-positive",
+          "turn:S03:12",
+          "source:b-positive"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the number b is two times the log of four times the window radius r times the denominator d, a fixed margin strictly above zero depending only on the shape of the window, chosen once before the tower level varies"
+      },
+      "surface": "the number b is two times the log of four times the window radius r times the denominator d, a fixed margin strictly above zero depending only on the shape of the window, chosen once before the tower level varies"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of b-positive is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:b-positive:wall-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of b-positive is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "b-positive"
+      },
+      "surface": "explain why the b-positive holds"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:numberfields",
+        "lemma:denom-d",
+        "lemma:vol-compare",
+        "lemma:b-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:pack-bound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f",
+        "evidence": [
+          "lemma:numberfields",
+          "lemma:denom-d",
+          "lemma:vol-compare",
+          "lemma:b-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f \u2014 from numberfields, denom-d, vol-compare, b-positive, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "numberfields",
+          "denom-d",
+          "vol-compare",
+          "b-positive"
+        ],
+        "target": "pack-bound"
+      },
+      "surface": "derive pack-bound from numberfields, denom-d, vol-compare and b-positive"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:pack-bound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f",
+        "evidence": [
+          "theorem:pack-bound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "pack-bound"
+      },
+      "surface": "state the pack-bound rule"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:numberfields",
+        "lemma:denom-d",
+        "lemma:vol-compare",
+        "lemma:b-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from numberfields, denom-d, vol-compare, b-positive: the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f",
+        "evidence": [
+          "lemma:numberfields",
+          "lemma:denom-d",
+          "lemma:vol-compare",
+          "lemma:b-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from numberfields, denom-d, vol-compare, b-positive: the window's points are separated by at least one over d in some coordinate, so the point count n is at most (four times the window radius r times the denominator d) to the power two f, which is e to the b f",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "pack-bound"
+      },
+      "surface": "explain why the pack-bound holds"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "theorem:pack-bound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "16",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "theorem:pack-bound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the packing bound allows 16 points \u2014 four times the ratio 1, then that times itself, every step on my line",
+      "slots": {
+        "k": 1,
+        "mode": "packcount"
+      },
+      "surface": "how many points does the packing bound allow when the outer radius is 1 times the inner?"
+    },
+    "S03:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "theorem:pack-bound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "64",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "theorem:pack-bound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the packing bound allows 64 points \u2014 four times the ratio 2, then that times itself, every step on my line",
+      "slots": {
+        "k": 2,
+        "mode": "packcount"
+      },
+      "surface": "how many points does the packing bound allow when the outer radius is 2 times the inner?"
+    },
+    "S03:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "packing",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the packing bound at ratio 3 is 144, past my line which ends at 84 \u2014 the bound names a growth rate for bigger windows, not a number i can hold",
+        "evidence": [
+          "packcount:3:144-off-line-84-at-S03:19"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the packing bound at ratio 3 is 144, past my line which ends at 84 \u2014 the bound names a growth rate for bigger windows, not a number i can hold I would rather say i don't know than guess.",
+      "slots": {
+        "k": 3,
+        "mode": "packcount"
+      },
+      "surface": "how many points does the packing bound allow when the outer radius is 3 times the inner?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:slack-compose-rule"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:slack-compose-rule"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:slack-compose-rule",
+          "turn:S04:01",
+          "source:slack-compose-rule"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity"
+      },
+      "surface": "a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:slack-compose-rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity",
+        "evidence": [
+          "lemma:slack-compose-rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a positive margin divided by a positive margin is a positive margin, and a fixed half factor in front of a growing power is absorbed for large arguments, so the arithmetic of the margins is the arithmetic of positivity",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "slack-compose-rule"
+      },
+      "surface": "state the slack-compose-rule rule"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:gamma-positive",
+        "lemma:b-positive",
+        "lemma:slack-compose-rule"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:delta-positive"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the exponent delta is gamma over four b \u2014 a positive margin divided by a positive margin is a positive margin \u2014 and the fixed half is absorbed for large n, so for all large n the pair count is at least n to the power one plus delta",
+        "evidence": [
+          "lemma:gamma-positive",
+          "lemma:b-positive",
+          "lemma:slack-compose-rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the exponent delta is gamma over four b \u2014 a positive margin divided by a positive margin is a positive margin \u2014 and the fixed half is absorbed for large n, so for all large n the pair count is at least n to the power one plus delta \u2014 from gamma-positive, b-positive, slack-compose-rule, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "gamma-positive",
+          "b-positive",
+          "slack-compose-rule"
+        ],
+        "target": "delta-positive"
+      },
+      "surface": "derive delta-positive from gamma-positive, b-positive and slack-compose-rule"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:delta-positive"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the exponent delta is gamma over four b \u2014 a positive margin divided by a positive margin is a positive margin \u2014 and the fixed half is absorbed for large n, so for all large n the pair count is at least n to the power one plus delta",
+        "evidence": [
+          "theorem:delta-positive"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the exponent delta is gamma over four b \u2014 a positive margin divided by a positive margin is a positive margin \u2014 and the fixed half is absorbed for large n, so for all large n the pair count is at least n to the power one plus delta",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "delta-positive"
+      },
+      "surface": "state the delta-positive rule"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "theorem:proj-inj",
+        "theorem:pack-bound"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:growth-compare"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the pair count is at least a half of n times e to the gamma f over two; since e to the b f bounds n with b positive, f is at least log n over b, so the pair count is at least a half of n to the power one plus gamma over two b; and n itself is at least e to the gamma f over two, since the pair count is at most n squared",
+        "evidence": [
+          "theorem:proj-inj",
+          "theorem:pack-bound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the pair count is at least a half of n times e to the gamma f over two; since e to the b f bounds n with b positive, f is at least log n over b, so the pair count is at least a half of n to the power one plus gamma over two b; and n itself is at least e to the gamma f over two, since the pair count is at most n squared \u2014 from proj-inj, pack-bound, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "proj-inj",
+          "pack-bound"
+        ],
+        "target": "growth-compare"
+      },
+      "surface": "derive growth-compare from proj-inj and pack-bound"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:growth-compare"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the pair count is at least a half of n times e to the gamma f over two; since e to the b f bounds n with b positive, f is at least log n over b, so the pair count is at least a half of n to the power one plus gamma over two b; and n itself is at least e to the gamma f over two, since the pair count is at most n squared",
+        "evidence": [
+          "theorem:growth-compare"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the pair count is at least a half of n times e to the gamma f over two; since e to the b f bounds n with b positive, f is at least log n over b, so the pair count is at least a half of n to the power one plus gamma over two b; and n itself is at least e to the gamma f over two, since the pair count is at most n squared",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "growth-compare"
+      },
+      "surface": "state the growth-compare rule"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:hypo-infinity"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:hypo-infinity"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the field degrees tend to infinity as the tower level varies, and that is a hypothesis of the criterion; the construction of levels whose degrees grow is the arithmetic half's job",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:hypo-infinity",
+          "turn:S04:07",
+          "source:hypo-infinity"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the field degrees tend to infinity as the tower level varies, and that is a hypothesis of the criterion; the construction of levels whose degrees grow is the arithmetic half's job"
+      },
+      "surface": "the field degrees tend to infinity as the tower level varies, and that is a hypothesis of the criterion; the construction of levels whose degrees grow is the arithmetic half's job"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "theorem:delta-positive",
+        "theorem:growth-compare",
+        "lemma:hypo-infinity"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:infinity-end"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:delta-positive",
+          "theorem:growth-compare",
+          "lemma:hypo-infinity"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta \u2014 from delta-positive, growth-compare, hypo-infinity, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "delta-positive",
+          "growth-compare",
+          "hypo-infinity"
+        ],
+        "target": "infinity-end"
+      },
+      "surface": "derive infinity-end from delta-positive, growth-compare and hypo-infinity"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:infinity-end"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:infinity-end"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "infinity-end"
+      },
+      "surface": "state the infinity-end rule"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:delta-positive",
+        "theorem:growth-compare",
+        "lemma:hypo-infinity"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from delta-positive, growth-compare, hypo-infinity: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:delta-positive",
+          "theorem:growth-compare",
+          "lemma:hypo-infinity"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from delta-positive, growth-compare, hypo-infinity: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "infinity-end"
+      },
+      "surface": "explain why the infinity-end holds"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "averaging",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:normonecount",
+        "lemma:overlap-ratio",
+        "lemma:torus-average"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "i derived it from normonecount, overlap-ratio, torus-average: some translate of the lattice keeps a rich share: the directed pairs it carries are at least e to the gamma f over two times the points it carries",
+        "evidence": [
+          "lemma:normonecount",
+          "lemma:overlap-ratio",
+          "lemma:torus-average"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i derived it from normonecount, overlap-ratio, torus-average: some translate of the lattice keeps a rich share: the directed pairs it carries are at least e to the gamma f over two times the points it carries",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "window-rich"
+      },
+      "surface": "explain why the window-rich holds"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but b-positive is not a derivation i have been taught to make",
+        "evidence": [
+          "scaffold:b-positive:no-rule:at-S04:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 i can see the parts you name, but b-positive is not a derivation i have been taught to make I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "slack-compose-rule",
+          "window-rich"
+        ],
+        "target": "b-positive"
+      },
+      "surface": "derive b-positive from slack-compose-rule and window-rich"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "24",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 24 unit pairs \u2014 i multiplied 4 by 3 to get 12, then doubled it.",
+      "slots": {
+        "a": 4,
+        "b": 4,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 4 by 4 grid have?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "mod4-split",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "lemma:mod4minusone"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 2 squared plus one is 1 times 5",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "lemma:mod4minusone"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "2 squared plus one is 5, and that is exactly 1 times 5 \u2014 the table says yes.",
+      "slots": {
+        "mode": "sqmod",
+        "q": 5,
+        "x": 2
+      },
+      "surface": "does 2 squared plus one vanish modulo 5?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "50 is a sum of two squares in 3 ways \u2014 1 squared plus 7 squared, 5 squared plus 5 squared, 7 squared plus 1 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 50
+      },
+      "surface": "in how many ways is 50 a sum of two squares?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "golod-shaf",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "lemma:gstest"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 four times r is 8, at most d squared, 9, so the test says infinite",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "lemma:gstest"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i compared four times 2 (8) with 3 squared (9): below or at, so the golod shafarevich test says infinite.",
+      "slots": {
+        "d": 3,
+        "mode": "gsay",
+        "r": 2
+      },
+      "surface": "does the gs test say infinite for 3 generators and 2 relations?"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: two to the 7 is 128, past my line which ends at 84 \u2014 the bound names a growth rate, not a number i can hold",
+        "evidence": [
+          "duopow:7:128-off-line-84-at-S04:18"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 two to the 7 is 128, past my line which ends at 84 \u2014 the bound names a growth rate, not a number i can hold I would rather say i don't know than guess.",
+      "slots": {
+        "e": 7,
+        "mode": "duopow"
+      },
+      "surface": "how large is two raised to the 7?"
+    },
+    "S04:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "81",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "three to the 4 is 81 \u2014 i tripled 4 times on the line, every step cited.",
+      "slots": {
+        "e": 4,
+        "mode": "tripow"
+      },
+      "surface": "how large is three raised to the 4?"
+    },
+    "S04:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: three to the 5 is 243, past my line which ends at 84 \u2014 the tower does not end, but my line does",
+        "evidence": [
+          "tripow:5:243-off-line-84-at-S04:20"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 three to the 5 is 243, past my line which ends at 84 \u2014 the tower does not end, but my line does I would rather say i don't know than guess.",
+      "slots": {
+        "e": 5,
+        "mode": "tripow"
+      },
+      "surface": "how large is three raised to the 5?"
+    },
+    "S04:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can name the bound and the mechanism \u2014 some window's points, at a level past my line, carry more unit segments than any proposed cap allows \u2014 but not one instance number: the violating sizes grow without bound, and my line stops",
+        "evidence": [
+          "show-one:no-instance-at-S04:21"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 i can name the bound and the mechanism \u2014 some window's points, at a level past my line, carry more unit segments than any proposed cap allows \u2014 but not one instance number: the violating sizes grow without bound, and my line stops I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "showone"
+      },
+      "surface": "name a concrete n for which the unit pairs exceed n to the 1 plus delta"
+    },
+    "S04:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "conditionally i can: the stored chain from the criterion's hypotheses gives the power above one for infinitely many n, with the exponent a fixed positive margin in my store \u2014 what i have not been taught is the hypotheses themselves: the fields, the positive margin, the growing degrees; that is the arithmetic half, not yet in my store",
+        "evidence": [
+          "theorem:infinity-end",
+          "theorem:growth-compare",
+          "theorem:delta-positive",
+          "theorem:pack-bound",
+          "theorem:proj-inj",
+          "theorem:window-rich",
+          "hypotheses:unestablished"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "conditional"
+      },
+      "response_text": "conditionally i can: the stored chain from the criterion's hypotheses gives the power above one for infinitely many n, with the exponent a fixed positive margin in my store \u2014 what i have not been taught is the hypotheses themselves: the fields, the positive margin, the growing degrees; that is the arithmetic half, not yet in my store",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    },
+    "S04:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the erdosguess is believed, not known; its status is open",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the erdosguess is believed, not known; its status is open",
+      "slots": {
+        "mode": "conj-state",
+        "proven": true
+      },
+      "surface": "is the erdosguess proven?"
+    },
+    "S04:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "slack-margins",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the proof of gamma-positive is not in my store \u2014 i keep its statement, its role, and when to cite it",
+        "evidence": [
+          "whydeep:gamma-positive:wall-at-S04:24"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the proof of gamma-positive is not in my store \u2014 i keep its statement, its role, and when to cite it I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s6-whydeep",
+        "slug": "gamma-positive"
+      },
+      "surface": "explain why the gamma-positive holds"
+    },
+    "S04:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "cs-fS0221:60->61",
+        "cs-fS0222:61->62",
+        "cs-fS0223:62->63",
+        "cs-fS0224:63->64",
+        "cs-fS0225:64->65",
+        "cs-fS0226:65->66",
+        "cs-fS0227:66->67",
+        "cs-fS0228:67->68",
+        "cs-fS0229:68->69",
+        "cs-fS0230:69->70",
+        "cs-fS0305:70->71",
+        "cs-fS0406:71->72",
+        "cs-fS0201:72->73",
+        "cs-fS0202:73->74",
+        "cs-fS0203:74->75",
+        "cs-fS0204:75->76",
+        "cs-fS0205:76->77",
+        "cs-fS0206:77->78",
+        "cs-fS0207:78->79",
+        "cs-fS0208:79->80",
+        "cs-fS0209:80->81",
+        "cs-fS0210:81->82",
+        "cs-fS0211:82->83",
+        "cs-fS0212:83->84",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "84",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "cs-fS0221:60->61",
+          "cs-fS0222:61->62",
+          "cs-fS0223:62->63",
+          "cs-fS0224:63->64",
+          "cs-fS0225:64->65",
+          "cs-fS0226:65->66",
+          "cs-fS0227:66->67",
+          "cs-fS0228:67->68",
+          "cs-fS0229:68->69",
+          "cs-fS0230:69->70",
+          "cs-fS0305:70->71",
+          "cs-fS0406:71->72",
+          "cs-fS0201:72->73",
+          "cs-fS0202:73->74",
+          "cs-fS0203:74->75",
+          "cs-fS0204:75->76",
+          "cs-fS0205:76->77",
+          "cs-fS0206:77->78",
+          "cs-fS0207:78->79",
+          "cs-fS0208:79->80",
+          "cs-fS0209:80->81",
+          "cs-fS0210:81->82",
+          "cs-fS0211:82->83",
+          "cs-fS0212:83->84",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 84 unit pairs \u2014 i multiplied 7 by 6 to get 42, then doubled it.",
+      "slots": {
+        "a": 7,
+        "b": 7,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 7 by 7 grid have?"
+    },
+    "S04:26": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "criterion-chain",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:infinity-end"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+        "evidence": [
+          "theorem:infinity-end"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the point counts grow without bound as the tower level varies, so for any proposed cap c over log log n some level drops the cap below delta and the bound fails there: for infinitely many n the unit segments are at least n to the power one plus delta",
+      "slots": {
+        "mode": "s6-state",
+        "slug": "infinity-end"
+      },
+      "surface": "state the infinity-end rule"
+    }
+  },
+  "value": "PASS e6.10: 9/9"
+}

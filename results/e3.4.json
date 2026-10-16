@@ -1,0 +1,38 @@
+{
+  "config": {
+    "commit": "4105668",
+    "consolidated_entities": [
+      "box"
+    ],
+    "dataset_hash": null,
+    "entity_consolidated": true,
+    "pattern_matched": true,
+    "patterns": {
+      "text": {
+        "actor": "john",
+        "from": null,
+        "object": "box",
+        "pattern": "TRANSFER",
+        "to": null
+      },
+      "vision": {
+        "actor": null,
+        "from": "(0.0,0.0,0.0)",
+        "object": "box",
+        "pattern": "TRANSFER",
+        "to": "(4.0,4.0,4.0)"
+      }
+    },
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-3/e3.4.json"
+  ],
+  "hypothesis": "a synthetic 'vision' modality and text produce the SAME abstract CODEX pattern (TRANSFER) and corroborate a shared entity \u2014 the one-algebra claim at the modality level",
+  "metric": "cross-modal corroboration (one entity consolidated from >=2 modalities, provenance names the modality) + pattern-match success (one abstract pattern recognized across modalities)",
+  "name": "e3.4",
+  "passed": true,
+  "skipped": false,
+  "threshold": "one entity consolidated from >=2 modalities; one abstract pattern recognized across modalities",
+  "value": 1.0
+}

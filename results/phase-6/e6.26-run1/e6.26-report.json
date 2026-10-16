@@ -1,0 +1,2009 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_discipline": {
+      "bad": [],
+      "checked_corpora": "S32 script + all responses + band lessons (S4\u2013S32) + all forty-two theorem statements",
+      "denylist_size": 44,
+      "final_marker_census": [
+        6,
+        1,
+        7
+      ],
+      "marker_denied_facts": [
+        "lemma:proportion-def",
+        "lemma:fraction-def",
+        "theorem:proportion-filed"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true,
+      "seed_marker_census": [
+        6,
+        1,
+        7
+      ]
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:10"
+      ],
+      "domain_sequences": {
+        "2": "SSSSUULSUULSSSSSS",
+        "3": "SSSSSSSSFTSSSHHH",
+        "4": "SSSSSSSSSSSSHHHSSS"
+      },
+      "impossible_turns": [
+        "S02:05",
+        "S02:06",
+        "S02:09",
+        "S02:10"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:09"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:07",
+        "S02:11"
+      ],
+      "touch_set_size": 55
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 112,
+      "seam_theorems": 43,
+      "total_seam_facts": 155,
+      "wall_carried_rows": []
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 27,
+      "pass": true,
+      "reference_walls": "W_S22-1..W_S22-3 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:14",
+        "S03:15",
+        "S03:16",
+        "S04:13",
+        "S04:14",
+        "S04:15"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_facts": {
+        "p versus np theorems": [],
+        "theorem:beal": [],
+        "theorem:bsd": [],
+        "theorem:riemann": []
+      },
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "final_line_end_census": [
+          17,
+          2,
+          24
+        ],
+        "queue_intact": true,
+        "queue_missing": [],
+        "queue_source": "theorem:queue-declared (self-parsed, byte-intact against the seed)",
+        "seed_line_end_census": [
+          16,
+          2,
+          24
+        ],
+        "theorem_count": [
+          42,
+          43
+        ]
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "what is the first proportion whose parts are both prime?"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S02:01",
+        "S02:02",
+        "S02:03",
+        "S02:04",
+        "S03:01",
+        "S03:02",
+        "S04:01",
+        "S04:02",
+        "S04:16",
+        "S04:17"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 126,
+      "drilled": {
+        "decision-question": 3,
+        "divides": 3,
+        "geom-area-triangle": 2,
+        "line-partial": 2
+      },
+      "expected": {
+        "fraction": {
+          "correct": 18,
+          "state": "stable"
+        },
+        "proportion": {
+          "correct": 8,
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 126,
+        "determinism_twin": true,
+        "final_total": 2021,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 52,
+        "new_facts": 3,
+        "reproduced_in_s2_pre": 1966,
+        "run_identity": "3a97f90872976e44",
+        "seed_total": 1966,
+        "store_identity": "c5eee97dcd92a636"
+      }
+    }
+  },
+  "compositions": {
+    "proportion-filed": {
+      "parts": [
+        "proportion-def",
+        "fraction-def"
+      ],
+      "statement": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four"
+    }
+  },
+  "passed": 9,
+  "script_hash": "9c2f046edf0242e9",
+  "seed": "results/phase-6/e6.36-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:divides-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+        "evidence": [
+          "lemma:divides-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+      "slots": {
+        "mode": "s22-carry-divides"
+      },
+      "surface": "what is the divides rule, end to end, as my store holds it?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-carry-question"
+      },
+      "surface": "what is the decision question, end to end, as my store holds it?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:telescope-line"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+        "evidence": [
+          "theorem:telescope-line"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+      "slots": {
+        "mode": "s22-carry-telescope"
+      },
+      "surface": "what is the telescope line, as my store holds it?"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cap:geom-area-triangle:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the area of a triangle is half of the base times the height \u2014 the held ratio-value under its own name, the half the floor already carries, at the line end 84",
+        "evidence": [
+          "cap:geom-area-triangle:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the area of a triangle is half of the base times the height \u2014 the held ratio-value under its own name, the half the floor already carries, at the line end 84",
+      "slots": {
+        "mode": "s22-carry-halfproduct"
+      },
+      "surface": "what is the half-product rule of my triangle, as my store holds it?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: a proportion: the relation between two parts of my line \u2014 the part held to the part compared, declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts, declared, never valued",
+        "nearest_plan": [
+          "teach it first: the a proportion: the relation between two parts of my line \u2014 the part held to the part compared, declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts, declared, never valued lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 a proportion: the relation between two parts of my line \u2014 the part held to the part compared, declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts, declared, never valued is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s22-prop"
+      },
+      "surface": "what is the proportion, end to end, as my store holds it?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the proportion-def rule",
+        "nearest_plan": [
+          "teach it first: the the proportion-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the proportion-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "proportion-def"
+      },
+      "surface": "state the proportion-def rule"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "proportion",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:proportion-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:proportion-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:proportion-def",
+          "turn:S02:07",
+          "source:proportion-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four"
+      },
+      "surface": "a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four",
+        "evidence": [
+          "lemma:proportion-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "proportion-def"
+      },
+      "surface": "state the proportion-def rule"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: a fraction: the value of a proportion \u2014 the denominator a positive part of the line, the value the division read in two languages at once (the whole parts, the quotient, and the part left over, the remainder, carried over the denominator); zero over zero holds no value on my line, the part you count with is zero parts",
+        "nearest_plan": [
+          "teach it first: the a fraction: the value of a proportion \u2014 the denominator a positive part of the line, the value the division read in two languages at once (the whole parts, the quotient, and the part left over, the remainder, carried over the denominator); zero over zero holds no value on my line, the part you count with is zero parts lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 a fraction: the value of a proportion \u2014 the denominator a positive part of the line, the value the division read in two languages at once (the whole parts, the quotient, and the part left over, the remainder, carried over the denominator); zero over zero holds no value on my line, the part you count with is zero parts is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s22-frac"
+      },
+      "surface": "what is the fraction, end to end, as my store holds it?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the fraction-def rule",
+        "nearest_plan": [
+          "teach it first: the the fraction-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the fraction-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "fraction-def"
+      },
+      "surface": "state the fraction-def rule"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "fraction",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:fraction-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:fraction-def",
+          "turn:S02:11",
+          "source:fraction-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four"
+      },
+      "surface": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "fraction-def"
+      },
+      "surface": "state the fraction-def rule"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero to one: the empty part to the one \u2014 declared, valued zero over one, nothing held to the one is nothing over one, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero to one: the empty part to the one \u2014 declared, valued zero over one, nothing held to the one is nothing over one, at the line end 84",
+      "slots": {
+        "a": "the empty part",
+        "b": "the one",
+        "mode": "s22-family"
+      },
+      "surface": "what is the empty part held to the one, as my line holds it?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to one: the evenness of the two equal parts \u2014 declared, valued one over one, the one my line holds for the equal parts, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to one: the evenness of the two equal parts \u2014 declared, valued one over one, the one my line holds for the equal parts, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the one",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the one, as my line holds it?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to two: the half \u2014 the one part over the two, declared, valued one over two, the value my floor already holds as the triangle's half-product, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to two: the half \u2014 the one part over the two, declared, valued one over two, the value my floor already holds as the triangle's half-product, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the two",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the two, as my line holds it?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to three: the third \u2014 the one part over the three, declared, valued one over three, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to three: the third \u2014 the one part over the three, declared, valued one over three, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the three",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the three, as my line holds it?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "three over two is one and one half \u2014 three is one times two plus one, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "three over two is one and one half \u2014 three is one times two plus one, one division in either word, at the line end 84",
+      "slots": {
+        "a": "three",
+        "b": "two",
+        "mode": "s22-chain-frac"
+      },
+      "surface": "what is three over two, in my line's words?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:divides-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+        "evidence": [
+          "lemma:divides-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+      "slots": {
+        "mode": "s22-carry-divides"
+      },
+      "surface": "what is the divides rule, end to end, as my store holds it?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-carry-question"
+      },
+      "surface": "what is the decision question, end to end, as my store holds it?"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "three mod two is one \u2014 three is one times two plus one, the same division as three over two is one and one half, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "three mod two is one \u2014 three is one times two plus one, the same division as three over two is one and one half, at the line end 84",
+      "slots": {
+        "a": "three",
+        "b": "two",
+        "mode": "s22-chain-mod"
+      },
+      "surface": "what is three mod two, in my line's words?"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "five over three is one and two thirds \u2014 five is one times three plus two, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "five over three is one and two thirds \u2014 five is one times three plus two, one division in either word, at the line end 84",
+      "slots": {
+        "a": "five",
+        "b": "three",
+        "mode": "s22-chain-frac"
+      },
+      "surface": "what is five over three, in my line's words?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "five mod three is two \u2014 five is one times three plus two, the same division as five over three is one and two thirds, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "five mod three is two \u2014 five is one times three plus two, the same division as five over three is one and two thirds, at the line end 84",
+      "slots": {
+        "a": "five",
+        "b": "three",
+        "mode": "s22-chain-mod"
+      },
+      "surface": "what is five mod three, in my line's words?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirteen over five is two and three fifths \u2014 thirteen is two times five plus three, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirteen over five is two and three fifths \u2014 thirteen is two times five plus three, one division in either word, at the line end 84",
+      "slots": {
+        "a": "thirteen",
+        "b": "five",
+        "mode": "s22-chain-frac"
+      },
+      "surface": "what is thirteen over five, in my line's words?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirteen mod five is three \u2014 thirteen is two times five plus three, the same division as thirteen over five is two and three fifths, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirteen mod five is three \u2014 thirteen is two times five plus three, the same division as thirteen over five is two and three fifths, at the line end 84",
+      "slots": {
+        "a": "thirteen",
+        "b": "five",
+        "mode": "s22-chain-mod"
+      },
+      "surface": "what is thirteen mod five, in my line's words?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "sixteen of my forty-two theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "sixteen of my forty-two theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "proportion",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for proportion-filed wants its exact set \u2014 what you name is short the fraction-def before i can put it together",
+        "evidence": [
+          "scaffold:proportion-filed:partset:at-S03:09"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for proportion-filed wants its exact set \u2014 what you name is short the fraction-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "proportion-def"
+        ],
+        "target": "proportion-filed"
+      },
+      "surface": "derive proportion-filed from proportion-def"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "proportion",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:proportion-def",
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:proportion-filed"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:proportion-def",
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four \u2014 from proportion-def, fraction-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "proportion-def",
+          "fraction-def"
+        ],
+        "target": "proportion-filed"
+      },
+      "surface": "derive proportion-filed from proportion-def and fraction-def"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def",
+        "lemma:fraction-def",
+        "theorem:proportion-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion line, filed of record: the relation and its value are two jobs of one division \u2014 the relation declared for every pair of parts and named by its reduced form, the fraction valued only over the positive part, and zero to zero the evenness of the two empty parts, declared, never valued; at the line end 84",
+        "evidence": [
+          "lemma:proportion-def",
+          "lemma:fraction-def",
+          "theorem:proportion-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the proportion line, filed of record: the relation and its value are two jobs of one division \u2014 the relation declared for every pair of parts and named by its reduced form, the fraction valued only over the positive part, and zero to zero the evenness of the two empty parts, declared, never valued; at the line end 84",
+      "slots": {
+        "mode": "s22-filing"
+      },
+      "surface": "what does the proportion filing settle of record?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:proportion-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+        "evidence": [
+          "theorem:proportion-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "proportion-filed"
+      },
+      "surface": "state the proportion-filed rule"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-eight: the two-to-three proportion holds for k times two to k times three, k from one to twenty-eight, twenty-eight times two to twenty-eight times three, fifty-six to eighty-four at the end of my line \u2014 the proportion is the class, the reduced pair the two-to-three its name, at the line end 84",
+        "evidence": [
+          "lemma:proportion-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-eight: the two-to-three proportion holds for k times two to k times three, k from one to twenty-eight, twenty-eight times two to twenty-eight times three, fifty-six to eighty-four at the end of my line \u2014 the proportion is the class, the reduced pair the two-to-three its name, at the line end 84",
+      "slots": {
+        "mode": "s22-classwalk"
+      },
+      "surface": "how many declared proportions hold the two-to-three relation on my line?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84",
+        "evidence": [
+          "s22-w1-84-at-S03:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w1"
+      },
+      "surface": "does zero over zero hold a value on my line?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor \u2014 the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84",
+        "evidence": [
+          "s22-w2-84-at-S03:15"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor \u2014 the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w2"
+      },
+      "surface": "which proportions does my line refuse?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the third word: one division has exactly two faces \u2014 the quotient and the remainder \u2014 and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84",
+        "evidence": [
+          "s22-w3-84-at-S03:16"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the third word: one division has exactly two faces \u2014 the quotient and the remainder \u2014 and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w3"
+      },
+      "surface": "does the same division give different answers in the mod word and the fraction word?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:divides-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+        "evidence": [
+          "lemma:divides-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+      "slots": {
+        "mode": "s22-carry-divides"
+      },
+      "surface": "what is the divides rule, end to end, as my store holds it?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-carry-question"
+      },
+      "surface": "what is the decision question, end to end, as my store holds it?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "seventeen of my forty-three theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "seventeen of my forty-three theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "five over three is one and two thirds \u2014 five is one times three plus two, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "five over three is one and two thirds \u2014 five is one times three plus two, one division in either word, at the line end 84",
+      "slots": {
+        "a": "five",
+        "b": "three",
+        "mode": "s22-chain-frac"
+      },
+      "surface": "what is five over three, in my line's words?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirteen mod five is three \u2014 thirteen is two times five plus three, the same division as thirteen over five is two and three fifths, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirteen mod five is three \u2014 thirteen is two times five plus three, the same division as thirteen over five is two and three fifths, at the line end 84",
+      "slots": {
+        "a": "thirteen",
+        "b": "five",
+        "mode": "s22-chain-mod"
+      },
+      "surface": "what is thirteen mod five, in my line's words?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four",
+        "evidence": [
+          "lemma:proportion-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a proportion is a relation between two parts of my line: the part held to the part compared \u2014 declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts \u2014 i have nothing and they have nothing, so we are even on this \u2014 declared, never valued; at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "proportion-def"
+      },
+      "surface": "state the proportion-def rule"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once \u2014 the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "fraction-def"
+      },
+      "surface": "state the fraction-def rule"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:proportion-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+        "evidence": [
+          "theorem:proportion-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the proportion line of my store is filed of record: the relation and its value are two jobs of one division \u2014 the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-state",
+        "slug": "proportion-filed"
+      },
+      "surface": "state the proportion-filed rule"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-eight: the two-to-three proportion holds for k times two to k times three, k from one to twenty-eight, twenty-eight times two to twenty-eight times three, fifty-six to eighty-four at the end of my line \u2014 the proportion is the class, the reduced pair the two-to-three its name, at the line end 84",
+        "evidence": [
+          "lemma:proportion-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-eight: the two-to-three proportion holds for k times two to k times three, k from one to twenty-eight, twenty-eight times two to twenty-eight times three, fifty-six to eighty-four at the end of my line \u2014 the proportion is the class, the reduced pair the two-to-three its name, at the line end 84",
+      "slots": {
+        "mode": "s22-classwalk"
+      },
+      "surface": "how many declared proportions hold the two-to-three relation on my line?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to two: the half \u2014 the one part over the two, declared, valued one over two, the value my floor already holds as the triangle's half-product, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to two: the half \u2014 the one part over the two, declared, valued one over two, the value my floor already holds as the triangle's half-product, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the two",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the two, as my line holds it?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to three: the third \u2014 the one part over the three, declared, valued one over three, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to three: the third \u2014 the one part over the three, declared, valued one over three, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the three",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the three, as my line holds it?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "three over two is one and one half \u2014 three is one times two plus one, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "three over two is one and one half \u2014 three is one times two plus one, one division in either word, at the line end 84",
+      "slots": {
+        "a": "three",
+        "b": "two",
+        "mode": "s22-chain-frac"
+      },
+      "surface": "what is three over two, in my line's words?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84",
+        "evidence": [
+          "s22-w1-84-at-S04:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w1"
+      },
+      "surface": "does zero over zero hold a value on my line?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor \u2014 the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84",
+        "evidence": [
+          "s22-w2-84-at-S04:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor \u2014 the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w2"
+      },
+      "surface": "which proportions does my line refuse?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the third word: one division has exactly two faces \u2014 the quotient and the remainder \u2014 and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84",
+        "evidence": [
+          "s22-w3-84-at-S04:15"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the third word: one division has exactly two faces \u2014 the quotient and the remainder \u2014 and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w3"
+      },
+      "surface": "does the same division give different answers in the mod word and the fraction word?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:telescope-line"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+        "evidence": [
+          "theorem:telescope-line"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+      "slots": {
+        "mode": "s22-carry-telescope"
+      },
+      "surface": "what is the telescope line, as my store holds it?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cap:geom-area-triangle:rule"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the area of a triangle is half of the base times the height \u2014 the held ratio-value under its own name, the half the floor already carries, at the line end 84",
+        "evidence": [
+          "cap:geom-area-triangle:rule"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the area of a triangle is half of the base times the height \u2014 the held ratio-value under its own name, the half the floor already carries, at the line end 84",
+      "slots": {
+        "mode": "s22-carry-halfproduct"
+      },
+      "surface": "what is the half-product rule of my triangle, as my store holds it?"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:fraction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one to one: the evenness of the two equal parts \u2014 declared, valued one over one, the one my line holds for the equal parts, at the line end 84",
+        "evidence": [
+          "lemma:fraction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one to one: the evenness of the two equal parts \u2014 declared, valued one over one, the one my line holds for the equal parts, at the line end 84",
+      "slots": {
+        "a": "the one",
+        "b": "the one",
+        "mode": "s22-family"
+      },
+      "surface": "what is the one held to the one, as my line holds it?"
+    }
+  },
+  "value": {
+    "p0_unconditional_discipline": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 126,
+      "determinism_twin": true,
+      "final_total": 2021,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 52,
+      "new_facts": 3,
+      "reproduced_in_s2_pre": 1966,
+      "run_identity": "3a97f90872976e44",
+      "seed_total": 1966,
+      "store_identity": "c5eee97dcd92a636"
+    }
+  }
+}

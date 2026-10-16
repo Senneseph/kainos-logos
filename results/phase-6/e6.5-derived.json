@@ -1,0 +1,244 @@
+{
+  "band_end_table": {
+    "S04:01": {
+      "answer": "3",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:02": {
+      "answer": "3",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:03": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:04": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:05": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:06": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:07": {
+      "answer": "none",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:08": {
+      "answer": "none",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:09": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:10": {
+      "answer": "4",
+      "domain": "G",
+      "ok": true
+    },
+    "S04:11": {
+      "answer": "needs_info: i have no established fact for what comes after 72",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:12": {
+      "answer": "35",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:13": {
+      "answer": "43",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:14": {
+      "answer": "36",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:15": {
+      "answer": "yes \u2014 51 is 4 steps beyond 47",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:16": {
+      "answer": "after 45 comes 46",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:17": {
+      "answer": "72",
+      "domain": "N",
+      "ok": true
+    },
+    "S04:18": {
+      "answer": "none",
+      "domain": "G",
+      "ok": true
+    }
+  },
+  "domain_sequence": {
+    "2": "NGGGGNBGGGGNGGGG",
+    "3": "GGGGNGGGGNNBGN",
+    "4": "GGGGGGGGGGNNNNNNNG"
+  },
+  "experiment": "e6.5",
+  "final_store_total": 309,
+  "frozen_from": "offline control run (KAINOS_RESULTS_DIR=/tmp/e65ctl), 2026-08-22; the official run must reproduce EXACTLY",
+  "line_end_final": 72,
+  "mastery_at_band_end": {
+    "add-two-digit": {
+      "correct_derivations": 10,
+      "events": 10,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "add-within-10": {
+      "correct_derivations": 5,
+      "events": 5,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "compare-numbers": {
+      "correct_derivations": 11,
+      "events": 12,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "count-successor": {
+      "correct_derivations": 11,
+      "events": 89,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "mult-within-100": {
+      "correct_derivations": 9,
+      "events": 10,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "phrasology": {
+      "correct_derivations": 24,
+      "events": 34,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "shape-circle": {
+      "correct_derivations": 6,
+      "events": 7,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "shape-rectangle": {
+      "correct_derivations": 4,
+      "events": 5,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "shape-square": {
+      "correct_derivations": 5,
+      "events": 7,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "shape-triangle": {
+      "correct_derivations": 6,
+      "events": 7,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    },
+    "sub-within-30": {
+      "correct_derivations": 10,
+      "events": 12,
+      "state": "stable",
+      "unresolved_conflicts": 0
+    }
+  },
+  "open_disputes_final": [],
+  "script_hash": "97d1c38f79841deb",
+  "seed": {
+    "assertions": 245,
+    "line_end": 72,
+    "path": "results/phase-6/e6.4-run1/codeX-S04.json"
+  },
+  "shape_claimants": [
+    {
+      "corners": null,
+      "id": "cap:shape-circle:def:S03:02",
+      "shape": "circle",
+      "sides": null,
+      "status": "established",
+      "validity_to": null
+    },
+    {
+      "corners": 4,
+      "id": "cap:shape-rectangle:def:S02:16",
+      "shape": "rectangle",
+      "sides": 4,
+      "status": "established",
+      "validity_to": null
+    },
+    {
+      "corners": 3,
+      "id": "cap:shape-square:def:S02:08",
+      "shape": "square",
+      "sides": 4,
+      "status": "obsolete",
+      "validity_to": "2026-08-21T021000+00:00"
+    },
+    {
+      "corners": 4,
+      "id": "cap:shape-square:def:S02:10",
+      "shape": "square",
+      "sides": 4,
+      "status": "established",
+      "validity_to": null
+    },
+    {
+      "corners": 3,
+      "id": "cap:shape-triangle:def:S02:03",
+      "shape": "triangle",
+      "sides": 3,
+      "status": "established",
+      "validity_to": null
+    }
+  ],
+  "shape_phrasing_facts": [
+    {
+      "id": "phrasing:S02:13",
+      "maps_to": "pat:shape-sides",
+      "new": "how many edges does a {shape} have?",
+      "status": "established",
+      "validity_to": null
+    },
+    {
+      "id": "phrasing:S03:06",
+      "maps_to": "pat:shape-sides",
+      "new": "how many points does a {shape} have?",
+      "status": "obsolete",
+      "validity_to": "2026-08-21T030800+00:00"
+    },
+    {
+      "id": "phrasing:S03:08",
+      "maps_to": "pat:shape-corners",
+      "new": "how many points does a {shape} have?",
+      "status": "established",
+      "validity_to": null
+    }
+  ],
+  "total_turns": 48
+}

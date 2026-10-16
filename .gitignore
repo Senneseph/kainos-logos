@@ -1,0 +1,14 @@
+# DO NOT MODIFY THIS FILE.
+.gitignore
+project-management/
+.env
+references/
+
+# python bytecode (never committed)
+__pycache__/
+*.pyc
+*.egg-info/
+
+# bandgen dryrun scratch (regenerable)
+.bandgen-scratch/
+cron.log

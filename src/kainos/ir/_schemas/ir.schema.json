@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kainos/ir/1",
+  "title": "Kainos Semantic IR — v1",
+  "description": "The JSON-serializable, versioned structure every layer speaks (invariant #7). Validated at every boundary: a malformed IR must not silently corrupt downstream reasoning. Dialects (regex, 20Q, vision) map losslessly onto this generic shape and never mutate it. Any field change is a breaking change requiring a version bump (kainos/ir/2) + ADR. Bundled copy: src/kainos/ir/_schemas/ir.schema.json (test-enforced identical).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind"],
+  "properties": {
+    "kind": { "enum": ["state", "pattern", "query", "command"] },
+    "goals": { "type": "array" },
+    "entities": { "type": "array", "items": { "$ref": "#/$defs/Entity" } },
+    "relationships": { "type": "array", "items": { "$ref": "#/$defs/Relationship" } },
+    "events": { "type": "array" },
+    "constraints": { "type": "array", "items": { "$ref": "#/$defs/Constraint" } },
+    "unresolved": { "type": "array", "items": { "$ref": "#/$defs/UnresolvedRef" } },
+    "hypotheses": { "type": "array" },
+    "meta": { "type": "object" }
+  },
+  "$defs": {
+    "Entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject", "relation", "object"],
+      "properties": {
+        "subject": { "type": "string", "minLength": 1 },
+        "relation": { "type": "string", "minLength": 1 },
+        "object": { "type": "string", "minLength": 1 },
+        "context": { "type": "object" }
+      }
+    },
+    "Constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": { "type": "string", "minLength": 1 },
+        "value": {}
+      }
+    },
+    "UnresolvedRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "surface"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "surface": { "type": "string", "minLength": 1 },
+        "candidates": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

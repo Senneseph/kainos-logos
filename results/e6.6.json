@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "dcb89716637f197a17f65f44cde6d77051ed4e3f",
+    "dataset_hash": null,
+    "final_total": 375,
+    "line_end_final": 72,
+    "script_hash": "62322a8d360d8681",
+    "seed": "results/phase-6/e6.5-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.6-run1/session-S02.json",
+    "results/phase-6/e6.6-run1/session-S03.json",
+    "results/phase-6/e6.6-run1/session-S04.json",
+    "results/phase-6/e6.6-run1/codeX-S04.json"
+  ],
+  "hypothesis": "Algebra \u2225 kinematics learns as ONE aligned band (6\u20138): one/two-step linear equations and constant-velocity cart motion ride the same teachable-strip seam, with the alignment STRUCTURAL \u2014 kin-solve-time and alg-two-step are the same grounded helper (one solver, two doors: byte-equal line-step cites, only the rule fact differs), and the prereq graph gates kinematics stability on its algebra counterpart (stored edges, empty gaps at the band end); inexact division is honest ('not a whole number on my line'), off-line probes are the measured wall (15\u00b7x = 120, x = 8 in the math, off the line), the kin phrasology's wrong cross-family mapping is rejected by the name bijection (never silently mis-mapped), and the band ENDS on a JOINT evaluation \u2014 one frozen probe set spanning both domains, all seven band-2 concepts stable (K = 4) against the eleven seed/band-1 concepts, line untouched at 72, two runs byte-identical.",
+  "metric": "band-2 checks passed (P1..P8)",
+  "name": "e6.6",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": "PASS e6.6: 8/8"
+}

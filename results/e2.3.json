@@ -1,0 +1,20 @@
+{
+  "config": {
+    "commit": "ccb1f4a",
+    "dataset_hash": null,
+    "learned_assertions": 369,
+    "learned_present_after_restart": true,
+    "seed": 0,
+    "with": 4166.0,
+    "without": 4880.0
+  },
+  "evidence": [
+    "results/phase-2/e2.3.json"
+  ],
+  "hypothesis": "a persisted CODEX from set 1 reduces world queries on held-out set 2 (A3)",
+  "metric": "median oracle queries per set-2 game, with vs without the persisted CODEX (restart round-trip)",
+  "name": "e2.3",
+  "passed": true,
+  "threshold": "with-persistence < without-persistence and learned assertions survive the restart",
+  "value": 0.1463
+}

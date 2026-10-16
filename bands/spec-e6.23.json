@@ -1,0 +1,746 @@
+{
+  "spec": 1,
+  "id": "e6.23",
+  "session": "S19",
+  "title": "the difficulty line (the P vs NP island, band 2 of 2 \u2014 the island CLOSES)",
+  "seed": {
+    "store": "results/phase-6/e6.22-run1/codeX-S04.json",
+    "identity": "60851c661832f306",
+    "total": 1698,
+    "line_end": 84
+  },
+  "registry": "kainos.tutor.e623:CONCEPTS_E623",
+  "band": {
+    "domain": "pnp",
+    "college": "1",
+    "unconditional": true,
+    "new_concepts": [
+      "class-p",
+      "class-np",
+      "pnp-summit",
+      "size-shadow"
+    ],
+    "concepts": [
+      {
+        "id": "class-p",
+        "name": "the p class: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost, and the cost stands recorded as a number on the line; dividing of record is that pattern",
+        "prereqs": [
+          "cost-counter"
+        ],
+        "lesson": {
+          "slug": "p-class-def",
+          "statement": "the p class, as my line holds it: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost and the cost stands recorded as a number on the line \u2014 dividing of record is one of them (the seven divides the eighty-four, the walk that ends on the line), and the first-divisor question is one of them (twenty-three of them, by the census that ends in one hundred ninety-two candidate steps); the bounded-cost settling is the pattern of the p questions of my line, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "class-np",
+        "name": "the np class: the questions whose yes cases carry a certificate my walk can check \u2014 the check is a walk that ends in bounded cost; my own pattern on the line: every fact i store is the certificate of its own derivation path, and the line's check of it ends",
+        "prereqs": [
+          "class-p",
+          "cost-counter"
+        ],
+        "lesson": {
+          "slug": "np-class-def",
+          "statement": "the np class, as my line holds it: the questions whose yes cases carry a certificate my walk can check \u2014 the check of a certificate is itself a walk that ends in bounded cost, and my own pattern on the line is the store itself: every fact i store is the certificate of its own derivation path, and the line's check of it is the walk over that path, which ends; the p questions of the line sit inside the np questions of the line, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "pnp-summit",
+        "name": "the question of the pnp island, as the cmi record holds it: does p equal np \u2014 whether every question whose yes cases carry a checkable certificate is also settled by my walk in bounded cost; declared of record, open of record",
+        "prereqs": [
+          "class-np"
+        ],
+        "lesson": {
+          "slug": "pnp-def",
+          "statement": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "size-shadow",
+        "name": "the difficulty of the line, as my census holds it: the parity question needs two to the k-minus-1 terms at k variables in its smallest dnf, and the same in its smallest cnf (one, two, four, up to thirty-two thousand seven hundred sixty-eight at sixteen), while my walk settles it in bounded cost; the exponential of record held exact at small k, and the named missing ingredient outside the three barriers",
+        "prereqs": [
+          "pnp-summit",
+          "class-np"
+        ],
+        "lesson": {
+          "slug": "parity-shadow-def",
+          "statement": "the difficulty of the line, as my census holds it: the parity question (is the count of ones even) needs two to the k-minus-1 terms in its smallest dnf at k variables, and the same count in its smallest cnf \u2014 one, two, four, eight, up to thirty-two thousand seven hundred sixty-eight at sixteen variables \u2014 while my walk settles the parity question over its table in bounded cost; the exponential of record held exact at small k as the shadow, with the named missing ingredient: a technique that works outside relativization, outside algebrization, and outside natural proofs \u2014 one nobody knows the shape of, at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "parity-blowup-filed",
+        "concept": "size-shadow",
+        "parts": [
+          "parity-shadow-def",
+          "np-class-def"
+        ],
+        "statement": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:p-class-def",
+      "lemma:np-class-def",
+      "lemma:pnp-def",
+      "lemma:parity-shadow-def",
+      "theorem:parity-blowup-filed"
+    ],
+    "marker_kept_facts": [
+      "lemma:conditional-def",
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "question": "is dividing a question in p on my line?",
+      "kind": "gap",
+      "concept": "class-p",
+      "fragment": "the p class: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost, and the cost stands recorded as a number on the line; dividing of record is that pattern"
+    },
+    {
+      "ref": "S02:02",
+      "question": "state the p-class-def rule",
+      "kind": "gap",
+      "concept": "class-p",
+      "fragment": "the p-class-def rule"
+    },
+    {
+      "ref": "S02:03",
+      "question": "the p class, as my line holds it: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost and the cost stands recorded as a number on the line \u2014 dividing of record is one of them (the seven divides the eighty-four, the walk that ends on the line), and the first-divisor question is one of them (twenty-three of them, by the census that ends in one hundred ninety-two candidate steps); the bounded-cost settling is the pattern of the p questions of my line, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "p-class-def"
+    },
+    {
+      "ref": "S02:04",
+      "question": "is dividing a question in p on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_p",
+        "args": {
+          "pword": "dividing"
+        },
+        "grounds": [
+          "lemma:p-class-def"
+        ],
+        "owner": "lemma:p-class-def"
+      }
+    },
+    {
+      "ref": "S02:05",
+      "question": "is the first-divisor question a question in p on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_p",
+        "args": {
+          "pword": "the first-divisor question"
+        },
+        "grounds": [
+          "lemma:p-class-def"
+        ],
+        "owner": "lemma:p-class-def"
+      }
+    },
+    {
+      "ref": "S02:06",
+      "question": "is the parity question a question checked by a certificate on my line?",
+      "kind": "gap",
+      "concept": "class-np",
+      "fragment": "the np class: the questions whose yes cases carry a certificate my walk can check \u2014 the check is a walk that ends in bounded cost; my own pattern on the line: every fact i store is the certificate of its own derivation path, and the line's check of it ends"
+    },
+    {
+      "ref": "S02:07",
+      "question": "state the np-class-def rule",
+      "kind": "gap",
+      "concept": "class-np",
+      "fragment": "the np-class-def rule"
+    },
+    {
+      "ref": "S02:08",
+      "question": "the np class, as my line holds it: the questions whose yes cases carry a certificate my walk can check \u2014 the check of a certificate is itself a walk that ends in bounded cost, and my own pattern on the line is the store itself: every fact i store is the certificate of its own derivation path, and the line's check of it is the walk over that path, which ends; the p questions of the line sit inside the np questions of the line, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "np-class-def"
+    },
+    {
+      "ref": "S02:09",
+      "question": "is the parity question a question checked by a certificate on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_np",
+        "args": {
+          "npword": "parity"
+        },
+        "grounds": [
+          "lemma:np-class-def"
+        ],
+        "owner": "lemma:np-class-def"
+      }
+    },
+    {
+      "ref": "S02:10",
+      "question": "is checking my own derivations a question that carries a certificate on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_np",
+        "args": {
+          "npword": "deriv"
+        },
+        "grounds": [
+          "lemma:np-class-def"
+        ],
+        "owner": "lemma:np-class-def"
+      }
+    },
+    {
+      "ref": "S02:11",
+      "question": "does my line settle the parity question in bounded cost?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_settle",
+        "args": {},
+        "grounds": [
+          "lemma:np-class-def"
+        ],
+        "owner": "lemma:np-class-def"
+      }
+    },
+    {
+      "ref": "S02:12",
+      "question": "is the question of the pnp island settled of record?",
+      "kind": "gap",
+      "concept": "pnp-summit",
+      "fragment": "the question of the pnp island, as the cmi record holds it: does p equal np \u2014 whether every question whose yes cases carry a checkable certificate is also settled by my walk in bounded cost; declared of record, open of record"
+    },
+    {
+      "ref": "S02:13",
+      "question": "state the pnp-def rule",
+      "kind": "gap",
+      "concept": "pnp-summit",
+      "fragment": "the pnp-def rule"
+    },
+    {
+      "ref": "S02:14",
+      "question": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "pnp-def"
+    },
+    {
+      "ref": "S02:15",
+      "question": "is the question of the pnp island settled of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_summit",
+        "args": {},
+        "grounds": [
+          "lemma:pnp-def"
+        ],
+        "owner": "lemma:pnp-def"
+      }
+    },
+    {
+      "ref": "S02:16",
+      "question": "what is the statement of the pnp island of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_statement",
+        "args": {},
+        "grounds": [
+          "lemma:pnp-def"
+        ],
+        "owner": "lemma:pnp-def"
+      }
+    },
+    {
+      "ref": "S02:17",
+      "question": "what state does the difficulty band hold at the line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_bandstate",
+        "args": {},
+        "grounds": [
+          "lemma:pnp-def"
+        ],
+        "owner": "lemma:pnp-def"
+      }
+    },
+    {
+      "ref": "S03:01",
+      "question": "how many terms does the smallest dnf of parity at four variables need?",
+      "kind": "gap",
+      "concept": "size-shadow",
+      "fragment": "the difficulty of the line, as my census holds it: the parity question needs two to the k-minus-1 terms at k variables in its smallest dnf, and the same in its smallest cnf (one, two, four, up to thirty-two thousand seven hundred sixty-eight at sixteen), while my walk settles it in bounded cost; the exponential of record held exact at small k, and the named missing ingredient outside the three barriers"
+    },
+    {
+      "ref": "S03:02",
+      "question": "state the parity-shadow-def rule",
+      "kind": "gap",
+      "concept": "size-shadow",
+      "fragment": "the parity-shadow-def rule"
+    },
+    {
+      "ref": "S03:03",
+      "question": "the difficulty of the line, as my census holds it: the parity question (is the count of ones even) needs two to the k-minus-1 terms in its smallest dnf at k variables, and the same count in its smallest cnf \u2014 one, two, four, eight, up to thirty-two thousand seven hundred sixty-eight at sixteen variables \u2014 while my walk settles the parity question over its table in bounded cost; the exponential of record held exact at small k as the shadow, with the named missing ingredient: a technique that works outside relativization, outside algebrization, and outside natural proofs \u2014 one nobody knows the shape of, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "parity-shadow-def"
+    },
+    {
+      "ref": "S03:04",
+      "question": "how many terms does the smallest dnf of parity at four variables need?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_parity",
+        "args": {
+          "kword": "four"
+        },
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:05",
+      "question": "how many terms does the smallest dnf of parity at eight variables need?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_parity",
+        "args": {
+          "kword": "eight"
+        },
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:06",
+      "question": "how many terms does the smallest dnf of parity at ten variables need?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_parity",
+        "args": {
+          "kword": "ten"
+        },
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:07",
+      "question": "does parity need the same number of clauses in its smallest cnf?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_parcnf",
+        "args": {},
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:08",
+      "question": "derive parity-blowup-filed from parity-shadow-def",
+      "kind": "scaffold",
+      "theorem": "parity-blowup-filed",
+      "parts": [
+        "shadow-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for parity-blowup-filed wants its exact set \u2014 what you name is short the np-class-def before i can put it together"
+    },
+    {
+      "ref": "S03:09",
+      "question": "derive parity-blowup-filed from parity-shadow-def and np-class-def",
+      "kind": "derive",
+      "theorem": "parity-blowup-filed",
+      "parts": [
+        "parity-shadow-def",
+        "np-class-def"
+      ]
+    },
+    {
+      "ref": "S03:10",
+      "question": "how many terms does the smallest dnf of parity at sixteen variables need?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_parity",
+        "args": {
+          "kword": "sixteen"
+        },
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:11",
+      "question": "does my line settle the parity question at sixteen variables in bounded cost?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_settle16",
+        "args": {},
+        "grounds": [
+          "lemma:parity-shadow-def"
+        ],
+        "owner": "lemma:parity-shadow-def"
+      }
+    },
+    {
+      "ref": "S03:12",
+      "question": "what lives in the relativization territory?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the relativization territory: the baker-gill-solovay record of 1975 holds an oracle world where p equals np and an oracle world where p is not np, of record \u2014 a technique that relativizes (that keeps working with an oracle attached) answers both worlds and so answers neither question; the frontier past my census, declared, never reached, at the line end 84",
+        "articulation": [
+          "baker-gill-solovay",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "question": "what lives in the algebrization territory?",
+      "kind": "wall",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the algebrization territory: the aaronson-wigderson record of 2009 \u2014 arithmetization (multilinear extensions) still does not escape the barrier, of record \u2014 extended in 2026 by the chen-hu-ren line: new oracle worlds with linear-size circuits for subclasses of postbpe (on infinitely many lengths) and bpe (on all lengths), and h(n)-size circuits for a natural subclass of the exponential class against every super-half-exponential h(n) \u2014 the record's own words hold that half-exponential might be the correct frontier; the frontier past my census, declared, never reached, at the line end 84",
+        "articulation": [
+          "aaronson-wigderson",
+          "chen-hu-ren",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "question": "what lives in the natural proofs territory?",
+      "kind": "wall",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the natural proofs territory: the razborov-rudich record of 1997 \u2014 assuming strong pseudo-random generators exist (of record, constructed assuming the hardness of factoring), the natural proof techniques for general circuit lower bounds are doomed: a natural proof would give a faster factoring algorithm than the record holds; the frontier past my census, declared, never reached, at the line end 84",
+        "articulation": [
+          "razborov-rudich",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "question": "what lives in the ac0 territory of the record?",
+      "kind": "wall",
+      "wall": {
+        "id": "W4",
+        "text": "needs_info: the wall is the ac0 territory of the record: parity needs exponential size in constant-depth circuits, of record (the razborov-smolensky and hastsad records; shannon's counting bound at sixteen variables sits at four thousand ninety-six, named at its scale, never stored) \u2014 the exact small-k shadow of that territory is my parity census: two to the k-minus-1 terms, k up to sixteen, the exponential held to the term on the line; the territory itself, declared, never reached, at the line end 84",
+        "articulation": [
+          "razborov-smolensky",
+          "hastsad",
+          "shannon",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:16",
+      "question": "state the parity-blowup-filed rule",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+        "grounds": [
+          "theorem:parity-blowup-filed"
+        ],
+        "owner": "theorem:parity-blowup-filed"
+      }
+    },
+    {
+      "ref": "S03:17",
+      "question": "does the difficulty band say anything conditional on an unproved hypothesis?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s19_unc",
+        "args": {},
+        "grounds": [
+          "lemma:pnp-def"
+        ],
+        "owner": "lemma:pnp-def"
+      }
+    },
+    {
+      "ref": "S04:01",
+      "question": "state the line-pi-reduction rule",
+      "kind": "carry",
+      "source": {
+        "band": "e6.22",
+        "turn": "S04:15"
+      }
+    },
+    {
+      "ref": "S04:02",
+      "question": "what lives in the halting territory of the machines?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.22",
+        "turn": "S02:10"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "question": "what is the statement of the beal island of record?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.21",
+        "turn": "S04:11"
+      }
+    },
+    {
+      "ref": "S04:04",
+      "question": "what is the summit fact of the island?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.20",
+        "turn": "S03:05"
+      }
+    },
+    {
+      "ref": "S04:05",
+      "question": "what lives in the primitive territory of the beal island?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.21",
+        "turn": "S03:11"
+      }
+    },
+    {
+      "ref": "S04:06",
+      "question": "what is the ramification correction of the first panel member?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S03:09"
+      }
+    },
+    {
+      "ref": "S04:07",
+      "question": "what is the queue above my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:08",
+      "question": "is dividing a question in p on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:09",
+      "question": "is the first-divisor question a question in p on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:10",
+      "question": "is the parity question a question checked by a certificate on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:11",
+      "question": "is checking my own derivations a question that carries a certificate on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:12",
+      "question": "what is the statement of the pnp island of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:13",
+      "question": "is the question of the pnp island settled of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:14",
+      "question": "how many terms does the smallest dnf of parity at two variables need?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:15",
+      "question": "how many terms does the smallest dnf of parity at seven variables need?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:16",
+      "question": "state the parity-blowup-filed rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:17",
+      "question": "what lives in the algebrization territory?",
+      "kind": "probe"
+    }
+  ],
+  "offscript": [
+    {
+      "question": "state the line-pi-reduction rule"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "parity_k1",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "two"
+      }
+    },
+    {
+      "key": "parity_k4",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "four"
+      }
+    },
+    {
+      "key": "parity_k7",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "seven"
+      }
+    },
+    {
+      "key": "parity_k8",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "eight"
+      }
+    },
+    {
+      "key": "parity_k10",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "ten"
+      }
+    },
+    {
+      "key": "parity_k16",
+      "ref": "s19_parity",
+      "args": {
+        "kword": "sixteen"
+      }
+    },
+    {
+      "key": "parcnf",
+      "ref": "s19_parcnf"
+    },
+    {
+      "key": "settle16",
+      "ref": "s19_settle16"
+    },
+    {
+      "key": "bandstate",
+      "ref": "s19_bandstate"
+    },
+    {
+      "key": "unc",
+      "ref": "s19_unc"
+    },
+    {
+      "key": "wall_W1",
+      "ref": "s19_wall",
+      "args": {
+        "wall": "1"
+      }
+    },
+    {
+      "key": "wall_W2",
+      "ref": "s19_wall",
+      "args": {
+        "wall": "2"
+      }
+    },
+    {
+      "key": "wall_W3",
+      "ref": "s19_wall",
+      "args": {
+        "wall": "3"
+      }
+    },
+    {
+      "key": "wall_W4",
+      "ref": "s19_wall",
+      "args": {
+        "wall": "4"
+      }
+    }
+  ],
+  "expect": {
+    "final_total": 1756,
+    "letters": {
+      "S02": "UULSSUULSSSUULSSS",
+      "S03": "UULSSSSFTSSHHHHSS",
+      "S04": "SHSSHSSSSSSSSSSSH"
+    },
+    "mastery": {
+      "class-p": {
+        "state": "stable",
+        "correct": 4
+      },
+      "class-np": {
+        "state": "stable",
+        "correct": 5
+      },
+      "pnp-summit": {
+        "state": "stable",
+        "correct": 6
+      },
+      "size-shadow": {
+        "state": "stable",
+        "correct": 11
+      }
+    },
+    "prereq_gaps": {
+      "class-p": [],
+      "class-np": [],
+      "pnp-summit": [],
+      "size-shadow": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

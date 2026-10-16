@@ -1,0 +1,22 @@
+{
+  "config": {
+    "commit": "c1f364b",
+    "dataset_hash": null,
+    "deterministic_accuracy": 0.0,
+    "fallback_events": 0,
+    "llm_byte_exact_rate": 0.9167,
+    "model": "pi-qwen-fast:latest",
+    "n_records": 12,
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-3/e3.1.json"
+  ],
+  "hypothesis": "an LLMKernel behind the same LanguageKernel interface handles open phrasing the deterministic kernel cannot, with the CODEX/reasoner identical in both arms",
+  "metric": "judge-verified parse accuracy on the hand-labeled open-phrasing set (LLM arm vs deterministic arm)",
+  "name": "e3.1",
+  "passed": true,
+  "skipped": false,
+  "threshold": "llm_accuracy >= deterministic_accuracy on open phrasing, downstream identical",
+  "value": 1.0
+}

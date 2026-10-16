@@ -1,0 +1,2002 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S17 script + all responses + band lessons (S4\u2013S9 + S11\u2013S17) + all thirty-six theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:valuation-def",
+        "lemma:lte-def",
+        "lemma:beal-def",
+        "lemma:census-def",
+        "theorem:lte-ledger",
+        "theorem:beal-line-satisfaction"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S02:15",
+        "S03:10"
+      ],
+      "domain_sequences": {
+        "2": "UULSSSUULSSSFFTSS",
+        "3": "UULULSSSFTHHHSSSS",
+        "4": "SSSHSSSSSSSSSSSSH"
+      },
+      "impossible_turns": [
+        "S02:01",
+        "S02:02",
+        "S02:07",
+        "S02:08",
+        "S03:01",
+        "S03:02",
+        "S03:04"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [
+        "S02:13"
+      ],
+      "pass": true,
+      "scaffold_failures": [
+        "S02:14",
+        "S03:09"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:03",
+        "S02:09",
+        "S03:03",
+        "S03:05"
+      ],
+      "touch_set_size": 60
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 92,
+      "seam_theorems": 36,
+      "total_seam_facts": 128,
+      "wall_carried_rows": [
+        "S04:04",
+        "S04:17"
+      ]
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 15,
+      "pass": true,
+      "reference_walls": "W-S17-1..W-S17-3 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:11",
+        "S03:12",
+        "S03:13"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_beal_theorem_facts": [],
+      "discovery_candidate_bsd_theorem_facts": [],
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "queue_missing": [],
+        "queue_source": "lemma:queue-declared (self-parsed)",
+        "summit_destination_agreement": true,
+        "summit_destination_bad": []
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "state the bsd-panel-satisfaction rule"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S04:01",
+        "S04:02",
+        "S04:03",
+        "S04:04",
+        "S04:05",
+        "S04:06"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 104,
+      "drilled": {
+        "algebraic-rank": 1,
+        "analytic-order": 1,
+        "bsd-summit": 1,
+        "l-correction": 1
+      },
+      "expected": {
+        "beal-census": {
+          "correct": 10,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "beal-summit": {
+          "correct": 4,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "lte-form": {
+          "correct": 7,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "valuation": {
+          "correct": 6,
+          "prereq_gaps": [],
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 104,
+        "determinism_twin": true,
+        "final_total": 1641,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 54,
+        "new_facts": 6,
+        "reproduced_in_s2_pre": 1581,
+        "run_identity": "44d737505262f1d8",
+        "seed_total": 1581,
+        "store_identity": "e092ef1261ef7210"
+      }
+    }
+  },
+  "compositions": {
+    "beal-line-satisfaction": {
+      "parts": [
+        "beal-def",
+        "census-def"
+      ],
+      "statement": "the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84"
+    },
+    "lte-ledger": {
+      "parts": [
+        "lte-def",
+        "valuation-def"
+      ],
+      "statement": "the ledger filed on the line: the lift-the-exponent identity, the classical odd-p form, verified in every instance of the ledger's box \u2014 the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 two hundred forty-nine thousand two hundred eighty instances, zero deviations, at the line end 84"
+    }
+  },
+  "passed": 9,
+  "script_hash": "e69997696f25cbcb",
+  "seed": "results/phase-6/e6.20-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the valuation: for a prime and a number on my line, the p-adic depth \u2014 the p-rung of the first-divisor factorization chain, counting how many times the prime divides before the stop; every recorded number carries its depths as facts",
+        "nearest_plan": [
+          "teach it first: the the valuation: for a prime and a number on my line, the p-adic depth \u2014 the p-rung of the first-divisor factorization chain, counting how many times the prime divides before the stop; every recorded number carries its depths as facts lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the valuation: for a prime and a number on my line, the p-adic depth \u2014 the p-rung of the first-divisor factorization chain, counting how many times the prime divides before the stop; every recorded number carries its depths as facts is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "sixty-four",
+        "p": "two"
+      },
+      "surface": "what is the p-adic depth of sixty-four at the prime two of record?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the valuation-def rule",
+        "nearest_plan": [
+          "teach it first: the the valuation-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the valuation-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-state",
+        "slug": "valuation-def"
+      },
+      "surface": "state the valuation-def rule"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "valuation",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:valuation-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the valuation, the p-adic depth, read off the first-divisor factorization chain: for a prime p and a number on my line, it is the number of times the p-rung of the chain divides the number before the stop \u2014 the highest power of p that divides it \u2014 and every recorded number carries each of its depths as a fact, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:valuation-def",
+          "turn:S02:03",
+          "source:valuation-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the valuation, the p-adic depth, read off the first-divisor factorization chain: for a prime p and a number on my line, it is the number of times the p-rung of the chain divides the number before the stop \u2014 the highest power of p that divides it \u2014 and every recorded number carries each of its depths as a fact, at the line end 84"
+      },
+      "surface": "the valuation, the p-adic depth, read off the first-divisor factorization chain: for a prime p and a number on my line, it is the number of times the p-rung of the chain divides the number before the stop \u2014 the highest power of p that divides it \u2014 and every recorded number carries each of its depths as a fact, at the line end 84"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of sixty-four at the prime two of record is six \u2014 read off the two-rung of the first-divisor factorization chain of sixty-four, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of sixty-four at the prime two of record is six \u2014 read off the two-rung of the first-divisor factorization chain of sixty-four, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "sixty-four",
+        "p": "two"
+      },
+      "surface": "what is the p-adic depth of sixty-four at the prime two of record?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of seventy-two at the prime three of record is two \u2014 read off the three-rung of the first-divisor factorization chain of seventy-two, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of seventy-two at the prime three of record is two \u2014 read off the three-rung of the first-divisor factorization chain of seventy-two, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "seventy-two",
+        "p": "three"
+      },
+      "surface": "what is the p-adic depth of seventy-two at the prime three of record?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of eighty-four at the prime two of record is two \u2014 read off the two-rung of the first-divisor factorization chain of eighty-four, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of eighty-four at the prime two of record is two \u2014 read off the two-rung of the first-divisor factorization chain of eighty-four, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "eighty-four",
+        "p": "two"
+      },
+      "surface": "what is the p-adic depth of eighty-four at the prime two of record?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the lift-the-exponent form: for an odd prime p dividing the difference x minus y and dividing neither term, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference plus the p-adic depth of the exponent \u2014 verified in every instance of the line's ledger box",
+        "nearest_plan": [
+          "teach it first: the the lift-the-exponent form: for an odd prime p dividing the difference x minus y and dividing neither term, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference plus the p-adic depth of the exponent \u2014 verified in every instance of the line's ledger box lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the lift-the-exponent form: for an odd prime p dividing the difference x minus y and dividing neither term, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference plus the p-adic depth of the exponent \u2014 verified in every instance of the line's ledger box is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-lte-a"
+      },
+      "surface": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the lte-def rule",
+        "nearest_plan": [
+          "teach it first: the the lte-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the lte-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-state",
+        "slug": "lte-def"
+      },
+      "surface": "state the lte-def rule"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "lte-form",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:lte-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the lift-the-exponent identity, the classical odd-p form, as the rule i was given: when an odd prime p divides the difference x minus y and divides neither x nor y, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference x minus y plus the p-adic depth of the exponent n \u2014 my ledger in the line's box (the odd primes at or below the line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end) verifies every instance of it, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:lte-def",
+          "turn:S02:09",
+          "source:lte-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the lift-the-exponent identity, the classical odd-p form, as the rule i was given: when an odd prime p divides the difference x minus y and divides neither x nor y, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference x minus y plus the p-adic depth of the exponent n \u2014 my ledger in the line's box (the odd primes at or below the line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end) verifies every instance of it, at the line end 84"
+      },
+      "surface": "the lift-the-exponent identity, the classical odd-p form, as the rule i was given: when an odd prime p divides the difference x minus y and divides neither x nor y, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference x minus y plus the p-adic depth of the exponent n \u2014 my ledger in the line's box (the odd primes at or below the line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end) verifies every instance of it, at the line end 84"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it holds: four cubed minus one cubed \u2014 sixty-three \u2014 holds two of the three-rung, while the difference 3 holds one of the three-rung and the exponent three holds one of it \u2014 one plus one is two \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it holds: four cubed minus one cubed \u2014 sixty-three \u2014 holds two of the three-rung, while the difference 3 holds one of the three-rung and the exponent three holds one of it \u2014 one plus one is two \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-a"
+      },
+      "surface": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it holds: ten cubed minus one cubed \u2014 nine hundred and ninety-nine \u2014 holds three of the three-rung, while the difference 9 holds two of the three-rung and the exponent three holds one of it \u2014 two plus one is three \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it holds: ten cubed minus one cubed \u2014 nine hundred and ninety-nine \u2014 holds three of the three-rung, while the difference 9 holds two of the three-rung and the exponent three holds one of it \u2014 two plus one is three \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-b"
+      },
+      "surface": "what does the lift-the-exponent identity hold for ten cubed minus one cubed at the prime three of record?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-ledger"
+      },
+      "surface": "how many instances does the lift-the-exponent ledger cover in the line's box of record?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "beal-summit",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the beal-def or the census-def \u2014 the rule for beal-line-satisfaction needs them before i can put it together",
+        "evidence": [
+          "scaffold:beal-line-satisfaction:missing:beal-def+census-def:at-S02:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the beal-def or the census-def \u2014 the rule for beal-line-satisfaction needs them before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "beal-def",
+          "census-def"
+        ],
+        "target": "beal-line-satisfaction"
+      },
+      "surface": "derive beal-line-satisfaction from beal-def and census-def"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "lte-form",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for lte-ledger wants its exact set \u2014 what you name is short the valuation-def before i can put it together",
+        "evidence": [
+          "scaffold:lte-ledger:partset:at-S02:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for lte-ledger wants its exact set \u2014 what you name is short the valuation-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "lte-def"
+        ],
+        "target": "lte-ledger"
+      },
+      "surface": "derive lte-ledger from lte-def"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "lte-form",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:lte-def",
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:lte-ledger"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ledger filed on the line: the lift-the-exponent identity, the classical odd-p form, verified in every instance of the ledger's box \u2014 the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 two hundred forty-nine thousand two hundred eighty instances, zero deviations, at the line end 84",
+        "evidence": [
+          "lemma:lte-def",
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the ledger filed on the line: the lift-the-exponent identity, the classical odd-p form, verified in every instance of the ledger's box \u2014 the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 two hundred forty-nine thousand two hundred eighty instances, zero deviations, at the line end 84 \u2014 from lte-def, valuation-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "lte-def",
+          "valuation-def"
+        ],
+        "target": "lte-ledger"
+      },
+      "surface": "derive lte-ledger from lte-def and valuation-def"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of thirty-six at the prime two of record is two \u2014 read off the two-rung of the first-divisor factorization chain of thirty-six, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of thirty-six at the prime two of record is two \u2014 read off the two-rung of the first-divisor factorization chain of thirty-six, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "thirty-six",
+        "p": "two"
+      },
+      "surface": "what is the p-adic depth of thirty-six at the prime two of record?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-ledger"
+      },
+      "surface": "how many instances does the lift-the-exponent ledger cover in the line's box of record?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the summit of the island: the statement itself, a declared record fact (the ams beal prize) \u2014 with all three exponents above two, a to the x power plus b to the y power equal to c to the z power forces a common prime factor of a, b and c; on my line the verification census carries it and the primitive territory is a wall",
+        "nearest_plan": [
+          "teach it first: the the summit of the island: the statement itself, a declared record fact (the ams beal prize) \u2014 with all three exponents above two, a to the x power plus b to the y power equal to c to the z power forces a common prime factor of a, b and c; on my line the verification census carries it and the primitive territory is a wall lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the summit of the island: the statement itself, a declared record fact (the ams beal prize) \u2014 with all three exponents above two, a to the x power plus b to the y power equal to c to the z power forces a common prime factor of a, b and c; on my line the verification census carries it and the primitive territory is a wall is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-beal"
+      },
+      "surface": "what is the statement of the beal island of record?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the beal-def rule",
+        "nearest_plan": [
+          "teach it first: the the beal-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the beal-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-state",
+        "slug": "beal-def"
+      },
+      "surface": "state the beal-def rule"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "beal-summit",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:beal-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the statement of the island, of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, and a, b, c, x, y and z are positive integers with x, y and z each above two, then a, b and c have a common prime factor \u2014 that is, the equation has no solution in pairwise coprime a, b and c once every exponent is above two, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:beal-def",
+          "turn:S03:03",
+          "source:beal-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the statement of the island, of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, and a, b, c, x, y and z are positive integers with x, y and z each above two, then a, b and c have a common prime factor \u2014 that is, the equation has no solution in pairwise coprime a, b and c once every exponent is above two, at the line end 84"
+      },
+      "surface": "the statement of the island, of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, and a, b, c, x, y and z are positive integers with x, y and z each above two, then a, b and c have a common prime factor \u2014 that is, the equation has no solution in pairwise coprime a, b and c once every exponent is above two, at the line end 84"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the verification census: in the box where a, b, c lie at or below the line end and the exponents stand between three and ten of record, exactly 83 triples solve the island's equation and every one carries its common prime factor \u2014 zero primitive triples on the line; the line ends where the primitive triples would live",
+        "nearest_plan": [
+          "teach it first: the the verification census: in the box where a, b, c lie at or below the line end and the exponents stand between three and ten of record, exactly 83 triples solve the island's equation and every one carries its common prime factor \u2014 zero primitive triples on the line; the line ends where the primitive triples would live lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the verification census: in the box where a, b, c lie at or below the line end and the exponents stand between three and ten of record, exactly 83 triples solve the island's equation and every one carries its common prime factor \u2014 zero primitive triples on the line; the line ends where the primitive triples would live is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "beal-census",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:census-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:census-def",
+          "turn:S03:05",
+          "source:census-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84"
+      },
+      "surface": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero \u2014 no primitive triple lives on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero \u2014 no primitive triple lives on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+      "slots": {
+        "mode": "s17-empt"
+      },
+      "surface": "how many primitive triples live on my line?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the two-power twins (two to the n plus two to the n equals two to the n plus one), the three-family (three cubed plus six cubed equals three to the fifth), the seven-family (seven cubed plus seven to the fourth equals fourteen cubed), the fifteen-family (fifteen to the fourth plus fifteen to the fifth equals thirty to the fourth), and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families with their common factors \u2014 61 of the eighty-three carry the two, the other 22 their odd primes, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the two-power twins (two to the n plus two to the n equals two to the n plus one), the three-family (three cubed plus six cubed equals three to the fifth), the seven-family (seven cubed plus seven to the fourth equals fourteen cubed), the fifteen-family (fifteen to the fourth plus fifteen to the fifth equals thirty to the fourth), and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families with their common factors \u2014 61 of the eighty-three carry the two, the other 22 their odd primes, at the line end 84",
+      "slots": {
+        "mode": "s17-family"
+      },
+      "surface": "which families does the verification census of the beal island hold on my line?"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "beal-summit",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for beal-line-satisfaction wants its exact set \u2014 what you name is short the census-def before i can put it together",
+        "evidence": [
+          "scaffold:beal-line-satisfaction:partset:at-S03:09"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for beal-line-satisfaction wants its exact set \u2014 what you name is short the census-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "beal-def"
+        ],
+        "target": "beal-line-satisfaction"
+      },
+      "surface": "derive beal-line-satisfaction from beal-def"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "beal-summit",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:beal-def",
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:beal-line-satisfaction"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84",
+        "evidence": [
+          "lemma:beal-def",
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84 \u2014 from beal-def, census-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "beal-def",
+          "census-def"
+        ],
+        "target": "beal-line-satisfaction"
+      },
+      "surface": "derive beal-line-satisfaction from beal-def and census-def"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84",
+        "evidence": [
+          "s17-prim-84-at-S03:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-prim"
+      },
+      "surface": "what lives in the primitive territory of the beal island?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall of the fermat-catalan boundary: the primitive solutions with reciprocal exponents under 1 are finite by the darmon-granville record (an ineffective finiteness), and their known forms all use 2 as an exponent \u2014 exactly the solutions my band's own 'all exponents above two' condition excludes (seven cubed plus thirteen squared equals two to the ninth, three to the fifth plus ten squared equals seven cubed, two to the fifth plus seven squared equals three to the fourth); they live just outside my line's box, named of record, never as values, at the line end 84",
+        "evidence": [
+          "s17-fc-84-at-S03:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall of the fermat-catalan boundary: the primitive solutions with reciprocal exponents under 1 are finite by the darmon-granville record (an ineffective finiteness), and their known forms all use 2 as an exponent \u2014 exactly the solutions my band's own 'all exponents above two' condition excludes (seven cubed plus thirteen squared equals two to the ninth, three to the fifth plus ten squared equals seven cubed, two to the fifth plus seven squared equals three to the fourth); they live just outside my line's box, named of record, never as values, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-fc"
+      },
+      "surface": "what lives at the fermat catalan boundary of the beal island?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the anchor of the closed case: the equal-exponent corner where all three exponents stand above 2 is the fermat last theorem itself \u2014 no positive-integer solutions (the wiles record of 1994): a closed anchor named, not computed, never a value of mine, at the line end 84",
+        "evidence": [
+          "s17-flt-84-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the anchor of the closed case: the equal-exponent corner where all three exponents stand above 2 is the fermat last theorem itself \u2014 no positive-integer solutions (the wiles record of 1994): a closed anchor named, not computed, never a value of mine, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-flt"
+      },
+      "surface": "what is the closed anchor of the beal island?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the beal band holds the statement of the island, stored as a declared record fact (the ams beal prize), its satisfaction filed on my line \u2014 the verification census of the box: eighty-three triples, every one carrying its common prime factor, zero primitive \u2014 with the valuation read off the first-divisor chain and the lift-the-exponent ledger holding in all its instances, the primitive territory, the fermat catalan boundary, and the fermat anchor named on their walls, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the beal band holds the statement of the island, stored as a declared record fact (the ams beal prize), its satisfaction filed on my line \u2014 the verification census of the box: eighty-three triples, every one carrying its common prime factor, zero primitive \u2014 with the valuation read off the first-divisor chain and the lift-the-exponent ledger holding in all its instances, the primitive territory, the fermat catalan boundary, and the fermat anchor named on their walls, at the line end 84",
+      "slots": {
+        "mode": "s17-bandstate"
+      },
+      "surface": "what state does the beal band hold at the line end?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:beal-line-satisfaction"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84",
+        "evidence": [
+          "theorem:beal-line-satisfaction"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84",
+      "slots": {
+        "mode": "s17-state",
+        "slug": "beal-line-satisfaction"
+      },
+      "surface": "state the beal-line-satisfaction rule"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the beal band says is conditional on an unproved hypothesis \u2014 the valuation, the lift-the-exponent ledger, and the verification census are record on the line, and the primitive territory, the fermat catalan boundary, and the fermat anchor stand named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:beal-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the beal band says is conditional on an unproved hypothesis \u2014 the valuation, the lift-the-exponent ledger, and the verification census are record on the line, and the primitive territory, the fermat catalan boundary, and the fermat anchor stand named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s17-uncond"
+      },
+      "surface": "does the beal band say anything conditional on an unproved hypothesis?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "slots": {
+        "mode": "s16-bsd"
+      },
+      "surface": "what is the summit fact of the island?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "first"
+      },
+      "surface": "what order of vanishing does the L product of the first panel member have at s equal to one of record?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+      "slots": {
+        "mode": "s16-torsion"
+      },
+      "surface": "what does the torsion ledger of the first panel member hold on my line?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the exact L value at s equal to one is of record, not on my line: the first panel member's L value is nonzero of order zero of vanishing, and the second panel member's vanishes of order one with its leading coefficient nonzero of record (named here, not computed); my line holds the exact rational partials standing for the line's side \u2014 the vanishing is a limit fact past my line, at the line end 84",
+        "evidence": [
+          "s16-lvalwall-B-84-at-S04:04"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the exact L value at s equal to one is of record, not on my line: the first panel member's L value is nonzero of order zero of vanishing, and the second panel member's vanishes of order one with its leading coefficient nonzero of record (named here, not computed); my line holds the exact rational partials standing for the line's side \u2014 the vanishing is a limit fact past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s16-lvalwall",
+        "panel": "second"
+      },
+      "surface": "what is the exact record L value of the second panel member at s equal to one?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "first"
+      },
+      "surface": "what is the ramification correction of the first panel member?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of sixty-four at the prime two of record is six \u2014 read off the two-rung of the first-divisor factorization chain of sixty-four, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of sixty-four at the prime two of record is six \u2014 read off the two-rung of the first-divisor factorization chain of sixty-four, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "sixty-four",
+        "p": "two"
+      },
+      "surface": "what is the p-adic depth of sixty-four at the prime two of record?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:valuation-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the p-adic depth of seventy-two at the prime three of record is two \u2014 read off the three-rung of the first-divisor factorization chain of seventy-two, at the line end 84",
+        "evidence": [
+          "lemma:valuation-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the p-adic depth of seventy-two at the prime three of record is two \u2014 read off the three-rung of the first-divisor factorization chain of seventy-two, at the line end 84",
+      "slots": {
+        "mode": "s17-vp",
+        "n": "seventy-two",
+        "p": "three"
+      },
+      "surface": "what is the p-adic depth of seventy-two at the prime three of record?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it holds: four cubed minus one cubed \u2014 sixty-three \u2014 holds two of the three-rung, while the difference 3 holds one of the three-rung and the exponent three holds one of it \u2014 one plus one is two \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it holds: four cubed minus one cubed \u2014 sixty-three \u2014 holds two of the three-rung, while the difference 3 holds one of the three-rung and the exponent three holds one of it \u2014 one plus one is two \u2014 the depth of the difference plus the depth of the exponent, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-a"
+      },
+      "surface": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:lte-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+        "evidence": [
+          "lemma:lte-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred forty-nine thousand two hundred eighty of record: the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 every one holds: zero deviations, at the line end 84",
+      "slots": {
+        "mode": "s17-lte-ledger"
+      },
+      "surface": "how many instances does the lift-the-exponent ledger cover in the line's box of record?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+        "evidence": [
+          "lemma:beal-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+      "slots": {
+        "mode": "s17-beal"
+      },
+      "surface": "what is the statement of the beal island of record?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero \u2014 no primitive triple lives on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero \u2014 no primitive triple lives on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+      "slots": {
+        "mode": "s17-empt"
+      },
+      "surface": "how many primitive triples live on my line?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the two-power twins (two to the n plus two to the n equals two to the n plus one), the three-family (three cubed plus six cubed equals three to the fifth), the seven-family (seven cubed plus seven to the fourth equals fourteen cubed), the fifteen-family (fifteen to the fourth plus fifteen to the fifth equals thirty to the fourth), and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families with their common factors \u2014 61 of the eighty-three carry the two, the other 22 their odd primes, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the two-power twins (two to the n plus two to the n equals two to the n plus one), the three-family (three cubed plus six cubed equals three to the fifth), the seven-family (seven cubed plus seven to the fourth equals fourteen cubed), the fifteen-family (fifteen to the fourth plus fifteen to the fifth equals thirty to the fourth), and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families with their common factors \u2014 61 of the eighty-three carry the two, the other 22 their odd primes, at the line end 84",
+      "slots": {
+        "mode": "s17-family"
+      },
+      "surface": "which families does the verification census of the beal island hold on my line?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+      "slots": {
+        "mode": "s17-state",
+        "slug": "census-def"
+      },
+      "surface": "state the census-def rule"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the beal band holds the statement of the island, stored as a declared record fact (the ams beal prize), its satisfaction filed on my line \u2014 the verification census of the box: eighty-three triples, every one carrying its common prime factor, zero primitive \u2014 with the valuation read off the first-divisor chain and the lift-the-exponent ledger holding in all its instances, the primitive territory, the fermat catalan boundary, and the fermat anchor named on their walls, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the beal band holds the statement of the island, stored as a declared record fact (the ams beal prize), its satisfaction filed on my line \u2014 the verification census of the box: eighty-three triples, every one carrying its common prime factor, zero primitive \u2014 with the valuation read off the first-divisor chain and the lift-the-exponent ledger holding in all its instances, the primitive territory, the fermat catalan boundary, and the fermat anchor named on their walls, at the line end 84",
+      "slots": {
+        "mode": "s17-bandstate"
+      },
+      "surface": "what state does the beal band hold at the line end?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84",
+        "evidence": [
+          "s17-prim-84-at-S04:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-prim"
+      },
+      "surface": "what lives in the primitive territory of the beal island?"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 104,
+      "determinism_twin": true,
+      "final_total": 1641,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 54,
+      "new_facts": 6,
+      "reproduced_in_s2_pre": 1581,
+      "run_identity": "44d737505262f1d8",
+      "seed_total": 1581,
+      "store_identity": "e092ef1261ef7210"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "942d2e2",
+    "dataset_hash": null,
+    "script_hash": "03f00f1f04a9e040",
+    "seed": "results/phase-6/e6.3-run1/codeX-S03.json",
+    "seed_assertions": 182
+  },
+  "evidence": [
+    "results/phase-6/e6.4-run1/session-S02.json",
+    "results/phase-6/e6.4-run1/session-S03.json",
+    "results/phase-6/e6.4-run1/session-S04.json",
+    "results/phase-6/e6.4-run1/codeX-S04.json",
+    "results/phase-6/e6.4-run2/codeX-S04.json"
+  ],
+  "hypothesis": "Phrasings are store facts: taught by their frozen lesson forms, applied only where the grammar honestly says ambiguous, byte-comparable in content to their canonical twins, corrected through the existing single-current-claimant pair \u2014 so the infant's INTAKE boundary is exactly its lexicon: every taught phrasing family parses (and composes with the grounded layer, including the line-cap semantics) and every untouched phrasing stays an honestly named ambiguity, all with the run two-runs-byte-identical and seed-continuous with the official e6.3 store.",
+  "metric": "phrasology checks passed (P1..P8)",
+  "name": "e6.4",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

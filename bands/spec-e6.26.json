@@ -1,0 +1,819 @@
+{
+  "spec": 1,
+  "id": "e6.26",
+  "session": "S22",
+  "title": "the proportion line (the proportion as relation, the fraction as its value, one division in two languages; 0:0 the evenness, declared, never valued)",
+  "registry": "kainos.tutor.e626:CONCEPTS_E626",
+  "seed": {
+    "store": "results/phase-6/e6.36-run1/codeX-S04.json",
+    "identity": "e3e693b1a83c71a6",
+    "total": 1966,
+    "line_end": 84
+  },
+  "band": {
+    "domain": "arithmetic",
+    "college": "1",
+    "status": "unconditional",
+    "unconditional": true,
+    "marker_kept_facts": [
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee",
+      "lemma:conditional-def"
+    ],
+    "new_concepts": [
+      "proportion",
+      "fraction"
+    ],
+    "concepts": [
+      {
+        "id": "proportion",
+        "name": "the proportion",
+        "prereqs": [
+          "divides",
+          "composite"
+        ],
+        "lesson": {
+          "slug": "proportion-def",
+          "statement": "a proportion is a relation between two parts of my line: the part held to the part compared — declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts — i have nothing and they have nothing, so we are even on this — declared, never valued; at the line end eighty-four"
+        }
+      },
+      {
+        "id": "fraction",
+        "name": "the fraction",
+        "prereqs": [
+          "proportion",
+          "divides",
+          "mult-within-100"
+        ],
+        "lesson": {
+          "slug": "fraction-def",
+          "statement": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once — the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "proportion-filed",
+        "concept": "proportion",
+        "parts": [
+          "proportion-def",
+          "fraction-def"
+        ],
+        "statement": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division — the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:proportion-def",
+      "lemma:fraction-def",
+      "theorem:proportion-filed"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "kind": "carry",
+      "question": "what is the divides rule, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.15",
+        "turn": "S02:04"
+      }
+    },
+    {
+      "ref": "S02:02",
+      "kind": "carry",
+      "question": "what is the decision question, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.22",
+        "turn": "S02:03"
+      }
+    },
+    {
+      "ref": "S02:03",
+      "kind": "carry",
+      "question": "what is the telescope line, as my store holds it?",
+      "source": {
+        "band": "e6.17",
+        "turn": "S03:09"
+      },
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S02:04",
+      "kind": "carry",
+      "question": "what is the half-product rule of my triangle, as my store holds it?",
+      "source": {
+        "band": "e6.10",
+        "turn": "S02:09"
+      }
+    },
+    {
+      "ref": "S02:05",
+      "kind": "gap",
+      "question": "what is the proportion, end to end, as my store holds it?",
+      "concept": "proportion",
+      "fragment": "a proportion: the relation between two parts of my line — the part held to the part compared, declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts, declared, never valued"
+    },
+    {
+      "ref": "S02:06",
+      "kind": "gap",
+      "question": "state the proportion-def rule",
+      "concept": "proportion",
+      "fragment": "the proportion-def rule"
+    },
+    {
+      "ref": "S02:07",
+      "kind": "teach",
+      "question": "a proportion is a relation between two parts of my line: the part held to the part compared — declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts — i have nothing and they have nothing, so we are even on this — declared, never valued; at the line end eighty-four",
+      "lesson": "proportion-def"
+    },
+    {
+      "ref": "S02:08",
+      "kind": "probe",
+      "question": "state the proportion-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "a proportion is a relation between two parts of my line: the part held to the part compared — declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts — i have nothing and they have nothing, so we are even on this — declared, never valued; at the line end eighty-four",
+        "owner": "lemma:proportion-def",
+        "grounds": [
+          "lemma:proportion-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:09",
+      "kind": "gap",
+      "question": "what is the fraction, end to end, as my store holds it?",
+      "concept": "fraction",
+      "fragment": "a fraction: the value of a proportion — the denominator a positive part of the line, the value the division read in two languages at once (the whole parts, the quotient, and the part left over, the remainder, carried over the denominator); zero over zero holds no value on my line, the part you count with is zero parts"
+    },
+    {
+      "ref": "S02:10",
+      "kind": "gap",
+      "question": "state the fraction-def rule",
+      "concept": "fraction",
+      "fragment": "the fraction-def rule"
+    },
+    {
+      "ref": "S02:11",
+      "kind": "teach",
+      "question": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once — the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+      "lesson": "fraction-def"
+    },
+    {
+      "ref": "S02:12",
+      "kind": "probe",
+      "question": "state the fraction-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once — the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:13",
+      "kind": "probe",
+      "question": "what is the empty part held to the one, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the empty part",
+          "b": "the one"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:14",
+      "kind": "probe",
+      "question": "what is the one held to the one, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the one"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:15",
+      "kind": "probe",
+      "question": "what is the one held to the two, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the two"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:16",
+      "kind": "probe",
+      "question": "what is the one held to the three, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the three"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:17",
+      "kind": "probe",
+      "question": "what is three over two, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "three",
+          "b": "two",
+          "lang": "frac"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:01",
+      "kind": "carry",
+      "question": "what is the divides rule, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.15",
+        "turn": "S02:04"
+      }
+    },
+    {
+      "ref": "S03:02",
+      "kind": "carry",
+      "question": "what is the decision question, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.22",
+        "turn": "S02:03"
+      }
+    },
+    {
+      "ref": "S03:03",
+      "kind": "probe",
+      "question": "what is three mod two, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "three",
+          "b": "two",
+          "lang": "mod"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:04",
+      "kind": "probe",
+      "question": "what is five over three, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "five",
+          "b": "three",
+          "lang": "frac"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:05",
+      "kind": "probe",
+      "question": "what is five mod three, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "five",
+          "b": "three",
+          "lang": "mod"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:06",
+      "kind": "probe",
+      "question": "what is thirteen over five, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "thirteen",
+          "b": "five",
+          "lang": "frac"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:07",
+      "kind": "probe",
+      "question": "what is thirteen mod five, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "thirteen",
+          "b": "five",
+          "lang": "mod"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:08",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_census",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:09",
+      "kind": "scaffold",
+      "question": "derive proportion-filed from proportion-def",
+      "theorem": "proportion-filed",
+      "parts": [
+        "proportion-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for proportion-filed wants its exact set — what you name is short the fraction-def before i can put it together"
+    },
+    {
+      "ref": "S03:10",
+      "kind": "derive",
+      "question": "derive proportion-filed from proportion-def and fraction-def",
+      "theorem": "proportion-filed",
+      "parts": [
+        "proportion-def",
+        "fraction-def"
+      ]
+    },
+    {
+      "ref": "S03:11",
+      "kind": "probe",
+      "question": "what does the proportion filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_filing",
+        "args": {},
+        "owner": "lemma:proportion-def",
+        "grounds": [
+          "lemma:proportion-def",
+          "lemma:fraction-def",
+          "theorem:proportion-filed"
+        ]
+      },
+      "cite": [
+        "proportion-filed"
+      ]
+    },
+    {
+      "ref": "S03:12",
+      "kind": "probe",
+      "question": "state the proportion-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division — the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+        "owner": "theorem:proportion-filed",
+        "grounds": [
+          "theorem:proportion-filed"
+        ]
+      },
+      "cite": [
+        "proportion-filed"
+      ]
+    },
+    {
+      "ref": "S03:13",
+      "kind": "probe",
+      "question": "how many declared proportions hold the two-to-three relation on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_classwalk",
+        "args": {},
+        "owner": "lemma:proportion-def",
+        "grounds": [
+          "lemma:proportion-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "kind": "wall",
+      "question": "does zero over zero hold a value on my line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued — the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84",
+        "articulation": [
+          "zero to zero is the evenness of the two empty parts",
+          "the part you count with is zero parts",
+          "the value and the relation are two jobs",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "kind": "wall",
+      "question": "which proportions does my line refuse?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor — the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84",
+        "articulation": [
+          "a proportion whose parts are past my line end",
+          "off the floor",
+          "the eighty-nine and the ninety-seven",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:16",
+      "kind": "wall",
+      "question": "does the same division give different answers in the mod word and the fraction word?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the third word: one division has exactly two faces — the quotient and the remainder — and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84",
+        "articulation": [
+          "one division has exactly two faces",
+          "the quotient and the remainder",
+          "a statement in the mod word is the same division",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:01",
+      "kind": "carry",
+      "question": "what is the divides rule, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.15",
+        "turn": "S02:04"
+      }
+    },
+    {
+      "ref": "S04:02",
+      "kind": "carry",
+      "question": "what is the decision question, end to end, as my store holds it?",
+      "source": {
+        "band": "e6.22",
+        "turn": "S02:03"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_census",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:04",
+      "kind": "probe",
+      "question": "what is five over three, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "five",
+          "b": "three",
+          "lang": "frac"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:05",
+      "kind": "probe",
+      "question": "what is thirteen mod five, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "thirteen",
+          "b": "five",
+          "lang": "mod"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:06",
+      "kind": "probe",
+      "question": "state the proportion-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "a proportion is a relation between two parts of my line: the part held to the part compared — declared for every pair of parts, scaled alike without changing the relation, and named by its reduced form; zero to zero is the evenness of the two empty parts — i have nothing and they have nothing, so we are even on this — declared, never valued; at the line end eighty-four",
+        "owner": "lemma:proportion-def",
+        "grounds": [
+          "lemma:proportion-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:07",
+      "kind": "probe",
+      "question": "state the fraction-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "a fraction is the VALUE of a proportion: its denominator must be a positive part of the line, and its value is the division read in two languages at once — the whole parts (the quotient) and the part left over (the remainder carried over the denominator), so five over three is one and two thirds, and five mod three is two, one division in either word; zero over zero holds no value on my line, because the part you count with is zero parts; at the line end eighty-four",
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:08",
+      "kind": "probe",
+      "question": "state the proportion-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the proportion line of my store is filed of record: the relation and its value are two jobs of one division — the proportion is declared for every pair of parts and named by its reduced form, the fraction is valued only over a positive part, and zero to zero is the evenness of the two empty parts, declared, never valued; filed on the line, at the line end eighty-four",
+        "owner": "theorem:proportion-filed",
+        "grounds": [
+          "theorem:proportion-filed"
+        ]
+      },
+      "cite": [
+        "proportion-filed"
+      ]
+    },
+    {
+      "ref": "S04:09",
+      "kind": "probe",
+      "question": "how many declared proportions hold the two-to-three relation on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_classwalk",
+        "args": {},
+        "owner": "lemma:proportion-def",
+        "grounds": [
+          "lemma:proportion-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:10",
+      "kind": "probe",
+      "question": "what is the one held to the two, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the two"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:11",
+      "kind": "probe",
+      "question": "what is the one held to the three, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the three"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:12",
+      "kind": "probe",
+      "question": "what is three over two, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_chain",
+        "args": {
+          "a": "three",
+          "b": "two",
+          "lang": "frac"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:13",
+      "kind": "wall",
+      "question": "does zero over zero hold a value on my line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued — the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84",
+        "articulation": [
+          "zero to zero is the evenness of the two empty parts",
+          "the part you count with is zero parts",
+          "the value and the relation are two jobs",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:14",
+      "kind": "wall",
+      "question": "which proportions does my line refuse?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor — the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84",
+        "articulation": [
+          "a proportion whose parts are past my line end",
+          "off the floor",
+          "the eighty-nine and the ninety-seven",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:15",
+      "kind": "wall",
+      "question": "does the same division give different answers in the mod word and the fraction word?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the third word: one division has exactly two faces — the quotient and the remainder — and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84",
+        "articulation": [
+          "one division has exactly two faces",
+          "the quotient and the remainder",
+          "a statement in the mod word is the same division",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:16",
+      "kind": "carry",
+      "question": "what is the telescope line, as my store holds it?",
+      "source": {
+        "band": "e6.17",
+        "turn": "S03:09"
+      },
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S04:17",
+      "kind": "carry",
+      "question": "what is the half-product rule of my triangle, as my store holds it?",
+      "source": {
+        "band": "e6.10",
+        "turn": "S02:09"
+      }
+    },
+    {
+      "ref": "S04:18",
+      "kind": "probe",
+      "question": "what is the one held to the one, as my line holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s22_family",
+        "args": {
+          "a": "the one",
+          "b": "the one"
+        },
+        "owner": "lemma:fraction-def",
+        "grounds": [
+          "lemma:fraction-def"
+        ]
+      }
+    }
+  ],
+  "offscript": [
+    {
+      "question": "what is the first proportion whose parts are both prime?",
+      "expect_derived": false
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "wall_W_S22_1",
+      "value": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued — the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84"
+    },
+    {
+      "key": "wall_W_S22_2",
+      "value": "needs_info: the wall is the territory of the proportion past my line end: a proportion whose parts are past my line end is off the floor — the eighty-nine and the ninety-seven stand off-line as my line already declared them, and no proportion past the eighty-four enters the register, at the line end 84"
+    },
+    {
+      "key": "wall_W_S22_3",
+      "value": "needs_info: the wall is the territory of the third word: one division has exactly two faces — the quotient and the remainder — and a statement in the mod word is the same division as the statement in the fraction word; a third answer to the same division is a misread this store punishes, at the line end 84"
+    }
+  ],
+  "expect": {
+    "final_total": 2021,
+    "letters": {
+      "2": "SSSSUULSUULSSSSSS",
+      "3": "SSSSSSSSFTSSSHHH",
+      "4": "SSSSSSSSSSSSHHHSSS"
+    },
+    "mastery": {
+      "proportion": {
+        "state": "stable",
+        "correct": 8
+      },
+      "fraction": {
+        "state": "stable",
+        "correct": 18
+      }
+    },
+    "prereq_gaps": {
+      "proportion": [],
+      "fraction": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

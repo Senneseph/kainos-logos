@@ -1,0 +1,8 @@
+{
+  "llm-wiki": {
+    "taskModel": {
+      "provider": "vast-ai",
+      "id": "pi-qwen-vast:latest"
+    }
+  }
+}

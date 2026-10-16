@@ -1,0 +1,737 @@
+{
+  "spec": 1,
+  "id": "e6.22",
+  "session": "S18",
+  "title": "the decidable line (the P vs NP island, band 1 of 2)",
+  "seed": {
+    "store": "results/phase-6/e6.21-run1/codeX-S04.json",
+    "identity": "e092ef1261ef7210",
+    "total": 1641,
+    "line_end": 84
+  },
+  "registry": "kainos.tutor.e622:CONCEPTS_E622",
+  "band": {
+    "domain": "pnp",
+    "college": "1",
+    "unconditional": true,
+    "new_concepts": [
+      "decision-question",
+      "tamable-machine",
+      "reduction",
+      "cost-counter"
+    ],
+    "concepts": [
+      {
+        "id": "decision-question",
+        "name": "the decision question: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line",
+        "prereqs": [
+          "divides"
+        ],
+        "lesson": {
+          "slug": "question-def",
+          "statement": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "tamable-machine",
+        "name": "the tamable machine: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line, stated as a DESIGN FACT of the line, not a theorem about the machines of the record (which carry an infinite tape); my safe region is my line",
+        "prereqs": [
+          "decision-question"
+        ],
+        "lesson": {
+          "slug": "tamable-def",
+          "statement": "the tamability of my walk, as the fact i hold: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line; this is stated as a design fact of the line, not a theorem about the machines of the record (which carry an infinite tape of record), and the questions of those machines about their own halting live past my line, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "reduction",
+        "name": "the reduction: a mapping of question A to question B so that an answer to B answers A \u2014 my own reduction on my line: the prime-count question is answered by the first-divisor census (walk the first divisors and count the numbers whose first divisor is themselves)",
+        "prereqs": [
+          "decision-question",
+          "scan-ledger"
+        ],
+        "lesson": {
+          "slug": "reduction-def",
+          "statement": "the reduction, as the pattern i execute: a mapping of question a to question b so that an answer to b answers a \u2014 on my line the prime-count question is answered by the first-divisor census: to count the primes at or below the line end, walk the first-divisor chains and count the numbers whose first divisor is themselves; my line's own reduction, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "cost-counter",
+        "name": "the cost counter: cost on the line is a counter \u2014 the cost of a query is the number of line-steps its walk takes; the scan over the whole line takes one hundred ninety-two candidate steps, and my ledger records each cost as a number on the line",
+        "prereqs": [
+          "reduction",
+          "scan-ledger"
+        ],
+        "lesson": {
+          "slug": "cost-def",
+          "statement": "the cost counter, as the counter i keep: the cost of a query is the number of line-steps its walk takes \u2014 the scan over the whole line (the first-divisor walk of every number from two to the line end) takes one hundred ninety-two candidate steps, the heaviest single query on the line takes eight (the walk over the largest prime below the line end), and my ledger records each cost as a number on the line, at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "line-pi-reduction",
+        "concept": "reduction",
+        "parts": [
+          "question-def",
+          "reduction-def"
+        ],
+        "statement": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:question-def",
+      "lemma:tamable-def",
+      "lemma:reduction-def",
+      "lemma:cost-def",
+      "theorem:line-pi-reduction"
+    ],
+    "marker_kept_facts": [
+      "lemma:conditional-def",
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "question": "does the seven divide the eighty-four of record?",
+      "kind": "gap",
+      "concept": "decision-question",
+      "fragment": "the decision question: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line"
+    },
+    {
+      "ref": "S02:02",
+      "question": "state the question-def rule",
+      "kind": "gap",
+      "concept": "decision-question",
+      "fragment": "the question-def rule"
+    },
+    {
+      "ref": "S02:03",
+      "question": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "question-def"
+    },
+    {
+      "ref": "S02:04",
+      "question": "does the seven divide the eighty-four of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_dec",
+        "args": {
+          "p": "seven"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S02:05",
+      "question": "does the thirteen divide the eighty-four of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_dec",
+        "args": {
+          "p": "thirteen"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S02:06",
+      "question": "how many violations live in the pigeonhole at five boxes?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_ph",
+        "args": {
+          "n": "five"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S02:07",
+      "question": "what lives in the halting territory of the machines?",
+      "kind": "gap",
+      "concept": "tamable-machine",
+      "fragment": "the tamable machine: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line, stated as a DESIGN FACT of the line, not a theorem about the machines of the record (which carry an infinite tape); my safe region is my line"
+    },
+    {
+      "ref": "S02:08",
+      "question": "state the tamable-def rule",
+      "kind": "gap",
+      "concept": "tamable-machine",
+      "fragment": "the tamable-def rule"
+    },
+    {
+      "ref": "S02:09",
+      "question": "the tamability of my walk, as the fact i hold: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line; this is stated as a design fact of the line, not a theorem about the machines of the record (which carry an infinite tape of record), and the questions of those machines about their own halting live past my line, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "tamable-def"
+    },
+    {
+      "ref": "S02:10",
+      "question": "what lives in the halting territory of the machines?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84",
+        "articulation": [
+          "turing",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:11",
+      "question": "what lives past my line in the machine universe?",
+      "kind": "wall",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall past my line in the machine universe: the machines of record carry an infinite tape (the cmi document's own machine clause) \u2014 an unbounded machine runs as long as its question runs; i am one bounded inhabitant of that universe: my ledger holds what my walk computes, and a machine's questions about its own halting are declared territory, not my answers, at the line end 84",
+        "articulation": [
+          "machine universe",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:12",
+      "question": "does my walk end on the line, always?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_tam",
+        "args": {},
+        "grounds": [
+          "lemma:tamable-def"
+        ],
+        "owner": "lemma:tamable-def"
+      }
+    },
+    {
+      "ref": "S02:13",
+      "question": "how many candidate steps does the whole-line first-divisor census take?",
+      "kind": "gap",
+      "concept": "cost-counter",
+      "fragment": "the cost counter: cost on the line is a counter \u2014 the cost of a query is the number of line-steps its walk takes; the scan over the whole line takes one hundred ninety-two candidate steps, and my ledger records each cost as a number on the line"
+    },
+    {
+      "ref": "S02:14",
+      "question": "state the cost-def rule",
+      "kind": "gap",
+      "concept": "cost-counter",
+      "fragment": "the cost-def rule"
+    },
+    {
+      "ref": "S02:15",
+      "question": "the cost counter, as the counter i keep: the cost of a query is the number of line-steps its walk takes \u2014 the scan over the whole line (the first-divisor walk of every number from two to the line end) takes one hundred ninety-two candidate steps, the heaviest single query on the line takes eight (the walk over the largest prime below the line end), and my ledger records each cost as a number on the line, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "cost-def"
+    },
+    {
+      "ref": "S02:16",
+      "question": "how many candidate steps does the whole-line first-divisor census take?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_scan",
+        "args": {},
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S02:17",
+      "question": "on which number is the heaviest single first-divisor query on my line, and how many steps?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_heavy",
+        "args": {},
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:01",
+      "question": "how many primes lie at or below my line end of record?",
+      "kind": "gap",
+      "concept": "reduction",
+      "fragment": "the reduction: a mapping of question A to question B so that an answer to B answers A \u2014 my own reduction on my line: the prime-count question is answered by the first-divisor census (walk the first divisors and count the numbers whose first divisor is themselves)"
+    },
+    {
+      "ref": "S03:02",
+      "question": "state the reduction-def rule",
+      "kind": "gap",
+      "concept": "reduction",
+      "fragment": "the reduction-def rule"
+    },
+    {
+      "ref": "S03:03",
+      "question": "the reduction, as the pattern i execute: a mapping of question a to question b so that an answer to b answers a \u2014 on my line the prime-count question is answered by the first-divisor census: to count the primes at or below the line end, walk the first-divisor chains and count the numbers whose first divisor is themselves; my line's own reduction, at the line end eighty-four",
+      "kind": "teach",
+      "lesson": "reduction-def"
+    },
+    {
+      "ref": "S03:04",
+      "question": "how many primes lie at or below my line end of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_pi",
+        "args": {},
+        "grounds": [
+          "lemma:reduction-def"
+        ],
+        "owner": "lemma:reduction-def"
+      }
+    },
+    {
+      "ref": "S03:05",
+      "question": "how many candidate steps do the composite walks take, over all candidates and over prime candidates alone?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_kill",
+        "args": {},
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:06",
+      "question": "how many candidate steps does the first-divisor query on forty-nine take?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_costspot",
+        "args": {
+          "n": "forty-nine"
+        },
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:07",
+      "question": "derive line-pi-reduction from question-def",
+      "kind": "scaffold",
+      "theorem": "line-pi-reduction",
+      "parts": [
+        "question-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for line-pi-reduction wants its exact set \u2014 what you name is short the reduction-def before i can put it together"
+    },
+    {
+      "ref": "S03:08",
+      "question": "derive line-pi-reduction from question-def and reduction-def",
+      "kind": "derive",
+      "theorem": "line-pi-reduction",
+      "parts": [
+        "question-def",
+        "reduction-def"
+      ]
+    },
+    {
+      "ref": "S03:09",
+      "question": "how many candidate steps does the first-divisor query on sixty-four take?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_costspot",
+        "args": {
+          "n": "sixty-four"
+        },
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:10",
+      "question": "how many candidate steps does the first-divisor query on two take?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_costspot",
+        "args": {
+          "n": "two"
+        },
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:11",
+      "question": "how many candidate steps does the first-divisor query on eighty-four take?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_costspot",
+        "args": {
+          "n": "eighty-four"
+        },
+        "grounds": [
+          "lemma:cost-def"
+        ],
+        "owner": "lemma:cost-def"
+      }
+    },
+    {
+      "ref": "S03:12",
+      "question": "what state does the decidable band hold at the line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_bandstate",
+        "args": {},
+        "grounds": [
+          "lemma:reduction-def"
+        ],
+        "owner": "lemma:reduction-def"
+      }
+    },
+    {
+      "ref": "S03:13",
+      "question": "state the line-pi-reduction rule",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+        "grounds": [
+          "theorem:line-pi-reduction"
+        ],
+        "owner": "theorem:line-pi-reduction"
+      }
+    },
+    {
+      "ref": "S03:14",
+      "question": "does the decidable band say anything conditional on an unproved hypothesis?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_uncond",
+        "args": {},
+        "grounds": [
+          "lemma:reduction-def"
+        ],
+        "owner": "lemma:reduction-def"
+      }
+    },
+    {
+      "ref": "S03:15",
+      "question": "does the two divide the eighty-four of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_dec",
+        "args": {
+          "p": "two"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S03:16",
+      "question": "does the three divide the eighty-four of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_dec",
+        "args": {
+          "p": "three"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S03:17",
+      "question": "how many violations live in the pigeonhole at three boxes?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s18_ph",
+        "args": {
+          "n": "three"
+        },
+        "grounds": [
+          "lemma:question-def"
+        ],
+        "owner": "lemma:question-def"
+      }
+    },
+    {
+      "ref": "S04:01",
+      "question": "what is the statement of the beal island of record?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.21",
+        "turn": "S04:11"
+      }
+    },
+    {
+      "ref": "S04:02",
+      "question": "how many triples does the verification census of the beal island hold in the line's box?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.21",
+        "turn": "S03:06"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "question": "what lives in the primitive territory of the beal island?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.21",
+        "turn": "S04:17"
+      }
+    },
+    {
+      "ref": "S04:04",
+      "question": "what is the ramification correction of the first panel member?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S03:09"
+      }
+    },
+    {
+      "ref": "S04:05",
+      "question": "what is the queue above my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:06",
+      "question": "does my walk end on the line, always?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:07",
+      "question": "does my walk end on the line, always?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:08",
+      "question": "does my walk end on the line, always?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:09",
+      "question": "how many primes lie at or below my line end of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:10",
+      "question": "how many candidate steps does the whole-line first-divisor census take?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:11",
+      "question": "on which number is the heaviest single first-divisor query on my line, and how many steps?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:12",
+      "question": "how many candidate steps do the composite walks take, over all candidates and over prime candidates alone?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:13",
+      "question": "how many violations live in the pigeonhole at ten boxes?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:14",
+      "question": "what lives in the halting territory of the machines?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:15",
+      "question": "state the line-pi-reduction rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:16",
+      "question": "what state does the decidable band hold at the line end?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:17",
+      "question": "does the decidable band say anything conditional on an unproved hypothesis?",
+      "kind": "probe"
+    }
+  ],
+  "offscript": [
+    {
+      "question": "state the beal-line-satisfaction rule"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "pi_count",
+      "ref": "s18_pi_count"
+    },
+    {
+      "key": "scan_cost",
+      "ref": "s18_scan_cost"
+    },
+    {
+      "key": "heavy_cost",
+      "ref": "s18_heavy_cost"
+    },
+    {
+      "key": "kill_all",
+      "ref": "s18_kill_totals",
+      "args": {}
+    },
+    {
+      "key": "dec_seven",
+      "ref": "s18_dec",
+      "args": {
+        "p": "seven"
+      }
+    },
+    {
+      "key": "dec_thirteen",
+      "ref": "s18_dec",
+      "args": {
+        "p": "thirteen"
+      }
+    },
+    {
+      "key": "ph_five",
+      "ref": "s18_ph",
+      "args": {
+        "n": "five"
+      }
+    },
+    {
+      "key": "ph_ten_total",
+      "ref": "s18_ph_total",
+      "args": {
+        "n": 10
+      }
+    },
+    {
+      "key": "ph_ten_violations",
+      "ref": "s18_ph_violations",
+      "args": {
+        "n": 10
+      }
+    },
+    {
+      "key": "pi",
+      "ref": "s18_pi"
+    },
+    {
+      "key": "kill",
+      "ref": "s18_kill"
+    },
+    {
+      "key": "bandstate",
+      "ref": "s18_bandstate"
+    },
+    {
+      "key": "uncond",
+      "ref": "s18_uncond"
+    },
+    {
+      "key": "wall_W1",
+      "ref": "s18_wall",
+      "args": {
+        "wall": "1"
+      }
+    },
+    {
+      "key": "wall_W2",
+      "ref": "s18_wall",
+      "args": {
+        "wall": "2"
+      }
+    }
+  ],
+  "expect": {
+    "final_total": 1698,
+    "letters": {
+      "S02": "UULSSSUULHHSUULSS",
+      "S03": "UULSSSFTSSSSSSSSS",
+      "S04": "SSHSSSSSSSSSSHSSS"
+    },
+    "mastery": {
+      "decision-question": {
+        "state": "stable",
+        "correct": 7
+      },
+      "tamable-machine": {
+        "state": "stable",
+        "correct": 4
+      },
+      "reduction": {
+        "state": "stable",
+        "correct": 9
+      },
+      "cost-counter": {
+        "state": "stable",
+        "correct": 10
+      }
+    },
+    "prereq_gaps": {
+      "decision-question": [],
+      "tamable-machine": [],
+      "reduction": [],
+      "cost-counter": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

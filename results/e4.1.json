@@ -1,0 +1,33 @@
+{
+  "config": {
+    "arm_a_status": "solved",
+    "arm_c_solutions": 2,
+    "arm_d_certificate": [
+      {
+        "clue": 9,
+        "text": "norwegian (nationality) is at position 1"
+      },
+      {
+        "clue": 16,
+        "text": "norwegian (nationality) is at position 5"
+      }
+    ],
+    "arm_e_status": "solved",
+    "arm_f_status": "SKIPPED",
+    "checks": 14,
+    "checks_passed": 14,
+    "commit": "d5a06e8",
+    "dataset_hash": null,
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-4/e4.1.json"
+  ],
+  "hypothesis": "a generic n-dimensional constraint core (forward chaining + deterministic backtracking + proof chains) solves the given puzzle uniquely and, when degraded (unknown term / missing clue / contradictory clue), says EXACTLY what is missing or contradicted \u2014 never guessing, never averaging",
+  "metric": "A: unique solution + ground-truth grid + fish answer + proof replay; B: typed-unknown term -> unique grid + exact gap statement + no hallucination; C: one missing clue -> exactly two solutions + exact undetermined facts + a single canonical At fact restoring the unique true solution; D: contradictory clue -> no_solution + inclusion-minimal certificate (the two Norwegian clues) + minimality self-check; E: a different 4x4 puzzle (new dimension names) solved uniquely by the same code + proof replay (pattern transfer)",
+  "name": "e4.1",
+  "passed": true,
+  "skipped": false,
+  "threshold": "14/14 deterministic arm checks pass (value >= 1.0); no invented terms, no guessed facts",
+  "value": 1.0
+}

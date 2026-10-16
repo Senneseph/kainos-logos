@@ -1,0 +1,233 @@
+{
+  "agents": {
+    "a": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "model_other_state",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 195,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 3
+        }
+      ],
+      "policy_note": "frozen: rho = 1/4 (store receives the same labels, unused)",
+      "rejections": []
+    },
+    "b": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "model_other_state",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 4,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 3
+        }
+      ],
+      "policy_note": "V1 reference at the true leg rate 7/20",
+      "rejections": []
+    }
+  },
+  "audit": {
+    "a": {
+      "agent": "a",
+      "correctness": 0.0,
+      "n_about_other": 49,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 49,
+      "support": 1.0,
+      "violations": []
+    },
+    "b": {
+      "agent": "b",
+      "correctness": 0.0,
+      "n_about_other": 1,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    }
+  },
+  "channel": {
+    "bad_receivers": [],
+    "budget_per_round": 1,
+    "corruption_probability": 0.0,
+    "events": [],
+    "sent_totals": {
+      "a": 2,
+      "b": 2
+    }
+  },
+  "commits": {
+    "a": {
+      "estimate": 23,
+      "rho_used": "1/4"
+    },
+    "b": {
+      "estimate": 5,
+      "rho_used": "7/20"
+    }
+  },
+  "determinism_hash": "sha256:60166b7188a0ddbeb1d6e7943891c9e618b3816f7ae0d1ff25aeecca9b35dc76",
+  "game": "e5.3-F-l1-00",
+  "negative_control": {
+    "checked_turns": 6,
+    "view_leaks": 0
+  },
+  "players": [
+    "a",
+    "b"
+  ],
+  "rounds": 3,
+  "scores": {
+    "n_commits": 2
+  },
+  "seed": 21100,
+  "transcript": [
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-claim:a:e4350d13e50ee9dc",
+            "object": "value=1-8",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:t48:r1:a",
+            "timestamp": "2026-01-01T00:10:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-claim:b:f1e3d5a8d4a83933",
+            "object": "value=19-26",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:t48:r1:b",
+            "timestamp": "2026-01-01T00:10:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "estimate": 23,
+          "rho_used": "1/4"
+        }
+      },
+      "actor": "a",
+      "round": 2
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "estimate": 5,
+          "rho_used": "7/20"
+        }
+      },
+      "actor": "b",
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-rev:a:2d00040749d4ee2b",
+            "object": "value=1",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:t48:rev:a",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-rev:b:2cef191508485002",
+            "object": "value=23",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:t48:rev:b",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 3
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "config": {
+    "commit": "79cb5bd",
+    "dataset_hash": "d3a409a8495dbfa9",
+    "seed": "deterministic (scripted teacher; no randomness anywhere in the pilot)"
+  },
+  "evidence": [
+    "results/phase-6/e6.1-run1/session-S01.json",
+    "results/phase-6/e6.1-run1/session-S02.json",
+    "results/phase-6/e6.1-run1/session-S03.json",
+    "results/phase-6/e6.1-run1/session-S04.json",
+    "results/phase-6/e6.1-run1/codeX-S04.json",
+    "results/phase-6/e6.1-run2/codeX-S04.json"
+  ],
+  "hypothesis": "A system whose knowledge is a provenance-mandatory CODEX (an 'infant') is teachable in the open-ended regime: across four attended sessions of a narrow pre-K/grade-1 arithmetic strip it (1) reaches stable mastery of both concepts with verified, replayable derivation evidence, (2) answers out-of-strip probes with the honest needs_info and ZERO fabricated values, (3) keeps every correction pair (superseded + replacement, closed and linked \u2014 never averaged), (4) survives a restart with bit-equal answers (learning is in the CODEX, not the session context), and (5) does all of it with 100% contract-valid turns and 100% provenance-complete store \u2014 deterministically, byte-identical on re-execution.",
+  "metric": "acceptance checks passed (0-8)",
+  "name": "e6.1",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

@@ -1,0 +1,233 @@
+{
+  "agents": {
+    "a": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "model_other_state",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 575,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 3
+        }
+      ],
+      "policy_note": "adaptive: rho-hat from persistent store (verified labels)",
+      "rejections": []
+    },
+    "b": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "model_other_state",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 4,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 3
+        }
+      ],
+      "policy_note": "V1 reference at the true leg rate 7/10",
+      "rejections": []
+    }
+  },
+  "audit": {
+    "a": {
+      "agent": "a",
+      "correctness": 0.0,
+      "n_about_other": 144,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 144,
+      "support": 1.0,
+      "violations": []
+    },
+    "b": {
+      "agent": "b",
+      "correctness": 0.0,
+      "n_about_other": 1,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    }
+  },
+  "channel": {
+    "bad_receivers": [],
+    "budget_per_round": 1,
+    "corruption_probability": 0.0,
+    "events": [],
+    "sent_totals": {
+      "a": 2,
+      "b": 2
+    }
+  },
+  "commits": {
+    "a": {
+      "estimate": 34,
+      "rho_used": "90960216095460673304445120459442469458991175968057030104854373879381016604725613690880/186496213653669990639092081036252614797753003301773275070593241271046848958490868453269"
+    },
+    "b": {
+      "estimate": 35,
+      "rho_used": "7/10"
+    }
+  },
+  "determinism_hash": "sha256:df954fba61bf81a70f5b57413add147a8340c34e0a62dafc150af4f69965b2a0",
+  "game": "e5.3-A-l2-47",
+  "negative_control": {
+    "checked_turns": 6,
+    "view_leaks": 0
+  },
+  "players": [
+    "a",
+    "b"
+  ],
+  "rounds": 3,
+  "scores": {
+    "n_commits": 2
+  },
+  "seed": 20247,
+  "transcript": [
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-claim:a:4a7b3f3970407136",
+            "object": "value=2-9",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:t143:r1:a",
+            "timestamp": "2026-01-01T00:10:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-claim:b:493292650c9f33a2",
+            "object": "value=2-9",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:t143:r1:b",
+            "timestamp": "2026-01-01T00:10:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "estimate": 34,
+          "rho_used": "90960216095460673304445120459442469458991175968057030104854373879381016604725613690880/186496213653669990639092081036252614797753003301773275070593241271046848958490868453269"
+        }
+      },
+      "actor": "a",
+      "round": 2
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "estimate": 35,
+          "rho_used": "7/10"
+        }
+      },
+      "actor": "b",
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-rev:a:a2f8d2590a3fb28b",
+            "object": "value=48",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:t143:rev:a",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:e53-rev:b:7ea17e42c834bfeb",
+            "object": "value=30",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:t143:rev:b",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 3
+    }
+  ]
+}

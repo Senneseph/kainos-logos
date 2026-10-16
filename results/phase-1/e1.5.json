@@ -1,0 +1,377 @@
+{
+  "baseline_accuracy": 0.0,
+  "config": {
+    "holdout": "data/regex/holdout_set.jsonl",
+    "holdout_rule": "random.Random(7).sample(sorted compositional ids, 20) from data/regex/compositional_set.jsonl (committed artifact)",
+    "model_a": {
+      "epochs": 200,
+      "kind": "char-level transformer seq2seq (torch, CPU, single-threaded)",
+      "note": "seed corpus only; held-out sets never seen; no CODEX path",
+      "seed": 42,
+      "trained_on": "data/regex/seed_corpus.jsonl (55 records, descriptions -> expected_pcre)",
+      "weights": "data/models/model_a.pt",
+      "weights_sha256": "5c11b5a40c760f05"
+    },
+    "model_b": {
+      "cache": "SpecializationCache (M1)",
+      "codex": "seed lexicon (8 surfaces)",
+      "judge": "scripts-free in-package perl (ADR-0009)",
+      "kind": "kainos CODEX pipeline (deterministic kernel + resolver + emitter + Perl judge)"
+    },
+    "n_holdout": 20,
+    "n_vague": 10,
+    "stat_note": "exact McNemar on matched pairs: a_only=0, b_only=20, both=0, p=0.0000"
+  },
+  "margin": 1.0,
+  "mcnemar_p": 1.9073486328125e-06,
+  "passed": true,
+  "per_item": [
+    {
+      "a": {
+        "id": "comp_020",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_020",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "[A-Za-z][A-Za-z]{2}-"
+      },
+      "description": "a letter, then two letters, then a hyphen",
+      "expected": "[A-Za-z][A-Za-z]{2}-",
+      "id": "comp_020"
+    },
+    {
+      "a": {
+        "id": "comp_009",
+        "ok": false,
+        "pcre": ".444444444444444444444444444444444444444444444444444444444444444",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_009",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "\\d{3}(?i)[A-Za-z]*"
+      },
+      "description": "three digits, then ignoring case, then zero or more letters",
+      "expected": "\\d{3}(?i)[A-Za-z]*",
+      "id": "comp_009"
+    },
+    {
+      "a": {
+        "id": "comp_025",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_025",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "(?i)-"
+      },
+      "description": "ignoring case, then a hyphen",
+      "expected": "(?i)-",
+      "id": "comp_025"
+    },
+    {
+      "a": {
+        "id": "comp_003",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_003",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "[A-Za-z]-[A-Za-z]{0,5}"
+      },
+      "description": "a letter, then a hyphen, then at most five letters",
+      "expected": "[A-Za-z]-[A-Za-z]{0,5}",
+      "id": "comp_003"
+    },
+    {
+      "a": {
+        "id": "comp_004",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_004",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "-\\+(?:foo|bar)"
+      },
+      "description": "a hyphen, then the literal +, then either the literal foo or the literal bar",
+      "expected": "-\\+(?:foo|bar)",
+      "id": "comp_004"
+    },
+    {
+      "a": {
+        "id": "comp_034",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_034",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "-\\s[A-Za-z]{2}"
+      },
+      "description": "a hyphen, then a space, then two letters",
+      "expected": "-\\s[A-Za-z]{2}",
+      "id": "comp_034"
+    },
+    {
+      "a": {
+        "id": "comp_006",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_006",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "[A-Za-z]{2}[A-Za-z]+-"
+      },
+      "description": "two letters, then one or more letters, then a hyphen",
+      "expected": "[A-Za-z]{2}[A-Za-z]+-",
+      "id": "comp_006"
+    },
+    {
+      "a": {
+        "id": "comp_023",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_023",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "--\\d+"
+      },
+      "description": "a hyphen, then the literal -, then one or more digits",
+      "expected": "--\\d+",
+      "id": "comp_023"
+    },
+    {
+      "a": {
+        "id": "comp_036",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_036",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "^[A-Za-z]{0,5}\\d{4}"
+      },
+      "description": "start of string, then at most five letters, then four digits",
+      "expected": "^[A-Za-z]{0,5}\\d{4}",
+      "id": "comp_036"
+    },
+    {
+      "a": {
+        "id": "comp_029",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_029",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "[A-Za-z](?i)-"
+      },
+      "description": "a letter, then ignoring case, then a hyphen",
+      "expected": "[A-Za-z](?i)-",
+      "id": "comp_029"
+    },
+    {
+      "a": {
+        "id": "comp_016",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_016",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "\\s?-\\s"
+      },
+      "description": "optionally a space, then a hyphen, then a space",
+      "expected": "\\s?-\\s",
+      "id": "comp_016"
+    },
+    {
+      "a": {
+        "id": "comp_033",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_033",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "-(?i)$"
+      },
+      "description": "a hyphen, then ignoring case, then end of string",
+      "expected": "-(?i)$",
+      "id": "comp_033"
+    },
+    {
+      "a": {
+        "id": "comp_001",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_001",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "-[A-Za-z]{2}$"
+      },
+      "description": "a hyphen, then exactly two letters, then end of string",
+      "expected": "-[A-Za-z]{2}$",
+      "id": "comp_001"
+    },
+    {
+      "a": {
+        "id": "comp_002",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_002",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "^-$"
+      },
+      "description": "start of string, then a hyphen, then end of string",
+      "expected": "^-$",
+      "id": "comp_002"
+    },
+    {
+      "a": {
+        "id": "comp_013",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_013",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "^\\d{4}[A-Za-z]"
+      },
+      "description": "start of string, then four digits, then a letter",
+      "expected": "^\\d{4}[A-Za-z]",
+      "id": "comp_013"
+    },
+    {
+      "a": {
+        "id": "comp_037",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_037",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": ".-\\d{3}"
+      },
+      "description": "anything, then a hyphen, then three digits",
+      "expected": ".-\\d{3}",
+      "id": "comp_037"
+    },
+    {
+      "a": {
+        "id": "comp_026",
+        "ok": false,
+        "pcre": ".444444444444444444444444444444444444444444444444444444444444444",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_026",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "^\\s*[A-Za-z]*"
+      },
+      "description": "beginning of string, then zero or more spaces, then zero or more letters",
+      "expected": "^\\s*[A-Za-z]*",
+      "id": "comp_026"
+    },
+    {
+      "a": {
+        "id": "comp_007",
+        "ok": false,
+        "pcre": ".444444444444444444444444444444444444444444444444444444444444444",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_007",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "^[A-Za-z]{2}(?:on|off)"
+      },
+      "description": "start of string, then two letters, then either the literal on or the literal off",
+      "expected": "^[A-Za-z]{2}(?:on|off)",
+      "id": "comp_007"
+    },
+    {
+      "a": {
+        "id": "comp_032",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_032",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "[A-Za-z]{2}hello\\d+"
+      },
+      "description": "exactly two letters, then the literal hello, then one or more digits",
+      "expected": "[A-Za-z]{2}hello\\d+",
+      "id": "comp_032"
+    },
+    {
+      "a": {
+        "id": "comp_017",
+        "ok": false,
+        "pcre": "................................................................",
+        "reason": "pcre-mismatch"
+      },
+      "b": {
+        "id": "comp_017",
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "pcre": "-\\d+(?i)"
+      },
+      "description": "a hyphen, then one or more digits, then ignoring case",
+      "expected": "-\\d+(?i)",
+      "id": "comp_017"
+    }
+  ],
+  "pipeline_accuracy": 1.0,
+  "vague": {
+    "a_always_emits": 1.0,
+    "b_escalation_rate": 0.7,
+    "b_justified_emit_rate": 1.0,
+    "note": "Model B abstains on underspecified input; Model A has no abstention path and always emits"
+  }
+}

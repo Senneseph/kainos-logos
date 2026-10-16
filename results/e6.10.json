@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "aff9efe",
+    "dataset_hash": null,
+    "final_total": 734,
+    "line_end_final": 84,
+    "script_hash": "f1d1f62ad6bb392e",
+    "seed": "results/phase-6/e6.9-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.10-run1/session-S02.json",
+    "results/phase-6/e6.10-run1/session-S03.json",
+    "results/phase-6/e6.10-run1/session-S04.json",
+    "results/phase-6/e6.10-run1/codeX-S04.json"
+  ],
+  "hypothesis": "The geometric criterion band (S6) stores the paper's theorem NOT as lessons about the conclusion but as DERIVATIONS from taught parts: the ten part facts are ESTABLISHED declared-source seam facts (36 declared seam facts with S4/S5's twenty-six); the SIX scaffolded derive turns store SIX theorem facts with derived (infant-observed) provenance, each citing exactly its sanctioned parts (window-rich, proj-inj, pack-bound, growth-compare, delta-positive, infinity-end \u2014 the chain (7)-(11) of the criterion, machine-inspectable in the store); the scaffold failures are honest and typed (3 missing-parts, 1 no-rule \u2014 zero writes, zero fabrication); the why-split holds (declared lemmas keep the proof wall, derived theorems answer with the in-store chain); the beds ride the declared 0..84 line extension (7x7 = 84 finally derives; the packing beds 16/64 with 144 off-line; the tower beds 3, 9, 27, 81 with 243 off-line; 128 still off-line); the SAME power probe is the S4/S5 wall while the chain is incomplete and the CONDITIONAL articulation once it is (hypotheses flagged, erdosguess still open \u2014 the flip is S7's); no concrete violating n can be named (limit #3 stays a wall by design); the paper never reaches the student (P0); two runs byte-identical.",
+  "metric": "S6 checks passed (P0..P8)",
+  "name": "e6.10",
+  "passed": true,
+  "skipped": false,
+  "threshold": "9/9",
+  "value": "PASS e6.10: 9/9"
+}

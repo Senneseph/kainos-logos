@@ -1,0 +1,59 @@
+{
+  "model": "qwen-test:latest",
+  "transcript": [
+    {
+      "role": "script",
+      "content": "--- family succ: the model proposes a phrasing ---"
+    },
+    {
+      "role": "model",
+      "content": "If you count one, two, three, which number pops up next?"
+    },
+    {
+      "role": "script",
+      "content": "--- family add: the model proposes a phrasing ---"
+    },
+    {
+      "role": "model",
+      "content": "If you hold up two fingers and I hold up three, how many fingers are we showing together?"
+    },
+    {
+      "role": "script",
+      "content": "--- family sub: the model proposes a phrasing ---"
+    },
+    {
+      "role": "model",
+      "content": "If you have three blocks and I take one away, how many are left?"
+    },
+    {
+      "role": "script",
+      "content": "--- family mul: the model proposes a phrasing ---"
+    },
+    {
+      "role": "model",
+      "content": "If you had 2 apples and got 2 more, how many would you have?"
+    },
+    {
+      "role": "teacher",
+      "content": "the phrasing \"If you had {a} apples and got {b} more, how many would you have?\" is the same as \"{a} + {b} is what?\"",
+      "template": "If you had {a} apples and got {b} more, how many would you have?",
+      "canon": "{a} + {b} is what?",
+      "derived_from_model_line": "If you had 2 apples and got 2 more, how many would you have?"
+    },
+    {
+      "role": "teacher",
+      "content": "no — that was a mistake; the phrasing \"If you had {a} apples and got {b} more, how many would you have?\" is the same as \"{a} * {b} is what?\"",
+      "template": "If you had {a} apples and got {b} more, how many would you have?",
+      "canon": "{a} * {b} is what?",
+      "note": "correction of the first-fit capture"
+    },
+    {
+      "role": "script",
+      "content": "--- family cmp: the model proposes a phrasing ---"
+    },
+    {
+      "role": "model",
+      "content": "Would you rather have two tiny blocks or just one?"
+    }
+  ]
+}

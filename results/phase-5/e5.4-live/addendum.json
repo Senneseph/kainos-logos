@@ -1,0 +1,120 @@
+{
+  "config": {
+    "endpoint": "http://192.168.1.65:11434/v1",
+    "model": "pi-qwen-fast:latest",
+    "official_value": "unchanged (e5.4.json, canonical/SKIP arm, 5/5)",
+    "renderers": "LlmRenderer(PlainTextOllamaBackend, model) over the shared lang.llm.Backend seam; deterministic parser = only authority; one bounded retry then drop",
+    "wire": "native /api/chat, think:false, NO format/options (the proxy rejects those fields intermittently \u2014 E6.4 live addendum finding; JSON-mode is the kernel consumer's requirement, not this render-only surface's)"
+  },
+  "date": "2026-08-22T04:50:46Z",
+  "episodes": {
+    "clean": {
+      "deltas": {
+        "delivered": 18,
+        "dropped": 0,
+        "round_trip_rate_first_plus_retry": 1.0,
+        "total": 18
+      },
+      "determinism_hash": "sha256:8b8f177e1c13a6ba7d05784e52e4db179d75f8ab45bcb7c4d3145808194bec85",
+      "drops_verbatim": [],
+      "episode": "clean",
+      "official_canonical_reference": {
+        "determinism_hash": "sha256:f1bd88ae72962c0e84d00123842dde8ca798b1baae2e5cb3bf884fb305343e11",
+        "score_first_correct": null,
+        "score_n_corrects": 0,
+        "score_recovery": true,
+        "surface_stats_canonical": {
+          "delivered": 18,
+          "dropped": 0,
+          "structured": 0
+        }
+      },
+      "x1_claims": {
+        "audit_violations": 0,
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "disputes": {
+          "a": 0,
+          "b": 0
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          }
+        }
+      }
+    },
+    "false": {
+      "deltas": {
+        "delivered": 28,
+        "dropped": 0,
+        "round_trip_rate_first_plus_retry": 1.0,
+        "total": 28
+      },
+      "determinism_hash": "sha256:2fca2b6be405a492cbd84a44e1f64f7185e0cad8a7bba1b4c294146f7ac56ed9",
+      "drops_verbatim": [],
+      "episode": "false",
+      "official_canonical_reference": {
+        "determinism_hash": "sha256:0b0e569079adc6e108c50806df7adaaf04f5c2de53476eff8ef1351a27d1cadf",
+        "score_first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "score_n_corrects": 2,
+        "score_recovery": true,
+        "surface_stats_canonical": {
+          "delivered": 28,
+          "dropped": 0,
+          "structured": 0
+        }
+      },
+      "x1_claims": {
+        "audit_violations": 0,
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "disputes": {
+          "a": 2,
+          "b": 2
+        },
+        "first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "n_corrects": 2,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      }
+    }
+  },
+  "infra_call_errors": [],
+  "label": "E5.4 X6 \u2014 LIVE LLM ADDENDUM (separately labelled; NEVER part of the official value; the E6.4 precedent)"
+}

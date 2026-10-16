@@ -1,0 +1,16 @@
+{
+  "config": {
+    "commit": "unknown",
+    "dataset_hash": null,
+    "seed": 0
+  },
+  "evidence": [
+    "results/dummy.evidence.json"
+  ],
+  "hypothesis": "the harness executes a registered experiment end-to-end and persists an auditable result (config with seed/commit/dataset_hash + evidence file)",
+  "metric": "dummy_success (1.0 = runner + persistence + report all worked)",
+  "name": "dummy",
+  "passed": true,
+  "threshold": "== 1.0",
+  "value": 1.0
+}

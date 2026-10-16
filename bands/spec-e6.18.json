@@ -1,0 +1,642 @@
+{
+ "spec": 1,
+ "id": "e6.18",
+ "session": "S14",
+ "title": "S14 e6.18 \u2014 the elliptic city (BSD island band 1)",
+ "seed": {
+  "store": "results/phase-6/e6.17-run1/codeX-S04.json",
+  "identity": "f8da2d7f12509ca5",
+  "total": 1388,
+  "line_end": 84
+ },
+ "registry": "kainos.tutor.e618:CONCEPTS_E618",
+ "band": {
+  "domain": "bsd",
+  "college": "1",
+  "unconditional": true,
+  "new_concepts": [
+   "curve-form",
+   "curve-law",
+   "point-count",
+   "curve-shadow"
+  ],
+  "concepts": [
+   {
+    "id": "curve-form",
+    "name": "the curve form: a curve over the rationals in the equation y squared = x cubed plus a x plus b, smooth exactly when four a cubed plus twenty-seven b squared does not zero out",
+    "prereqs": [
+     "alg-two-step"
+    ],
+    "lesson": {
+     "slug": "form-def",
+     "statement": "an elliptic curve over the rationals is the set of the rational points on the equation y squared equals x cubed plus a times x plus b, together with the point at infinity, and it is a curve exactly when four times a cubed plus twenty-seven times b squared does not zero out \u2014 on my line the panel holds two of them, the first with a is minus one and b is zero (of record), the second in the y squared plus y form with a is minus one and b is zero (of record), and the pair a is zero and b is zero zeros the discriminant out and is not a curve at all"
+    }
+   },
+   {
+    "id": "curve-law",
+    "name": "the chord-tangent law: the points of a curve form a group \u2014 the line through two points meets the curve a third time, its reflection the sum; exact rational functions of the points",
+    "prereqs": [
+     "curve-form"
+    ],
+    "lesson": {
+     "slug": "law-def",
+     "statement": "the points of the curve form a group under the chord-tangent law: the line through two points meets the curve a third time, and that third point, reflected across the x axis, is their sum; the point at infinity is the identity; the law is exact over my rationals \u2014 for distinct points the slope is the change in y over the change in x, and a point with itself takes the slope three times x squared plus a over two times y plus the form's own constant \u2014 so every sum, double, and multiple I form is a rational point I can re-check against the curve's equation"
+    }
+   },
+   {
+    "id": "point-count",
+    "name": "the shadow count: for every prime of the line the curve holds its points over the field with p elements, counted exactly; from the count and the prime comes the coefficient a = p + 1 minus the count",
+    "prereqs": [
+     "curve-form",
+     "first-divisor"
+    ],
+    "lesson": {
+     "slug": "count-def",
+     "statement": "for every prime of my line the curve casts a shadow: its points over the field with p elements \u2014 a finite set, counted exactly by testing each x against the equation mod p \u2014 and I record the count for every prime on the line; from the count and the prime comes the coefficient a = p plus one minus the count, the coefficient of the curve's L-function at that prime"
+    }
+   },
+   {
+    "id": "curve-shadow",
+    "name": "the shadow censuses: the Hasse bound held prime by prime on the line (a theorem of record, the census the verified shadow), and for the first panel member the record signature zero exactly when p is two or three mod four",
+    "prereqs": [
+     "point-count",
+     "mod4-split"
+    ],
+    "lesson": {
+     "slug": "shadow-def",
+     "statement": "the shadow censuses of the band: the Hasse bound \u2014 a squared at most four p \u2014 is a theorem of record that my census verifies prime by prime on the line and does not prove; and for the first panel member the record signature \u2014 the coefficient is zero exactly when p is two or p is three mod four \u2014 is the shadow of the curve's complex multiplication, held on my line as the verified pattern, both directions, at every prime of the line"
+    }
+   }
+  ],
+  "theorems": [
+   {
+    "id": "curve-identity",
+    "concept": "curve-law",
+    "parts": [
+     "form-def",
+     "law-def"
+    ],
+    "statement": "the point at infinity is the identity of the group: adding it to any point is that point, and the law's own formulas hold it \u2014 every point I form on my line answers the identity exactly"
+   },
+   {
+    "id": "curve-inverse",
+    "concept": "curve-law",
+    "parts": [
+     "law-def",
+     "form-def"
+    ],
+    "statement": "the inverse of a point is its reflection: the point plus its inverse is the point at infinity, the line through them vertical, its third meeting the identity \u2014 every point I form answers exactly against its own reflection"
+   },
+   {
+    "id": "hasse-census",
+    "concept": "point-count",
+    "parts": [
+     "count-def",
+     "form-def"
+    ],
+    "statement": "the Hasse bound held on my line: for both panel members and every prime on the line, a squared is at most four p \u2014 the full prime by prime record, all passing, at the line end 84; the bound itself is a theorem of record, the census my verified shadow of it"
+   },
+   {
+    "id": "cm-signature",
+    "concept": "curve-shadow",
+    "parts": [
+     "count-def",
+     "shadow-def"
+    ],
+    "statement": "the record signature held on my line: for the first panel member, its shadow coefficient at p is exactly zero exactly when p is two or p is three mod four \u2014 both directions, at every prime on the line, the all-pass record at the line end 84; the reason is of record, the pattern is the verified shadow on my line"
+   }
+  ],
+  "new_fact_ids": [
+   "lemma:form-def",
+   "lemma:law-def",
+   "lemma:count-def",
+   "lemma:shadow-def",
+   "theorem:curve-identity",
+   "theorem:curve-inverse",
+   "theorem:hasse-census",
+   "theorem:cm-signature"
+  ],
+  "marker_kept_facts": [
+   "lemma:conditional-def",
+   "lemma:rh-bound-scale",
+   "lemma:rh-upf",
+   "theorem:two-routes-one-guarantee"
+  ]
+ },
+ "sessions": [
+  2,
+  3,
+  4
+ ],
+ "turns": [
+  {
+   "ref": "S02:01",
+   "question": "what curve does the first panel member hold?",
+   "kind": "gap",
+   "concept": "curve-form",
+   "fragment": "the curve form: a curve over the rationals in the equation y squared = x cubed plus a x plus b, smooth exactly when four a cubed plus twenty-seven b squared does not zero out"
+  },
+  {
+   "ref": "S02:02",
+   "question": "what is the point at x 0 y 0 plus itself on the second panel member?",
+   "kind": "gap",
+   "concept": "curve-law",
+   "fragment": "the chord-tangent law: the points of a curve form a group \u2014 the line through two points meets the curve a third time, its reflection the sum; exact rational functions of the points"
+  },
+  {
+   "ref": "S02:03",
+   "question": "how many points does the second panel member cast over the field with 37 elements?",
+   "kind": "gap",
+   "concept": "point-count",
+   "fragment": "the shadow count: for every prime of the line the curve holds its points over the field with p elements, counted exactly; from the count and the prime comes the coefficient a = p + 1 minus the count"
+  },
+  {
+   "ref": "S02:04",
+   "question": "an elliptic curve over the rationals is the set of the rational points on the equation y squared equals x cubed plus a times x plus b, together with the point at infinity, and it is a curve exactly when four times a cubed plus twenty-seven times b squared does not zero out \u2014 on my line the panel holds two of them, the first with a is minus one and b is zero (of record), the second in the y squared plus y form with a is minus one and b is zero (of record), and the pair a is zero and b is zero zeros the discriminant out and is not a curve at all",
+   "kind": "teach",
+   "lesson": "form-def"
+  },
+  {
+   "ref": "S02:05",
+   "question": "what curve does the first panel member hold?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:06",
+   "question": "what curve does the second panel member hold?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:07",
+   "question": "is the pair with a zero and b zero a smooth curve on my line?",
+   "kind": "wall",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the pair with a zero a and a zero b zeros out four times a cubed plus twenty-seven times b squared \u2014 the equation y squared = x cubed is its cusp at the origin, and the chord-tangent law breaks there (the tangent at the cusp is vertical, its third meeting undefined): not a group, i refuse \u2014 at the line end 84",
+    "articulation": [
+     "cusp",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S02:08",
+   "question": "state the form-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:09",
+   "question": "what does the minus family over all the numbers hold up to my line end?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.17",
+    "turn": "S02:01"
+   }
+  },
+  {
+   "ref": "S02:10",
+   "question": "how do the index numbers of my line split?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.17",
+    "turn": "S02:02"
+   }
+  },
+  {
+   "ref": "S02:11",
+   "question": "the points of the curve form a group under the chord-tangent law: the line through two points meets the curve a third time, and that third point, reflected across the x axis, is their sum; the point at infinity is the identity; the law is exact over my rationals \u2014 for distinct points the slope is the change in y over the change in x, and a point with itself takes the slope three times x squared plus a over two times y plus the form's own constant \u2014 so every sum, double, and multiple I form is a rational point I can re-check against the curve's equation",
+   "kind": "teach",
+   "lesson": "law-def"
+  },
+  {
+   "ref": "S02:12",
+   "question": "is the point at x 0 y 0 on the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:13",
+   "question": "is the point at x 2 y 2 on the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:14",
+   "question": "what is the point at x 0 y 0 plus itself on the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:15",
+   "question": "what is the point at x 0 y 0 plus the point at x 1 y 0 on the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:16",
+   "question": "what is 6 times the point at x 0 y 0 on the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:17",
+   "question": "derive curve-identity from law-def and form-def",
+   "kind": "derive",
+   "theorem": "curve-identity",
+   "parts": [
+    "form-def",
+    "law-def"
+   ]
+  },
+  {
+   "ref": "S02:18",
+   "question": "derive curve-inverse from law-def and form-def",
+   "kind": "derive",
+   "theorem": "curve-inverse",
+   "parts": [
+    "law-def",
+    "form-def"
+   ]
+  },
+  {
+   "ref": "S02:19",
+   "question": "derive curve-identity from law-def",
+   "kind": "scaffold",
+   "theorem": "curve-identity",
+   "parts": [
+    "law-def"
+   ],
+   "expected": "i can see the parts you name, but the rule for curve-identity wants its exact set"
+  },
+  {
+   "ref": "S02:20",
+   "question": "for every prime of my line the curve casts a shadow: its points over the field with p elements \u2014 a finite set, counted exactly by testing each x against the equation mod p \u2014 and I record the count for every prime on the line; from the count and the prime comes the coefficient a = p plus one minus the count, the coefficient of the curve's L-function at that prime",
+   "kind": "teach",
+   "lesson": "count-def"
+  },
+  {
+   "ref": "S03:01",
+   "question": "how many points does the second panel member cast over the field with 37 elements?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:02",
+   "question": "how many points does the first panel member cast over the field with 5 elements?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:03",
+   "question": "how many points does the second panel member cast over the field with 4 elements?",
+   "kind": "zero_touch",
+   "expected": "needs_info: 4 is a composite on my line \u2014 the shadow is cast at the primes of the line, the composites take their shadow from the split"
+  },
+  {
+   "ref": "S03:04",
+   "question": "state the count-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:05",
+   "question": "what are the shadows of the first panel member at the primes of my line?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:06",
+   "question": "what are the shadows of the second panel member at the primes of my line?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:07",
+   "question": "state the numberfields rule",
+   "kind": "carry",
+   "source": {
+    "band": "e6.9",
+    "turn": "S02:01"
+   }
+  },
+  {
+   "ref": "S03:08",
+   "question": "state the primesplit rule",
+   "kind": "carry",
+   "source": {
+    "band": "e6.9",
+    "turn": "S02:05"
+   }
+  },
+  {
+   "ref": "S03:09",
+   "question": "what is the numberfields for",
+   "kind": "carry",
+   "source": {
+    "band": "e6.9",
+    "turn": "S03:01"
+   }
+  },
+  {
+   "ref": "S03:10",
+   "question": "what is the primesplit for",
+   "kind": "carry",
+   "source": {
+    "band": "e6.9",
+    "turn": "S02:05"
+   }
+  },
+  {
+   "ref": "S03:11",
+   "question": "the shadow censuses of the band: the Hasse bound \u2014 a squared at most four p \u2014 is a theorem of record that my census verifies prime by prime on the line and does not prove; and for the first panel member the record signature \u2014 the coefficient is zero exactly when p is two or p is three mod four \u2014 is the shadow of the curve's complex multiplication, held on my line as the verified pattern, both directions, at every prime of the line",
+   "kind": "teach",
+   "lesson": "shadow-def"
+  },
+  {
+   "ref": "S03:12",
+   "question": "does the Hasse bound hold at 83 for the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:13",
+   "question": "does the Hasse bound hold at 37 for the first panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:14",
+   "question": "does the Hasse bound hold on the whole line for both panel members?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:15",
+   "question": "derive hasse-census from count-def and form-def",
+   "kind": "derive",
+   "theorem": "hasse-census",
+   "parts": [
+    "count-def",
+    "form-def"
+   ]
+  },
+  {
+   "ref": "S03:16",
+   "question": "at which primes of my line does the first panel member carry the zero coefficient?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:17",
+   "question": "does the record signature of the first panel member \u2014 zero when p is two or three mod four \u2014 hold across my lines?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:18",
+   "question": "derive cm-signature from shadow-def and count-def",
+   "kind": "derive",
+   "theorem": "cm-signature",
+   "parts": [
+    "count-def",
+    "shadow-def"
+   ]
+  },
+  {
+   "ref": "S03:19",
+   "question": "which rational points of the first panel member does my line hold?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:20",
+   "question": "which rational points of the second panel member does my line hold?",
+   "kind": "wall",
+   "wall": {
+    "id": "W2",
+    "text": "needs_info: the rational points of the second panel member run past my line: of record, the group is infinite, generated by the point at x zero y zero past my bound \u2014 my census found the ten integral points my bound admits, and past the bound the search does not close on my line, at the line end 84",
+    "articulation": [
+     "ten integral points",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:21",
+   "question": "is the point at x 6 y 14 a multiple of the point at x 0 y 0 on the second panel member within my bound?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:22",
+   "question": "does the ledger of the point at x 0 y 0 cover every rational point of the second panel member at my bound?",
+   "kind": "wall",
+   "wall": {
+    "id": "W3",
+    "text": "needs_info: the ledger of the point at x 0 y 0 is closed for every point my line counted, but it does not cover every rational point of the second panel member at my line: the multiples reach sixteen times the point, and the points further out live past the ledger \u2014 the bound is my edge, named here, at the line end 84",
+    "articulation": [
+     "sixteen times the point",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:01",
+   "question": "do all the points my line counted on the second panel member sit in the ledger of the point at x 0 y 0 at my bound?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:02",
+   "question": "state the shadow-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:03",
+   "question": "what does the first panel member's L product hold at my line end?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:04",
+   "question": "what does the second panel member's L product hold at my line end?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:05",
+   "question": "what does the second panel member's L product do at its limit, past my line?",
+   "kind": "wall",
+   "wall": {
+    "id": "W5",
+    "text": "needs_info: the L product of the second panel member at my line end 84 holds the exact rational its partials give \u2014 about 13.3586546916 \u2014 while the record names its limit: zero of order one, the vanishing the conjecture reads for rank one; the limit lives past my line, and vanishing is a limit fact my partials do not reach, at the line end 84",
+    "articulation": [
+     "order one",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:06",
+   "question": "what does the first panel member's L product do at its limit, past my line?",
+   "kind": "zero_touch",
+   "expected": "needs_info: of record the limit of the first panel member's L product is nonzero (order zero, consistent with my partial holding its exact value at the line end 84); the limit itself is a limit fact past my line \u2014 named, not reached, at the line end 84"
+  },
+  {
+   "ref": "S04:07",
+   "question": "what is the rank of the panel members on my line?",
+   "kind": "wall",
+   "wall": {
+    "id": "W4",
+    "text": "needs_info: the rank of a curve is of record, not computed on my line: the first panel member sits at rank zero and the second at rank one \u2014 of record, the smallest conductor with positive rank \u2014 and the two-descent that settles a rank is past my line, at the line end 84",
+    "articulation": [
+     "record",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:08",
+   "question": "why these two panel members of the record?",
+   "kind": "wall",
+   "wall": {
+    "id": "W6",
+    "text": "needs_info: the panel is two curves of record, chosen for their conductors (thirty-two, thirty-seven) and their ranks (zero, one) \u2014 the smallest conductor with positive rank sits on it; the other curves exist past my panel, and my censuses are the panel's, named as such, at the line end 84",
+    "articulation": [
+     "record",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:09",
+   "question": "can the elliptic curves settle the Riemann hypothesis in my store?",
+   "kind": "wall",
+   "wall": {
+    "id": "W7",
+    "text": "needs_info: the elliptic curves do not settle the Riemann hypothesis in my store: their L-products are the siblings of the zeta family the store already holds, and the limit of a product \u2014 like the zeta's \u2014 lives past my line end; the store's reach is the shadow, the census, and the named wall, at the line end 84",
+    "articulation": [
+     "Riemann hypothesis",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:10",
+   "question": "state the law-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:11",
+   "question": "what did the elliptic band add to the store?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:12",
+   "question": "does the elliptic band say anything conditional on the Riemann hypothesis?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:13",
+   "question": "what is the queue above my line?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:02"
+   }
+  }
+ ],
+ "offscript": [
+  {
+   "question": "state the kstbound rule"
+  }
+ ],
+ "beds": [
+  {
+   "key": "line_end",
+   "value": 84
+  },
+  {
+   "key": "census",
+   "ref": "census",
+   "args": {
+    "end": 84
+   }
+  },
+  {
+   "key": "ap_A",
+   "ref": "ap_table",
+   "args": {
+    "panel": "A"
+   }
+  },
+  {
+   "key": "ap_B",
+   "ref": "ap_table",
+   "args": {
+    "panel": "B"
+   }
+  },
+  {
+   "key": "fp_count_37_B",
+   "ref": "fp_count",
+   "args": {
+    "p": 37,
+    "panel": "B"
+   }
+  },
+  {
+   "key": "cm_zeros_A",
+   "ref": "cm_zeros",
+   "args": {
+    "panel": "A"
+   }
+  },
+  {
+   "key": "cm_zeros_B",
+   "ref": "cm_zeros",
+   "args": {
+    "panel": "B"
+   }
+  },
+  {
+   "key": "small_B",
+   "ref": "small_points",
+   "args": {}
+  },
+  {
+   "key": "gen_B",
+   "ref": "gen_ledger",
+   "args": {}
+  },
+  {
+   "key": "L84_A",
+   "ref": "lpartial",
+   "args": {
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "L84_B",
+   "ref": "lpartial",
+   "args": {
+    "panel": "B"
+   },
+   "render": "frac_words"
+  }
+ ],
+ "expect": {
+  "final_total": 1457,
+  "letters": {
+   "S02": "UUULSSHSSSLSSSSSTTFL",
+   "S03": "SSHSSSSSSSLSSSTSSTSHSH",
+   "S04": "SSSSHHHHHSSSS"
+  },
+  "mastery": {
+   "curve-form": {
+    "state": "stable",
+    "correct": 7
+   },
+   "curve-law": {
+    "state": "stable",
+    "correct": 8
+   },
+   "point-count": {
+    "state": "stable",
+    "correct": 6
+   },
+   "curve-shadow": {
+    "state": "stable",
+    "correct": 10
+   }
+  },
+  "prereq_gaps": {},
+  "seam": {
+   "expected": "agreement"
+  },
+  "offline_watch": [
+   "13.3586546916"
+  ]
+ }
+}

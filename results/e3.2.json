@@ -1,0 +1,36 @@
+{
+  "config": {
+    "commit": "06d2b56",
+    "dataset_hash": null,
+    "fib_wins": [
+      7,
+      8,
+      9
+    ],
+    "mean_relative_improvement": 0.0687143867964126,
+    "mlp_mean_test_rmse": 0.536116851714297,
+    "param_budget": {
+      "equal": true,
+      "fibonacci_recurrence": 115,
+      "mlp": 115
+    },
+    "seed": 0,
+    "seeds": [
+      7,
+      8,
+      9
+    ],
+    "verdict": "adopt",
+    "verdict_note": "recurrence beats MLP on all 3 seeds (mean relative improvement +6.87%)"
+  },
+  "evidence": [
+    "results/phase-3/e3.2.json"
+  ],
+  "hypothesis": "Fibonacci recurrence topology (X_{n+2} = f(X_{n+1}) + X_n with a shared f, and Fibonacci width schedules 1,1,2,3,5,8) extracts more structure per parameter than a same-budget MLP",
+  "metric": "test RMSE on a linear + cyclic-pair-interaction task, same parameter budget, 3 seeds",
+  "name": "e3.2",
+  "passed": true,
+  "skipped": false,
+  "threshold": "residual recurrence beats a same-budget MLP on test RMSE for all 3 seeds at matched depth/params (toy scale, hermetic); adopt or reject with a documented margin (P8)",
+  "value": 0.49927791099752583
+}

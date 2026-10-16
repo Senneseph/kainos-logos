@@ -1,0 +1,5 @@
+unknown flag: --no-cap-drop
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run 'docker run --help' for more information

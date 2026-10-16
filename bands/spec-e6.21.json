@@ -1,0 +1,744 @@
+{
+  "spec": 1,
+  "id": "e6.21",
+  "session": "S17",
+  "title": "the valuation line (the Beal island)",
+  "seed": {
+    "store": "results/phase-6/e6.20-run1/codeX-S04.json",
+    "identity": "e21eaaf32b475930",
+    "total": 1581,
+    "line_end": 84
+  },
+  "registry": "kainos.tutor.e621:CONCEPTS_E621",
+  "band": {
+    "domain": "beal",
+    "college": "1",
+    "unconditional": true,
+    "new_concepts": [
+      "valuation",
+      "lte-form",
+      "beal-summit",
+      "beal-census"
+    ],
+    "concepts": [
+      {
+        "id": "valuation",
+        "name": "the valuation: for a prime and a number on my line, the p-adic depth \u2014 the p-rung of the first-divisor factorization chain, counting how many times the prime divides before the stop; every recorded number carries its depths as facts",
+        "prereqs": [
+          "first-divisor",
+          "divides"
+        ],
+        "lesson": {
+          "slug": "valuation-def",
+          "statement": "the valuation, the p-adic depth, read off the first-divisor factorization chain: for a prime p and a number on my line, it is the number of times the p-rung of the chain divides the number before the stop \u2014 the highest power of p that divides it \u2014 and every recorded number carries each of its depths as a fact, at the line end 84"
+        }
+      },
+      {
+        "id": "lte-form",
+        "name": "the lift-the-exponent form: for an odd prime p dividing the difference x minus y and dividing neither term, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference plus the p-adic depth of the exponent \u2014 verified in every instance of the line's ledger box",
+        "prereqs": [
+          "valuation"
+        ],
+        "lesson": {
+          "slug": "lte-def",
+          "statement": "the lift-the-exponent identity, the classical odd-p form, as the rule i was given: when an odd prime p divides the difference x minus y and divides neither x nor y, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference x minus y plus the p-adic depth of the exponent n \u2014 my ledger in the line's box (the odd primes at or below the line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end) verifies every instance of it, at the line end 84"
+        }
+      },
+      {
+        "id": "beal-summit",
+        "name": "the summit of the island: the statement itself, a declared record fact (the ams beal prize) \u2014 with all three exponents above two, a to the x power plus b to the y power equal to c to the z power forces a common prime factor of a, b and c; on my line the verification census carries it and the primitive territory is a wall",
+        "prereqs": [
+          "valuation",
+          "divides"
+        ],
+        "lesson": {
+          "slug": "beal-def",
+          "statement": "the statement of the island, of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, and a, b, c, x, y and z are positive integers with x, y and z each above two, then a, b and c have a common prime factor \u2014 that is, the equation has no solution in pairwise coprime a, b and c once every exponent is above two, at the line end 84"
+        }
+      },
+      {
+        "id": "beal-census",
+        "name": "the verification census: in the box where a, b, c lie at or below the line end and the exponents stand between three and ten of record, exactly 83 triples solve the island's equation and every one carries its common prime factor \u2014 zero primitive triples on the line; the line ends where the primitive triples would live",
+        "prereqs": [
+          "beal-summit",
+          "scan-ledger"
+        ],
+        "lesson": {
+          "slug": "census-def",
+          "statement": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "lte-ledger",
+        "concept": "lte-form",
+        "parts": [
+          "lte-def",
+          "valuation-def"
+        ],
+        "statement": "the ledger filed on the line: the lift-the-exponent identity, the classical odd-p form, verified in every instance of the ledger's box \u2014 the odd primes at or below my line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end \u2014 two hundred forty-nine thousand two hundred eighty instances, zero deviations, at the line end 84"
+      },
+      {
+        "id": "beal-line-satisfaction",
+        "concept": "beal-summit",
+        "parts": [
+          "beal-def",
+          "census-def"
+        ],
+        "statement": "the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:valuation-def",
+      "lemma:lte-def",
+      "lemma:beal-def",
+      "lemma:census-def",
+      "theorem:lte-ledger",
+      "theorem:beal-line-satisfaction"
+    ],
+    "marker_kept_facts": [
+      "lemma:conditional-def",
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "question": "what is the p-adic depth of sixty-four at the prime two of record?",
+      "kind": "gap",
+      "concept": "valuation",
+      "fragment": "the valuation: for a prime and a number on my line, the p-adic depth \u2014 the p-rung of the first-divisor factorization chain, counting how many times the prime divides before the stop; every recorded number carries its depths as facts"
+    },
+    {
+      "ref": "S02:02",
+      "question": "state the valuation-def rule",
+      "kind": "gap",
+      "concept": "valuation",
+      "fragment": "the valuation-def rule"
+    },
+    {
+      "ref": "S02:03",
+      "question": "the valuation, the p-adic depth, read off the first-divisor factorization chain: for a prime p and a number on my line, it is the number of times the p-rung of the chain divides the number before the stop \u2014 the highest power of p that divides it \u2014 and every recorded number carries each of its depths as a fact, at the line end 84",
+      "kind": "teach",
+      "lesson": "valuation-def"
+    },
+    {
+      "ref": "S02:04",
+      "question": "what is the p-adic depth of sixty-four at the prime two of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_vp",
+        "args": {
+          "n": "sixty-four",
+          "p": "two"
+        },
+        "grounds": [
+          "lemma:valuation-def"
+        ],
+        "owner": "lemma:valuation-def"
+      }
+    },
+    {
+      "ref": "S02:05",
+      "question": "what is the p-adic depth of seventy-two at the prime three of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_vp",
+        "args": {
+          "n": "seventy-two",
+          "p": "three"
+        },
+        "grounds": [
+          "lemma:valuation-def"
+        ],
+        "owner": "lemma:valuation-def"
+      }
+    },
+    {
+      "ref": "S02:06",
+      "question": "what is the p-adic depth of eighty-four at the prime two of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_vp",
+        "args": {
+          "n": "eighty-four",
+          "p": "two"
+        },
+        "grounds": [
+          "lemma:valuation-def"
+        ],
+        "owner": "lemma:valuation-def"
+      }
+    },
+    {
+      "ref": "S02:07",
+      "question": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?",
+      "kind": "gap",
+      "concept": "lte-form",
+      "fragment": "the lift-the-exponent form: for an odd prime p dividing the difference x minus y and dividing neither term, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference plus the p-adic depth of the exponent \u2014 verified in every instance of the line's ledger box"
+    },
+    {
+      "ref": "S02:08",
+      "question": "state the lte-def rule",
+      "kind": "gap",
+      "concept": "lte-form",
+      "fragment": "the lte-def rule"
+    },
+    {
+      "ref": "S02:09",
+      "question": "the lift-the-exponent identity, the classical odd-p form, as the rule i was given: when an odd prime p divides the difference x minus y and divides neither x nor y, the p-adic depth of x to the n power minus y to the n power is the p-adic depth of the difference x minus y plus the p-adic depth of the exponent n \u2014 my ledger in the line's box (the odd primes at or below the line end, the difference a multiple of the prime with neither term divisible by it, the exponents three through the line end) verifies every instance of it, at the line end 84",
+      "kind": "teach",
+      "lesson": "lte-def"
+    },
+    {
+      "ref": "S02:10",
+      "question": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_lte",
+        "args": {
+          "which": "a"
+        },
+        "grounds": [
+          "lemma:lte-def"
+        ],
+        "owner": "lemma:lte-def"
+      }
+    },
+    {
+      "ref": "S02:11",
+      "question": "what does the lift-the-exponent identity hold for ten cubed minus one cubed at the prime three of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_lte",
+        "args": {
+          "which": "b"
+        },
+        "grounds": [
+          "lemma:lte-def"
+        ],
+        "owner": "lemma:lte-def"
+      }
+    },
+    {
+      "ref": "S02:12",
+      "question": "how many instances does the lift-the-exponent ledger cover in the line's box of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_lte_ledger",
+        "args": {},
+        "grounds": [
+          "lemma:lte-def"
+        ],
+        "owner": "lemma:lte-def"
+      }
+    },
+    {
+      "ref": "S02:13",
+      "question": "derive beal-line-satisfaction from beal-def and census-def",
+      "kind": "missing_parts",
+      "theorem": "beal-line-satisfaction",
+      "parts": [
+        "beal-def",
+        "census-def"
+      ],
+      "expected": "i have not been taught the beal-def or the census-def \u2014 the rule for beal-line-satisfaction needs them before i can put it together"
+    },
+    {
+      "ref": "S02:14",
+      "question": "derive lte-ledger from lte-def",
+      "kind": "scaffold",
+      "theorem": "lte-ledger",
+      "parts": [
+        "lte-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for lte-ledger wants its exact set \u2014 what you name is short the valuation-def before i can put it together"
+    },
+    {
+      "ref": "S02:15",
+      "question": "derive lte-ledger from lte-def and valuation-def",
+      "kind": "derive",
+      "theorem": "lte-ledger",
+      "parts": [
+        "lte-def",
+        "valuation-def"
+      ]
+    },
+    {
+      "ref": "S02:16",
+      "question": "what is the p-adic depth of thirty-six at the prime two of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_vp",
+        "args": {
+          "n": "thirty-six",
+          "p": "two"
+        },
+        "grounds": [
+          "lemma:valuation-def"
+        ],
+        "owner": "lemma:valuation-def"
+      }
+    },
+    {
+      "ref": "S02:17",
+      "question": "how many instances does the lift-the-exponent ledger cover in the line's box of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_lte_ledger",
+        "args": {},
+        "grounds": [
+          "lemma:lte-def"
+        ],
+        "owner": "lemma:lte-def"
+      }
+    },
+    {
+      "ref": "S03:01",
+      "question": "what is the statement of the beal island of record?",
+      "kind": "gap",
+      "concept": "beal-summit",
+      "fragment": "the summit of the island: the statement itself, a declared record fact (the ams beal prize) \u2014 with all three exponents above two, a to the x power plus b to the y power equal to c to the z power forces a common prime factor of a, b and c; on my line the verification census carries it and the primitive territory is a wall"
+    },
+    {
+      "ref": "S03:02",
+      "question": "state the beal-def rule",
+      "kind": "gap",
+      "concept": "beal-summit",
+      "fragment": "the beal-def rule"
+    },
+    {
+      "ref": "S03:03",
+      "question": "the statement of the island, of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, and a, b, c, x, y and z are positive integers with x, y and z each above two, then a, b and c have a common prime factor \u2014 that is, the equation has no solution in pairwise coprime a, b and c once every exponent is above two, at the line end 84",
+      "kind": "teach",
+      "lesson": "beal-def"
+    },
+    {
+      "ref": "S03:04",
+      "question": "how many triples does the verification census of the beal island hold in the line's box?",
+      "kind": "gap",
+      "concept": "beal-census",
+      "fragment": "the verification census: in the box where a, b, c lie at or below the line end and the exponents stand between three and ten of record, exactly 83 triples solve the island's equation and every one carries its common prime factor \u2014 zero primitive triples on the line; the line ends where the primitive triples would live"
+    },
+    {
+      "ref": "S03:05",
+      "question": "the verification census on my line: in the box where a, b, c lie at or below my line end and the exponents x, y, z stand between three and ten of record, exactly eighty-three triples solve the island's equation, and every one of the eighty-three carries its common prime factor \u2014 the two-power twin family, the three-family, the seven-family, the fifteen-family, and the seventeen, nineteen, twenty-six, twenty-eight, thirty-one, thirty-three families \u2014 while zero primitive triples live on my line; the line ends where the primitive triples would live, and that territory is a wall, at the line end 84",
+      "kind": "teach",
+      "lesson": "census-def"
+    },
+    {
+      "ref": "S03:06",
+      "question": "how many triples does the verification census of the beal island hold in the line's box?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_census",
+        "args": {},
+        "grounds": [
+          "lemma:census-def"
+        ],
+        "owner": "lemma:census-def"
+      }
+    },
+    {
+      "ref": "S03:07",
+      "question": "how many primitive triples live on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_empt",
+        "args": {},
+        "grounds": [
+          "lemma:census-def"
+        ],
+        "owner": "lemma:census-def"
+      }
+    },
+    {
+      "ref": "S03:08",
+      "question": "which families does the verification census of the beal island hold on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_family",
+        "args": {},
+        "grounds": [
+          "lemma:census-def"
+        ],
+        "owner": "lemma:census-def"
+      }
+    },
+    {
+      "ref": "S03:09",
+      "question": "derive beal-line-satisfaction from beal-def",
+      "kind": "scaffold",
+      "theorem": "beal-line-satisfaction",
+      "parts": [
+        "beal-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for beal-line-satisfaction wants its exact set \u2014 what you name is short the census-def before i can put it together"
+    },
+    {
+      "ref": "S03:10",
+      "question": "derive beal-line-satisfaction from beal-def and census-def",
+      "kind": "derive",
+      "theorem": "beal-line-satisfaction",
+      "parts": [
+        "beal-def",
+        "census-def"
+      ]
+    },
+    {
+      "ref": "S03:11",
+      "question": "what lives in the primitive territory of the beal island?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84",
+        "articulation": [
+          "primitive",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:12",
+      "question": "what lives at the fermat catalan boundary of the beal island?",
+      "kind": "wall",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall of the fermat-catalan boundary: the primitive solutions with reciprocal exponents under 1 are finite by the darmon-granville record (an ineffective finiteness), and their known forms all use 2 as an exponent \u2014 exactly the solutions my band's own 'all exponents above two' condition excludes (seven cubed plus thirteen squared equals two to the ninth, three to the fifth plus ten squared equals seven cubed, two to the fifth plus seven squared equals three to the fourth); they live just outside my line's box, named of record, never as values, at the line end 84",
+        "articulation": [
+          "fermat-catalan",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "question": "what is the closed anchor of the beal island?",
+      "kind": "wall",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the anchor of the closed case: the equal-exponent corner where all three exponents stand above 2 is the fermat last theorem itself \u2014 no positive-integer solutions (the wiles record of 1994): a closed anchor named, not computed, never a value of mine, at the line end 84",
+        "articulation": [
+          "wiles",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "question": "how many triples does the verification census of the beal island hold in the line's box?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_census",
+        "args": {},
+        "grounds": [
+          "lemma:census-def"
+        ],
+        "owner": "lemma:census-def"
+      }
+    },
+    {
+      "ref": "S03:15",
+      "question": "what state does the beal band hold at the line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_bandstate",
+        "args": {},
+        "grounds": [
+          "lemma:census-def"
+        ],
+        "owner": "lemma:census-def"
+      }
+    },
+    {
+      "ref": "S03:16",
+      "question": "state the beal-line-satisfaction rule",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "the summit of the island filed on my line: the statement holds of record across the whole census box \u2014 the eighty-three triples of the box each carry their common prime factor, no primitive triple lives in the box, and the primitive territory is a wall, at the line end 84",
+        "grounds": [
+          "theorem:beal-line-satisfaction"
+        ],
+        "owner": "theorem:beal-line-satisfaction"
+      }
+    },
+    {
+      "ref": "S03:17",
+      "question": "does the beal band say anything conditional on an unproved hypothesis?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s17_uncond",
+        "args": {},
+        "grounds": [
+          "lemma:beal-def"
+        ],
+        "owner": "lemma:beal-def"
+      }
+    },
+    {
+      "ref": "S04:01",
+      "question": "what is the summit fact of the island?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.20",
+        "turn": "S03:05"
+      }
+    },
+    {
+      "ref": "S04:02",
+      "question": "what order of vanishing does the L product of the first panel member have at s equal to one of record?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.20",
+        "turn": "S02:05"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "question": "what does the torsion ledger of the first panel member hold on my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.20",
+        "turn": "S02:13"
+      }
+    },
+    {
+      "ref": "S04:04",
+      "question": "what is the exact record L value of the second panel member at s equal to one?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.20",
+        "turn": "S03:13"
+      }
+    },
+    {
+      "ref": "S04:05",
+      "question": "what is the ramification correction of the first panel member?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S03:09"
+      }
+    },
+    {
+      "ref": "S04:06",
+      "question": "what is the queue above my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:07",
+      "question": "what is the p-adic depth of sixty-four at the prime two of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:08",
+      "question": "what is the p-adic depth of seventy-two at the prime three of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:09",
+      "question": "what does the lift-the-exponent identity hold for four cubed minus one cubed at the prime three of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:10",
+      "question": "how many instances does the lift-the-exponent ledger cover in the line's box of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:11",
+      "question": "what is the statement of the beal island of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:12",
+      "question": "how many triples does the verification census of the beal island hold in the line's box?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:13",
+      "question": "how many primitive triples live on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:14",
+      "question": "which families does the verification census of the beal island hold on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:15",
+      "question": "state the census-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:16",
+      "question": "what state does the beal band hold at the line end?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:17",
+      "question": "what lives in the primitive territory of the beal island?",
+      "kind": "probe"
+    }
+  ],
+  "offscript": [
+    {
+      "question": "state the bsd-panel-satisfaction rule"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "census_count",
+      "ref": "s17_census_count"
+    },
+    {
+      "key": "primitive_count",
+      "ref": "s17_primitive_count"
+    },
+    {
+      "key": "lte_instances",
+      "ref": "s17_lte_instances"
+    },
+    {
+      "key": "lte_failures",
+      "ref": "s17_lte_failures"
+    },
+    {
+      "key": "vp_64_2",
+      "ref": "s17_vp",
+      "args": {
+        "n": "sixty-four",
+        "p": "two"
+      }
+    },
+    {
+      "key": "lte_a",
+      "ref": "s17_lte",
+      "args": {
+        "which": "a"
+      }
+    },
+    {
+      "key": "lte_b",
+      "ref": "s17_lte",
+      "args": {
+        "which": "b"
+      }
+    },
+    {
+      "key": "beal",
+      "ref": "s17_beal"
+    },
+    {
+      "key": "census",
+      "ref": "s17_census"
+    },
+    {
+      "key": "empt",
+      "ref": "s17_empt"
+    },
+    {
+      "key": "family",
+      "ref": "s17_family"
+    },
+    {
+      "key": "bandstate",
+      "ref": "s17_bandstate"
+    },
+    {
+      "key": "uncond",
+      "ref": "s17_uncond"
+    },
+    {
+      "key": "wall_W1",
+      "ref": "s17_wall",
+      "args": {
+        "wall": "1"
+      }
+    },
+    {
+      "key": "wall_W2",
+      "ref": "s17_wall",
+      "args": {
+        "wall": "2"
+      }
+    },
+    {
+      "key": "wall_W3",
+      "ref": "s17_wall",
+      "args": {
+        "wall": "3"
+      }
+    }
+  ],
+  "expect": {
+    "final_total": 1641,
+    "letters": {
+      "S02": "UULSSSUULSSSFFTSS",
+      "S03": "UULULSSSFTHHHSSSS",
+      "S04": "SSSHSSSSSSSSSSSSH"
+    },
+    "mastery": {
+      "valuation": {
+        "state": "stable",
+        "correct": 6
+      },
+      "lte-form": {
+        "state": "stable",
+        "correct": 7
+      },
+      "beal-summit": {
+        "state": "stable",
+        "correct": 4
+      },
+      "beal-census": {
+        "state": "stable",
+        "correct": 10
+      }
+    },
+    "prereq_gaps": {
+      "valuation": [],
+      "lte-form": [],
+      "beal-summit": [],
+      "beal-census": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

@@ -1,0 +1,55 @@
+{"id": "q_one_or_more", "description": "one or more digits", "expected_pcre": "\\d+", "positive": ["7", "42"], "negative": ["", "a7"]}
+{"id": "q_zero_or_more", "description": "zero or more letters", "expected_pcre": "[A-Za-z]*", "positive": ["", "abc"], "negative": ["1", "a b"]}
+{"id": "q_optional", "description": "an optional space", "expected_pcre": "\\s?", "positive": ["", " "], "negative": ["ab", "  "]}
+{"id": "q_exactly", "description": "exactly two letters", "expected_pcre": "[A-Za-z]{2}", "positive": ["ab", "ZZ"], "negative": ["a", "abc"]}
+{"id": "q_at_least", "description": "at least three digits", "expected_pcre": "\\d{3,}", "positive": ["123", "12345"], "negative": ["12", "12a"]}
+{"id": "q_at_most", "description": "at most five letters", "expected_pcre": "[A-Za-z]{0,5}", "positive": ["", "abcde"], "negative": ["abcdef"]}
+{"id": "q_between", "description": "between two and four digits", "expected_pcre": "\\d{2,4}", "positive": ["42", "1234"], "negative": ["1", "12345"]}
+{"id": "q_from_to", "description": "from three to six letters", "expected_pcre": "[A-Za-z]{3,6}", "positive": ["abc", "abcdef"], "negative": ["ab", "abcdefg"]}
+{"id": "q_bare_numeral", "description": "four digits", "expected_pcre": "\\d{4}", "positive": ["0000", "1234"], "negative": ["123", "12345"]}
+{"id": "q_optional_maybe", "description": "maybe a digit", "expected_pcre": "\\d?", "positive": ["", "9"], "negative": ["99", "x"]}
+{"id": "q_optional_optionally", "description": "optionally a space", "expected_pcre": "\\s?", "positive": [" ", ""], "negative": ["  ", "a"]}
+{"id": "c_digit", "description": "a digit", "expected_pcre": "\\d", "positive": ["0", "7"], "negative": ["", "ab"]}
+{"id": "c_letter", "description": "a letter", "expected_pcre": "[A-Za-z]", "positive": ["q", "Q"], "negative": ["3", ""]}
+{"id": "c_word", "description": "a word", "expected_pcre": "\\w", "positive": ["_", "z"], "negative": [" ", "-"]}
+{"id": "c_whitespace", "description": "a space", "expected_pcre": "\\s", "positive": [" ", "\t"], "negative": ["a", ""]}
+{"id": "c_whitespace_variant", "description": "whitespace", "expected_pcre": "\\s", "positive": [" "], "negative": ["a"]}
+{"id": "c_anything", "description": "anything", "expected_pcre": ".", "positive": ["z", "5"], "negative": [""]}
+{"id": "a_start", "description": "start of string, one or more digits", "expected_pcre": "^\\d+", "positive": ["42"], "negative": ["a42"]}
+{"id": "a_beginning_variant", "description": "beginning of string, one or more letters", "expected_pcre": "^[A-Za-z]+", "positive": ["abc"], "negative": ["1abc"]}
+{"id": "a_end", "description": "one or more letters, end of string", "expected_pcre": "[A-Za-z]+$", "positive": ["abc"], "negative": ["abc "]}
+{"id": "a_both", "description": "start of string, three digits, a hyphen, two letters, end of string", "expected_pcre": "^\\d{3}-[A-Za-z]{2}$", "positive": ["123-AB"], "negative": ["x123-AB", "123-ABC"]}
+{"id": "a_empty_string", "description": "start of string, end of string", "expected_pcre": "^$", "positive": [""], "negative": [" "]}
+{"id": "l_plain", "description": "the literal hello", "expected_pcre": "hello", "positive": ["hello"], "negative": ["hell", "hello!"]}
+{"id": "l_metachar_dot", "description": "the literal .", "expected_pcre": "\\.", "positive": ["."], "negative": ["a", ""]}
+{"id": "l_metachar_plus", "description": "the literal +", "expected_pcre": "\\+", "positive": ["+"], "negative": ["x", "++"]}
+{"id": "l_metachar_open_paren", "description": "the literal (", "expected_pcre": "\\(", "positive": ["("], "negative": ["a"]}
+{"id": "l_metachar_dash", "description": "the literal -", "expected_pcre": "-", "positive": ["-"], "negative": ["--"]}
+{"id": "l_dash_via_codex", "description": "a hyphen", "expected_pcre": "-", "positive": ["-"], "negative": ["--"]}
+{"id": "alt_two", "description": "either a digit or a letter", "expected_pcre": "(?:\\d|[A-Za-z])", "positive": ["5", "a"], "negative": ["", "!"]}
+{"id": "alt_three", "description": "either a digit or a letter or a space", "expected_pcre": "(?:\\d|[A-Za-z]|\\s)", "positive": ["7", "q", " "], "negative": ["", "12"]}
+{"id": "alt_nested", "description": "either a digit or either two letters or three letters", "expected_pcre": "(?:\\d|(?:[A-Za-z]{2}|[A-Za-z]{3}))", "positive": ["9", "ab", "abc"], "negative": ["a", "abcd", "12"]}
+{"id": "alt_literals", "description": "either the literal foo or the literal bar", "expected_pcre": "(?:foo|bar)", "positive": ["foo", "bar"], "negative": ["baz", "fo"]}
+{"id": "alt_then_seq", "description": "a digit, then either a letter or a space", "expected_pcre": "\\d(?:[A-Za-z]|\\s)", "positive": ["5a", "5 "], "negative": ["5", "55x"]}
+{"id": "g_basic", "description": "a group of three digits", "expected_pcre": "(?:\\d{3})", "positive": ["456"], "negative": ["45", "4567"]}
+{"id": "g_seq", "description": "a group of a digit and a letter", "expected_pcre": "(?:\\d[A-Za-z])", "positive": ["1a", "2Z"], "negative": ["1", "23"]}
+{"id": "g_in_alt", "description": "either a digit or a group of two digits and a letter", "expected_pcre": "(?:\\d|(?:\\d{2}[A-Za-z]))", "positive": ["7", "42a"], "negative": ["4a", "42"]}
+{"id": "f_ci_class", "description": "ignoring case, a letter", "expected_pcre": "(?i)[A-Za-z]", "positive": ["a", "Z"], "negative": ["1"]}
+{"id": "f_ci_alternative", "description": "ignoring case, either the literal foo or the literal bar", "expected_pcre": "(?i)(?:foo|bar)", "positive": ["FOO", "Bar"], "negative": ["baz"]}
+{"id": "f_ci_anchored", "description": "ignoring case, start of string, a letter, end of string", "expected_pcre": "(?i)^[A-Za-z]$", "positive": ["A"], "negative": ["ab", "A "]}
+{"id": "f_ci_group", "description": "ignoring case, a group of the literal ab", "expected_pcre": "(?i)(?:ab)", "positive": ["AB", "aB"], "negative": ["c"]}
+{"id": "canon_1", "description": "three digits, then a hyphen", "expected_pcre": "\\d{3}-", "positive": ["123-", "000-"], "negative": ["12-", "1234-", "123x"]}
+{"id": "canon_2", "description": "ignoring case, three digits, a hyphen, either the literal foo or the literal bar", "expected_pcre": "(?i)\\d{3}-(?:foo|bar)", "positive": ["123-FOO", "456-bar"], "negative": ["12-foo", "123-foo "]}
+{"id": "combo_version", "description": "one or more digits, a hyphen, one or more digits, a hyphen, one or more digits", "expected_pcre": "\\d+-\\d+-\\d+", "positive": ["1-2-3", "99-8-77"], "negative": ["1-2", "1-2-3-4"]}
+{"id": "combo_word_sep", "description": "one or more words, a space, one or more words", "expected_pcre": "\\w+\\s\\w+", "positive": ["a b", "hello world"], "negative": ["ab ", "a  b"]}
+{"id": "combo_any_fill", "description": "three digits, anything, three digits", "expected_pcre": "\\d{3}.\\d{3}", "positive": ["123x456", "789.012"], "negative": ["12x456", "123x4567"]}
+{"id": "combo_connectors", "description": "two letters then a digit, and a space, followed by a letter", "expected_pcre": "[A-Za-z]{2}\\d\\s[A-Za-z]", "positive": ["ab1 c"], "negative": ["a1 c", "ab1  c"]}
+{"id": "combo_ip_like", "description": "start of string, four digits, a hyphen, four digits, end of string", "expected_pcre": "^\\d{4}-\\d{4}$", "positive": ["1234-5678"], "negative": ["123-5678", "x1234-5678"]}
+{"id": "combo_deep_seq", "description": "start of string, two letters, a hyphen, one or more digits, end of string", "expected_pcre": "^[A-Za-z]{2}-\\d+$", "positive": ["AB-123"], "negative": ["a-123", "AB-123x"]}
+{"id": "combo_word_word", "description": "a word, anything, a word", "expected_pcre": "\\w.\\w", "positive": ["a_b", "1z3"], "negative": ["ab", "a_b_"]}
+{"id": "combo_exactly_ten", "description": "exactly ten digits", "expected_pcre": "\\d{10}", "positive": ["1234567890"], "negative": ["123456789"]}
+{"id": "combo_on_off", "description": "a space, then either the literal on or the literal off", "expected_pcre": "\\s(?:on|off)", "positive": [" on", " off"], "negative": ["on", "off x"]}
+{"id": "combo_space_runs", "description": "a digit, zero or more spaces, a digit", "expected_pcre": "\\d\\s*\\d", "positive": ["57", "5 7", "5   7"], "negative": ["5", "5  7x"]}
+{"id": "combo_letters_digits", "description": "one or more letters, then three digits", "expected_pcre": "[A-Za-z]+\\d{3}", "positive": ["ab123", "Q999"], "negative": ["ab12", "123ab"]}
+{"id": "combo_ci_phone_like", "description": "ignoring case, start of string, one or more digits, a hyphen, one or more digits, end of string", "expected_pcre": "(?i)^\\d+-\\d+$", "positive": ["1-2", "99-100"], "negative": ["A-B", "1-2x"]}
+{"id": "combo_bounded_letters", "description": "at least two letters, a space, at most two letters", "expected_pcre": "[A-Za-z]{2,}\\s[A-Za-z]{0,2}", "positive": ["ab c", "abcd cd"], "negative": ["a c", "abc cde"]}

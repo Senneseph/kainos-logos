@@ -1,0 +1,172 @@
+== S1 build + validation ==
+  zeta(2)  = 1.644934066848   pi^2/6 = 1.644934066848   err 2.22e-16
+  zeta(3)  = 1.202056903160   Apery    = 1.202056903159      err 4.44e-16
+  zeta(1/2)= -1.460354508810   known    = -1.460354508809    err 6.88e-15
+  |Gamma(1+3i)|^2 = 0.001521150079   pi y/sinh(pi y) = 0.001521150079   err 9.32e-18
+  beta(2)  = 0.915965594176   established = 0.915965594177   err 7.81e-13 (rigorous tail bound 1.3e-18)
+  chi cosine-form vs sin-form: max diff = 8.34e-14
+  functional equation on 21 strip points:  max error = 5.90e-12
+  validation gate GREEN -> proceeding
+
+== S2 the zero census (our own Z(t) walk, bisection to 1e-9) ==
+  zeros found in (0, 10^4]:  10142
+    N(100) = 29   (RVM main     28.00 + S(T)=+0.998; S is the arg term, O(1))
+    N(1000) = 649   (RVM main    647.62 + S(T)=+1.384; S is the arg term, O(1))
+    N(10000) = 10142   (RVM main  10141.97 + S(T)=+0.035; S is the arg term, O(1))
+  first 10 zeros, ours vs published:
+    n=1    ours 14.134725142   published 14.134725142   delta 5.3e-15
+    n=2    ours 21.022039639   published 21.022039639   delta 3.6e-15
+    n=3    ours 25.010857580   published 25.010857580   delta 0.0e+00
+    n=4    ours 30.424876126   published 30.424876126   delta 3.6e-15
+    n=5    ours 32.935061588   published 32.935061588   delta 7.1e-15
+    n=6    ours 37.586178159   published 37.586178159   delta 7.1e-15
+    n=7    ours 40.918719012   published 40.918719012   delta 7.1e-15
+    n=8    ours 43.327073281   published 43.327073281   delta 0.0e+00
+    n=9    ours 48.005150881   published 48.005150881   delta 7.1e-15
+    n=10   ours 49.773832478   published 49.773832478   delta 1.4e-14
+  (the walk lives on the line, so every found zero is on-line; every
+  found point passed an |zeta| < 1e-7 assertion, and the counts sit
+  in the RVM windows, so no on-line zero was missed.)
+  full list written to zeros_T10000.txt (15 digits each)
+
+== S3a what the 'prime arrows' actually do at the zeros ==
+  prime-arrow energy |sum_{odd p<=2e5} p^{-1/2} e^{-i t ln p}|,  t in [0.3, 45]:
+  top 8 local maxima (what RH-DIRECTION.md reports as 'matching 14.1/21.0/...'):
+    t =    2.9100   energy =      12.5555   (nearest published zero 14.1347)
+    t =    3.4950   energy =      10.7011   (nearest published zero 14.1347)
+    t =    4.0900   energy =       9.3308   (nearest published zero 14.1347)
+    t =    4.6900   energy =       8.1699   (nearest published zero 14.1347)
+    t =    5.2450   energy =       7.0643   (nearest published zero 14.1347)
+    t =    6.2300   energy =       6.0403   (nearest published zero 14.1347)
+    t =    6.8150   energy =       5.8695   (nearest published zero 14.1347)
+    t =    7.4300   energy =       5.6582   (nearest published zero 14.1347)
+  VERDICT: the finite prime-arrow sum is SMOOTH and MONOTONICALLY
+  decaying here (the 'peaks' are just the onset) -- it does NOT ring
+  at 14.13/21.02/25.01/30.42.  The doc's claimed one-decimal match
+  is not reproduced by the simulation it describes.
+
+  the contrast at the first four zeros (prime cut-off 200000):
+   t           |zeta(1/2+it)|     prime-sum |P|     composite part |zeta-P|
+     14.13473         3.404e-15           3.4763           3.4763
+     21.02204         3.527e-15           4.3493           4.3493
+     25.01086         3.661e-15           3.7522           3.7522
+     30.42488         1.629e-14           1.5624           1.5624
+  the prime sum does NOT vanish at the zeros -- it is smooth and
+  nonzero there.  It is the COMPOSITE arrows (the multiplicative
+  closure, the '2 and its multiples' glue) together with the mirror
+  duplication that cancel it.  The prime-arrow sum carries the zero
+  information only through analytic continuation:
+      P(s) = prod_p (1 - p^{-s})^{-1} log-part  =  sum_{k>=1} mu(k) ln zeta(k s)
+  which has LOG-poles exactly at the zeta zeros.  Identity check:
+  s = (2.5+0.7j):  direct prime sum (N <= 1e6)      = 0.2093006985 -0.1569504388 i   (tail bound 1.4e-09)
+            sum mu(k)/k ln zeta(k s)           = 0.2093006985 -0.1569504388 i   (series tail < 1e-10)
+            |difference| = 4.2e-11   (within the tail bound)
+  so:  primes --(ln)--> zeros:  every zero of zeta is a pole of the
+  continued prime sum, and a zero of the full product-sum.  One
+  singularity, two faces.  The x-side of this is the explicit formula.
+
+== S3b does the prime error ring at the zero heights? ==
+  S(t) = | sum_x [(psi(x)-x)/sqrt(x)] e^{-i t ln x} |,  x in [30, 2e6] log-grid
+  top 8 spectral peaks vs the published zeros:
+    f =   14.1000   |S| =     282.7188   (nearest zero 14.1347)
+    f =   21.0200   |S| =     184.5700   (nearest zero 21.0220)
+    f =   25.0200   |S| =     159.9132   (nearest zero 25.0109)
+    f =   30.4000   |S| =     122.9539   (nearest zero 30.4249)
+    f =   32.9000   |S| =     113.7567   (nearest zero 32.9351)
+    f =   37.5600   |S| =     107.4195   (nearest zero 37.5862)
+    f =   40.9000   |S| =      92.2850   (nearest zero 40.9187)
+    f =   43.3000   |S| =      90.3586   (nearest zero 43.3271)
+  reading the explicit formula as a spectrum:  psi(x) - x is built
+  from tones e^{+/- i gamma ln x} of height gamma (after removing the
+  root scale); the peaks above are where the prime error resonates.
+
+== S3c the leak test: break the mirror, watch a zero leave the line ==
+  beta(s) = L(s, chi_-4), primitive conductor 4 = 2^2.
+  'Leak': lift it to modulus 12 = 2*3 (a non-prime-power, composite
+  conductor):  L12(s) = (1 + 2^{-s}) beta(s).
+  the lifted Gauss sum:  |tau_phi|^2 = 4.0000   vs modulus 12  (ratio 0.333)
+  -> the completed L-function of the leak is NOT self-reciprocal
+  (a primitive mirror has |tau|^2 = conductor = 4 for chi_-4).
+  the factor (1+2^(-0.95-400j)) zeroes at s = i pi/ln2 = 4.532360142 i   (Re = 0)
+  |L12( i pi/ln2 )|  = 5.359e-16   <- ZERO, off the 1/2 line
+  |L12( 1- conj(s) )| = 5.693e-01   <- mirror slot EMPTY (|beta| 1.1385, |factor| 0.5000 -- neither vanishes)
+  quad symmetry of a genuine zero (gamma1), |zeta| at the four mirror points:
+    rho          0.50 +   14.134725 i    |zeta| = 3.404e-15
+    conj rho     0.50 +  -14.134725 i    |zeta| = 3.404e-15
+    1-rho        0.50 +  -14.134725 i    |zeta| = 3.404e-15
+    1-conj rho   0.50 +   14.134725 i    |zeta| = 3.404e-15
+  verdict: leak the mirror (non-primitive conductor) and a zero
+  appears OFF the line, paired only with its conjugate, its mirror
+  partner MISSING: the completed L-function is no longer
+  self-reciprocal (|Gauss sum|^2 = 4, not the modulus 12).  This is
+  the doc's Phase-3.2 falsification test ('break the Hermitian and
+  the spectrum leaves the line'), realized in actual L-functions.
+  It is a theorem-level fact, not a proof of RH: it localizes the
+  mechanism -- mirror isometry is what keeps the candidate zeros on
+  the line -- which is exactly the 'articulation' the store asks for.
+
+== S3d the 1/2 isometry: mirror arrow lengths ==
+  mirror of n^{-s}, s = sigma + i t, is n^{-(1-sigma) - i t} (the FE
+  reflected arrow).  Length ratio = n^{2 sigma - 1}:
+    sigma = 0.30   n=2,3,5,7:     0.7579    0.6444    0.5253    0.4592
+    sigma = 0.40   n=2,3,5,7:     0.8706    0.8027    0.7248    0.6776
+    sigma = 0.49   n=2,3,5,7:     0.9862    0.9783    0.9683    0.9618
+    sigma = 0.50   n=2,3,5,7:     1.0000    1.0000    1.0000    1.0000   <== ALL 1:1 : the isometric mirror
+    sigma = 0.51   n=2,3,5,7:     1.0140    1.0222    1.0327    1.0397
+    sigma = 0.60   n=2,3,5,7:     1.1487    1.2457    1.3797    1.4758
+    sigma = 0.70   n=2,3,5,7:     1.3195    1.5518    1.9037    2.1779
+  ONLY at sigma = 1/2 do every arrow and its mirror have equal length.
+  That is the geometric reason the line is where the 'standing wave'
+  can be exact: duplication preserves the norm there and nowhere else.
+
+== S3e trial-point: does the arithmetic of the height modulate spacing? ==
+  floor(gamma) mod 2:  mean scaled spacing per class: 1.00084 (n=5068)  0.99895 (n=5073)
+  floor(gamma) mod 3:  mean scaled spacing per class: 1.00015 (n=3409)  1.00177 (n=3386)  0.99773 (n=3346)
+  global mean scaled spacing: 0.99989  (target ~1)
+  the classes agree to < 1%: the arithmetic of the raw height does
+  not modulate spacing at this resolution.  If '7 and 6 conjoin
+  differently from 7 and 5' is real, it lives one log-scale deeper
+  (the fine-scale conjecture) -- queued for Day-002 with larger T.
+
+== S3f trial-point: the Fibonacci band census ==
+  k   F_k       F_{k+1}   #primes   first prime   offset-in-band
+  0    1         2          0        --           nan
+  1    1         3          1        2            0.500
+  2    2         5          2        2            0.000
+  3    3         8          3        3            0.000
+  4    5         13         3        5            0.000
+  5    8         21         4        11           0.231
+  6    13        34         6        13           0.000
+  7    21        55         8        23           0.059
+  8    34        89         12       37           0.055
+  9    55        144        18       59           0.045
+  10   89        233        27       89           0.000
+  11   144       377        40       149          0.021
+  12   233       610        61       233          0.000
+  13   377       987        92       379          0.003
+  14   610       1597       139      613          0.003
+  15   987       2584       210      991          0.003
+  16   1597      4181       324      1597         0.000
+  17   2584      6765       495      2591         0.002
+  18   4181      10946      755      4201         0.003
+  19   6765      17711      1162     6779         0.001
+  20   10946     28657      1791     10949        0.000
+  21   17711     46368      2761     17713        0.000
+  22   28657     75025      4276     28657        0.000
+  23   46368     121393     6631     46381        0.000
+  24   75025     196418     10292    75029        0.000
+  25   121393    317811     16001    121403       0.000
+  26   196418    514229     24924    196429       0.000
+  27   317811    832040     38891    317827       0.000
+  28   514229    1346269    60686    514229       0.000
+  29   832040    2178309    82616    832063       0.000
+  30   1346269   3524578    45635    1346273      0.000
+  bands with EXACTLY one prime (literal 'unique root prime'): 1 of 31
+  the count GROWS with the band (width ~ F/phi, density ~ 1/ln):
+  'one root prime per band' is FALSE from small k on.  But 'a first
+  prime in EVERY band' held here -- a gap-theorem in costume.
+  Spearman rho (first-prime-in-band gap  vs  distance to nearest zero): 0.195
+  (|rho| < 0.3 => no usable Fibonacci-zero coupling in this range;
+  the hypothesis as stated is not observed.)
+
+# done (day-001 zeta, census to T=10^4)

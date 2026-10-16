@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "check": 1,
+      "detail": {
+        "e5.1-clean-v0": {
+          "a": 20,
+          "b": 20
+        },
+        "e5.1-clean-v1": {
+          "a": 20,
+          "b": 20
+        },
+        "e5.1-clean-v2": {
+          "a": 20,
+          "b": 20
+        }
+      },
+      "name": "clean-recovery-all-variants",
+      "passed": true
+    },
+    {
+      "check": 2,
+      "detail": {
+        "V1/a": "1/9",
+        "V1/b": "1/9",
+        "V2/a": "1/9",
+        "V2/b": "1/9"
+      },
+      "name": "clean-redundancy-v1-v2-exact-1-of-9",
+      "passed": true
+    },
+    {
+      "check": 3,
+      "detail": {
+        "gap": "32/117",
+        "v0": {
+          "a": "5/13",
+          "b": "5/13"
+        }
+      },
+      "name": "clean-redundancy-v0-exact-5-of-13-and-gap",
+      "passed": true
+    },
+    {
+      "check": 4,
+      "detail": {
+        "by": "a",
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "object": "row3:door mine=c4 other=c3",
+        "recovery": true,
+        "round": 4,
+        "target": "b"
+      },
+      "name": "false-v1-detection-round-4-and-recovery",
+      "passed": true
+    },
+    {
+      "check": 5,
+      "detail": {
+        "by": "a",
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "object": "row3:door mine=c4 other=c3",
+        "recovery": true,
+        "round": 4,
+        "target": "b"
+      },
+      "name": "false-v2-detection-round-4-and-recovery",
+      "passed": true
+    },
+    {
+      "check": 6,
+      "detail": {
+        "forced_attempt": {
+          "n_corrects_in_transcript": 0,
+          "named_gap": "capability 'assert_about_other' is not declared \u2014 action not executed (named gap, never guessed)",
+          "rejected": true
+        },
+        "v0_b_correct": 20,
+        "wrong_cells_a": [
+          "r3c3",
+          "r3c4"
+        ]
+      },
+      "name": "false-v0-structurally-uncorrectable",
+      "passed": true
+    },
+    {
+      "check": 7,
+      "detail": {
+        "V1/a": 2,
+        "V1/b": 2,
+        "V2/a": 2,
+        "V2/b": 2
+      },
+      "name": "false-disputed-pairs-preserved-in-all-four-stores",
+      "passed": true
+    },
+    {
+      "check": 8,
+      "detail": {},
+      "name": "all-runs-zero-audit-violations",
+      "passed": true
+    },
+    {
+      "check": 9,
+      "detail": "0 everywhere",
+      "name": "all-runs-zero-view-leaks",
+      "passed": true
+    },
+    {
+      "check": 10,
+      "detail": {
+        "sample": {
+          "e5.1-clean-v0": "sha256:1a235640253800c",
+          "e5.1-clean-v1": "sha256:188be17c2f7eceb",
+          "e5.1-clean-v2": "sha256:432b1c5a29df488"
+        }
+      },
+      "name": "all-runs-bit-identical-on-rerun",
+      "passed": true
+    },
+    {
+      "check": 11,
+      "detail": "clean",
+      "name": "all-runs-no-budget-rejections-no-corruption",
+      "passed": true
+    },
+    {
+      "check": 12,
+      "detail": "24/24 full grids",
+      "name": "all-24-commits-are-20-cell-reconstructions",
+      "passed": true
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "claim": "The Shared Grid (T2): ToM separates on redundancy, the false-belief probe is structurally clean, disputes survive \u2014 see experiments.md",
+  "experiment": "e5.1",
+  "forced_v0_attempt": {
+    "n_corrects_in_transcript": 0,
+    "named_gap": "capability 'assert_about_other' is not declared \u2014 action not executed (named gap, never guessed)",
+    "rejected": true
+  },
+  "runs": {
+    "e5.1-clean-v0": {
+      "determinism_hash": "sha256:1a235640253800cc5bdd6acd9dd38516b24e38ccbc84f67bb6b6693cc11e03b0",
+      "episode": "clean",
+      "planted_col": null,
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 5,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 5,
+            "sent": 13
+          }
+        }
+      },
+      "variant": "V0"
+    },
+    "e5.1-clean-v1": {
+      "determinism_hash": "sha256:188be17c2f7eceb219e17bf61c94e286888524c60b470061aa615867aae8073a",
+      "episode": "clean",
+      "planted_col": null,
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          }
+        }
+      },
+      "variant": "V1"
+    },
+    "e5.1-clean-v2": {
+      "determinism_hash": "sha256:432b1c5a29df488b7294a9cf7ef61155fc1fe53c21f8c458132fd5bce4aba004",
+      "episode": "clean",
+      "planted_col": null,
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          }
+        }
+      },
+      "variant": "V2"
+    },
+    "e5.1-false-v0": {
+      "determinism_hash": "sha256:2a5e73f3abe852cb8bb936dd2e9082e206c67dc81af06c2c57b3dbd333d434f5",
+      "episode": "false",
+      "planted_col": 4,
+      "score": {
+        "correct_cells": {
+          "a": 18,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": false,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "variant": "V0"
+    },
+    "e5.1-false-v1": {
+      "determinism_hash": "sha256:a9b84be5058a3781a2a9d18bf457ea947afd646ba824b3ca05a9a2c2d205a811",
+      "episode": "false",
+      "planted_col": 4,
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "n_corrects": 2,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "variant": "V1"
+    },
+    "e5.1-false-v2": {
+      "determinism_hash": "sha256:eb203d5c48b6b585889efab553f2e774b24f5189a91ce016fb5c329f986d105a",
+      "episode": "false",
+      "planted_col": 4,
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "n_corrects": 2,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "variant": "V2"
+    }
+  },
+  "seed": 5101
+}

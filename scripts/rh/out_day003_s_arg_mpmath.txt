@@ -1,0 +1,6 @@
+mpmath dps-40:  zeta(1/2+i*1e5) = (1.073032014857753132114076269492098530659 + 5.780848544363503984261040557832234374262j)
+  principal arg = 1.3872666648 rad  (0.4415806942 * pi)
+  |zeta| = 5.8795924687
+  RVM main (float64) = 138067.558419
+  2K = ph/pi + (N - main + 1) = -2.000000   (must be an EVEN integer)
+  distance to nearest integer = 6.63e-08   -> S(1e5) = -2.5584 CONSISTENT (census count confirmed by independent dps-40 point)

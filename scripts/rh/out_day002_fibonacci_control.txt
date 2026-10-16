@@ -1,0 +1,13 @@
+(A) Fibonacci partition (a=1.0), two scalings:
+  n = 6440 :  rho(u, GLOBAL-scaled gap) = -0.0494 (z = -3.97)   |   rho(u, LOCAL-density-scaled gap) = +0.0006 (z = +0.05)
+(B) phase-shifted partition (a = 1.3, same ratio 1.618):
+  n = 8737 :  rho(u, GLOBAL-scaled gap) = -0.0487 (z = -4.55)   |   rho(u, LOCAL-density-scaled gap) = -0.0009 (z = -0.08)
+(C) phase-shifted partition (a = 0.99, near-identity phase):
+  n = 6361 :  rho(u, GLOBAL-scaled gap) = -0.0518 (z = -4.13)   |   rho(u, LOCAL-density-scaled gap) = -0.0029 (z = -0.23)
+
+Interpretation:
+  * (A) LOCAL row should be ~ 0 if the (iii) flag was the smooth-density artifact.
+  * (B)/(C) GLOBAL rows should stay around -0.04..-0.05 if density-driven
+    (phase-insensitive); a Fibonacci-SPECIFIC effect would vanish at the
+    shifted phases.
+

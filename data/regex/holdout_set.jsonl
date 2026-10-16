@@ -1,0 +1,20 @@
+{"description": "a letter, then two letters, then a hyphen", "expected_pcre": "[A-Za-z][A-Za-z]{2}-", "id": "comp_020", "negative": ["0aa-", "aaaa-", "a0a-"], "positive": ["aaa-"]}
+{"description": "three digits, then ignoring case, then zero or more letters", "expected_pcre": "\\d{3}(?i)[A-Za-z]*", "id": "comp_009", "negative": ["0000", "a00", "0000a"], "positive": ["000", "000aa"]}
+{"description": "ignoring case, then a hyphen", "expected_pcre": "(?i)-", "id": "comp_025", "negative": ["a"], "positive": ["-"]}
+{"description": "a letter, then a hyphen, then at most five letters", "expected_pcre": "[A-Za-z]-[A-Za-z]{0,5}", "id": "comp_003", "negative": ["0-", "aa", "a-aaaaaa"], "positive": ["a-", "a-aaaaa"]}
+{"description": "a hyphen, then the literal +, then either the literal foo or the literal bar", "expected_pcre": "-\\+(?:foo|bar)", "id": "comp_004", "negative": ["a+foo", "-afoo", "-+aoo"], "positive": ["-+foo", "-+bar"]}
+{"description": "a hyphen, then a space, then two letters", "expected_pcre": "-\\s[A-Za-z]{2}", "id": "comp_034", "negative": ["a aa", "-aaa", "- aaa"], "positive": ["- aa"]}
+{"description": "two letters, then one or more letters, then a hyphen", "expected_pcre": "[A-Za-z]{2}[A-Za-z]+-", "id": "comp_006", "negative": ["0aa-", "aa0-", "aaaa"], "positive": ["aaa-"]}
+{"description": "a hyphen, then the literal -, then one or more digits", "expected_pcre": "--\\d+", "id": "comp_023", "negative": ["a-0", "-a0", "--a"], "positive": ["--0", "--00"]}
+{"description": "start of string, then at most five letters, then four digits", "expected_pcre": "^[A-Za-z]{0,5}\\d{4}", "id": "comp_036", "negative": ["aaaaaa0000", "0aaaa0000", "00000"], "positive": ["0000", "aaaaa0000"]}
+{"description": "a letter, then ignoring case, then a hyphen", "expected_pcre": "[A-Za-z](?i)-", "id": "comp_029", "negative": ["0-", "aa"], "positive": ["a-"]}
+{"description": "optionally a space, then a hyphen, then a space", "expected_pcre": "\\s?-\\s", "id": "comp_016", "negative": ["a- ", "a ", "-a"], "positive": ["- ", " - "]}
+{"description": "a hyphen, then ignoring case, then end of string", "expected_pcre": "-(?i)$", "id": "comp_033", "negative": ["a", "-z"], "positive": ["-"]}
+{"description": "a hyphen, then exactly two letters, then end of string", "expected_pcre": "-[A-Za-z]{2}$", "id": "comp_001", "negative": ["aaa", "-aaa", "-0a"], "positive": ["-aa"]}
+{"description": "start of string, then a hyphen, then end of string", "expected_pcre": "^-$", "id": "comp_002", "negative": ["z-", "a", "-z"], "positive": ["-"]}
+{"description": "start of string, then four digits, then a letter", "expected_pcre": "^\\d{4}[A-Za-z]", "id": "comp_013", "negative": ["z0000a", "00000a", "a000a"], "positive": ["0000a"]}
+{"description": "anything, then a hyphen, then three digits", "expected_pcre": ".-\\d{3}", "id": "comp_037", "negative": ["xa000", "x-0000", "x-a00"], "positive": ["x-000"]}
+{"description": "beginning of string, then zero or more spaces, then zero or more letters", "expected_pcre": "^\\s*[A-Za-z]*", "id": "comp_026", "negative": ["a ", "0a"], "positive": ["", "aa", "  "]}
+{"description": "start of string, then two letters, then either the literal on or the literal off", "expected_pcre": "^[A-Za-z]{2}(?:on|off)", "id": "comp_007", "negative": ["zaaon", "aaaon", "0aon"], "positive": ["aaon", "aaoff"]}
+{"description": "exactly two letters, then the literal hello, then one or more digits", "expected_pcre": "[A-Za-z]{2}hello\\d+", "id": "comp_032", "negative": ["aaahello0", "0ahello0", "aaaello0"], "positive": ["aahello0", "aahello00"]}
+{"description": "a hyphen, then one or more digits, then ignoring case", "expected_pcre": "-\\d+(?i)", "id": "comp_017", "negative": ["a0", "-a"], "positive": ["-0", "-00"]}

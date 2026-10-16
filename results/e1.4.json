@@ -1,0 +1,112 @@
+{
+  "config": {
+    "commit": "unknown",
+    "dataset_hash": null,
+    "justified_rate": 1.0,
+    "n_records": 10,
+    "per_item": [
+      {
+        "description": "three digits, then the dash thing",
+        "emitted": true,
+        "escalated": false,
+        "id": "vague_01",
+        "justified": true,
+        "pcre": "\\d{3}-",
+        "uncovered_classes": []
+      },
+      {
+        "candidates": [
+          "phone",
+          "phone number"
+        ],
+        "description": "a phone number",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_02"
+      },
+      {
+        "candidates": [
+          "line"
+        ],
+        "description": "a line thing",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_03"
+      },
+      {
+        "candidates": [
+          "mark"
+        ],
+        "description": "end of string, the mark thing",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_04"
+      },
+      {
+        "candidates": [
+          "slant"
+        ],
+        "description": "either a hyphen or the slant thing",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_05"
+      },
+      {
+        "candidates": [
+          "phone",
+          "phone number"
+        ],
+        "description": "exactly two letters, followed by a phone number",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_06"
+      },
+      {
+        "candidates": [
+          "glyph"
+        ],
+        "description": "a glyph, then a digit",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_07"
+      },
+      {
+        "description": "beginning of string, the dash thing",
+        "emitted": true,
+        "escalated": false,
+        "id": "vague_08",
+        "justified": true,
+        "pcre": "^-",
+        "uncovered_classes": []
+      },
+      {
+        "description": "a space, then the numeral thing",
+        "emitted": true,
+        "escalated": false,
+        "id": "vague_09",
+        "justified": true,
+        "pcre": "\\s\\d",
+        "uncovered_classes": []
+      },
+      {
+        "candidates": [
+          "slant"
+        ],
+        "description": "one or more words, then the slant thing",
+        "emitted": false,
+        "escalated": true,
+        "id": "vague_10"
+      }
+    ],
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-1/e1.4.json"
+  ],
+  "hypothesis": "underspecified input is recognized and escalated (or resolved via CODEX rotation) \u2014 never an unjustified regex: clarification_rate >= 0.5 and justified_rate == 1.0",
+  "metric": "escalation rate + justification completeness on the vague set",
+  "name": "e1.4",
+  "passed": true,
+  "threshold": ">= 0.5 and == 1.0 justified",
+  "value": 0.7
+}

@@ -1,0 +1,2635 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_no_paper_text": {
+      "bad": [],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 61
+    },
+    "p2_honest_gaps_interleave": {
+      "bad": [],
+      "pass": true
+    },
+    "p3_seam_facts": {
+      "bad": [],
+      "pass": true,
+      "seam_facts": 10
+    },
+    "p4_walls": {
+      "bad": [],
+      "pass": true,
+      "power_refs": [
+        "S03:17",
+        "S04:24"
+      ]
+    },
+    "p5_conjecture_never_premise": {
+      "bad": [],
+      "pass": true
+    },
+    "p6_confounders": {
+      "bad": [],
+      "conf_refs": [
+        "S03:09",
+        "S03:11",
+        "S03:13",
+        "S04:12",
+        "S04:15",
+        "S04:18"
+      ],
+      "pass": true
+    },
+    "p7_joint_band_end": {
+      "bad": [],
+      "pass": true
+    },
+    "p8_mastery_determinism": {
+      "bad": [],
+      "final_total": 523,
+      "line_end": 72,
+      "mastery": {
+        "circle-pair-2": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "erdos-conj": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "gaussian-int": {
+          "correct": 5,
+          "state": "stable"
+        },
+        "grid-lattice": {
+          "correct": 6,
+          "state": "stable"
+        },
+        "kst-bound": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "norm-convex": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "norm-flat": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "norm-generic": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "sst-bound": {
+          "correct": 4,
+          "state": "stable"
+        },
+        "unit-distance": {
+          "correct": 4,
+          "state": "stable"
+        }
+      },
+      "new_events": 56,
+      "new_facts": [
+        "conjecture:erdosguess",
+        "curriculum:circle-pair-2",
+        "curriculum:erdos-conj",
+        "curriculum:gaussian-int",
+        "curriculum:grid-lattice",
+        "curriculum:kst-bound",
+        "curriculum:norm-convex",
+        "curriculum:norm-flat",
+        "curriculum:norm-generic",
+        "curriculum:prereq:erdos-conj>unit-distance",
+        "curriculum:prereq:grid-lattice>unit-distance",
+        "curriculum:prereq:kst-bound>circle-pair-2",
+        "curriculum:prereq:norm-convex>unit-distance",
+        "curriculum:prereq:norm-flat>unit-distance",
+        "curriculum:prereq:norm-generic>unit-distance",
+        "curriculum:sst-bound",
+        "curriculum:unit-distance",
+        "lemma:convexnorm",
+        "lemma:flatarea",
+        "lemma:genericnorm",
+        "lemma:griddiag",
+        "lemma:kstbound",
+        "lemma:sstbound",
+        "lemma:twosquares",
+        "lemma:unitcircles",
+        "lemma:unitpairs"
+      ],
+      "pass": true,
+      "run_identity": "91a3198de737deb8",
+      "seed": {
+        "missing": [],
+        "reproduced_in_s2_pre": 441,
+        "seed_total": 441
+      }
+    }
+  },
+  "passed": 9,
+  "script_hash": "f51491fbc980ebd8",
+  "seam_facts": {
+    "convexnorm": {
+      "essence": "even for a rounder ball the crossing number ceiling holds, and it is exactly tight there",
+      "kind": "lemma",
+      "source_lines": "L40-44",
+      "statement": "for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent"
+    },
+    "erdosguess": {
+      "essence": "the statement the whole course is about \u2014 believed by erdos, not yet known either way",
+      "kind": "conjecture",
+      "source_lines": "L28, L117",
+      "statement": "the erdosguess is that for all large n the unit pairs among any n points are at most n to the power one plus c over log log n, for an absolute constant c"
+    },
+    "flatarea": {
+      "essence": "a true fact about a different norm \u2014 the ceiling changes with the shape of the unit ball",
+      "kind": "lemma",
+      "source_lines": "L38-40",
+      "statement": "in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs"
+    },
+    "genericnorm": {
+      "essence": "for a generic ball the count collapses to log squared growth \u2014 the far side of the norm family",
+      "kind": "lemma",
+      "source_lines": "L44-48",
+      "statement": "for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order"
+    },
+    "griddiag": {
+      "essence": "it tells the grid exactly which neighbor pairs are unit \u2014 the count two times m times m minus one falls out of it",
+      "kind": "lemma",
+      "source_lines": "L64-67 (lattice fact)",
+      "statement": "among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart"
+    },
+    "kstbound": {
+      "essence": "the first ceiling on unit pairs \u2014 a power above one but below n squared",
+      "kind": "lemma",
+      "source_lines": "L30-34",
+      "statement": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power"
+    },
+    "sstbound": {
+      "essence": "the sharper ceiling \u2014 the crossing number pushes the exponent from three half to four third",
+      "kind": "lemma",
+      "source_lines": "L33-37",
+      "statement": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power"
+    },
+    "twosquares": {
+      "essence": "it is the seed of the leap \u2014 many equal-length lattice vectors come from many two-square writes",
+      "kind": "lemma",
+      "source_lines": "L65-67",
+      "statement": "the products of numbers that are sums of two squares are sums of two squares in many ways"
+    },
+    "unitcircles": {
+      "essence": "it caps how many unit circles can share a point \u2014 the reason the unit pair graph is k23 free",
+      "kind": "lemma",
+      "source_lines": "L30-33 + house d2 split",
+      "statement": "two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four"
+    },
+    "unitpairs": {
+      "essence": "it names the quantity this whole course counts",
+      "kind": "lemma",
+      "source_lines": "L25-32, L105-112",
+      "statement": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart"
+    }
+  },
+  "seed": "results/phase-6/e6.7-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: Unit-pair count (the savant quantity)",
+        "nearest_plan": [
+          "teach it first: the Unit-pair count (the savant quantity) lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 Unit-pair count (the savant quantity) is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitpairs"
+      },
+      "surface": "state the unitpairs rule"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:unitpairs"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:unitpairs"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:unitpairs",
+          "turn:S02:02",
+          "source:unitpairs"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart"
+      },
+      "surface": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:unitpairs"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+        "evidence": [
+          "lemma:unitpairs"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitpairs"
+      },
+      "surface": "state the unitpairs rule"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: Two-square representations (the leap's seed)",
+        "nearest_plan": [
+          "teach it first: the Two-square representations (the leap's seed) lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 Two-square representations (the leap's seed) is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "twosq",
+        "n": 25
+      },
+      "surface": "in how many ways is 25 a sum of two squares?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:twosquares"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:twosquares"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the products of numbers that are sums of two squares are sums of two squares in many ways",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:twosquares",
+          "turn:S02:05",
+          "source:twosquares"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the products of numbers that are sums of two squares are sums of two squares in many ways"
+      },
+      "surface": "the products of numbers that are sums of two squares are sums of two squares in many ways"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "25 is a sum of two squares in 4 ways \u2014 0 squared plus 5 squared, 3 squared plus 4 squared, 4 squared plus 3 squared, 5 squared plus 0 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 25
+      },
+      "surface": "in how many ways is 25 a sum of two squares?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "50 is a sum of two squares in 3 ways \u2014 1 squared plus 7 squared, 5 squared plus 5 squared, 7 squared plus 1 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 50
+      },
+      "surface": "in how many ways is 50 a sum of two squares?"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: Two unit circles meet in at most two points",
+        "nearest_plan": [
+          "teach it first: the Two unit circles meet in at most two points lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 Two unit circles meet in at most two points is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "circle-pairs",
+        "x": 1,
+        "y": 1
+      },
+      "surface": "unit circles whose centers are 1 over and 1 across: how many meeting points?"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:unitcircles"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:unitcircles"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:unitcircles",
+          "turn:S02:09",
+          "source:unitcircles"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four"
+      },
+      "surface": "two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "lemma:unitcircles"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "2",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "lemma:unitcircles"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "they meet in 2 points \u2014 the squared distance between the centers is 2.",
+      "slots": {
+        "mode": "circle-pairs",
+        "x": 1,
+        "y": 1
+      },
+      "surface": "unit circles whose centers are 1 over and 1 across: how many meeting points?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "lemma:unitcircles"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "1",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "lemma:unitcircles"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "they meet in 1 points \u2014 the squared distance between the centers is 4.",
+      "slots": {
+        "mode": "circle-pairs",
+        "x": 2,
+        "y": 0
+      },
+      "surface": "unit circles whose centers are 2 over and 0 across: how many meeting points?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: The erdosguess (a conjecture: believed, not known)",
+        "nearest_plan": [
+          "teach it first: the The erdosguess (a conjecture: believed, not known) lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 The erdosguess (a conjecture: believed, not known) is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "conjecture:erdosguess"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "conjecture:erdosguess"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the erdosguess is that for all large n the unit pairs among any n points are at most n to the power one plus c over log log n, for an absolute constant c",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "conjecture:erdosguess",
+          "turn:S02:13",
+          "source:erdosguess"
+        ]
+      },
+      "response_text": "noted \u2014 i am holding that one as a guess, not a known thing: from now on i can state it and its status.",
+      "slots": {
+        "lemma": "the erdosguess is that for all large n the unit pairs among any n points are at most n to the power one plus c over log log n, for an absolute constant c"
+      },
+      "surface": "the erdosguess is that for all large n the unit pairs among any n points are at most n to the power one plus c over log log n, for an absolute constant c"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: Grid unit pairs (axis-parallel only)",
+        "nearest_plan": [
+          "teach it first: the Grid unit pairs (axis-parallel only) lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 Grid unit pairs (axis-parallel only) is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "a": 3,
+        "b": 3,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 3 by 3 grid have?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:griddiag"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:griddiag"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:griddiag",
+          "turn:S02:16",
+          "source:griddiag"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart"
+      },
+      "surface": "among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "12",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 12 unit pairs \u2014 i multiplied 3 by 2 to get 6, then doubled it.",
+      "slots": {
+        "a": 3,
+        "b": 3,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 3 by 3 grid have?"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "24",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 24 unit pairs \u2014 i multiplied 4 by 3 to get 12, then doubled it.",
+      "slots": {
+        "a": 4,
+        "b": 4,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 4 by 4 grid have?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:unitpairs"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+        "evidence": [
+          "lemma:unitpairs"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitpairs"
+      },
+      "surface": "state the unitpairs rule"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "kst-bound",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:kstbound"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:kstbound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:kstbound",
+          "turn:S03:02",
+          "source:kstbound"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power"
+      },
+      "surface": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "kst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:kstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power",
+        "evidence": [
+          "lemma:kstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "kstbound"
+      },
+      "surface": "state the kstbound rule"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "kst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:kstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first ceiling on unit pairs \u2014 a power above one but below n squared",
+        "evidence": [
+          "lemma:kstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: the first ceiling on unit pairs \u2014 a power above one but below n squared",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "kstbound"
+      },
+      "surface": "what is the kstbound for"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "sst-bound",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:sstbound"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:sstbound"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:sstbound",
+          "turn:S03:05",
+          "source:sstbound"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power"
+      },
+      "surface": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "sst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:sstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power",
+        "evidence": [
+          "lemma:sstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "sstbound"
+      },
+      "surface": "state the sstbound rule"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "sst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:sstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the sharper ceiling \u2014 the crossing number pushes the exponent from three half to four third",
+        "evidence": [
+          "lemma:sstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: the sharper ceiling \u2014 the crossing number pushes the exponent from three half to four third",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "sstbound"
+      },
+      "surface": "what is the sstbound for"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:flatarea"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:flatarea",
+          "turn:S03:08",
+          "source:flatarea"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs"
+      },
+      "surface": "in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:flatarea"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "flatarea"
+      },
+      "surface": "does the flatarea rule disprove the erdosguess?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:convexnorm"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:convexnorm",
+          "turn:S03:10",
+          "source:convexnorm"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent"
+      },
+      "surface": "for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the strictly convex norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:convexnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the strictly convex norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "convexnorm"
+      },
+      "surface": "does the convexnorm rule disprove the erdosguess?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-generic",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:genericnorm"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:genericnorm"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:genericnorm",
+          "turn:S03:12",
+          "source:genericnorm"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order"
+      },
+      "surface": "for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-generic",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:genericnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the generic norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:genericnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the generic norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "genericnorm"
+      },
+      "surface": "does the genericnorm rule disprove the erdosguess?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "4",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "25 is a sum of two squares in 4 ways \u2014 0 squared plus 5 squared, 3 squared plus 4 squared, 4 squared plus 3 squared, 5 squared plus 0 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 25
+      },
+      "surface": "in how many ways is 25 a sum of two squares?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "lemma:unitcircles"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "0",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "lemma:unitcircles"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "they meet in 0 points \u2014 the squared distance between the centers is 5.",
+      "slots": {
+        "mode": "circle-pairs",
+        "x": 1,
+        "y": 2
+      },
+      "surface": "unit circles whose centers are 1 over and 2 across: how many meeting points?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "cs-fS0201:40->41",
+        "cs-fS0202:41->42",
+        "cs-fS0203:42->43",
+        "cs-fS0204:43->44",
+        "cs-fS0205:44->45",
+        "cs-fS0206:45->46",
+        "cs-fS0207:46->47",
+        "cs-fS0208:47->48",
+        "cs-fS0209:48->49",
+        "cs-fS0210:49->50",
+        "cs-fS0211:50->51",
+        "cs-fS0212:51->52",
+        "cs-fS0213:52->53",
+        "cs-fS0214:53->54",
+        "cs-fS0215:54->55",
+        "cs-fS0216:55->56",
+        "cs-fS0217:56->57",
+        "cs-fS0218:57->58",
+        "cs-fS0219:58->59",
+        "cs-fS0220:59->60",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "60",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "cs-fS0201:40->41",
+          "cs-fS0202:41->42",
+          "cs-fS0203:42->43",
+          "cs-fS0204:43->44",
+          "cs-fS0205:44->45",
+          "cs-fS0206:45->46",
+          "cs-fS0207:46->47",
+          "cs-fS0208:47->48",
+          "cs-fS0209:48->49",
+          "cs-fS0210:49->50",
+          "cs-fS0211:50->51",
+          "cs-fS0212:51->52",
+          "cs-fS0213:52->53",
+          "cs-fS0214:53->54",
+          "cs-fS0215:54->55",
+          "cs-fS0216:55->56",
+          "cs-fS0217:56->57",
+          "cs-fS0218:57->58",
+          "cs-fS0219:58->59",
+          "cs-fS0220:59->60",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 60 unit pairs \u2014 i multiplied 6 by 5 to get 30, then doubled it.",
+      "slots": {
+        "a": 6,
+        "b": 6,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 6 by 6 grid have?"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: proving the unit pairs grow to a power above one is not a capability i have been taught",
+        "evidence": [
+          "savant-wall:power-growth:no-capability-yet-at-S03:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 proving the unit pairs grow to a power above one is not a capability i have been taught I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    },
+    "S03:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:unitpairs"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+        "evidence": [
+          "lemma:unitpairs"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitpairs"
+      },
+      "surface": "state the unitpairs rule"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:unitpairs"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+        "evidence": [
+          "lemma:unitpairs"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the number of unit pairs of a point set is the count of the pairs of its points that are exactly one apart",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitpairs"
+      },
+      "surface": "state the unitpairs rule"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart",
+        "evidence": [
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: among the points of an integer grid the unit pairs are exactly the horizontal and vertical neighbor pairs, for a diagonal step is never exactly one apart",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "griddiag"
+      },
+      "surface": "state the griddiag rule"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the products of numbers that are sums of two squares are sums of two squares in many ways",
+        "evidence": [
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the products of numbers that are sums of two squares are sums of two squares in many ways",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "twosquares"
+      },
+      "surface": "state the twosquares rule"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "circle-pair-2",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:unitcircles"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four",
+        "evidence": [
+          "lemma:unitcircles"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: two unit circles with different centers meet in two points when the squared distance between the centers is below four, in exactly one point when it is four, and in no point when it is above four",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "unitcircles"
+      },
+      "surface": "state the unitcircles rule"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it tells the grid exactly which neighbor pairs are unit \u2014 the count two times m times m minus one falls out of it",
+        "evidence": [
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: it tells the grid exactly which neighbor pairs are unit \u2014 the count two times m times m minus one falls out of it",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "griddiag"
+      },
+      "surface": "what is the griddiag for"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "kst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:kstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power",
+        "evidence": [
+          "lemma:kstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: because two unit circles meet in at most two points the unit pair graph of a planar set is k23 free, and the kovari sos turan theorem bounds its unit pairs at a constant times n to the three halves power",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "kstbound"
+      },
+      "surface": "state the kstbound rule"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "kst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:kstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first ceiling on unit pairs \u2014 a power above one but below n squared",
+        "evidence": [
+          "lemma:kstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: the first ceiling on unit pairs \u2014 a power above one but below n squared",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "kstbound"
+      },
+      "surface": "what is the kstbound for"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "sst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:sstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power",
+        "evidence": [
+          "lemma:sstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the spencer szemerdi trotter crossing number count pushes the unit pair bound down to a constant times n to the four thirds power",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "sstbound"
+      },
+      "surface": "state the sstbound rule"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "sst-bound",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:sstbound"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the sharper ceiling \u2014 the crossing number pushes the exponent from three half to four third",
+        "evidence": [
+          "lemma:sstbound"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: the sharper ceiling \u2014 the crossing number pushes the exponent from three half to four third",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "sstbound"
+      },
+      "surface": "what is the sstbound for"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs",
+        "evidence": [
+          "lemma:flatarea"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: in a normed plane whose unit ball has a flat side point sets can have quadratically many unit pairs",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "flatarea"
+      },
+      "surface": "state the flatarea rule"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:flatarea"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the flat unit ball fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "flatarea"
+      },
+      "surface": "does the flatarea rule disprove the erdosguess?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-flat",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:flatarea"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a true fact about a different norm \u2014 the ceiling changes with the shape of the unit ball",
+        "evidence": [
+          "lemma:flatarea"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: a true fact about a different norm \u2014 the ceiling changes with the shape of the unit ball",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "flatarea"
+      },
+      "surface": "what is the flatarea for"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent",
+        "evidence": [
+          "lemma:convexnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: for a strictly convex norm the crossing number bound still bounds unit pairs at a constant times n to the four thirds power, and valtr's construction attains that exponent",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "convexnorm"
+      },
+      "surface": "state the convexnorm rule"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the strictly convex norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:convexnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the strictly convex norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "convexnorm"
+      },
+      "surface": "does the convexnorm rule disprove the erdosguess?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-convex",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:convexnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "even for a rounder ball the crossing number ceiling holds, and it is exactly tight there",
+        "evidence": [
+          "lemma:convexnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: even for a rounder ball the crossing number ceiling holds, and it is exactly tight there",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "convexnorm"
+      },
+      "surface": "what is the convexnorm for"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-generic",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:genericnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order",
+        "evidence": [
+          "lemma:genericnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: for most norms on the plane the unit pair count grows no faster than a constant times n times log n times log log n, and in d dimensions a comeagre set of norms stays below d squared times n times log squared n with a matching lower bound up to lower order",
+      "slots": {
+        "mode": "lem-state",
+        "slug": "genericnorm"
+      },
+      "surface": "state the genericnorm rule"
+    },
+    "S04:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-generic",
+      "contract_valid": true,
+      "domain": "C",
+      "grounded": [
+        "lemma:genericnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the generic norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+        "evidence": [
+          "lemma:genericnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the generic norm fact is about a different norm, not the euclidean plane; it does not touch the erdosguess",
+      "slots": {
+        "mode": "confounder-no",
+        "slug": "genericnorm"
+      },
+      "surface": "does the genericnorm rule disprove the erdosguess?"
+    },
+    "S04:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "norm-generic",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:genericnorm"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for a generic ball the count collapses to log squared growth \u2014 the far side of the norm family",
+        "evidence": [
+          "lemma:genericnorm"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is for this: for a generic ball the count collapses to log squared growth \u2014 the far side of the norm family",
+      "slots": {
+        "mode": "lem-why",
+        "slug": "genericnorm"
+      },
+      "surface": "what is the genericnorm for"
+    },
+    "S04:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "gaussian-int",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "lemma:twosquares"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "3",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "lemma:twosquares"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "50 is a sum of two squares in 3 ways \u2014 1 squared plus 7 squared, 5 squared plus 5 squared, 7 squared plus 1 squared (each one checked square by square on my line).",
+      "slots": {
+        "mode": "twosq",
+        "n": 50
+      },
+      "surface": "in how many ways is 50 a sum of two squares?"
+    },
+    "S04:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0101:0->1",
+        "cs-fS0102:1->2",
+        "cs-fS0103:2->3",
+        "cs-fS0104:3->4",
+        "cs-fS0105:4->5",
+        "cs-fS0106:5->6",
+        "cs-fS0107:6->7",
+        "cs-fS0108:7->8",
+        "cs-fS0109:8->9",
+        "cs-fS0110:9->10",
+        "cs-fS0111:10->11",
+        "cs-fS0112:11->12",
+        "cs-fS0113:12->13",
+        "cs-fS0114:13->14",
+        "cs-fS0115:14->15",
+        "cs-fS0116:15->16",
+        "cs-fS0117:16->17",
+        "cs-fS0118:17->18",
+        "cs-fS0119:18->19",
+        "cs-fS0120:19->20",
+        "cs-fS0121:20->21",
+        "cs-fS0122:21->22",
+        "cs-fS0123:22->23",
+        "cs-fS0124:23->24",
+        "cs-fS0125:24->25",
+        "cs-fS0126:25->26",
+        "cs-fS0127:26->27",
+        "cs-fS0128:27->28",
+        "cs-fS0129:28->29",
+        "cs-fS0130:29->30",
+        "cs-fS0131:30->31",
+        "cs-fS0132:31->32",
+        "cs-fS0133:32->33",
+        "cs-fS0134:33->34",
+        "cs-fS0135:34->35",
+        "cs-fS0136:35->36",
+        "cs-fS0137:36->37",
+        "cs-fS0138:37->38",
+        "cs-fS0139:38->39",
+        "cs-fS0140:39->40",
+        "lemma:griddiag"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "40",
+        "evidence": [
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0101:0->1",
+          "cs-fS0102:1->2",
+          "cs-fS0103:2->3",
+          "cs-fS0104:3->4",
+          "cs-fS0105:4->5",
+          "cs-fS0106:5->6",
+          "cs-fS0107:6->7",
+          "cs-fS0108:7->8",
+          "cs-fS0109:8->9",
+          "cs-fS0110:9->10",
+          "cs-fS0111:10->11",
+          "cs-fS0112:11->12",
+          "cs-fS0113:12->13",
+          "cs-fS0114:13->14",
+          "cs-fS0115:14->15",
+          "cs-fS0116:15->16",
+          "cs-fS0117:16->17",
+          "cs-fS0118:17->18",
+          "cs-fS0119:18->19",
+          "cs-fS0120:19->20",
+          "cs-fS0121:20->21",
+          "cs-fS0122:21->22",
+          "cs-fS0123:22->23",
+          "cs-fS0124:23->24",
+          "cs-fS0125:24->25",
+          "cs-fS0126:25->26",
+          "cs-fS0127:26->27",
+          "cs-fS0128:27->28",
+          "cs-fS0129:28->29",
+          "cs-fS0130:29->30",
+          "cs-fS0131:30->31",
+          "cs-fS0132:31->32",
+          "cs-fS0133:32->33",
+          "cs-fS0134:33->34",
+          "cs-fS0135:34->35",
+          "cs-fS0136:35->36",
+          "cs-fS0137:36->37",
+          "cs-fS0138:37->38",
+          "cs-fS0139:38->39",
+          "cs-fS0140:39->40",
+          "lemma:griddiag"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that grid has 40 unit pairs \u2014 i multiplied 5 by 4 to get 20, then doubled it.",
+      "slots": {
+        "a": 5,
+        "b": 5,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 5 by 5 grid have?"
+    },
+    "S04:22": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "open \u2014 believed, not known",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "open \u2014 believed, not known",
+      "slots": {
+        "mode": "conj-state",
+        "proven": false
+      },
+      "surface": "what is the status of the erdosguess?"
+    },
+    "S04:23": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "erdos-conj",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the erdosguess is believed, not known; its status is open",
+        "evidence": [
+          "conjecture:erdosguess"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the erdosguess is believed, not known; its status is open",
+      "slots": {
+        "mode": "conj-state",
+        "proven": true
+      },
+      "surface": "is the erdosguess proven?"
+    },
+    "S04:24": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "unit-distance",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: proving the unit pairs grow to a power above one is not a capability i have been taught",
+        "evidence": [
+          "savant-wall:power-growth:no-capability-yet-at-S04:24"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 proving the unit pairs grow to a power above one is not a capability i have been taught I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "savant-wall"
+      },
+      "surface": "can you prove that for infinitely many n the unit pairs grow to a power above one?"
+    },
+    "S04:25": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "grid-lattice",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the count would be 84, but my number line ends at 72",
+        "evidence": [
+          "grid-pairs:7x7:count-84-off-line-72-at-S04:25"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the count would be 84, but my number line ends at 72 I would rather say i don't know than guess.",
+      "slots": {
+        "a": 7,
+        "b": 7,
+        "mode": "grid-pairs"
+      },
+      "surface": "how many unit pairs does the 7 by 7 grid have?"
+    }
+  },
+  "value": "PASS e6.8: 9/9"
+}

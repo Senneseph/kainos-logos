@@ -1,0 +1,14 @@
+k= 3.0: D mean=+206.393523  max|D-median|=80.100113  std=3.417e+01  min=+130.4114 max=+258.1958
+k= 5.0: D mean=+206.489558  max|D-median|=80.103770  std=3.418e+01  min=+130.5039 max=+258.2947
+k= 7.0: D mean=+206.524336  max|D-median|=80.104444  std=3.417e+01  min=+130.5456 max=+258.3066
+k=10.0: D mean=+206.532038  max|D-median|=80.073567  std=3.416e+01  min=+130.5765 max=+258.3066
+
+k= 3.0: D mean=+206.393523  max|D-median|=80.100113  std=3.417e+01  min=+130.4114 max=+258.1958
+k= 5.0: D mean=+206.489558  max|D-median|=80.103770  std=3.418e+01  min=+130.5039 max=+258.2947
+k= 7.0: D mean=+206.524336  max|D-median|=80.104444  std=3.417e+01  min=+130.5456 max=+258.3066
+k=10.0: D mean=+206.532038  max|D-median|=80.073567  std=3.416e+01  min=+130.5765 max=+258.3066
+k 3.0->5.0: level shift=+0.096036   shape resid(k)=0.003467
+k 3.0->7.0: level shift=+0.130814   shape resid(k)=0.020433
+k 3.0->10.0: level shift=+0.138515   shape resid(k)=0.028134
+
+PASS: (i) D smooth (no +-1 step anomalies beyond twin locations); (ii) level-constant; (iii) level shift + shape resid decay in k.

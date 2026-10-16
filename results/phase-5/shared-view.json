@@ -1,0 +1,259 @@
+{
+  "agents": {
+    "a": {
+      "capabilities": [
+        "commit",
+        "pass",
+        "reveal_private",
+        "send_message"
+      ],
+      "codex_assertions": 2,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 1,
+          "merged": 0,
+          "round": 4
+        }
+      ],
+      "policy_note": "scripted",
+      "rejections": []
+    },
+    "b": {
+      "capabilities": [
+        "commit",
+        "pass",
+        "reveal_private",
+        "send_message"
+      ],
+      "codex_assertions": 2,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 1,
+          "merged": 0,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 4
+        }
+      ],
+      "policy_note": "scripted",
+      "rejections": []
+    }
+  },
+  "audit": {
+    "a": {
+      "agent": "a",
+      "correctness": 1.0,
+      "n_about_other": 1,
+      "n_correct": 1,
+      "n_disputes_preserved": 0,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    },
+    "b": {
+      "agent": "b",
+      "correctness": 1.0,
+      "n_about_other": 1,
+      "n_correct": 1,
+      "n_disputes_preserved": 0,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    }
+  },
+  "channel": {
+    "bad_receivers": [],
+    "budget_per_round": 2,
+    "corruption_probability": 0.0,
+    "events": [],
+    "sent_totals": {
+      "a": 2,
+      "b": 2
+    }
+  },
+  "commits": {
+    "a": {
+      "their_cell": "convoy_route_b",
+      "their_fact": "pb:b_cell"
+    },
+    "b": {
+      "their_cell": "convoy_route_a",
+      "their_fact": "pa:a_cell"
+    }
+  },
+  "determinism_hash": "sha256:9bb9683a48a57f46eda25a53f1454c01e14f254acb99eeb6764cc44b137d9297",
+  "game": "shared-view",
+  "negative_control": {
+    "checked_turns": 8,
+    "view_leaks": 0
+  },
+  "players": [
+    "a",
+    "b"
+  ],
+  "rounds": 4,
+  "scores": {
+    "a_correct": true,
+    "b_correct": true,
+    "score": 1.0
+  },
+  "seed": 1,
+  "transcript": [
+    {
+      "action": {
+        "kind": "pass"
+      },
+      "actor": "a",
+      "round": 1
+    },
+    {
+      "action": {
+        "kind": "pass"
+      },
+      "actor": "b",
+      "round": 1
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:say:a:d7059c6d73359c27",
+            "object": "value=convoy_route_a",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:pa:a_cell",
+            "timestamp": "2026-01-01T00:20:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:say:b:9b834d9fa99dec2d",
+            "object": "value=convoy_route_b",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:pb:b_cell",
+            "timestamp": "2026-01-01T00:20:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:say:a:d7059c6d73359c27",
+            "object": "value=convoy_route_a",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "fact:pa:a_cell",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:say:b:9b834d9fa99dec2d",
+            "object": "value=convoy_route_b",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "fact:pb:b_cell",
+            "timestamp": "2026-01-01T00:30:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "their_cell": "convoy_route_b",
+          "their_fact": "pb:b_cell"
+        }
+      },
+      "actor": "a",
+      "round": 4
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "their_cell": "convoy_route_a",
+          "their_fact": "pa:a_cell"
+        }
+      },
+      "actor": "b",
+      "round": 4
+    }
+  ]
+}

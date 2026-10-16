@@ -1,0 +1,14 @@
+== RS engine validation (host): |Z_rs(t) - Z_EM(t)|, Z_EM mpmath-verified ==
+  t in [50, 300] step 5:  max |diff| = 3.210e-03  at t = 100.0
+  t =   1000.0 : |Z_rs - Z_EM| = 1.234e-04
+  t =   2500.0 : |Z_rs - Z_EM| = 1.166e-04
+  t =   5000.0 : |Z_rs - Z_EM| = 6.844e-05
+  t =   7500.0 : |Z_rs - Z_EM| = 1.186e-05
+  t =  10000.0 : |Z_rs - Z_EM| = 5.894e-06
+
+  trend: if max error is ~ u^{-5} = (t/2pi)^{-5/4}, extrapolation to t = 1e5:
+    err(1e5) ~= err(t) * (t/1e5)^{5/4}
+
+    from t = 2500:  extrapolated err(1e5) ~ 1.16e-06
+    from t = 10000:  extrapolated err(1e5) ~ 3.31e-07
+  (the mpmath spot-check at t = 4.537e4 and 1e5 confirms the tail of this trend)

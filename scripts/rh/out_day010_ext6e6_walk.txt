@@ -1,0 +1,93 @@
+P-0.8 ECHO: W0=300000.0 W1=6000000.0 width=5700000.0  ANCHOR=zeros_T300000_ext_full.txt
+  resume anchor: N(W0)=466655 from zeros_T300000_ext_full.txt
+  DT=5.0e-04 (n=11400000000)  DT2=2.5e-04 (n=22800000000)  CHUNK=32768  MAXN=978
+  t_end check: W0+DT*n = 6000000.000000  (must equal W1=6000000.0)
+  twin floor 0.002954 (dt/floor = 0.169)  anchor N(W0)=138065
+  expected wall ~ 6.8 h at 1.40e+06 samples/s (measured)
+resuming: base count N0=466655 (certified list up to W0)
+engine gate GPU-vs-host max |diff| = 1.022e-07 (tol 1e-6)
+[dt  seg00 seg (300000, 500000)] flips=351756  N_now=818411  elapsed 276 s  rate 1.45e+06/s
+[dt2 seg00 seg (300000, 500000)] flips=351756  N_now=818411  elapsed 552 s  rate 1.45e+06/s
+  [seg00] N(500000) dt=818411 dt2=818411 agree=True  min_gap(dt2)=0.009000
+[dt  seg01 seg (500000, 700000)] flips=364851  N_now=831506  elapsed 271 s  rate 1.47e+06/s
+[dt2 seg01 seg (500000, 700000)] flips=364851  N_now=831506  elapsed 523 s  rate 1.53e+06/s
+  [seg01] N(700000) dt=831506 dt2=831506 agree=True  min_gap(dt2)=0.003000
+[dt  seg02 seg (700000, 900000)] flips=374073  N_now=840728  elapsed 265 s  rate 1.51e+06/s
+[dt2 seg02 seg (700000, 900000)] flips=374073  N_now=840728  elapsed 530 s  rate 1.51e+06/s
+  [seg02] N(900000) dt=840728 dt2=840728 agree=True  min_gap(dt2)=0.006250
+[dt  seg03 seg (900000, 1100000)] flips=381207  N_now=847862  elapsed 264 s  rate 1.52e+06/s
+[dt2 seg03 seg (900000, 1100000)] flips=381207  N_now=847862  elapsed 526 s  rate 1.52e+06/s
+  [seg03] N(1100000) dt=847862 dt2=847862 agree=True  min_gap(dt2)=0.006750
+[dt  seg04 seg (1100000, 1300000)] flips=387026  N_now=853681  elapsed 264 s  rate 1.51e+06/s
+[dt2 seg04 seg (1100000, 1300000)] flips=387026  N_now=853681  elapsed 522 s  rate 1.53e+06/s
+  [seg04] N(1300000) dt=853681 dt2=853681 agree=True  min_gap(dt2)=0.009750
+[dt  seg05 seg (1300000, 1500000)] flips=391944  N_now=858599  elapsed 264 s  rate 1.51e+06/s
+[dt2 seg05 seg (1300000, 1500000)] flips=391944  N_now=858599  elapsed 532 s  rate 1.50e+06/s
+  [seg05] N(1500000) dt=858599 dt2=858599 agree=True  min_gap(dt2)=0.011250
+[dt  seg06 seg (1500000, 1700000)] flips=396199  N_now=862854  elapsed 268 s  rate 1.49e+06/s
+[dt2 seg06 seg (1500000, 1700000)] flips=396199  N_now=862854  elapsed 525 s  rate 1.52e+06/s
+  [seg06] N(1700000) dt=862854 dt2=862854 agree=True  min_gap(dt2)=0.007500
+[dt  seg07 seg (1700000, 1900000)] flips=399953  N_now=866608  elapsed 265 s  rate 1.51e+06/s
+[dt2 seg07 seg (1700000, 1900000)] flips=399953  N_now=866608  elapsed 521 s  rate 1.54e+06/s
+  [seg07] N(1900000) dt=866608 dt2=866608 agree=True  min_gap(dt2)=0.004250
+[dt  seg08 seg (1900000, 2100000)] flips=403310  N_now=869965  elapsed 258 s  rate 1.55e+06/s
+[dt2 seg08 seg (1900000, 2100000)] flips=403310  N_now=869965  elapsed 521 s  rate 1.53e+06/s
+  [seg08] N(2100000) dt=869965 dt2=869965 agree=True  min_gap(dt2)=0.003250
+[dt  seg09 seg (2100000, 2300000)] flips=406348  N_now=873003  elapsed 269 s  rate 1.49e+06/s
+[dt2 seg09 seg (2100000, 2300000)] flips=406348  N_now=873003  elapsed 527 s  rate 1.52e+06/s
+  [seg09] N(2300000) dt=873003 dt2=873003 agree=True  min_gap(dt2)=0.004250
+[dt  seg10 seg (2300000, 2500000)] flips=409117  N_now=875772  elapsed 268 s  rate 1.49e+06/s
+[dt2 seg10 seg (2300000, 2500000)] flips=409117  N_now=875772  elapsed 564 s  rate 1.42e+06/s
+  [seg10] N(2500000) dt=875772 dt2=875772 agree=True  min_gap(dt2)=0.005500
+[dt  seg11 seg (2500000, 2700000)] flips=411667  N_now=878322  elapsed 267 s  rate 1.50e+06/s
+[dt2 seg11 seg (2500000, 2700000)] flips=411667  N_now=878322  elapsed 528 s  rate 1.51e+06/s
+  [seg11] N(2700000) dt=878322 dt2=878322 agree=True  min_gap(dt2)=0.003000
+[dt  seg12 seg (2700000, 2900000)] flips=414027  N_now=880682  elapsed 268 s  rate 1.49e+06/s
+[dt2 seg12 seg (2700000, 2900000)] flips=414027  N_now=880682  elapsed 531 s  rate 1.51e+06/s
+  [seg12] N(2900000) dt=880682 dt2=880682 agree=True  min_gap(dt2)=0.008500
+[dt  seg13 seg (2900000, 3100000)] flips=416224  N_now=882879  elapsed 267 s  rate 1.50e+06/s
+[dt2 seg13 seg (2900000, 3100000)] flips=416224  N_now=882879  elapsed 531 s  rate 1.51e+06/s
+  [seg13] N(3100000) dt=882879 dt2=882879 agree=True  min_gap(dt2)=0.007250
+[dt  seg14 seg (3100000, 3300000)] flips=418279  N_now=884934  elapsed 266 s  rate 1.50e+06/s
+[dt2 seg14 seg (3100000, 3300000)] flips=418279  N_now=884934  elapsed 529 s  rate 1.51e+06/s
+  [seg14] N(3300000) dt=884934 dt2=884934 agree=True  min_gap(dt2)=0.007000
+[dt  seg15 seg (3300000, 3500000)] flips=420209  N_now=886864  elapsed 267 s  rate 1.50e+06/s
+[dt2 seg15 seg (3300000, 3500000)] flips=420209  N_now=886864  elapsed 527 s  rate 1.52e+06/s
+  [seg15] N(3500000) dt=886864 dt2=886864 agree=True  min_gap(dt2)=0.009000
+[dt  seg16 seg (3500000, 3700000)] flips=422029  N_now=888684  elapsed 265 s  rate 1.51e+06/s
+[dt2 seg16 seg (3500000, 3700000)] flips=422029  N_now=888684  elapsed 530 s  rate 1.51e+06/s
+  [seg16] N(3700000) dt=888684 dt2=888684 agree=True  min_gap(dt2)=0.005000
+[dt  seg17 seg (3700000, 3900000)] flips=423751  N_now=890406  elapsed 267 s  rate 1.50e+06/s
+[dt2 seg17 seg (3700000, 3900000)] flips=423751  N_now=890406  elapsed 529 s  rate 1.51e+06/s
+  [seg17] N(3900000) dt=890406 dt2=890406 agree=True  min_gap(dt2)=0.003500
+[dt  seg18 seg (3900000, 4100000)] flips=425383  N_now=892038  elapsed 264 s  rate 1.51e+06/s
+[dt2 seg18 seg (3900000, 4100000)] flips=425383  N_now=892038  elapsed 533 s  rate 1.50e+06/s
+  [seg18] N(4100000) dt=892038 dt2=892038 agree=True  min_gap(dt2)=0.006750
+[dt  seg19 seg (4100000, 4300000)] flips=426938  N_now=893593  elapsed 265 s  rate 1.51e+06/s
+[dt2 seg19 seg (4100000, 4300000)] flips=426938  N_now=893593  elapsed 528 s  rate 1.52e+06/s
+  [seg19] N(4300000) dt=893593 dt2=893593 agree=True  min_gap(dt2)=0.008250
+[dt  seg20 seg (4300000, 4500000)] flips=428417  N_now=895072  elapsed 265 s  rate 1.51e+06/s
+[dt2 seg20 seg (4300000, 4500000)] flips=428417  N_now=895072  elapsed 750 s  rate 1.07e+06/s
+  [seg20] N(4500000) dt=895072 dt2=895072 agree=True  min_gap(dt2)=0.002250
+[dt  seg21 seg (4500000, 4700000)] flips=429834  N_now=896489  elapsed 462 s  rate 8.66e+05/s
+[dt2 seg21 seg (4500000, 4700000)] flips=429834  N_now=896489  elapsed 928 s  rate 8.62e+05/s
+  [seg21] N(4700000) dt=896489 dt2=896489 agree=True  min_gap(dt2)=0.005250
+[dt  seg22 seg (4700000, 4900000)] flips=431188  N_now=897843  elapsed 471 s  rate 8.49e+05/s
+[dt2 seg22 seg (4700000, 4900000)] flips=431188  N_now=897843  elapsed 946 s  rate 8.45e+05/s
+  [seg22] N(4900000) dt=897843 dt2=897843 agree=True  min_gap(dt2)=0.003250
+[dt  seg23 seg (4900000, 5100000)] flips=432488  N_now=899143  elapsed 477 s  rate 8.38e+05/s
+[dt2 seg23 seg (4900000, 5100000)] flips=432488  N_now=899143  elapsed 940 s  rate 8.51e+05/s
+  [seg23] N(5100000) dt=899143 dt2=899143 agree=True  min_gap(dt2)=0.003000
+[dt  seg24 seg (5100000, 5300000)] flips=433736  N_now=900391  elapsed 467 s  rate 8.56e+05/s
+[dt2 seg24 seg (5100000, 5300000)] flips=433736  N_now=900391  elapsed 1257 s  rate 6.37e+05/s
+  [seg24] N(5300000) dt=900391 dt2=900391 agree=True  min_gap(dt2)=0.005000
+[dt  seg25 seg (5300000, 5500000)] flips=434939  N_now=901594  elapsed 704 s  rate 5.68e+05/s
+[dt2 seg25 seg (5300000, 5500000)] flips=434939  N_now=901594  elapsed 1089 s  rate 7.35e+05/s
+  [seg25] N(5500000) dt=901594 dt2=901594 agree=True  min_gap(dt2)=0.006250
+[dt  seg26 seg (5500000, 5700000)] flips=436095  N_now=902750  elapsed 445 s  rate 8.98e+05/s
+[dt2 seg26 seg (5500000, 5700000)] flips=436095  N_now=902750  elapsed 857 s  rate 9.34e+05/s
+  [seg26] N(5700000) dt=902750 dt2=902750 agree=True  min_gap(dt2)=0.008000
+[dt  seg27 seg (5700000, 5900000)] flips=437212  N_now=903867  elapsed 427 s  rate 9.37e+05/s
+[dt2 seg27 seg (5700000, 5900000)] flips=437212  N_now=903867  elapsed 857 s  rate 9.33e+05/s
+  [seg27] N(5900000) dt=903867 dt2=903867 agree=True  min_gap(dt2)=0.006250
+DONE: extension 11508200 zeros on (300000, 6000000], min gap 0.002250; files zeros_T6000000_ext_* written.

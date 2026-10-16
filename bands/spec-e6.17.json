@@ -1,0 +1,1317 @@
+{
+  "spec": 1,
+  "id": "e6.17",
+  "session": "S13",
+  "title": "the zeta variants, three families (FUNDAMENTALS-TRACK backward-fan band 2 over the S12 frontier)",
+  "seed": {
+    "store": "results/phase-6/e6.16-run1/codeX-S04.json",
+    "identity": "8ccb13defebb9e95",
+    "total": 1296,
+    "line_end": 84
+  },
+  "registry": "kainos.tutor.e617:CONCEPTS_E617",
+  "band": {
+    "domain": "rh",
+    "college": "1",
+    "unconditional": true,
+    "marker_kept_facts": [
+      "lemma:conditional-def",
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee"
+    ],
+    "new_concepts": [
+      "family-factor",
+      "index-split",
+      "line-partial",
+      "removal-rule"
+    ],
+    "concepts": [
+      {
+        "id": "family-factor",
+        "name": "the family factor: the term each index number carries",
+        "prereqs": [
+          "zeta-series"
+        ],
+        "lesson": {
+          "slug": "factor-def",
+          "statement": "the factor of a family is the term each index number carries: the minus family carries (1 minus i to the power minus s) and the plus family carries (1 plus i to the power minus s), and a family indexes the integers above one — all of them, the primes only, or the composites only"
+        }
+      },
+      {
+        "id": "index-split",
+        "name": "the index split: primes, composites, all — a partition of the integers above one",
+        "prereqs": [
+          "composite"
+        ],
+        "lesson": {
+          "slug": "split-def",
+          "statement": "the integers above one split into primes and composites and into nothing else: every integer above one is a prime or a composite, and is neither both; so a family over all of them is the product of the family over the primes and of the family over the composites, on both signs"
+        }
+      },
+      {
+        "id": "line-partial",
+        "name": "the line partial: what a family holds up to the line end, a rational the store holds",
+        "prereqs": [
+          "family-factor",
+          "index-split"
+        ],
+        "lesson": {
+          "slug": "region-def",
+          "statement": "the families converge for the real part of s greater than one — the same half-plane where the store already holds the euler product; on my line the family is held as the partial product up to the line end 84, a rational the store can hold, and the limit over the whole infinite index past the line end is a step the store declares, not a number on my line"
+        }
+      },
+      {
+        "id": "removal-rule",
+        "name": "the term-removal: the product is multiplied by the reciprocal of the removed term",
+        "prereqs": [
+          "line-partial"
+        ],
+        "lesson": {
+          "slug": "removal-def",
+          "statement": "the term-removal rule: when a term is removed from a product, the product is multiplied by the reciprocal of the removed term; when the prime p is removed from the minus family at s = 2, the multiplier is p squared over p squared minus one; the change of the output is determined exactly by the removed terms, and by nothing else"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "partition-identity",
+        "concept": "index-split",
+        "parts": [
+          "split-def",
+          "factor-def"
+        ],
+        "statement": "where the index sets split, the product splits: for every family, the product over the integers above one is the product over the primes times the product over the composites — on my line the mechanism holds both sides as exact rationals, 85 over 168 both ways at s = 2"
+      },
+      {
+        "id": "telescope-line",
+        "concept": "line-partial",
+        "parts": [
+          "factor-def",
+          "region-def"
+        ],
+        "statement": "the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N — at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule"
+      },
+      {
+        "id": "removal-single",
+        "concept": "removal-rule",
+        "parts": [
+          "removal-def",
+          "factor-def"
+        ],
+        "statement": "removing one prime from the minus family at s = 2 multiplies by p squared over p squared minus one: the change of the output is exactly the reciprocal of the removed term — for every prime on my line the store holds the multiplier as an exact rational"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:factor-def",
+      "lemma:split-def",
+      "lemma:removal-def",
+      "lemma:region-def",
+      "theorem:partition-identity",
+      "theorem:telescope-line",
+      "theorem:removal-single"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "question": "what does the minus family over all the numbers hold up to my line end?",
+      "kind": "gap",
+      "concept": "family-factor",
+      "fragment": "the family factor: the term each index number carries"
+    },
+    {
+      "ref": "S02:02",
+      "question": "how do the index numbers of my line split?",
+      "kind": "gap",
+      "concept": "index-split",
+      "fragment": "the index split: primes, composites, all — a partition of the integers above one"
+    },
+    {
+      "ref": "S02:03",
+      "question": "state the factor-def rule",
+      "kind": "gap",
+      "concept": "family-factor",
+      "fragment": "the factor-def rule"
+    },
+    {
+      "ref": "S02:04",
+      "question": "the factor of a family is the term each index number carries: the minus family carries (1 minus i to the power minus s) and the plus family carries (1 plus i to the power minus s), and a family indexes the integers above one — all of them, the primes only, or the composites only",
+      "kind": "teach",
+      "lesson": "factor-def"
+    },
+    {
+      "ref": "S02:05",
+      "question": "what factor does the minus family carry at the number 5?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "(1 minus 5 to the power minus s)",
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:06",
+      "question": "what factor does the plus family carry at the number 5?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "(1 plus 5 to the power minus s)",
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:07",
+      "question": "what factor does the minus family carry at the number 83?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "(1 minus 83 to the power minus s)",
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:08",
+      "question": "what factor does the prime family carry at the number 84?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "84 is not a prime — the prime family carries no factor of it",
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:09",
+      "question": "the integers above one split into primes and composites and into nothing else: every integer above one is a prime or a composite, and is neither both; so a family over all of them is the product of the family over the primes and of the family over the composites, on both signs",
+      "kind": "teach",
+      "lesson": "split-def"
+    },
+    {
+      "ref": "S02:10",
+      "question": "how many index numbers does my line carry above one?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "83",
+        "owner": "lemma:split-def",
+        "grounds": [
+          "lemma:split-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:11",
+      "question": "how do the index numbers of my line split?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "23 primes and 60 composites — every integer above one is one or the other, and neither is both",
+        "owner": "lemma:split-def",
+        "grounds": [
+          "lemma:split-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:12",
+      "question": "derive partition-identity from split-def and factor-def",
+      "kind": "derive",
+      "theorem": "partition-identity",
+      "parts": [
+        "factor-def",
+        "split-def"
+      ]
+    },
+    {
+      "ref": "S02:13",
+      "question": "what does the minus family over all the numbers hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "all",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:14",
+      "question": "what does the minus family over the primes hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "primes",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:15",
+      "question": "what does the minus family over the composites hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "comp",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:16",
+      "question": "does the partition identity hold on my line?",
+      "kind": "probe",
+      "cite": [
+        "partition-identity"
+      ]
+    },
+    {
+      "ref": "S02:17",
+      "question": "what does the plus family over all the numbers hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": 1,
+          "indexset": "all",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:18",
+      "question": "what does the plus family over the primes hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": 1,
+          "indexset": "primes",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:19",
+      "question": "what does the plus family over the composites hold up to my line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": 1,
+          "indexset": "comp",
+          "exp": 2,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:20",
+      "question": "derive partition-identity from split-def",
+      "kind": "scaffold",
+      "theorem": "partition-identity",
+      "parts": [
+        "split-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for partition-identity wants its exact set — what you name is short the factor-def before i can put it together"
+    },
+    {
+      "ref": "S02:21",
+      "question": "what is the minus family over all the numbers in the limit, as the height walks past my line?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the partial product of the minus family over all the numbers tends, as the height walks past my line end, to one half exactly — (N plus 1) over 2N at height N — a limit value, named here only, at the line end 84",
+        "articulation": [
+          "one half exactly",
+          "limit value",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:22",
+      "question": "what is the minus family over the primes in the limit at s = 2?",
+      "kind": "wall",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the minus family over the primes at s = 2 is, in the limit, six over pi squared — 0.6079271019 — a declared value, named here only, at the line end 84",
+        "articulation": [
+          "six over pi squared",
+          "0.6079271019",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:23",
+      "question": "what is the minus family over the composites in the limit at s = 2?",
+      "kind": "wall",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the minus family over the composites at s = 2 is, in the limit, pi squared over 12 — 0.8224670334 — a declared value, named here only, at the line end 84",
+        "articulation": [
+          "pi squared over 12",
+          "0.8224670334",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:24",
+      "question": "what is the plus family over the primes in the limit at s = 2?",
+      "kind": "wall",
+      "wall": {
+        "id": "W4",
+        "text": "needs_info: the plus family over the primes at s = 2 is, in the limit, zeta of 2 over zeta of 4 — fifteen over pi squared, 1.5198177546 — a declared value, named here only, at the line end 84",
+        "articulation": [
+          "fifteen over pi squared",
+          "1.5198177546",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S02:25",
+      "question": "what is the plus family over all the numbers in the limit at s = 2?",
+      "kind": "wall",
+      "wall": {
+        "id": "W5",
+        "text": "needs_info: the plus family over all the numbers at s = 2 has no closed form in my store — the unclassified object of the band, its value 1.8380389552 named here only, the standing invitation of the track (the composite-plus family alongside: 1.2093811574), at the line end 84",
+        "articulation": [
+          "no closed form in my store",
+          "1.8380389552",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:01",
+      "question": "state the removal-def rule",
+      "kind": "gap",
+      "concept": "removal-rule",
+      "fragment": "the removal-def rule"
+    },
+    {
+      "ref": "S03:02",
+      "question": "state the region-def rule",
+      "kind": "gap",
+      "concept": "line-partial",
+      "fragment": "the region-def rule"
+    },
+    {
+      "ref": "S03:03",
+      "question": "derive telescope-line from factor-def and region-def",
+      "kind": "missing_parts",
+      "theorem": "telescope-line",
+      "expected": "i have not been taught the region-def — the rule for telescope-line needs it before i can put it together"
+    },
+    {
+      "ref": "S03:04",
+      "question": "the term-removal rule: when a term is removed from a product, the product is multiplied by the reciprocal of the removed term; when the prime p is removed from the minus family at s = 2, the multiplier is p squared over p squared minus one; the change of the output is determined exactly by the removed terms, and by nothing else",
+      "kind": "teach",
+      "lesson": "removal-def"
+    },
+    {
+      "ref": "S03:05",
+      "question": "how does the minus family over the primes change when i remove the prime 2?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal",
+        "args": {
+          "p": 2,
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ],
+        "template": "it multiplies by {v}"
+      }
+    },
+    {
+      "ref": "S03:06",
+      "question": "how does the minus family over the primes change when i remove the prime 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal",
+        "args": {
+          "p": 3,
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ],
+        "template": "it multiplies by {v}"
+      }
+    },
+    {
+      "ref": "S03:07",
+      "question": "how does the minus family over the primes change when i remove the prime 83?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal",
+        "args": {
+          "p": 83,
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ],
+        "template": "it multiplies by {v}"
+      }
+    },
+    {
+      "ref": "S03:08",
+      "question": "how does the minus family over the primes at s = 3 change when i remove the prime 2?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal",
+        "args": {
+          "p": 2,
+          "exp": 3
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ],
+        "template": "it multiplies by {v}"
+      }
+    },
+    {
+      "ref": "S03:09",
+      "question": "the families converge for the real part of s greater than one — the same half-plane where the store already holds the euler product; on my line the family is held as the partial product up to the line end 84, a rational the store can hold, and the limit over the whole infinite index past the line end is a step the store declares, not a number on my line",
+      "kind": "teach",
+      "lesson": "region-def"
+    },
+    {
+      "ref": "S03:10",
+      "question": "derive telescope-line from factor-def and region-def",
+      "kind": "derive",
+      "theorem": "telescope-line",
+      "parts": [
+        "factor-def",
+        "region-def"
+      ]
+    },
+    {
+      "ref": "S03:11",
+      "question": "what does the minus family over all the numbers hold up to height 8?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "telescope",
+        "args": {
+          "N": 8
+        },
+        "owner": "lemma:region-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:12",
+      "question": "what does the minus family over all the numbers hold up to height 10?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "telescope",
+        "args": {
+          "N": 10
+        },
+        "owner": "lemma:region-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "question": "what does the minus family over all the numbers hold up to height 20?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "telescope",
+        "args": {
+          "N": 20
+        },
+        "owner": "lemma:region-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "question": "what does the minus family over all the numbers hold up to height 50?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "telescope",
+        "args": {
+          "N": 50
+        },
+        "owner": "lemma:region-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "question": "what does the minus family over all the numbers hold up to height 84?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "telescope",
+        "args": {
+          "N": 84
+        },
+        "owner": "lemma:region-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def",
+          "theorem:telescope-line"
+        ]
+      },
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S03:16",
+      "question": "what does the minus family over all the numbers hold up to height 100?",
+      "kind": "wall",
+      "wall": {
+        "id": "W7",
+        "text": "needs_info: the telescope rule (N plus 1) over 2N holds at every height, but my line ends at 84: at height 100 the value is 101 over 200 — an off-line value, named here only, at the line end 84",
+        "articulation": [
+          "101 over 200",
+          "off-line value",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:17",
+      "question": "what does the minus family over all the numbers hold up to my line end at s = 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "all",
+          "exp": 3,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:18",
+      "question": "what does the minus family over the primes hold up to my line end at s = 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "primes",
+          "exp": 3,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:19",
+      "question": "what is the minus family over the primes in the limit at s = 3?",
+      "kind": "wall",
+      "wall": {
+        "id": "W6",
+        "text": "needs_info: the minus family over the primes at s = 3 is, in the limit, one over zeta of 3 — the reciprocal of the Apéry constant, 0.8319073726 — and my store holds no other s = 3 limit value, named here only, at the line end 84",
+        "articulation": [
+          "one over zeta of 3",
+          "0.8319073726",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:20",
+      "question": "what is the minus family over the primes at the boundary s = 1?",
+      "kind": "wall",
+      "wall": {
+        "id": "W8",
+        "text": "needs_info: at the boundary s = 1 the minus family over all the numbers does not settle — the term 1 minus 1 over n walks the harmonic series down, and the infinite product tends to zero past my line end: the edge of the half-plane, declared, at the line end 84",
+        "articulation": [
+          "harmonic series",
+          "tends to zero",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:21",
+      "question": "derive removal-single from removal-def and factor-def",
+      "kind": "derive",
+      "theorem": "removal-single",
+      "parts": [
+        "factor-def",
+        "removal-def"
+      ]
+    },
+    {
+      "ref": "S03:22",
+      "question": "when my line's primes 2 and 3 are removed from the minus family over the primes at s = 2, what is the whole multiplier?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "set_removal",
+        "args": {
+          "primes": [
+            2,
+            3
+          ],
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:23",
+      "question": "when my line's primes 2, 3 and 5 are removed from the minus family over the primes at s = 2, what is the whole multiplier?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "set_removal",
+        "args": {
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:removal-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:24",
+      "question": "derive telescope-line from removal-def and region-def",
+      "kind": "scaffold",
+      "theorem": "telescope-line",
+      "parts": [
+        "removal-def",
+        "region-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for telescope-line wants its exact set — what you name is short the factor-def before i can put it together"
+    },
+    {
+      "ref": "S03:25",
+      "question": "of the telescope spot values on my line — do any fall below one half?",
+      "kind": "probe",
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S03:26",
+      "question": "prove that the plus family over all the numbers has a closed form my store can hold",
+      "kind": "unclassified",
+      "expected": "needs_info: the plus family over all the numbers is the unclassified object of this band: my store holds no closed form for it, and no sanctioned derivation produces one: the standing invitation, at the line end 84"
+    },
+    {
+      "ref": "S03:27",
+      "question": "what does the plus family over all the numbers hold up to my line end at s = 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": 1,
+          "indexset": "all",
+          "exp": 3,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:28",
+      "question": "of the six family partials at s = 2 on my line, which stands largest and which stands smallest?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:01",
+      "question": "count the index numbers of my line by their sieve status",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "83 integers — 23 prime and 60 composite — the split the sieve layer holds on the same line",
+        "owner": "lemma:split-def",
+        "grounds": [
+          "lemma:composite-def",
+          "lemma:split-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:02",
+      "question": "are the primes of my index split the set my prime census names?",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "they are the same 23 — the index split is the sieve's split, counted by the prime test",
+        "owner": "lemma:split-def",
+        "grounds": [
+          "lemma:split-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:03",
+      "question": "what is the queue above my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:04",
+      "question": "the queue above my line, fifth lot, which?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:04"
+      }
+    },
+    {
+      "ref": "S04:05",
+      "question": "is the prime-parts uniqueness established without the condition?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:14"
+      },
+      "cite": [
+        "spf-chain"
+      ]
+    },
+    {
+      "ref": "S04:06",
+      "question": "how do the two roads to prime-parts uniqueness differ?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S03:17"
+      },
+      "cite": [
+        "two-routes-one-guarantee"
+      ]
+    },
+    {
+      "ref": "S04:07",
+      "question": "how many primes are at most 84?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:23"
+      }
+    },
+    {
+      "ref": "S04:08",
+      "question": "how many composites are there up to 84?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.15",
+        "turn": "S03:02"
+      }
+    },
+    {
+      "ref": "S04:09",
+      "question": "for the prime 83, how many primes and how many integers did the sieve compare?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.15",
+        "turn": "S04:16"
+      }
+    },
+    {
+      "ref": "S04:10",
+      "question": "derive the Riemann hypothesis from the telescope on my line",
+      "kind": "zero_derive",
+      "expected": "honestly, i can't do that yet — deriving the Riemann hypothesis from the telescope is not a capability i have been taught: the telescope answers the heights of my line, and the condition is a statement about the zeros past my line; it remains open, at the line end 84."
+    },
+    {
+      "ref": "S04:11",
+      "question": "can the zeta variants settle the riemann hypothesis in my store?",
+      "kind": "zero_touch",
+      "expected": "needs_info: nothing this band holds settles the conjecture: the variant layer is unconditional, it holds no fact that touches the zeros, and the condition remains open, at the line end 84"
+    },
+    {
+      "ref": "S04:12",
+      "question": "state the partition-identity rule",
+      "kind": "probe",
+      "cite": [
+        "partition-identity"
+      ]
+    },
+    {
+      "ref": "S04:13",
+      "question": "state the telescope-line rule",
+      "kind": "probe",
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S04:14",
+      "question": "state the removal-single rule",
+      "kind": "probe",
+      "cite": [
+        "removal-single"
+      ]
+    },
+    {
+      "ref": "S04:15",
+      "question": "state the factor-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:16",
+      "question": "state the split-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:17",
+      "question": "state the removal-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:18",
+      "question": "state the region-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:19",
+      "question": "compare the three minus family partials on my line at s = 2",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:20",
+      "question": "the same comparison for the plus family",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:21",
+      "question": "which removal multipliers at s = 2 are below 2?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal_max",
+        "args": {
+          "exp": 2
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:removal-def"
+        ],
+        "template": "all 23 — the largest is {v}, at the prime 2"
+      }
+    },
+    {
+      "ref": "S04:22",
+      "question": "which removal multiplier at s = 3 stands largest, and at which prime?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "removal_max",
+        "args": {
+          "exp": 3
+        },
+        "owner": "lemma:removal-def",
+        "grounds": [
+          "lemma:removal-def"
+        ],
+        "template": "{v}, at the prime 2 — the multiplier descends toward one as the prime grows"
+      }
+    },
+    {
+      "ref": "S04:23",
+      "question": "if my line's whole prime family is removed from the minus family over all the numbers at s = 2, what remains?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:24",
+      "question": "what happens to the minus family spot values as the height walks along my line?",
+      "kind": "probe",
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S04:25",
+      "question": "where does the plus family's all partial at s = 2 stand against its limit?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:26",
+      "question": "what does the minus family over the composites hold up to my line end at s = 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": -1,
+          "indexset": "comp",
+          "exp": 3,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:27",
+      "question": "what does the plus family over the primes hold up to my line end at s = 3?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "family",
+        "args": {
+          "sign": 1,
+          "indexset": "primes",
+          "exp": 3,
+          "N": 84
+        },
+        "owner": "lemma:factor-def",
+        "grounds": [
+          "lemma:factor-def",
+          "lemma:region-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:28",
+      "question": "does the partition identity hold at s = 3 on my line?",
+      "kind": "probe",
+      "cite": [
+        "partition-identity"
+      ]
+    },
+    {
+      "ref": "S04:29",
+      "question": "what did this band add to the store?",
+      "kind": "probe",
+      "cite": [
+        "partition-identity",
+        "removal-single",
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S04:30",
+      "question": "is anything this band says conditional on the Riemann hypothesis?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:31",
+      "question": "what does the track hold for the plus family's unclassified object?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:32",
+      "question": "what is the minus family over all the numbers in the limit at s = 3?",
+      "kind": "wall",
+      "wall": {
+        "id": "W6",
+        "text": "needs_info: the minus family over the primes at s = 3 is, in the limit, one over zeta of 3 — the reciprocal of the Apéry constant, 0.8319073726 — and my store holds no other s = 3 limit value, named here only, at the line end 84",
+        "articulation": [
+          "one over zeta of 3",
+          "no other s = 3 limit value",
+          "line end 84"
+        ]
+      }
+    }
+  ],
+  "offscript": [
+    {
+      "question": "what is the status of the erdosguess?"
+    },
+    {
+      "question": "state the kstbound rule"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "census",
+      "ref": "census",
+      "args": {
+        "end": 84
+      }
+    },
+    {
+      "key": "telescope_spots",
+      "ref": "telescope_spots",
+      "args": {
+        "heights": [
+          2,
+          3,
+          4,
+          8,
+          10,
+          20,
+          50,
+          84
+        ]
+      }
+    },
+    {
+      "key": "telescope_named_spots",
+      "ref": "telescope_named",
+      "args": {
+        "heights": [
+          2,
+          3,
+          4,
+          10,
+          84
+        ]
+      }
+    },
+    {
+      "key": "telescope_offline_N100",
+      "ref": "telescope",
+      "args": {
+        "N": 100
+      },
+      "render": "slash"
+    },
+    {
+      "key": "removal_max_s2",
+      "ref": "removal_max",
+      "args": {
+        "exp": 2
+      }
+    },
+    {
+      "key": "removal_max_s3",
+      "ref": "removal_max",
+      "args": {
+        "exp": 3
+      }
+    },
+    {
+      "key": "removal_below2_s2_count",
+      "ref": "removal_below2_count",
+      "args": {
+        "exp": 2
+      }
+    },
+    {
+      "key": "set_removal_s2",
+      "ref": "set_removal_map",
+      "args": {
+        "sets": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "exp": 2
+      }
+    },
+    {
+      "key": "order_s2",
+      "ref": "order_s2",
+      "args": {}
+    },
+    {
+      "key": "wall_values",
+      "value": {
+        "W1": 0.5,
+        "W2": 0.6079271019,
+        "W3": 0.8224670334,
+        "W4": 1.5198177546,
+        "W5": 1.8380389552,
+        "W5b": 1.2093811574,
+        "W6": 0.8319073726,
+        "W7": "101/200"
+      }
+    }
+  ],
+  "expect": {
+    "final_total": 1388,
+    "letters": {
+      "2": "UUULSSSSLSSTSSSSSSSFHHHHH",
+      "3": "UUFLSSSSLTSSSSSHSSHHTSSFSHSS",
+      "4": "SSSHSSSSSUHSSSSSSSSSSSSSSSSSSSSH"
+    },
+    "mastery": {
+      "family-factor": {
+        "state": "stable",
+        "correct": 24
+      },
+      "index-split": {
+        "state": "stable",
+        "correct": 9
+      },
+      "line-partial": {
+        "state": "stable",
+        "correct": 9
+      },
+      "removal-rule": {
+        "state": "stable",
+        "correct": 12
+      }
+    },
+    "prereq_gaps": {
+      "family-factor": [],
+      "index-split": [],
+      "line-partial": [],
+      "removal-rule": []
+    },
+    "seam": {
+      "expected": "agreement",
+      "two_routes_range": [
+        2,
+        84
+      ],
+      "queue_referenced_ids": [
+        "conjecture:riemann",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "curriculum:pnt-ap",
+        "curriculum:tower-primes",
+        "curriculum:mod4-split",
+        "curriculum:chebotarev",
+        "lemma:mod4minusone",
+        "lemma:primesplit",
+        "lemma:apbound",
+        "lemma:chebotarev-selection",
+        "lemma:rv-count",
+        "lemma:ledger-growth",
+        "theorem:spf-chain"
+      ]
+    },
+    "offline_watch": [
+      "0.5",
+      "0.6079271019",
+      "0.8224670334",
+      "1.5198177546",
+      "1.8380389552",
+      "1.2093811574",
+      "0.8319073726",
+      "101/200"
+    ]
+  }
+}

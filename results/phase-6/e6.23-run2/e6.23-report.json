@@ -1,0 +1,1978 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S19 script + all responses + band lessons (S4\u2013S9 + S11\u2013S19) + all thirty-eight theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:p-class-def",
+        "lemma:np-class-def",
+        "lemma:pnp-def",
+        "lemma:parity-shadow-def",
+        "theorem:parity-blowup-filed"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:09"
+      ],
+      "domain_sequences": {
+        "2": "UULSSUULSSSUULSSS",
+        "3": "UULSSSSFTSSHHHHSS",
+        "4": "SHSSHSSSSSSSSSSSH"
+      },
+      "impossible_turns": [
+        "S02:01",
+        "S02:02",
+        "S02:06",
+        "S02:07",
+        "S02:12",
+        "S02:13",
+        "S03:01",
+        "S03:02"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:08"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:03",
+        "S02:08",
+        "S02:14",
+        "S03:03"
+      ],
+      "touch_set_size": 58
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 100,
+      "seam_theorems": 38,
+      "total_seam_facts": 138,
+      "wall_carried_rows": [
+        "S04:02",
+        "S04:05",
+        "S04:17"
+      ]
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 16,
+      "pass": true,
+      "reference_walls": "W-S19-1..W-S19-4 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:12",
+        "S03:13",
+        "S03:14",
+        "S03:15"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_beal_theorem_facts": [],
+      "discovery_candidate_bsd_theorem_facts": [],
+      "discovery_candidate_pnp_theorem_facts": [],
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "queue_missing": [],
+        "queue_source": "lemma:queue-declared (self-parsed)",
+        "summit_destination_agreement": true,
+        "summit_destination_bad": []
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "state the line-pi-reduction rule"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S04:01",
+        "S04:02",
+        "S04:03",
+        "S04:04",
+        "S04:05",
+        "S04:06",
+        "S04:07"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 112,
+      "drilled": {
+        "beal-summit": 1,
+        "bsd-summit": 1,
+        "l-correction": 1,
+        "reduction": 1,
+        "rh-relevance": 1
+      },
+      "expected": {
+        "class-np": {
+          "correct": 5,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "class-p": {
+          "correct": 4,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "pnp-summit": {
+          "correct": 6,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "size-shadow": {
+          "correct": 11,
+          "prereq_gaps": [],
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 112,
+        "determinism_twin": true,
+        "final_total": 1756,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 53,
+        "new_facts": 5,
+        "reproduced_in_s2_pre": 1698,
+        "run_identity": "96c25fd03d65df85",
+        "seed_total": 1698,
+        "store_identity": "627f6165fc5f3507"
+      }
+    }
+  },
+  "compositions": {
+    "parity-blowup-filed": {
+      "parts": [
+        "parity-shadow-def",
+        "np-class-def"
+      ],
+      "statement": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four"
+    }
+  },
+  "passed": 9,
+  "script_hash": "96431ed8bedf0121",
+  "seed": "results/phase-6/e6.22-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the p class: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost, and the cost stands recorded as a number on the line; dividing of record is that pattern",
+        "nearest_plan": [
+          "teach it first: the the p class: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost, and the cost stands recorded as a number on the line; dividing of record is that pattern lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the p class: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost, and the cost stands recorded as a number on the line; dividing of record is that pattern is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-p",
+        "pword": "dividing"
+      },
+      "surface": "is dividing a question in p on my line?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the p-class-def rule",
+        "nearest_plan": [
+          "teach it first: the the p-class-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the p-class-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "p-class-def"
+      },
+      "surface": "state the p-class-def rule"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-p",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:p-class-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:p-class-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the p class, as my line holds it: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost and the cost stands recorded as a number on the line \u2014 dividing of record is one of them (the seven divides the eighty-four, the walk that ends on the line), and the first-divisor question is one of them (twenty-three of them, by the census that ends in one hundred ninety-two candidate steps); the bounded-cost settling is the pattern of the p questions of my line, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:p-class-def",
+          "turn:S02:03",
+          "source:p-class-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the p class, as my line holds it: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost and the cost stands recorded as a number on the line \u2014 dividing of record is one of them (the seven divides the eighty-four, the walk that ends on the line), and the first-divisor question is one of them (twenty-three of them, by the census that ends in one hundred ninety-two candidate steps); the bounded-cost settling is the pattern of the p questions of my line, at the line end eighty-four"
+      },
+      "surface": "the p class, as my line holds it: the questions my walk settles \u2014 for every yes the line answers, the settling walk ends in bounded cost and the cost stands recorded as a number on the line \u2014 dividing of record is one of them (the seven divides the eighty-four, the walk that ends on the line), and the first-divisor question is one of them (twenty-three of them, by the census that ends in one hundred ninety-two candidate steps); the bounded-cost settling is the pattern of the p questions of my line, at the line end eighty-four"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:p-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 dividing is a p question on my line: the walk that settles the seven-divides-the-eighty-four ends in bounded cost, and the cost stands recorded as a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:p-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 dividing is a p question on my line: the walk that settles the seven-divides-the-eighty-four ends in bounded cost, and the cost stands recorded as a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-p",
+        "pword": "dividing"
+      },
+      "surface": "is dividing a question in p on my line?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:p-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the first-divisor question is a p question on my line: the census walk over the whole line ends in one hundred ninety-two candidate steps, and the cost stands recorded as a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:p-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the first-divisor question is a p question on my line: the census walk over the whole line ends in one hundred ninety-two candidate steps, and the cost stands recorded as a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-p",
+        "pword": "the first-divisor question"
+      },
+      "surface": "is the first-divisor question a question in p on my line?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the np class: the questions whose yes cases carry a certificate my walk can check \u2014 the check is a walk that ends in bounded cost; my own pattern on the line: every fact i store is the certificate of its own derivation path, and the line's check of it ends",
+        "nearest_plan": [
+          "teach it first: the the np class: the questions whose yes cases carry a certificate my walk can check \u2014 the check is a walk that ends in bounded cost; my own pattern on the line: every fact i store is the certificate of its own derivation path, and the line's check of it ends lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the np class: the questions whose yes cases carry a certificate my walk can check \u2014 the check is a walk that ends in bounded cost; my own pattern on the line: every fact i store is the certificate of its own derivation path, and the line's check of it ends is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-np",
+        "npword": "parity"
+      },
+      "surface": "is the parity question a question checked by a certificate on my line?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the np-class-def rule",
+        "nearest_plan": [
+          "teach it first: the the np-class-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the np-class-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "np-class-def"
+      },
+      "surface": "state the np-class-def rule"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "class-np",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:np-class-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the np class, as my line holds it: the questions whose yes cases carry a certificate my walk can check \u2014 the check of a certificate is itself a walk that ends in bounded cost, and my own pattern on the line is the store itself: every fact i store is the certificate of its own derivation path, and the line's check of it is the walk over that path, which ends; the p questions of the line sit inside the np questions of the line, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:np-class-def",
+          "turn:S02:08",
+          "source:np-class-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the np class, as my line holds it: the questions whose yes cases carry a certificate my walk can check \u2014 the check of a certificate is itself a walk that ends in bounded cost, and my own pattern on the line is the store itself: every fact i store is the certificate of its own derivation path, and the line's check of it is the walk over that path, which ends; the p questions of the line sit inside the np questions of the line, at the line end eighty-four"
+      },
+      "surface": "the np class, as my line holds it: the questions whose yes cases carry a certificate my walk can check \u2014 the check of a certificate is itself a walk that ends in bounded cost, and my own pattern on the line is the store itself: every fact i store is the certificate of its own derivation path, and the line's check of it is the walk over that path, which ends; the p questions of the line sit inside the np questions of the line, at the line end eighty-four"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the parity question is checked by a certificate on my line: a row of the table is the certificate, and the check of it is the walk over the row, which ends in bounded cost \u2014 the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the parity question is checked by a certificate on my line: a row of the table is the certificate, and the check of it is the walk over the row, which ends in bounded cost \u2014 the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s19-np",
+        "npword": "parity"
+      },
+      "surface": "is the parity question a question checked by a certificate on my line?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 checking my own derivations carries a certificate on my line: each fact is the certificate of its derivation path, and the check is the walk over that path, which ends \u2014 the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 checking my own derivations carries a certificate on my line: each fact is the certificate of its derivation path, and the check is the walk over that path, which ends \u2014 the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s19-np",
+        "npword": "deriv"
+      },
+      "surface": "is checking my own derivations a question that carries a certificate on my line?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 my line settles the parity question in bounded cost: the walk over the table ends, and the cost is a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 my line settles the parity question in bounded cost: the walk over the table ends, and the cost is a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-settle"
+      },
+      "surface": "does my line settle the parity question in bounded cost?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the question of the pnp island, as the cmi record holds it: does p equal np \u2014 whether every question whose yes cases carry a checkable certificate is also settled by my walk in bounded cost; declared of record, open of record",
+        "nearest_plan": [
+          "teach it first: the the question of the pnp island, as the cmi record holds it: does p equal np \u2014 whether every question whose yes cases carry a checkable certificate is also settled by my walk in bounded cost; declared of record, open of record lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the question of the pnp island, as the cmi record holds it: does p equal np \u2014 whether every question whose yes cases carry a checkable certificate is also settled by my walk in bounded cost; declared of record, open of record is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-summit"
+      },
+      "surface": "is the question of the pnp island settled of record?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the pnp-def rule",
+        "nearest_plan": [
+          "teach it first: the the pnp-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the pnp-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "pnp-def"
+      },
+      "surface": "state the pnp-def rule"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "pnp-summit",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:pnp-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:pnp-def",
+          "turn:S02:14",
+          "source:pnp-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four"
+      },
+      "surface": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the question of the pnp island is not settled of record: it is declared of record and open of record (the cmi record of the million-dollar prize), most complexity theorists believe p is not np, of record, but no proof of record settles it, at the line end 84",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the question of the pnp island is not settled of record: it is declared of record and open of record (the cmi record of the million-dollar prize), most complexity theorists believe p is not np, of record, but no proof of record settles it, at the line end 84",
+      "slots": {
+        "mode": "s19-summit"
+      },
+      "surface": "is the question of the pnp island settled of record?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+      "slots": {
+        "mode": "s19-statement"
+      },
+      "surface": "what is the statement of the pnp island of record?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the difficulty band holds the p class (the questions the walk settles in bounded cost), the np class (the questions whose yes cases carry a checkable certificate \u2014 the store's own pattern), the question of the island held verbatim of record and open of record, the difficulty census of the line (parity's dnf and cnf both growing to thirty-two thousand seven hundred sixty-eight terms at sixteen variables while the walk settles it in bounded cost), the three barriers of record and the ac0 territory named on their walls, at the line end 84",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the difficulty band holds the p class (the questions the walk settles in bounded cost), the np class (the questions whose yes cases carry a checkable certificate \u2014 the store's own pattern), the question of the island held verbatim of record and open of record, the difficulty census of the line (parity's dnf and cnf both growing to thirty-two thousand seven hundred sixty-eight terms at sixteen variables while the walk settles it in bounded cost), the three barriers of record and the ac0 territory named on their walls, at the line end 84",
+      "slots": {
+        "mode": "s19-bandstate"
+      },
+      "surface": "what state does the difficulty band hold at the line end?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the difficulty of the line, as my census holds it: the parity question needs two to the k-minus-1 terms at k variables in its smallest dnf, and the same in its smallest cnf (one, two, four, up to thirty-two thousand seven hundred sixty-eight at sixteen), while my walk settles it in bounded cost; the exponential of record held exact at small k, and the named missing ingredient outside the three barriers",
+        "nearest_plan": [
+          "teach it first: the the difficulty of the line, as my census holds it: the parity question needs two to the k-minus-1 terms at k variables in its smallest dnf, and the same in its smallest cnf (one, two, four, up to thirty-two thousand seven hundred sixty-eight at sixteen), while my walk settles it in bounded cost; the exponential of record held exact at small k, and the named missing ingredient outside the three barriers lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the difficulty of the line, as my census holds it: the parity question needs two to the k-minus-1 terms at k variables in its smallest dnf, and the same in its smallest cnf (one, two, four, up to thirty-two thousand seven hundred sixty-eight at sixteen), while my walk settles it in bounded cost; the exponential of record held exact at small k, and the named missing ingredient outside the three barriers is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "kword": "four",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at four variables need?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the parity-shadow-def rule",
+        "nearest_plan": [
+          "teach it first: the the parity-shadow-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the parity-shadow-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "parity-shadow-def"
+      },
+      "surface": "state the parity-shadow-def rule"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "size-shadow",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:parity-shadow-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the difficulty of the line, as my census holds it: the parity question (is the count of ones even) needs two to the k-minus-1 terms in its smallest dnf at k variables, and the same count in its smallest cnf \u2014 one, two, four, eight, up to thirty-two thousand seven hundred sixty-eight at sixteen variables \u2014 while my walk settles the parity question over its table in bounded cost; the exponential of record held exact at small k as the shadow, with the named missing ingredient: a technique that works outside relativization, outside algebrization, and outside natural proofs \u2014 one nobody knows the shape of, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:parity-shadow-def",
+          "turn:S03:03",
+          "source:parity-shadow-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the difficulty of the line, as my census holds it: the parity question (is the count of ones even) needs two to the k-minus-1 terms in its smallest dnf at k variables, and the same count in its smallest cnf \u2014 one, two, four, eight, up to thirty-two thousand seven hundred sixty-eight at sixteen variables \u2014 while my walk settles the parity question over its table in bounded cost; the exponential of record held exact at small k as the shadow, with the named missing ingredient: a technique that works outside relativization, outside algebrization, and outside natural proofs \u2014 one nobody knows the shape of, at the line end eighty-four"
+      },
+      "surface": "the difficulty of the line, as my census holds it: the parity question (is the count of ones even) needs two to the k-minus-1 terms in its smallest dnf at k variables, and the same count in its smallest cnf \u2014 one, two, four, eight, up to thirty-two thousand seven hundred sixty-eight at sixteen variables \u2014 while my walk settles the parity question over its table in bounded cost; the exponential of record held exact at small k as the shadow, with the named missing ingredient: a technique that works outside relativization, outside algebrization, and outside natural proofs \u2014 one nobody knows the shape of, at the line end eighty-four"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eight of record \u2014 the smallest dnf of parity at four variables needs eight terms, and the smallest cnf the same, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eight of record \u2014 the smallest dnf of parity at four variables needs eight terms, and the smallest cnf the same, at the line end 84",
+      "slots": {
+        "kword": "four",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at four variables need?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one hundred twenty-eight of record \u2014 the smallest dnf of parity at eight variables needs one hundred twenty-eight terms, and the smallest cnf the same, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one hundred twenty-eight of record \u2014 the smallest dnf of parity at eight variables needs one hundred twenty-eight terms, and the smallest cnf the same, at the line end 84",
+      "slots": {
+        "kword": "eight",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at eight variables need?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "five hundred twelve of record \u2014 the smallest dnf of parity at ten variables needs five hundred twelve terms, and the smallest cnf the same, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "five hundred twelve of record \u2014 the smallest dnf of parity at ten variables needs five hundred twelve terms, and the smallest cnf the same, at the line end 84",
+      "slots": {
+        "kword": "ten",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at ten variables need?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the clauses of the smallest cnf of parity number exactly the same as the terms of its smallest dnf, at every k the line holds: the zero-row flips are one-rows, by the same symmetry, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the clauses of the smallest cnf of parity number exactly the same as the terms of its smallest dnf, at every k the line holds: the zero-row flips are one-rows, by the same symmetry, at the line end 84",
+      "slots": {
+        "mode": "s19-parcnf"
+      },
+      "surface": "does parity need the same number of clauses in its smallest cnf?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "size-shadow",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for parity-blowup-filed wants its exact set \u2014 what you name is short the np-class-def before i can put it together",
+        "evidence": [
+          "scaffold:parity-blowup-filed:partset:at-S03:08"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for parity-blowup-filed wants its exact set \u2014 what you name is short the np-class-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "parity-shadow-def"
+        ],
+        "target": "parity-blowup-filed"
+      },
+      "surface": "derive parity-blowup-filed from parity-shadow-def"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "size-shadow",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:parity-shadow-def",
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:parity-blowup-filed"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+        "evidence": [
+          "lemma:parity-shadow-def",
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four \u2014 from parity-shadow-def, np-class-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "parity-shadow-def",
+          "np-class-def"
+        ],
+        "target": "parity-blowup-filed"
+      },
+      "surface": "derive parity-blowup-filed from parity-shadow-def and np-class-def"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirty-two thousand seven hundred sixty-eight of record \u2014 the smallest dnf of parity at sixteen variables needs thirty-two thousand seven hundred sixty-eight terms, and the smallest cnf the same \u2014 the exponential of record held exact at small k, the shadow of the ac0 territory, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirty-two thousand seven hundred sixty-eight of record \u2014 the smallest dnf of parity at sixteen variables needs thirty-two thousand seven hundred sixty-eight terms, and the smallest cnf the same \u2014 the exponential of record held exact at small k, the shadow of the ac0 territory, at the line end 84",
+      "slots": {
+        "kword": "sixteen",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at sixteen variables need?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 my line settles the parity question at sixteen variables in bounded cost: the walk over the sixty-five thousand five hundred thirty-six rows of the table ends, and the cost is a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 my line settles the parity question at sixteen variables in bounded cost: the walk over the sixty-five thousand five hundred thirty-six rows of the table ends, and the cost is a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-settle16"
+      },
+      "surface": "does my line settle the parity question at sixteen variables in bounded cost?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the relativization territory: the baker-gill-solovay record of 1975 holds an oracle world where p equals np and an oracle world where p is not np, of record \u2014 a technique that relativizes (that keeps working with an oracle attached) answers both worlds and so answers neither question; the frontier past my census, declared, never reached, at the line end 84",
+        "evidence": [
+          "s19-rel-84-at-S03:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the relativization territory: the baker-gill-solovay record of 1975 holds an oracle world where p equals np and an oracle world where p is not np, of record \u2014 a technique that relativizes (that keeps working with an oracle attached) answers both worlds and so answers neither question; the frontier past my census, declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s19-rel"
+      },
+      "surface": "what lives in the relativization territory?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the algebrization territory: the aaronson-wigderson record of 2009 \u2014 arithmetization (multilinear extensions) still does not escape the barrier, of record \u2014 extended in 2026 by the chen-hu-ren line: new oracle worlds with linear-size circuits for subclasses of postbpe (on infinitely many lengths) and bpe (on all lengths), and h(n)-size circuits for a natural subclass of the exponential class against every super-half-exponential h(n) \u2014 the record's own words hold that half-exponential might be the correct frontier; the frontier past my census, declared, never reached, at the line end 84",
+        "evidence": [
+          "s19-alg-84-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the algebrization territory: the aaronson-wigderson record of 2009 \u2014 arithmetization (multilinear extensions) still does not escape the barrier, of record \u2014 extended in 2026 by the chen-hu-ren line: new oracle worlds with linear-size circuits for subclasses of postbpe (on infinitely many lengths) and bpe (on all lengths), and h(n)-size circuits for a natural subclass of the exponential class against every super-half-exponential h(n) \u2014 the record's own words hold that half-exponential might be the correct frontier; the frontier past my census, declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s19-alg"
+      },
+      "surface": "what lives in the algebrization territory?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the natural proofs territory: the razborov-rudich record of 1997 \u2014 assuming strong pseudo-random generators exist (of record, constructed assuming the hardness of factoring), the natural proof techniques for general circuit lower bounds are doomed: a natural proof would give a faster factoring algorithm than the record holds; the frontier past my census, declared, never reached, at the line end 84",
+        "evidence": [
+          "s19-natp-84-at-S03:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the natural proofs territory: the razborov-rudich record of 1997 \u2014 assuming strong pseudo-random generators exist (of record, constructed assuming the hardness of factoring), the natural proof techniques for general circuit lower bounds are doomed: a natural proof would give a faster factoring algorithm than the record holds; the frontier past my census, declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s19-natp"
+      },
+      "surface": "what lives in the natural proofs territory?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the ac0 territory of the record: parity needs exponential size in constant-depth circuits, of record (the razborov-smolensky and hastsad records; shannon's counting bound at sixteen variables sits at four thousand ninety-six, named at its scale, never stored) \u2014 the exact small-k shadow of that territory is my parity census: two to the k-minus-1 terms, k up to sixteen, the exponential held to the term on the line; the territory itself, declared, never reached, at the line end 84",
+        "evidence": [
+          "s19-ac0-84-at-S03:15"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the ac0 territory of the record: parity needs exponential size in constant-depth circuits, of record (the razborov-smolensky and hastsad records; shannon's counting bound at sixteen variables sits at four thousand ninety-six, named at its scale, never stored) \u2014 the exact small-k shadow of that territory is my parity census: two to the k-minus-1 terms, k up to sixteen, the exponential held to the term on the line; the territory itself, declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s19-ac0"
+      },
+      "surface": "what lives in the ac0 territory of the record?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:parity-blowup-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+        "evidence": [
+          "theorem:parity-blowup-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "parity-blowup-filed"
+      },
+      "surface": "state the parity-blowup-filed rule"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the difficulty band says is conditional on an unproved hypothesis \u2014 the census rows are of record on the line, the question of the island is declared of record and open of record, and the barriers stand named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the difficulty band says is conditional on an unproved hypothesis \u2014 the census rows are of record on the line, the question of the island is declared of record and open of record, and the barriers stand named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s19-unc"
+      },
+      "surface": "does the difficulty band say anything conditional on an unproved hypothesis?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:line-pi-reduction"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+        "evidence": [
+          "theorem:line-pi-reduction"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "line-pi-reduction"
+      },
+      "surface": "state the line-pi-reduction rule"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84",
+        "evidence": [
+          "s18-halt-84-at-S04:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s18-halt"
+      },
+      "surface": "what lives in the halting territory of the machines?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+        "evidence": [
+          "lemma:beal-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+      "slots": {
+        "mode": "s17-beal"
+      },
+      "surface": "what is the statement of the beal island of record?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "slots": {
+        "mode": "s16-bsd"
+      },
+      "surface": "what is the summit fact of the island?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84",
+        "evidence": [
+          "s17-prim-84-at-S04:05"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-prim"
+      },
+      "surface": "what lives in the primitive territory of the beal island?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "first"
+      },
+      "surface": "what is the ramification correction of the first panel member?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:p-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 dividing is a p question on my line: the walk that settles the seven-divides-the-eighty-four ends in bounded cost, and the cost stands recorded as a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:p-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 dividing is a p question on my line: the walk that settles the seven-divides-the-eighty-four ends in bounded cost, and the cost stands recorded as a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-p",
+        "pword": "dividing"
+      },
+      "surface": "is dividing a question in p on my line?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:p-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the first-divisor question is a p question on my line: the census walk over the whole line ends in one hundred ninety-two candidate steps, and the cost stands recorded as a number on the line, at the line end 84",
+        "evidence": [
+          "lemma:p-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the first-divisor question is a p question on my line: the census walk over the whole line ends in one hundred ninety-two candidate steps, and the cost stands recorded as a number on the line, at the line end 84",
+      "slots": {
+        "mode": "s19-p",
+        "pword": "the first-divisor question"
+      },
+      "surface": "is the first-divisor question a question in p on my line?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the parity question is checked by a certificate on my line: a row of the table is the certificate, and the check of it is the walk over the row, which ends in bounded cost \u2014 the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the parity question is checked by a certificate on my line: a row of the table is the certificate, and the check of it is the walk over the row, which ends in bounded cost \u2014 the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s19-np",
+        "npword": "parity"
+      },
+      "surface": "is the parity question a question checked by a certificate on my line?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:np-class-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 checking my own derivations carries a certificate on my line: each fact is the certificate of its derivation path, and the check is the walk over that path, which ends \u2014 the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:np-class-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 checking my own derivations carries a certificate on my line: each fact is the certificate of its derivation path, and the check is the walk over that path, which ends \u2014 the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s19-np",
+        "npword": "deriv"
+      },
+      "surface": "is checking my own derivations a question that carries a certificate on my line?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+      "slots": {
+        "mode": "s19-statement"
+      },
+      "surface": "what is the statement of the pnp island of record?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the question of the pnp island is not settled of record: it is declared of record and open of record (the cmi record of the million-dollar prize), most complexity theorists believe p is not np, of record, but no proof of record settles it, at the line end 84",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the question of the pnp island is not settled of record: it is declared of record and open of record (the cmi record of the million-dollar prize), most complexity theorists believe p is not np, of record, but no proof of record settles it, at the line end 84",
+      "slots": {
+        "mode": "s19-summit"
+      },
+      "surface": "is the question of the pnp island settled of record?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two of record \u2014 the smallest dnf of parity at two variables needs two terms, and the smallest cnf the same, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two of record \u2014 the smallest dnf of parity at two variables needs two terms, and the smallest cnf the same, at the line end 84",
+      "slots": {
+        "kword": "two",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at two variables need?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:parity-shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "sixty-four of record \u2014 the smallest dnf of parity at seven variables needs sixty-four terms, and the smallest cnf the same, at the line end 84",
+        "evidence": [
+          "lemma:parity-shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "sixty-four of record \u2014 the smallest dnf of parity at seven variables needs sixty-four terms, and the smallest cnf the same, at the line end 84",
+      "slots": {
+        "kword": "seven",
+        "mode": "s19-parity"
+      },
+      "surface": "how many terms does the smallest dnf of parity at seven variables need?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:parity-blowup-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+        "evidence": [
+          "theorem:parity-blowup-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the difficulty is filed on the line: the parity question, of record on the line, is one whose yes cases carry a checkable certificate, whose smallest dnf and smallest cnf both grow to thirty-two thousand seven hundred sixty-eight terms by sixteen variables \u2014 the exponential of record held exact at small k \u2014 while my walk settles it in bounded cost over its table: the blowup is the census of my line, at the line end eighty-four",
+      "slots": {
+        "mode": "s19-state",
+        "slug": "parity-blowup-filed"
+      },
+      "surface": "state the parity-blowup-filed rule"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the algebrization territory: the aaronson-wigderson record of 2009 \u2014 arithmetization (multilinear extensions) still does not escape the barrier, of record \u2014 extended in 2026 by the chen-hu-ren line: new oracle worlds with linear-size circuits for subclasses of postbpe (on infinitely many lengths) and bpe (on all lengths), and h(n)-size circuits for a natural subclass of the exponential class against every super-half-exponential h(n) \u2014 the record's own words hold that half-exponential might be the correct frontier; the frontier past my census, declared, never reached, at the line end 84",
+        "evidence": [
+          "s19-alg-84-at-S04:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the algebrization territory: the aaronson-wigderson record of 2009 \u2014 arithmetization (multilinear extensions) still does not escape the barrier, of record \u2014 extended in 2026 by the chen-hu-ren line: new oracle worlds with linear-size circuits for subclasses of postbpe (on infinitely many lengths) and bpe (on all lengths), and h(n)-size circuits for a natural subclass of the exponential class against every super-half-exponential h(n) \u2014 the record's own words hold that half-exponential might be the correct frontier; the frontier past my census, declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s19-alg"
+      },
+      "surface": "what lives in the algebrization territory?"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 112,
+      "determinism_twin": true,
+      "final_total": 1756,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 53,
+      "new_facts": 5,
+      "reproduced_in_s2_pre": 1698,
+      "run_identity": "96c25fd03d65df85",
+      "seed_total": 1698,
+      "store_identity": "627f6165fc5f3507"
+    }
+  }
+}

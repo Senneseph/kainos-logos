@@ -1,0 +1,37 @@
+{
+  "config": {
+    "checks": 12,
+    "checks_passed": 12,
+    "commit": "49b7753",
+    "dataset_hash": null,
+    "deviations": [
+      "D-e5a-amend (round-6 door-corridor coherence rule)",
+      "D-e5b (commit count 24)"
+    ],
+    "runs": [
+      "e5.1-clean-v0",
+      "e5.1-clean-v1",
+      "e5.1-clean-v2",
+      "e5.1-false-v0",
+      "e5.1-false-v1",
+      "e5.1-false-v2"
+    ],
+    "seed": 5101
+  },
+  "evidence": [
+    "results/phase-5/e5.1.json",
+    "results/phase-5/e5.1-clean-v0.json",
+    "results/phase-5/e5.1-clean-v1.json",
+    "results/phase-5/e5.1-clean-v2.json",
+    "results/phase-5/e5.1-false-v0.json",
+    "results/phase-5/e5.1-false-v1.json",
+    "results/phase-5/e5.1-false-v2.json"
+  ],
+  "hypothesis": "Agents that model their partner's perspective (V1/V2) beat the ToM ablation (V0) at equal budget on the computable redundancy ratio, and only they can pass the embedded false-belief probe: V0 is structurally incapable of the explicit correction assertion (capability gate), commits the planted row, and the mismatch survives as a disputed pair \u2014 never averaged.",
+  "metric": "acceptance checks passed (0-12)",
+  "name": "e5.1",
+  "passed": true,
+  "skipped": false,
+  "threshold": "12/12",
+  "value": 1.0
+}

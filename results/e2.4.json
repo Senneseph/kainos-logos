@@ -1,0 +1,19 @@
+{
+  "config": {
+    "baseline_accuracy": 0.0,
+    "commit": "ccb1f4a",
+    "dataset_hash": null,
+    "identifiable_in_corpus": 20,
+    "n_holdout": 12,
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-2/e2.4.json"
+  ],
+  "hypothesis": "label-held-out concepts are recognized by conjoining learned properties (A4)",
+  "metric": "recognition accuracy over the label-holdout (vector-identifiable) subset",
+  "name": "e2.4",
+  "passed": true,
+  "threshold": "accuracy >= 0.7 (baseline with zero labels: 0.0)",
+  "value": 1.0
+}

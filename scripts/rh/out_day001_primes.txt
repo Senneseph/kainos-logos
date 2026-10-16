@@ -1,0 +1,90 @@
+# day-001 prime structure, X = 2000000
+# primes <= X: 148933 (last: 1999993)
+
+[Q1] psi(x) - x, the PNT error (rh-reach's 'square root improvement')
+  x         |D(x)|      M(y)          M(y)/y^0.5
+  100        5.955        6.529          0.6529
+  1000       3.319        15.27          0.4829
+  10000      13.4         48.85          0.4885
+  100000     51.56        173.5          0.5486
+  1000000    413.4        511.1          0.5111
+  2000000    115          730.4          0.5164
+  envelope fit  M(y) ~ y^0.4780 * 0.755   (RH predicts exponent ~ 0.5, with log factors)
+  sign flips of psi(x)-x up to X: 9471
+
+  x/log(x) vs pi(x):
+  x=10000      pi(x)=1229     x/log(x)=1085.736      ratio=0.88343
+  x=100000     pi(x)=9592     x/log(x)=8685.890      ratio=0.90553
+  x=1000000    pi(x)=78498    x/log(x)=72382.414     ratio=0.92209
+  x=2000000    pi(x)=148933   x/log(x)=137848.727    ratio=0.92558
+
+[Q2] what the naive prime series misses (the twin-prime factor)
+  C2 (Hardy-Littlewood singular series)            = 0.660161860590
+  2*C2 (the predicted limiting ratio)              = 1.320323721180
+  A(x)=#twin-pairs p, p+2 <= x;   R(x) = A(x)*(log x)^2 / x  ->  2*C2
+  x=10000      A(x)=205      R(x)=1.739023
+  x=100000     A(x)=1224     R(x)=1.622381
+  x=1000000    A(x)=8169     R(x)=1.559203
+  x=2000000    A(x)=14871    R(x)=1.565181
+  x=10000000   A(x)=58980    R(x)=1.532259   (extended soil to 5e7)
+  x=50000000   A(x)=239101   R(x)=1.502824   (extended soil to 5e7)
+  interpretation: the naive 'independent primes' model predicts
+  A(x) ~ x/(log x)^2 (ratio 1).  Measured ratio -> 2*C2 ~= 1.32.
+  The missing term is a CONGRUENCE correction, visible everywhere,
+  and RH (even if true) does not determine it.
+
+[Q3] 1/2 for primes: halving, the 2-adic splitting depth
+  the brief's example: 7 = (7-1)/2 + (7+1)/2 = 3+1/2 + 3+1/2
+  for every odd prime p:  p = (p-1)/2 + (p+1)/2, both integers,
+  and the '1/2' is exactly the remainder-1 of division by 2.
+  the SPLITTING DEPTH v2(p-1) = how many even halvings p-1 admits:
+  p      p-1      v2(p-1)  p mod 4   (v2=1 <==> 3 mod 4; v2>=2 <==> 1 mod 4)
+  5       4        2          1
+  7       6        1          3
+  13      12       2          1
+  17      16       4          1
+  31      30       1          3
+  41      40       3          1
+  97      96       5          1
+  113     112      4          1
+  193     192      6          1
+  257     256      8          1
+  65537   65536    16         1
+  census p<=X (3 mod 4: 74516, 1 mod 4: 74416):
+  max v2(p-1) up to X = 18
+  depth histogram (1..8): {1: 74516, 2: 37300, 3: 18519, 4: 9287, 5: 4646, 6: 2333, 7: 1160, 8: 586}
+  the halving ladder p = 2^d*m + 1 with m odd EXHAUSTS after d = v2(p-1) steps;
+  'coming down to 1/2 eventually' is this 2-adic depth running out.
+  d = 1  <=> 3 mod 4 (difference of two squares only, never a sum of two)
+  d >= 2 <=> 1 mod 4 (sum of two squares, Fermat — verified in [Q5])
+
+[Q4] does 1/2 mean balance?  (the Chebyshev bias, mod 4)
+  over x in [100, X]:  fraction of x with pi(x;4,3) >= pi(x;4,1)
+    = 0.998297   (Rubinstein-Sarnak limit: ~0.9914962)
+  1/2 is where the two prime colors BALANCE in the mean (PNT mod 4,
+  both ~ x/(2 log x)) — but the 3-color LEADS almost all the time.
+  '1/2 is where the mass balances, not where it is.'
+  final counts at X:  1 mod 4: 74416,  3 mod 4: 74516  (ratio 1.001344)
+  max lead of 3 over 1 in [100, X]: 157
+  same fraction in Chebyshev (log) measure: 0.999609
+
+[Q5] difference of squares vs sum of squares (the brief's 'two squares')
+  every odd p is a DIFFERENCE of two squares, uniquely adjacent:
+  7 = 2^2 - 1^2 = 4 - 1  (a-b = 1 always; (p+1)/2, (p-1)/2)
+  SUM of two squares, p <= 3000:  211 primes 1 mod 4 have exactly one
+    representation (up to order/sign); 0 misses
+    (211 ok, 0 missed, 0 with two)
+  primes 3 mod 4:  218 of 218 are NOT a sum of two squares at all
+    (218 ok, 0 counterexamples — must be 0)
+  the mod-4 split -- i.e. how many halves fit into (p-1)/2 -- decides
+  the whole two-squares story.  1/2 is the key; 4 is 1/2 squared.
+
+[Q6] store-soil bridge: the Euler product to the line end 84 (S13 family)
+  sigma=1.05:  partial(<=84) zeta = 6.73720556   full zeta = 14.41276510   ratio 0.467447
+  sigma=1.25:  partial(<=84) zeta = 3.85517717   full zeta = 4.56782091   ratio 0.843986
+  sigma=1.5:  partial(<=84) zeta = 2.52470793   full zeta = 2.61214885   ratio 0.966525
+  (zeta(1.5) = 2.6123753487...; the soil to 84 already carries most of the mass;)
+  removing factors = sieving; the S13 split family (1 - n^-s) is the
+  same product split by parity of the character. This is the store/attack joint.)
+
+# done (day-001 primes)

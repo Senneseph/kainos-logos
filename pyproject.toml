@@ -1,0 +1,26 @@
+[project]
+name = "kainos"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+# Runtime: the IR codec (kainos.ir.codec) validates with jsonschema at every
+# boundary. (Step 03 directive said "dev deps", but it is a runtime import —
+# a plain `pip install kainos` must not break. Pinned to 4.26.0 in
+# requirements.lock / the Docker image per ADR-0010.)
+dependencies = ["jsonschema>=4.21"]
+
+[project.optional-dependencies]
+dev = ["pytest", "hypothesis", "mypy", "ruff"]
+
+[project.scripts]
+kainos = "kainos.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"kainos.ir" = ["_schemas/*.json"]

@@ -1,0 +1,73 @@
+# Action Step 15 — Learning loop + baselines + growth dashboard (P2.07–P2.09)
+
+> Self-contained: you need only `00-CONTEXT.md` + this file.
+
+## Goal
+
+The post-game learning loop (consolidation + contradiction→dimension), comparison
+baselines, and a growth dashboard that tracks EXCEPTION shrinkage over time.
+
+## Prerequisites
+
+- [ ] Step 14 done (game loop + selector).
+
+## Background
+
+This is where learning happens *without* touching neural weights. Answers become
+candidate assertions → verified → consolidated; a repeated `sometimes`/conflict
+becomes a **new context TERM** (invariant #6: contradiction drives ontology
+expansion). The dashboard proves the ontology gets more expressive over time.
+
+## Steps
+
+### 1. `src/kainos/q20/learn.py`
+
+`consolidate(game_trace, codex)`:
+- turn each answer into a candidate assertion (`status=candidate`, provenance
+  `Source(uri="game_<id>", version="1")`, observer=oracle);
+- verify against existing assertions: consistent → promote to `established`;
+  conflicting → keep both, set `status=disputed`, link evidence;
+- `detect_dimension(codex, property)`: when a property is `sometimes` or has
+  conflicting `established` assertions across concepts, propose a **new context TERM**
+  (e.g. `hibernates` conditional on `species`) and re-express both assertions under
+  distinct contexts (never average — invariant #6).
+
+### 2. `src/kainos/q20/baselines.py`
+
+- `RandomQuestioner`: uniform random valid question each turn.
+- `StatelessGreedy`: IG selector but **no CODEX persistence** (recomputes from a
+  frozen corpus each game; ignores learned assertions).
+These make A1/A3 falsifiable.
+
+### 3. `src/kainos/q20/dashboard.py`
+
+`sample_growth(codex, corpus, questions) -> dict`: compute per-concept
+`Coverage(T,C) = verified/encountered` and total exception counts (group by
+`ExceptionState`). `render(dict) -> str` writes `results/phase-2/growth.md`.
+
+### 4. Tests
+
+- `tests/q20/test_learn.py`: a `sometimes` answer creates a candidate context TERM; a
+  repeated conflict re-expresses both assertions without averaging.
+- `tests/q20/test_baselines.py`: random is valid + seeded-reproducible; stateless
+  ignores CODEX history.
+- `tests/q20/test_dashboard.py`: coverage computed correctly on a tiny fixture; file
+  renders.
+
+## Verification
+
+```bash
+pytest tests/q20 -q
+```
+
+Expect: all green.
+
+## Done when
+
+- [ ] consolidation + contradiction→dimension implemented and tested (no averaging)
+- [ ] random + stateless baselines implemented
+- [ ] growth dashboard renders `results/phase-2/growth.md`
+
+## If stuck
+
+`plan/30-phases/phase-2-20questions/game-spec.md` (learning loop), `plan/30-phases/phase-2-20questions/experiments.md` → E2.2/E2.5.

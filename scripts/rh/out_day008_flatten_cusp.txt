@@ -1,0 +1,28 @@
+== tau_12 re-check (q=12, dps-35, t=10, N~1e6) ==
+   chi values (1..11): [1, 0, 0, 0, -1, 0, -1, 0, 0, 0, 1]
+   mirror max|M(r)-M(-r)| = 6.4783e-14 | trace = (3.3109297e-14 - 1.3759112e-14j) | integer max|dInt| = 7.379e-10
+   antipode M(r)~-M(r+q/2) max|sum| = 9.5889e-15 | worst 2-cut spread = 3.835e-14
+   Re M1: [2.0, 2.0, 1.0, -0.0, -1.0, -2.0, -2.0, -2.0, -1.0, 0.0, 1.0, 2.0]
+   FLATTEN: {"n_cusp": 2, "cusp_cells": [3, 9], "cusp_corner_deg": [120.0, 120.0], "phi0_deg": 178, "circle": {"cx": 1.1098, "cy": 0.0, "R": 1.078, "origin_gap": 0.0318, "max_resid": 0.1878}, "limacon": {"a": -0.0967, "b": -2.2746, "abs_a_over_b": 0.0425, "cusp_dir_rho": 2.1778, "max_resid": 0.1765}, "verdict": "pinched-circle"}
+done tau_12 re-check
+== chi_24 denser (q=24, dps-35, t=10, N~1e6) ==
+   chi values (1..23): [1, 0, 0, 0, 1, 0, -1, 0, 0, 0, -1, 0, -1, 0, 0, 0, -1, 0, 1, 0, 0, 0, 1]
+   mirror max|M(r)-M(-r)| = 1.4668e-12 | trace = (-1.2195012e-12 + 5.0693152e-13j) | integer max|dInt| = 8.373e-9
+   antipode M(r)~-M(r+q/2) max|sum| = 2.1762e-13 | worst 2-cut spread = 8.704e-13
+   Re M1: [6.0, 6.0, 5.0, 4.0, 3.0, 2.0, -0.0, -2.0, -3.0, -4.0, -5.0, -6.0, -6.0, -6.0, -5.0, -4.0, -3.0, -2.0, 0.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+   FLATTEN: {"n_cusp": 2, "cusp_cells": [6, 18], "cusp_corner_deg": [150.0, 150.0], "phi0_deg": 0, "circle": {"cx": 3.0006, "cy": 0.0, "R": 3.0051, "origin_gap": 0.0045, "max_resid": 0.1923}, "limacon": {"a": 0.3591, "b": 5.536, "abs_a_over_b": 0.0649, "cusp_dir_rho": -5.1769, "max_resid": 0.2936}, "verdict": "pinched-circle"}
+done chi_24 denser
+== tau_28 denser (q=28, dps-35, t=10, N~1e6) ==
+   chi values (1..27): [1, 0, 1, 0, -1, 0, 0, 0, 1, 0, -1, 0, -1, 0, -1, 0, -1, 0, 1, 0, 0, 0, -1, 0, 1, 0, 1]
+   mirror max|M(r)-M(-r)| = 2.921e-12 | trace = (3.5499667e-12 - 1.4752482e-12j) | integer max|dInt| = 1.45e-8
+   antipode M(r)~-M(r+q/2) max|sum| = 4.3968e-13 | worst 2-cut spread = 1.759e-12
+   Re M1: [8.0, 8.0, 7.0, 6.0, 4.0, 2.0, 1.0, -0.0, -1.0, -2.0, -4.0, -6.0, -7.0, -8.0, -8.0, -8.0, -7.0, -6.0, -4.0, -2.0, -1.0, 0.0, 1.0, 2.0, 4.0, 6.0, 7.0, 8.0]
+   FLATTEN: {"n_cusp": 2, "cusp_cells": [7, 21], "cusp_corner_deg": [154.29, 154.29], "phi0_deg": 0, "circle": {"cx": 4.1863, "cy": 0.0, "R": 3.8237, "origin_gap": 0.3627, "max_resid": 0.2678}, "limacon": {"a": -1.6585, "b": 9.6404, "abs_a_over_b": 0.172, "cusp_dir_rho": -11.2989, "max_resid": 0.5243}, "verdict": "pinched-circle"}
+done tau_28 denser
+== chi_56 densest (q=56, dps-35, t=10, N~1e6) ==
+   chi values (1..55): [1, 0, -1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, -1, 0, -1, 0, -1, 0, 0, 0, -1, 0, 1, 0, -1, 0, -1, 0, 1, 0, -1, 0, 0, 0, -1, 0, -1, 0, -1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, -1, 0, 1]
+   mirror max|M(r)-M(-r)| = 6.6679e-11 | trace = (1.2040345e-10 - 5.0071724e-11j) | integer max|dInt| = 1.606e-7
+   antipode M(r)~-M(r+q/2) max|sum| = 9.7381e-12 | worst 2-cut spread = 3.895e-11
+   Re M1: [20.0, 20.0, 19.0, 18.0, 18.0, 18.0, 17.0, 16.0, 15.0, 14.0, 12.0, 10.0, 7.0, 4.0, -0.0, -4.0, -7.0, -10.0, -12.0, -14.0, -15.0, -16.0, -17.0, -18.0, -18.0, -18.0, -19.0, -20.0, -20.0, -20.0, -19.0, -18.0, -18.0, -18.0, -17.0, -16.0, -15.0, -14.0, -12.0, -10.0, -7.0, -4.0, 0.0, 4.0, 7.0, 10.0, 12.0, 14.0, 15.0, 16.0, 17.0, 18.0, 18.0, 18.0, 19.0, 20.0]
+   FLATTEN: {"n_cusp": 2, "cusp_cells": [14, 42], "cusp_corner_deg": [167.14, 167.14], "phi0_deg": 0, "circle": {"cx": 9.1497, "cy": 0.0, "R": 10.9404, "origin_gap": 1.7906, "max_resid": 1.3736}, "limacon": {"a": 4.0366, "b": 16.1182, "abs_a_over_b": 0.2504, "cusp_dir_rho": -12.0816, "max_resid": 1.8413}, "verdict": "limacon-between"}
+done chi_56 densest

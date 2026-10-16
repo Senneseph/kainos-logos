@@ -1,0 +1,94 @@
+{
+  "script_hash": "03f00f1f04a9e040",
+  "seed": "results/phase-6/e6.3-run1/codeX-S03.json",
+  "seed_assertions": 182,
+  "sessions": {
+    "2": 18,
+    "3": 13,
+    "4": 11
+  },
+  "total_turns": 42,
+  "ambiguous_refs": [
+    "S02:01",
+    "S02:02",
+    "S02:13",
+    "S03:09",
+    "S04:09"
+  ],
+  "teach_refs": {
+    "assertion": [
+      "S02:03",
+      "S02:07",
+      "S02:10",
+      "S02:14",
+      "S03:01",
+      "S03:04"
+    ],
+    "correction": [
+      "S02:16"
+    ]
+  },
+  "key_answers": {
+    "S02:04": "13",
+    "S02:05": "13",
+    "S02:06": "24",
+    "S02:08": "12",
+    "S02:09": "12",
+    "S02:11": "11",
+    "S02:12": "11",
+    "S02:15": "8",
+    "S02:17": "yes — 17 is 8 steps beyond 9",
+    "S02:18": "yes — 17 is 8 steps beyond 9",
+    "S03:02": "42",
+    "S03:03": "42",
+    "S03:05": "after 70 comes 71",
+    "S03:06": "after 55 comes 56",
+    "S03:07": "after 55 comes 56",
+    "S03:08": "needs_info",
+    "S03:10": "21",
+    "S03:11": "71",
+    "S03:12": "no — 52 is 4 steps beyond 48",
+    "S03:13": "63",
+    "S04:01": "8",
+    "S04:02": "46",
+    "S04:03": "13",
+    "S04:04": "yes — 64 is 39 steps beyond 25",
+    "S04:05": "30",
+    "S04:06": "after 71 comes 72",
+    "S04:07": "after 40 comes 41",
+    "S04:08": "after 40 comes 41",
+    "S04:10": "60",
+    "S04:11": "neither — 7 is 7"
+  },
+  "phrasing_facts": {
+    "phrasing:S02:03": "established",
+    "phrasing:S02:07": "established",
+    "phrasing:S02:10": "established",
+    "phrasing:S02:14": "obsolete",
+    "phrasing:S02:16": "established",
+    "phrasing:S03:01": "established",
+    "phrasing:S03:04": "established"
+  },
+  "phrasing_established_final": 6,
+  "phrasing_superseded_final": 1,
+  "phrasology_final": {
+    "state": "stable",
+    "correct_derivations": 17,
+    "events": 24,
+    "unresolved_conflicts": 0
+  },
+  "final_assertions": 245,
+  "line_end_final": 72,
+  "fabrication_turns": 0,
+  "files": [
+    "codeX-S01.json",
+    "codeX-S02.json",
+    "codeX-S03.json",
+    "codeX-S04.json",
+    "e6.4-report.json",
+    "session-S02.json",
+    "session-S03.json",
+    "session-S04.json"
+  ],
+  "run1_identical_to_run2": true
+}

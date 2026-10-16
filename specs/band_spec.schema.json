@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kainos-logos/specs/band_spec.schema.json",
+  "title": "Kainos band spec (bandgen v0.1)",
+  "description": "The per-band 'training data' source of truth for the tutor curriculum. A band spec declares everything a human authored (concepts, lessons, theorems, walls, the turn script, predictions); bandgen computes the rest (beds from reference functions, carry bytes from the seed store, pre-states from a runtime boot, letters/answers from a dry-run) and reports the diff. Freeze a band when the control report is clean.",
+  "type": "object",
+  "required": ["spec", "id", "session", "seed", "band", "sessions", "turns", "expect"],
+  "additionalProperties": false,
+  "properties": {
+    "spec": {"const": 1},
+    "id": {"type": "string", "pattern": "^e[0-9]+(\\.[0-9]+)?$"},
+    "session": {"type": "string", "pattern": "^S[0-9]+$"},
+    "title": {"type": "string"},
+    "seed": {
+      "type": "object",
+      "description": "The seed store: the previous band's OFFICIAL final store.",
+      "required": ["store", "identity", "total"],
+      "additionalProperties": false,
+      "properties": {
+        "store": {"type": "string", "description": "Repo-relative path to the seed store JSON"},
+        "identity": {"type": "string", "pattern": "^[0-9a-f]{16}$"},
+        "total": {"type": "integer", "minimum": 0},
+        "line_end": {"type": "integer", "minimum": 0}
+      }
+    },
+    "registry": {
+      "type": "string",
+      "description": "The brainstem concepts tuple to boot the runtime with, e.g. 'CONCEPTS_E617'. The spec's concepts must be a subset of it (the dry-run needs the full carried registry)."
+    },
+    "band": {
+      "type": "object",
+      "required": ["new_concepts", "concepts", "theorems", "new_fact_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "domain": {"type": "string"},
+        "college": {"type": "string"},
+        "status": {"type": "string", "description": "The band status word (e.g. 'unconditional' or 'conditional')"},
+        "unconditional": {"type": "boolean", "description": "true => P0 marker ABSENCE discipline (no conditional marker on band facts); false => the S12 marker rule (every conditional statement carries the marker)"},
+        "marker_kept_facts": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Carried facts that MUST keep the condition marker (no drift)"
+        },
+        "new_concepts": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+        "concepts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "prereqs", "lesson"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "name": {"type": "string"},
+              "prereqs": {"type": "array", "items": {"type": "string"}, "description": "Prereq concept ids; must point DOWN (exist in the seed registry, or be an earlier concept of this band)"},
+              "lesson": {
+                "type": "object",
+                "required": ["slug", "statement"],
+                "additionalProperties": false,
+                "properties": {
+                  "slug": {"type": "string", "description": "The lesson slug (fact id = 'lemma:' + slug)"},
+                  "statement": {"type": "string", "description": "The FULL canonical statement, verbatim (house rule: the lesson line is the exact stored byte)"}
+                }
+              }
+            }
+          }
+        },
+        "theorems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "concept", "parts", "statement"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string", "description": "The theorem slug (fact id = 'theorem:' + slug)"},
+              "concept": {"type": "string", "description": "The owning concept id"},
+              "parts": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true, "description": "The STRICT sanctioned premise set (lesson slugs); derive-scaffolds use exactly this set"},
+              "statement": {"type": "string", "description": "The full canonical theorem statement, verbatim"}
+            }
+          }
+        },
+        "new_fact_ids": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Every fact id this band stores (the 4+3 pattern), in store order: lessons first, then theorems"
+        }
+      }
+    },
+    "sessions": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1},
+    "turns": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The full labeled script, in run order (sessions in ascending order). Every turn declares its kind from the closed set.",
+      "items": {
+        "type": "object",
+        "required": ["ref", "question", "kind"],
+        "additionalProperties": false,
+        "properties": {
+          "ref": {"type": "string", "pattern": "^S[0-9]{2}:[0-9]{2}$", "description": "Zero-padded turn coordinate, e.g. S02:05 (session 2, fifth turn)"},
+          "question": {"type": "string"},
+          "kind": {
+            "enum": [
+              "probe", "gap", "teach", "derive", "scaffold", "missing_parts",
+              "wall", "zero_derive", "zero_touch", "unclassified", "carry"
+            ]
+          },
+          "bed": {
+            "type": "object",
+            "description": "present on 'probe' turns whose answer is an on-line BED (the grounded value the store must hold exact)",
+            "required": ["owner", "grounds", "expect"],
+            "additionalProperties": false,
+            "properties": {
+              "expect": {"enum": ["literal", "frac"]},
+              "value": {"type": "string", "description": "required when expect=literal: the exact expected answer byte; when expect=frac, the exact expected byte as rendered (the control also checks the reference value)"},
+              "template": {"type": "string", "description": "frac only: the answer template with {v} = the rendered fraction (default '{v}'); example 'it multiplies by {v}'"},
+              "ref": {"type": "string", "description": "frac only: the reference function name (reflib registry)"},
+              "args": {"type": "object", "description": "frac only: reference arguments"},
+              "owner": {"type": "string", "description": "The owning lesson fact id (lemma:*+slug)"},
+              "grounds": {"type": "array", "items": {"type": "string"}, "minItems": 1, "description": "The grounded citation fact ids (the store's own grounding set)"}
+            }
+          },
+          "cite": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true,
+            "description": "Theorem slugs the answer must quote the sanctioned statement for (feeds the theorem_allowed table)"
+          },
+          "concept": {"type": "string", "description": "gap only: the untaught concept whose absence the answer must name"},
+          "fragment": {"type": "string", "description": "gap only: the exact fragment the answer must carry (the concept / rule name as the mechanism names it)"},
+          "lesson": {"type": "string", "description": "teach only: the lesson slug being taught (fact id = 'lemma:' + slug)"},
+          "theorem": {"type": "string", "description": "derive/scaffold only: the theorem slug"},
+          "parts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true, "description": "derive: the sanctioned part set (must equal the theorem's parts); scaffold: the GIVEN (wrong/short) part set"},
+          "expected": {"type": "string", "description": "scaffold/missing_parts/zero_derive/zero_touch/unclassified only: the exact frozen answer byte (the mechanism's honest articulation, captured at control)"},
+          "wall": {
+            "type": "object",
+            "description": "wall only: the honest-wall declaration",
+            "required": ["id", "text", "articulation"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string", "pattern": "^W[0-9]+$"},
+              "text": {"type": "string", "description": "The exact frozen answer byte (starts with 'needs_info: ')"},
+              "articulation": {
+                "type": "array",
+                "items": {"type": "string"},
+                "minItems": 1,
+                "description": "The fragments the byte must carry; every wall must name its value(s) AND the line end"
+              }
+            }
+          },
+          "source": {
+            "type": "object",
+            "description": "carry only: where this surface's answer was first established (byte resolved from the band's SEED store via a seed-only runtime)",
+            "required": ["band", "turn"],
+            "additionalProperties": false,
+            "properties": {
+              "band": {"type": "string", "description": "The source experiment id, e.g. e6.16"},
+              "turn": {"type": "string", "pattern": "^S[0-9]{2}:[0-9]{2}$"}
+            }
+          }
+        }
+      }
+    },
+    "offscript": {
+      "type": "array",
+      "description": "Off-script standing probes run on the SEED-ONLY runtime (the SAVANT-TRACK carries); not part of the labeled script",
+      "items": {
+        "type": "object",
+        "required": ["question"],
+        "additionalProperties": false,
+        "properties": {
+          "question": {"type": "string"},
+          "expect_derived": {"type": "boolean", "default": true, "description": "the seed-only answer must be a grounded derivation"}
+        }
+      }
+    },
+    "beds": {
+      "type": "array",
+      "description": "The band's numeric bed table (the S*_BEDS equivalent). Every key is either computed from a reference function or a declared off-line literal.",
+      "items": {
+        "type": "object",
+        "required": ["key"],
+        "additionalProperties": false,
+        "properties": {
+          "key": {"type": "string"},
+          "ref": {"type": "string", "description": "reflib reference name"},
+          "args": {"type": "object"},
+          "value": {"description": "declared literal (off-line witness constants, orderings, line end)"},
+          "render": {"enum": ["slash", "frac_words", "json"], "default": "json"}
+        }
+      }
+    },
+    "expect": {
+      "type": "object",
+      "description": "The author's PREDICTIONS (control #1 replaces them; the D-e6z deviation class lives here, and the control report diffs prediction vs mechanism)",
+      "required": ["final_total", "letters"],
+      "additionalProperties": false,
+      "properties": {
+        "final_total": {"type": "integer"},
+        "letters": {
+          "type": "object",
+          "description": "Predicted per-session letter sequences (L U F T S C H A; e614 mapping + A for ambiguous)",
+          "additionalProperties": {"type": "string", "pattern": "^[LUFTSCHHA]*$"}
+        },
+        "mastery": {
+          "type": "object",
+          "description": "The new concepts' correct band-end mastery: {concept: {state, correct}}",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["state", "correct"],
+            "additionalProperties": false,
+            "properties": {"state": {"type": "string"}, "correct": {"type": "integer"}}
+          }
+        },
+        "prereq_gaps": {
+          "type": "object",
+          "description": "The new concepts' frozen prereq-gap sets at band end",
+          "additionalProperties": {"type": "array", "items": {"type": "string"}}
+        },
+        "seam": {
+          "type": "object",
+          "description": "The semantic-seam / discovery-candidate expectations (P5 family)",
+          "additionalProperties": true
+        },
+        "offline_watch": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "The declared OFF-LINE witness literals the hygiene scan must never find in on-line derived answers (the wall-named values, the standing-invitation numbers). The line end is deliberately NOT here."
+        }
+      }
+    }
+  }
+}

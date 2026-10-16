@@ -1,0 +1,8 @@
+A: d arg main/dt = -3.8775644
+C: d arg factor/dt (g~14.1) = 0.0024994944
+C: d arg factor/dt (g~98.8) = 5.1188311e-5
+C: d arg factor/dt (g~999.8) = 5.0020837e-7
+C: d arg factor/dt (g~11999.0) = 3.4728016e-9
+B: d arg product/dt = 0.022982243
+B+A total = -3.8545821
+(e7b1_c measured 8.71178)

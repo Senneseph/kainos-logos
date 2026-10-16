@@ -1,0 +1,62 @@
+{
+  "config": {
+    "seeds": [
+      7,
+      8,
+      9
+    ],
+    "n_total": 240,
+    "n_train": 180,
+    "n_test": 60,
+    "n_steps": 150,
+    "lr": 0.2,
+    "task": "y = w\u00b7x + 0.15\u00b7\u03a3 x_i\u00b7x_(i+1 mod 10), x ~ N(0,1)^10 (linear + cyclic pair interactions)",
+    "arms": {
+      "mlp": "10 -> 6 -> 6 -> 1 tanh, 115 params",
+      "fibonacci_recurrence": "X0 = tanh(W0 x + b0); shared f(v) = F v + bf; X_{k+2} = tanh(f(X_{k+1}) + X_k), k = 0..2; y = wr\u00b7X3 + br; 115 params (shared F applied 3x)"
+    },
+    "param_budget": {
+      "mlp": 115,
+      "fibonacci_recurrence": 115,
+      "equal": true
+    },
+    "training": "true full-batch GD (gradient accumulated over all training samples per step, single update), MSE, identical schedule and init distributions for both arms",
+    "verdict_rule": "adopt iff the recurrence beats the MLP on test RMSE for ALL 3 seeds; otherwise reject. Passed = an explicit verdict with documented margin (P8)."
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "mlp_rmse": 0.7115199652036374,
+      "fib_rmse": 0.6395762755333871,
+      "baseline_rmse_no_learning": 1.9864326139600004,
+      "fib_won": true
+    },
+    {
+      "seed": 8,
+      "mlp_rmse": 0.5343059620093351,
+      "fib_rmse": 0.5075088172324594,
+      "baseline_rmse_no_learning": 0.9619768726526139,
+      "fib_won": true
+    },
+    {
+      "seed": 9,
+      "mlp_rmse": 0.36252462792991874,
+      "fib_rmse": 0.35074864022673086,
+      "baseline_rmse_no_learning": 0.9126349392775797,
+      "fib_won": true
+    }
+  ],
+  "summary": {
+    "mlp_mean_test_rmse": 0.536116851714297,
+    "fib_mean_test_rmse": 0.49927791099752583,
+    "fib_wins": [
+      7,
+      8,
+      9
+    ],
+    "mean_relative_improvement": 0.0687143867964126
+  },
+  "verdict": "adopt",
+  "verdict_note": "recurrence beats MLP on all 3 seeds (mean relative improvement +6.87%)",
+  "passed": true
+}

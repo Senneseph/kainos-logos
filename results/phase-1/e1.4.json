@@ -1,0 +1,107 @@
+{
+  "clarification_rate": 0.7,
+  "config": {
+    "codeex": "seed lexicon + 2 see_also aliases (dash~hyphen, numeral~digit)",
+    "n_records": 10,
+    "set": "data/regex/vague_set.jsonl"
+  },
+  "justified_rate": 1.0,
+  "n_emitted": 3,
+  "n_escalated": 7,
+  "n_justified": 3,
+  "passed": true,
+  "per_item": [
+    {
+      "description": "three digits, then the dash thing",
+      "emitted": true,
+      "escalated": false,
+      "id": "vague_01",
+      "justified": true,
+      "pcre": "\\d{3}-",
+      "uncovered_classes": []
+    },
+    {
+      "candidates": [
+        "phone",
+        "phone number"
+      ],
+      "description": "a phone number",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_02"
+    },
+    {
+      "candidates": [
+        "line"
+      ],
+      "description": "a line thing",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_03"
+    },
+    {
+      "candidates": [
+        "mark"
+      ],
+      "description": "end of string, the mark thing",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_04"
+    },
+    {
+      "candidates": [
+        "slant"
+      ],
+      "description": "either a hyphen or the slant thing",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_05"
+    },
+    {
+      "candidates": [
+        "phone",
+        "phone number"
+      ],
+      "description": "exactly two letters, followed by a phone number",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_06"
+    },
+    {
+      "candidates": [
+        "glyph"
+      ],
+      "description": "a glyph, then a digit",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_07"
+    },
+    {
+      "description": "beginning of string, the dash thing",
+      "emitted": true,
+      "escalated": false,
+      "id": "vague_08",
+      "justified": true,
+      "pcre": "^-",
+      "uncovered_classes": []
+    },
+    {
+      "description": "a space, then the numeral thing",
+      "emitted": true,
+      "escalated": false,
+      "id": "vague_09",
+      "justified": true,
+      "pcre": "\\s\\d",
+      "uncovered_classes": []
+    },
+    {
+      "candidates": [
+        "slant"
+      ],
+      "description": "one or more words, then the slant thing",
+      "emitted": false,
+      "escalated": true,
+      "id": "vague_10"
+    }
+  ]
+}

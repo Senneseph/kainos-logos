@@ -1,0 +1,98 @@
+{
+  "addendum": "e6.6 X6 live LLM addendum (separately labelled; never part of the official value)",
+  "call_errors": [],
+  "coverage": {
+    "honestly ambiguous": 10,
+    "in-band grammar": 0,
+    "in-band lexicon": 0,
+    "other": {}
+  },
+  "diagnosis": "10/10 landed in honest ambiguity \u2014 the band-2 surface's first measured breadth gap (the band-1 pattern: 5/10 there). Per-question diagnosis: the model writes in WRITTEN MATH NOTATION while the frozen grammar is a single FORMS OF SPOKEN SENTENCES: (a) '3x = 12' / '3x + 4 = 13' \u2014 the compact coefficient form and the '=' sign are not in the frozen templates ('x + a is b', 'a times x is b'); (b) 'What is x if x + 5 = 9?' \u2014 the equals sign, the missing comma, and sentence-initial capitals all miss the frozen 'what is x, if x + a is b?' (a casefold + punctuation + equals normalization WOULD land this one \u2014 recorded as a potential surface widen, not built); (c) the motion questions are TWO-SENTENCE word problems with units ('meters per second', 'starts at the 0-meter mark') while the frozen kin family is ONE spoken sentence ('a cart starts at N and goes N every minute: ...'); (d) 'How many seconds will it take ... to travel a distance of 20 meters?' \u2014 the time family's frozen form asks 'starts at, goes, and is at'; a distance-travel phrasing is a different (unfrozen) frame. Zero silent writes: every one of the ten was honestly ambiguous on the official store \u2014 the boundary is the claim, the model's breadth is data. This is the SAME honesty boundary the band-1 shape strip measured, now on the aligned band.",
+  "elapsed_s": 10.5,
+  "endpoint": "http://192.168.1.65:11434/v1",
+  "model": "pi-qwen-fast:latest",
+  "n_questions": 10,
+  "rows": [
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 1,
+      "mode": null,
+      "parse_source": null,
+      "question": "1. A cart travels at a constant speed of 3 meters per second. How far does the cart travel in 5 seconds?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 2,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 2. What is x if x + 5 = 9?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 3,
+      "mode": null,
+      "parse_source": null,
+      "question": "3. A cart moves at a constant speed of 2 meters per second. How far does it travel in 5 seconds?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 4,
+      "mode": null,
+      "parse_source": null,
+      "question": "4. Solve for x: 3x = 12",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 5,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 5: A cart moves at a constant speed of 3 meters per second. How far will it travel in 4 seconds?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 6,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 6: Solve for x.  3 + x = 10",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 7,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 7: A robot cart moves at a constant speed of 2 meters per minute. If it starts at the 0-meter mark, how far from the start will it be after 5 minutes?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 8,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question number 8. Solve for x: x + 5 = 12",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 9,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 9: A robot cart moves at a constant speed of 4 meters per second. How many seconds will it take the cart to travel a distance of 20 meters?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 10,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 10: Solve for x. 3x + 4 = 13",
+      "slots": {}
+    }
+  ],
+  "surface": "results/phase-6/e6.6-run1/codeX-S04.json (the official e6.6 band surface)"
+}

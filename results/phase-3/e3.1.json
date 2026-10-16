@@ -1,0 +1,314 @@
+{
+  "config": {
+    "backend": "ollama-native /api/chat (think=false, format=json, temperature=0)",
+    "codex": "ONE shared default_codex() instance across both arms (deterministic first, then LLM); growth below",
+    "fallback": {
+      "events": [],
+      "max_attempts": 2,
+      "policy": "DeterministicKernel on backend failure",
+      "score": 0.5
+    },
+    "identical_downstream": true,
+    "model": {
+      "architecture": "qwen35moe",
+      "endpoint": "http://192.168.1.65:11434",
+      "model": "pi-qwen-fast:latest",
+      "modified_at": "2026-08-20T00:57:55.437521247-04:00",
+      "parameter_count": "35.5B",
+      "quant_type": 15
+    },
+    "models_online": [
+      "fable-fusion-fast:latest",
+      "fable-fusion:latest",
+      "hf.co/PiehSoft/Qwen3.6-40B-Deckard-MTP:Q4_K_M",
+      "hf.co/unsloth/Qwen3.6-27B-GGUF:UD-Q4_K_XL",
+      "pi-qwen-fast:latest",
+      "qwen3.6:35b-a3b-mtp-q4_K_M",
+      "qwen36-full:latest"
+    ],
+    "n_records": 12,
+    "set": "data/regex/open_phrasing.jsonl",
+    "set_hash": "4642a2a3892d68ba3415a1461388201fe8644e7488c162bbec9b6c22132e4b47",
+    "timeout_s": 600.0
+  },
+  "deterministic_accuracy": 0.0,
+  "deterministic_byte_exact_rate": 0.0,
+  "llm_accuracy": 1.0,
+  "llm_byte_exact_rate": 0.9167,
+  "n_det_ok": 0,
+  "n_llm_ok": 12,
+  "passed": true,
+  "per_item": [
+    {
+      "description": "match stuff that's just numbers and letters, at least two of them",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: \"that ' s just numbers and letters , at least two of them\"",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "(?:[A-Za-z]|\\d){2,}",
+      "id": "op_01",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "(?:[A-Za-z]|\\d){2,}",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "a string of word characters",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'of word characters'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "\\w+",
+      "id": "op_02",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "\\w+",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "a single letter at the very start of string",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'letter at the very start of string'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "^[A-Za-z]",
+      "id": "op_03",
+      "llm": {
+        "byte_exact": false,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "^[A-Za-z]{1}",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "some whitespace padding",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'whitespace padding'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "\\s+",
+      "id": "op_04",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "\\s+",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "an alphanumeric run",
+      "deterministic": {
+        "byte_exact": false,
+        "candidates": [
+          "alphanumeric",
+          "alphanumeric run"
+        ],
+        "ok": false,
+        "parse_score": 1.0,
+        "pcre": null,
+        "status": "escalated"
+      },
+      "expected_pcre": "(?:[A-Za-z]|\\d)+",
+      "id": "op_05",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "(?:[A-Za-z]|\\d)+",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "word characters until the end of string",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'characters until the end of string'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "\\w*$",
+      "id": "op_06",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "\\w*$",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "digits, at least two of them",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: quantifier {'kind': 'at_least', 'n': 2} has no class to apply to",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "\\d{2,}",
+      "id": "op_07",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "\\d{2,}",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "a character, then end of string",
+      "deterministic": {
+        "byte_exact": false,
+        "candidates": [
+          "character"
+        ],
+        "ok": false,
+        "parse_score": 1.0,
+        "pcre": null,
+        "status": "escalated"
+      },
+      "expected_pcre": ".$",
+      "id": "op_08",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": ".$",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "beginning of string with a letter, then the rest can be anything",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'with a letter , then the rest can be anything'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "^[A-Za-z].*",
+      "id": "op_09",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "^[A-Za-z].*",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "letters only, as many as you want",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'only , as many as you want'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "[A-Za-z]*",
+      "id": "op_10",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "[A-Za-z]*",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "one or more digits right after the start of string",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'right after the start of string'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "^\\d+",
+      "id": "op_11",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "^\\d+",
+        "status": "ok"
+      }
+    },
+    {
+      "description": "word characters, at least one of them",
+      "deterministic": {
+        "byte_exact": false,
+        "note": "ValueError: unparsed trailing tokens: 'characters , at least one of them'",
+        "ok": false,
+        "pcre": null,
+        "status": "parse_error"
+      },
+      "expected_pcre": "\\w{1,}",
+      "id": "op_12",
+      "llm": {
+        "byte_exact": true,
+        "codex_generation_delta": 0,
+        "fallback_used": false,
+        "judge": "PASS: full-match on every positive, no match on every negative",
+        "ok": true,
+        "parse_score": 1.0,
+        "pcre": "\\w{1,}",
+        "status": "ok"
+      }
+    }
+  ]
+}

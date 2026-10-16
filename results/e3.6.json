@@ -1,0 +1,92 @@
+{
+  "config": {
+    "clarification_policy": {
+      "applied_default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+      "high_stakes": "ask",
+      "low_stakes": "default",
+      "policy_ok": true,
+      "rule": "small -> choose; large+cheap -> explore; large+high-stakes -> ask; ambiguous+low-stakes -> default (recorded, overridable)"
+    },
+    "commit": "be439a3",
+    "creativity": {
+      "all_valid": true,
+      "distinct_plans": [
+        "ASK_USER -> FETCH_TEXT",
+        "FETCH_TEXT",
+        "SEARCH_CODEX -> ASK_USER -> FETCH_TEXT",
+        "SEARCH_CODEX -> WRITE_TEXT"
+      ],
+      "per_seed": {
+        "7": [
+          [
+            "FETCH_TEXT"
+          ],
+          [
+            "ASK_USER",
+            "FETCH_TEXT"
+          ],
+          [
+            "SEARCH_CODEX",
+            "WRITE_TEXT"
+          ]
+        ],
+        "8": [
+          [
+            "FETCH_TEXT"
+          ],
+          [
+            "SEARCH_CODEX",
+            "WRITE_TEXT"
+          ],
+          [
+            "ASK_USER",
+            "FETCH_TEXT"
+          ]
+        ],
+        "9": [
+          [
+            "FETCH_TEXT"
+          ],
+          [
+            "SEARCH_CODEX",
+            "ASK_USER",
+            "FETCH_TEXT"
+          ],
+          [
+            "ASK_USER",
+            "FETCH_TEXT"
+          ]
+        ]
+      },
+      "seed": [
+        7,
+        8,
+        9
+      ],
+      "spread_floor": 2,
+      "spread_met": true,
+      "t0_greedy_deterministic": true,
+      "t0_plans": [
+        [
+          "FETCH_TEXT"
+        ]
+      ],
+      "temperature": 0.5,
+      "traces_record_temperature_and_seed": true
+    },
+    "dataset_hash": null,
+    "refusal": 1.0,
+    "seed": 0,
+    "validity": 1.0
+  },
+  "evidence": [
+    "results/phase-3/e3.6.json"
+  ],
+  "hypothesis": "the planner plans only over declared capabilities: valid plans for achievables, NO VALID PLAN (named gap + nearest plan) for the rest \u2014 creativity stays constraint-valid",
+  "metric": "plan validity on achievable goals; honest-refusal rate (correct gap, zero fabricated actions) on unachievable goals; creativity spread at T>0 (distinct valid plans, all constraint-valid, trace records T+seed); search-space-aware clarification policy",
+  "name": "e3.6",
+  "passed": true,
+  "skipped": false,
+  "threshold": "validity == 1.0; refusal == 1.0; spread >= 2 distinct valid plans with T=0 deterministic; policy ask (high stakes) / default (low stakes)",
+  "value": 1.0
+}

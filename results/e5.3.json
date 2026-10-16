@@ -1,0 +1,38 @@
+{
+  "config": {
+    "checks": 8,
+    "checks_passed": 8,
+    "commit": "b988e943a96ef59899e672b8ff9445ec6c326d57",
+    "dataset_hash": null,
+    "deviations": [
+      "D-e5h (E5.1 budget family deferred \u2014 no verifiable cross-episode signal)",
+      "D-e5i (R2-claim round omitted \u2014 information-free or second-order)",
+      "D-e5j (symmetric leg condition; sender-side adaptation out of scope)",
+      "D-e5k (episode-scoped disclosure Say instead of kernel Reveal)",
+      "D-e5l (frozen arm gets the same experience; policy never reads it)",
+      "D-e5m (C-family checks operationalized as exact frozen constants)"
+    ],
+    "episodes_per_leg": 48,
+    "frozen_rho": "1/4",
+    "leg_rates": [
+      "0/1",
+      "7/20",
+      "7/10"
+    ],
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-5/e5.3.json",
+    "results/phase-5/e5.3-A-l1-00.json",
+    "results/phase-5/e5.3-A-l2-47.json",
+    "results/phase-5/e5.3-F-l1-00.json",
+    "results/phase-5/e5.3-F-l2-47.json"
+  ],
+  "hypothesis": "An agent whose trust parameter is STORE DATA (verified per-episode labels, Haldane-Laplace update) develops across episodes \u2014 improving commit error and trust calibration within every reliability leg, tracking regime changes, and reaching the exactly-calibrated opponent in the late pool \u2014 while the identical V1-capped agent with a FROZEN policy (same capability set, same episodes, same experience, policy fixed at rho=1/4) does not improve: the delta is development, not drift.",
+  "metric": "acceptance checks passed (0-8)",
+  "name": "e5.3",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

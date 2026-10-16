@@ -1,0 +1,720 @@
+{
+ "spec": 1,
+ "id": "e6.19",
+ "session": "S15",
+ "title": "S15 e6.19 \u2014 the L-function of the city (BSD island band 2)",
+ "seed": {
+  "store": "results/phase-6/e6.18-run1/codeX-S04.json",
+  "identity": "f923ab40fbdff7d2",
+  "total": 1457,
+  "line_end": 84
+ },
+ "registry": "kainos.tutor.e619:CONCEPTS_E619",
+ "band": {
+  "domain": "bsd",
+  "college": "1",
+  "unconditional": true,
+  "new_concepts": [
+   "euler-factor",
+   "local-form",
+   "l-partial",
+   "l-correction"
+  ],
+  "concepts": [
+   {
+    "id": "euler-factor",
+    "name": "the euler factor: the term each prime of the line carries into the L-product \u2014 the uniform two-term form at every prime, and the record's one-term form at the primes where the curve ramifies",
+    "prereqs": [
+     "curve-shadow",
+     "family-factor"
+    ],
+    "lesson": {
+     "slug": "l-factor-def",
+     "statement": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second"
+    }
+   },
+   {
+    "id": "local-form",
+    "name": "the local form: at a prime dividing the conductor the record's factor has one term \u2014 the additive prime carries the unit, the multiplicative prime carries one plus one over p with its sign of record",
+    "prereqs": [
+     "euler-factor"
+    ],
+    "lesson": {
+     "slug": "l-local-def",
+     "statement": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one"
+    }
+   },
+   {
+    "id": "l-partial",
+    "name": "the line partial of the L-family: the product of the factors the line holds, an exact rational; adding a prime multiplies the partial by the factor it carries, and the limit past the line end is declared, not computed",
+    "prereqs": [
+     "euler-factor",
+     "line-partial"
+    ],
+    "lesson": {
+     "slug": "l-partial-def",
+     "statement": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line"
+    }
+   },
+   {
+    "id": "l-correction",
+    "name": "the ramification correction: the ratio of the record's factor to the uniform one at the ramified primes \u2014 the record partial is the uniform partial times the product of the corrections, both sides exact on the line",
+    "prereqs": [
+     "local-form"
+    ],
+    "lesson": {
+     "slug": "l-corr-def",
+     "statement": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds"
+    }
+   }
+  ],
+  "theorems": [
+   {
+    "id": "l-added-term",
+    "concept": "l-partial",
+    "parts": [
+     "l-partial-def",
+     "l-factor-def"
+    ],
+    "statement": "the added-term rule held on my line: for both panel members and every prime of the line, the partial product up to the prime is the partial product up to the previous prime times the factor the prime carries \u2014 in the uniform form and in the record form, the exact rationals agreeing prime by prime, the full record at the line end 84"
+   },
+   {
+    "id": "l-record-identity",
+    "concept": "l-correction",
+    "parts": [
+     "l-corr-def",
+     "l-factor-def"
+    ],
+    "statement": "the record identity held on my line: the record partial to the line end is the uniform partial times the ramification corrections \u2014 four-fifths for the first panel member, fourteen hundred and six over fourteen hundred and seven for the second \u2014 and the store holds both sides as exact rationals, at the line end 84"
+   },
+   {
+    "id": "l-ramified-unit",
+    "concept": "local-form",
+    "parts": [
+     "l-local-def",
+     "l-factor-def"
+    ],
+    "statement": "the ramified factors of my panel held on the line: at two for the first member the record's factor is the unit one against the uniform factor five over four, and at thirty-seven for the second member the record's factor is one plus one over thirty-seven against the uniform factor fourteen hundred and seven over thirteen hundred and sixty-nine \u2014 the two-term form replaced by the one-term, exactly, at the line end 84"
+   }
+  ],
+  "new_fact_ids": [
+   "lemma:l-factor-def",
+   "lemma:l-local-def",
+   "lemma:l-partial-def",
+   "lemma:l-corr-def",
+   "theorem:l-added-term",
+   "theorem:l-record-identity",
+   "theorem:l-ramified-unit"
+  ],
+  "marker_kept_facts": [
+   "lemma:conditional-def",
+   "lemma:rh-bound-scale",
+   "lemma:rh-upf",
+   "theorem:two-routes-one-guarantee"
+  ]
+ },
+ "sessions": [
+  2,
+  3,
+  4
+ ],
+ "turns": [
+  {
+   "ref": "S02:01",
+   "question": "what factor does the first panel member carry at prime 3 in the uniform form?",
+   "kind": "gap",
+   "concept": "euler-factor",
+   "fragment": "the euler factor: the term each prime of the line carries into the L-product \u2014 the uniform two-term form at every prime, and the record's one-term form at the primes where the curve ramifies"
+  },
+  {
+   "ref": "S02:02",
+   "question": "what does the uniform L product of the second panel member hold at height 11?",
+   "kind": "gap",
+   "concept": "l-partial",
+   "fragment": "the line partial of the L-family: the product of the factors the line holds, an exact rational; adding a prime multiplies the partial by the factor it carries, and the limit past the line end is declared, not computed"
+  },
+  {
+   "ref": "S02:03",
+   "question": "state the l-factor-def rule",
+   "kind": "gap",
+   "concept": "euler-factor",
+   "fragment": "the l-factor-def rule"
+  },
+  {
+   "ref": "S02:04",
+   "question": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+   "kind": "teach",
+   "lesson": "l-factor-def"
+  },
+  {
+   "ref": "S02:05",
+   "question": "what factor does the first panel member carry at prime 3 in the uniform form?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:06",
+   "question": "what factor does the second panel member carry at prime 2 in the uniform form?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:07",
+   "question": "what factor does the first panel member carry at prime 2 in the record form?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:08",
+   "question": "what factor does the second panel member carry at prime 37 in the record form?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:09",
+   "question": "what factor does the first panel member carry at prime 5 in the record form?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:10",
+   "question": "what factor does the second panel member carry at prime 4 in the record form?",
+   "kind": "zero_touch",
+   "expected": "needs_info: 4 is a composite on my line \u2014 the factor of the L product is carried at the primes of the line, the composites take their factors from the split"
+  },
+  {
+   "ref": "S02:11",
+   "question": "what does the first panel member's L product hold at my line end?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.18",
+    "turn": "S04:03"
+   }
+  },
+  {
+   "ref": "S02:12",
+   "question": "state the l-partial-def rule",
+   "kind": "gap",
+   "concept": "l-partial",
+   "fragment": "the l-partial-def rule"
+  },
+  {
+   "ref": "S02:13",
+   "question": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line",
+   "kind": "teach",
+   "lesson": "l-partial-def"
+  },
+  {
+   "ref": "S02:14",
+   "question": "what does the uniform L product of the second panel member hold at height 11?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:15",
+   "question": "what does the uniform L product of the first panel member hold at height 23?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:16",
+   "question": "what does the uniform L product of the second panel member hold at height 59?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:17",
+   "question": "how does the uniform partial of the second panel member change when i add the prime 5?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:18",
+   "question": "derive l-added-term from l-partial-def and l-factor-def",
+   "kind": "derive",
+   "theorem": "l-added-term",
+   "parts": [
+    "l-partial-def",
+    "l-factor-def"
+   ]
+  },
+  {
+   "ref": "S02:19",
+   "question": "state the l-factor-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:20",
+   "question": "what does the second panel member's L product hold at my line end?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.18",
+    "turn": "S04:04"
+   }
+  },
+  {
+   "ref": "S03:01",
+   "question": "state the l-local-def rule",
+   "kind": "gap",
+   "concept": "local-form",
+   "fragment": "the l-local-def rule"
+  },
+  {
+   "ref": "S03:02",
+   "question": "derive l-ramified-unit from l-local-def and l-factor-def",
+   "kind": "missing_parts",
+   "theorem": "l-ramified-unit",
+   "parts": [
+    "l-local-def",
+    "l-factor-def"
+   ],
+   "expected": "i have not been taught the l-local-def \u2014 the rule for l-ramified-unit needs it before i can put it together"
+  },
+  {
+   "ref": "S03:03",
+   "question": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one",
+   "kind": "teach",
+   "lesson": "l-local-def"
+  },
+  {
+   "ref": "S03:04",
+   "question": "in the record form what factor does the first panel member carry at its ramified prime?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:05",
+   "question": "in the record form what factor does the second panel member carry at its ramified prime?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:06",
+   "question": "derive l-ramified-unit from l-local-def and l-factor-def",
+   "kind": "derive",
+   "theorem": "l-ramified-unit",
+   "parts": [
+    "l-local-def",
+    "l-factor-def"
+   ]
+  },
+  {
+   "ref": "S03:07",
+   "question": "state the l-corr-def rule",
+   "kind": "gap",
+   "concept": "l-correction",
+   "fragment": "the l-corr-def rule"
+  },
+  {
+   "ref": "S03:08",
+   "question": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds",
+   "kind": "teach",
+   "lesson": "l-corr-def"
+  },
+  {
+   "ref": "S03:09",
+   "question": "what is the ramification correction of the first panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:10",
+   "question": "what is the ramification correction of the second panel member?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:11",
+   "question": "does the record partial equal the uniform partial times the ramification correction of the first panel member at my line end?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:12",
+   "question": "does the record partial equal the uniform partial times the ramification correction of the second panel member at my line end?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:13",
+   "question": "derive l-record-identity from l-corr-def",
+   "kind": "scaffold",
+   "theorem": "l-record-identity",
+   "parts": [
+    "l-corr-def"
+   ],
+   "expected": "i can see the parts you name, but the rule for l-record-identity wants its exact set"
+  },
+  {
+   "ref": "S03:14",
+   "question": "derive l-record-identity from l-corr-def and l-factor-def",
+   "kind": "derive",
+   "theorem": "l-record-identity",
+   "parts": [
+    "l-corr-def",
+    "l-factor-def"
+   ]
+  },
+  {
+   "ref": "S03:15",
+   "question": "what does the record L product of the first panel member hold at height 23?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:16",
+   "question": "what does the record L product of the second panel member hold at height 23?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:17",
+   "question": "what does the record L product of the second panel member hold at height 41?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:18",
+   "question": "are all the ramified primes of record of the panel on my line?",
+   "kind": "wall",
+   "wall": {
+    "id": "W4",
+    "text": "needs_info: on both members of my panel every ramified prime of record sits on the line \u2014 two for the first, thirty-seven for the second \u2014 so the correction my line holds is the full correction of record; other curves of record have ramified primes past my line, and for them the correction the line would hold is only a part, named as such, at the line end 84",
+    "articulation": [
+     "both members",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:19",
+   "question": "what does the record say the L product of the second panel member does at s equal to one?",
+   "kind": "wall",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the record says the L product of the second panel member vanishes at s equal to one, of order one \u2014 the analytic side of the statement that the conjecture reads as the rank one my censuses name for the curve; my record partial at the line end holds its exact rational, far from zero \u2014 the vanishing is a limit fact past my line, named here of record, not reached, at the line end 84",
+    "articulation": [
+     "order one",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:20",
+   "question": "what does the record say the L product of the first panel member does at s equal to one?",
+   "kind": "wall",
+   "wall": {
+    "id": "W2",
+    "text": "needs_info: the record says the L product of the first panel member at s equal to one is nonzero, order zero of vanishing \u2014 the analytic side that reads the rank zero my censuses name for the curve; my uniform partial holds its exact rational at the line end, consistent with nonzero, but nonzero at the limit is a limit fact past my line \u2014 named, not reached, at the line end 84",
+    "articulation": [
+     "nonzero",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:21",
+   "question": "where in the half-plane do the L products of the panel converge?",
+   "kind": "wall",
+   "wall": {
+    "id": "W3",
+    "text": "needs_info: the L products of the panel converge only where the real part of s is above one \u2014 the same half-plane my store already holds for the zeta family; at s equal to one the product sits at its boundary, and its value and order of vanishing are limit facts past my line; the line holds the partials, the walls name the limits, at the line end 84",
+    "articulation": [
+     "real part of s is above one",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:01",
+   "question": "what does the uniform L product of the first panel member hold at height 83?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:02",
+   "question": "what does the record L product of the second panel member hold at height 83?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:03",
+   "question": "what does the record L product of the first panel member hold at height 83?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:04",
+   "question": "how does the record partial of the first panel member change when i add the prime 2?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:05",
+   "question": "how does the uniform partial of the first panel member change when i add the prime 2?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:06",
+   "question": "what did the L band add to the store?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:07",
+   "question": "state the l-local-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:08",
+   "question": "state the l-partial-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:09",
+   "question": "state the l-corr-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:10",
+   "question": "does this band state the BSD?",
+   "kind": "wall",
+   "wall": {
+    "id": "W5",
+    "text": "needs_info: this band does not state the BSD: the statement equating the order of vanishing of the L product at s equal to one with the rank of the group of rational points is the summit fact of the island; the object of this band is the L-family itself \u2014 the factors, the partials, and the corrections my line holds \u2014 while the order of vanishing and the rank sit on their walls (of record, past my line), at the line end 84",
+    "articulation": [
+     "summit fact of the island",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:11",
+   "question": "does the L band say anything conditional on the Riemann hypothesis?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:12",
+   "question": "what is the queue above my line?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:02"
+   }
+  },
+  {
+   "ref": "S04:13",
+   "question": "state the l-factor-def rule",
+   "kind": "probe"
+  }
+ ],
+ "offscript": [
+  {
+   "question": "state the kstbound rule"
+  }
+ ],
+ "beds": [
+  {
+   "key": "line_end",
+   "value": 84
+  },
+  {
+   "key": "ramified_A",
+   "ref": "ramified_pair",
+   "args": {
+    "panel": "A"
+   }
+  },
+  {
+   "key": "ramified_B",
+   "ref": "ramified_pair",
+   "args": {
+    "panel": "B"
+   }
+  },
+  {
+   "key": "corr_A",
+   "ref": "lcorr",
+   "args": {
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "corr_B",
+   "ref": "lcorr",
+   "args": {
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "uniform_84_A",
+   "ref": "lpartial_uniform",
+   "args": {
+    "h": 84,
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "uniform_84_B",
+   "ref": "lpartial_uniform",
+   "args": {
+    "h": 84,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "record_84_A",
+   "ref": "lpartial_record",
+   "args": {
+    "h": 84,
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "record_84_B",
+   "ref": "lpartial_record",
+   "args": {
+    "h": 84,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "lfactor_A_2_rec",
+   "ref": "lfactor",
+   "args": {
+    "p": 2,
+    "panel": "A",
+    "form": "record"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "lfactor_B_37_rec",
+   "ref": "lfactor",
+   "args": {
+    "p": 37,
+    "panel": "B",
+    "form": "record"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "lfactor_A_5_rec",
+   "ref": "lfactor",
+   "args": {
+    "p": 5,
+    "panel": "A",
+    "form": "record"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotuni_B_11",
+   "ref": "lpartial_uniform",
+   "args": {
+    "h": 11,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotuni_A_23",
+   "ref": "lpartial_uniform",
+   "args": {
+    "h": 23,
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotuni_B_59",
+   "ref": "lpartial_uniform",
+   "args": {
+    "h": 59,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotrec_A_23",
+   "ref": "lpartial_record",
+   "args": {
+    "h": 23,
+    "panel": "A"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotrec_B_23",
+   "ref": "lpartial_record",
+   "args": {
+    "h": 23,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "spotrec_B_41",
+   "ref": "lpartial_record",
+   "args": {
+    "h": 41,
+    "panel": "B"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "added_B_5_uni",
+   "ref": "lfactor",
+   "args": {
+    "p": 5,
+    "panel": "B",
+    "form": "uniform"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "added_B_37_rec",
+   "ref": "lfactor",
+   "args": {
+    "p": 37,
+    "panel": "B",
+    "form": "record"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "added_A_2_uni",
+   "ref": "lfactor",
+   "args": {
+    "p": 2,
+    "panel": "A",
+    "form": "uniform"
+   },
+   "render": "frac_words"
+  },
+  {
+   "key": "added_A_2_rec",
+   "ref": "lfactor",
+   "args": {
+    "p": 2,
+    "panel": "A",
+    "form": "record"
+   },
+   "render": "frac_words"
+  }
+ ],
+ "expect": {
+  "final_total": 1522,
+  "letters": {
+   "S02": "UUULSSSSSHSULSSSSTSS",
+   "S03": "UFLSSTULSSSSFTSSSHHHH",
+   "S04": "SSSSSSSSSHSSS"
+  },
+  "mastery": {
+   "euler-factor": {
+    "state": "stable",
+    "correct": 8
+   },
+   "local-form": {
+    "state": "stable",
+    "correct": 4
+   },
+   "l-partial": {
+    "state": "stable",
+    "correct": 14
+   },
+   "l-correction": {
+    "state": "stable",
+    "correct": 7
+   }
+  },
+  "prereq_gaps": {},
+  "seam": {
+   "expected": "agreement"
+  },
+  "offline_watch": []
+ }
+}

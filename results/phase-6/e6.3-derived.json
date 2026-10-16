@@ -1,0 +1,70 @@
+{
+  "applied_fixes": 0,
+  "author_stats": {
+    "1": {
+      "lesson-succ": 40
+    },
+    "2": {
+      "drill": 6,
+      "drill-expose": 2,
+      "lesson-rule": 2,
+      "lesson-succ": 30
+    },
+    "3": {
+      "drill": 16,
+      "lesson-rule": 1
+    }
+  },
+  "boundary_contacts": 0,
+  "converged_at_session": 3,
+  "files": [
+    "codeX-S01.json",
+    "codeX-S02.json",
+    "codeX-S03.json",
+    "loop-report.json",
+    "session-S01.json",
+    "session-S02.json",
+    "session-S03.json"
+  ],
+  "final_store_total": 182,
+  "gaps_total": 0,
+  "line_ends": {
+    "1": 40,
+    "2": 70,
+    "3": 70
+  },
+  "reports_sha256": "9339b7e25ce0c46b",
+  "run2_identical": true,
+  "ticket_keys": [],
+  "trajectory": {
+    "1": {
+      "add-two-digit": "unexposed",
+      "add-within-10": "unexposed",
+      "compare-numbers": "unexposed",
+      "count-successor": "exposed",
+      "mult-within-100": "unexposed",
+      "sub-within-30": "unexposed"
+    },
+    "2": {
+      "add-two-digit": "practicing",
+      "add-within-10": "practicing",
+      "compare-numbers": "exposed",
+      "count-successor": "stable",
+      "mult-within-100": "unexposed",
+      "sub-within-30": "exposed"
+    },
+    "3": {
+      "add-two-digit": "stable",
+      "add-within-10": "stable",
+      "compare-numbers": "stable",
+      "count-successor": "stable",
+      "mult-within-100": "stable",
+      "sub-within-30": "stable"
+    }
+  },
+  "turn_counts": [
+    40,
+    40,
+    17
+  ]
+}

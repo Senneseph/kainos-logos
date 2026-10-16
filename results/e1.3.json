@@ -1,0 +1,21 @@
+{
+  "config": {
+    "after_pcre": "\\d{3}-\\d{3}-\\d{4}",
+    "after_restart_pcre": "\\d{3}-\\d{3}-\\d{4}",
+    "assertion_present": true,
+    "before_pcre": null,
+    "commit": "unknown",
+    "dataset_hash": null,
+    "judge": true,
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-1/e1.3.json"
+  ],
+  "hypothesis": "a CODEX-taught fact (US phone number) is absent before teaching, present after, survives a full restart of the pipeline with the kernel unchanged, and explains with its user-instruction provenance",
+  "metric": "teach -> describe -> restart -> describe, with provenance shown",
+  "name": "e1.3",
+  "passed": true,
+  "threshold": "all six conditions hold (score == 1.0)",
+  "value": 1.0
+}

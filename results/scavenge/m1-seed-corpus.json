@@ -1,0 +1,27 @@
+{
+  "cache_stats": {
+    "cached": {
+      "hits": 70,
+      "misses": 5,
+      "terms": 5
+    },
+    "uncached": {
+      "hits": 0,
+      "misses": 0,
+      "terms": 0
+    }
+  },
+  "config": {
+    "corpus": "data/regex/seed_corpus.jsonl",
+    "corpus_hash": "e68db0bb2b6deb278a1640d4900f9d2c4b25ff958892a0babc129e17106d09f2",
+    "n_records": 55,
+    "note": "seed corpus stands in for the E1.2 compositional set until Step 10 lands; re-run run_m1_benchmark() against the E1.2 set before the final M1 verdict (Scavenge Step I)",
+    "phase": "parse+resolve+emit on one shared seeded CODEX (no judge subprocess)"
+  },
+  "identical": true,
+  "speedup": 1.7336180442266094,
+  "wall_ns": {
+    "cached": 556588,
+    "uncached": 964911
+  }
+}

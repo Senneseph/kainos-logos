@@ -1,0 +1,365 @@
+{
+  "arm": {
+    "backend": "none",
+    "codec": "canonical",
+    "note": "hermetic: the live LLM is the separately-labelled addendum (X6)"
+  },
+  "checks": [
+    {
+      "check": 1,
+      "detail": {
+        "e51_claims": {
+          "1-clean-recovery-all-variants": true,
+          "10-all-runs-no-budget-rejections-no-corruption": true,
+          "11-all-24-commits-are-20-cell-reconstructions": true,
+          "12-matrix-completeness-exactly-the-e5-1-set": true,
+          "2-clean-redundancy-v1-v2-exact-1-of-9": true,
+          "3-clean-redundancy-v0-exact-5-of-13-and-gap": true,
+          "4-false-v1-detection-round-4-and-recovery": true,
+          "5-false-v2-detection-round-4-and-recovery": true,
+          "6-false-v0-structurally-uncorrectable": true,
+          "7-false-disputed-pairs-preserved-in-all-four-stores": true,
+          "8-all-runs-zero-audit-violations": true,
+          "9-all-runs-zero-view-leaks": true
+        },
+        "e51_claims_passed": 12,
+        "forced_off_attempt": {
+          "n_corrects_in_transcript": 0,
+          "named_gap": "capability 'assert_about_other' is not declared \u2014 action not executed (named gap, never guessed)",
+          "rejected": true
+        }
+      },
+      "name": "x1-e51-claims-survive-exactly",
+      "passed": true
+    },
+    {
+      "check": 2,
+      "detail": {
+        "stores_identical": {
+          "e5.4-clean-v0": true,
+          "e5.4-clean-v1": true,
+          "e5.4-clean-v2": true,
+          "e5.4-false-v0": true,
+          "e5.4-false-v1": true,
+          "e5.4-false-v2": true
+        },
+        "stripped_hash_match": {
+          "e5.4-clean-v0": true,
+          "e5.4-clean-v1": true,
+          "e5.4-clean-v2": true,
+          "e5.4-false-v0": true,
+          "e5.4-false-v1": true,
+          "e5.4-false-v2": true
+        }
+      },
+      "name": "x2-seam-neutrality-bit-level",
+      "passed": true
+    },
+    {
+      "check": 3,
+      "detail": {
+        "expected": {
+          "a_beliefs_about_b": 0,
+          "b_beliefs_about_a": 1,
+          "correct_cells": {
+            "a": 20,
+            "b": 20
+          },
+          "disputes": {
+            "a": 0,
+            "b": 2
+          },
+          "drops_logged": 1,
+          "first_correct": {
+            "by": "b",
+            "object": "row3:door mine=c3 other=c4",
+            "round": 4,
+            "target": "a"
+          },
+          "n_corrects": 1,
+          "recovery": true
+        },
+        "observed": {
+          "a_beliefs_about_b": 0,
+          "b_beliefs_about_a": 1,
+          "correct_cells": {
+            "a": 20,
+            "b": 20
+          },
+          "disputes": {
+            "a": 0,
+            "b": 2
+          },
+          "drops_logged": 1,
+          "first_correct": {
+            "by": "b",
+            "object": "row3:door mine=c3 other=c4",
+            "round": 4,
+            "target": "a"
+          },
+          "n_corrects": 1,
+          "recovery": true
+        }
+      },
+      "name": "x3-honest-drop-measured",
+      "passed": true
+    },
+    {
+      "check": 4,
+      "detail": {
+        "arm": {
+          "backend": "none",
+          "codec": "canonical",
+          "note": "hermetic: the live LLM is the separately-labelled addendum (X6)"
+        },
+        "frozen_present": true,
+        "grammar_sha": "sha256:0854c8984949c6b2e373162bfc015d7d80284381403ab42538d194c707d3ca9d",
+        "grammar_sha_match": true,
+        "llm_seam": {
+          "backend_object": "MockBackend",
+          "prompt_sample": "Form 1. Sender: a. Cell: r1c2. Value: door.",
+          "renderer": "llm:mock"
+        }
+      },
+      "name": "x4-seam-and-skip-record",
+      "passed": true
+    },
+    {
+      "check": 5,
+      "detail": {
+        "sample": {
+          "e5.4-clean-v0": "sha256:cfdfbc38e67c11bbb",
+          "e5.4-clean-v1": "sha256:f1bd88ae72962c0e8",
+          "e5.4-clean-v2": "sha256:031a69c910ea9e543"
+        }
+      },
+      "name": "x5-codec-arm-determinism",
+      "passed": true
+    }
+  ],
+  "checks_passed": 5,
+  "checks_total": 5,
+  "claim": "The E5.1 acceptance survives the natural-language message surface exactly; the surface is a semantic-transparent transport; a surface drop is honest and measured (E5.4 X1-X5)",
+  "experiment": "e5.4",
+  "forced_v0_attempt": {
+    "n_corrects_in_transcript": 0,
+    "named_gap": "capability 'assert_about_other' is not declared \u2014 action not executed (named gap, never guessed)",
+    "rejected": true
+  },
+  "grammar_sha": "sha256:0854c8984949c6b2e373162bfc015d7d80284381403ab42538d194c707d3ca9d",
+  "runs": {
+    "e5.4-clean-v0": {
+      "determinism_hash": "sha256:cfdfbc38e67c11bbb0f2dda4cefa77afe8677fab494e0d22f475137921263f75",
+      "episode": "clean",
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 5,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 5,
+            "sent": 13
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 26,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V0"
+    },
+    "e5.4-clean-v1": {
+      "determinism_hash": "sha256:f1bd88ae72962c0e84d00123842dde8ca798b1baae2e5cb3bf884fb305343e11",
+      "episode": "clean",
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 18,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V1"
+    },
+    "e5.4-clean-v2": {
+      "determinism_hash": "sha256:031a69c910ea9e5434ffa18767797da0b0405084b8555110238dd62a32fecf79",
+      "episode": "clean",
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          },
+          "b": {
+            "lacked": 8,
+            "redundant": 1,
+            "sent": 9
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 18,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V2"
+    },
+    "e5.4-false-v0": {
+      "determinism_hash": "sha256:9a7546bbd454f41f91ebb37978f6c813d451c4224ca2da1d722556193d50efdb",
+      "episode": "false",
+      "score": {
+        "correct_cells": {
+          "a": 18,
+          "b": 20
+        },
+        "first_correct": null,
+        "n_corrects": 0,
+        "recovery": false,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 26,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V0"
+    },
+    "e5.4-false-v1": {
+      "determinism_hash": "sha256:0b0e569079adc6e108c50806df7adaaf04f5c2de53476eff8ef1351a27d1cadf",
+      "episode": "false",
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "n_corrects": 2,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 28,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V1"
+    },
+    "e5.4-false-v2": {
+      "determinism_hash": "sha256:1d89e7b7b1958582bacf408e7290807dd8d08d1b12be207c48e314f87ce2a431",
+      "episode": "false",
+      "score": {
+        "correct_cells": {
+          "a": 20,
+          "b": 20
+        },
+        "first_correct": {
+          "by": "a",
+          "object": "row3:door mine=c4 other=c3",
+          "round": 4,
+          "target": "b"
+        },
+        "n_corrects": 2,
+        "recovery": true,
+        "redundancy": {
+          "a": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          },
+          "b": {
+            "lacked": 10,
+            "redundant": 3,
+            "sent": 13
+          }
+        }
+      },
+      "surface_stats": {
+        "delivered": 28,
+        "dropped": 0,
+        "structured": 0
+      },
+      "variant": "V2"
+    }
+  },
+  "runs_drop_arm": {
+    "e5.4-false-v1-drop": {
+      "determinism_hash": "sha256:e5ba0c6c6cb112da075124914bec9b3306dd383de98f8b82d49ea3918796d029",
+      "first_correct": {
+        "by": "b",
+        "object": "row3:door mine=c3 other=c4",
+        "round": 4,
+        "target": "a"
+      },
+      "recovery": true,
+      "surface_stats": {
+        "delivered": 26,
+        "dropped": 1,
+        "structured": 0
+      }
+    }
+  }
+}

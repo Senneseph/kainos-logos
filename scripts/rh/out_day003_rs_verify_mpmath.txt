@@ -1,0 +1,9 @@
+t =   45374.03 :  |Z_mp| = 1.456004e-05
+          |Z_rs - Z_mp| = 2.711e-05   |Z_EM - Z_mp| = 4.412e-11   (Z_rs = fast RS engine)
+          Z_mp          = 0.000014560041
+t =   50000.00 :  |Z_mp| = 2.970043e+00
+          |Z_rs - Z_mp| = 1.195e-05   |Z_EM - Z_mp| = 4.829e-11   (Z_rs = fast RS engine)
+          Z_mp          = 2.970043337302
+t =  100000.00 :  |Z_mp| = 5.879592e+00
+          |Z_rs - Z_mp| = 5.227e-06   |Z_EM - Z_mp| = 4.880e-11   (Z_rs = fast RS engine)
+          Z_mp          = 5.879592468682

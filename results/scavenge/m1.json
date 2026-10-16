@@ -1,0 +1,27 @@
+{
+  "cache_stats": {
+    "cached": {
+      "hits": 51,
+      "misses": 5,
+      "terms": 5
+    },
+    "uncached": {
+      "hits": 0,
+      "misses": 0,
+      "terms": 0
+    }
+  },
+  "config": {
+    "corpus": "data/regex/compositional_set.jsonl",
+    "corpus_hash": "ea7c0970774d3c5021e687519088748a5a40806b23867f41fddcffc534fa9d8f",
+    "n_records": 40,
+    "note": "final M1 verdict: run on the E1.2 compositional set (Scavenge Step B DoD; Step I verdict line in SCAVENGE_MORPHO.md / ADR-0013)",
+    "phase": "parse+resolve+emit on one shared seeded CODEX (no judge subprocess)"
+  },
+  "identical": true,
+  "speedup": 1.5978484124631667,
+  "wall_ns": {
+    "cached": 573530,
+    "uncached": 916414
+  }
+}

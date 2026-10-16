@@ -1,0 +1,147 @@
+{
+  "config": {
+    "n_games": 200,
+    "sample_every_k": 25,
+    "seed": 42,
+    "start": "empty CODEX"
+  },
+  "coverage_delta": 0.349,
+  "dimensions_grown": 6,
+  "experiment": "e2.2",
+  "hypothesis": "Coverage rises and the EXCEPTION (unknown) remainder falls as games learn",
+  "passed": true,
+  "samples": [
+    {
+      "coverage_mean": 0.0,
+      "dimensions": [],
+      "game": 0,
+      "n_assertions": 0,
+      "n_dimensions": 0,
+      "times_discovered_sometimes_assertions": 0,
+      "unknown_cells_remaining": 1490
+    },
+    {
+      "coverage_mean": 0.0134,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:is_green"
+      ],
+      "game": 25,
+      "n_assertions": 236,
+      "n_dimensions": 2,
+      "times_discovered_sometimes_assertions": 5,
+      "unknown_cells_remaining": 1422
+    },
+    {
+      "coverage_mean": 0.047,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:is_green",
+        "dim:manufactured"
+      ],
+      "game": 50,
+      "n_assertions": 472,
+      "n_dimensions": 4,
+      "times_discovered_sometimes_assertions": 8,
+      "unknown_cells_remaining": 1359
+    },
+    {
+      "coverage_mean": 0.0872,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 75,
+      "n_assertions": 696,
+      "n_dimensions": 5,
+      "times_discovered_sometimes_assertions": 15,
+      "unknown_cells_remaining": 1304
+    },
+    {
+      "coverage_mean": 0.1678,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:has_wheels",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 100,
+      "n_assertions": 944,
+      "n_dimensions": 6,
+      "times_discovered_sometimes_assertions": 20,
+      "unknown_cells_remaining": 1270
+    },
+    {
+      "coverage_mean": 0.2215,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:has_wheels",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 125,
+      "n_assertions": 1171,
+      "n_dimensions": 6,
+      "times_discovered_sometimes_assertions": 25,
+      "unknown_cells_remaining": 1245
+    },
+    {
+      "coverage_mean": 0.255,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:has_wheels",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 150,
+      "n_assertions": 1392,
+      "n_dimensions": 6,
+      "times_discovered_sometimes_assertions": 35,
+      "unknown_cells_remaining": 1203
+    },
+    {
+      "coverage_mean": 0.3087,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:has_wheels",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 175,
+      "n_assertions": 1621,
+      "n_dimensions": 6,
+      "times_discovered_sometimes_assertions": 40,
+      "unknown_cells_remaining": 1172
+    },
+    {
+      "coverage_mean": 0.349,
+      "dimensions": [
+        "dim:can_carry_person",
+        "dim:has_engine",
+        "dim:has_wheels",
+        "dim:is_green",
+        "dim:lives_in_water",
+        "dim:manufactured"
+      ],
+      "game": 200,
+      "n_assertions": 1857,
+      "n_dimensions": 6,
+      "times_discovered_sometimes_assertions": 43,
+      "unknown_cells_remaining": 1150
+    }
+  ],
+  "total_property_cells": 1490,
+  "unknown_delta": -340
+}

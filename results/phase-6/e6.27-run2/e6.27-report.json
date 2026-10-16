@@ -1,0 +1,2018 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_discipline": {
+      "bad": [],
+      "checked_corpora": "S23 script + all responses + band lessons (S4\u2013S23) + all forty-four theorem statements",
+      "denylist_size": 44,
+      "final_marker_census": [
+        6,
+        1,
+        7
+      ],
+      "marker_denied_facts": [
+        "lemma:coprime-pair-def",
+        "lemma:prime-fingerprint-def",
+        "theorem:fingerprint-filed"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true,
+      "seed_marker_census": [
+        6,
+        1,
+        7
+      ]
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:15"
+      ],
+      "domain_sequences": {
+        "2": "SSSSUULSUULSSSSSS",
+        "3": "SSSSSSSSSSSSSFTSH",
+        "4": "SSHHHHSSSSSSSSSSS"
+      },
+      "impossible_turns": [
+        "S02:05",
+        "S02:06",
+        "S02:09",
+        "S02:10"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:14"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:07",
+        "S02:11"
+      ],
+      "touch_set_size": 53
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 114,
+      "seam_theorems": 44,
+      "total_seam_facts": 158,
+      "wall_carried_rows": []
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 29,
+      "pass": true,
+      "reference_walls": "W_S23-1..W_S23-3 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:17",
+        "S04:03",
+        "S04:04",
+        "S04:05",
+        "S04:06"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_facts": {
+        "p versus np theorems": [],
+        "theorem:beal": [],
+        "theorem:bsd": [],
+        "theorem:riemann": []
+      },
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "final_line_end_census": [
+          18,
+          2,
+          24
+        ],
+        "queue_intact": true,
+        "queue_missing": [],
+        "queue_source": "theorem:queue-declared (self-parsed, byte-intact against the seed)",
+        "seed_line_end_census": [
+          17,
+          2,
+          24
+        ],
+        "theorem_count": [
+          43,
+          44
+        ]
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "what is the first proportion where the parts are primes above two?"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S02:01",
+        "S02:02",
+        "S02:03",
+        "S02:04",
+        "S03:01",
+        "S03:02",
+        "S04:01",
+        "S04:02",
+        "S04:16"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 128,
+      "drilled": {
+        "decision-question": 1,
+        "divides": 2,
+        "first-divisor": 2,
+        "proportion": 1,
+        "shadow-form": 1
+      },
+      "expected": {
+        "coprime-pair": {
+          "correct": 6,
+          "state": "stable"
+        },
+        "prime-fingerprint": {
+          "correct": 23,
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 128,
+        "determinism_twin": true,
+        "final_total": 2074,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 50,
+        "new_facts": 3,
+        "reproduced_in_s2_pre": 2021,
+        "run_identity": "8c467ce3c5e63606",
+        "seed_total": 2021,
+        "store_identity": "8b5ca7a5fe76631e"
+      }
+    }
+  },
+  "compositions": {
+    "fingerprint-filed": {
+      "parts": [
+        "coprime-pair-def",
+        "prime-fingerprint-def"
+      ],
+      "statement": "the prime proportion of my store is filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; filed on the line, at the line end eighty-four"
+    }
+  },
+  "passed": 9,
+  "script_hash": "c6c662b4dc24ec6d",
+  "seed": "results/phase-6/e6.26-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:spf-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+        "evidence": [
+          "lemma:spf-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+      "slots": {
+        "mode": "s11-state",
+        "slug": "spf-def"
+      },
+      "surface": "state the spf-def rule"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:divides-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+        "evidence": [
+          "lemma:divides-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+      "slots": {
+        "mode": "s22-carry-divides"
+      },
+      "surface": "what is the divides rule, end to end, as my store holds it?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-carry-question"
+      },
+      "surface": "what is the decision question, end to end, as my store holds it?"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:proportion-def",
+        "lemma:fraction-def",
+        "theorem:proportion-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion line, filed of record: the relation and its value are two jobs of one division \u2014 the relation declared for every pair of parts and named by its reduced form, the fraction valued only over the positive part, and zero to zero the evenness of the two empty parts, declared, never valued; at the line end 84",
+        "evidence": [
+          "lemma:proportion-def",
+          "lemma:fraction-def",
+          "theorem:proportion-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the proportion line, filed of record: the relation and its value are two jobs of one division \u2014 the relation declared for every pair of parts and named by its reduced form, the fraction valued only over the positive part, and zero to zero the evenness of the two empty parts, declared, never valued; at the line end 84",
+      "slots": {
+        "mode": "s22-filing"
+      },
+      "surface": "what does the proportion filing settle of record?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: a coprime pair: a pair of parts of my line that share no part above one \u2014 two distinct primes are a coprime pair outright; a coprime pair needs no reduction, its proportion already in lowest terms",
+        "nearest_plan": [
+          "teach it first: the a coprime pair: a pair of parts of my line that share no part above one \u2014 two distinct primes are a coprime pair outright; a coprime pair needs no reduction, its proportion already in lowest terms lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 a coprime pair: a pair of parts of my line that share no part above one \u2014 two distinct primes are a coprime pair outright; a coprime pair needs no reduction, its proportion already in lowest terms is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s23-cop"
+      },
+      "surface": "what is the coprime pair, end to end, as my store holds it?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the coprime-pair-def rule",
+        "nearest_plan": [
+          "teach it first: the the coprime-pair-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the coprime-pair-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "coprime-pair-def"
+      },
+      "surface": "state the coprime-pair-def rule"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "coprime-pair",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:coprime-pair-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:coprime-pair-def",
+          "turn:S02:07",
+          "source:coprime-pair-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four"
+      },
+      "surface": "a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "coprime-pair-def"
+      },
+      "surface": "state the coprime-pair-def rule"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the prime fingerprint: the proportion of two distinct primes is the fingerprint of the pair \u2014 on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, no two pairs alike",
+        "nearest_plan": [
+          "teach it first: the the prime fingerprint: the proportion of two distinct primes is the fingerprint of the pair \u2014 on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, no two pairs alike lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the prime fingerprint: the proportion of two distinct primes is the fingerprint of the pair \u2014 on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, no two pairs alike is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s23-fpr"
+      },
+      "surface": "what is the prime fingerprint, end to end, as my store holds it?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the prime-fingerprint-def rule",
+        "nearest_plan": [
+          "teach it first: the the prime-fingerprint-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the prime-fingerprint-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "prime-fingerprint-def"
+      },
+      "surface": "state the prime-fingerprint-def rule"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "prime-fingerprint",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:prime-fingerprint-def",
+          "turn:S02:11",
+          "source:prime-fingerprint-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four"
+      },
+      "surface": "the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "prime-fingerprint-def"
+      },
+      "surface": "state the prime-fingerprint-def rule"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two and three: a coprime pair outright \u2014 they share no part above one, the first-divisor census lands nowhere, and the reduction chain walks two steps, at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two and three: a coprime pair outright \u2014 they share no part above one, the first-divisor census lands nowhere, and the reduction chain walks two steps, at the line end 84",
+      "slots": {
+        "a": "two",
+        "b": "three",
+        "mode": "s23-coprime"
+      },
+      "surface": "are two and three a coprime pair?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "four and six: not a coprime pair \u2014 they share the part two, the first-divisor census lands on it at once, and the proportion four to six reduces two to three, the reduced pair the fingerprint, at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "four and six: not a coprime pair \u2014 they share the part two, the first-divisor census lands on it at once, and the proportion four to six reduces two to three, the reduced pair the fingerprint, at the line end 84",
+      "slots": {
+        "a": "four",
+        "b": "six",
+        "mode": "s23-coprime"
+      },
+      "surface": "are four and six a coprime pair?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 a proportion of two distinct primes never reduces: two and three share no part above one, and the proportion two to three is already in lowest terms, the chain two steps, at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 a proportion of two distinct primes never reduces: two and three share no part above one, and the proportion two to three is already in lowest terms, the chain two steps, at the line end 84",
+      "slots": {
+        "a": "two",
+        "b": "three",
+        "mode": "s23-neverred"
+      },
+      "surface": "does the two to three proportion reduce?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+      "slots": {
+        "mode": "s23-census"
+      },
+      "surface": "what is my fingerprint census of the prime pairs on my line?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+      "slots": {
+        "mode": "s23-ceiling"
+      },
+      "surface": "what is the longest reduction chain among the prime pairs on my line?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:spf-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+        "evidence": [
+          "lemma:spf-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+      "slots": {
+        "mode": "s11-state",
+        "slug": "spf-def"
+      },
+      "surface": "state the spf-def rule"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:divides-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+        "evidence": [
+          "lemma:divides-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: k divides n when there is an m on the line with k times m equal to n; 1 divides every number, and every number divides itself",
+      "slots": {
+        "mode": "s22-carry-divides"
+      },
+      "surface": "what is the divides rule, end to end, as my store holds it?"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "seven over three is two and one third \u2014 seven is two times three plus one, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "seven over three is two and one third \u2014 seven is two times three plus one, one division in either word, at the line end 84",
+      "slots": {
+        "a": "seven",
+        "b": "three",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is seven over three, in my line's words?"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "seven mod three is one \u2014 seven is two times three plus one, the same division as seven over three is two and one third, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "seven mod three is one \u2014 seven is two times three plus one, the same division as seven over three is two and one third, at the line end 84",
+      "slots": {
+        "a": "seven",
+        "b": "three",
+        "mode": "s23-chain-mod"
+      },
+      "surface": "what is seven mod three, in my line's words?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-nine over eleven is two and seven elevenths \u2014 twenty-nine is two times eleven plus seven, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-nine over eleven is two and seven elevenths \u2014 twenty-nine is two times eleven plus seven, one division in either word, at the line end 84",
+      "slots": {
+        "a": "twenty-nine",
+        "b": "eleven",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is twenty-nine over eleven, in my line's words?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-nine mod eleven is seven \u2014 twenty-nine is two times eleven plus seven, the same division as twenty-nine over eleven is two and seven elevenths, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-nine mod eleven is seven \u2014 twenty-nine is two times eleven plus seven, the same division as twenty-nine over eleven is two and seven elevenths, at the line end 84",
+      "slots": {
+        "a": "twenty-nine",
+        "b": "eleven",
+        "mode": "s23-chain-mod"
+      },
+      "surface": "what is twenty-nine mod eleven, in my line's words?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-nine over forty-seven is the value under one \u2014 twenty-nine held over forty-seven, the part below the whole, and the first reduction step is forty-seven is one times twenty-nine plus eighteen, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-nine over forty-seven is the value under one \u2014 twenty-nine held over forty-seven, the part below the whole, and the first reduction step is forty-seven is one times twenty-nine plus eighteen, one division in either word, at the line end 84",
+      "slots": {
+        "a": "twenty-nine",
+        "b": "forty-seven",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is twenty-nine over forty-seven, in my line's words?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first reduction step of twenty-nine to forty-seven is forty-seven is one times twenty-nine plus eighteen \u2014 the remainder eighteen carried, the same division as the value twenty-nine over forty-seven under one, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the first reduction step of twenty-nine to forty-seven is forty-seven is one times twenty-nine plus eighteen \u2014 the remainder eighteen carried, the same division as the value twenty-nine over forty-seven under one, at the line end 84",
+      "slots": {
+        "a": "twenty-nine",
+        "b": "forty-seven",
+        "mode": "s23-chain-mod"
+      },
+      "surface": "what is twenty-nine mod forty-seven, in my line's words?"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three over seventy-nine is one and four seventy-ninths \u2014 eighty-three is one times seventy-nine plus four, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three over seventy-nine is one and four seventy-ninths \u2014 eighty-three is one times seventy-nine plus four, one division in either word, at the line end 84",
+      "slots": {
+        "a": "eighty-three",
+        "b": "seventy-nine",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is eighty-three over seventy-nine, in my line's words?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three mod two is one \u2014 eighty-three is forty-one times two plus one, the same division as eighty-three over two is forty-one and one half, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three mod two is one \u2014 eighty-three is forty-one times two plus one, the same division as eighty-three over two is forty-one and one half, at the line end 84",
+      "slots": {
+        "a": "eighty-three",
+        "b": "two",
+        "mode": "s23-chain-mod"
+      },
+      "surface": "what is eighty-three mod two, in my line's words?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "seventy-one over seven is ten and one seventh \u2014 seventy-one is ten times seven plus one, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "seventy-one over seven is ten and one seventh \u2014 seventy-one is ten times seven plus one, one division in either word, at the line end 84",
+      "slots": {
+        "a": "seventy-one",
+        "b": "seven",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is seventy-one over seven, in my line's words?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+      "slots": {
+        "mode": "s23-ceiling"
+      },
+      "surface": "what is the longest reduction chain among the prime pairs on my line?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+      "slots": {
+        "mode": "s23-census"
+      },
+      "surface": "what is my fingerprint census of the prime pairs on my line?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "prime-fingerprint",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for fingerprint-filed wants its exact set \u2014 what you name is short the prime-fingerprint-def before i can put it together",
+        "evidence": [
+          "scaffold:fingerprint-filed:partset:at-S03:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for fingerprint-filed wants its exact set \u2014 what you name is short the prime-fingerprint-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "coprime-pair-def"
+        ],
+        "target": "fingerprint-filed"
+      },
+      "surface": "derive fingerprint-filed from coprime-pair-def"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "prime-fingerprint",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:coprime-pair-def",
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:fingerprint-filed"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the prime proportion of my store is filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; filed on the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:coprime-pair-def",
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the prime proportion of my store is filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; filed on the line, at the line end eighty-four \u2014 from coprime-pair-def, prime-fingerprint-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "coprime-pair-def",
+          "prime-fingerprint-def"
+        ],
+        "target": "fingerprint-filed"
+      },
+      "surface": "derive fingerprint-filed from coprime-pair-def and prime-fingerprint-def"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def",
+        "lemma:prime-fingerprint-def",
+        "theorem:fingerprint-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the prime proportion, filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def",
+          "lemma:prime-fingerprint-def",
+          "theorem:fingerprint-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the prime proportion, filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; at the line end 84",
+      "slots": {
+        "mode": "s23-filing"
+      },
+      "surface": "what does the fingerprint filing settle of record?"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the pair past my line end: the eighty-three by the seventy-nine is the last prime pair on my line, and the pair with the eighty-nine is off the floor \u2014 the eighty-nine my line already declared off-line, standing once more as the ceiling, at the line end 84",
+        "evidence": [
+          "s23-w1-84-at-S03:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the pair past my line end: the eighty-three by the seventy-nine is the last prime pair on my line, and the pair with the eighty-nine is off the floor \u2014 the eighty-nine my line already declared off-line, standing once more as the ceiling, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s23-w1"
+      },
+      "surface": "which is the last prime pair on my line?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:spf-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+        "evidence": [
+          "lemma:spf-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: every composite n has a first divisor \u2014 the smallest k above 1 that divides n \u2014 and it lies strictly below n; a prime has no divisor above 1 below itself",
+      "slots": {
+        "mode": "s11-state",
+        "slug": "spf-def"
+      },
+      "surface": "state the spf-def rule"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s22-carry-question"
+      },
+      "surface": "what is the decision question, end to end, as my store holds it?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84",
+        "evidence": [
+          "s22-w1-84-at-S04:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of zero over zero: zero to zero is the evenness of the two empty parts, declared, never valued \u2014 the part you count with is zero parts, and zero parts hold no count; the value and the relation are two jobs, and the same symbol used interchangeably is the misreading this wall punishes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s22-w1"
+      },
+      "surface": "does zero over zero hold a value on my line?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the pair past my line end: the eighty-three by the seventy-nine is the last prime pair on my line, and the pair with the eighty-nine is off the floor \u2014 the eighty-nine my line already declared off-line, standing once more as the ceiling, at the line end 84",
+        "evidence": [
+          "s23-w1-84-at-S04:04"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the pair past my line end: the eighty-three by the seventy-nine is the last prime pair on my line, and the pair with the eighty-nine is off the floor \u2014 the eighty-nine my line already declared off-line, standing once more as the ceiling, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s23-w1"
+      },
+      "surface": "which is the last prime pair on my line?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the reduced prime proportion: a proportion of two distinct primes never reduces \u2014 there is nothing to reduce \u2014 and a proportion that reduces is not a proportion of two distinct primes, at the line end 84",
+        "evidence": [
+          "s23-w2-84-at-S04:05"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the reduced prime proportion: a proportion of two distinct primes never reduces \u2014 there is nothing to reduce \u2014 and a proportion that reduces is not a proportion of two distinct primes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s23-w2"
+      },
+      "surface": "does a prime proportion ever reduce?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the colliding fingerprint: two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, and a second pair claiming the first pair's proportion is a misread the first-divisor census refutes, at the line end 84",
+        "evidence": [
+          "s23-w3-84-at-S04:06"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the colliding fingerprint: two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, and a second pair claiming the first pair's proportion is a misread the first-divisor census refutes, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s23-w3"
+      },
+      "surface": "can two prime pairs share one reduced proportion?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions on my line, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair is the proportion, at the line end 84",
+      "slots": {
+        "mode": "s23-census"
+      },
+      "surface": "what is my fingerprint census of the prime pairs on my line?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the seven-step chain is the ceiling on my line \u2014 four prime pairs walk it: twenty-nine by forty-seven, twenty-nine by seventy-nine, forty-one by sixty-seven, and forty-one by seventy-one; no prime pair of the two hundred and fifty-three walks a longer chain, at the line end 84",
+      "slots": {
+        "mode": "s23-ceiling"
+      },
+      "surface": "what is the longest reduction chain among the prime pairs on my line?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: a coprime pair is a pair of parts of my line that share no part above one; two distinct primes are a coprime pair outright \u2014 a prime's first divisor is itself, so the shared part would have to divide both primes and be none of them, which the first-divisor census refutes \u2014 and a coprime pair needs no reduction: its proportion is already in lowest terms; at the line end eighty-four",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "coprime-pair-def"
+      },
+      "surface": "state the coprime-pair-def rule"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the proportion of two distinct primes is the fingerprint of the pair: on my line the two hundred and fifty-three prime pairs give two hundred and fifty-three different reduced proportions, every pair coprime, no two pairs alike \u2014 read off the first-divisor census, the pair IS the proportion; at the line end eighty-four",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "prime-fingerprint-def"
+      },
+      "surface": "state the prime-fingerprint-def rule"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:fingerprint-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the prime proportion of my store is filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; filed on the line, at the line end eighty-four",
+        "evidence": [
+          "theorem:fingerprint-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the prime proportion of my store is filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; filed on the line, at the line end eighty-four",
+      "slots": {
+        "mode": "s23-state",
+        "slug": "fingerprint-filed"
+      },
+      "surface": "state the fingerprint-filed rule"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def",
+        "lemma:prime-fingerprint-def",
+        "theorem:fingerprint-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the prime proportion, filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def",
+          "lemma:prime-fingerprint-def",
+          "theorem:fingerprint-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the prime proportion, filed of record: two distinct primes share no part above one, so their proportion is in lowest terms and is the fingerprint of the pair \u2014 two hundred and fifty-three pairs, two hundred and fifty-three proportions, no collisions on my line; at the line end 84",
+      "slots": {
+        "mode": "s23-filing"
+      },
+      "surface": "what does the fingerprint filing settle of record?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-nine over forty-seven is the value under one \u2014 twenty-nine held over forty-seven, the part below the whole, and the first reduction step is forty-seven is one times twenty-nine plus eighteen, one division in either word, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-nine over forty-seven is the value under one \u2014 twenty-nine held over forty-seven, the part below the whole, and the first reduction step is forty-seven is one times twenty-nine plus eighteen, one division in either word, at the line end 84",
+      "slots": {
+        "a": "twenty-nine",
+        "b": "forty-seven",
+        "mode": "s23-chain-frac"
+      },
+      "surface": "what is twenty-nine over forty-seven, in my line's words?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:prime-fingerprint-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three mod two is one \u2014 eighty-three is forty-one times two plus one, the same division as eighty-three over two is forty-one and one half, at the line end 84",
+        "evidence": [
+          "lemma:prime-fingerprint-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three mod two is one \u2014 eighty-three is forty-one times two plus one, the same division as eighty-three over two is forty-one and one half, at the line end 84",
+      "slots": {
+        "a": "eighty-three",
+        "b": "two",
+        "mode": "s23-chain-mod"
+      },
+      "surface": "what is eighty-three mod two, in my line's words?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:coprime-pair-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "forty-one and seventy-one: a coprime pair \u2014 they share no part above one, and the reduction chain walks seven steps, the ceiling of my line, at the line end 84",
+        "evidence": [
+          "lemma:coprime-pair-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "forty-one and seventy-one: a coprime pair \u2014 they share no part above one, and the reduction chain walks seven steps, the ceiling of my line, at the line end 84",
+      "slots": {
+        "a": "forty-one",
+        "b": "seventy-one",
+        "mode": "s23-coprime"
+      },
+      "surface": "are forty-one and seventy-one a coprime pair?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:telescope-line"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+        "evidence": [
+          "theorem:telescope-line"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the minus family over all the numbers telescopes: (1 minus n to the power minus 2) is (n minus 1)(n plus 1) over n squared, so the partial product to height N is (N plus 1) over 2N \u2014 at my line end, height 84, that is 85 over 168, and every spot height on my line answers by the same rule",
+      "slots": {
+        "mode": "s22-carry-telescope"
+      },
+      "surface": "what is the telescope line, as my store holds it?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighteen of my forty-four theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighteen of my forty-four theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    }
+  },
+  "value": {
+    "p0_unconditional_discipline": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 128,
+      "determinism_twin": true,
+      "final_total": 2074,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 50,
+      "new_facts": 3,
+      "reproduced_in_s2_pre": 2021,
+      "run_identity": "8c467ce3c5e63606",
+      "seed_total": 2021,
+      "store_identity": "8b5ca7a5fe76631e"
+    }
+  }
+}

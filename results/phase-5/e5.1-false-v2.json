@@ -1,0 +1,613 @@
+{
+  "agents": {
+    "a": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 16,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 2,
+          "disputed_pairs": 1,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 4
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 5
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 6
+        }
+      ],
+      "policy_note": "V2 false",
+      "rejections": []
+    },
+    "b": {
+      "capabilities": [
+        "assert_about_other",
+        "commit",
+        "model_other_beliefs",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 16,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 4
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 5
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 6
+        }
+      ],
+      "policy_note": "V2 false",
+      "rejections": []
+    }
+  },
+  "audit": {
+    "a": {
+      "agent": "a",
+      "correctness": 1.0,
+      "n_about_other": 1,
+      "n_correct": 1,
+      "n_disputes_preserved": 2,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    },
+    "b": {
+      "agent": "b",
+      "correctness": 0.0,
+      "n_about_other": 1,
+      "n_correct": 0,
+      "n_disputes_preserved": 2,
+      "n_supported": 1,
+      "support": 1.0,
+      "violations": []
+    }
+  },
+  "channel": {
+    "bad_receivers": [],
+    "budget_per_round": 4,
+    "corruption_probability": 0.0,
+    "events": [],
+    "sent_totals": {
+      "a": 14,
+      "b": 14
+    }
+  },
+  "commits": {
+    "a": {
+      "grid": {
+        "r1c1": "empty",
+        "r1c2": "wall",
+        "r1c3": "key",
+        "r1c4": "empty",
+        "r2c1": "wall",
+        "r2c2": "empty",
+        "r2c3": "empty",
+        "r2c4": "empty",
+        "r3c1": "wall",
+        "r3c2": "empty",
+        "r3c3": "door",
+        "r3c4": "wall",
+        "r4c1": "empty",
+        "r4c2": "goal",
+        "r4c3": "empty",
+        "r4c4": "wall",
+        "r5c1": "empty",
+        "r5c2": "empty",
+        "r5c3": "empty",
+        "r5c4": "empty"
+      }
+    },
+    "b": {
+      "grid": {
+        "r1c1": "empty",
+        "r1c2": "wall",
+        "r1c3": "key",
+        "r1c4": "empty",
+        "r2c1": "wall",
+        "r2c2": "empty",
+        "r2c3": "empty",
+        "r2c4": "empty",
+        "r3c1": "wall",
+        "r3c2": "empty",
+        "r3c3": "door",
+        "r3c4": "wall",
+        "r4c1": "empty",
+        "r4c2": "goal",
+        "r4c3": "empty",
+        "r4c4": "wall",
+        "r5c1": "empty",
+        "r5c2": "empty",
+        "r5c3": "empty",
+        "r5c4": "empty"
+      }
+    }
+  },
+  "determinism_hash": "sha256:eb203d5c48b6b585889efab553f2e774b24f5189a91ce016fb5c329f986d105a",
+  "game": "e5.1-false-v2",
+  "negative_control": {
+    "checked_turns": 12,
+    "view_leaks": 0
+  },
+  "players": [
+    "a",
+    "b"
+  ],
+  "rounds": 6,
+  "scores": {
+    "n_commits": 2
+  },
+  "seed": 5101,
+  "transcript": [
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:a:844c8712cf3f4420",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c1",
+            "timestamp": "2026-02-11T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:a:aab2002ff531dbfd",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c2",
+            "timestamp": "2026-02-11T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:a:bf8fc4323ce68cfd",
+            "object": "value=key",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c3",
+            "timestamp": "2026-02-11T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:a:3b9964ef72110a97",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c4",
+            "timestamp": "2026-02-11T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:b:b5ec04f161161e76",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c1",
+            "timestamp": "2026-02-11T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:b:2d75b27c488aa1d9",
+            "object": "value=goal",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c2",
+            "timestamp": "2026-02-11T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:b:179cf1f2244dbb50",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c3",
+            "timestamp": "2026-02-11T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:b:ef052ad88236dcb6",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c4",
+            "timestamp": "2026-02-11T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 1
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:a:9ae50ad9481f8ff3",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c1",
+            "timestamp": "2026-02-12T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:a:663655389a017176",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c2",
+            "timestamp": "2026-02-12T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:a:65ddda8de707a83e",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c3",
+            "timestamp": "2026-02-12T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:a:9339cdfafc512f02",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c4",
+            "timestamp": "2026-02-12T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:b:776a5a1320a7cd3f",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c1",
+            "timestamp": "2026-02-12T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:b:bc6123a0395e9edc",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c2",
+            "timestamp": "2026-02-12T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:b:d02273f5eb7d3bd3",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c3",
+            "timestamp": "2026-02-12T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:b:685fb91c4ad91553",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c4",
+            "timestamp": "2026-02-12T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 2
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:anchor:a:c745d8143e6073fc",
+            "object": "value=c4",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "row3:door",
+            "timestamp": "2026-02-13T00:00:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:anchor:b:59304faa2321cca8",
+            "object": "value=c3",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "row3:door",
+            "timestamp": "2026-02-13T00:00:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 3
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:correct:a:195a4fc70c131a21",
+            "object": "row3:door mine=c4 other=c3",
+            "relation": "corrects",
+            "source": "agent:a",
+            "subject": "agent:b",
+            "timestamp": "2026-02-14T00:01:00+00:00"
+          }
+        ],
+        "fact_id": "row3:door",
+        "kind": "correct",
+        "target": "b"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 4
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:correct:b:b6f4151125415f70",
+            "object": "row3:door mine=c3 other=c4",
+            "relation": "corrects",
+            "source": "agent:b",
+            "subject": "agent:a",
+            "timestamp": "2026-02-14T00:01:00+00:00"
+          }
+        ],
+        "fact_id": "row3:door",
+        "kind": "correct",
+        "target": "a"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 4
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:row3:a:79443518ffc9a11c",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c1",
+            "timestamp": "2026-02-15T00:00:00+00:00"
+          },
+          {
+            "id": "game:row3:a:01fe585e52dfeee5",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c2",
+            "timestamp": "2026-02-15T00:01:00+00:00"
+          },
+          {
+            "id": "game:row3:a:babd14fc2d070d0b",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c3",
+            "timestamp": "2026-02-15T00:02:00+00:00"
+          },
+          {
+            "id": "game:row3:a:353f83c963be5358",
+            "object": "value=door",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c4",
+            "timestamp": "2026-02-15T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 5
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:row3:b:f33fcb42070ecc0f",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c1",
+            "timestamp": "2026-02-15T00:00:00+00:00"
+          },
+          {
+            "id": "game:row3:b:af80360150787aeb",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c2",
+            "timestamp": "2026-02-15T00:01:00+00:00"
+          },
+          {
+            "id": "game:row3:b:7ee5ad4a5c8b41cf",
+            "object": "value=door",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c3",
+            "timestamp": "2026-02-15T00:02:00+00:00"
+          },
+          {
+            "id": "game:row3:b:036a62bee5826508",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c4",
+            "timestamp": "2026-02-15T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 5
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "grid": {
+            "r1c1": "empty",
+            "r1c2": "wall",
+            "r1c3": "key",
+            "r1c4": "empty",
+            "r2c1": "wall",
+            "r2c2": "empty",
+            "r2c3": "empty",
+            "r2c4": "empty",
+            "r3c1": "wall",
+            "r3c2": "empty",
+            "r3c3": "door",
+            "r3c4": "wall",
+            "r4c1": "empty",
+            "r4c2": "goal",
+            "r4c3": "empty",
+            "r4c4": "wall",
+            "r5c1": "empty",
+            "r5c2": "empty",
+            "r5c3": "empty",
+            "r5c4": "empty"
+          }
+        }
+      },
+      "actor": "a",
+      "round": 6
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "grid": {
+            "r1c1": "empty",
+            "r1c2": "wall",
+            "r1c3": "key",
+            "r1c4": "empty",
+            "r2c1": "wall",
+            "r2c2": "empty",
+            "r2c3": "empty",
+            "r2c4": "empty",
+            "r3c1": "wall",
+            "r3c2": "empty",
+            "r3c3": "door",
+            "r3c4": "wall",
+            "r4c1": "empty",
+            "r4c2": "goal",
+            "r4c3": "empty",
+            "r4c4": "wall",
+            "r5c1": "empty",
+            "r5c2": "empty",
+            "r5c3": "empty",
+            "r5c4": "empty"
+          }
+        }
+      },
+      "actor": "b",
+      "round": 6
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "config": {
+    "endpoint": "http://192.168.1.65:11434/v1",
+    "model": "pi-qwen-fast:latest",
+    "official_value": "unchanged (results/e6.5.json, det arm, 8/8, commit 46e3416)",
+    "protocol": "10 model-generated K-5 shape questions, each parsed by the band surface",
+    "surface": "official e6.5 final store (e6.5-run1 S4, 309 assertions): det grammar + lexicon of 9 established phrasings (6 numeric seed + 2 shape + 1 numeric lesson form)",
+    "wire": "native /api/chat, think:false, NO format/options (the proxy rejects those fields intermittently \u2014 the E6.4 live-addendum finding)"
+  },
+  "counts": {
+    "honestly ambiguous (outside the band surface)": 10
+  },
+  "date": "2026-08-22T06:22:04Z",
+  "infra_call_errors": [],
+  "label": "E6.5 X6 \u2014 LIVE LLM ADDENDUM (separately labelled; NEVER part of the official value; the E6.4/E5.4 precedent)",
+  "note": "model breadth is DATA, not a failure: every out-of-band phrasing lands in the honest ambiguity class (the surface boundary is the claim); in-band parses are grounded derivations from the official store. This is the measured breadth gap for the GEOMETRY strip (the E6.4 live addendum measured it for the numeric strip: 4/5 of the model's phrasings were word numbers, honestly ambiguous).",
+  "questions": [
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 1,
+      "parse_source": null,
+      "question": "1. Can you point to one of the corners on this triangle?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": null,
+        "casefold_only": "in-band grammar",
+        "casefold_plus_demo_to_a": "in-band grammar"
+      },
+      "i": 2,
+      "parse_source": null,
+      "question": "How many corners does a triangle have?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 3,
+      "parse_source": null,
+      "question": "Can you count how many corners are on this triangle?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 4,
+      "parse_source": null,
+      "question": "Can you count and tell me how many corners this square has?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 5,
+      "parse_source": null,
+      "question": "Can you count the corners on your triangle?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 6,
+      "parse_source": null,
+      "question": "Question 6: Can you count how many corners this triangle has?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "in-band grammar"
+      },
+      "i": 7,
+      "parse_source": null,
+      "question": "7. How many corners does your triangle have?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "still out (vision reference / other wording)"
+      },
+      "i": 8,
+      "parse_source": null,
+      "question": "Question number 8: Can you point to a corner on your triangle?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": null,
+        "casefold_only": "in-band grammar",
+        "casefold_plus_demo_to_a": "in-band grammar"
+      },
+      "i": 9,
+      "parse_source": null,
+      "question": "Question 9: How many corners does a triangle have?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "diagnosis": {
+        "as_written": "case",
+        "casefold_only": "still out",
+        "casefold_plus_demo_to_a": "in-band grammar"
+      },
+      "i": 10,
+      "parse_source": null,
+      "question": "How many corners does your triangle have?",
+      "slots": {}
+    }
+  ]
+}

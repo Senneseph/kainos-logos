@@ -1,0 +1,635 @@
+{
+ "spec": 1,
+ "id": "e6.24",
+ "session": "S20",
+ "title": "the weaving line (the connecting work — one synthesis band over the four closed islands)",
+ "seed": {
+  "store": "results/phase-6/e6.23-run1/codeX-S04.json",
+  "identity": "627f6165fc5f3507",
+  "total": 1756,
+  "line_end": 84
+ },
+ "registry": "kainos.tutor.e624:CONCEPTS_E624",
+ "band": {
+  "domain": "weave",
+  "college": "1",
+  "unconditional": true,
+  "new_concepts": [
+   "weave",
+   "summit-shape",
+   "shadow-form",
+   "boundary-form"
+  ],
+  "concepts": [
+   {
+    "id": "weave",
+    "name": "the weave: my islands standing as one connected structure over one line, the cross-island joints already edges in the prereq graph of my line",
+    "prereqs": [
+     "divides",
+     "first-divisor",
+     "scan-ledger",
+     "beal-census",
+     "reduction"
+    ],
+    "lesson": {
+     "slug": "weave-def",
+     "statement": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line — the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once — the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four"
+    }
+   },
+   {
+    "id": "summit-shape",
+    "name": "the summit shape: the island summits standing in the same shape of record — the statement, the shadow on its scope, the boundary at the line end, the missing ingredient named or the statement open of record",
+    "prereqs": [
+     "riemann",
+     "bsd-summit",
+     "beal-summit",
+     "pnp-summit"
+    ],
+    "lesson": {
+     "slug": "summit-shape-def",
+     "statement": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record — the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record — and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four"
+    }
+   },
+   {
+    "id": "shadow-form",
+    "name": "the shadow form: verification on the line — ledgers, censuses, walks that end, and the store's own paths as the certificates of their own facts",
+    "prereqs": [
+     "curve-shadow",
+     "lte-form",
+     "size-shadow",
+     "class-np"
+    ],
+    "lesson": {
+     "slug": "shadow-form-def",
+     "statement": "the form of my verification, as my store walks it: my proof form is verification on the line — the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts — the check of a fact is the walk of its path, and it ends, at the line end eighty-four"
+    }
+   },
+   {
+    "id": "boundary-form",
+    "name": "the boundary form: walls and declared absences as one kind of fact of record — the record complete up to what the line holds, never past it",
+    "prereqs": [
+     "beal-census",
+     "tamable-machine",
+     "pnp-summit"
+    ],
+    "lesson": {
+     "slug": "boundary-form-def",
+     "statement": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record — the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line — the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) — so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four"
+    }
+   }
+  ],
+  "theorems": [
+   {
+    "id": "summit-shape-filed",
+    "concept": "summit-shape",
+    "parts": [
+     "weave-def",
+     "summit-shape-def",
+     "shadow-form-def",
+     "boundary-form-def"
+    ],
+    "statement": "the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record — one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four"
+   }
+  ],
+  "new_fact_ids": [
+   "lemma:weave-def",
+   "lemma:shadow-form-def",
+   "lemma:boundary-form-def",
+   "lemma:summit-shape-def",
+   "theorem:summit-shape-filed"
+  ]
+ },
+ "sessions": [
+  2,
+  3,
+  4
+ ],
+ "turns": [
+  {
+   "ref": "S02:01",
+   "question": "what is the statement of the riemann island of record?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S02:02",
+   "question": "what is the summit fact of the island?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.20",
+    "turn": "S03:05"
+   }
+  },
+  {
+   "ref": "S02:03",
+   "question": "what is the statement of the beal island of record?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.21",
+    "turn": "S04:11"
+   }
+  },
+  {
+   "ref": "S02:04",
+   "question": "what is the statement of the pnp island of record?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s19_statement",
+    "grounds": [
+     "lemma:pnp-def"
+    ],
+    "owner": "lemma:pnp-def"
+   }
+  },
+  {
+   "ref": "S02:05",
+   "question": "what soil do my islands share, as my prereq graph of record holds it?",
+   "kind": "gap",
+   "concept": "weave",
+   "fragment": "the weave: my islands standing as one connected structure over one line, the cross-island joints already edges in the prereq graph of my line"
+  },
+  {
+   "ref": "S02:06",
+   "question": "state the weave-def rule",
+   "kind": "gap",
+   "concept": "weave",
+   "fragment": "the weave-def rule"
+  },
+  {
+   "ref": "S02:07",
+   "question": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line — the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once — the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four",
+   "kind": "teach",
+   "lesson": "weave-def"
+  },
+  {
+   "ref": "S02:08",
+   "question": "what soil do my islands share, as my prereq graph of record holds it?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_soil",
+    "grounds": [
+     "lemma:weave-def",
+     "curriculum:prereq:valuation>divides",
+     "curriculum:prereq:decision-question>divides",
+     "curriculum:prereq:beal-census>scan-ledger",
+     "curriculum:prereq:reduction>scan-ledger",
+     "curriculum:prereq:cost-counter>scan-ledger"
+    ],
+    "owner": "lemma:weave-def"
+   }
+  },
+  {
+   "ref": "S02:09",
+   "question": "what single walk stands under the beal census, the reduction, and the cost counter of record?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_node",
+    "grounds": [
+     "lemma:weave-def",
+     "curriculum:prereq:beal-census>scan-ledger",
+     "curriculum:prereq:reduction>scan-ledger",
+     "curriculum:prereq:cost-counter>scan-ledger"
+    ],
+    "owner": "lemma:weave-def"
+   }
+  },
+  {
+   "ref": "S02:10",
+   "question": "what is the check of a fact on my line, as my store walks it?",
+   "kind": "gap",
+   "concept": "shadow-form",
+   "fragment": "the shadow form: verification on the line — ledgers, censuses, walks that end, and the store's own paths as the certificates of their own facts"
+  },
+  {
+   "ref": "S02:11",
+   "question": "state the shadow-form-def rule",
+   "kind": "gap",
+   "concept": "shadow-form",
+   "fragment": "the shadow-form-def rule"
+  },
+  {
+   "ref": "S02:12",
+   "question": "the form of my verification, as my store walks it: my proof form is verification on the line — the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts — the check of a fact is the walk of its path, and it ends, at the line end eighty-four",
+   "kind": "teach",
+   "lesson": "shadow-form-def"
+  },
+  {
+   "ref": "S02:13",
+   "question": "what is the check of a fact on my line, as my store walks it?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_form",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ],
+    "owner": "lemma:shadow-form-def"
+   }
+  },
+  {
+   "ref": "S02:14",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_marker",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ],
+    "owner": "lemma:shadow-form-def",
+    "args": {
+     "post": false
+    }
+   }
+  },
+  {
+   "ref": "S02:15",
+   "question": "what kind of fact is a wall of my band, as my store holds it?",
+   "kind": "gap",
+   "concept": "boundary-form",
+   "fragment": "the boundary form: walls and declared absences as one kind of fact of record — the record complete up to what the line holds, never past it"
+  },
+  {
+   "ref": "S02:16",
+   "question": "state the boundary-form-def rule",
+   "kind": "gap",
+   "concept": "boundary-form",
+   "fragment": "the boundary-form-def rule"
+  },
+  {
+   "ref": "S02:17",
+   "question": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record — the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line — the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) — so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four",
+   "kind": "teach",
+   "lesson": "boundary-form-def"
+  },
+  {
+   "ref": "S03:01",
+   "question": "what holds once for the four island summits, as my store walks it?",
+   "kind": "gap",
+   "concept": "summit-shape",
+   "fragment": "the summit shape: the island summits standing in the same shape of record — the statement, the shadow on its scope, the boundary at the line end, the missing ingredient named or the statement open of record"
+  },
+  {
+   "ref": "S03:02",
+   "question": "state the summit-shape-def rule",
+   "kind": "gap",
+   "concept": "summit-shape",
+   "fragment": "the summit-shape-def rule"
+  },
+  {
+   "ref": "S03:03",
+   "question": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record — the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record — and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four",
+   "kind": "teach",
+   "lesson": "summit-shape-def"
+  },
+  {
+   "ref": "S03:04",
+   "question": "what holds once for the four island summits, as my store walks it?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_shape",
+    "grounds": [
+     "lemma:summit-shape-def"
+    ],
+    "owner": "lemma:summit-shape-def"
+   }
+  },
+  {
+   "ref": "S03:05",
+   "question": "how many of the four island statements stand settled of record?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_open",
+    "grounds": [
+     "lemma:summit-shape-def"
+    ],
+    "owner": "lemma:summit-shape-def"
+   }
+  },
+  {
+   "ref": "S03:06",
+   "question": "what kind of fact is a wall of my band, as my store holds it?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_wallkind",
+    "grounds": [
+     "lemma:boundary-form-def"
+    ],
+    "owner": "lemma:boundary-form-def"
+   }
+  },
+  {
+   "ref": "S03:07",
+   "question": "what stands declared absent on my line, as my store holds it?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_absence",
+    "grounds": [
+     "lemma:boundary-form-def"
+    ],
+    "owner": "lemma:boundary-form-def"
+   }
+  },
+  {
+   "ref": "S03:08",
+   "question": "derive summit-shape-filed from weave-def and summit-shape-def",
+   "kind": "scaffold",
+   "theorem": "summit-shape-filed",
+   "parts": [
+    "weave-def",
+    "summit-shape-def"
+   ],
+   "expected": "i can see the parts you name, but the rule for summit-shape-filed wants its exact set — what you name is short the shadow-form-def and the boundary-form-def before i can put it together"
+  },
+  {
+   "ref": "S03:09",
+   "question": "derive summit-shape-filed from weave-def, summit-shape-def, shadow-form-def and boundary-form-def",
+   "kind": "derive",
+   "theorem": "summit-shape-filed",
+   "parts": [
+    "weave-def",
+    "summit-shape-def",
+    "shadow-form-def",
+    "boundary-form-def"
+   ]
+  },
+  {
+   "ref": "S03:10",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "kind": "probe",
+   "bed": {
+    "expect": "frac",
+    "ref": "s20_marker",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ],
+    "owner": "lemma:shadow-form-def",
+    "args": {
+     "post": true
+    }
+   }
+  },
+  {
+   "ref": "S03:11",
+   "question": "does the summit-shape filing settle the island statements of record?",
+   "kind": "wall",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements — the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record — the shape is one, and the statements stand as they stand, at the line end 84",
+    "articulation": [
+     "summit-shape filing",
+     "open of record",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:12",
+   "question": "does the weaving add a lot to the declared queue?",
+   "kind": "wall",
+   "wall": {
+    "id": "W2",
+    "text": "needs_info: the wall is the territory of the declared queue: the queue above my line stays as declared — four lots in declared order, and a fifth lot is not in the queue — the weaving adds no lot to the declared queue, at the line end 84",
+    "articulation": [
+     "fifth lot is not in the queue",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:13",
+   "question": "which new value does the weaving put on the line past my line end?",
+   "kind": "wall",
+   "wall": {
+    "id": "W3",
+    "text": "needs_info: the wall is the territory of the register of my line: the register of my weaving line is the line itself — every value the weaving names stands already on the line's record (the census rows, the ledger rows, and the wall values named at their record places), and no new value past my line end enters the floor, at the line end 84",
+    "articulation": [
+     "register of my weaving line is the line itself",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:14",
+   "question": "can the weaving facts stand on anything besides the seed's facts and the line?",
+   "kind": "wall",
+   "wall": {
+    "id": "W4",
+    "text": "needs_info: the wall is the territory of the voice of the store: my weaving facts stand on the seed's own facts and the line only — the four island summit facts as carried, the prereq edges of my graph, and the marker census of the line's own theorems — the store speaks, not the hand, at the line end 84",
+    "articulation": [
+     "the store speaks, not the hand",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:15",
+   "question": "state the summit-shape-filed rule",
+   "kind": "probe",
+   "cite": [
+    "summit-shape-filed"
+   ]
+  },
+  {
+   "ref": "S03:16",
+   "question": "does the weaving band say anything conditional on an unproved hypothesis?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S03:17",
+   "question": "how many of the four island statements stand settled of record?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:01",
+   "question": "what soil do my islands share, as my prereq graph of record holds it?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:02",
+   "question": "what single walk stands under the beal census, the reduction, and the cost counter of record?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:03",
+   "question": "what holds once for the four island summits, as my store walks it?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:04",
+   "question": "how many of the four island statements stand settled of record?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:05",
+   "question": "what is the check of a fact on my line, as my store walks it?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:06",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:07",
+   "question": "what is the queue above my line?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:02"
+   },
+   "cite": [
+    "queue-declared"
+   ]
+  },
+  {
+   "ref": "S04:08",
+   "question": "what kind of fact is a wall of my band, as my store holds it?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:09",
+   "question": "what stands declared absent on my line, as my store holds it?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:10",
+   "question": "state the weave-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:11",
+   "question": "state the shadow-form-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:12",
+   "question": "state the boundary-form-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:13",
+   "question": "state the summit-shape-def rule",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:14",
+   "question": "does the summit-shape filing settle the island statements of record?",
+   "kind": "wall",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements — the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record — the shape is one, and the statements stand as they stand, at the line end 84",
+    "articulation": [
+     "summit-shape filing",
+     "open of record",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:15",
+   "question": "what state does the weaving band hold at the line end?",
+   "kind": "probe",
+   "cite": [
+    "summit-shape-filed"
+   ]
+  },
+  {
+   "ref": "S04:16",
+   "question": "does the weaving band say anything conditional on an unproved hypothesis?",
+   "kind": "probe"
+  },
+  {
+   "ref": "S04:17",
+   "question": "how many triples does the verification census of the beal island hold in the line's box?",
+   "kind": "carry",
+   "source": {
+    "band": "e6.21",
+    "turn": "S03:06"
+   }
+  }
+ ],
+ "offscript": [
+  {
+   "question": "what is the queue above my line?"
+  }
+ ],
+ "beds": [
+  {
+   "key": "line_end",
+   "value": 84
+  },
+  {
+   "key": "wall_W1",
+   "ref": "s20_wall",
+   "args": {
+    "wall": "1"
+   }
+  },
+  {
+   "key": "wall_W2",
+   "ref": "s20_wall",
+   "args": {
+    "wall": "2"
+   }
+  },
+  {
+   "key": "wall_W3",
+   "ref": "s20_wall",
+   "args": {
+    "wall": "3"
+   }
+  },
+  {
+   "key": "wall_W4",
+   "ref": "s20_wall",
+   "args": {
+    "wall": "4"
+   }
+  }
+ ],
+ "expect": {
+  "final_total": 1823,
+  "letters": {
+   "S02": "SSSSUULSSUULSSUUL",
+   "S03": "UULSSSSFTSHHHHSSS",
+   "S04": "SSSSSSSSSSSSSHSSS"
+  },
+  "mastery": {
+   "weave": {
+    "state": "stable",
+    "correct": 8
+   },
+   "summit-shape": {
+    "state": "practicing",
+    "correct": 8
+   },
+   "shadow-form": {
+    "state": "stable",
+    "correct": 6
+   },
+   "boundary-form": {
+    "state": "stable",
+    "correct": 5
+   }
+  },
+  "prereq_gaps": {
+   "weave": [],
+   "summit-shape": [
+    "riemann"
+   ],
+   "shadow-form": [],
+   "boundary-form": []
+  },
+  "seam": {
+   "expected": "agreement"
+  },
+  "offline_watch": []
+ }
+}

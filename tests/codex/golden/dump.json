@@ -1,0 +1,117 @@
+{
+  "assertions": [
+    {
+      "confidence": 0.4,
+      "context": {
+        "domain": "geography"
+      },
+      "exception": "conflicting",
+      "id": "france-capital-lyon",
+      "object": "Lyon",
+      "polarity": true,
+      "provenance": {
+        "derived": false,
+        "evidence": [],
+        "observer": "golden",
+        "source": {
+          "authority": "https://example.org",
+          "hash": "sha256:deadbeef",
+          "media_type": "text/markdown",
+          "retrieved_at": "2026-08-20T00:00:00Z",
+          "uri": "https://example.org/geography/v1",
+          "version": "1"
+        },
+        "verified": false
+      },
+      "relation": {
+        "id": "CAPITAL_OF",
+        "kind": "relation",
+        "labels": [
+          "capital of"
+        ]
+      },
+      "status": "disputed",
+      "subject": {
+        "id": "France",
+        "kind": "entity",
+        "labels": [
+          "France"
+        ]
+      },
+      "validity": null
+    },
+    {
+      "confidence": 0.95,
+      "context": {
+        "country_code": "FR",
+        "domain": "geography"
+      },
+      "exception": null,
+      "id": "france-capital-paris",
+      "object": {
+        "id": "Paris",
+        "kind": "entity",
+        "labels": [
+          "Paris"
+        ]
+      },
+      "polarity": true,
+      "provenance": {
+        "derived": false,
+        "evidence": [],
+        "observer": "golden",
+        "source": {
+          "authority": "https://example.org",
+          "hash": "sha256:deadbeef",
+          "media_type": "text/markdown",
+          "retrieved_at": "2026-08-20T00:00:00Z",
+          "uri": "https://example.org/geography/v1",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "relation": {
+        "id": "CAPITAL_OF",
+        "kind": "relation",
+        "labels": [
+          "capital of"
+        ]
+      },
+      "status": "established",
+      "subject": {
+        "id": "France",
+        "kind": "entity",
+        "labels": [
+          "France"
+        ]
+      },
+      "validity": {
+        "from": "2024-01-01",
+        "to": "2025-01-01"
+      }
+    }
+  ],
+  "terms": [
+    {
+      "id": "CAPITAL_OF",
+      "kind": "relation",
+      "labels": [
+        "capital of"
+      ]
+    },
+    {
+      "id": "France",
+      "kind": "entity",
+      "labels": [
+        "France"
+      ]
+    },
+    {
+      "id": "Paris",
+      "kind": "entity",
+      "labels": [
+        "Paris"
+      ]
+    }
+  ]
+}

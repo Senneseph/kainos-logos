@@ -1,0 +1,12 @@
+list: N=12193869  t_end=5999999.897000  (6e6 - t_end = 0.1030)
+S at list end: -2.709228
+S at 6e6:      -2.934949
+  T=4.000e+05: N_file=640522  S=-2.8487
+  T=1.000e+06: N_file=1747142  S=-2.5086
+  T=2.000e+06: N_file=3714922  S=-2.7424
+  T=3.000e+06: N_file=5765980  S=-2.5047
+  T=4.000e+06: N_file=7871117  S=-3.8101
+  T=5.000e+06: N_file=10016470  S=-3.0400
+  T=5.800e+06: N_file=11756111  S=-4.0557
+cross-anchors: N_file(1e6) must equal dps-certified 1747142; N_file(3e5) must equal 466655 (certified splice)
+  N_file(1e6)=1747142  N_file(3e5)=466655

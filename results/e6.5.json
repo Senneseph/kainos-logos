@@ -1,0 +1,24 @@
+{
+  "config": {
+    "commit": "46e3416",
+    "dataset_hash": null,
+    "script_hash": "97d1c38f79841deb",
+    "seed": "results/phase-6/e6.4-run1/codeX-S04.json",
+    "seed_assertions": 245
+  },
+  "evidence": [
+    "results/phase-6/e6.5-run1/session-S02.json",
+    "results/phase-6/e6.5-run1/session-S03.json",
+    "results/phase-6/e6.5-run1/session-S04.json",
+    "results/phase-6/e6.5-run1/codeX-S04.json",
+    "results/phase-6/e6.5-run2/codeX-S04.json",
+    "results/phase-6/bands-map.json"
+  ],
+  "hypothesis": "Geometry learns CONCURRENTLY with math from K\u20135 on the same teachable-strip seam: shape definitions are store data (the rule-gated capability arc, P11 generalized to geometry), shape drills are a two-family grammar INSIDE the phrasology strip (vocabulary slots), the numeric line is untouched by the geometry strip (one line, two domains), the wrong-lesson and wrong-mapping arcs resolve through the single-current-claimant pair, and the band ENDS on a JOINT evaluation \u2014 one frozen probe set spanning both domains, all four shape concepts verified stable (K = 4) against the seed-stable numerics, two runs byte-identical.",
+  "metric": "band-1 checks passed (P1..P8)",
+  "name": "e6.5",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

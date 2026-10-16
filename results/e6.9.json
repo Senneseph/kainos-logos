@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "06f513c22703992f52d290cfaeb4aa8b94b04f41",
+    "dataset_hash": null,
+    "final_total": 636,
+    "line_end_final": 72,
+    "script_hash": "76ab560ecd45cb9c",
+    "seed": "results/phase-6/e6.8-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.9-run1/session-S02.json",
+    "results/phase-6/e6.9-run1/session-S03.json",
+    "results/phase-6/e6.9-run1/session-S04.json",
+    "results/phase-6/e6.9-run1/codeX-S04.json"
+  ],
+  "hypothesis": "The number-field toolkit band (S5) learns the arithmetic half of the disproof toolkit at shallow depth on the SAME seam: the sixteen lemma facts (statement + role + cite-when; no proof object) are ESTABLISHED declared-source facts in the same codex store (24 seam facts with S4's ten); the student can STATE each one exactly and explain its ROLE; the empirical beds derive on the frozen 0..72 line (the mod4 square tables: q=5 yes / 7 no / 13 yes / 17 yes / 11 no / 19 no; the GS test 3g2r infinite, 5g3r infinite, 3g6r SILENT; the CM beds 3\u00b2+4\u00b2=25, 1\u00b2+7\u00b2=50; the pigeonhole ceilings (5,2)->3, (7,3)->3; duopow 2^6=64); the why probes are the honest needs_info wall (the proof itself is not in the store); the magnitude wall is measured (2^7=128 is off the line at 72); the JOINT band end reproduces the S4 table on the same store (erdosguess open; 4x4 grid 24; sqmod yes; twosq 3) and the S4 power wall re-probes still a wall; the conjecture is never a derivation premise (P5); the paper never reaches the student (P0); two runs byte-identical.",
+  "metric": "S5 checks passed (P0..P8)",
+  "name": "e6.9",
+  "passed": true,
+  "skipped": false,
+  "threshold": "9/9",
+  "value": "PASS e6.9: 9/9"
+}

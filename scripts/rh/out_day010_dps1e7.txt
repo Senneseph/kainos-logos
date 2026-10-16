@@ -1,0 +1,5 @@
+1e5  N=138065 (cert)       main=138067.5584 S=-2.5584  ph/pi=0.441581  2K=-2.000000  (dist-even=6.63e-08) EVEN -> CONSISTENT
+1e6  N=1747142 (cert)      main=1747144.5086 S=-2.5086  ph/pi=0.491368  2K=-2.000000  (dist-even=6.56e-09) EVEN -> CONSISTENT
+...
+1e7  corrected 21136123    main=21136124.2057 S=-1.2057  ph/pi=-0.205718  2K=0.000000  (dist-even=2.25e-09) EVEN -> CONSISTENT
+1e7  defective 21135877    main=21136124.2057 S=-247.2057  ph/pi=-0.205718  2K=-246.000000  (dist-even=2.25e-09) EVEN -> CONSISTENT

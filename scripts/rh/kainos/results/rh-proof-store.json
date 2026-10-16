@@ -1,0 +1,4005 @@
+{
+ "training_run": "rh-attack on kainos codex store (day-010)",
+ "date": "2026-09-10",
+ "identity": "7ce80adc320cdd7eb92bb5984ba3ee616d6278c49c71e7349e5b6125c3a07527",
+ "inputs": [
+  "out_day005_band_density.txt:3cb2bc304660b8454508c2b77a4e97138a59be432a861a55defd4fccb5c3a0d1",
+  "out_day005_law_chi5.txt:7eceba625d9c05169c4de27bcf942cc167123d3b6e44f9b43a0b420468eff4c3",
+  "out_day005_s_walk_1e7.txt:5a2249f4cadf02367a26944266f265a76c2163ee4bc95958563100d5d8423fff",
+  "out_day005g_dt025.txt:65ac6382d279fa8ed249f550951c32c118031f251da1a3c4936323d42038920b",
+  "out_day009_dlmf_252_12_check.txt:a8e0e56899168f23412547fad222e0debfde4744f05ba12eced40395c027ee69",
+  "out_day009_e7b2_onset_pred.txt:1a1c971ff7860b57318ecf24cc8a250a34ab63360177e3eefd54c80018b6005b",
+  "out_day009_e7b2b_locate.txt:2f2e76a65f4a98e5f64da6b6131567a80a3dd53414755d01579c44acc550b2a3",
+  "out_day009_s_walk_1e4_1p9e4_gpu.txt:f2c2b0c65d4be8e71c9df0bfe11024acd38a2264c948b6e77e8926ef8c058851",
+  "out_day009_zero_walk_1e5_6e6_gpu.txt:7989714d2baa1812bf106f5628e44a73c441c30e3351e6d14026c514a09774a1",
+  "out_day009b_seg00_certified.txt:e5d8d679b0ef9c8dfaab3945898dd38a27c20907a0c697ef957b27744f1b5ebe",
+  "out_day009b_zero_walk_1e5_6e6_gpu.txt:7eaa2f4ad5037ebdbc614eec9e5cd376db92a9c4fc5b419aed19c0c3bb7c0463",
+  "out_day009c_onset_pred_certified.txt:0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+  "out_day009c_onset_pred_ext.txt:526c727df88bc659fc0539bd5f404816d4eb8843e578ef96876ae400df6146bd",
+  "out_day009c_vectorized_rerun.txt:d35f1648995f482b896d1e3e970b56590e527f04ce28c07ea381d08a74cc2c39",
+  "out_day009d_chain.txt:c1aa487a50b6a71f0387f07dbc72f3595eafc4856e553d4613109cde3cb16386",
+  "out_day010_b5core_check.txt:e92248696cf2c9964f448cbe40210756176a3a1a71e32b61390f1c09e27f7b0b",
+  "out_day010_d3fine.txt:64090b7bf9ba528f83fda33d41644f9a73023b171d8bb2c4a58aa9cdb562b42d",
+  "out_day010_d4d3.txt:8354f73d12fc64137ceb878db6e8e5cf8a9505abb2d16f7cd21b210a9af7f811",
+  "out_day010_d4farscale.txt:559ba793f4e88af11ff72975fbf27b2a3e8a36cd220f6ba6f5f00971dc1220f3",
+  "out_day010_dps1e7.txt:410f5cb3bf7993242b6c167f12efc8d96050c19843879e781c05767cc19bc127",
+  "out_day010_ext6e6_supervisor.txt:39ae2ee506a0eccbb10312372a017b00a80152ec73cff0b3952a5fd15500cad9",
+  "out_day010_ext6e6_walk.txt:3c011d93b75dfc8c4ad77055eb3c59dfdbc500c15754a79e9abab3ad82f52305",
+  "out_day010_pair_unit.txt:36b363df89001d1552055f4ef9312f5f713a450223e0fb086198f9526adfad6c",
+  "zeros_T300000_ext_GT100000_dt2.txt:8b2875967cf60fc9bbeec84359b252a9db5c97401cc89163745cc7867efc5bd7",
+  "zeros_T300000_ext_full.txt:1364176a22513fdc53c2db76b513ae214930487def16734119be6ba2f1c47c2e"
+ ],
+ "facts": {
+  "m-onset-4d": "measured 4-digit law (rows=15 certified, clean=2)",
+  "m-stage1": "Stage-1 clean rows: (1000,1.0):+0.29%; (10000,0.1):-1.17%",
+  "f-list-3e5": "N(3e5)=466655 (dt=dt2, gate 6.5e-10, min gap 0.00575)",
+  "f-window-1e7": "227197 flips STABLE",
+  "f-cert-1e5": "2K=-2@6.6e-08 S=-2.5584",
+  "f-cert-1e6": "2K=-2@6.6e-09 S=-2.5086",
+  "f-cert-1e7c": "2K=0@2.2e-09 S=-1.2057",
+  "f-pair-id": "B-4 unit PASS (dLa 3e-14, dAr 3e-16)",
+  "d4-dev": "D4/D3 complete (gstar=999.791572)",
+  "b5-core": "core theorem VERIFIED (fs-vs-meas 0.0005, vs-direct 6e-26)",
+  "d4-far": "far-scale LANDED (|R-1| = c^2 6-digit, max 10000)",
+  "d3floor": "fine floor LANDED (median 2.9e-03, p90 1.9e-02, max 3.9e-02)",
+  "d1-6e6": "PENDING (6e6 walk in flight)",
+  "d5-1e7-red": "PENDING (in flight)",
+  "d2-fits": "PENDING (queued, small)"
+ },
+ "store_generation": 87,
+ "line_end": {
+  "certified-fac-cert-1e5": "N=138065 S=-2.5584 2K=-2",
+  "certified-fac-cert-1e6": "N=1747142 S=-2.5086 2K=-2",
+  "certified-fac-cert-1e7c": "N=21136123 S=-1.2057 2K=0",
+  "certified-list-3e5": "N(3e5)=466655 gate=6.541e-10",
+  "stable-window-1e7": {
+   "flips_9p9e6_1e7": 227197,
+   "window": "[9.9e6, 1e7]",
+   "dt2_matches_dt": true
+  }
+ },
+ "discharge": {
+  "plan-A (route A, definition-side)": {
+   "root": "closure-a",
+   "closure": [
+    "b0-counting-equiv",
+    "b1-onset-thm",
+    "b2-rigorous-tail",
+    "b3-bridge-id",
+    "b5-core",
+    "b5-detector",
+    "b6a-route-a",
+    "c-25212",
+    "c-fe",
+    "c-rvm",
+    "c-zeta-pos",
+    "d-pair-unit",
+    "d1-6e6",
+    "d2-fits",
+    "d4-dev",
+    "fa-pair-id",
+    "m-onset-4d",
+    "m-stage1"
+   ],
+   "fulfilled": [
+    "b5-core",
+    "b5-detector",
+    "c-25212",
+    "c-fe",
+    "c-rvm",
+    "d-pair-unit",
+    "d4-dev",
+    "fa-pair-id",
+    "m-onset-4d",
+    "m-stage1"
+   ],
+   "pending_data": [
+    "d1-6e6",
+    "d2-fits"
+   ],
+   "to_build": [
+    "b0-counting-equiv",
+    "b1-onset-thm",
+    "b2-rigorous-tail",
+    "b3-bridge-id",
+    "b6a-route-a",
+    "c-zeta-pos"
+   ],
+   "runnable_frontier": [
+    "d1-6e6",
+    "d2-fits",
+    "c-zeta-pos"
+   ]
+  },
+  "plan-B (route B, uniform dynamics)": {
+   "root": "closure-b",
+   "closure": [
+    "b0-counting-equiv",
+    "b6b-route-b",
+    "c-fe",
+    "c-rvm",
+    "c-zeta-pos",
+    "fac-cert-1e5",
+    "fac-cert-1e6",
+    "fac-cert-1e7c",
+    "x-s-theory"
+   ],
+   "fulfilled": [
+    "c-fe",
+    "c-rvm",
+    "fac-cert-1e5",
+    "fac-cert-1e6",
+    "fac-cert-1e7c"
+   ],
+   "pending_data": [],
+   "to_build": [
+    "b0-counting-equiv",
+    "b6b-route-b",
+    "c-zeta-pos",
+    "x-s-theory"
+   ],
+   "runnable_frontier": [
+    "c-zeta-pos",
+    "x-s-theory"
+   ]
+  },
+  "plan-C (hybrid interim: RH to T)": {
+   "root": "b6c-hybrid-T",
+   "closure": [
+    "fac-cert-1e6",
+    "fac-cert-1e7c",
+    "fac-window-1e7"
+   ],
+   "fulfilled": [
+    "fac-cert-1e6",
+    "fac-cert-1e7c",
+    "fac-window-1e7"
+   ],
+   "pending_data": [],
+   "to_build": [],
+   "runnable_frontier": []
+  }
+ },
+ "circularity": {
+  "cycles": [],
+  "clean": true,
+  "p5_violations": []
+ },
+ "dump": {
+  "terms": [
+   {
+    "id": "b0-counting-equiv",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b1-onset-thm",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b2-rigorous-tail",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b3-bridge-id",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b5-core",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b5-detector",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b6a-route-a",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b6b-route-b",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "b6c-hybrid-T",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "c-25212",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "c-fe",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "c-rvm",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "c-zeta-pos",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "certified-count",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "classical-input",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "closure-a",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "closure-b",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "concept",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "d-pair-unit",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d1-6e6",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d2-fits",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d3floor",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d4-dev",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d4-far",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "d5-1e7-red",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "dps-certificate",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "dt-dt2-stable",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "fa-pair-id",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "fac-cert-1e5",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "fac-cert-1e6",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "fac-cert-1e7c",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "fac-list-3e5",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "fac-window-1e7",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "m-onset-4d",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "m-stage1",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-1000-0.1",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-1000-0.2",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-1000-0.5",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-1000-1.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-1000-2.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-10000-0.1",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-10000-0.2",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-10000-0.5",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-10000-1.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-10000-2.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-100000-0.1",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-100000-0.2",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-100000-0.5",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-100000-1.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "meas-onset-pt-100000-2.0",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "measured",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "measured-bridge",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "measured-deviation",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "measured-farscale",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "measured-floor",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "measured-law",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "pending-run",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "pending-work",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "plan",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "prereq",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "rh",
+    "kind": "concept",
+    "labels": []
+   },
+   {
+    "id": "target-goal",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "theorem-verified",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "unit-verified",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "value",
+    "kind": "relation",
+    "labels": []
+   },
+   {
+    "id": "x-s-theory",
+    "kind": "concept",
+    "labels": []
+   }
+  ],
+  "assertions": [
+   {
+    "id": "cl-c-25212",
+    "subject": {
+     "id": "c-25212",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "classical-input",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "DLMF 25.2.12 product (READ, verbatim in ledger)",
+    "polarity": true,
+    "context": {
+     "note": "DLMF 25.2.12 product (READ, verbatim in ledger)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/FORMULAS.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "ff973c32523b501df19ba8aa9f57914fdc5b108bd15f34bc4ceafcedfc6297dd",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cl-c-fe",
+    "subject": {
+     "id": "c-fe",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "classical-input",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "functional equation + conjugation: 4-tuple structure",
+    "polarity": true,
+    "context": {
+     "note": "functional equation + conjugation: 4-tuple structure"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/FORMULAS.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "ff973c32523b501df19ba8aa9f57914fdc5b108bd15f34bc4ceafcedfc6297dd",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cl-c-rvm",
+    "subject": {
+     "id": "c-rvm",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "classical-input",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "Riemann-von Mangoldt (project convention; dps-40 verified at 1e5/1e6/1e7)",
+    "polarity": true,
+    "context": {
+     "note": "Riemann-von Mangoldt (project convention; dps-40 verified at 1e5/1e6/1e7)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/FORMULAS.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "ff973c32523b501df19ba8aa9f57914fdc5b108bd15f34bc4ceafcedfc6297dd",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cl-c-zeta-pos",
+    "subject": {
+     "id": "c-zeta-pos",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "classical-input",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "zeta>0 on (0,1) \u2014 CITATION PENDING (F-0.1)",
+    "polarity": true,
+    "context": {
+     "note": "zeta>0 on (0,1) \u2014 CITATION PENDING (F-0.1)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/FORMULAS.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "ff973c32523b501df19ba8aa9f57914fdc5b108bd15f34bc4ceafcedfc6297dd",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cl-rh",
+    "subject": {
+     "id": "rh",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "target-goal",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "RH as reduction target: D(t)=N_total-N_on identically 0",
+    "polarity": true,
+    "context": {
+     "invariant": "stays hypothesis (P5); no theorem:riemann assertion"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "hypothesis",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b0-counting-equiv",
+    "subject": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-0 counting equivalence RH<=>D==0",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "c-rvm",
+      "c-fe",
+      "c-zeta-pos"
+     ],
+     "note": "to-build (LOW: 2-line counting argument)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b1-onset-thm",
+    "subject": {
+     "id": "b1-onset-thm",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-1 exact onset law + remainder (G4)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "m-onset-4d",
+      "d2-fits",
+      "c-25212"
+     ],
+     "note": "to-build (Euler-Maclaurin lifting)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b2-rigorous-tail",
+    "subject": {
+     "id": "b2-rigorous-tail",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-2 rigorous tail remainder M(G,t) (G3)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "d1-6e6"
+     ],
+     "note": "to-build (D1 data decides the model)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b3-bridge-id",
+    "subject": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-3 bridge identity as identity+residual (H3 lift)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "m-stage1",
+      "fa-pair-id",
+      "b2-rigorous-tail",
+      "c-rvm"
+     ],
+     "note": "to-build (follows B-1/B-2)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b5-core",
+    "subject": {
+     "id": "b5-core",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-5 core: exact R = off4/on2 closed form + dps-30 verification",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "d4-dev"
+     ],
+     "note": "FILLED (v0.5; out_day010_b5core_check.txt)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b5-detector",
+    "subject": {
+     "id": "b5-detector",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-5 kernel-deviation lemma f(delta,t) + 2K mechanism",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "fa-pair-id",
+      "d4-dev",
+      "b5-core"
+     ],
+     "note": "core theorem FILLED v0.5 (exact R closed form, dps-30 verified); composition with floor = B-6A"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b6a-route-a",
+    "subject": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-6A residual-floor theorem (route A: no walk; T drops out)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "b1-onset-thm",
+      "b3-bridge-id",
+      "b5-detector",
+      "d1-6e6"
+     ],
+     "note": "to-build (THE WALL candidate)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b6b-route-b",
+    "subject": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-6B uniform 2K/S dynamics (route B: classical depth)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "fac-cert-1e5",
+      "fac-cert-1e6",
+      "fac-cert-1e7c",
+      "x-s-theory"
+     ],
+     "note": "to-build (classical S-program)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-b6c-hybrid-T",
+    "subject": {
+     "id": "b6c-hybrid-T",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-6C hybrid interim: RH to T (certified counterexample search)",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "fac-cert-1e6",
+      "fac-cert-1e7c",
+      "fac-window-1e7"
+     ],
+     "note": "partially filled (T=1e7; redundancy D5 in flight)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d-pair-unit",
+    "subject": {
+     "id": "d-pair-unit",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D4 unit: per-pair closed form verified",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d1-6e6",
+    "subject": {
+     "id": "d1-6e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D1: G=6e6 list + onset rows (tail-saturation test)",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d2-fits",
+    "subject": {
+     "id": "d2-fits",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D2: beyond-4-digit onset fits",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d3floor",
+    "subject": {
+     "id": "d3floor",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D3-fine: local |zeta-K| audit floor [975,1025]",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d4-dev",
+    "subject": {
+     "id": "d4-dev",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D4/D3: kernel deviation + W-audit on the actual zeta",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d4-far",
+    "subject": {
+     "id": "d4-far",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D4-far: far-pair |R-1| = (t0/gamma*)^2 amplification",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-d5-1e7-red",
+    "subject": {
+     "id": "d5-1e7-red",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "D5: 1e7 redundancy re-walk",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "from facts"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-fa-pair-id",
+    "subject": {
+     "id": "fa-pair-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "B-4 on-line per-pair closed form (la, ar) + validation",
+    "polarity": true,
+    "context": {
+     "prereqs": [
+      "d-pair-unit"
+     ],
+     "note": "FILLED (measured dps-25 unit, fact walk)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "cn-x-s-theory",
+    "subject": {
+     "id": "x-s-theory",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "concept",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "open classical S-theory strong enough to exclude off-line content",
+    "polarity": true,
+    "context": {
+     "prereqs": [],
+     "note": "wall (no data trigger; the classical home-turf gap)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-b5core",
+    "subject": {
+     "id": "b5-core",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "theorem-verified",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "R closed form: |f-m| far <= 0.0005, |f-direct| <= 6.0e-26 (dps-30)",
+    "polarity": true,
+    "context": {
+     "worst_formula_vs_measured_far": 0.000498,
+     "worst_formula_vs_direct": 5.978e-26,
+     "dps": 30,
+     "statement": "R = (1/4+g^2)((g-t)^2+d^2)((g+t)^2+d^2)/((g^2-t^2)((1/2+d)^2+g^2)((1/2-d)^2+g^2)) * exp((1/2+it)*omega_d)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_b5core_check.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "e92248696cf2c9964f448cbe40210756176a3a1a71e32b61390f1c09e27f7b0b",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_b5core_check.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-d-pair-unit",
+    "subject": {
+     "id": "d-pair-unit",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "unit check PASS",
+    "polarity": true,
+    "context": {
+     "dLa": 3.464e-14,
+     "dAr": 3.235e-16
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_pair_unit.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "36b363df89001d1552055f4ef9312f5f713a450223e0fb086198f9526adfad6c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_pair_unit.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-d3floor",
+    "subject": {
+     "id": "d3floor",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured-floor",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "fine [975,1025]@0.5u (n=99): median 2.902e-03, p90 1.855e-02, max 3.886e-02 \u2014 no 100x spike",
+    "polarity": true,
+    "context": {
+     "n": 99,
+     "median": 0.002902,
+     "p90": 0.01855,
+     "max": 0.03886,
+     "spike_100x": false,
+     "localization": "none (top band scattered)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d3fine.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "64090b7bf9ba528f83fda33d41644f9a73023b171d8bb2c4a58aa9cdb562b42d",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d3fine.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-d4d3",
+    "subject": {
+     "id": "d4-dev",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured-deviation",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "gstar=999.791572; D3 median=1.78e-03 max=2.46e-02",
+    "polarity": true,
+    "context": {
+     "gstar": 999.791572,
+     "audit_median": 0.001778,
+     "audit_max": 0.02465
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d4d3.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "8354f73d12fc64137ceb878db6e8e5cf8a9505abb2d16f7cd21b210a9af7f811",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d4d3.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-d4far",
+    "subject": {
+     "id": "d4-far",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured-farscale",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "far ratios 10/50/100: |R-1| = (t0/gamma*)^2 to 6 digits (max 10000.0), delta-flat O(1e-6)",
+    "polarity": true,
+    "context": {
+     "max_abs_R_minus_1": 9999.9975,
+     "trend": "quadratic in t0/gamma* (10^2/50^2/100^2)",
+     "delta_range": [
+      0.005,
+      0.5
+     ],
+     "near_resonance_floor": 0.998
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d4farscale.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "559ba793f4e88af11ff72975fbf27b2a3e8a36cd220f6ba6f5f00971dc1220f3",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_d4farscale.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-dps-1e5",
+    "subject": {
+     "id": "fac-cert-1e5",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "dps-certificate",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "2K=-2.000000 @6.63e-08, S=-2.5584",
+    "polarity": true,
+    "context": {
+     "count": 138065,
+     "S": -2.5584,
+     "twoK": -2.0,
+     "dist_even": 6.63e-08,
+     "dps": 40,
+     "even": true
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "410f5cb3bf7993242b6c167f12efc8d96050c19843879e781c05767cc19bc127",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-dps-1e6",
+    "subject": {
+     "id": "fac-cert-1e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "dps-certificate",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "2K=-2.000000 @6.56e-09, S=-2.5086",
+    "polarity": true,
+    "context": {
+     "count": 1747142,
+     "S": -2.5086,
+     "twoK": -2.0,
+     "dist_even": 6.56e-09,
+     "dps": 40,
+     "even": true
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "410f5cb3bf7993242b6c167f12efc8d96050c19843879e781c05767cc19bc127",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-dps-1e7c",
+    "subject": {
+     "id": "fac-cert-1e7c",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "dps-certificate",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "2K=0.000000 @2.25e-09, S=-1.2057",
+    "polarity": true,
+    "context": {
+     "count": 21136123,
+     "S": -1.2057,
+     "twoK": 0.0,
+     "dist_even": 2.25e-09,
+     "dps": 40,
+     "even": true
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "410f5cb3bf7993242b6c167f12efc8d96050c19843879e781c05767cc19bc127",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_dps1e7.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-list-3e5-cert",
+    "subject": {
+     "id": "fac-list-3e5",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "certified-count",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "N(3e5)=466655",
+    "polarity": true,
+    "context": {
+     "N_3e5": 466655,
+     "dt": 466655,
+     "dt2": 466655,
+     "engine_gate_gpu_vs_host": 6.541e-10,
+     "min_gap_dt2": 0.00575,
+     "method": "GPU dt/dt2 double pass, per-segment agreement, engine gate"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009b_seg00_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "e5d8d679b0ef9c8dfaab3945898dd38a27c20907a0c697ef957b27744f1b5ebe",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009b_seg00_certified.txt",
+      "zeros_T300000_ext_full.txt (466655 lines, strict monotone)"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-m-onset-4d",
+    "subject": {
+     "id": "m-onset-4d",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured-law",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I| = 1/2*(t/N) \u2014 4 digits, N-independent, onset t/N~2",
+    "polarity": true,
+    "context": {
+     "digits": 4,
+     "n_independent": true,
+     "rows_certified": 15,
+     "clean_rows": 2
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "scripts/rh/day009_e7b2_onset_pred.py (day-004b measurement)"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-m-stage1",
+    "subject": {
+     "id": "m-stage1",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "measured-bridge",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "Stage-1: zero-side 25.2.12 kernel reproduces the onset at clean points",
+    "polarity": true,
+    "context": {
+     "clean": "(1000,1.0):+0.29%;(10000,0.1):-1.17%",
+     "env": "docker kainos-dev:dev (mpmath 1.3.0 verified env)"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-pair-unit",
+    "subject": {
+     "id": "fa-pair-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "unit-verified",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "dLa<=3.5e-14, dAr<=3.2e-16 (dps-25 ref)",
+    "polarity": true,
+    "context": {
+     "dLa_worst": 3.464e-14,
+     "dAr_worst": 3.235e-16,
+     "reference": "mpmath dps-25 single-pair",
+     "zeros": "first 100 certified",
+     "dps": 25
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_pair_unit.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "36b363df89001d1552055f4ef9312f5f713a450223e0fb086198f9526adfad6c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day010_pair_unit.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fac-window-1e7",
+    "subject": {
+     "id": "fac-window-1e7",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "dt-dt2-stable",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "[9.9e6,1e7]: 227197 flips exact",
+    "polarity": true,
+    "context": {
+     "flips_9p9e6_1e7": 227197,
+     "window": "[9.9e6, 1e7]",
+     "dt2_matches_dt": true
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day005g_dt025.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "65ac6382d279fa8ed249f550951c32c118031f251da1a3c4936323d42038920b",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day005g_dt025.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "fact-d1",
+    "subject": {
+     "id": "d1-6e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "pending-run",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "6e6 chain in flight (supervisor)",
+    "polarity": true,
+    "context": {
+     "status": "in-flight",
+     "supervisor": "day010_ext6e6_supervisor.sh"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "rh-attack/PLAN (declarative)",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": null,
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "fact-d2",
+    "subject": {
+     "id": "d2-fits",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "pending-work",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "beyond-4-digit onset fits (next correction terms)",
+    "polarity": true,
+    "context": {
+     "status": "queued",
+     "vehicle": "certified 3e5 list"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "rh-attack/PLAN (declarative)",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": null,
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "fact-d5",
+    "subject": {
+     "id": "d5-1e7-red",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "pending-run",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "1e7 redundancy walk in flight",
+    "polarity": true,
+    "context": {
+     "status": "in-flight"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "rh-attack/PLAN (declarative)",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": null,
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-1000-0.1",
+    "subject": {
+     "id": "meas-onset-pt-1000-0.1",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.0500",
+    "polarity": true,
+    "context": {
+     "N": 1000,
+     "t_over_N": 0.1,
+     "pred": 0.085305,
+     "measured": 0.05,
+     "err_pct": 70.61,
+     "psi_zeta_rel_err": 0.004312
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-1000-0.2",
+    "subject": {
+     "id": "meas-onset-pt-1000-0.2",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.1000",
+    "polarity": true,
+    "context": {
+     "N": 1000,
+     "t_over_N": 0.2,
+     "pred": 0.143575,
+     "measured": 0.1,
+     "err_pct": 43.57,
+     "psi_zeta_rel_err": 0.003686
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-1000-0.5",
+    "subject": {
+     "id": "meas-onset-pt-1000-0.5",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.2509",
+    "polarity": true,
+    "context": {
+     "N": 1000,
+     "t_over_N": 0.5,
+     "pred": 0.428748,
+     "measured": 0.2509,
+     "err_pct": 70.88,
+     "psi_zeta_rel_err": 0.008203
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-1000-1.0",
+    "subject": {
+     "id": "meas-onset-pt-1000-1.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.5071",
+    "polarity": true,
+    "context": {
+     "N": 1000,
+     "t_over_N": 1.0,
+     "pred": 0.508569,
+     "measured": 0.5071,
+     "err_pct": 0.29,
+     "psi_zeta_rel_err": 6.44e-05
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-1000-2.0",
+    "subject": {
+     "id": "meas-onset-pt-1000-2.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=1.0620",
+    "polarity": true,
+    "context": {
+     "N": 1000,
+     "t_over_N": 2.0,
+     "pred": 1.123453,
+     "measured": 1.062,
+     "err_pct": 5.79,
+     "psi_zeta_rel_err": 0.001796
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-10000-0.1",
+    "subject": {
+     "id": "meas-onset-pt-10000-0.1",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.0500",
+    "polarity": true,
+    "context": {
+     "N": 10000,
+     "t_over_N": 0.1,
+     "pred": 0.049415,
+     "measured": 0.05,
+     "err_pct": -1.17,
+     "psi_zeta_rel_err": 6.44e-05
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-10000-0.2",
+    "subject": {
+     "id": "meas-onset-pt-10000-0.2",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.1000",
+    "polarity": true,
+    "context": {
+     "N": 10000,
+     "t_over_N": 0.2,
+     "pred": 0.104234,
+     "measured": 0.1,
+     "err_pct": 4.23,
+     "psi_zeta_rel_err": 0.001796
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-10000-0.5",
+    "subject": {
+     "id": "meas-onset-pt-10000-0.5",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.2509",
+    "polarity": true,
+    "context": {
+     "N": 10000,
+     "t_over_N": 0.5,
+     "pred": 0.842328,
+     "measured": 0.2509,
+     "err_pct": 235.72,
+     "psi_zeta_rel_err": 0.02187
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-10000-1.0",
+    "subject": {
+     "id": "meas-onset-pt-10000-1.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.5071",
+    "polarity": true,
+    "context": {
+     "N": 10000,
+     "t_over_N": 1.0,
+     "pred": 2.897247,
+     "measured": 0.5071,
+     "err_pct": 471.34,
+     "psi_zeta_rel_err": 0.083
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-10000-2.0",
+    "subject": {
+     "id": "meas-onset-pt-10000-2.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=1.0620",
+    "polarity": true,
+    "context": {
+     "N": 10000,
+     "t_over_N": 2.0,
+     "pred": 113.672708,
+     "measured": 1.062,
+     "err_pct": 10603.64,
+     "psi_zeta_rel_err": 0.4221
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-100000-0.1",
+    "subject": {
+     "id": "meas-onset-pt-100000-0.1",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.0500",
+    "polarity": true,
+    "context": {
+     "N": 100000,
+     "t_over_N": 0.1,
+     "pred": 0.85422,
+     "measured": 0.05,
+     "err_pct": 1608.44,
+     "psi_zeta_rel_err": 0.083
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-100000-0.2",
+    "subject": {
+     "id": "meas-onset-pt-100000-0.2",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.1000",
+    "polarity": true,
+    "context": {
+     "N": 100000,
+     "t_over_N": 0.2,
+     "pred": 35.984872,
+     "measured": 0.1,
+     "err_pct": 35884.87,
+     "psi_zeta_rel_err": 0.4221
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-100000-0.5",
+    "subject": {
+     "id": "meas-onset-pt-100000-0.5",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.2509",
+    "polarity": true,
+    "context": {
+     "N": 100000,
+     "t_over_N": 0.5,
+     "pred": 8796.654224,
+     "measured": 0.2509,
+     "err_pct": 3505939.95,
+     "psi_zeta_rel_err": 18.73
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-100000-1.0",
+    "subject": {
+     "id": "meas-onset-pt-100000-1.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=0.5071",
+    "polarity": true,
+    "context": {
+     "N": 100000,
+     "t_over_N": 1.0,
+     "pred": 555.865018,
+     "measured": 0.5071,
+     "err_pct": 109516.45,
+     "psi_zeta_rel_err": 0.2988
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "onset-pt-100000-2.0",
+    "subject": {
+     "id": "meas-onset-pt-100000-2.0",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "value",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": "C/|I|=1.0620",
+    "polarity": true,
+    "context": {
+     "N": 100000,
+     "t_over_N": 2.0,
+     "pred": 2221.160616,
+     "measured": 1.062,
+     "err_pct": 209048.83,
+     "psi_zeta_rel_err": 0.9997
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "established",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "0fc66aa482ecf9feac3fa08eb2b93006253a6c496742fe3cb3579dd35d1cf839",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": true,
+     "evidence": [
+      "/home/jsmille/Projects/kainos-logos/scripts/rh/out_day009c_onset_pred_certified.txt"
+     ]
+    },
+    "exception": null
+   },
+   {
+    "id": "plan-a",
+    "subject": {
+     "id": "rh",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "plan",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "closure-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "route A: definition-side closure, no walked T"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "hypothesis",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "plan-b",
+    "subject": {
+     "id": "rh",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "plan",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "closure-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "route B: uniform dynamics closure"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "hypothesis",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b0-counting-equiv-c-fe",
+    "subject": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "c-fe",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b0-counting-equiv requires c-fe"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b0-counting-equiv-c-rvm",
+    "subject": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "c-rvm",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b0-counting-equiv requires c-rvm"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b0-counting-equiv-c-zeta-pos",
+    "subject": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "c-zeta-pos",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b0-counting-equiv requires c-zeta-pos"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b1-onset-thm-c-25212",
+    "subject": {
+     "id": "b1-onset-thm",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "c-25212",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b1-onset-thm requires c-25212"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b1-onset-thm-d2-fits",
+    "subject": {
+     "id": "b1-onset-thm",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d2-fits",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b1-onset-thm requires d2-fits"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b1-onset-thm-m-onset-4d",
+    "subject": {
+     "id": "b1-onset-thm",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "m-onset-4d",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b1-onset-thm requires m-onset-4d"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b2-rigorous-tail-d1-6e6",
+    "subject": {
+     "id": "b2-rigorous-tail",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d1-6e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b2-rigorous-tail requires d1-6e6"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b3-bridge-id-b2-rigorous-tail",
+    "subject": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b2-rigorous-tail",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b3-bridge-id requires b2-rigorous-tail"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b3-bridge-id-c-rvm",
+    "subject": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "c-rvm",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b3-bridge-id requires c-rvm"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b3-bridge-id-fa-pair-id",
+    "subject": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fa-pair-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b3-bridge-id requires fa-pair-id"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b3-bridge-id-m-stage1",
+    "subject": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "m-stage1",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b3-bridge-id requires m-stage1"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b5-core-d4-dev",
+    "subject": {
+     "id": "b5-core",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d4-dev",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b5-core requires d4-dev"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b5-detector-b5-core",
+    "subject": {
+     "id": "b5-detector",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b5-core",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b5-detector requires b5-core"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b5-detector-d4-dev",
+    "subject": {
+     "id": "b5-detector",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d4-dev",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b5-detector requires d4-dev"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b5-detector-fa-pair-id",
+    "subject": {
+     "id": "b5-detector",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fa-pair-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b5-detector requires fa-pair-id"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6a-route-a-b1-onset-thm",
+    "subject": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b1-onset-thm",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6a-route-a requires b1-onset-thm"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6a-route-a-b3-bridge-id",
+    "subject": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b3-bridge-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6a-route-a requires b3-bridge-id"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6a-route-a-b5-detector",
+    "subject": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b5-detector",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6a-route-a requires b5-detector"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6a-route-a-d1-6e6",
+    "subject": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d1-6e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6a-route-a requires d1-6e6"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6b-route-b-fac-cert-1e5",
+    "subject": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-cert-1e5",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6b-route-b requires fac-cert-1e5"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6b-route-b-fac-cert-1e6",
+    "subject": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-cert-1e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6b-route-b requires fac-cert-1e6"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6b-route-b-fac-cert-1e7c",
+    "subject": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-cert-1e7c",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6b-route-b requires fac-cert-1e7c"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6b-route-b-x-s-theory",
+    "subject": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "x-s-theory",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6b-route-b requires x-s-theory"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6c-hybrid-T-fac-cert-1e6",
+    "subject": {
+     "id": "b6c-hybrid-T",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-cert-1e6",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6c-hybrid-T requires fac-cert-1e6"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6c-hybrid-T-fac-cert-1e7c",
+    "subject": {
+     "id": "b6c-hybrid-T",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-cert-1e7c",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6c-hybrid-T requires fac-cert-1e7c"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-b6c-hybrid-T-fac-window-1e7",
+    "subject": {
+     "id": "b6c-hybrid-T",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "fac-window-1e7",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "b6c-hybrid-T requires fac-window-1e7"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-closure-a-b0-counting-equiv",
+    "subject": {
+     "id": "closure-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "closure-a requires counting equivalence"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-closure-a-b6a-route-a",
+    "subject": {
+     "id": "closure-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b6a-route-a",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "closure-a requires route A"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-closure-b-b0-counting-equiv",
+    "subject": {
+     "id": "closure-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b0-counting-equiv",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "closure-b requires counting equivalence"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-closure-b-b6b-route-b",
+    "subject": {
+     "id": "closure-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "b6b-route-b",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "closure-b requires route B"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   },
+   {
+    "id": "pre-fa-pair-id-d-pair-unit",
+    "subject": {
+     "id": "fa-pair-id",
+     "kind": "concept",
+     "labels": []
+    },
+    "relation": {
+     "id": "prereq",
+     "kind": "relation",
+     "labels": []
+    },
+    "object": {
+     "id": "d-pair-unit",
+     "kind": "concept",
+     "labels": []
+    },
+    "polarity": true,
+    "context": {
+     "note": "fa-pair-id requires d-pair-unit"
+    },
+    "validity": null,
+    "confidence": 1.0,
+    "status": "candidate",
+    "provenance": {
+     "source": {
+      "uri": "/home/jsmille/Projects/kainos-logos/plan/40-prize-islands/rh-attack/RH-PROOF-OUTLINE.md",
+      "media_type": null,
+      "version": "2026-09-10",
+      "hash": "42b0b4f196d0f57c3e261741f713a5953eec70ade41ec78b7856f937945def0c",
+      "retrieved_at": "2026-09-10",
+      "authority": "kainos-logos rh-attack"
+     },
+     "observer": "rh-attack training run (day-010, owner directive items 5-6)",
+     "derived": false,
+     "verified": false,
+     "evidence": []
+    },
+    "exception": null
+   }
+  ]
+ }
+}

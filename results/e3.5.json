@@ -1,0 +1,26 @@
+{
+  "config": {
+    "bits_per_value": 8,
+    "commit": "06d2b56",
+    "dataset_hash": null,
+    "max_base_hist_l1": 0.53955078125,
+    "min_base_mac_err_per_op_ingest_incl": 7.595627477425953e-06,
+    "min_base_ops_per_result_ingest_incl": 161.48,
+    "phi_hist_l1": 0.0,
+    "phi_mac_err_per_op_ingest_incl": 4.503901165568838e-06,
+    "phi_ops_per_result_ingest_incl": 334.67,
+    "seed": 20260820,
+    "verdict": "reject",
+    "verdict_note": "rejects; ops/result 334.7 > min(base) 161.5"
+  },
+  "evidence": [
+    "results/phase-3/e3.5.json"
+  ],
+  "hypothesis": "phi positional s*phi^n arithmetic (exponent-add multiply, sign xor, per-power mass add, Fibonacci-carry normalization) is more computationally efficient than FP8/INT8 quantized arithmetic at a matched 8-bit budget, with an error-per-op advantage",
+  "metric": "err-per-op (total MAC rel error / total ops, ingest-incl) + hist L1 + ops/result, 8-bit A/B vs FP8 and INT8",
+  "name": "e3.5",
+  "passed": true,
+  "skipped": false,
+  "threshold": "strict A/B at 8 bits/value: phi must win err-per-op by >=10% and not lose the histogram or ops axes; adopt or reject with a documented margin (P8)",
+  "value": 4.503901165568838e-06
+}

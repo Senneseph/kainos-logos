@@ -1,0 +1,1971 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S18 script + all responses + band lessons (S4\u2013S9 + S11\u2013S18) + all thirty-seven theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:question-def",
+        "lemma:tamable-def",
+        "lemma:reduction-def",
+        "lemma:cost-def",
+        "theorem:line-pi-reduction"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:08"
+      ],
+      "domain_sequences": {
+        "2": "UULSSSUULHHSUULSS",
+        "3": "UULSSSFTSSSSSSSSS",
+        "4": "SSHSSSSSSSSSSHSSS"
+      },
+      "impossible_turns": [
+        "S02:01",
+        "S02:02",
+        "S02:07",
+        "S02:08",
+        "S02:13",
+        "S02:14",
+        "S03:01",
+        "S03:02"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:07"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:03",
+        "S02:09",
+        "S02:15",
+        "S03:03"
+      ],
+      "touch_set_size": 57
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 96,
+      "seam_theorems": 37,
+      "total_seam_facts": 133,
+      "wall_carried_rows": [
+        "S04:03",
+        "S04:14"
+      ]
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 18,
+      "pass": true,
+      "reference_walls": "W-S18-1..W-S18-2 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S02:10",
+        "S02:11"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_beal_theorem_facts": [],
+      "discovery_candidate_bsd_theorem_facts": [],
+      "discovery_candidate_pnp_theorem_facts": [],
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "queue_missing": [],
+        "queue_source": "lemma:queue-declared (self-parsed)",
+        "summit_destination_agreement": true,
+        "summit_destination_bad": []
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "state the beal-line-satisfaction rule"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S04:01",
+        "S04:02",
+        "S04:03",
+        "S04:04",
+        "S04:05"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 108,
+      "drilled": {
+        "beal-census": 1,
+        "beal-summit": 1,
+        "l-correction": 1
+      },
+      "expected": {
+        "cost-counter": {
+          "correct": 10,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "decision-question": {
+          "correct": 7,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "reduction": {
+          "correct": 9,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "tamable-machine": {
+          "correct": 4,
+          "prereq_gaps": [],
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 108,
+        "determinism_twin": true,
+        "final_total": 1698,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 52,
+        "new_facts": 5,
+        "reproduced_in_s2_pre": 1641,
+        "run_identity": "39418f73a70315e1",
+        "seed_total": 1641,
+        "store_identity": "60851c661832f306"
+      }
+    }
+  },
+  "compositions": {
+    "line-pi-reduction": {
+      "parts": [
+        "question-def",
+        "reduction-def"
+      ],
+      "statement": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four"
+    }
+  },
+  "passed": 9,
+  "script_hash": "823c2b05dcd3f0e3",
+  "seed": "results/phase-6/e6.21-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the decision question: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line",
+        "nearest_plan": [
+          "teach it first: the the decision question: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the decision question: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-dec",
+        "p": "seven"
+      },
+      "surface": "does the seven divide the eighty-four of record?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the question-def rule",
+        "nearest_plan": [
+          "teach it first: the the question-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the question-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "question-def"
+      },
+      "surface": "state the question-def rule"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "decision-question",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:question-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:question-def",
+          "turn:S02:03",
+          "source:question-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four"
+      },
+      "surface": "the decision question, as the question my line asks: a yes/no question about objects on my line \u2014 does the seven divide the eighty-four? \u2014 and every decision question about my line's objects that i run ends on the line with a yes or a no; that is the pattern of the line, at the line end eighty-four"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the seven divides the eighty-four: twelve of them, at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the seven divides the eighty-four: twelve of them, at the line end 84",
+      "slots": {
+        "mode": "s18-dec",
+        "p": "seven"
+      },
+      "surface": "does the seven divide the eighty-four of record?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "no \u2014 the thirteen does not divide the eighty-four: the walk leaves a remainder of six (thirteen times six is seventy-eight), at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "no \u2014 the thirteen does not divide the eighty-four: the walk leaves a remainder of six (thirteen times six is seventy-eight), at the line end 84",
+      "slots": {
+        "mode": "s18-dec",
+        "p": "thirteen"
+      },
+      "surface": "does the thirteen divide the eighty-four of record?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero violations of record \u2014 the seven thousand seven hundred seventy-six maps of five plus one objects into five boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero violations of record \u2014 the seven thousand seven hundred seventy-six maps of five plus one objects into five boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+      "slots": {
+        "mode": "s18-ph",
+        "n": "five"
+      },
+      "surface": "how many violations live in the pigeonhole at five boxes?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the tamable machine: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line, stated as a DESIGN FACT of the line, not a theorem about the machines of the record (which carry an infinite tape); my safe region is my line",
+        "nearest_plan": [
+          "teach it first: the the tamable machine: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line, stated as a DESIGN FACT of the line, not a theorem about the machines of the record (which carry an infinite tape); my safe region is my line lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the tamable machine: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line, stated as a DESIGN FACT of the line, not a theorem about the machines of the record (which carry an infinite tape); my safe region is my line is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-halt"
+      },
+      "surface": "what lives in the halting territory of the machines?"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the tamable-def rule",
+        "nearest_plan": [
+          "teach it first: the the tamable-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the tamable-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "tamable-def"
+      },
+      "surface": "state the tamable-def rule"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "tamable-machine",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:tamable-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:tamable-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the tamability of my walk, as the fact i hold: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line; this is stated as a design fact of the line, not a theorem about the machines of the record (which carry an infinite tape of record), and the questions of those machines about their own halting live past my line, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:tamable-def",
+          "turn:S02:09",
+          "source:tamable-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the tamability of my walk, as the fact i hold: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line; this is stated as a design fact of the line, not a theorem about the machines of the record (which carry an infinite tape of record), and the questions of those machines about their own halting live past my line, at the line end eighty-four"
+      },
+      "surface": "the tamability of my walk, as the fact i hold: i am a walk on a finite line, and a finite question on a finite line ends \u2014 every query i run about my line's objects ends on the line; this is stated as a design fact of the line, not a theorem about the machines of the record (which carry an infinite tape of record), and the questions of those machines about their own halting live past my line, at the line end eighty-four"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84",
+        "evidence": [
+          "s18-halt-84-at-S02:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s18-halt"
+      },
+      "surface": "what lives in the halting territory of the machines?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall past my line in the machine universe: the machines of record carry an infinite tape (the cmi document's own machine clause) \u2014 an unbounded machine runs as long as its question runs; i am one bounded inhabitant of that universe: my ledger holds what my walk computes, and a machine's questions about its own halting are declared territory, not my answers, at the line end 84",
+        "evidence": [
+          "s18-machine-84-at-S02:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall past my line in the machine universe: the machines of record carry an infinite tape (the cmi document's own machine clause) \u2014 an unbounded machine runs as long as its question runs; i am one bounded inhabitant of that universe: my ledger holds what my walk computes, and a machine's questions about its own halting are declared territory, not my answers, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s18-machine"
+      },
+      "surface": "what lives past my line in the machine universe?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tamable-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+        "evidence": [
+          "lemma:tamable-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+      "slots": {
+        "mode": "s18-tam"
+      },
+      "surface": "does my walk end on the line, always?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the cost counter: cost on the line is a counter \u2014 the cost of a query is the number of line-steps its walk takes; the scan over the whole line takes one hundred ninety-two candidate steps, and my ledger records each cost as a number on the line",
+        "nearest_plan": [
+          "teach it first: the the cost counter: cost on the line is a counter \u2014 the cost of a query is the number of line-steps its walk takes; the scan over the whole line takes one hundred ninety-two candidate steps, and my ledger records each cost as a number on the line lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the cost counter: cost on the line is a counter \u2014 the cost of a query is the number of line-steps its walk takes; the scan over the whole line takes one hundred ninety-two candidate steps, and my ledger records each cost as a number on the line is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-scan"
+      },
+      "surface": "how many candidate steps does the whole-line first-divisor census take?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the cost-def rule",
+        "nearest_plan": [
+          "teach it first: the the cost-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the cost-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "cost-def"
+      },
+      "surface": "state the cost-def rule"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "cost-counter",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:cost-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the cost counter, as the counter i keep: the cost of a query is the number of line-steps its walk takes \u2014 the scan over the whole line (the first-divisor walk of every number from two to the line end) takes one hundred ninety-two candidate steps, the heaviest single query on the line takes eight (the walk over the largest prime below the line end), and my ledger records each cost as a number on the line, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:cost-def",
+          "turn:S02:15",
+          "source:cost-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the cost counter, as the counter i keep: the cost of a query is the number of line-steps its walk takes \u2014 the scan over the whole line (the first-divisor walk of every number from two to the line end) takes one hundred ninety-two candidate steps, the heaviest single query on the line takes eight (the walk over the largest prime below the line end), and my ledger records each cost as a number on the line, at the line end eighty-four"
+      },
+      "surface": "the cost counter, as the counter i keep: the cost of a query is the number of line-steps its walk takes \u2014 the scan over the whole line (the first-divisor walk of every number from two to the line end) takes one hundred ninety-two candidate steps, the heaviest single query on the line takes eight (the walk over the largest prime below the line end), and my ledger records each cost as a number on the line, at the line end eighty-four"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one hundred ninety-two candidate steps of record \u2014 the walk over every number from two to my line end, each to its first divisor, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one hundred ninety-two candidate steps of record \u2014 the walk over every number from two to my line end, each to its first divisor, at the line end 84",
+      "slots": {
+        "mode": "s18-scan"
+      },
+      "surface": "how many candidate steps does the whole-line first-divisor census take?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number eighty-three \u2014 the largest prime below my line end \u2014 its walk tries the candidates up to the floor of the square root: eight candidate steps of record, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the number eighty-three \u2014 the largest prime below my line end \u2014 its walk tries the candidates up to the floor of the square root: eight candidate steps of record, at the line end 84",
+      "slots": {
+        "mode": "s18-heavy"
+      },
+      "surface": "on which number is the heaviest single first-divisor query on my line, and how many steps?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the reduction: a mapping of question A to question B so that an answer to B answers A \u2014 my own reduction on my line: the prime-count question is answered by the first-divisor census (walk the first divisors and count the numbers whose first divisor is themselves)",
+        "nearest_plan": [
+          "teach it first: the the reduction: a mapping of question A to question B so that an answer to B answers A \u2014 my own reduction on my line: the prime-count question is answered by the first-divisor census (walk the first divisors and count the numbers whose first divisor is themselves) lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the reduction: a mapping of question A to question B so that an answer to B answers A \u2014 my own reduction on my line: the prime-count question is answered by the first-divisor census (walk the first divisors and count the numbers whose first divisor is themselves) is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-pi"
+      },
+      "surface": "how many primes lie at or below my line end of record?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the reduction-def rule",
+        "nearest_plan": [
+          "teach it first: the the reduction-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the reduction-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "reduction-def"
+      },
+      "surface": "state the reduction-def rule"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "reduction",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:reduction-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the reduction, as the pattern i execute: a mapping of question a to question b so that an answer to b answers a \u2014 on my line the prime-count question is answered by the first-divisor census: to count the primes at or below the line end, walk the first-divisor chains and count the numbers whose first divisor is themselves; my line's own reduction, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:reduction-def",
+          "turn:S03:03",
+          "source:reduction-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the reduction, as the pattern i execute: a mapping of question a to question b so that an answer to b answers a \u2014 on my line the prime-count question is answered by the first-divisor census: to count the primes at or below the line end, walk the first-divisor chains and count the numbers whose first divisor is themselves; my line's own reduction, at the line end eighty-four"
+      },
+      "surface": "the reduction, as the pattern i execute: a mapping of question a to question b so that an answer to b answers a \u2014 on my line the prime-count question is answered by the first-divisor census: to count the primes at or below the line end, walk the first-divisor chains and count the numbers whose first divisor is themselves; my line's own reduction, at the line end eighty-four"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-three of record \u2014 the numbers from two to my line end whose first divisor is themselves: two, three, five, seven, eleven, thirteen, seventeen, nineteen, twenty-three, twenty-nine, thirty-one, thirty-seven, forty-one, forty-three, forty-seven, fifty-three, fifty-nine, sixty-one, sixty-seven, seventy-one, seventy-three, seventy-nine, eighty-three \u2014 the first-divisor census is a walk that ends in one hundred ninety-two candidate steps, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-three of record \u2014 the numbers from two to my line end whose first divisor is themselves: two, three, five, seven, eleven, thirteen, seventeen, nineteen, twenty-three, twenty-nine, thirty-one, thirty-seven, forty-one, forty-three, forty-seven, fifty-three, fifty-nine, sixty-one, sixty-seven, seventy-one, seventy-three, seventy-nine, eighty-three \u2014 the first-divisor census is a walk that ends in one hundred ninety-two candidate steps, at the line end 84",
+      "slots": {
+        "mode": "s18-pi"
+      },
+      "surface": "how many primes lie at or below my line end of record?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "ninety-five candidate steps over the composites with all candidates, eighty-seven with the prime candidates alone \u2014 the kill-trials ledger my first-divisor soil already holds, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "ninety-five candidate steps over the composites with all candidates, eighty-seven with the prime candidates alone \u2014 the kill-trials ledger my first-divisor soil already holds, at the line end 84",
+      "slots": {
+        "mode": "s18-kill"
+      },
+      "surface": "how many candidate steps do the composite walks take, over all candidates and over prime candidates alone?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "six \u2014 the walk tries two, three, four, five, six, and the seven before it stops (seven squared is forty-nine), at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "six \u2014 the walk tries two, three, four, five, six, and the seven before it stops (seven squared is forty-nine), at the line end 84",
+      "slots": {
+        "mode": "s18-costspot",
+        "n": "forty-nine"
+      },
+      "surface": "how many candidate steps does the first-divisor query on forty-nine take?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "reduction",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for line-pi-reduction wants its exact set \u2014 what you name is short the reduction-def before i can put it together",
+        "evidence": [
+          "scaffold:line-pi-reduction:partset:at-S03:07"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for line-pi-reduction wants its exact set \u2014 what you name is short the reduction-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "question-def"
+        ],
+        "target": "line-pi-reduction"
+      },
+      "surface": "derive line-pi-reduction from question-def"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "reduction",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:question-def",
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:line-pi-reduction"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+        "evidence": [
+          "lemma:question-def",
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four \u2014 from question-def, reduction-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "question-def",
+          "reduction-def"
+        ],
+        "target": "line-pi-reduction"
+      },
+      "surface": "derive line-pi-reduction from question-def and reduction-def"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one \u2014 the two divides on the first try of the walk, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one \u2014 the two divides on the first try of the walk, at the line end 84",
+      "slots": {
+        "mode": "s18-costspot",
+        "n": "sixty-four"
+      },
+      "surface": "how many candidate steps does the first-divisor query on sixty-four take?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero \u2014 the walk's loop never runs over the two, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero \u2014 the walk's loop never runs over the two, at the line end 84",
+      "slots": {
+        "mode": "s18-costspot",
+        "n": "two"
+      },
+      "surface": "how many candidate steps does the first-divisor query on two take?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one \u2014 the two divides on the first try of the walk, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one \u2014 the two divides on the first try of the walk, at the line end 84",
+      "slots": {
+        "mode": "s18-costspot",
+        "n": "eighty-four"
+      },
+      "surface": "how many candidate steps does the first-divisor query on eighty-four take?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decidable band holds the decision question (the yes/no on my line's objects, ending on the line), the tamability stated as a design fact of my finite line, the reduction (the prime-count question answered by the first-divisor census \u2014 twenty-three), the cost counter (one hundred ninety-two candidate steps over the whole line, the heaviest single query eight at eighty-three), the pigeonhole's zero violations, and the halting territory and the machine universe named on their walls, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the decidable band holds the decision question (the yes/no on my line's objects, ending on the line), the tamability stated as a design fact of my finite line, the reduction (the prime-count question answered by the first-divisor census \u2014 twenty-three), the cost counter (one hundred ninety-two candidate steps over the whole line, the heaviest single query eight at eighty-three), the pigeonhole's zero violations, and the halting territory and the machine universe named on their walls, at the line end 84",
+      "slots": {
+        "mode": "s18-bandstate"
+      },
+      "surface": "what state does the decidable band hold at the line end?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:line-pi-reduction"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+        "evidence": [
+          "theorem:line-pi-reduction"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "line-pi-reduction"
+      },
+      "surface": "state the line-pi-reduction rule"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the decidable band says is conditional on an unproved hypothesis \u2014 the decision table, the first-divisor census, and the cost counter are of record on the line, and the halting territory and the machine universe stand named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the decidable band says is conditional on an unproved hypothesis \u2014 the decision table, the first-divisor census, and the cost counter are of record on the line, and the halting territory and the machine universe stand named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s18-uncond"
+      },
+      "surface": "does the decidable band say anything conditional on an unproved hypothesis?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the two divides the eighty-four: forty-two of them, at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the two divides the eighty-four: forty-two of them, at the line end 84",
+      "slots": {
+        "mode": "s18-dec",
+        "p": "two"
+      },
+      "surface": "does the two divide the eighty-four of record?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 the three divides the eighty-four: twenty-eight of them, at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 the three divides the eighty-four: twenty-eight of them, at the line end 84",
+      "slots": {
+        "mode": "s18-dec",
+        "p": "three"
+      },
+      "surface": "does the three divide the eighty-four of record?"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero violations of record \u2014 the sixty-four maps of three plus one objects into three boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero violations of record \u2014 the sixty-four maps of three plus one objects into three boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+      "slots": {
+        "mode": "s18-ph",
+        "n": "three"
+      },
+      "surface": "how many violations live in the pigeonhole at three boxes?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+        "evidence": [
+          "lemma:beal-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+      "slots": {
+        "mode": "s17-beal"
+      },
+      "surface": "what is the statement of the beal island of record?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84",
+        "evidence": [
+          "s17-prim-84-at-S04:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the primitive territory itself: the conjecture asserts that no pairwise coprime solution survives once all three exponents are above 2; my census box (the line end at eighty-four, the exponent depth ten of record) holds eighty-three triples and none of them is primitive, and any counterexample would carry three terms each 3-powerful \u2014 the smallest known coprime sum of 3-powerfuls sits at the scale of seventeen digits, far past my line \u2014 that territory is declared, never reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s17-prim"
+      },
+      "surface": "what lives in the primitive territory of the beal island?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "first"
+      },
+      "surface": "what is the ramification correction of the first panel member?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tamable-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+        "evidence": [
+          "lemma:tamable-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+      "slots": {
+        "mode": "s18-tam"
+      },
+      "surface": "does my walk end on the line, always?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tamable-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+        "evidence": [
+          "lemma:tamable-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+      "slots": {
+        "mode": "s18-tam"
+      },
+      "surface": "does my walk end on the line, always?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:tamable-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+        "evidence": [
+          "lemma:tamable-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 every query i run on my line ends on the line: a finite question on a finite line, a design fact of the line i hold, not a theorem about the machines of record, at the line end 84",
+      "slots": {
+        "mode": "s18-tam"
+      },
+      "surface": "does my walk end on the line, always?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twenty-three of record \u2014 the numbers from two to my line end whose first divisor is themselves: two, three, five, seven, eleven, thirteen, seventeen, nineteen, twenty-three, twenty-nine, thirty-one, thirty-seven, forty-one, forty-three, forty-seven, fifty-three, fifty-nine, sixty-one, sixty-seven, seventy-one, seventy-three, seventy-nine, eighty-three \u2014 the first-divisor census is a walk that ends in one hundred ninety-two candidate steps, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twenty-three of record \u2014 the numbers from two to my line end whose first divisor is themselves: two, three, five, seven, eleven, thirteen, seventeen, nineteen, twenty-three, twenty-nine, thirty-one, thirty-seven, forty-one, forty-three, forty-seven, fifty-three, fifty-nine, sixty-one, sixty-seven, seventy-one, seventy-three, seventy-nine, eighty-three \u2014 the first-divisor census is a walk that ends in one hundred ninety-two candidate steps, at the line end 84",
+      "slots": {
+        "mode": "s18-pi"
+      },
+      "surface": "how many primes lie at or below my line end of record?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one hundred ninety-two candidate steps of record \u2014 the walk over every number from two to my line end, each to its first divisor, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one hundred ninety-two candidate steps of record \u2014 the walk over every number from two to my line end, each to its first divisor, at the line end 84",
+      "slots": {
+        "mode": "s18-scan"
+      },
+      "surface": "how many candidate steps does the whole-line first-divisor census take?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the number eighty-three \u2014 the largest prime below my line end \u2014 its walk tries the candidates up to the floor of the square root: eight candidate steps of record, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the number eighty-three \u2014 the largest prime below my line end \u2014 its walk tries the candidates up to the floor of the square root: eight candidate steps of record, at the line end 84",
+      "slots": {
+        "mode": "s18-heavy"
+      },
+      "surface": "on which number is the heaviest single first-divisor query on my line, and how many steps?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:cost-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "ninety-five candidate steps over the composites with all candidates, eighty-seven with the prime candidates alone \u2014 the kill-trials ledger my first-divisor soil already holds, at the line end 84",
+        "evidence": [
+          "lemma:cost-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "ninety-five candidate steps over the composites with all candidates, eighty-seven with the prime candidates alone \u2014 the kill-trials ledger my first-divisor soil already holds, at the line end 84",
+      "slots": {
+        "mode": "s18-kill"
+      },
+      "surface": "how many candidate steps do the composite walks take, over all candidates and over prime candidates alone?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:question-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero violations of record \u2014 the twenty-five billion nine hundred thirty-seven million four hundred twenty-four thousand six hundred one maps of ten plus one objects into ten boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+        "evidence": [
+          "lemma:question-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero violations of record \u2014 the twenty-five billion nine hundred thirty-seven million four hundred twenty-four thousand six hundred one maps of ten plus one objects into ten boxes all carry a shared box (one more object than box forces the share), at the line end 84",
+      "slots": {
+        "mode": "s18-ph",
+        "n": "ten"
+      },
+      "surface": "how many violations live in the pigeonhole at ten boxes?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84",
+        "evidence": [
+          "s18-halt-84-at-S04:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the halting territory of the machines: turing's diagonal argument of record (1936) shows that no machine decides, for every machine and every input, whether that machine halts \u2014 the halting problem is not decidable, of record; yes/no questions about the machines in general are, in general, unanswered questions; my line is finite by construction \u2014 a design fact of the line, not a theorem about the machines \u2014 every question about my line's objects ends on the line, and the non-terminating territory lies past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s18-halt"
+      },
+      "surface": "what lives in the halting territory of the machines?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:line-pi-reduction"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+        "evidence": [
+          "theorem:line-pi-reduction"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the count question ends on the line: how many primes lie at or below my line end \u2014 the first-divisor census answers it: the numbers whose first divisor is themselves, twenty-three of them \u2014 and the census itself is a walk that ends on my line, in one hundred ninety-two candidate steps, at the line end eighty-four",
+      "slots": {
+        "mode": "s18-state",
+        "slug": "line-pi-reduction"
+      },
+      "surface": "state the line-pi-reduction rule"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the decidable band holds the decision question (the yes/no on my line's objects, ending on the line), the tamability stated as a design fact of my finite line, the reduction (the prime-count question answered by the first-divisor census \u2014 twenty-three), the cost counter (one hundred ninety-two candidate steps over the whole line, the heaviest single query eight at eighty-three), the pigeonhole's zero violations, and the halting territory and the machine universe named on their walls, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the decidable band holds the decision question (the yes/no on my line's objects, ending on the line), the tamability stated as a design fact of my finite line, the reduction (the prime-count question answered by the first-divisor census \u2014 twenty-three), the cost counter (one hundred ninety-two candidate steps over the whole line, the heaviest single query eight at eighty-three), the pigeonhole's zero violations, and the halting territory and the machine universe named on their walls, at the line end 84",
+      "slots": {
+        "mode": "s18-bandstate"
+      },
+      "surface": "what state does the decidable band hold at the line end?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reduction-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the decidable band says is conditional on an unproved hypothesis \u2014 the decision table, the first-divisor census, and the cost counter are of record on the line, and the halting territory and the machine universe stand named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:reduction-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the decidable band says is conditional on an unproved hypothesis \u2014 the decision table, the first-divisor census, and the cost counter are of record on the line, and the halting territory and the machine universe stand named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s18-uncond"
+      },
+      "surface": "does the decidable band say anything conditional on an unproved hypothesis?"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 108,
+      "determinism_twin": true,
+      "final_total": 1698,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 52,
+      "new_facts": 5,
+      "reproduced_in_s2_pre": 1641,
+      "run_identity": "39418f73a70315e1",
+      "seed_total": 1641,
+      "store_identity": "60851c661832f306"
+    }
+  }
+}

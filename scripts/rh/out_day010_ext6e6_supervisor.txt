@@ -1,0 +1,12 @@
+[06:26:47] LAUNCH W0=300000 W1=6000000 anchor=zeros_T300000_ext_full.txt (restart=0)
+[14:06:48] instance DONE
+[14:06:48] FINAL CHAIN: verifying zeros_T6000000_ext_full.txt
+list zeros_T6000000_ext_full.txt: 11974855 zeros, min 14.134725 max 5899999.412800
+strict monotone: OK   min gap 0.002300 at t=4316832.467
+twin-floor margin: min gap 0.0023 vs floor 0.002954 (day-4)
+splice at 3e5: first 466655 zeros IDENTICAL to certified list
+S_file(6e6) float = -219016.934949  (O(1) expected; |S|>30 suspicious)
+RVM main(6e6) float = 12193871.9349   N - main = -219016.9349 (day-3 convention S)
+CHAIN-VERIFY: PASS (float-level; dps cert is a later batch)
+[14:06:54] FINAL CHAIN: onset re-run G=6e6 in verified docker env (mpmath 1.3.0)
+[14:06:54] CHAIN ONSET RUN FAILED — inspect out_day010_onset_G6e6.txt

@@ -1,0 +1,76 @@
+# Action Step 12 — LLM baseline + E1.5 A/B + Phase 1 sign-off (P1.14–P1.16)
+
+> Self-contained: you need only `00-CONTEXT.md` + this file.
+
+## Goal
+
+The headline A/B: a conventional next-token model (Model A) vs. the CODEX pipeline
+(Model B) on combinations absent from training — plus the Phase 1 sign-off.
+
+## Prerequisites
+
+- [ ] Steps 06–11 done (E1.1–E1.4 green).
+
+## Background
+
+E1.5 is the falsification experiment: same data, same budget, only the architecture
+differs. Model B (this project) should win on *unseen combinations*, because it
+composes abstractions instead of recalling patterns.
+
+## Steps
+
+### 1. `src/kainos/lang/llm.py` — `LLMKernel`
+
+Behind the **same** `LanguageKernel` protocol. **Runtime (locked —
+`plan/04-reality-check.md` §5): local `llama-server` + one pinned small GGUF, fully
+offline** on the Strix Halo host (CPU/Vulkan; no hosted APIs in the experiment pin).
+`parse(text)` prompts the model to output the dialect AST as JSON → validate against
+`specs/ir.schema.json` → `from_generic`. Keep it a thin adapter; do not change the
+protocol.
+
+### 2. Model A baseline
+
+`scripts/train_baseline.py`: train a tiny seq2seq/transformer on `English → PCRE` pairs
+from the **seed corpus only** (the compositional set is held out). `scripts/predict.py`
+runs inference. Model A must **not** see the CODEX path.
+
+### 3. E1.5 runner
+
+`run_e1_5()`: run Model A and Model B on **`data/regex/holdout_set.jsonl`** +
+`vague_set`. **Materialize** `holdout_set.jsonl` from the committed
+`data/regex/compositional_set.jsonl` (deterministic split — record the rule/seed in
+the result `config`; never re-derive it ad hoc). Write `results/phase-1/e1.5.json`
+(accuracies, per-item diff) and `results/phase-1/e1.5.md` (report). Compare with a
+statistical note (e.g. exact McNemar's test on matched items if sample size permits;
+otherwise report the raw gap + per-item table).
+
+### 4. Phase 1 sign-off
+
+`plan/30-phases/phase-1-regex/results.md`: E1.1–E1.5 tables, exit-criteria mapping,
+and **reuse stats** (P0 artifacts consumed: codex/ir/harness LOC reused vs. new).
+
+## Verification
+
+```bash
+kainos experiment run --name e1.5 && cat results/phase-1/e1.5.md
+```
+
+Expect: `pipeline_accuracy > baseline_accuracy` (significant), and B also abstains
+correctly on the vague set (which A cannot).
+
+## Done when
+
+- [ ] `LLMKernel` behind the protocol (mocked-backend test green); runtime = pinned
+      local GGUF, offline (reality-check §5)
+- [ ] Model A baseline trains on seed data only (compositional held out)
+- [ ] `data/regex/holdout_set.jsonl` materialized + committed (E1.5 gate input)
+- [ ] E1.5 thresholds met (B > A; B abstains correctly on vague set)
+- [ ] `plan/30-phases/phase-1-regex/results.md` signs off all exit criteria
+
+## Phase 1 is DONE after this step.
+
+Mark steps 06–12 ✅; proceed to `13-q20-corpus-oracle.md`.
+
+## If stuck
+
+`plan/30-phases/phase-1-regex/experiments.md` → E1.5; `plan/30-phases/phase-1-regex/benchmarks.md` → A/B protocol.

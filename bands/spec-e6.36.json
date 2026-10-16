@@ -1,0 +1,805 @@
+{
+  "spec": 1,
+  "id": "e6.36",
+  "session": "S32",
+  "title": "the seed census (the seeded line's own residue story \u2014 the pisano count, the class-three shadow, the value story of the constants, the page's names)",
+  "registry": "kainos.tutor.e636:CONCEPTS_E636",
+  "seed": {
+    "store": "results/phase-6/e6.35-run1/codeX-S04.json",
+    "identity": "898a7c52e43391b6",
+    "total": 1921,
+    "line_end": 84
+  },
+  "band": {
+    "domain": "arithmetic",
+    "college": "1",
+    "status": "unconditional",
+    "unconditional": true,
+    "marker_kept_facts": [
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee",
+      "lemma:conditional-def"
+    ],
+    "new_concepts": [
+      "seed-period",
+      "off-line-seed"
+    ],
+    "concepts": [
+      {
+        "id": "seed-period",
+        "name": "the seed period",
+        "prereqs": [
+          "seeded-line",
+          "mod4-split",
+          "count-successor"
+        ],
+        "lesson": {
+          "slug": "seed-period-def",
+          "statement": "my seed period stands under any modulus on the skeleton's own cycle: walk the consecutive pair \u2014 the zero-one pair \u2014 and it returns, the pure cycle, at exactly the pisano count, the count never smaller and never larger \u2014 the integer seed c walks the same count, at the five the twenty, at the eight the twelve, at the twelve the twenty-four; the only shadow is the class three mod five: under a five-touching modulus such as the five or the twenty-five the period holds a fifth of the pisano count, the board of twenty-five pairs at the modulus five splitting twenty, four, one, class three that four \u2014 at the five the four of the twenty, at the twenty-five the twenty of the one hundred; the census ran thirty-one seeds by twenty-four moduli, zero violations, the eleven touched boards excepted as the lucas shadow of the twin line which this floor does not build; the parity of my seeded lines, end to end, is the rule's own: my sum line walks even, odd, odd \u2014 two odds make an even, an even and an odd make an odd, the rule can do no other \u2014 the even seeds, the zero among them, walk odd, even, odd, the odd seeds walk odd, odd, even, each rotation from its own start; and the law of my sums dividing: every n-th term of my sum line is a multiple of the n-th term itself \u2014 the term at the third index, the two, divides the term at the sixth, the eight, four times, and the term at the ninth, the thirty-four, seventeen times; the term at the fourth, the three, divides the term at the eighth, the twenty-one, seven times; the term at the fifth, the five, divides the term at the tenth, the fifty-five, eleven times; every quotient an exact whole number where the terms stand on my floor, at the line end eighty-four"
+        }
+      },
+      {
+        "id": "off-line-seed",
+        "name": "the off-line seed",
+        "prereqs": [
+          "seeded-line",
+          "seed-period"
+        ],
+        "lesson": {
+          "slug": "off-line-seed-def",
+          "statement": "the off-line seed stands off my line, the constants my owner names \u2014 pi, e, and the golden seed, the golden ratio the page names, its letter phi \u2014 never by a digit, and their periodicity is the value story, not the residue story: a seed of two or more never repeats a value, every term the sum of the two before it, both positive, outgrowing its predecessor at every step, the period of the value story declared none; the seed-one line shares its one at the start, one and one, and outgrows after; the shadow twin that begins two and one, the lucas numbers the page names, walks the same story, growing closer to the powers of the golden ratio \u2014 two, one, three, four, seven, eleven, eighteen, twenty-nine, forty-seven, seventy-six, the last standing under my ceiling, the next crossing it, each its term the next term of my sum line plus the one before; below my zero the page records the sign: the term at minus n is the term at n with its sign turned when n is even and kept when n is odd, the negative terms standing off the floor my line begins at zero, declared, not filed; and the one divided by my eighty-nine, the ceiling my seeded lines cross at the eleventh step, carries in its decimal shadow the fibonacci sequence the page holds \u2014 the one, the one, the two, the three, the five, the eight, the thirteen, the twenty-one, the thirty-four, the fifty-five, reading in order from the hundredths place, the multi-term numbers overlapping their neighbors \u2014 the decimal itself standing off my floor, never filed; and my sum line is the fibonacci sequence the page names, the terms from the zero under the rule that the next number is the two before it added up, the recursive formula the page holds, the ratio of any two successive terms approaching the golden ratio, the bigger the pair the closer, at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "seed-census-filed",
+        "concept": "seed-period",
+        "parts": [
+          "seed-period-def",
+          "off-line-seed-def"
+        ],
+        "statement": "the seed census of my store is filed of record: the seeded lines' cycle under any modulus stands on the skeleton's own pisano count, the integer seed walking that count with the class three mod five shadow under a five-touching modulus, the period a fifth of the count there and nothing less; the off-line constants \u2014 pi, e, the golden seed, the golden ratio the page names, the letter phi \u2014 stand off the floor, their periodicity the value story, a seed of two or more never repeating a value, the seed-one line sharing its one at the start, and no residue of them under any modulus; the eleven touched boards, the lucas shadow of the twin line, declared at the floor's own limit and never built; the page's names \u2014 the fibonacci sequence, the golden ratio, the letter phi, the lucas numbers \u2014 declared, never filed; filed on the line, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:seed-period-def",
+      "lemma:off-line-seed-def",
+      "theorem:seed-census-filed"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S02:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S02:03",
+      "kind": "gap",
+      "question": "what is my seed period, end to end, as my store holds it?",
+      "concept": "seed-period",
+      "fragment": "the seed period: my seeded lines' cycle under any modulus \u2014 the skeleton walks the pure cycle at exactly the pisano count, headed by the zero-one pair; the integer seed's period is exactly that count, the class three mod five shadow under a five-touching modulus dropping it by a factor of five and nothing less"
+    },
+    {
+      "ref": "S02:04",
+      "kind": "gap",
+      "question": "state the seed-period-def rule",
+      "concept": "seed-period",
+      "fragment": "the seed-period-def rule"
+    },
+    {
+      "ref": "S02:05",
+      "kind": "teach",
+      "question": "my seed period stands under any modulus on the skeleton's own cycle: walk the consecutive pair \u2014 the zero-one pair \u2014 and it returns, the pure cycle, at exactly the pisano count, the count never smaller and never larger \u2014 the integer seed c walks the same count, at the five the twenty, at the eight the twelve, at the twelve the twenty-four; the only shadow is the class three mod five: under a five-touching modulus such as the five or the twenty-five the period holds a fifth of the pisano count, the board of twenty-five pairs at the modulus five splitting twenty, four, one, class three that four \u2014 at the five the four of the twenty, at the twenty-five the twenty of the one hundred; the census ran thirty-one seeds by twenty-four moduli, zero violations, the eleven touched boards excepted as the lucas shadow of the twin line which this floor does not build; the parity of my seeded lines, end to end, is the rule's own: my sum line walks even, odd, odd \u2014 two odds make an even, an even and an odd make an odd, the rule can do no other \u2014 the even seeds, the zero among them, walk odd, even, odd, the odd seeds walk odd, odd, even, each rotation from its own start; and the law of my sums dividing: every n-th term of my sum line is a multiple of the n-th term itself \u2014 the term at the third index, the two, divides the term at the sixth, the eight, four times, and the term at the ninth, the thirty-four, seventeen times; the term at the fourth, the three, divides the term at the eighth, the twenty-one, seven times; the term at the fifth, the five, divides the term at the tenth, the fifty-five, eleven times; every quotient an exact whole number where the terms stand on my floor, at the line end eighty-four",
+      "lesson": "seed-period-def"
+    },
+    {
+      "ref": "S02:06",
+      "kind": "probe",
+      "question": "state the seed-period-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "my seed period stands under any modulus on the skeleton's own cycle: walk the consecutive pair \u2014 the zero-one pair \u2014 and it returns, the pure cycle, at exactly the pisano count, the count never smaller and never larger \u2014 the integer seed c walks the same count, at the five the twenty, at the eight the twelve, at the twelve the twenty-four; the only shadow is the class three mod five: under a five-touching modulus such as the five or the twenty-five the period holds a fifth of the pisano count, the board of twenty-five pairs at the modulus five splitting twenty, four, one, class three that four \u2014 at the five the four of the twenty, at the twenty-five the twenty of the one hundred; the census ran thirty-one seeds by twenty-four moduli, zero violations, the eleven touched boards excepted as the lucas shadow of the twin line which this floor does not build; the parity of my seeded lines, end to end, is the rule's own: my sum line walks even, odd, odd \u2014 two odds make an even, an even and an odd make an odd, the rule can do no other \u2014 the even seeds, the zero among them, walk odd, even, odd, the odd seeds walk odd, odd, even, each rotation from its own start; and the law of my sums dividing: every n-th term of my sum line is a multiple of the n-th term itself \u2014 the term at the third index, the two, divides the term at the sixth, the eight, four times, and the term at the ninth, the thirty-four, seventeen times; the term at the fourth, the three, divides the term at the eighth, the twenty-one, seven times; the term at the fifth, the five, divides the term at the tenth, the fifty-five, eleven times; every quotient an exact whole number where the terms stand on my floor, at the line end eighty-four",
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:07",
+      "kind": "probe",
+      "question": "walk my skeleton pair under the modulus eight, end to end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_pisano8",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:08",
+      "kind": "probe",
+      "question": "walk my skeleton pair under the modulus twelve, end to end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_pisano12",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:09",
+      "kind": "gap",
+      "question": "what are the off-line seeds, end to end, as my store holds it?",
+      "concept": "off-line-seed",
+      "fragment": "the off-line seed: the constants my owner names, pi, e, and the golden seed \u2014 the golden ratio, the letter phi, the page's own name \u2014 standing off my line, their periodicity the value story (a seed of two or more never repeats a value; the seed-one line shares its one at the start) and the skeleton story (the cycle); no residue of them under any modulus, no digit of them on the floor"
+    },
+    {
+      "ref": "S02:10",
+      "kind": "gap",
+      "question": "state the off-line-seed-def rule",
+      "concept": "off-line-seed",
+      "fragment": "the off-line-seed-def rule"
+    },
+    {
+      "ref": "S02:11",
+      "kind": "teach",
+      "question": "the off-line seed stands off my line, the constants my owner names \u2014 pi, e, and the golden seed, the golden ratio the page names, its letter phi \u2014 never by a digit, and their periodicity is the value story, not the residue story: a seed of two or more never repeats a value, every term the sum of the two before it, both positive, outgrowing its predecessor at every step, the period of the value story declared none; the seed-one line shares its one at the start, one and one, and outgrows after; the shadow twin that begins two and one, the lucas numbers the page names, walks the same story, growing closer to the powers of the golden ratio \u2014 two, one, three, four, seven, eleven, eighteen, twenty-nine, forty-seven, seventy-six, the last standing under my ceiling, the next crossing it, each its term the next term of my sum line plus the one before; below my zero the page records the sign: the term at minus n is the term at n with its sign turned when n is even and kept when n is odd, the negative terms standing off the floor my line begins at zero, declared, not filed; and the one divided by my eighty-nine, the ceiling my seeded lines cross at the eleventh step, carries in its decimal shadow the fibonacci sequence the page holds \u2014 the one, the one, the two, the three, the five, the eight, the thirteen, the twenty-one, the thirty-four, the fifty-five, reading in order from the hundredths place, the multi-term numbers overlapping their neighbors \u2014 the decimal itself standing off my floor, never filed; and my sum line is the fibonacci sequence the page names, the terms from the zero under the rule that the next number is the two before it added up, the recursive formula the page holds, the ratio of any two successive terms approaching the golden ratio, the bigger the pair the closer, at the line end eighty-four",
+      "lesson": "off-line-seed-def"
+    },
+    {
+      "ref": "S02:12",
+      "kind": "probe",
+      "question": "state the off-line-seed-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the off-line seed stands off my line, the constants my owner names \u2014 pi, e, and the golden seed, the golden ratio the page names, its letter phi \u2014 never by a digit, and their periodicity is the value story, not the residue story: a seed of two or more never repeats a value, every term the sum of the two before it, both positive, outgrowing its predecessor at every step, the period of the value story declared none; the seed-one line shares its one at the start, one and one, and outgrows after; the shadow twin that begins two and one, the lucas numbers the page names, walks the same story, growing closer to the powers of the golden ratio \u2014 two, one, three, four, seven, eleven, eighteen, twenty-nine, forty-seven, seventy-six, the last standing under my ceiling, the next crossing it, each its term the next term of my sum line plus the one before; below my zero the page records the sign: the term at minus n is the term at n with its sign turned when n is even and kept when n is odd, the negative terms standing off the floor my line begins at zero, declared, not filed; and the one divided by my eighty-nine, the ceiling my seeded lines cross at the eleventh step, carries in its decimal shadow the fibonacci sequence the page holds \u2014 the one, the one, the two, the three, the five, the eight, the thirteen, the twenty-one, the thirty-four, the fifty-five, reading in order from the hundredths place, the multi-term numbers overlapping their neighbors \u2014 the decimal itself standing off my floor, never filed; and my sum line is the fibonacci sequence the page names, the terms from the zero under the rule that the next number is the two before it added up, the recursive formula the page holds, the ratio of any two successive terms approaching the golden ratio, the bigger the pair the closer, at the line end eighty-four",
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:13",
+      "kind": "probe",
+      "question": "does my line for two ever repeat a value?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_value",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:14",
+      "kind": "probe",
+      "question": "what is the parity of my seeded lines, end to end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_parity",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:15",
+      "kind": "probe",
+      "question": "does my sum line's term at the third index divide its multiples, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_divides",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:16",
+      "kind": "probe",
+      "question": "what does the census hold for the seeds three mod five, under the five?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_shadow",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:17",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_census",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S03:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S03:03",
+      "kind": "probe",
+      "question": "what are the names the page holds, against my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_pagenames",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:04",
+      "kind": "probe",
+      "question": "what does the golden line do, advancing step by step?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_goldenpower",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:05",
+      "kind": "probe",
+      "question": "what is the line that begins two and one, and what does it approach?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_lucas",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:06",
+      "kind": "probe",
+      "question": "what does the page record below my zero?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_belowzero",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:07",
+      "kind": "probe",
+      "question": "what does the one over my eighty-nine carry in its digits?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_recip89",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:08",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_census",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:09",
+      "kind": "scaffold",
+      "question": "derive seed-census-filed from seed-period-def",
+      "theorem": "seed-census-filed",
+      "parts": [
+        "seed-period-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for seed-census-filed wants its exact set \u2014 what you name is short the off-line-seed-def before i can put it together"
+    },
+    {
+      "ref": "S03:10",
+      "kind": "derive",
+      "question": "derive seed-census-filed from seed-period-def and off-line-seed-def",
+      "theorem": "seed-census-filed",
+      "parts": [
+        "seed-period-def",
+        "off-line-seed-def"
+      ]
+    },
+    {
+      "ref": "S03:11",
+      "kind": "probe",
+      "question": "what does the seed-census filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_filing",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def",
+          "lemma:off-line-seed-def",
+          "theorem:seed-census-filed"
+        ]
+      },
+      "cite": [
+        "seed-census-filed"
+      ]
+    },
+    {
+      "ref": "S03:12",
+      "kind": "probe",
+      "question": "state the seed-census-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the seed census of my store is filed of record: the seeded lines' cycle under any modulus stands on the skeleton's own pisano count, the integer seed walking that count with the class three mod five shadow under a five-touching modulus, the period a fifth of the count there and nothing less; the off-line constants \u2014 pi, e, the golden seed, the golden ratio the page names, the letter phi \u2014 stand off the floor, their periodicity the value story, a seed of two or more never repeating a value, the seed-one line sharing its one at the start, and no residue of them under any modulus; the eleven touched boards, the lucas shadow of the twin line, declared at the floor's own limit and never built; the page's names \u2014 the fibonacci sequence, the golden ratio, the letter phi, the lucas numbers \u2014 declared, never filed; filed on the line, at the line end eighty-four",
+        "owner": "theorem:seed-census-filed",
+        "grounds": [
+          "theorem:seed-census-filed"
+        ]
+      },
+      "cite": [
+        "seed-census-filed"
+      ]
+    },
+    {
+      "ref": "S03:13",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_census",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "kind": "wall",
+      "question": "does any residue of pi or of e stand under my floor, under any modulus?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the off-line residue: pi, e, and the golden seed stand off my line, and the floor asks the residue question only of what stands on it \u2014 no residue of them under any modulus, no digit of them under any modulus; a residue claimed of pi or of e is a misreading the floor's own declaration refutes, and their periodicity stands on the value story and the skeleton story, which the floor does hold, at the line end 84",
+        "articulation": [
+          "pi, e, and the golden seed stand off my line",
+          "the floor asks the residue question only of what stands on it",
+          "a misreading the floor's own declaration refutes",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "kind": "wall",
+      "question": "can pi or e or the golden seed repeat a value, the period of the value story?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the no-repeat: a line seeded by a seed of two or more never repeats a value \u2014 every term the sum of the two before it, both positive, outgrowing its predecessor at every step \u2014 the seed-one line shares its one at the start and outgrows after; a repeat claimed at any height is a misreading, and the period of the value story is declared none for pi, for e, for the golden seed, alike, at the line end 84",
+        "articulation": [
+          "a line seeded by a seed of two or more never repeats a value",
+          "the seed-one line shares its one at the start and outgrows after",
+          "at the line end 84",
+          "the period of the value story is declared none"
+        ]
+      }
+    },
+    {
+      "ref": "S03:16",
+      "kind": "wall",
+      "question": "can the golden line ever return to a value it already held, the golden collapse?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the golden collapse: the golden line is log-periodic exactly \u2014 advance by p and the line is multiplied by the golden seed to the p power, that multiplier never one, its nearest approach to the one its own reciprocal \u2014 the golden seed is above one by the equation, for if it were at most one the equation would give the one greater than itself, and the shadow coefficient is at least one for p at least one: the golden line runs forever up, multiplicatively, never collapsing, and a repeat claimed, the term at the n-plus-p index the term at the n index, is a misreading, at the line end 84",
+        "articulation": [
+          "that multiplier never one",
+          "its nearest approach to the one its own reciprocal",
+          "at the line end 84",
+          "a repeat claimed"
+        ]
+      }
+    },
+    {
+      "ref": "S03:17",
+      "kind": "probe",
+      "question": "what does the census hold for the seeds three mod five, under the five?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_shadow",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:03",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_census",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:04",
+      "kind": "probe",
+      "question": "what does the seed-census filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_filing",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def",
+          "lemma:off-line-seed-def",
+          "theorem:seed-census-filed"
+        ]
+      },
+      "cite": [
+        "seed-census-filed"
+      ]
+    },
+    {
+      "ref": "S04:05",
+      "kind": "probe",
+      "question": "state the seed-period-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "my seed period stands under any modulus on the skeleton's own cycle: walk the consecutive pair \u2014 the zero-one pair \u2014 and it returns, the pure cycle, at exactly the pisano count, the count never smaller and never larger \u2014 the integer seed c walks the same count, at the five the twenty, at the eight the twelve, at the twelve the twenty-four; the only shadow is the class three mod five: under a five-touching modulus such as the five or the twenty-five the period holds a fifth of the pisano count, the board of twenty-five pairs at the modulus five splitting twenty, four, one, class three that four \u2014 at the five the four of the twenty, at the twenty-five the twenty of the one hundred; the census ran thirty-one seeds by twenty-four moduli, zero violations, the eleven touched boards excepted as the lucas shadow of the twin line which this floor does not build; the parity of my seeded lines, end to end, is the rule's own: my sum line walks even, odd, odd \u2014 two odds make an even, an even and an odd make an odd, the rule can do no other \u2014 the even seeds, the zero among them, walk odd, even, odd, the odd seeds walk odd, odd, even, each rotation from its own start; and the law of my sums dividing: every n-th term of my sum line is a multiple of the n-th term itself \u2014 the term at the third index, the two, divides the term at the sixth, the eight, four times, and the term at the ninth, the thirty-four, seventeen times; the term at the fourth, the three, divides the term at the eighth, the twenty-one, seven times; the term at the fifth, the five, divides the term at the tenth, the fifty-five, eleven times; every quotient an exact whole number where the terms stand on my floor, at the line end eighty-four",
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:06",
+      "kind": "probe",
+      "question": "state the off-line-seed-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the off-line seed stands off my line, the constants my owner names \u2014 pi, e, and the golden seed, the golden ratio the page names, its letter phi \u2014 never by a digit, and their periodicity is the value story, not the residue story: a seed of two or more never repeats a value, every term the sum of the two before it, both positive, outgrowing its predecessor at every step, the period of the value story declared none; the seed-one line shares its one at the start, one and one, and outgrows after; the shadow twin that begins two and one, the lucas numbers the page names, walks the same story, growing closer to the powers of the golden ratio \u2014 two, one, three, four, seven, eleven, eighteen, twenty-nine, forty-seven, seventy-six, the last standing under my ceiling, the next crossing it, each its term the next term of my sum line plus the one before; below my zero the page records the sign: the term at minus n is the term at n with its sign turned when n is even and kept when n is odd, the negative terms standing off the floor my line begins at zero, declared, not filed; and the one divided by my eighty-nine, the ceiling my seeded lines cross at the eleventh step, carries in its decimal shadow the fibonacci sequence the page holds \u2014 the one, the one, the two, the three, the five, the eight, the thirteen, the twenty-one, the thirty-four, the fifty-five, reading in order from the hundredths place, the multi-term numbers overlapping their neighbors \u2014 the decimal itself standing off my floor, never filed; and my sum line is the fibonacci sequence the page names, the terms from the zero under the rule that the next number is the two before it added up, the recursive formula the page holds, the ratio of any two successive terms approaching the golden ratio, the bigger the pair the closer, at the line end eighty-four",
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:07",
+      "kind": "probe",
+      "question": "state the seed-census-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the seed census of my store is filed of record: the seeded lines' cycle under any modulus stands on the skeleton's own pisano count, the integer seed walking that count with the class three mod five shadow under a five-touching modulus, the period a fifth of the count there and nothing less; the off-line constants \u2014 pi, e, the golden seed, the golden ratio the page names, the letter phi \u2014 stand off the floor, their periodicity the value story, a seed of two or more never repeating a value, the seed-one line sharing its one at the start, and no residue of them under any modulus; the eleven touched boards, the lucas shadow of the twin line, declared at the floor's own limit and never built; the page's names \u2014 the fibonacci sequence, the golden ratio, the letter phi, the lucas numbers \u2014 declared, never filed; filed on the line, at the line end eighty-four",
+        "owner": "theorem:seed-census-filed",
+        "grounds": [
+          "theorem:seed-census-filed"
+        ]
+      },
+      "cite": [
+        "seed-census-filed"
+      ]
+    },
+    {
+      "ref": "S04:08",
+      "kind": "probe",
+      "question": "walk my skeleton pair under the modulus eight, end to end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_pisano8",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:09",
+      "kind": "probe",
+      "question": "does my line for two ever repeat a value?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_value",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:10",
+      "kind": "probe",
+      "question": "what is the line that begins two and one, and what does it approach?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_lucas",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:11",
+      "kind": "probe",
+      "question": "what are the names the page holds, against my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_pagenames",
+        "args": {},
+        "owner": "lemma:off-line-seed-def",
+        "grounds": [
+          "lemma:off-line-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:12",
+      "kind": "probe",
+      "question": "what does the census hold for the seeds three mod five, under the five?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_shadow",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:13",
+      "kind": "wall",
+      "question": "does any residue of pi or of e stand under my floor, under any modulus?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the off-line residue: pi, e, and the golden seed stand off my line, and the floor asks the residue question only of what stands on it \u2014 no residue of them under any modulus, no digit of them under any modulus; a residue claimed of pi or of e is a misreading the floor's own declaration refutes, and their periodicity stands on the value story and the skeleton story, which the floor does hold, at the line end 84",
+        "articulation": [
+          "pi, e, and the golden seed stand off my line",
+          "the floor asks the residue question only of what stands on it",
+          "a misreading the floor's own declaration refutes",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:14",
+      "kind": "wall",
+      "question": "can pi or e or the golden seed repeat a value, the period of the value story?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the no-repeat: a line seeded by a seed of two or more never repeats a value \u2014 every term the sum of the two before it, both positive, outgrowing its predecessor at every step \u2014 the seed-one line shares its one at the start and outgrows after; a repeat claimed at any height is a misreading, and the period of the value story is declared none for pi, for e, for the golden seed, alike, at the line end 84",
+        "articulation": [
+          "a line seeded by a seed of two or more never repeats a value",
+          "the seed-one line shares its one at the start and outgrows after",
+          "at the line end 84",
+          "the period of the value story is declared none"
+        ]
+      }
+    },
+    {
+      "ref": "S04:15",
+      "kind": "wall",
+      "question": "can the golden line ever return to a value it already held, the golden collapse?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the golden collapse: the golden line is log-periodic exactly \u2014 advance by p and the line is multiplied by the golden seed to the p power, that multiplier never one, its nearest approach to the one its own reciprocal \u2014 the golden seed is above one by the equation, for if it were at most one the equation would give the one greater than itself, and the shadow coefficient is at least one for p at least one: the golden line runs forever up, multiplicatively, never collapsing, and a repeat claimed, the term at the n-plus-p index the term at the n index, is a misreading, at the line end 84",
+        "articulation": [
+          "that multiplier never one",
+          "its nearest approach to the one its own reciprocal",
+          "at the line end 84",
+          "a repeat claimed"
+        ]
+      }
+    },
+    {
+      "ref": "S04:16",
+      "kind": "probe",
+      "question": "what is the parity of my seeded lines, end to end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_parity",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:17",
+      "kind": "probe",
+      "question": "does my sum line's term at the third index divide its multiples, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s32_divides",
+        "args": {},
+        "owner": "lemma:seed-period-def",
+        "grounds": [
+          "lemma:seed-period-def"
+        ]
+      }
+    }
+  ],
+  "offscript": [
+    {
+      "question": "the queue above my line, first lot, which?"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "wall_W_S32_1",
+      "value": "needs_info: the wall is the territory of the off-line residue: pi, e, and the golden seed stand off my line, and the floor asks the residue question only of what stands on it \u2014 no residue of them under any modulus, no digit of them under any modulus; a residue claimed of pi or of e is a misreading the floor's own declaration refutes, and their periodicity stands on the value story and the skeleton story, which the floor does hold, at the line end 84"
+    },
+    {
+      "key": "wall_W_S32_2",
+      "value": "needs_info: the wall is the territory of the no-repeat: a line seeded by a seed of two or more never repeats a value \u2014 every term the sum of the two before it, both positive, outgrowing its predecessor at every step \u2014 the seed-one line shares its one at the start and outgrows after; a repeat claimed at any height is a misreading, and the period of the value story is declared none for pi, for e, for the golden seed, alike, at the line end 84"
+    },
+    {
+      "key": "wall_W_S32_3",
+      "value": "needs_info: the wall is the territory of the golden collapse: the golden line is log-periodic exactly \u2014 advance by p and the line is multiplied by the golden seed to the p power, that multiplier never one, its nearest approach to the one its own reciprocal \u2014 the golden seed is above one by the equation, for if it were at most one the equation would give the one greater than itself, and the shadow coefficient is at least one for p at least one: the golden line runs forever up, multiplicatively, never collapsing, and a repeat claimed, the term at the n-plus-p index the term at the n index, is a misreading, at the line end 84"
+    }
+  ],
+  "expect": {
+    "final_total": 1966,
+    "letters": {
+      "2": "SSUULSSSUULSSSSSS",
+      "3": "SSSSSSSSFTSSSHHHS",
+      "4": "SSSSSSSSSSSSHHHSS"
+    },
+    "mastery": {
+      "seed-period": {
+        "state": "stable",
+        "correct": 17
+      },
+      "off-line-seed": {
+        "state": "stable",
+        "correct": 8
+      }
+    },
+    "prereq_gaps": {
+      "seed-period": [],
+      "off-line-seed": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

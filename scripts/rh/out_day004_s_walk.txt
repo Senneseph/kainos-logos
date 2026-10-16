@@ -1,0 +1,46 @@
+  ... t = 14000 (9 s, 46 gated flips)
+  ... t = 18000 (19 s, 46 gated flips)
+  ... t = 22000 (29 s, 46 gated flips)
+  ... t = 26000 (40 s, 46 gated flips)
+  ... t = 30000 (50 s, 46 gated flips)
+  ... t = 34000 (61 s, 46 gated flips)
+  ... t = 38000 (73 s, 46 gated flips)
+  ... t = 42000 (85 s, 46 gated flips)
+  ... t = 46000 (97 s, 46 gated flips)
+  ... t = 50000 (109 s, 46 gated flips)
+  ... t = 54000 (123 s, 46 gated flips)
+  ... t = 58000 (137 s, 46 gated flips)
+  ... t = 62000 (151 s, 46 gated flips)
+  ... t = 66000 (166 s, 46 gated flips)
+  ... t = 70000 (181 s, 46 gated flips)
+  ... t = 74000 (196 s, 46 gated flips)
+  ... t = 78000 (212 s, 46 gated flips)
+  ... t = 82000 (228 s, 46 gated flips)
+  ... t = 86000 (245 s, 46 gated flips)
+  ... t = 90000 (262 s, 46 gated flips)
+  ... t = 94000 (279 s, 46 gated flips)
+  ... t = 98000 (297 s, 46 gated flips)
+walk done in 306 s: 90000 points, nzero(T1) = 138021 (expect 138065), 46 spurious flips gated
+S(1e+04): N = 10142  from list = +0.0347   expected +0.0347  (diff -0.0000)  CONSISTENT
+S(1e+05): N = 138065  from list = -2.5584   expected -2.5584  (diff -0.0000)  CONSISTENT
+
+S(t) stats on the walk (t in [10001, 100000]):
+  max |S| = 48.4215 at t = 75718.98
+  min  S  = -48.4215 at t = 75718.98
+  max  S  = 1.9369 at t = 10040.98
+  mean |S| = 45.1793
+
+  GUE scale sqrt(ln ln 1e5) = 1.56 ;  ln(T)/2pi = 1.83
+
+per-10k max|S| (growth envelope):
+  [ 10000,  20000):  max|S| =  46.3825   mean|S| = 40.9640
+  [ 20000,  30000):  max|S| =  46.3154   mean|S| = 44.9982
+  [ 30000,  40000):  max|S| =  46.4037   mean|S| = 44.9998
+  [ 40000,  50000):  max|S| =  46.4451   mean|S| = 44.9998
+  [ 50000,  60000):  max|S| =  46.3322   mean|S| = 44.9999
+  [ 60000,  70000):  max|S| =  46.3841   mean|S| = 44.9976
+  [ 70000,  80000):  max|S| =  48.4215   mean|S| = 46.6534
+  [ 80000,  90000):  max|S| =  48.3877   mean|S| = 46.9992
+  [ 90000, 100000):  max|S| =  48.3294   mean|S| = 47.0012
+
+wrote S_t_walk_1e4_1e5.txt  (90000 points)

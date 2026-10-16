@@ -1,0 +1,11 @@
+P-0.8 ECHO: W0=100000.0 W1=6000000.0 width=5900000.0
+  DT=5.0e-04 (n=11800000000)  DT2=2.5e-04 (n=23600000000)  CHUNK=32768  MAXN=978
+  t_end check: W0+DT*n = 6000000.000000  (must equal W1=6000000.0)
+  twin floor 0.002954 (dt/floor = 0.169)  anchor N(W0)=138065
+  expected wall ~ 7.0 h at 1.40e+06 samples/s (measured)
+engine gate GPU-vs-host max |diff| = 8.600e-08 (tol 1e-6)
+[dt  seg00 seg (100000, 300000)] flips=328565  N_now=466630  elapsed 257 s  rate 1.56e+06/s
+[dt2 seg00 seg (100000, 300000)] flips=328578  N_now=466643  elapsed 514 s  rate 1.56e+06/s
+  [seg00] N(300000) dt=466630 dt2=466643 agree=False  min_gap(dt2)=0.005750
+  !!! [seg00] dt vs dt/2 DISAGREE — segment flagged for inspection (P-0 twin certificate FAILED)
+DONE: extension 328578 zeros on (1e5, 6e6], min gap 0.005750; files zeros_T6000000_ext_* written.

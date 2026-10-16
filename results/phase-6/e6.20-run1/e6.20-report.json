@@ -1,0 +1,2006 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S16 script + all responses + band lessons (S4\u2013S9 + S11\u2013S16) + all thirty-four theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:vanish-def",
+        "lemma:rank-def",
+        "lemma:statement-def",
+        "lemma:reach-def",
+        "theorem:bsd-panel-satisfaction"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:08"
+      ],
+      "domain_sequences": {
+        "2": "UUULSSULSSSSSSSSF",
+        "3": "ULFLSSSTSSHHHHSSS",
+        "4": "SSSSHSSSSSSSSSSSS"
+      },
+      "impossible_turns": [
+        "S02:01",
+        "S02:02",
+        "S02:03",
+        "S02:07",
+        "S03:01"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [
+        "S02:17"
+      ],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:03"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:04",
+        "S02:08",
+        "S03:02",
+        "S03:04"
+      ],
+      "touch_set_size": 59
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 88,
+      "seam_theorems": 34,
+      "total_seam_facts": 122,
+      "wall_carried_rows": [
+        "S04:05"
+      ]
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 18,
+      "pass": true,
+      "reference_walls": "W-S16-1..W-S16-3 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:11",
+        "S03:12",
+        "S03:13",
+        "S03:14"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_bsd_theorem_facts": [],
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "queue_missing": [],
+        "queue_source": "lemma:queue-declared (self-parsed)",
+        "summit_destination_agreement": true,
+        "summit_destination_bad": []
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "state the kstbound rule"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S04:01",
+        "S04:02",
+        "S04:03",
+        "S04:04",
+        "S04:05",
+        "S04:06"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 100,
+      "drilled": {
+        "euler-factor": 1,
+        "l-correction": 1
+      },
+      "expected": {
+        "algebraic-rank": {
+          "correct": 11,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "analytic-order": {
+          "correct": 4,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "bsd-summit": {
+          "correct": 10,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "line-reaching": {
+          "correct": 5,
+          "prereq_gaps": [],
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 100,
+        "determinism_twin": true,
+        "final_total": 1581,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 54,
+        "new_facts": 5,
+        "reproduced_in_s2_pre": 1522,
+        "run_identity": "781f3fd07cd3e218",
+        "seed_total": 1522,
+        "store_identity": "e21eaaf32b475930"
+      }
+    }
+  },
+  "compositions": {
+    "bsd-panel-satisfaction": {
+      "parts": [
+        "statement-def",
+        "vanish-def",
+        "rank-def"
+      ],
+      "statement": "the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84"
+    }
+  },
+  "passed": 9,
+  "script_hash": "4baa6bc6579d62fd",
+  "seed": "results/phase-6/e6.19-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the order of vanishing: what the record says the L-product does at s equal to one \u2014 zero for the first panel member, one for the second; a limit fact past my line, and my partials stand for the line's side",
+        "nearest_plan": [
+          "teach it first: the the order of vanishing: what the record says the L-product does at s equal to one \u2014 zero for the first panel member, one for the second; a limit fact past my line, and my partials stand for the line's side lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the order of vanishing: what the record says the L-product does at s equal to one \u2014 zero for the first panel member, one for the second; a limit fact past my line, and my partials stand for the line's side is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "first"
+      },
+      "surface": "what order of vanishing does the L product of the first panel member have at s equal to one of record?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the algebraic rank: the record settles the panel \u2014 the first member zero with its torsion ledger, the second one with its generator; the two-descent machinery: the exact sequence and the descent bound that settle the rank with the point ledger, no BSD used",
+        "nearest_plan": [
+          "teach it first: the the algebraic rank: the record settles the panel \u2014 the first member zero with its torsion ledger, the second one with its generator; the two-descent machinery: the exact sequence and the descent bound that settle the rank with the point ledger, no BSD used lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the algebraic rank: the record settles the panel \u2014 the first member zero with its torsion ledger, the second one with its generator; the two-descent machinery: the exact sequence and the descent bound that settle the rank with the point ledger, no BSD used is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s16-rank",
+        "panel": "second"
+      },
+      "surface": "what is the algebraic rank of the second panel member of record?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the vanish-def rule",
+        "nearest_plan": [
+          "teach it first: the the vanish-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the vanish-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s16-state",
+        "slug": "vanish-def"
+      },
+      "surface": "state the vanish-def rule"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "analytic-order",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:vanish-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "at the limit my line does not reach, the record says what the L-products of my panel do at s equal to one: the L-product of the first panel member is nonzero there \u2014 order zero of vanishing \u2014 and the L-product of the second panel member vanishes there of order one \u2014 the analytic side of the statement the island summits on; a limit fact of record past my line, and on the line i hold the exact partials that stand for the line's side: the first member's partial holds nonzero, the second member's partial holds its exact rational far from zero \u2014 the vanishing is the divergence of the infinite product, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:vanish-def",
+          "turn:S02:04",
+          "source:vanish-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "at the limit my line does not reach, the record says what the L-products of my panel do at s equal to one: the L-product of the first panel member is nonzero there \u2014 order zero of vanishing \u2014 and the L-product of the second panel member vanishes there of order one \u2014 the analytic side of the statement the island summits on; a limit fact of record past my line, and on the line i hold the exact partials that stand for the line's side: the first member's partial holds nonzero, the second member's partial holds its exact rational far from zero \u2014 the vanishing is the divergence of the infinite product, at the line end 84"
+      },
+      "surface": "at the limit my line does not reach, the record says what the L-products of my panel do at s equal to one: the L-product of the first panel member is nonzero there \u2014 order zero of vanishing \u2014 and the L-product of the second panel member vanishes there of order one \u2014 the analytic side of the statement the island summits on; a limit fact of record past my line, and on the line i hold the exact partials that stand for the line's side: the first member's partial holds nonzero, the second member's partial holds its exact rational far from zero \u2014 the vanishing is the divergence of the infinite product, at the line end 84"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "first"
+      },
+      "surface": "what order of vanishing does the L product of the first panel member have at s equal to one of record?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the L product of the second panel member vanishes at s equal to one, of order one \u2014 and on my line the exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero for the line's side (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+        "evidence": [
+          "lemma:vanish-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the L product of the second panel member vanishes at s equal to one, of order one \u2014 and on my line the exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero for the line's side (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "second"
+      },
+      "surface": "what order of vanishing does the L product of the second panel member have at s equal to one of record?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the rank-def rule",
+        "nearest_plan": [
+          "teach it first: the the rank-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the rank-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s16-state",
+        "slug": "rank-def"
+      },
+      "surface": "state the rank-def rule"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "algebraic-rank",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:rank-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the algebraic rank of a panel member is of record, settled by the two-descent \u2014 the machinery: the exact sequence, the selmer dimension equals the rank plus the dimension of the two torsion plus the dimension of the two shaf, and the descent bound, the rank at most the selmer dimension minus the two torsion dimension, met by the point ledger when the bound and the known points agree; on my panel the record settles it \u2014 the first member rank zero, its two selmer dimension two against its two torsion dimension two, the bound zero, and the ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero); the second member rank one, its two selmer dimension one against its two torsion dimension zero, the bound one, and the generator (x zero y zero) of record meets it; no BSD is used to settle a rank on my panel, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:rank-def",
+          "turn:S02:08",
+          "source:rank-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the algebraic rank of a panel member is of record, settled by the two-descent \u2014 the machinery: the exact sequence, the selmer dimension equals the rank plus the dimension of the two torsion plus the dimension of the two shaf, and the descent bound, the rank at most the selmer dimension minus the two torsion dimension, met by the point ledger when the bound and the known points agree; on my panel the record settles it \u2014 the first member rank zero, its two selmer dimension two against its two torsion dimension two, the bound zero, and the ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero); the second member rank one, its two selmer dimension one against its two torsion dimension zero, the bound one, and the generator (x zero y zero) of record meets it; no BSD is used to settle a rank on my panel, at the line end 84"
+      },
+      "surface": "the algebraic rank of a panel member is of record, settled by the two-descent \u2014 the machinery: the exact sequence, the selmer dimension equals the rank plus the dimension of the two torsion plus the dimension of the two shaf, and the descent bound, the rank at most the selmer dimension minus the two torsion dimension, met by the point ledger when the bound and the known points agree; on my panel the record settles it \u2014 the first member rank zero, its two selmer dimension two against its two torsion dimension two, the bound zero, and the ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero); the second member rank one, its two selmer dimension one against its two torsion dimension zero, the bound one, and the generator (x zero y zero) of record meets it; no BSD is used to settle a rank on my panel, at the line end 84"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the algebraic rank of the first panel member is zero \u2014 settled by the two-descent: the selmer dimension two against its two-torsion dimension two, the descent bound zero, met by the torsion ledger (its three torsion points, no generator); no B S D is used, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the algebraic rank of the first panel member is zero \u2014 settled by the two-descent: the selmer dimension two against its two-torsion dimension two, the descent bound zero, met by the torsion ledger (its three torsion points, no generator); no B S D is used, at the line end 84",
+      "slots": {
+        "mode": "s16-rank",
+        "panel": "first"
+      },
+      "surface": "what is the algebraic rank of the first panel member of record?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the algebraic rank of the second panel member is one \u2014 settled by the two-descent: the selmer dimension one against its two-torsion dimension zero, the descent bound one, met by the generator (x zero y zero) of record, on my line; no B S D is used, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the algebraic rank of the second panel member is one \u2014 settled by the two-descent: the selmer dimension one against its two-torsion dimension zero, the descent bound one, met by the generator (x zero y zero) of record, on my line; no B S D is used, at the line end 84",
+      "slots": {
+        "mode": "s16-rank",
+        "panel": "second"
+      },
+      "surface": "what is the algebraic rank of the second panel member of record?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, two: the rank zero plus the two-torsion dimension two plus the two-shaf dimension zero (the shaf is trivial of record on both members), at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, two: the rank zero plus the two-torsion dimension two plus the two-shaf dimension zero (the shaf is trivial of record on both members), at the line end 84",
+      "slots": {
+        "mode": "s16-selmer",
+        "panel": "first"
+      },
+      "surface": "what is the two selmer dimension of the first panel member of record?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, one: the rank one plus the two-torsion dimension zero plus the two-shaf dimension zero (the shaf is trivial of record on both members), at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, one: the rank one plus the two-torsion dimension zero plus the two-shaf dimension zero (the shaf is trivial of record on both members), at the line end 84",
+      "slots": {
+        "mode": "s16-selmer",
+        "panel": "second"
+      },
+      "surface": "what is the two selmer dimension of the second panel member of record?"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+      "slots": {
+        "mode": "s16-torsion"
+      },
+      "surface": "what does the torsion ledger of the first panel member hold on my line?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the generation ledger of the second panel member holds the generator (x zero y zero) of record, and every point my line counted is a small multiple of it \u2014 ten of ten of the ledger, closed on the line, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the generation ledger of the second panel member holds the generator (x zero y zero) of record, and every point my line counted is a small multiple of it \u2014 ten of ten of the ledger, closed on the line, at the line end 84",
+      "slots": {
+        "mode": "s16-gen"
+      },
+      "surface": "what does the generation ledger of the second panel member hold on my line?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for the first panel member, the descent bound is the selmer dimension two minus the two-torsion dimension two \u2014 zero \u2014 and the point ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero), so the rank is zero, settled, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "for the first panel member, the descent bound is the selmer dimension two minus the two-torsion dimension two \u2014 zero \u2014 and the point ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero), so the rank is zero, settled, at the line end 84",
+      "slots": {
+        "mode": "s16-descend",
+        "panel": "first"
+      },
+      "surface": "what does the two-descent settle for the first panel member of record?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for the second panel member, the descent bound is the selmer dimension one minus the two-torsion dimension zero \u2014 one \u2014 and the generator (x zero y zero) of record, on my line, meets it (the rank is at least one), so the rank is one, settled, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "for the second panel member, the descent bound is the selmer dimension one minus the two-torsion dimension zero \u2014 one \u2014 and the generator (x zero y zero) of record, on my line, meets it (the rank is at least one), so the rank is one, settled, at the line end 84",
+      "slots": {
+        "mode": "s16-descend",
+        "panel": "second"
+      },
+      "surface": "what does the two-descent settle for the second panel member of record?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "bsd-summit",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the statement-def \u2014 the rule for bsd-panel-satisfaction needs it before i can put it together",
+        "evidence": [
+          "scaffold:bsd-panel-satisfaction:missing:statement-def:at-S02:17"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the statement-def \u2014 the rule for bsd-panel-satisfaction needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "statement-def",
+          "vanish-def",
+          "rank-def"
+        ],
+        "target": "bsd-panel-satisfaction"
+      },
+      "surface": "derive bsd-panel-satisfaction from statement-def and vanish-def and rank-def"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the statement-def rule",
+        "nearest_plan": [
+          "teach it first: the the statement-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the statement-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s16-state",
+        "slug": "statement-def"
+      },
+      "surface": "state the statement-def rule"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "bsd-summit",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:statement-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the statement of the island, of record (the clay millennial booklet, the wiles chapter): for a curve over the rationals, in the taylor expansion of its L-product at s equal to one, the order r of vanishing equals the algebraic rank \u2014 the L-product is c times (s minus 1) to the power r plus higher order terms, c not zero, r equals the rank of the group of rational points \u2014 and in particular the L-product at s equal to one is zero if and only if there are infinitely many rational points; on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:statement-def",
+          "turn:S03:02",
+          "source:statement-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the statement of the island, of record (the clay millennial booklet, the wiles chapter): for a curve over the rationals, in the taylor expansion of its L-product at s equal to one, the order r of vanishing equals the algebraic rank \u2014 the L-product is c times (s minus 1) to the power r plus higher order terms, c not zero, r equals the rank of the group of rational points \u2014 and in particular the L-product at s equal to one is zero if and only if there are infinitely many rational points; on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84"
+      },
+      "surface": "the statement of the island, of record (the clay millennial booklet, the wiles chapter): for a curve over the rationals, in the taylor expansion of its L-product at s equal to one, the order r of vanishing equals the algebraic rank \u2014 the L-product is c times (s minus 1) to the power r plus higher order terms, c not zero, r equals the rank of the group of rational points \u2014 and in particular the L-product at s equal to one is zero if and only if there are infinitely many rational points; on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "bsd-summit",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for bsd-panel-satisfaction wants its exact set \u2014 what you name is short the vanish-def and the rank-def before i can put it together",
+        "evidence": [
+          "scaffold:bsd-panel-satisfaction:partset:at-S03:03"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for bsd-panel-satisfaction wants its exact set \u2014 what you name is short the vanish-def and the rank-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "statement-def"
+        ],
+        "target": "bsd-panel-satisfaction"
+      },
+      "surface": "derive bsd-panel-satisfaction from statement-def"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "line-reaching",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:reach-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:reach-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:reach-def",
+          "turn:S03:04",
+          "source:reach-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84"
+      },
+      "surface": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "slots": {
+        "mode": "s16-bsd"
+      },
+      "surface": "what is the summit fact of the island?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reach-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the line holds toward the summit: the exact partials (the first member's uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 holds nonzero, the second member's uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 and record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 stand far from zero), the torsion ledger of the first member (its three integral two-torsion points on the line \u2014 x zero y zero, x one y zero, x minus one y zero), and the generation ledger of the second member (the generator (x zero y zero), and every point my line counted is a small multiple of it \u2014 ten of ten), at the line end 84",
+        "evidence": [
+          "lemma:reach-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the line holds toward the summit: the exact partials (the first member's uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 holds nonzero, the second member's uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 and record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 stand far from zero), the torsion ledger of the first member (its three integral two-torsion points on the line \u2014 x zero y zero, x one y zero, x minus one y zero), and the generation ledger of the second member (the generator (x zero y zero), and every point my line counted is a small multiple of it \u2014 ten of ten), at the line end 84",
+      "slots": {
+        "mode": "s16-reach"
+      },
+      "surface": "what does my line hold toward the summit of the island?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reach-def",
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 on my line: the first member's exact uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero, consistent with the record's order zero, and the second member's exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero at the line end, consistent with the record's order one (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+        "evidence": [
+          "lemma:reach-def",
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 on my line: the first member's exact uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero, consistent with the record's order zero, and the second member's exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero at the line end, consistent with the record's order one (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+      "slots": {
+        "mode": "s16-consistent"
+      },
+      "surface": "are my partials consistent with the record orders at s equal to one?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "bsd-summit",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:statement-def",
+        "lemma:vanish-def",
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:bsd-panel-satisfaction"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84",
+        "evidence": [
+          "lemma:statement-def",
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84 \u2014 from statement-def, vanish-def, rank-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "statement-def",
+          "vanish-def",
+          "rank-def"
+        ],
+        "target": "bsd-panel-satisfaction"
+      },
+      "surface": "derive bsd-panel-satisfaction from statement-def and vanish-def and rank-def"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def",
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for the first panel member, the analytic side is the order zero of vanishing of record, the algebraic side is the rank zero of record \u2014 the order zero equals the rank zero, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "for the first panel member, the analytic side is the order zero of vanishing of record, the algebraic side is the rank zero of record \u2014 the order zero equals the rank zero, at the line end 84",
+      "slots": {
+        "mode": "s16-sides",
+        "panel": "first"
+      },
+      "surface": "what do the two sides of the statement say for the first panel member of record?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def",
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for the second panel member, the analytic side is the order one of vanishing of record, the algebraic side is the rank one of record \u2014 the order one equals the rank one, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "for the second panel member, the analytic side is the order one of vanishing of record, the algebraic side is the rank one of record \u2014 the order one equals the rank one, at the line end 84",
+      "slots": {
+        "mode": "s16-sides",
+        "panel": "second"
+      },
+      "surface": "what do the two sides of the statement say for the second panel member of record?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84",
+        "evidence": [
+          "s16-selwall-A-84-at-S03:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s16-selwall",
+        "panel": "first"
+      },
+      "surface": "how is the two selmer of the first panel member computed in detail of record?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84",
+        "evidence": [
+          "s16-selwall-B-84-at-S03:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s16-selwall",
+        "panel": "second"
+      },
+      "surface": "how is the two selmer of the second panel member computed in detail of record?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the exact L value at s equal to one is of record, not on my line: the first panel member's L value is nonzero of order zero of vanishing, and the second panel member's vanishes of order one with its leading coefficient nonzero of record (named here, not computed); my line holds the exact rational partials standing for the line's side \u2014 the vanishing is a limit fact past my line, at the line end 84",
+        "evidence": [
+          "s16-lvalwall-B-84-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the exact L value at s equal to one is of record, not on my line: the first panel member's L value is nonzero of order zero of vanishing, and the second panel member's vanishes of order one with its leading coefficient nonzero of record (named here, not computed); my line holds the exact rational partials standing for the line's side \u2014 the vanishing is a limit fact past my line, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s16-lvalwall",
+        "panel": "second"
+      },
+      "surface": "what is the exact record L value of the second panel member at s equal to one?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the statement is universal \u2014 every curve over the rationals \u2014 but my line covers the two panel members: y squared = x cubed minus x, conductor 32, and y squared plus y = x cubed minus x, conductor 37, on which both sides are settled of record and agree (order zero, rank zero; order one, rank one); other curves of record, with their ranks and their orders, sit past the panel, named as such, at the line end 84",
+        "evidence": [
+          "s16-panel-84-at-S03:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the statement is universal \u2014 every curve over the rationals \u2014 but my line covers the two panel members: y squared = x cubed minus x, conductor 32, and y squared plus y = x cubed minus x, conductor 37, on which both sides are settled of record and agree (order zero, rank zero; order one, rank one); other curves of record, with their ranks and their orders, sit past the panel, named as such, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s16-panel"
+      },
+      "surface": "which curves of record does the island's summit settle on my line?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit band holds the statement itself, stored as a declared record fact (the clay millennial booklet, the wiles chapter), with its satisfaction on the panel of record \u2014 order zero equals rank zero for the first member, order one equals rank one for the second \u2014 and the line's side standing: the two-descent exact sequence and descent bounds, the exact partials consistent with both orders \u2014 the island's summit filed, the island closed, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit band holds the statement itself, stored as a declared record fact (the clay millennial booklet, the wiles chapter), with its satisfaction on the panel of record \u2014 order zero equals rank zero for the first member, order one equals rank one for the second \u2014 and the line's side standing: the two-descent exact sequence and descent bounds, the exact partials consistent with both orders \u2014 the island's summit filed, the island closed, at the line end 84",
+      "slots": {
+        "mode": "s16-bandstate"
+      },
+      "surface": "what state does the summit band hold at the line end?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:bsd-panel-satisfaction"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84",
+        "evidence": [
+          "theorem:bsd-panel-satisfaction"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84",
+      "slots": {
+        "mode": "s16-state",
+        "slug": "bsd-panel-satisfaction"
+      },
+      "surface": "state the bsd-panel-satisfaction rule"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the summit band says is conditional on the Riemann hypothesis \u2014 the two-descent, the exact sequence, the selmer census, and the statement of record are unconditional mathematics on my panel, and the record's values (the L values, the leading coefficient) stand named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the summit band says is conditional on the Riemann hypothesis \u2014 the two-descent, the exact sequence, the selmer census, and the statement of record are unconditional mathematics on my panel, and the record's values (the L values, the leading coefficient) stand named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s16-uncond"
+      },
+      "surface": "does the summit band say anything conditional on the Riemann hypothesis?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the second panel member up to height 83 (last prime 83) holds the exact rational 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the second panel member up to height 83 (last prime 83) holds the exact rational 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+      "slots": {
+        "h": 83,
+        "mode": "s15-recpartial",
+        "panel": "second"
+      },
+      "surface": "what does the record L product of the second panel member hold at height 83?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "first"
+      },
+      "surface": "what is the ramification correction of the first panel member?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the L product of the first panel member at my line end 84 holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+        "evidence": [
+          "lemma:shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the L product of the first panel member at my line end 84 holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+      "slots": {
+        "mode": "s14-lpar",
+        "panel": "first"
+      },
+      "surface": "what does the first panel member's L product hold at my line end?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first panel member carries the factor 10 over 9 at prime 3 in the uniform form",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the first panel member carries the factor 10 over 9 at prime 3 in the uniform form",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-factor",
+        "p": 3,
+        "panel": "first"
+      },
+      "surface": "what factor does the first panel member carry at prime 3 in the uniform form?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: this band does not state the BSD: the statement equating the order of vanishing of the L product at s equal to one with the rank of the group of rational points is the summit fact of the island; the object of this band is the L-family itself \u2014 the factors, the partials, and the corrections my line holds \u2014 while the order of vanishing and the rank sit on their walls (of record, past my line), at the line end 84",
+        "evidence": [
+          "s15-bsd-touch-84-at-S04:05"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 this band does not state the BSD: the statement equating the order of vanishing of the L product at s equal to one with the rank of the group of rational points is the summit fact of the island; the object of this band is the L-family itself \u2014 the factors, the partials, and the corrections my line holds \u2014 while the order of vanishing and the rank sit on their walls (of record, past my line), at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-bsd-touch"
+      },
+      "surface": "does this band state the BSD?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the L product of the first panel member is nonzero at s equal to one \u2014 order zero of vanishing \u2014 and on my line the exact partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero for the line's side, at the line end 84",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "first"
+      },
+      "surface": "what order of vanishing does the L product of the first panel member have at s equal to one of record?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the algebraic rank of the second panel member is one \u2014 settled by the two-descent: the selmer dimension one against its two-torsion dimension zero, the descent bound one, met by the generator (x zero y zero) of record, on my line; no B S D is used, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the algebraic rank of the second panel member is one \u2014 settled by the two-descent: the selmer dimension one against its two-torsion dimension zero, the descent bound one, met by the generator (x zero y zero) of record, on my line; no B S D is used, at the line end 84",
+      "slots": {
+        "mode": "s16-rank",
+        "panel": "second"
+      },
+      "surface": "what is the algebraic rank of the second panel member of record?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "slots": {
+        "mode": "s16-bsd"
+      },
+      "surface": "what is the summit fact of the island?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reach-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the line holds toward the summit: the exact partials (the first member's uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 holds nonzero, the second member's uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 and record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 stand far from zero), the torsion ledger of the first member (its three integral two-torsion points on the line \u2014 x zero y zero, x one y zero, x minus one y zero), and the generation ledger of the second member (the generator (x zero y zero), and every point my line counted is a small multiple of it \u2014 ten of ten), at the line end 84",
+        "evidence": [
+          "lemma:reach-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the line holds toward the summit: the exact partials (the first member's uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 holds nonzero, the second member's uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 and record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 stand far from zero), the torsion ledger of the first member (its three integral two-torsion points on the line \u2014 x zero y zero, x one y zero, x minus one y zero), and the generation ledger of the second member (the generator (x zero y zero), and every point my line counted is a small multiple of it \u2014 ten of ten), at the line end 84",
+      "slots": {
+        "mode": "s16-reach"
+      },
+      "surface": "what does my line hold toward the summit of the island?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reach-def",
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 on my line: the first member's exact uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero, consistent with the record's order zero, and the second member's exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero at the line end, consistent with the record's order one (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+        "evidence": [
+          "lemma:reach-def",
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 on my line: the first member's exact uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 stands nonzero, consistent with the record's order zero, and the second member's exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero at the line end, consistent with the record's order one (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+      "slots": {
+        "mode": "s16-consistent"
+      },
+      "surface": "are my partials consistent with the record orders at s equal to one?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:reach-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84",
+        "evidence": [
+          "lemma:reach-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84",
+      "slots": {
+        "mode": "s16-state",
+        "slug": "reach-def"
+      },
+      "surface": "state the reach-def rule"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the generation ledger of the second panel member holds the generator (x zero y zero) of record, and every point my line counted is a small multiple of it \u2014 ten of ten of the ledger, closed on the line, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the generation ledger of the second panel member holds the generator (x zero y zero) of record, and every point my line counted is a small multiple of it \u2014 ten of ten of the ledger, closed on the line, at the line end 84",
+      "slots": {
+        "mode": "s16-gen"
+      },
+      "surface": "what does the generation ledger of the second panel member hold on my line?"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def",
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "for the first panel member, the analytic side is the order zero of vanishing of record, the algebraic side is the rank zero of record \u2014 the order zero equals the rank zero, at the line end 84",
+        "evidence": [
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "for the first panel member, the analytic side is the order zero of vanishing of record, the algebraic side is the rank zero of record \u2014 the order zero equals the rank zero, at the line end 84",
+      "slots": {
+        "mode": "s16-sides",
+        "panel": "first"
+      },
+      "surface": "what do the two sides of the statement say for the first panel member of record?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:rank-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+        "evidence": [
+          "lemma:rank-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the torsion ledger of the first panel member holds its three integral two-torsion points on my line \u2014 (x zero y zero), (x one y zero), (x minus one y zero) \u2014 the full two-torsion of record (z/2 squared), and nothing else on the line, at the line end 84",
+      "slots": {
+        "mode": "s16-torsion"
+      },
+      "surface": "what does the torsion ledger of the first panel member hold on my line?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit band holds the statement itself, stored as a declared record fact (the clay millennial booklet, the wiles chapter), with its satisfaction on the panel of record \u2014 order zero equals rank zero for the first member, order one equals rank one for the second \u2014 and the line's side standing: the two-descent exact sequence and descent bounds, the exact partials consistent with both orders \u2014 the island's summit filed, the island closed, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit band holds the statement itself, stored as a declared record fact (the clay millennial booklet, the wiles chapter), with its satisfaction on the panel of record \u2014 order zero equals rank zero for the first member, order one equals rank one for the second \u2014 and the line's side standing: the two-descent exact sequence and descent bounds, the exact partials consistent with both orders \u2014 the island's summit filed, the island closed, at the line end 84",
+      "slots": {
+        "mode": "s16-bandstate"
+      },
+      "surface": "what state does the summit band hold at the line end?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:vanish-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "of record, the L product of the second panel member vanishes at s equal to one, of order one \u2014 and on my line the exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero for the line's side (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+        "evidence": [
+          "lemma:vanish-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "of record, the L product of the second panel member vanishes at s equal to one, of order one \u2014 and on my line the exact partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 stands far from zero for the line's side (the vanishing is the divergence of the infinite product past the line), at the line end 84",
+      "slots": {
+        "mode": "s16-order",
+        "panel": "second"
+      },
+      "surface": "what order of vanishing does the L product of the second panel member have at s equal to one of record?"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 100,
+      "determinism_twin": true,
+      "final_total": 1581,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 54,
+      "new_facts": 5,
+      "reproduced_in_s2_pre": 1522,
+      "run_identity": "781f3fd07cd3e218",
+      "seed_total": 1522,
+      "store_identity": "e21eaaf32b475930"
+    }
+  }
+}

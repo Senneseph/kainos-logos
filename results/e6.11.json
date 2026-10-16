@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "4ae638d",
+    "dataset_hash": null,
+    "final_total": 840,
+    "line_end_final": 84,
+    "script_hash": "8cc3a9359901287f",
+    "seed": "results/phase-6/e6.10-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.11-run1/session-S02.json",
+    "results/phase-6/e6.11-run1/session-S03.json",
+    "results/phase-6/e6.11-run1/session-S04.json",
+    "results/phase-6/e6.11-run1/codeX-S04.json"
+  ],
+  "hypothesis": "The arithmetical half band (S7) stores the tower construction NOT as lessons about the conclusion but as DERIVATIONS from taught parts: the seven tower seam lemmas are ESTABLISHED declared-source facts (43 declared seam facts with S4's ten, S5's sixteen, and S6's ten); the SIX scaffolded derive turns store the S6 theorems' chain APPLIED: gen-lower, gs-infinite, splitting, gamma-achieved, tower-feeds, and theorem-main (the paper's Theorem 1.1), each citing exactly its sanctioned parts (machine-inspectable in the store); the erdosguess flips open \u2192 falsified (by theorem:theorem-main) by an in-store derivation ALONE (the M8 upsert on the same id, derived provenance, zero new conjecture assertions); the same power probe that was the S4/S5 wall and the S6 conditional answers UNCONDITIONALLY here (grounded on theorem-main + the chain); no concrete violating n, delta value, or distinct-distance bound is in the store (honest beyond-store walls); the line stays 0..84 (zero new successor facts); the paper never reaches the student (P0); two runs byte-identical.",
+  "metric": "S7 checks passed (P0..P8)",
+  "name": "e6.11",
+  "passed": true,
+  "skipped": false,
+  "threshold": "9/9",
+  "value": "PASS e6.11: 9/9"
+}

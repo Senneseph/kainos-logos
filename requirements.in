@@ -1,0 +1,33 @@
+# Kainos-Logos developer toolchain — top-level pins (ADR-0010).
+#
+# This file is the *input*; the *output* is requirements.lock (generated with
+# `pip-compile --generate-hashes`), which pins the full transitive closure with
+# sha256 hashes and is what the Dockerfile actually installs.
+#
+# Regenerating the lockfile (only when intentionally upgrading tooling):
+#   pipx run pip-compile --generate-hashes -o requirements.lock requirements.in
+# or equivalently:
+#   python3 -m venv /tmp/kv && /tmp/kv/bin/pip install pip-tools==7.6.1
+#   /tmp/kv/bin/pip-compile --generate-hashes -o requirements.lock requirements.in
+#
+# Tooling for Phase 0-2 runs inside the pinned Docker image only (ADR-0001,
+# ADR-0010). The host is never modified.
+
+# Test framework + property-based testing (harness, ADR-0010 dev deps)
+pytest==9.1.1
+hypothesis==6.165.10
+# Type checking (make typecheck)
+mypy==2.3.1
+# Linting (make lint)
+ruff==0.16.3
+# Semantic IR / CODEX schema validation (used from step 03 onward)
+jsonschema==4.26.0
+# Build backend for `pip install --no-build-isolation -e .` inside the image
+# (must satisfy pyproject build-system requires = setuptools>=68)
+setuptools==84.0.0
+# Tensor library for the E1.5 Model A baseline (step 12, Phase 1 A/B).
+# CPU-only wheels from PyTorch's CPU index — no CUDA/nvidia dependencies may
+# enter the pinned image (ADR-0010). The user approved adding this library in
+# exchange for full pinning (pinned version + sha256 hashes in the lockfile).
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.13.0+cpu

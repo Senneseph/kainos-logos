@@ -1,0 +1,53 @@
+{
+  "config": {
+    "baseline_target_seed": 7,
+    "budget": 20,
+    "corpus": "data/q20/concepts.json",
+    "games_per_side": 500,
+    "metric_convention": "questions-to-solve: over WON games; unsolved mass in median_questions_all_games (losses at full budget)",
+    "system_seed": 42,
+    "threshold": "system questions-to-solve median <= 0.8 x baseline AND win-rate >= baseline (directive)"
+  },
+  "convergence_median_reduction": 0.6364,
+  "deviation": "directive threshold not met on the published corpus: 149 concepts form 46 equivalence classes under the 17 questions (win-rate capped at 0.3087 for ANY policy; both policies end in the same terminal state with the same min(H) fallback guess, so the win-rate clause is a null hypothesis at equal sample size), and questions-to-solve is dominated by class-min wins decidable only after all 17 questions (both medians equal). The A1 hypothesis ('info-gain selection converges in fewer questions') is measured by median questions-to-identify (see convergence_median_reduction and results.md).",
+  "experiment": "e2.1",
+  "hypothesis": "info-gain selection converges on the hidden concept in fewer questions than random",
+  "median_reduction": 0.0,
+  "oracle_ceiling": {
+    "class_size_distribution": {
+      "1": 20,
+      "13": 1,
+      "14": 1,
+      "2": 10,
+      "24": 1,
+      "3": 4,
+      "4": 3,
+      "5": 3,
+      "6": 2,
+      "7": 1
+    },
+    "equivalence_classes": 46,
+    "max_possible_win_rate": 0.3087
+  },
+  "passed": false,
+  "random_baseline": {
+    "games": 500,
+    "mean_questions_to_identify": 10.656,
+    "mean_questions_to_solve": 14.276,
+    "median_questions_all_games": 20.0,
+    "median_questions_to_identify": 11.0,
+    "median_questions_to_solve": 17,
+    "win_rate": 0.326,
+    "wins": 163
+  },
+  "system": {
+    "games": 500,
+    "mean_questions_to_identify": 4.208,
+    "mean_questions_to_solve": 11.542,
+    "median_questions_all_games": 20.0,
+    "median_questions_to_identify": 4.0,
+    "median_questions_to_solve": 17,
+    "win_rate": 0.262,
+    "wins": 131
+  }
+}

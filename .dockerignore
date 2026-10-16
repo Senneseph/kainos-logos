@@ -1,0 +1,8 @@
+# Keep the build context small and secret-free (ADR-0010)
+.git/
+.env
+results/
+data/*.sqlite
+__pycache__/
+*.egg-info/
+.venv/

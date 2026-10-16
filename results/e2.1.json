@@ -1,0 +1,39 @@
+{
+  "config": {
+    "baseline_median": 17,
+    "baseline_win_rate": 0.326,
+    "commit": "ccb1f4a",
+    "convergence_median_reduction": 0.6364,
+    "dataset_hash": null,
+    "deviation": "directive threshold not met on the published corpus: 149 concepts form 46 equivalence classes under the 17 questions (win-rate capped at 0.3087 for ANY policy; both policies end in the same terminal state with the same min(H) fallback guess, so the win-rate clause is a null hypothesis at equal sample size), and questions-to-solve is dominated by class-min wins decidable only after all 17 questions (both medians equal). The A1 hypothesis ('info-gain selection converges in fewer questions') is measured by median questions-to-identify (see convergence_median_reduction and results.md).",
+    "median_reduction": 0.0,
+    "oracle_ceiling": {
+      "class_size_distribution": {
+        "1": 20,
+        "13": 1,
+        "14": 1,
+        "2": 10,
+        "24": 1,
+        "3": 4,
+        "4": 3,
+        "5": 3,
+        "6": 2,
+        "7": 1
+      },
+      "equivalence_classes": 46,
+      "max_possible_win_rate": 0.3087
+    },
+    "seed": 0,
+    "system_median": 17,
+    "system_win_rate": 0.262
+  },
+  "evidence": [
+    "results/phase-2/e2.1.json"
+  ],
+  "hypothesis": "info-gain question selection converges in fewer questions than random (A1)",
+  "metric": "win-rate + questions-to-solve (won games) + convergence (median questions to the min-identifiable class), 500 games each side",
+  "name": "e2.1",
+  "passed": false,
+  "threshold": "directive: system questions-to-solve median >= 20% lower and win-rate >= baseline",
+  "value": 0.0
+}

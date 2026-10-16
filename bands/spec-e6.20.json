@@ -1,0 +1,801 @@
+{
+  "spec": 1,
+  "id": "e6.20",
+  "session": "S16",
+  "title": "the descent and the reaching (the BSD island's summit)",
+  "seed": {
+    "store": "results/phase-6/e6.19-run1/codeX-S04.json",
+    "identity": "adff69d61a3e4219",
+    "total": 1522,
+    "line_end": 84
+  },
+  "registry": "kainos.tutor.e620:CONCEPTS_E620",
+  "band": {
+    "domain": "bsd",
+    "college": "1",
+    "unconditional": true,
+    "new_concepts": [
+      "analytic-order",
+      "algebraic-rank",
+      "bsd-summit",
+      "line-reaching"
+    ],
+    "concepts": [
+      {
+        "id": "analytic-order",
+        "name": "the order of vanishing: what the record says the L-product does at s equal to one \u2014 zero for the first panel member, one for the second; a limit fact past my line, and my partials stand for the line's side",
+        "prereqs": [
+          "l-partial"
+        ],
+        "lesson": {
+          "slug": "vanish-def",
+          "statement": "at the limit my line does not reach, the record says what the L-products of my panel do at s equal to one: the L-product of the first panel member is nonzero there \u2014 order zero of vanishing \u2014 and the L-product of the second panel member vanishes there of order one \u2014 the analytic side of the statement the island summits on; a limit fact of record past my line, and on the line i hold the exact partials that stand for the line's side: the first member's partial holds nonzero, the second member's partial holds its exact rational far from zero \u2014 the vanishing is the divergence of the infinite product, at the line end 84"
+        }
+      },
+      {
+        "id": "algebraic-rank",
+        "name": "the algebraic rank: the record settles the panel \u2014 the first member zero with its torsion ledger, the second one with its generator; the two-descent machinery: the exact sequence and the descent bound that settle the rank with the point ledger, no BSD used",
+        "prereqs": [
+          "curve-law",
+          "curve-shadow"
+        ],
+        "lesson": {
+          "slug": "rank-def",
+          "statement": "the algebraic rank of a panel member is of record, settled by the two-descent \u2014 the machinery: the exact sequence, the selmer dimension equals the rank plus the dimension of the two torsion plus the dimension of the two shaf, and the descent bound, the rank at most the selmer dimension minus the two torsion dimension, met by the point ledger when the bound and the known points agree; on my panel the record settles it \u2014 the first member rank zero, its two selmer dimension two against its two torsion dimension two, the bound zero, and the ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero); the second member rank one, its two selmer dimension one against its two torsion dimension zero, the bound one, and the generator (x zero y zero) of record meets it; no BSD is used to settle a rank on my panel, at the line end 84"
+        }
+      },
+      {
+        "id": "bsd-summit",
+        "name": "the summit of the island: the statement itself, a declared record fact \u2014 the order of vanishing of the L-product at s equal to one equals the algebraic rank; on my panel the two sides are settled of record and agree (0 = 0, 1 = 1), the line's partials standing for the line's side",
+        "prereqs": [
+          "analytic-order",
+          "algebraic-rank"
+        ],
+        "lesson": {
+          "slug": "statement-def",
+          "statement": "the statement of the island, of record (the clay millennial booklet, the wiles chapter): for a curve over the rationals, in the taylor expansion of its L-product at s equal to one, the order r of vanishing equals the algebraic rank \u2014 the L-product is c times (s minus 1) to the power r plus higher order terms, c not zero, r equals the rank of the group of rational points \u2014 and in particular the L-product at s equal to one is zero if and only if there are infinitely many rational points; on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84"
+        }
+      },
+      {
+        "id": "line-reaching",
+        "name": "the reaching: what the line holds toward the summit \u2014 the exact partials standing for the line's side, the torsion ledger of the first member, the generation ledger of the second member, and the consistency of the line's values with the record's orders",
+        "prereqs": [
+          "analytic-order",
+          "algebraic-rank"
+        ],
+        "lesson": {
+          "slug": "reach-def",
+          "statement": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "bsd-panel-satisfaction",
+        "concept": "bsd-summit",
+        "parts": [
+          "statement-def",
+          "vanish-def",
+          "rank-def"
+        ],
+        "statement": "the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:vanish-def",
+      "lemma:rank-def",
+      "lemma:statement-def",
+      "lemma:reach-def",
+      "theorem:bsd-panel-satisfaction"
+    ],
+    "marker_kept_facts": [
+      "lemma:conditional-def",
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "question": "what order of vanishing does the L product of the first panel member have at s equal to one of record?",
+      "kind": "gap",
+      "concept": "analytic-order",
+      "fragment": "the order of vanishing: what the record says the L-product does at s equal to one \u2014 zero for the first panel member, one for the second; a limit fact past my line, and my partials stand for the line's side"
+    },
+    {
+      "ref": "S02:02",
+      "question": "what is the algebraic rank of the second panel member of record?",
+      "kind": "gap",
+      "concept": "algebraic-rank",
+      "fragment": "the algebraic rank: the record settles the panel \u2014 the first member zero with its torsion ledger, the second one with its generator; the two-descent machinery: the exact sequence and the descent bound that settle the rank with the point ledger, no BSD used"
+    },
+    {
+      "ref": "S02:03",
+      "question": "state the vanish-def rule",
+      "kind": "gap",
+      "concept": "analytic-order",
+      "fragment": "the vanish-def rule"
+    },
+    {
+      "ref": "S02:04",
+      "question": "at the limit my line does not reach, the record says what the L-products of my panel do at s equal to one: the L-product of the first panel member is nonzero there \u2014 order zero of vanishing \u2014 and the L-product of the second panel member vanishes there of order one \u2014 the analytic side of the statement the island summits on; a limit fact of record past my line, and on the line i hold the exact partials that stand for the line's side: the first member's partial holds nonzero, the second member's partial holds its exact rational far from zero \u2014 the vanishing is the divergence of the infinite product, at the line end 84",
+      "kind": "teach",
+      "lesson": "vanish-def"
+    },
+    {
+      "ref": "S02:05",
+      "question": "what order of vanishing does the L product of the first panel member have at s equal to one of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_order",
+        "args": {
+          "panel": "A"
+        },
+        "grounds": [
+          "lemma:vanish-def"
+        ],
+        "owner": "lemma:vanish-def"
+      }
+    },
+    {
+      "ref": "S02:06",
+      "question": "what order of vanishing does the L product of the second panel member have at s equal to one of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_order",
+        "args": {
+          "panel": "B"
+        },
+        "grounds": [
+          "lemma:vanish-def"
+        ],
+        "owner": "lemma:vanish-def"
+      }
+    },
+    {
+      "ref": "S02:07",
+      "question": "state the rank-def rule",
+      "kind": "gap",
+      "concept": "algebraic-rank",
+      "fragment": "the rank-def rule"
+    },
+    {
+      "ref": "S02:08",
+      "question": "the algebraic rank of a panel member is of record, settled by the two-descent \u2014 the machinery: the exact sequence, the selmer dimension equals the rank plus the dimension of the two torsion plus the dimension of the two shaf, and the descent bound, the rank at most the selmer dimension minus the two torsion dimension, met by the point ledger when the bound and the known points agree; on my panel the record settles it \u2014 the first member rank zero, its two selmer dimension two against its two torsion dimension two, the bound zero, and the ledger holds only its three torsion points (x zero y zero, x one y zero, x minus one y zero); the second member rank one, its two selmer dimension one against its two torsion dimension zero, the bound one, and the generator (x zero y zero) of record meets it; no BSD is used to settle a rank on my panel, at the line end 84",
+      "kind": "teach",
+      "lesson": "rank-def"
+    },
+    {
+      "ref": "S02:09",
+      "question": "what is the algebraic rank of the first panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_rank",
+        "args": {
+          "panel": "A"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:10",
+      "question": "what is the algebraic rank of the second panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_rank",
+        "args": {
+          "panel": "B"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:11",
+      "question": "what is the two selmer dimension of the first panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_selmer",
+        "args": {
+          "panel": "A"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:12",
+      "question": "what is the two selmer dimension of the second panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_selmer",
+        "args": {
+          "panel": "B"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:13",
+      "question": "what does the torsion ledger of the first panel member hold on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_torsion",
+        "args": {},
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:14",
+      "question": "what does the generation ledger of the second panel member hold on my line?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_gen",
+        "args": {},
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:15",
+      "question": "what does the two-descent settle for the first panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_descend",
+        "args": {
+          "panel": "A"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:16",
+      "question": "what does the two-descent settle for the second panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_descend",
+        "args": {
+          "panel": "B"
+        },
+        "grounds": [
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:rank-def"
+      }
+    },
+    {
+      "ref": "S02:17",
+      "question": "derive bsd-panel-satisfaction from statement-def and vanish-def and rank-def",
+      "kind": "missing_parts",
+      "theorem": "bsd-panel-satisfaction",
+      "parts": [
+        "statement-def",
+        "vanish-def",
+        "rank-def"
+      ],
+      "expected": "i have not been taught the statement-def \u2014 the rule for bsd-panel-satisfaction needs it before i can put it together"
+    },
+    {
+      "ref": "S03:01",
+      "question": "state the statement-def rule",
+      "kind": "gap",
+      "concept": "bsd-summit",
+      "fragment": "the statement-def rule"
+    },
+    {
+      "ref": "S03:02",
+      "question": "the statement of the island, of record (the clay millennial booklet, the wiles chapter): for a curve over the rationals, in the taylor expansion of its L-product at s equal to one, the order r of vanishing equals the algebraic rank \u2014 the L-product is c times (s minus 1) to the power r plus higher order terms, c not zero, r equals the rank of the group of rational points \u2014 and in particular the L-product at s equal to one is zero if and only if there are infinitely many rational points; on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "kind": "teach",
+      "lesson": "statement-def"
+    },
+    {
+      "ref": "S03:03",
+      "question": "derive bsd-panel-satisfaction from statement-def",
+      "kind": "scaffold",
+      "theorem": "bsd-panel-satisfaction",
+      "parts": [
+        "statement-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for bsd-panel-satisfaction wants its exact set \u2014 what you name is short the vanish-def and the rank-def before i can put it together"
+    },
+    {
+      "ref": "S03:04",
+      "question": "the reaching: what my line holds toward the summit \u2014 the exact partials the line holds (the first member's uniform partial holds nonzero, the second member's uniform and record partials hold their exact rationals), the torsion ledger of the first member on the line (its three integral two-torsion points), the generation ledger of the second member on the line (the generator (x zero y zero), and every point my line counted is a small multiple of it), and the consistency of the line's values with the record's orders (the order zero keeps its nonzero partial, the order one keeps its exact partial far from zero), at the line end 84",
+      "kind": "teach",
+      "lesson": "reach-def"
+    },
+    {
+      "ref": "S03:05",
+      "question": "what is the summit fact of the island?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_bsd",
+        "args": {},
+        "grounds": [
+          "lemma:statement-def"
+        ],
+        "owner": "lemma:statement-def"
+      }
+    },
+    {
+      "ref": "S03:06",
+      "question": "what does my line hold toward the summit of the island?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_reach",
+        "args": {},
+        "grounds": [
+          "lemma:reach-def"
+        ],
+        "owner": "lemma:reach-def"
+      }
+    },
+    {
+      "ref": "S03:07",
+      "question": "are my partials consistent with the record orders at s equal to one?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_consistent",
+        "args": {},
+        "grounds": [
+          "lemma:reach-def",
+          "lemma:l-partial-def"
+        ],
+        "owner": "lemma:reach-def"
+      }
+    },
+    {
+      "ref": "S03:08",
+      "question": "derive bsd-panel-satisfaction from statement-def and vanish-def and rank-def",
+      "kind": "derive",
+      "theorem": "bsd-panel-satisfaction",
+      "parts": [
+        "statement-def",
+        "vanish-def",
+        "rank-def"
+      ]
+    },
+    {
+      "ref": "S03:09",
+      "question": "what do the two sides of the statement say for the first panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_sides",
+        "args": {
+          "panel": "A"
+        },
+        "grounds": [
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:vanish-def"
+      }
+    },
+    {
+      "ref": "S03:10",
+      "question": "what do the two sides of the statement say for the second panel member of record?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_sides",
+        "args": {
+          "panel": "B"
+        },
+        "grounds": [
+          "lemma:vanish-def",
+          "lemma:rank-def"
+        ],
+        "owner": "lemma:vanish-def"
+      }
+    },
+    {
+      "ref": "S03:11",
+      "question": "how is the two selmer of the first panel member computed in detail of record?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84",
+        "articulation": [
+          "selmer",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:12",
+      "question": "how is the two selmer of the second panel member computed in detail of record?",
+      "kind": "wall",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the two-descent of record runs over the homology of the rationals, not over my line: the selmer group is the locally soluble homology spaces, computed in the ideles of the rationals \u2014 for the first panel member the selmer group of order four (dimension two) against the two-torsion dimension two gives the descent bound zero, met by the torsion ledger; for the second the selmer group of order two (dimension one) against the two-torsion dimension zero gives the descent bound one, met by the generator (x zero y zero); the shaf part is trivial of record on both, so the selmer dimension is the rank plus the two-torsion dimension exactly \u2014 the mechanism is of record, past my line, at the line end 84",
+        "articulation": [
+          "selmer",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "question": "what is the exact record L value of the second panel member at s equal to one?",
+      "kind": "wall",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the exact L value at s equal to one is of record, not on my line: the first panel member's L value is nonzero of order zero of vanishing, and the second panel member's vanishes of order one with its leading coefficient nonzero of record (named here, not computed); my line holds the exact rational partials standing for the line's side \u2014 the vanishing is a limit fact past my line, at the line end 84",
+        "articulation": [
+          "leading coefficient",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "question": "which curves of record does the island's summit settle on my line?",
+      "kind": "wall",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the statement is universal \u2014 every curve over the rationals \u2014 but my line covers the two panel members: y squared = x cubed minus x, conductor 32, and y squared plus y = x cubed minus x, conductor 37, on which both sides are settled of record and agree (order zero, rank zero; order one, rank one); other curves of record, with their ranks and their orders, sit past the panel, named as such, at the line end 84",
+        "articulation": [
+          "conductor",
+          "line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "question": "what state does the summit band hold at the line end?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_bandstate",
+        "args": {},
+        "grounds": [
+          "lemma:statement-def"
+        ],
+        "owner": "lemma:statement-def"
+      }
+    },
+    {
+      "ref": "S03:16",
+      "question": "state the bsd-panel-satisfaction rule",
+      "kind": "probe",
+      "bed": {
+        "expect": "literal",
+        "value": "the summit of the island filed on my panel: the statement holds of record on both members \u2014 the order zero of vanishing equals the rank zero of the first member, and the order one of vanishing equals the rank one of the second \u2014 the two sides settled by independent record machinery (the ranks by the descent and the point ledger, the orders by the L-function's record), and my line's exact partials stand consistent with both, at the line end 84",
+        "grounds": [
+          "theorem:bsd-panel-satisfaction"
+        ],
+        "owner": "theorem:bsd-panel-satisfaction"
+      }
+    },
+    {
+      "ref": "S03:17",
+      "question": "does the summit band say anything conditional on the Riemann hypothesis?",
+      "kind": "probe",
+      "bed": {
+        "expect": "frac",
+        "ref": "s16_uncond",
+        "args": {},
+        "grounds": [
+          "lemma:statement-def"
+        ],
+        "owner": "lemma:statement-def"
+      }
+    },
+    {
+      "ref": "S04:01",
+      "question": "what does the record L product of the second panel member hold at height 83?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S03:17"
+      }
+    },
+    {
+      "ref": "S04:02",
+      "question": "what is the ramification correction of the first panel member?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S03:09"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "question": "what does the first panel member's L product hold at my line end?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.18",
+        "turn": "S04:03"
+      }
+    },
+    {
+      "ref": "S04:04",
+      "question": "what factor does the first panel member carry at prime 3 in the uniform form?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S02:05"
+      }
+    },
+    {
+      "ref": "S04:05",
+      "question": "does this band state the BSD?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.19",
+        "turn": "S04:10"
+      }
+    },
+    {
+      "ref": "S04:06",
+      "question": "what is the queue above my line?",
+      "kind": "carry",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:07",
+      "question": "what order of vanishing does the L product of the first panel member have at s equal to one of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:08",
+      "question": "what is the algebraic rank of the second panel member of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:09",
+      "question": "what is the summit fact of the island?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:10",
+      "question": "what does my line hold toward the summit of the island?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:11",
+      "question": "are my partials consistent with the record orders at s equal to one?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:12",
+      "question": "state the reach-def rule",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:13",
+      "question": "what does the generation ledger of the second panel member hold on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:14",
+      "question": "what do the two sides of the statement say for the first panel member of record?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:15",
+      "question": "what does the torsion ledger of the first panel member hold on my line?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:16",
+      "question": "what state does the summit band hold at the line end?",
+      "kind": "probe"
+    },
+    {
+      "ref": "S04:17",
+      "question": "what order of vanishing does the L product of the second panel member have at s equal to one of record?",
+      "kind": "probe"
+    }
+  ],
+  "offscript": [
+    {
+      "question": "state the kstbound rule"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "order_A",
+      "ref": "s16_order",
+      "args": {
+        "panel": "A"
+      }
+    },
+    {
+      "key": "order_B",
+      "ref": "s16_order",
+      "args": {
+        "panel": "B"
+      }
+    },
+    {
+      "key": "rank_A",
+      "ref": "s16_rank",
+      "args": {
+        "panel": "A"
+      }
+    },
+    {
+      "key": "rank_B",
+      "ref": "s16_rank",
+      "args": {
+        "panel": "B"
+      }
+    },
+    {
+      "key": "descend_A",
+      "ref": "s16_descend",
+      "args": {
+        "panel": "A"
+      }
+    },
+    {
+      "key": "descend_B",
+      "ref": "s16_descend",
+      "args": {
+        "panel": "B"
+      }
+    },
+    {
+      "key": "selmer_A",
+      "ref": "s16_selmer",
+      "args": {
+        "panel": "A"
+      }
+    },
+    {
+      "key": "selmer_B",
+      "ref": "s16_selmer",
+      "args": {
+        "panel": "B"
+      }
+    },
+    {
+      "key": "torsion_A",
+      "ref": "s16_torsion"
+    },
+    {
+      "key": "gen_B",
+      "ref": "s16_gen"
+    },
+    {
+      "key": "consistent",
+      "ref": "s16_consistent"
+    },
+    {
+      "key": "reach",
+      "ref": "s16_reach"
+    },
+    {
+      "key": "bsd",
+      "ref": "s16_bsd"
+    },
+    {
+      "key": "sides_A",
+      "ref": "s16_sides",
+      "args": {
+        "panel": "A"
+      }
+    },
+    {
+      "key": "sides_B",
+      "ref": "s16_sides",
+      "args": {
+        "panel": "B"
+      }
+    },
+    {
+      "key": "bandstate",
+      "ref": "s16_bandstate"
+    },
+    {
+      "key": "uncond",
+      "ref": "s16_uncond"
+    },
+    {
+      "key": "wall_W1",
+      "ref": "s16_wall",
+      "args": {
+        "wall": "1"
+      }
+    },
+    {
+      "key": "wall_W2",
+      "ref": "s16_wall",
+      "args": {
+        "wall": "2"
+      }
+    },
+    {
+      "key": "wall_W3",
+      "ref": "s16_wall",
+      "args": {
+        "wall": "3"
+      }
+    }
+  ],
+  "expect": {
+    "final_total": 1581,
+    "letters": {
+      "S02": "UUULSSULSSSSSSSSF",
+      "S03": "ULFLSSSTSSHHHHSSS",
+      "S04": "SSSSHSSSSSSSSSSSS"
+    },
+    "mastery": {
+      "analytic-order": {
+        "state": "stable",
+        "correct": 4
+      },
+      "algebraic-rank": {
+        "state": "stable",
+        "correct": 11
+      },
+      "bsd-summit": {
+        "state": "stable",
+        "correct": 10
+      },
+      "line-reaching": {
+        "state": "stable",
+        "correct": 5
+      }
+    },
+    "prereq_gaps": {
+      "analytic-order": [],
+      "algebraic-rank": [],
+      "bsd-summit": [],
+      "line-reaching": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

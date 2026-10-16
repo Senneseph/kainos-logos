@@ -1,0 +1,27 @@
+t =        1  (ref convergence: |L(2.5e7)-L(2e7)| = 1.50e-12, |L(2e7)-L(1e7)| = 1.02e-11)
+  T0 = |L - P_N| ~ -1.20e+00 * N^(-1.056)    [zeta law face: would be N^{+0.5}/|1-s|]
+  T1 = T0 + A(N)N^{-s} ~ -7.19e-01 * N^(-1.492)    [first-order removal]
+  T1/T0 at N = 1e2/1e3/1e4/1e5: 1.000 1.000 1.000 1.000
+  A(N) sequence over N mod 5: ['1', '0', '-1', '0', '0']
+t =       10  (ref convergence: |L(2.5e7)-L(2e7)| = 6.94e-11, |L(2e7)-L(1e7)| = 9.47e-11)
+  T0 = |L - P_N| ~ 1.54e-01 * N^(-1.048)    [zeta law face: would be N^{+0.5}/|1-s|]
+  T1 = T0 + A(N)N^{-s} ~ 1.48e+00 * N^(-1.492)    [first-order removal]
+  T1/T0 at N = 1e2/1e3/1e4/1e5: 1.000 1.000 1.000 1.000
+  A(N) sequence over N mod 5: ['1', '0', '-1', '0', '0']
+t =      100  (ref convergence: |L(2.5e7)-L(2e7)| = 7.58e-10, |L(2e7)-L(1e7)| = 8.31e-10)
+  T0 = |L - P_N| ~ 2.05e+00 * N^(-1.090)    [zeta law face: would be N^{+0.5}/|1-s|]
+  T1 = T0 + A(N)N^{-s} ~ 4.33e+00 * N^(-1.551)    [first-order removal]
+  T1/T0 at N = 1e2/1e3/1e4/1e5: 1.000 1.000 1.000 1.000
+  A(N) sequence over N mod 5: ['1', '0', '-1', '0', '0']
+t =     1000  (ref convergence: |L(2.5e7)-L(2e7)| = 7.66e-09, |L(2e7)-L(1e7)| = 1.51e-08)
+  T0 = |L - P_N| ~ 7.59e+00 * N^(-1.489)    [zeta law face: would be N^{+0.5}/|1-s|]
+  T1 = T0 + A(N)N^{-s} ~ 1.01e+01 * N^(-1.887)    [first-order removal]
+  T1/T0 at N = 1e2/1e3/1e4/1e5: 1.000 1.000 1.000 1.000
+  A(N) sequence over N mod 5: ['1', '0', '-1', '0', '0']
+t =    10000  (ref convergence: |L(2.5e7)-L(2e7)| = 3.54e-08, |L(2e7)-L(1e7)| = 1.14e-07)
+  T0 = |L - P_N| ~ 6.74e+00 * N^(-1.122)    [zeta law face: would be N^{+0.5}/|1-s|]
+  T1 = T0 + A(N)N^{-s} ~ 7.90e+00 * N^(-1.304)    [first-order removal]
+  T1/T0 at N = 1e2/1e3/1e4/1e5: 1.000 1.000 1.000 1.000
+  A(N) sequence over N mod 5: ['1', '0', '-1', '0', '0']
+
+total 14 s

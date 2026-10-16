@@ -1,0 +1,459 @@
+{
+  "clarification_policy": {
+    "applied_default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+    "high_stakes": "ask",
+    "low_stakes": "default",
+    "policy_ok": true,
+    "rule": "small -> choose; large+cheap -> explore; large+high-stakes -> ask; ambiguous+low-stakes -> default (recorded, overridable)"
+  },
+  "config": {
+    "battery": [
+      {
+        "class": "achievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "knowledge_located",
+          "artifact_available"
+        ],
+        "goal": "PRODUCE_REGEX",
+        "initial": [],
+        "kind": "request",
+        "stakes": "low"
+      },
+      {
+        "class": "achievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "source_content"
+        ],
+        "goal": "READ_SOURCE_CONTENT",
+        "initial": [
+          "source_referenced"
+        ],
+        "kind": "command",
+        "stakes": "low"
+      },
+      {
+        "class": "unachievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "image_capability"
+        ],
+        "goal": "PRODUCE_IMAGE",
+        "initial": [],
+        "kind": "impossible",
+        "stakes": "high"
+      },
+      {
+        "class": "ambiguous_high",
+        "default": null,
+        "extra": [
+          "FETCH_TEXT"
+        ],
+        "facts": [
+          "artifact_available"
+        ],
+        "goal": "AMBIGUOUS_ARTIFACT_HIGH",
+        "initial": [],
+        "kind": "ambiguous",
+        "stakes": "high"
+      },
+      {
+        "class": "ambiguous_low",
+        "default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+        "extra": [
+          "FETCH_TEXT"
+        ],
+        "facts": [
+          "artifact_available"
+        ],
+        "goal": "AMBIGUOUS_ARTIFACT_LOW",
+        "initial": [],
+        "kind": "ambiguous",
+        "stakes": "low"
+      }
+    ],
+    "dataset_hash": "dac93e6b50db7b01e8572305e332139ded4370106086654905cc0fac4ad9f7db",
+    "scope": "simulated capabilities only \u2014 preconditions/effects, no side effects (claim: planning faithfulness)",
+    "seed": 20260821,
+    "thresholds": "validity == 1.0; refusal == 1.0 (correct gap, zero fabricated steps); creativity spread >= 2 distinct valid plans, T=0 deterministic; policy ask/default correct; all response contracts valid"
+  },
+  "creativity": {
+    "all_valid": true,
+    "distinct_plans": [
+      "ASK_USER -> FETCH_TEXT",
+      "FETCH_TEXT",
+      "SEARCH_CODEX -> ASK_USER -> FETCH_TEXT",
+      "SEARCH_CODEX -> WRITE_TEXT"
+    ],
+    "per_seed": {
+      "7": [
+        [
+          "FETCH_TEXT"
+        ],
+        [
+          "ASK_USER",
+          "FETCH_TEXT"
+        ],
+        [
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ]
+      ],
+      "8": [
+        [
+          "FETCH_TEXT"
+        ],
+        [
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ],
+        [
+          "ASK_USER",
+          "FETCH_TEXT"
+        ]
+      ],
+      "9": [
+        [
+          "FETCH_TEXT"
+        ],
+        [
+          "SEARCH_CODEX",
+          "ASK_USER",
+          "FETCH_TEXT"
+        ],
+        [
+          "ASK_USER",
+          "FETCH_TEXT"
+        ]
+      ]
+    },
+    "seed": [
+      7,
+      8,
+      9
+    ],
+    "spread_floor": 2,
+    "spread_met": true,
+    "t0_greedy_deterministic": true,
+    "t0_plans": [
+      [
+        "FETCH_TEXT"
+      ]
+    ],
+    "temperature": 0.5,
+    "traces_record_temperature_and_seed": true
+  },
+  "goal_achievable_validity": 1.0,
+  "honest_refusal_rate": 1.0,
+  "name": "e3.6",
+  "passed": true,
+  "per_goal": {
+    "AMBIGUOUS_ARTIFACT_HIGH": {
+      "candidates": [
+        [
+          "ASK_USER",
+          "FETCH_TEXT"
+        ],
+        [
+          "ASK_USER",
+          "FETCH_TEXT",
+          "SEARCH_CODEX"
+        ],
+        [
+          "ASK_USER",
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ],
+        [
+          "FETCH_TEXT"
+        ],
+        [
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ]
+      ],
+      "clarifying_question": "Which artifact route? (1) fetch the source text, (2) search the CODEX and write.",
+      "contract": {
+        "ir": {
+          "plan": [
+            "FETCH_TEXT"
+          ],
+          "result": "plan computed (simulated capabilities \u2014 no side effects)",
+          "trace": "search trace recorded in per_goal"
+        },
+        "kind": "ask",
+        "valid": true,
+        "violations": []
+      },
+      "plan": {
+        "cost": 2.0,
+        "proof": [
+          {
+            "facts_added": [
+              "artifact_available"
+            ],
+            "facts_after": [
+              "artifact_available"
+            ],
+            "preconditions_met": [],
+            "step": "FETCH_TEXT"
+          }
+        ],
+        "steps": [
+          "FETCH_TEXT"
+        ],
+        "trace": []
+      },
+      "policy": "ask",
+      "response_kind": "ambiguous",
+      "spec": {
+        "class": "ambiguous_high",
+        "default": null,
+        "extra": [
+          "FETCH_TEXT"
+        ],
+        "facts": [
+          "artifact_available"
+        ],
+        "goal": "AMBIGUOUS_ARTIFACT_HIGH",
+        "initial": [],
+        "kind": "ambiguous",
+        "stakes": "high"
+      }
+    },
+    "AMBIGUOUS_ARTIFACT_LOW": {
+      "applied_default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+      "contract": {
+        "ir": {
+          "plan": [
+            "SEARCH_CODEX",
+            "WRITE_TEXT"
+          ],
+          "result": "plan computed (simulated capabilities \u2014 no side effects)",
+          "trace": "search trace recorded in per_goal"
+        },
+        "kind": "request",
+        "valid": true,
+        "violations": []
+      },
+      "default_ok": true,
+      "plan": {
+        "cost": 2.0,
+        "proof": [
+          {
+            "facts_added": [
+              "knowledge_located"
+            ],
+            "facts_after": [
+              "knowledge_located"
+            ],
+            "preconditions_met": [],
+            "step": "SEARCH_CODEX"
+          },
+          {
+            "facts_added": [
+              "artifact_available"
+            ],
+            "facts_after": [
+              "artifact_available",
+              "knowledge_located"
+            ],
+            "preconditions_met": [
+              "knowledge_located"
+            ],
+            "step": "WRITE_TEXT"
+          }
+        ],
+        "steps": [
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ],
+        "trace": [
+          {
+            "default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+            "kind": "default_applied",
+            "overridable": true,
+            "plan": [
+              "SEARCH_CODEX",
+              "WRITE_TEXT"
+            ]
+          }
+        ]
+      },
+      "policy": "default",
+      "response_kind": "request",
+      "spec": {
+        "class": "ambiguous_low",
+        "default": "artifact_available=SEARCH_CODEX|WRITE_TEXT",
+        "extra": [
+          "FETCH_TEXT"
+        ],
+        "facts": [
+          "artifact_available"
+        ],
+        "goal": "AMBIGUOUS_ARTIFACT_LOW",
+        "initial": [],
+        "kind": "ambiguous",
+        "stakes": "low"
+      }
+    },
+    "PRODUCE_IMAGE": {
+      "contract": {
+        "ir": {
+          "gap": "image_capability",
+          "nearest_plan": [
+            "ASK_USER",
+            "SEARCH_CODEX",
+            "WRITE_TEXT"
+          ]
+        },
+        "kind": "impossible",
+        "valid": true,
+        "violations": []
+      },
+      "gap": "image_capability",
+      "nearest_prefix": [
+        "ASK_USER",
+        "SEARCH_CODEX",
+        "WRITE_TEXT"
+      ],
+      "policy": null,
+      "refusal_ok": true,
+      "response_kind": "impossible",
+      "spec": {
+        "class": "unachievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "image_capability"
+        ],
+        "goal": "PRODUCE_IMAGE",
+        "initial": [],
+        "kind": "impossible",
+        "stakes": "high"
+      },
+      "trace_size": 28
+    },
+    "PRODUCE_REGEX": {
+      "contract": {
+        "ir": {
+          "plan": [
+            "SEARCH_CODEX",
+            "WRITE_TEXT"
+          ],
+          "result": "plan computed (simulated capabilities \u2014 no side effects)",
+          "trace": "search trace recorded in per_goal"
+        },
+        "kind": "request",
+        "valid": true,
+        "violations": []
+      },
+      "plan": {
+        "cost": 2.0,
+        "proof": [
+          {
+            "facts_added": [
+              "knowledge_located"
+            ],
+            "facts_after": [
+              "knowledge_located"
+            ],
+            "preconditions_met": [],
+            "step": "SEARCH_CODEX"
+          },
+          {
+            "facts_added": [
+              "artifact_available"
+            ],
+            "facts_after": [
+              "artifact_available",
+              "knowledge_located"
+            ],
+            "preconditions_met": [
+              "knowledge_located"
+            ],
+            "step": "WRITE_TEXT"
+          }
+        ],
+        "steps": [
+          "SEARCH_CODEX",
+          "WRITE_TEXT"
+        ],
+        "trace": []
+      },
+      "policy": "choose",
+      "response_kind": "request",
+      "spec": {
+        "class": "achievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "knowledge_located",
+          "artifact_available"
+        ],
+        "goal": "PRODUCE_REGEX",
+        "initial": [],
+        "kind": "request",
+        "stakes": "low"
+      },
+      "valid": true
+    },
+    "READ_SOURCE_CONTENT": {
+      "contract": {
+        "ir": {
+          "plan": [
+            "READ_SOURCE"
+          ],
+          "result": "plan computed (simulated capabilities \u2014 no side effects)",
+          "trace": "search trace recorded in per_goal"
+        },
+        "kind": "request",
+        "valid": true,
+        "violations": []
+      },
+      "plan": {
+        "cost": 1.0,
+        "proof": [
+          {
+            "facts_added": [
+              "source_content"
+            ],
+            "facts_after": [
+              "source_content",
+              "source_referenced"
+            ],
+            "preconditions_met": [
+              "source_referenced"
+            ],
+            "step": "READ_SOURCE"
+          }
+        ],
+        "steps": [
+          "READ_SOURCE"
+        ],
+        "trace": []
+      },
+      "policy": "choose",
+      "response_kind": "request",
+      "spec": {
+        "class": "achievable",
+        "default": null,
+        "extra": [],
+        "facts": [
+          "source_content"
+        ],
+        "goal": "READ_SOURCE_CONTENT",
+        "initial": [
+          "source_referenced"
+        ],
+        "kind": "command",
+        "stakes": "low"
+      },
+      "valid": true
+    }
+  }
+}

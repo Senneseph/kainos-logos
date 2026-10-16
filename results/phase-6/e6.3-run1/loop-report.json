@@ -1,0 +1,1297 @@
+{
+  "arm": {
+    "analyzer": "det",
+    "author": "det",
+    "llm_arm": "skipped-no-backend",
+    "llm_dropped": []
+  },
+  "convergence": {
+    "converged": true,
+    "converged_at_session": 3
+  },
+  "final_store": {
+    "beyond_cap": [],
+    "line_end": 70,
+    "open_disputes": [],
+    "total": 182
+  },
+  "posted": [],
+  "sessions": [
+    {
+      "diagnosis": {
+        "boundary_contacts": 0,
+        "concepts": {
+          "add-two-digit": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          },
+          "add-within-10": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          },
+          "compare-numbers": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          },
+          "count-successor": {
+            "correct_derivations": 0,
+            "events": 40,
+            "prereq_gaps": [],
+            "state": "exposed",
+            "unresolved_conflicts": 0
+          },
+          "mult-within-100": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "add-two-digit",
+              "count-successor"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          },
+          "sub-within-30": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "count-successor"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          }
+        },
+        "converged": false,
+        "fix": null,
+        "fix_applied_next_session": false,
+        "gaps_session": 0,
+        "line_end": 40,
+        "llm_proposal": null,
+        "proposals": [],
+        "session": 1,
+        "stalled": [],
+        "status": "progressing",
+        "triggers": [],
+        "turns": 40
+      },
+      "records": [
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 0 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 0 comes 1",
+          "turn": "S01:01"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 1 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 1 comes 2",
+          "turn": "S01:02"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 2 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 2 comes 3",
+          "turn": "S01:03"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 3 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 3 comes 4",
+          "turn": "S01:04"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 4 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 4 comes 5",
+          "turn": "S01:05"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 5 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 5 comes 6",
+          "turn": "S01:06"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 6 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 6 comes 7",
+          "turn": "S01:07"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 7 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 7 comes 8",
+          "turn": "S01:08"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 8 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 8 comes 9",
+          "turn": "S01:09"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 9 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 9 comes 10",
+          "turn": "S01:10"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 10 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 10 comes 11",
+          "turn": "S01:11"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 11 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 11 comes 12",
+          "turn": "S01:12"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 12 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 12 comes 13",
+          "turn": "S01:13"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 13 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 13 comes 14",
+          "turn": "S01:14"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 14 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 14 comes 15",
+          "turn": "S01:15"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 15 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 15 comes 16",
+          "turn": "S01:16"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 16 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 16 comes 17",
+          "turn": "S01:17"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 17 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 17 comes 18",
+          "turn": "S01:18"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 18 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 18 comes 19",
+          "turn": "S01:19"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 19 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 19 comes 20",
+          "turn": "S01:20"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 20 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 20 comes 21",
+          "turn": "S01:21"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 21 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 21 comes 22",
+          "turn": "S01:22"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 22 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 22 comes 23",
+          "turn": "S01:23"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 23 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 23 comes 24",
+          "turn": "S01:24"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 24 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 24 comes 25",
+          "turn": "S01:25"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 25 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 25 comes 26",
+          "turn": "S01:26"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 26 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 26 comes 27",
+          "turn": "S01:27"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 27 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 27 comes 28",
+          "turn": "S01:28"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 28 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 28 comes 29",
+          "turn": "S01:29"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 29 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 29 comes 30",
+          "turn": "S01:30"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 30 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 30 comes 31",
+          "turn": "S01:31"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 31 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 31 comes 32",
+          "turn": "S01:32"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 32 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 32 comes 33",
+          "turn": "S01:33"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 33 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 33 comes 34",
+          "turn": "S01:34"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 34 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 34 comes 35",
+          "turn": "S01:35"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 35 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 35 comes 36",
+          "turn": "S01:36"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 36 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 36 comes 37",
+          "turn": "S01:37"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 37 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 37 comes 38",
+          "turn": "S01:38"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 38 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 38 comes 39",
+          "turn": "S01:39"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 39 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 39 comes 40",
+          "turn": "S01:40"
+        }
+      ],
+      "report_turns": 40,
+      "session": 1
+    },
+    {
+      "diagnosis": {
+        "boundary_contacts": 0,
+        "concepts": {
+          "add-two-digit": {
+            "correct_derivations": 3,
+            "events": 3,
+            "prereq_gaps": [],
+            "state": "practicing",
+            "unresolved_conflicts": 0
+          },
+          "add-within-10": {
+            "correct_derivations": 1,
+            "events": 1,
+            "prereq_gaps": [],
+            "state": "practicing",
+            "unresolved_conflicts": 0
+          },
+          "compare-numbers": {
+            "correct_derivations": 0,
+            "events": 1,
+            "prereq_gaps": [],
+            "state": "exposed",
+            "unresolved_conflicts": 0
+          },
+          "count-successor": {
+            "correct_derivations": 4,
+            "events": 74,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "mult-within-100": {
+            "correct_derivations": 0,
+            "events": 0,
+            "prereq_gaps": [
+              "add-two-digit"
+            ],
+            "state": "unexposed",
+            "unresolved_conflicts": 0
+          },
+          "sub-within-30": {
+            "correct_derivations": 0,
+            "events": 1,
+            "prereq_gaps": [],
+            "state": "exposed",
+            "unresolved_conflicts": 0
+          }
+        },
+        "converged": false,
+        "fix": null,
+        "fix_applied_next_session": false,
+        "gaps_session": 0,
+        "line_end": 70,
+        "llm_proposal": null,
+        "proposals": [],
+        "session": 2,
+        "stalled": [],
+        "status": "progressing",
+        "triggers": [],
+        "turns": 40
+      },
+      "records": [
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 40 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 40 comes 41",
+          "turn": "S02:01"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 41 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 41 comes 42",
+          "turn": "S02:02"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 42 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 42 comes 43",
+          "turn": "S02:03"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 43 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 43 comes 44",
+          "turn": "S02:04"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 44 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 44 comes 45",
+          "turn": "S02:05"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 45 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 45 comes 46",
+          "turn": "S02:06"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 46 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 46 comes 47",
+          "turn": "S02:07"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 47 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 47 comes 48",
+          "turn": "S02:08"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 48 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 48 comes 49",
+          "turn": "S02:09"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 49 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 49 comes 50",
+          "turn": "S02:10"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 50 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 50 comes 51",
+          "turn": "S02:11"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 51 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 51 comes 52",
+          "turn": "S02:12"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 52 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 52 comes 53",
+          "turn": "S02:13"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 53 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 53 comes 54",
+          "turn": "S02:14"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 54 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 54 comes 55",
+          "turn": "S02:15"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 55 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 55 comes 56",
+          "turn": "S02:16"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 56 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 56 comes 57",
+          "turn": "S02:17"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 57 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 57 comes 58",
+          "turn": "S02:18"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 58 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 58 comes 59",
+          "turn": "S02:19"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 59 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 59 comes 60",
+          "turn": "S02:20"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 60 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 60 comes 61",
+          "turn": "S02:21"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 61 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 61 comes 62",
+          "turn": "S02:22"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 62 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 62 comes 63",
+          "turn": "S02:23"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 63 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 63 comes 64",
+          "turn": "S02:24"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 64 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 64 comes 65",
+          "turn": "S02:25"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 65 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 65 comes 66",
+          "turn": "S02:26"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 66 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 66 comes 67",
+          "turn": "S02:27"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 67 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 67 comes 68",
+          "turn": "S02:28"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 68 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 68 comes 69",
+          "turn": "S02:29"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-succ",
+          "author_reason": "line at 69 is below the frozen cap 70",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "after 69 comes 70",
+          "turn": "S02:30"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.EXPOSED) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "what comes after 22?",
+          "turn": "S02:31"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "what comes after 22?",
+          "turn": "S02:32"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "what comes after 22?",
+          "turn": "S02:33"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "what comes after 22?",
+          "turn": "S02:34"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill-expose",
+          "author_reason": "expose add-within-10 with its first grounded drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "0 + 1 is what?",
+          "turn": "S02:35"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill-expose",
+          "author_reason": "expose add-two-digit with its first grounded drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "10 + 1 is what?",
+          "turn": "S02:36"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-rule",
+          "author_reason": "rule lesson for sub-within-30",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "subtraction is walking backward",
+          "turn": "S02:37"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-rule",
+          "author_reason": "rule lesson for compare-numbers",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "comparison is walking the line",
+          "turn": "S02:38"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "12 + 5 is what?",
+          "turn": "S02:39"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "12 + 5 is what?",
+          "turn": "S02:40"
+        }
+      ],
+      "report_turns": 40,
+      "session": 2
+    },
+    {
+      "diagnosis": {
+        "boundary_contacts": 0,
+        "concepts": {
+          "add-two-digit": {
+            "correct_derivations": 4,
+            "events": 4,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "add-within-10": {
+            "correct_derivations": 4,
+            "events": 4,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "compare-numbers": {
+            "correct_derivations": 4,
+            "events": 5,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "count-successor": {
+            "correct_derivations": 4,
+            "events": 74,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "mult-within-100": {
+            "correct_derivations": 4,
+            "events": 5,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          },
+          "sub-within-30": {
+            "correct_derivations": 4,
+            "events": 5,
+            "prereq_gaps": [],
+            "state": "stable",
+            "unresolved_conflicts": 0
+          }
+        },
+        "converged": true,
+        "fix": null,
+        "fix_applied_next_session": false,
+        "gaps_session": 0,
+        "line_end": 70,
+        "llm_proposal": null,
+        "proposals": [],
+        "session": 3,
+        "stalled": [],
+        "status": "converged",
+        "triggers": [],
+        "turns": 17
+      },
+      "records": [
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "14 + 2 is what?",
+          "turn": "S03:01"
+        },
+        {
+          "attention": null,
+          "author_kind": "lesson-rule",
+          "author_reason": "rule lesson for mult-within-100",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "assertion",
+          "surface": "multiplication is repeated addition",
+          "turn": "S03:02"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 + 2 is what?",
+          "turn": "S03:03"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 + 2 is what?",
+          "turn": "S03:04"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "add-within-10",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 + 2 is what?",
+          "turn": "S03:05"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.EXPOSED) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "is 14 larger than 11?",
+          "turn": "S03:06"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "is 14 larger than 11?",
+          "turn": "S03:07"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "is 14 larger than 11?",
+          "turn": "S03:08"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "is 14 larger than 11?",
+          "turn": "S03:09"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.EXPOSED) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 * 7 is what?",
+          "turn": "S03:10"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 * 7 is what?",
+          "turn": "S03:11"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 * 7 is what?",
+          "turn": "S03:12"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "4 * 7 is what?",
+          "turn": "S03:13"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.EXPOSED) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "14 - 1 is what?",
+          "turn": "S03:14"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "14 - 1 is what?",
+          "turn": "S03:15"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "14 - 1 is what?",
+          "turn": "S03:16"
+        },
+        {
+          "attention": null,
+          "author_kind": "drill",
+          "author_reason": "unstable (MasteryState.PRACTICING) \u2014 re-drill",
+          "concept": "count-successor",
+          "contract_valid": true,
+          "honest_gap": null,
+          "kind": "question",
+          "surface": "14 - 1 is what?",
+          "turn": "S03:17"
+        }
+      ],
+      "report_turns": 17,
+      "session": 3
+    }
+  ],
+  "tickets": []
+}

@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "c8081d87474984ac05690bbc7f2e228470a1995b",
+    "dataset_hash": null,
+    "final_total": 441,
+    "line_end_final": 72,
+    "script_hash": "d748aaf9953c0466",
+    "seed": "results/phase-6/e6.6-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.7-run1/session-S02.json",
+    "results/phase-6/e6.7-run1/session-S03.json",
+    "results/phase-6/e6.7-run1/session-S04.json",
+    "results/phase-6/e6.7-run1/codeX-S04.json"
+  ],
+  "hypothesis": "Geometry-advanced \u2225 vectors/statics learns as ONE aligned band (9\u201312), the PRODUCT BAND: rectangle perimeter/area and triangle area (the math side) and 1-D net displacement, moment F\u00b7d and lever balance (the physics side) ride the same teachable-strip seam, and the alignment is ONE corridor with many doors \u2014 area, moment, perimeter\u00d72 and distance all derive through the same grounded product helper (twin probes byte-equal, only the rule fact differs), while the lever is the repeated-taking corridor's third door after algebra division and pace; the alignment is stored, not described (stat-moment \u2190 geom-area, geom-area-triangle \u2190 alg-inverse-mul, stat-balance \u2190 alg-inverse-mul \u2014 cross-domain, cross-band edges from the seed, established in the final store, prereq gaps empty); THREE measured walls compose (9\u00d79 = 81 off the line through BOTH the area and the moment door \u2014 the wall is domain-agnostic; a net west of the start is the negative wall, past the line's origin; \u00bd\u00b735 and 30/4 are inexact, never rounded); the band-2 kin phrasing from the seed composes across bands (parsed via the learned phrasing, grounded); the band ENDS on a JOINT evaluation \u2014 one frozen probe set spanning both domains, all six band-3 concepts stable (K = 4) against the eighteen seed/band-1/band-2 concepts, line untouched at 72 (now serving four domains), two runs byte-identical.",
+  "metric": "band-3 checks passed (P1..P8)",
+  "name": "e6.7",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": "PASS e6.7: 8/8"
+}

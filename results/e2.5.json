@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "ccb1f4a",
+    "dataset_hash": null,
+    "dimension": "dim:hibernates",
+    "disputed_after": 0,
+    "distinct_contexts": 2,
+    "seed": 0,
+    "values_retained": [
+      "hibernates=no",
+      "hibernates=yes"
+    ]
+  },
+  "evidence": [
+    "results/phase-2/e2.5.json"
+  ],
+  "hypothesis": "a repeated conflict yields a new context TERM, never a blended weight (A5/P6)",
+  "metric": "new dimension terms; both conflicting assertions retained under distinct contexts; disputed -> 0",
+  "name": "e2.5",
+  "passed": true,
+  "threshold": ">= 1 new TERM, both retained, disputed count 0 for the pair after reconciliation",
+  "value": 1
+}

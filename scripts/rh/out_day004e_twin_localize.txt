@@ -1,0 +1,13 @@
+offset steps: 19, total +38
+
+twin center    gap         scaled (GOE units)   zeros-in-window
+
+measured twin gaps (EM-certified |zeta|<1e-7):
+Traceback (most recent call last):
+  File "/home/jsmille/Projects/kainos-logos/scripts/rh/day004e_twin_localize.py", line 100, in <module>
+    % (len(gaps), gaps.min(), np.median(gaps), gaps.max()))
+                  ^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/core/_methods.py", line 45, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: zero-size array to reduction operation minimum which has no identity

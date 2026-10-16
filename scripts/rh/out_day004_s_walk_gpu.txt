@@ -1,0 +1,28 @@
+GPU port validation: 326 points, max |Z_rs_gpu - Z_rs_cpu| = 1.504e-09
+Z values + vartheta for 4500001 grid points: 0.5 s
+ flips detected: 127925   (census list in (1e4, 1e5]: 127923)
+window cross-check: 1/10000 windows mismatch the census list; worst: window 2833 off by 2
+S(1e+04): from list = +0.0347   expected +0.0347  CONSISTENT
+S(1e+05): from list = -2.5584   expected -2.5584  CONSISTENT
+
+S(t) stats (t in [10001, 100000]):
+  max |S| = 2.5853 at t = 71129.00
+  min  S  = -2.4355 at t = 78693.00
+  max  S  = 2.5853 at t = 71129.00
+  mean |S| = 1.0013
+
+  GUE scale sqrt(ln ln 1e5) = 1.56 ;  ln(T)/2pi = 1.83
+
+per-10k max|S| (growth envelope):
+  [ 10000,  20000):  max|S| =   2.3944   mean|S| = 0.9997
+  [ 20000,  30000):  max|S| =   2.3913   mean|S| = 1.0014
+  [ 30000,  40000):  max|S| =   2.3308   mean|S| = 1.0001
+  [ 40000,  50000):  max|S| =   2.3333   mean|S| = 0.9992
+  [ 50000,  60000):  max|S| =   2.4186   mean|S| = 1.0012
+  [ 60000,  70000):  max|S| =   2.3545   mean|S| = 1.0010
+  [ 70000,  80000):  max|S| =   2.5853   mean|S| = 1.0031
+  [ 80000,  90000):  max|S| =   2.3357   mean|S| = 1.0023
+  [ 90000, 100000):  max|S| =   2.3599   mean|S| = 1.0040
+  [100000, 110000):  max|S| =   0.5584   mean|S| = 0.5584
+
+total: 0.7 s

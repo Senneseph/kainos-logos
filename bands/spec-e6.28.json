@@ -1,0 +1,815 @@
+{
+  "spec": 1,
+  "id": "e6.28",
+  "session": "S24",
+  "title": "the sum line and the twin line (the Fibonacci line runs by addition alone under the 84 line end \u2014 fifty-five in ten steps, the eighty-nine off-line \u2014 its twin under the same rule reaches seventy-six in nine, and the two welding identities (the doubled term is the term times the twin; the square sum of two consecutive terms is the term at the doubled-plus-one index) hold at every on-line index; COURSE B band 1 of 2)",
+  "registry": "kainos.tutor.e628:CONCEPTS_E628",
+  "seed": {
+    "store": "results/phase-6/e6.27-run1/codeX-S04.json",
+    "identity": "8b5ca7a5fe76631e",
+    "total": 2074,
+    "line_end": 84
+  },
+  "band": {
+    "domain": "arithmetic",
+    "college": "1",
+    "status": "unconditional",
+    "unconditional": true,
+    "marker_kept_facts": [
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee",
+      "lemma:conditional-def"
+    ],
+    "new_concepts": [
+      "sum-line",
+      "twin-line"
+    ],
+    "concepts": [
+      {
+        "id": "sum-line",
+        "name": "the sum line",
+        "prereqs": [
+          "add-two-digit",
+          "mult-within-100"
+        ],
+        "lesson": {
+          "slug": "sum-line-def",
+          "statement": "the sum line runs by addition alone: start at zero and one, and every later term is the sum of the two before it \u2014 on my line the line reaches fifty-five in ten steps, and the eleventh step, the eighty-nine, stands off-line as my line already declared it; the twin line starts at two and one under the same rule and reaches seventy-six in nine steps; each term is derived from the two before it, not asserted from outside; at the line end eighty-four"
+        }
+      },
+      {
+        "id": "twin-line",
+        "name": "the twin line",
+        "prereqs": [
+          "sum-line",
+          "mult-within-100"
+        ],
+        "lesson": {
+          "slug": "twin-line-def",
+          "statement": "the twin line welds to the sum line in two ways: the doubled term is the term times the twin (the doubling reads the twin as its multiplier), and the square sum of two consecutive terms is the term at the doubled-plus-one index \u2014 two roads, one destination, verified on my line at every on-line index; at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "twin-line-filed",
+        "concept": "twin-line",
+        "parts": [
+          "sum-line-def",
+          "twin-line-def"
+        ],
+        "statement": "the twin line of my store is filed of record: the sum line runs by addition alone to the fifty-five and the twin under the same rule to the seventy-six, the identities weld the two lines at every on-line index, and the eighty-nine stands once more as the ceiling the line already declared; filed on the line, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:sum-line-def",
+      "lemma:twin-line-def",
+      "theorem:twin-line-filed"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "kind": "carry",
+      "question": "state the mod4minusone rule",
+      "source": {
+        "band": "e6.9",
+        "turn": "S02:07"
+      }
+    },
+    {
+      "ref": "S02:02",
+      "kind": "carry",
+      "question": "the gap after 83 on my line, what is it?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:19"
+      }
+    },
+    {
+      "ref": "S02:03",
+      "kind": "carry",
+      "question": "what does the fingerprint filing settle of record?",
+      "source": {
+        "band": "e6.27",
+        "turn": "S03:16"
+      },
+      "cite": [
+        "fingerprint-filed"
+      ]
+    },
+    {
+      "ref": "S02:04",
+      "kind": "carry",
+      "question": "what does the proportion filing settle of record?",
+      "source": {
+        "band": "e6.26",
+        "turn": "S03:11"
+      },
+      "cite": [
+        "proportion-filed"
+      ]
+    },
+    {
+      "ref": "S02:05",
+      "kind": "gap",
+      "question": "what is my sum line, end to end, as my store holds it?",
+      "concept": "sum-line",
+      "fragment": "a sum line: the line that runs by addition alone \u2014 start at zero and one, and every later term is the sum of the two before it; on my line it reaches fifty-five in ten steps and the eleventh step, the eighty-nine, stands off-line as the ceiling the line already declared"
+    },
+    {
+      "ref": "S02:06",
+      "kind": "gap",
+      "question": "state the sum-line-def rule",
+      "concept": "sum-line",
+      "fragment": "the sum-line-def rule"
+    },
+    {
+      "ref": "S02:07",
+      "kind": "teach",
+      "question": "the sum line runs by addition alone: start at zero and one, and every later term is the sum of the two before it \u2014 on my line the line reaches fifty-five in ten steps, and the eleventh step, the eighty-nine, stands off-line as my line already declared it; the twin line starts at two and one under the same rule and reaches seventy-six in nine steps; each term is derived from the two before it, not asserted from outside; at the line end eighty-four",
+      "lesson": "sum-line-def"
+    },
+    {
+      "ref": "S02:08",
+      "kind": "probe",
+      "question": "state the sum-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the sum line runs by addition alone: start at zero and one, and every later term is the sum of the two before it \u2014 on my line the line reaches fifty-five in ten steps, and the eleventh step, the eighty-nine, stands off-line as my line already declared it; the twin line starts at two and one under the same rule and reaches seventy-six in nine steps; each term is derived from the two before it, not asserted from outside; at the line end eighty-four",
+        "owner": "lemma:sum-line-def",
+        "grounds": [
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:09",
+      "kind": "gap",
+      "question": "what is the twin line, end to end, as my store holds it?",
+      "concept": "twin-line",
+      "fragment": "the twin line: the line that starts at two and one under the same rule and welds to the sum line \u2014 the doubled term is the term times the twin, and the square sum of two consecutive terms is the term at the doubled-plus-one index \u2014 two roads, one destination"
+    },
+    {
+      "ref": "S02:10",
+      "kind": "gap",
+      "question": "state the twin-line-def rule",
+      "concept": "twin-line",
+      "fragment": "the twin-line-def rule"
+    },
+    {
+      "ref": "S02:11",
+      "kind": "teach",
+      "question": "the twin line welds to the sum line in two ways: the doubled term is the term times the twin (the doubling reads the twin as its multiplier), and the square sum of two consecutive terms is the term at the doubled-plus-one index \u2014 two roads, one destination, verified on my line at every on-line index; at the line end eighty-four",
+      "lesson": "twin-line-def"
+    },
+    {
+      "ref": "S02:12",
+      "kind": "probe",
+      "question": "state the twin-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the twin line welds to the sum line in two ways: the doubled term is the term times the twin (the doubling reads the twin as its multiplier), and the square sum of two consecutive terms is the term at the doubled-plus-one index \u2014 two roads, one destination, verified on my line at every on-line index; at the line end eighty-four",
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:13",
+      "kind": "probe",
+      "question": "what are my sum line's terms, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sumwalk",
+        "args": {},
+        "owner": "lemma:sum-line-def",
+        "grounds": [
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:14",
+      "kind": "probe",
+      "question": "what are the twin line's terms, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_twinwalk",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:15",
+      "kind": "probe",
+      "question": "what is the twin term at index six, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_twinterm",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:16",
+      "kind": "probe",
+      "question": "what is the doubled term at index two, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "two"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:17",
+      "kind": "probe",
+      "question": "what is the square sum at one and two, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sqsum",
+        "args": {
+          "a": "one",
+          "b": "two"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:01",
+      "kind": "carry",
+      "question": "state the mod4minusone rule",
+      "source": {
+        "band": "e6.9",
+        "turn": "S02:07"
+      }
+    },
+    {
+      "ref": "S03:02",
+      "kind": "carry",
+      "question": "the gap after 83 on my line, what is it?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:19"
+      }
+    },
+    {
+      "ref": "S03:03",
+      "kind": "probe",
+      "question": "what is the doubled term at index four, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "four"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:04",
+      "kind": "probe",
+      "question": "what is the doubled term at index six, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "six"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:05",
+      "kind": "probe",
+      "question": "what is the doubled term at index eight, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "eight"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:06",
+      "kind": "probe",
+      "question": "what is the doubled term at index ten, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "ten"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:07",
+      "kind": "probe",
+      "question": "what is the square sum at two and three, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sqsum",
+        "args": {
+          "a": "two",
+          "b": "three"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:08",
+      "kind": "probe",
+      "question": "what is the square sum at three and four, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sqsum",
+        "args": {
+          "a": "three",
+          "b": "four"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:09",
+      "kind": "probe",
+      "question": "what is the square sum at four and five, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sqsum",
+        "args": {
+          "a": "four",
+          "b": "five"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:10",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_marker",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:11",
+      "kind": "wall",
+      "question": "which identities does my line refuse to claim?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the identity past my line end: the welding identities hold on every index my line names, and the index past the line end is the ceiling's territory \u2014 an identity claimed at a past-line index names a value the floor refuses, at the line end 84",
+        "articulation": [
+          "the welding identities hold on every index my line names",
+          "the index past the line end is the ceiling's territory",
+          "an identity claimed at a past-line index names a value the floor refuses",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:12",
+      "kind": "wall",
+      "question": "which term of my sum line is off the line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the term past my line end: the eleven-th sum step reaches the eighty-nine, which my line already holds off-line as the next prime past the eighty-three \u2014 the twin fact under one ceiling, and no term past the eighty-four enters the floor, at the line end 84",
+        "articulation": [
+          "the eleven-th sum step reaches the eighty-nine",
+          "the next prime past the eighty-three",
+          "no term past the eighty-four enters the floor",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "kind": "scaffold",
+      "question": "derive twin-line-filed from sum-line-def",
+      "theorem": "twin-line-filed",
+      "parts": [
+        "sum-line-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for twin-line-filed wants its exact set \u2014 what you name is short the twin-line-def before i can put it together"
+    },
+    {
+      "ref": "S03:14",
+      "kind": "derive",
+      "question": "derive twin-line-filed from sum-line-def and twin-line-def",
+      "theorem": "twin-line-filed",
+      "parts": [
+        "sum-line-def",
+        "twin-line-def"
+      ]
+    },
+    {
+      "ref": "S03:15",
+      "kind": "probe",
+      "question": "what does the twin filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_filing",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:sum-line-def",
+          "lemma:twin-line-def",
+          "theorem:twin-line-filed"
+        ]
+      },
+      "cite": [
+        "twin-line-filed"
+      ]
+    },
+    {
+      "ref": "S03:16",
+      "kind": "wall",
+      "question": "can a sum-line term come from a rule other than the two-before-it sum?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the third sum: a term of my sum line is the sum of the two before it, and nothing else \u2014 a term claimed from any other rule is a misread this store punishes; the twin line under the same rule, from the two-one start, is the only related line my floor names, at the line end 84",
+        "articulation": [
+          "a term of my sum line is the sum of the two before it, and nothing else",
+          "a term claimed from any other rule is a misread this store punishes",
+          "the only related line my floor names",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:17",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_marker",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:01",
+      "kind": "carry",
+      "question": "what does the fingerprint filing settle of record?",
+      "source": {
+        "band": "e6.27",
+        "turn": "S03:16"
+      },
+      "cite": [
+        "fingerprint-filed"
+      ]
+    },
+    {
+      "ref": "S04:02",
+      "kind": "carry",
+      "question": "the gap after 83 on my line, what is it?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:19"
+      }
+    },
+    {
+      "ref": "S04:03",
+      "kind": "wall",
+      "question": "which term of my sum line is off the line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the term past my line end: the eleven-th sum step reaches the eighty-nine, which my line already holds off-line as the next prime past the eighty-three \u2014 the twin fact under one ceiling, and no term past the eighty-four enters the floor, at the line end 84",
+        "articulation": [
+          "the eleven-th sum step reaches the eighty-nine",
+          "the next prime past the eighty-three",
+          "no term past the eighty-four enters the floor",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:04",
+      "kind": "wall",
+      "question": "can a sum-line term come from a rule other than the two-before-it sum?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the third sum: a term of my sum line is the sum of the two before it, and nothing else \u2014 a term claimed from any other rule is a misread this store punishes; the twin line under the same rule, from the two-one start, is the only related line my floor names, at the line end 84",
+        "articulation": [
+          "a term of my sum line is the sum of the two before it, and nothing else",
+          "a term claimed from any other rule is a misread this store punishes",
+          "the only related line my floor names",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:05",
+      "kind": "wall",
+      "question": "which identities does my line refuse to claim?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the identity past my line end: the welding identities hold on every index my line names, and the index past the line end is the ceiling's territory \u2014 an identity claimed at a past-line index names a value the floor refuses, at the line end 84",
+        "articulation": [
+          "the welding identities hold on every index my line names",
+          "the index past the line end is the ceiling's territory",
+          "an identity claimed at a past-line index names a value the floor refuses",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:06",
+      "kind": "probe",
+      "question": "what are my sum line's terms, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sumwalk",
+        "args": {},
+        "owner": "lemma:sum-line-def",
+        "grounds": [
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:07",
+      "kind": "probe",
+      "question": "what are the twin line's terms, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_twinwalk",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:08",
+      "kind": "probe",
+      "question": "state the sum-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the sum line runs by addition alone: start at zero and one, and every later term is the sum of the two before it \u2014 on my line the line reaches fifty-five in ten steps, and the eleventh step, the eighty-nine, stands off-line as my line already declared it; the twin line starts at two and one under the same rule and reaches seventy-six in nine steps; each term is derived from the two before it, not asserted from outside; at the line end eighty-four",
+        "owner": "lemma:sum-line-def",
+        "grounds": [
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:09",
+      "kind": "probe",
+      "question": "state the twin-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the twin line welds to the sum line in two ways: the doubled term is the term times the twin (the doubling reads the twin as its multiplier), and the square sum of two consecutive terms is the term at the doubled-plus-one index \u2014 two roads, one destination, verified on my line at every on-line index; at the line end eighty-four",
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:10",
+      "kind": "probe",
+      "question": "state the twin-line-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the twin line of my store is filed of record: the sum line runs by addition alone to the fifty-five and the twin under the same rule to the seventy-six, the identities weld the two lines at every on-line index, and the eighty-nine stands once more as the ceiling the line already declared; filed on the line, at the line end eighty-four",
+        "owner": "theorem:twin-line-filed",
+        "grounds": [
+          "theorem:twin-line-filed"
+        ]
+      },
+      "cite": [
+        "twin-line-filed"
+      ]
+    },
+    {
+      "ref": "S04:11",
+      "kind": "probe",
+      "question": "what does the twin filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_filing",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:sum-line-def",
+          "lemma:twin-line-def",
+          "theorem:twin-line-filed"
+        ]
+      },
+      "cite": [
+        "twin-line-filed"
+      ]
+    },
+    {
+      "ref": "S04:12",
+      "kind": "probe",
+      "question": "what is the doubled term at index ten, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_doub",
+        "args": {
+          "idx": "ten"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:13",
+      "kind": "probe",
+      "question": "what is the square sum at four and five, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sqsum",
+        "args": {
+          "a": "four",
+          "b": "five"
+        },
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def",
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:14",
+      "kind": "probe",
+      "question": "what is the twin term at index six, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_twinterm",
+        "args": {},
+        "owner": "lemma:twin-line-def",
+        "grounds": [
+          "lemma:twin-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:15",
+      "kind": "probe",
+      "question": "what is the sum line's term at index ten, in my line's words?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_sumterm",
+        "args": {},
+        "owner": "lemma:sum-line-def",
+        "grounds": [
+          "lemma:sum-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:16",
+      "kind": "carry",
+      "question": "what is the telescope line, as my store holds it?",
+      "source": {
+        "band": "e6.17",
+        "turn": "S03:09"
+      },
+      "cite": [
+        "telescope-line"
+      ]
+    },
+    {
+      "ref": "S04:17",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s24_marker",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    }
+  ],
+  "offscript": [
+    {
+      "question": "what is the largest doubled term my line holds?",
+      "expect_derived": false
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "wall_W_S24_1",
+      "value": "needs_info: the wall is the territory of the term past my line end: the eleven-th sum step reaches the eighty-nine, which my line already holds off-line as the next prime past the eighty-three \u2014 the twin fact under one ceiling, and no term past the eighty-four enters the floor, at the line end 84"
+    },
+    {
+      "key": "wall_W_S24_2",
+      "value": "needs_info: the wall is the territory of the third sum: a term of my sum line is the sum of the two before it, and nothing else \u2014 a term claimed from any other rule is a misread this store punishes; the twin line under the same rule, from the two-one start, is the only related line my floor names, at the line end 84"
+    },
+    {
+      "key": "wall_W_S24_3",
+      "value": "needs_info: the wall is the territory of the identity past my line end: the welding identities hold on every index my line names, and the index past the line end is the ceiling's territory \u2014 an identity claimed at a past-line index names a value the floor refuses, at the line end 84"
+    }
+  ],
+  "expect": {
+    "final_total": 2126,
+    "letters": {
+      "2": "SHSSUULSUULSSSSSS",
+      "3": "SHSSSSSSSSHHFTSHS",
+      "4": "SHHHHSSSSSSSSSSSS"
+    },
+    "mastery": {
+      "sum-line": {
+        "state": "stable",
+        "correct": 5
+      },
+      "twin-line": {
+        "state": "stable",
+        "correct": 21
+      }
+    },
+    "prereq_gaps": {
+      "sum-line": [],
+      "twin-line": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

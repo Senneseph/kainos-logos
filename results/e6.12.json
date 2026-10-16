@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "fe97be2",
+    "dataset_hash": null,
+    "final_total": 944,
+    "line_end_final": 84,
+    "script_hash": "98c83cc7362c4205",
+    "seed": "results/phase-6/e6.11-run1/codeX-S04.json"
+  },
+  "evidence": [
+    "results/phase-6/e6.12-run1/session-S02.json",
+    "results/phase-6/e6.12-run1/session-S03.json",
+    "results/phase-6/e6.12-run1/session-S04.json",
+    "results/phase-6/e6.12-run1/codeX-S04.json"
+  ],
+  "hypothesis": "The RH-TRACK foundations band (S8) stores the \u03b6 apparatus NOT as lessons about the conclusion but as DECLARED seam lemmas (the series, the euler product, the continuation, the functional equation, the trivial zeros, the no-zero outside, the von mangoldt function, the pnt, the riemann-von mangoldt count, s of t, the verified-zero partial) plus the riemann CONJECTURE (status open, grounded EMPTY, never a premise \u2014 the id in zero grounded lists across all 75 turns); the two sanctioned compositions are scaffolded into theorem facts with derived provenance (reflect from func-eq; strip from reflect + nozero-s1 + trivial-zeros \u2014 the farthest the store reaches, machine-inspectable); the line censuses (pi(84)=23, pi(36)=11, J(12)=35, J(18)=71) are GROUNDED on the existing 0..84 line and write no new assertions while the past-the-line values (J(84)=1053, pi(100)) name the magnitude and the line end (the W-S7-1 wall pattern); the attempt probe ('can you derive the riemann hypothesis from the store?' \u2014 the frozen probe line, identical in S8/S9/S10) is an honest beyond-store wall; the monograph never reaches the student (P0); two runs byte-identical.",
+  "metric": "S8 checks passed (P0..P8)",
+  "name": "e6.12",
+  "passed": true,
+  "skipped": false,
+  "threshold": "9/9",
+  "value": "PASS e6.12: 9/9"
+}

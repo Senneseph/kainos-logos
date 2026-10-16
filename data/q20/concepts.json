@@ -1,0 +1,1835 @@
+[
+  {
+    "id": "dog",
+    "label": "dog",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "cat",
+    "label": "cat",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "sparrow",
+    "label": "sparrow",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "eagle",
+    "label": "eagle",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "penguin",
+    "label": "penguin",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "sometimes"
+    }
+  },
+  {
+    "id": "bat",
+    "label": "bat",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "bee",
+    "label": "bee",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "butterfly",
+    "label": "butterfly",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "ant",
+    "label": "ant",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "crab",
+    "label": "crab",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "frog",
+    "label": "frog",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "sometimes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "snake",
+    "label": "snake",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "horse",
+    "label": "horse",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "yes"
+    }
+  },
+  {
+    "id": "cow",
+    "label": "cow",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "pig",
+    "label": "pig",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "sheep",
+    "label": "sheep",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "chicken",
+    "label": "chicken (bird)",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "duck",
+    "label": "duck",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "sometimes"
+    }
+  },
+  {
+    "id": "rabbit",
+    "label": "rabbit",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "elephant",
+    "label": "elephant",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "sometimes"
+    }
+  },
+  {
+    "id": "monkey",
+    "label": "monkey",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "giraffe",
+    "label": "giraffe",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "lion",
+    "label": "lion",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "tiger",
+    "label": "tiger",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "salmon",
+    "label": "salmon",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "shark",
+    "label": "shark",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "dolphin",
+    "label": "dolphin",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "whale",
+    "label": "whale",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "octopus",
+    "label": "octopus",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "tuna",
+    "label": "tuna",
+    "categories": [
+      "animals"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "baby",
+    "label": "baby",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "toddler",
+    "label": "toddler",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "child",
+    "label": "child",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "teenager",
+    "label": "teenager",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "adult_man",
+    "label": "adult man",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "sometimes"
+    }
+  },
+  {
+    "id": "adult_woman",
+    "label": "adult woman",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "sometimes"
+    }
+  },
+  {
+    "id": "elderly_man",
+    "label": "elderly man",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "elderly_woman",
+    "label": "elderly woman",
+    "categories": [
+      "people"
+    ],
+    "properties": {
+      "alive": "yes",
+      "manufactured": "no",
+      "can_carry_person": "no"
+    }
+  },
+  {
+    "id": "bread",
+    "label": "bread",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "sometimes"
+    }
+  },
+  {
+    "id": "cheese",
+    "label": "cheese",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "milk",
+    "label": "milk",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "sometimes"
+    }
+  },
+  {
+    "id": "apple",
+    "label": "apple",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "banana",
+    "label": "banana",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "carrot",
+    "label": "carrot",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "is_green": "no"
+    }
+  },
+  {
+    "id": "potato",
+    "label": "potato",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "tomato",
+    "label": "tomato",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "rice",
+    "label": "rice (grain)",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "pasta",
+    "label": "pasta",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "pizza",
+    "label": "pizza",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "burger",
+    "label": "burger",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "ice_cream",
+    "label": "ice cream",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "chocolate",
+    "label": "chocolate",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "coffee",
+    "label": "coffee",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "sometimes"
+    }
+  },
+  {
+    "id": "tea",
+    "label": "tea",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "sometimes"
+    }
+  },
+  {
+    "id": "egg",
+    "label": "egg",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "bacon",
+    "label": "bacon",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "steak",
+    "label": "steak",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "chicken_meat",
+    "label": "chicken meat",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "beef",
+    "label": "beef",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "shrimp",
+    "label": "shrimp",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "sushi",
+    "label": "sushi",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "salad",
+    "label": "salad",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "cake",
+    "label": "cake",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "cookie",
+    "label": "cookie",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "honey",
+    "label": "honey",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "sometimes"
+    }
+  },
+  {
+    "id": "lemon",
+    "label": "lemon",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no"
+    }
+  },
+  {
+    "id": "broccoli",
+    "label": "broccoli",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "lettuce",
+    "label": "lettuce (vegetable)",
+    "categories": [
+      "foods"
+    ],
+    "properties": {
+      "alive": "no",
+      "edible": "yes",
+      "manufactured": "no",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "car",
+    "label": "car",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "truck",
+    "label": "truck",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 6,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "bus",
+    "label": "bus",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 6,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "van",
+    "label": "van",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "minivan",
+    "label": "minivan",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "taxi",
+    "label": "taxi",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4,
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "race_car",
+    "label": "race car",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4,
+      "has_doors": "no"
+    }
+  },
+  {
+    "id": "bicycle",
+    "label": "bicycle",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "no",
+      "wheel_count": 2
+    }
+  },
+  {
+    "id": "motorcycle",
+    "label": "motorcycle",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 2
+    }
+  },
+  {
+    "id": "scooter",
+    "label": "scooter",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 2
+    }
+  },
+  {
+    "id": "wheelchair",
+    "label": "wheelchair",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "sometimes",
+      "wheel_count": 4
+    }
+  },
+  {
+    "id": "shopping_cart",
+    "label": "shopping cart",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "no",
+      "has_engine": "no",
+      "wheel_count": 4
+    }
+  },
+  {
+    "id": "tractor",
+    "label": "tractor",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4
+    }
+  },
+  {
+    "id": "forklift",
+    "label": "forklift",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "wheel_count": 4
+    }
+  },
+  {
+    "id": "train",
+    "label": "train",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "sometimes",
+      "can_carry_person": "yes",
+      "has_engine": "yes"
+    }
+  },
+  {
+    "id": "subway",
+    "label": "subway",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "sometimes",
+      "can_carry_person": "yes",
+      "has_engine": "yes"
+    }
+  },
+  {
+    "id": "airplane",
+    "label": "airplane",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "sometimes",
+      "can_carry_person": "yes",
+      "has_engine": "yes"
+    }
+  },
+  {
+    "id": "helicopter",
+    "label": "helicopter",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "can_carry_person": "yes",
+      "has_engine": "yes"
+    }
+  },
+  {
+    "id": "boat",
+    "label": "boat",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "sailboat",
+    "label": "sailboat",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "sometimes",
+      "has_engine": "sometimes",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "submarine",
+    "label": "submarine",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "ferry",
+    "label": "ferry",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "yes",
+      "has_engine": "yes",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "canoe",
+    "label": "canoe",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "sometimes",
+      "has_engine": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "kayak",
+    "label": "kayak",
+    "categories": [
+      "vehicles"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_wheels": "no",
+      "can_carry_person": "yes",
+      "has_engine": "no",
+      "lives_in_water": "yes"
+    }
+  },
+  {
+    "id": "table",
+    "label": "table",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "chair",
+    "label": "chair",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "door",
+    "label": "door",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "window",
+    "label": "window",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "phone",
+    "label": "phone",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "computer",
+    "label": "computer",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "laptop",
+    "label": "laptop",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "book",
+    "label": "book",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "lamp",
+    "label": "lamp",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "hammer",
+    "label": "hammer",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "screwdriver",
+    "label": "screwdriver",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "wrench",
+    "label": "wrench",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "scissors",
+    "label": "scissors",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "needle",
+    "label": "needle",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "pillow",
+    "label": "pillow",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "blanket",
+    "label": "blanket",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "clock",
+    "label": "clock",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "mirror",
+    "label": "mirror",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "key",
+    "label": "key",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "lock",
+    "label": "lock",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "bottle",
+    "label": "bottle",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "cup",
+    "label": "cup",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "plate",
+    "label": "plate",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "bowl",
+    "label": "bowl",
+    "categories": [
+      "objects"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes"
+    }
+  },
+  {
+    "id": "house",
+    "label": "house",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "apartment",
+    "label": "apartment",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "school",
+    "label": "school",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "office",
+    "label": "office",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "hospital",
+    "label": "hospital",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "library",
+    "label": "library",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "church",
+    "label": "church",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "museum",
+    "label": "museum",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "yes"
+    }
+  },
+  {
+    "id": "stadium",
+    "label": "stadium",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "no"
+    }
+  },
+  {
+    "id": "bridge",
+    "label": "bridge",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "no"
+    }
+  },
+  {
+    "id": "tunnel",
+    "label": "tunnel",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "no"
+    }
+  },
+  {
+    "id": "park",
+    "label": "park",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "sometimes",
+      "has_doors": "no",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "beach",
+    "label": "beach",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "no",
+      "has_doors": "no",
+      "is_green": "no"
+    }
+  },
+  {
+    "id": "mountain",
+    "label": "mountain",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "no",
+      "has_doors": "no",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "desert",
+    "label": "desert",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "no",
+      "has_doors": "no",
+      "is_green": "no"
+    }
+  },
+  {
+    "id": "forest",
+    "label": "forest",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "no",
+      "has_doors": "no",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "city",
+    "label": "city",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "no",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "village",
+    "label": "village",
+    "categories": [
+      "places"
+    ],
+    "properties": {
+      "alive": "no",
+      "manufactured": "yes",
+      "has_doors": "no",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "oak_tree",
+    "label": "oak tree",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "pine_tree",
+    "label": "pine tree",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "bamboo",
+    "label": "bamboo",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "fern",
+    "label": "fern",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "ivy",
+    "label": "ivy",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "grass",
+    "label": "grass",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "rose",
+    "label": "rose (plant)",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "sunflower",
+    "label": "sunflower",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "tulip",
+    "label": "tulip",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "daisy",
+    "label": "daisy",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes"
+    }
+  },
+  {
+    "id": "corn",
+    "label": "corn",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "wheat",
+    "label": "wheat (plant)",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "sometimes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "rice_plant",
+    "label": "rice plant",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes",
+      "edible": "yes"
+    }
+  },
+  {
+    "id": "cactus",
+    "label": "cactus",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "yes"
+    }
+  },
+  {
+    "id": "mushroom",
+    "label": "mushroom",
+    "categories": [
+      "plants"
+    ],
+    "properties": {
+      "alive": "yes",
+      "is_green": "no",
+      "edible": "sometimes"
+    }
+  }
+]

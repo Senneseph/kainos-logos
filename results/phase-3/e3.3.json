@@ -1,0 +1,327 @@
+{
+  "config": {
+    "candidate_dimensions": [
+      "time",
+      "location",
+      "role",
+      "modality",
+      "context"
+    ],
+    "narrative": "winter 'hibernates=yes' vs summer 'hibernates=no' \u2014 the E2.5 bear story with two stores instead of one",
+    "thresholds": "new context TERM >= 1; both conflicting assertions retained established under distinct contexts; disputed count 0 for the pair; converged identical knowledge; zero averaged/blended facts"
+  },
+  "evidence": {
+    "context_terms": {
+      "node_arctic_summer": [
+        "ctx:time:polar_bear"
+      ],
+      "node_arctic_winter": [
+        "ctx:time:polar_bear"
+      ]
+    },
+    "fingerprints_identical": true
+  },
+  "idempotent_remerge": true,
+  "name": "e3.3",
+  "new_terms": 1,
+  "passed": true,
+  "per_node": {
+    "node_arctic_summer": {
+      "assertions": [
+        {
+          "context": {},
+          "exception": null,
+          "id": "as_declares_context_time_polar_bear",
+          "object": "ctx:time:polar_bear",
+          "observer": "reconciler",
+          "polarity": true,
+          "relation": "declares_context",
+          "source_uri": "reconciliation:ctx:time:polar_bear",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "summer"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_summer_g1_0_q_hibernates",
+          "object": "hibernates=no",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_summer_g1",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "summer"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_summer_g2_0_q_hibernates",
+          "object": "hibernates=no",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_summer_g2",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "winter"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_winter_g1_0_q_hibernates",
+          "object": "hibernates=yes",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_winter_g1",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "winter"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_winter_g2_0_q_hibernates",
+          "object": "hibernates=yes",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_winter_g2",
+          "status": "established",
+          "subject": "polar_bear"
+        }
+      ],
+      "disputed": 0,
+      "merge_report": {
+        "conflicts_preserved": 6,
+        "disputed": [
+          [
+            "as_node_arctic_winter_g1_0_q_hibernates",
+            "as_node_arctic_summer_g1_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_winter_g1_0_q_hibernates",
+            "as_node_arctic_summer_g2_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_winter_g2_0_q_hibernates",
+            "as_node_arctic_summer_g1_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_winter_g2_0_q_hibernates",
+            "as_node_arctic_summer_g2_0_q_hibernates"
+          ]
+        ],
+        "duplicates": [],
+        "merged": [
+          "as_node_arctic_winter_g1_0_q_hibernates",
+          "as_node_arctic_winter_g2_0_q_hibernates"
+        ],
+        "node_ids": [
+          "node_arctic_winter"
+        ]
+      },
+      "new_context_terms": [
+        "ctx:time:polar_bear"
+      ],
+      "reconciliation": {
+        "declaration_id": "as_declares_context_time_polar_bear",
+        "dimension": "time",
+        "disputed_after": 0,
+        "disputed_before": 4,
+        "explained": true,
+        "note": "dimension 'time' explains all sides; term ctx:time:polar_bear created; both sides retained under distinct contexts (no averaging)",
+        "reexpressed": [
+          "as_node_arctic_summer_g1_0_q_hibernates",
+          "as_node_arctic_summer_g2_0_q_hibernates",
+          "as_node_arctic_winter_g1_0_q_hibernates",
+          "as_node_arctic_winter_g2_0_q_hibernates"
+        ],
+        "relation": "has_property",
+        "subject": "polar_bear",
+        "term_id": "ctx:time:polar_bear"
+      }
+    },
+    "node_arctic_winter": {
+      "assertions": [
+        {
+          "context": {},
+          "exception": null,
+          "id": "as_declares_context_time_polar_bear",
+          "object": "ctx:time:polar_bear",
+          "observer": "reconciler",
+          "polarity": true,
+          "relation": "declares_context",
+          "source_uri": "reconciliation:ctx:time:polar_bear",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "summer"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_summer_g1_0_q_hibernates",
+          "object": "hibernates=no",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_summer_g1",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "summer"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_summer_g2_0_q_hibernates",
+          "object": "hibernates=no",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_summer_g2",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "winter"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_winter_g1_0_q_hibernates",
+          "object": "hibernates=yes",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_winter_g1",
+          "status": "established",
+          "subject": "polar_bear"
+        },
+        {
+          "context": {
+            "context_term": "ctx:time:polar_bear",
+            "dimension": "time",
+            "time": "winter"
+          },
+          "exception": "requires_context",
+          "id": "as_node_arctic_winter_g2_0_q_hibernates",
+          "object": "hibernates=yes",
+          "observer": "oracle",
+          "polarity": true,
+          "relation": "has_property",
+          "source_uri": "game_node_arctic_winter_g2",
+          "status": "established",
+          "subject": "polar_bear"
+        }
+      ],
+      "disputed": 0,
+      "merge_report": {
+        "conflicts_preserved": 6,
+        "disputed": [
+          [
+            "as_node_arctic_summer_g1_0_q_hibernates",
+            "as_node_arctic_winter_g1_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_summer_g1_0_q_hibernates",
+            "as_node_arctic_winter_g2_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_summer_g2_0_q_hibernates",
+            "as_node_arctic_winter_g1_0_q_hibernates"
+          ],
+          [
+            "as_node_arctic_summer_g2_0_q_hibernates",
+            "as_node_arctic_winter_g2_0_q_hibernates"
+          ]
+        ],
+        "duplicates": [
+          "as_node_arctic_winter_g1_0_q_hibernates",
+          "as_node_arctic_winter_g2_0_q_hibernates"
+        ],
+        "merged": [
+          "as_node_arctic_summer_g1_0_q_hibernates",
+          "as_node_arctic_summer_g2_0_q_hibernates"
+        ],
+        "node_ids": [
+          "node_arctic_summer"
+        ]
+      },
+      "new_context_terms": [
+        "ctx:time:polar_bear"
+      ],
+      "reconciliation": {
+        "declaration_id": "as_declares_context_time_polar_bear",
+        "dimension": "time",
+        "disputed_after": 0,
+        "disputed_before": 4,
+        "explained": true,
+        "note": "dimension 'time' explains all sides; term ctx:time:polar_bear created; both sides retained under distinct contexts (no averaging)",
+        "reexpressed": [
+          "as_node_arctic_summer_g1_0_q_hibernates",
+          "as_node_arctic_summer_g2_0_q_hibernates",
+          "as_node_arctic_winter_g1_0_q_hibernates",
+          "as_node_arctic_winter_g2_0_q_hibernates"
+        ],
+        "relation": "has_property",
+        "subject": "polar_bear",
+        "term_id": "ctx:time:polar_bear"
+      }
+    }
+  },
+  "pre_exchange": {
+    "node_arctic_summer": [
+      {
+        "id": "as_node_arctic_summer_g1_0_q_hibernates",
+        "status": "established",
+        "value": "hibernates=no"
+      },
+      {
+        "id": "as_node_arctic_summer_g2_0_q_hibernates",
+        "status": "established",
+        "value": "hibernates=no"
+      }
+    ],
+    "node_arctic_winter": [
+      {
+        "id": "as_node_arctic_winter_g1_0_q_hibernates",
+        "status": "established",
+        "value": "hibernates=yes"
+      },
+      {
+        "id": "as_node_arctic_winter_g2_0_q_hibernates",
+        "status": "established",
+        "value": "hibernates=yes"
+      }
+    ]
+  },
+  "threshold": {
+    "both_values_retained_established": true,
+    "converged_identical_knowledge": true,
+    "disputed_count_zero": true,
+    "distinct_contexts_ge_2": true,
+    "new_context_term_ge_1": true,
+    "no_averaging": true
+  }
+}

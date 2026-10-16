@@ -1,0 +1,20 @@
+{
+  "config": {
+    "commit": "1e9fa84",
+    "dataset_hash": "9339b7e25ce0c46b",
+    "seed": "deterministic loop (frozen author policy + sequencer; no randomness anywhere)"
+  },
+  "evidence": [
+    "results/phase-6/e6.3-run1/session-S03.json",
+    "results/phase-6/e6.3-run1/codeX-S03.json",
+    "results/phase-6/e6.3-run1/loop-report.json",
+    "results/phase-6/e6.3-run2/loop-report.json"
+  ],
+  "hypothesis": "A det authoring arm driving the frozen sequencer and a det analysis arm acting only within one frozen fix class run the infant through N sessions without a human in the turn loop: every line is grounded (replay-verified), every diagnosis is re-auditable, attention triggers file deduped unposted  payloads, and the run converges at the frozen fixed point on the E6.2 line with the line cap a property of the final store and two runs byte-identical.",
+  "metric": "loop checks passed (L1..L7)",
+  "name": "e6.3",
+  "passed": true,
+  "skipped": false,
+  "threshold": "7/7",
+  "value": 1.0
+}

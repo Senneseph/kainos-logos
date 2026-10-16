@@ -1,0 +1,6 @@
+cupy device: b'AMD Radeon 8060S Graphics'
+A: single sum N=   400 :  numpy      4.5 us   cupy     29.7 us   (6.54x numpy faster)
+A: single sum N= 40000 :  numpy    969.5 us   cupy     77.7 us   (0.08x cupy faster)
+B: batch 2000x20000 :  numpy      694 ms   cupy        0 ms   (12413.2x cupy faster)   max|diff| = 8.08e-14
+
+VERDICT: use cupy for B (batched independent points) if >3x; A stays numpy if transfer-bound.

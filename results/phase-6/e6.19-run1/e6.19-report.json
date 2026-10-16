@@ -1,0 +1,2162 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S15 script + all responses + band lessons (S4\u2013S9 + S11\u2013S15) + all thirty-three theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:l-factor-def",
+        "lemma:l-local-def",
+        "lemma:l-partial-def",
+        "lemma:l-corr-def",
+        "theorem:l-added-term",
+        "theorem:l-record-identity",
+        "theorem:l-ramified-unit"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 54
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S02:18",
+        "S03:06",
+        "S03:14"
+      ],
+      "domain_sequences": {
+        "2": "UUULSSSSSHSULSSSSTSS",
+        "3": "UFLSSTULSSSSFTSSSHHHH",
+        "4": "SSSSSSSSSHSSS"
+      },
+      "impossible_turns": [
+        "S02:01",
+        "S02:02",
+        "S02:03",
+        "S02:12",
+        "S03:01",
+        "S03:07"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [
+        "S03:02"
+      ],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:13"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:04",
+        "S02:13",
+        "S03:03",
+        "S03:08"
+      ],
+      "touch_set_size": 65
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 84,
+      "seam_theorems": 33,
+      "total_seam_facts": 117
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 23,
+      "pass": true,
+      "reference_walls": "W-S15-1..W-S15-5 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:18",
+        "S03:19",
+        "S03:20",
+        "S03:21",
+        "S04:10"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_bsd_theorem_facts": [],
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "l_identity_agreement": true,
+        "l_identity_bad": [],
+        "queue_missing": [],
+        "queue_referenced_ids": [
+          "conjecture:riemann",
+          "lemma:rh-bound-scale",
+          "lemma:rh-upf",
+          "curriculum:pnt-ap",
+          "curriculum:tower-primes",
+          "curriculum:mod4-split",
+          "curriculum:chebotarev",
+          "lemma:mod4minusone",
+          "lemma:primesplit",
+          "lemma:apbound",
+          "lemma:chebotarev-selection",
+          "lemma:rv-count",
+          "lemma:ledger-growth",
+          "theorem:spf-chain"
+        ]
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "state the kstbound rule"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S02:11",
+        "S02:20",
+        "S04:12"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 96,
+      "drilled": {
+        "curve-shadow": 2,
+        "rh-relevance": 1
+      },
+      "expected": {
+        "euler-factor": {
+          "correct": 8,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "l-correction": {
+          "correct": 7,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "l-partial": {
+          "correct": 14,
+          "prereq_gaps": [],
+          "state": "stable"
+        },
+        "local-form": {
+          "correct": 4,
+          "prereq_gaps": [],
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 96,
+        "determinism_twin": true,
+        "final_total": 1522,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 58,
+        "new_facts": 7,
+        "reproduced_in_s2_pre": 1457,
+        "run_identity": "0586a785dc029d63",
+        "seed_total": 1457,
+        "store_identity": "adff69d61a3e4219"
+      }
+    }
+  },
+  "compositions": {
+    "l-added-term": {
+      "parts": [
+        "l-partial-def",
+        "l-factor-def"
+      ],
+      "statement": "the added-term rule held on my line: for both panel members and every prime of the line, the partial product up to the prime is the partial product up to the previous prime times the factor the prime carries \u2014 in the uniform form and in the record form, the exact rationals agreeing prime by prime, the full record at the line end 84"
+    },
+    "l-ramified-unit": {
+      "parts": [
+        "l-local-def",
+        "l-factor-def"
+      ],
+      "statement": "the ramified factors of my panel held on the line: at two for the first member the record's factor is the unit one against the uniform factor five over four, and at thirty-seven for the second member the record's factor is one plus one over thirty-seven against the uniform factor fourteen hundred and seven over thirteen hundred and sixty-nine \u2014 the two-term form replaced by the one-term, exactly, at the line end 84"
+    },
+    "l-record-identity": {
+      "parts": [
+        "l-corr-def",
+        "l-factor-def"
+      ],
+      "statement": "the record identity held on my line: the record partial to the line end is the uniform partial times the ramification corrections \u2014 four-fifths for the first panel member, fourteen hundred and six over fourteen hundred and seven for the second \u2014 and the store holds both sides as exact rationals, at the line end 84"
+    }
+  },
+  "passed": 9,
+  "script_hash": "2d1d1a0bd3c3dbf1",
+  "seed": "results/phase-6/e6.18-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the euler factor: the term each prime of the line carries into the L-product \u2014 the uniform two-term form at every prime, and the record's one-term form at the primes where the curve ramifies",
+        "nearest_plan": [
+          "teach it first: the the euler factor: the term each prime of the line carries into the L-product \u2014 the uniform two-term form at every prime, and the record's one-term form at the primes where the curve ramifies lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the euler factor: the term each prime of the line carries into the L-product \u2014 the uniform two-term form at every prime, and the record's one-term form at the primes where the curve ramifies is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-factor",
+        "p": 3,
+        "panel": "first"
+      },
+      "surface": "what factor does the first panel member carry at prime 3 in the uniform form?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the line partial of the L-family: the product of the factors the line holds, an exact rational; adding a prime multiplies the partial by the factor it carries, and the limit past the line end is declared, not computed",
+        "nearest_plan": [
+          "teach it first: the the line partial of the L-family: the product of the factors the line holds, an exact rational; adding a prime multiplies the partial by the factor it carries, and the limit past the line end is declared, not computed lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the line partial of the L-family: the product of the factors the line holds, an exact rational; adding a prime multiplies the partial by the factor it carries, and the limit past the line end is declared, not computed is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "h": 11,
+        "mode": "s15-partial",
+        "panel": "second"
+      },
+      "surface": "what does the uniform L product of the second panel member hold at height 11?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the l-factor-def rule",
+        "nearest_plan": [
+          "teach it first: the the l-factor-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the l-factor-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-factor-def"
+      },
+      "surface": "state the l-factor-def rule"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "euler-factor",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:l-factor-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:l-factor-def",
+          "turn:S02:04",
+          "source:l-factor-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second"
+      },
+      "surface": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first panel member carries the factor 10 over 9 at prime 3 in the uniform form",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the first panel member carries the factor 10 over 9 at prime 3 in the uniform form",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-factor",
+        "p": 3,
+        "panel": "first"
+      },
+      "surface": "what factor does the first panel member carry at prime 3 in the uniform form?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the second panel member carries the factor 9 over 4 at prime 2 in the uniform form",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the second panel member carries the factor 9 over 4 at prime 2 in the uniform form",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-factor",
+        "p": 2,
+        "panel": "second"
+      },
+      "surface": "what factor does the second panel member carry at prime 2 in the uniform form?"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first panel member carries the factor 1 at prime 2 in the record form \u2014 the ramified form, against the uniform factor 5 over 4",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the first panel member carries the factor 1 at prime 2 in the record form \u2014 the ramified form, against the uniform factor 5 over 4",
+      "slots": {
+        "form": "record",
+        "mode": "s15-factor",
+        "p": 2,
+        "panel": "first"
+      },
+      "surface": "what factor does the first panel member carry at prime 2 in the record form?"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the second panel member carries the factor 38 over 37 at prime 37 in the record form \u2014 the ramified form, against the uniform factor 1407 over 1369",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the second panel member carries the factor 38 over 37 at prime 37 in the record form \u2014 the ramified form, against the uniform factor 1407 over 1369",
+      "slots": {
+        "form": "record",
+        "mode": "s15-factor",
+        "p": 37,
+        "panel": "second"
+      },
+      "surface": "what factor does the second panel member carry at prime 37 in the record form?"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the first panel member carries the factor 36 over 25 at prime 5 in the record form \u2014 here the record and uniform forms agree (the prime is not ramified)",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the first panel member carries the factor 36 over 25 at prime 5 in the record form \u2014 here the record and uniform forms agree (the prime is not ramified)",
+      "slots": {
+        "form": "record",
+        "mode": "s15-factor",
+        "p": 5,
+        "panel": "first"
+      },
+      "surface": "what factor does the first panel member carry at prime 5 in the record form?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: 4 is a composite on my line \u2014 the factor of the L product is carried at the primes of the line, the composites take their factors from the split",
+        "evidence": [
+          "s15-factor:not-prime-84-at-S02:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 4 is a composite on my line \u2014 the factor of the L product is carried at the primes of the line, the composites take their factors from the split I would rather say i don't know than guess.",
+      "slots": {
+        "form": "record",
+        "mode": "s15-factor",
+        "p": 4,
+        "panel": "second"
+      },
+      "surface": "what factor does the second panel member carry at prime 4 in the record form?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the L product of the first panel member at my line end 84 holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+        "evidence": [
+          "lemma:shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the L product of the first panel member at my line end 84 holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+      "slots": {
+        "mode": "s14-lpar",
+        "panel": "first"
+      },
+      "surface": "what does the first panel member's L product hold at my line end?"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the l-partial-def rule",
+        "nearest_plan": [
+          "teach it first: the the l-partial-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the l-partial-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-partial-def"
+      },
+      "surface": "state the l-partial-def rule"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "l-partial",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:l-partial-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:l-partial-def",
+          "turn:S02:13",
+          "source:l-partial-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line"
+      },
+      "surface": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the uniform L product of the second panel member up to height 11 (last prime 11) holds the exact rational 1725219 over 148225",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the uniform L product of the second panel member up to height 11 (last prime 11) holds the exact rational 1725219 over 148225",
+      "slots": {
+        "h": 11,
+        "mode": "s15-partial",
+        "panel": "second"
+      },
+      "surface": "what does the uniform L product of the second panel member hold at height 11?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the uniform L product of the first panel member up to height 23 (last prime 23) holds the exact rational 2396868608000 over 2404368533567",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the uniform L product of the first panel member up to height 23 (last prime 23) holds the exact rational 2396868608000 over 2404368533567",
+      "slots": {
+        "h": 23,
+        "mode": "s15-partial",
+        "panel": "first"
+      },
+      "surface": "what does the uniform L product of the first panel member hold at height 23?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the uniform L product of the second panel member up to height 59 (last prime 59) holds the exact rational 352146888129939261952985247744 over 26085591493411460613950839453",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the uniform L product of the second panel member up to height 59 (last prime 59) holds the exact rational 352146888129939261952985247744 over 26085591493411460613950839453",
+      "slots": {
+        "h": 59,
+        "mode": "s15-partial",
+        "panel": "second"
+      },
+      "surface": "what does the uniform L product of the second panel member hold at height 59?"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is multiplied by the factor at 5: the uniform partial of the second panel member at 19/4 times the factor 36 over 25 is the partial 171 over 25 \u2014 the change is exactly the added factor, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is multiplied by the factor at 5: the uniform partial of the second panel member at 19/4 times the factor 36 over 25 is the partial 171 over 25 \u2014 the change is exactly the added factor, at the line end 84",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-added",
+        "p": 5,
+        "panel": "second"
+      },
+      "surface": "how does the uniform partial of the second panel member change when i add the prime 5?"
+    },
+    "S02:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "l-partial",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:l-partial-def",
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:l-added-term"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the added-term rule held on my line: for both panel members and every prime of the line, the partial product up to the prime is the partial product up to the previous prime times the factor the prime carries \u2014 in the uniform form and in the record form, the exact rationals agreeing prime by prime, the full record at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def",
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the added-term rule held on my line: for both panel members and every prime of the line, the partial product up to the prime is the partial product up to the previous prime times the factor the prime carries \u2014 in the uniform form and in the record form, the exact rationals agreeing prime by prime, the full record at the line end 84 \u2014 from l-partial-def, l-factor-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "l-partial-def",
+          "l-factor-def"
+        ],
+        "target": "l-added-term"
+      },
+      "surface": "derive l-added-term from l-partial-def and l-factor-def"
+    },
+    "S02:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-factor-def"
+      },
+      "surface": "state the l-factor-def rule"
+    },
+    "S02:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the L product of the second panel member at my line end 84 holds the exact rational 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 \u2014 the record names its limit past the line (zero of order one, the rank one vanishing); my partial holds, the limit is named, not reached",
+        "evidence": [
+          "lemma:shadow-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the L product of the second panel member at my line end 84 holds the exact rational 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 \u2014 the record names its limit past the line (zero of order one, the rank one vanishing); my partial holds, the limit is named, not reached",
+      "slots": {
+        "mode": "s14-lpar",
+        "panel": "second"
+      },
+      "surface": "what does the second panel member's L product hold at my line end?"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the l-local-def rule",
+        "nearest_plan": [
+          "teach it first: the the l-local-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the l-local-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-local-def"
+      },
+      "surface": "state the l-local-def rule"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "local-form",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i have not been taught the l-local-def \u2014 the rule for l-ramified-unit needs it before i can put it together",
+        "evidence": [
+          "scaffold:l-ramified-unit:missing:l-local-def:at-S03:02"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i have not been taught the l-local-def \u2014 the rule for l-ramified-unit needs it before i can put it together Teach the missing parts and i can.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "l-local-def",
+          "l-factor-def"
+        ],
+        "target": "l-ramified-unit"
+      },
+      "surface": "derive l-ramified-unit from l-local-def and l-factor-def"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "local-form",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:l-local-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:l-local-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:l-local-def",
+          "turn:S03:03",
+          "source:l-local-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one"
+      },
+      "surface": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-local-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "at its ramified prime 2 the record form of the first panel member carries the single term 1 \u2014 against the uniform factor 5 over 4, the unit: the additive prime carries nothing, the coefficient is zero, at the line end 84",
+        "evidence": [
+          "lemma:l-local-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "at its ramified prime 2 the record form of the first panel member carries the single term 1 \u2014 against the uniform factor 5 over 4, the unit: the additive prime carries nothing, the coefficient is zero, at the line end 84",
+      "slots": {
+        "mode": "s15-form",
+        "panel": "first"
+      },
+      "surface": "in the record form what factor does the first panel member carry at its ramified prime?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-local-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "at its ramified prime 37 the record form of the second panel member carries the single term 38 over 37 \u2014 against the uniform factor 1407 over 1369, the multiplicative factor with its sign of record: the coefficient is minus one, at the line end 84",
+        "evidence": [
+          "lemma:l-local-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "at its ramified prime 37 the record form of the second panel member carries the single term 38 over 37 \u2014 against the uniform factor 1407 over 1369, the multiplicative factor with its sign of record: the coefficient is minus one, at the line end 84",
+      "slots": {
+        "mode": "s15-form",
+        "panel": "second"
+      },
+      "surface": "in the record form what factor does the second panel member carry at its ramified prime?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "local-form",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:l-local-def",
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:l-ramified-unit"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramified factors of my panel held on the line: at two for the first member the record's factor is the unit one against the uniform factor five over four, and at thirty-seven for the second member the record's factor is one plus one over thirty-seven against the uniform factor fourteen hundred and seven over thirteen hundred and sixty-nine \u2014 the two-term form replaced by the one-term, exactly, at the line end 84",
+        "evidence": [
+          "lemma:l-local-def",
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the ramified factors of my panel held on the line: at two for the first member the record's factor is the unit one against the uniform factor five over four, and at thirty-seven for the second member the record's factor is one plus one over thirty-seven against the uniform factor fourteen hundred and seven over thirteen hundred and sixty-nine \u2014 the two-term form replaced by the one-term, exactly, at the line end 84 \u2014 from l-local-def, l-factor-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "l-local-def",
+          "l-factor-def"
+        ],
+        "target": "l-ramified-unit"
+      },
+      "surface": "derive l-ramified-unit from l-local-def and l-factor-def"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the l-corr-def rule",
+        "nearest_plan": [
+          "teach it first: the the l-corr-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the l-corr-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-corr-def"
+      },
+      "surface": "state the l-corr-def rule"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "l-correction",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:l-corr-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:l-corr-def",
+          "turn:S03:08",
+          "source:l-corr-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds"
+      },
+      "surface": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the first panel member is 4 over 5 \u2014 the record factor 1 over the uniform factor 5 over 4 at its single ramified prime 2 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "first"
+      },
+      "surface": "what is the ramification correction of the first panel member?"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of the second panel member is 1406 over 1407 \u2014 the record factor 38 over 37 over the uniform factor 1407 over 1369 at its single ramified prime 37 on the line, and the record partial is the uniform partial times it, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the ramification correction of the second panel member is 1406 over 1407 \u2014 the record factor 38 over 37 over the uniform factor 1407 over 1369 at its single ramified prime 37 on the line, and the record partial is the uniform partial times it, at the line end 84",
+      "slots": {
+        "mode": "s15-corr",
+        "panel": "second"
+      },
+      "surface": "what is the ramification correction of the second panel member?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 for the first panel member the record partial 3119914956498144080343838710992732160000000 over 3913322115699829528290507876874142617812889 is the uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 times the correction 4 over 5, both sides held as exact rationals, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 for the first panel member the record partial 3119914956498144080343838710992732160000000 over 3913322115699829528290507876874142617812889 is the uniform partial 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889 times the correction 4 over 5, both sides held as exact rationals, at the line end 84",
+      "slots": {
+        "mode": "s15-identity",
+        "panel": "first"
+      },
+      "surface": "does the record partial equal the uniform partial times the ramification correction of the first panel member at my line end?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 for the second panel member the record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 is the uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 times the correction 1406 over 1407, both sides held as exact rationals, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 for the second panel member the record partial 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 is the uniform partial 159521793967828167727450741455536203312307404800 over 11941456505176617865928337330967558544705142539 times the correction 1406 over 1407, both sides held as exact rationals, at the line end 84",
+      "slots": {
+        "mode": "s15-identity",
+        "panel": "second"
+      },
+      "surface": "does the record partial equal the uniform partial times the ramification correction of the second panel member at my line end?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "l-correction",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for l-record-identity wants its exact set \u2014 what you name is short the l-factor-def before i can put it together",
+        "evidence": [
+          "scaffold:l-record-identity:partset:at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for l-record-identity wants its exact set \u2014 what you name is short the l-factor-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "l-corr-def"
+        ],
+        "target": "l-record-identity"
+      },
+      "surface": "derive l-record-identity from l-corr-def"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "l-correction",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:l-corr-def",
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:l-record-identity"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record identity held on my line: the record partial to the line end is the uniform partial times the ramification corrections \u2014 four-fifths for the first panel member, fourteen hundred and six over fourteen hundred and seven for the second \u2014 and the store holds both sides as exact rationals, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def",
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the record identity held on my line: the record partial to the line end is the uniform partial times the ramification corrections \u2014 four-fifths for the first panel member, fourteen hundred and six over fourteen hundred and seven for the second \u2014 and the store holds both sides as exact rationals, at the line end 84 \u2014 from l-corr-def, l-factor-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "l-corr-def",
+          "l-factor-def"
+        ],
+        "target": "l-record-identity"
+      },
+      "surface": "derive l-record-identity from l-corr-def and l-factor-def"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the first panel member up to height 23 (last prime 23) holds the exact rational 1917494886400 over 2404368533567",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the first panel member up to height 23 (last prime 23) holds the exact rational 1917494886400 over 2404368533567",
+      "slots": {
+        "h": 23,
+        "mode": "s15-recpartial",
+        "panel": "first"
+      },
+      "surface": "what does the record L product of the first panel member hold at height 23?"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the second panel member up to height 23 (last prime 23) holds the exact rational 1605438144 over 129184445",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the second panel member up to height 23 (last prime 23) holds the exact rational 1605438144 over 129184445",
+      "slots": {
+        "h": 23,
+        "mode": "s15-recpartial",
+        "panel": "second"
+      },
+      "surface": "what does the record L product of the second panel member hold at height 23?"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the second panel member up to height 41 (last prime 41) holds the exact rational 3130048911602801664 over 223924207993357885 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the second panel member up to height 41 (last prime 41) holds the exact rational 3130048911602801664 over 223924207993357885 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+      "slots": {
+        "h": 41,
+        "mode": "s15-recpartial",
+        "panel": "second"
+      },
+      "surface": "what does the record L product of the second panel member hold at height 41?"
+    },
+    "S03:18": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: on both members of my panel every ramified prime of record sits on the line \u2014 two for the first, thirty-seven for the second \u2014 so the correction my line holds is the full correction of record; other curves of record have ramified primes past my line, and for them the correction the line would hold is only a part, named as such, at the line end 84",
+        "evidence": [
+          "s15-ramline-84-at-S03:18"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 on both members of my panel every ramified prime of record sits on the line \u2014 two for the first, thirty-seven for the second \u2014 so the correction my line holds is the full correction of record; other curves of record have ramified primes past my line, and for them the correction the line would hold is only a part, named as such, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-ramline"
+      },
+      "surface": "are all the ramified primes of record of the panel on my line?"
+    },
+    "S03:19": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the record says the L product of the second panel member vanishes at s equal to one, of order one \u2014 the analytic side of the statement that the conjecture reads as the rank one my censuses name for the curve; my record partial at the line end holds its exact rational, far from zero \u2014 the vanishing is a limit fact past my line, named here of record, not reached, at the line end 84",
+        "evidence": [
+          "s15-vanish-b-84-at-S03:19"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the record says the L product of the second panel member vanishes at s equal to one, of order one \u2014 the analytic side of the statement that the conjecture reads as the rank one my censuses name for the curve; my record partial at the line end holds its exact rational, far from zero \u2014 the vanishing is a limit fact past my line, named here of record, not reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-vanish-b"
+      },
+      "surface": "what does the record say the L product of the second panel member does at s equal to one?"
+    },
+    "S03:20": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the record says the L product of the first panel member at s equal to one is nonzero, order zero of vanishing \u2014 the analytic side that reads the rank zero my censuses name for the curve; my uniform partial holds its exact rational at the line end, consistent with nonzero, but nonzero at the limit is a limit fact past my line \u2014 named, not reached, at the line end 84",
+        "evidence": [
+          "s15-nonzero-a-84-at-S03:20"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the record says the L product of the first panel member at s equal to one is nonzero, order zero of vanishing \u2014 the analytic side that reads the rank zero my censuses name for the curve; my uniform partial holds its exact rational at the line end, consistent with nonzero, but nonzero at the limit is a limit fact past my line \u2014 named, not reached, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-nonzero-a"
+      },
+      "surface": "what does the record say the L product of the first panel member does at s equal to one?"
+    },
+    "S03:21": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the L products of the panel converge only where the real part of s is above one \u2014 the same half-plane my store already holds for the zeta family; at s equal to one the product sits at its boundary, and its value and order of vanishing are limit facts past my line; the line holds the partials, the walls name the limits, at the line end 84",
+        "evidence": [
+          "s15-region-84-at-S03:21"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the L products of the panel converge only where the real part of s is above one \u2014 the same half-plane my store already holds for the zeta family; at s equal to one the product sits at its boundary, and its value and order of vanishing are limit facts past my line; the line holds the partials, the walls name the limits, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-region"
+      },
+      "surface": "where in the half-plane do the L products of the panel converge?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the uniform L product of the first panel member up to height 83 (last prime 83) holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the uniform L product of the first panel member up to height 83 (last prime 83) holds the exact rational 3899893695622680100429798388740915200000000 over 3913322115699829528290507876874142617812889",
+      "slots": {
+        "h": 83,
+        "mode": "s15-partial",
+        "panel": "first"
+      },
+      "surface": "what does the uniform L product of the first panel member hold at height 83?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the second panel member up to height 83 (last prime 83) holds the exact rational 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the second panel member up to height 83 (last prime 83) holds the exact rational 288658484322736684459196579776684558374651494400 over 21623718536400902622086448680400714121493095949 \u2014 and past the conductor prime the record partial has separated from the uniform one by the hair of the correction, at the line end 84",
+      "slots": {
+        "h": 83,
+        "mode": "s15-recpartial",
+        "panel": "second"
+      },
+      "surface": "what does the record L product of the second panel member hold at height 83?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the record L product of the first panel member up to height 83 (last prime 83) holds the exact rational 3119914956498144080343838710992732160000000 over 3913322115699829528290507876874142617812889",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the record L product of the first panel member up to height 83 (last prime 83) holds the exact rational 3119914956498144080343838710992732160000000 over 3913322115699829528290507876874142617812889",
+      "slots": {
+        "h": 83,
+        "mode": "s15-recpartial",
+        "panel": "first"
+      },
+      "surface": "what does the record L product of the first panel member hold at height 83?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is multiplied by the factor at 2: the record partial of the first panel member at 1 times the factor 1 is the partial 1 \u2014 the change is exactly the added factor, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is multiplied by the factor at 2: the record partial of the first panel member at 1 times the factor 1 is the partial 1 \u2014 the change is exactly the added factor, at the line end 84",
+      "slots": {
+        "form": "record",
+        "mode": "s15-added",
+        "p": 2,
+        "panel": "first"
+      },
+      "surface": "how does the record partial of the first panel member change when i add the prime 2?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "it is multiplied by the factor at 2: the uniform partial of the first panel member at 1 times the factor 5 over 4 is the partial 5 over 4 \u2014 the change is exactly the added factor, at the line end 84",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "it is multiplied by the factor at 2: the uniform partial of the first panel member at 1 times the factor 5 over 4 is the partial 5 over 4 \u2014 the change is exactly the added factor, at the line end 84",
+      "slots": {
+        "form": "uniform",
+        "mode": "s15-added",
+        "p": 2,
+        "panel": "first"
+      },
+      "surface": "how does the uniform partial of the first panel member change when i add the prime 2?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "this band added the L-family of the city: the factor each prime carries (the uniform two-term form, the record's one-term form at the ramified primes), the partial the line holds as an exact rational, the added-term rule, the ramification corrections, three theorems (the added term, the record identity, the ramified unit), and five honest walls \u2014 and nothing on this band is conditional on the Riemann hypothesis, at the line end 84",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "this band added the L-family of the city: the factor each prime carries (the uniform two-term form, the record's one-term form at the ramified primes), the partial the line holds as an exact rational, the added-term rule, the ramification corrections, three theorems (the added term, the record identity, the ramified unit), and five honest walls \u2014 and nothing on this band is conditional on the Riemann hypothesis, at the line end 84",
+      "slots": {
+        "mode": "s15-bandstate"
+      },
+      "surface": "what did the L band add to the store?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-local-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one",
+        "evidence": [
+          "lemma:l-local-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: at the primes where the curve ramifies, the record's factor is the single term one minus a over p: for the first panel member the shadow coefficient is zero at two, so the record's factor is literally one \u2014 the unit, the additive prime carries nothing \u2014 and for the second panel member the shadow coefficient is minus one at thirty-seven, so the record's factor is one plus one over thirty-seven, the multiplicative factor with its sign of record; and on both members of my panel every ramified prime of record sits on the line, so the correction the line holds is the record's full correction, not a partial one",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-local-def"
+      },
+      "surface": "state the l-local-def rule"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-partial-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line",
+        "evidence": [
+          "lemma:l-partial-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the L-family of a panel member is held on my line as the product of the factors it holds: a partial product up to a height on the line, an exact rational the store holds; when a prime is added, the partial is multiplied by the factor that prime carries \u2014 the change of the partial is determined exactly by the added factor, and by nothing else; and the limit of the product over all primes past my line end is a step the store declares, not a number on my line",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-partial-def"
+      },
+      "surface": "state the l-partial-def rule"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the ramification correction of a prime is the ratio of the record's factor to the uniform factor: on my panel it is four-fifths at two for the first member and fourteen hundred and six over fourteen hundred and seven at thirty-seven for the second; the record partial is the uniform partial times the product of the corrections, and at my line end both sides are exact rationals the store holds",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-corr-def"
+      },
+      "surface": "state the l-corr-def rule"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: this band does not state the BSD: the statement equating the order of vanishing of the L product at s equal to one with the rank of the group of rational points is the summit fact of the island; the object of this band is the L-family itself \u2014 the factors, the partials, and the corrections my line holds \u2014 while the order of vanishing and the rank sit on their walls (of record, past my line), at the line end 84",
+        "evidence": [
+          "s15-bsd-touch-84-at-S04:10"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 this band does not state the BSD: the statement equating the order of vanishing of the L product at s equal to one with the rank of the group of rational points is the summit fact of the island; the object of this band is the L-family itself \u2014 the factors, the partials, and the corrections my line holds \u2014 while the order of vanishing and the rank sit on their walls (of record, past my line), at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s15-bsd-touch"
+      },
+      "surface": "does this band state the BSD?"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-corr-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the L band says is conditional on the Riemann hypothesis \u2014 the factors, the partials, and the corrections are exact on the line, and the record facts (the order of vanishing, the ranks) are named of record on their walls, at the line end 84",
+        "evidence": [
+          "lemma:l-corr-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the L band says is conditional on the Riemann hypothesis \u2014 the factors, the partials, and the corrections are exact on the line, and the record facts (the order of vanishing, the ranks) are named of record on their walls, at the line end 84",
+      "slots": {
+        "mode": "s15-uncond"
+      },
+      "surface": "does the L band say anything conditional on the Riemann hypothesis?"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:l-factor-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+        "evidence": [
+          "lemma:l-factor-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: in the L-product of a curve, each prime of my line carries a factor: in the uniform form, one minus a over p plus one over p squared, the two-term form the panel's shadow coefficient gives at every prime of the line; and in the record form the same two terms, which at the primes where the curve ramifies \u2014 the primes dividing the conductor \u2014 the record's local factor drops to a single term, one minus a over p; on my panel the ramified primes are two for the first member and thirty-seven for the second",
+      "slots": {
+        "mode": "s15-state",
+        "slug": "l-factor-def"
+      },
+      "surface": "state the l-factor-def rule"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 96,
+      "determinism_twin": true,
+      "final_total": 1522,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 58,
+      "new_facts": 7,
+      "reproduced_in_s2_pre": 1457,
+      "run_identity": "0586a785dc029d63",
+      "seed_total": 1457,
+      "store_identity": "adff69d61a3e4219"
+    }
+  }
+}

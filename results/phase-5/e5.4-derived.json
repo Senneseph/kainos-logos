@@ -1,0 +1,38 @@
+{
+  "grammar_sha": "sha256:0854c8984949c6b2e373162bfc015d7d80284381403ab42538d194c707d3ca9d",
+  "note": "E5.4 derived constants frozen from the offline CONTROL run (2026-08-22, pre-official; the run is a pure recompute \u2014 the official run must reproduce these EXACTLY).",
+  "x1": {
+    "run_hashes": {
+      "e5.4-clean-v0": "sha256:cfdfbc38e67c11bbb0f2dda4cefa77afe8677fab494e0d22f475137921263f75",
+      "e5.4-clean-v1": "sha256:f1bd88ae72962c0e84d00123842dde8ca798b1baae2e5cb3bf884fb305343e11",
+      "e5.4-clean-v2": "sha256:031a69c910ea9e5434ffa18767797da0b0405084b8555110238dd62a32fecf79",
+      "e5.4-false-v0": "sha256:9a7546bbd454f41f91ebb37978f6c813d451c4224ca2da1d722556193d50efdb",
+      "e5.4-false-v1": "sha256:0b0e569079adc6e108c50806df7adaaf04f5c2de53476eff8ef1351a27d1cadf",
+      "e5.4-false-v2": "sha256:1d89e7b7b1958582bacf408e7290807dd8d08d1b12be207c48e314f87ce2a431"
+    }
+  },
+  "x3": {
+    "expected": {
+      "a_beliefs_about_b": 0,
+      "b_beliefs_about_a": 1,
+      "correct_cells": {
+        "a": 20,
+        "b": 20
+      },
+      "disputes": {
+        "a": 0,
+        "b": 2
+      },
+      "drops_logged": 1,
+      "first_correct": {
+        "by": "b",
+        "object": "row3:door mine=c3 other=c4",
+        "round": 4,
+        "target": "a"
+      },
+      "n_corrects": 1,
+      "recovery": true
+    },
+    "perturbation": "ScriptedDropRenderer(drop=('b','anchor')) on e5.4-false-v1: b's round-3 anchor renders unparseably -> dropped"
+  }
+}

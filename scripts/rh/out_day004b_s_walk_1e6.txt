@@ -1,0 +1,43 @@
+GPU port validation: 200 points, max |Z_gpu - Z_cpu| = 5.299e-08
+  ... 0 M of 45000001 pts (0 s)
+  ... 3 M of 45000001 pts (1 s)
+  ... 5 M of 45000001 pts (2 s)
+  ... 8 M of 45000001 pts (2 s)
+  ... 10 M of 45000001 pts (3 s)
+  ... 13 M of 45000001 pts (3 s)
+  ... 15 M of 45000001 pts (4 s)
+  ... 18 M of 45000001 pts (5 s)
+  ... 20 M of 45000001 pts (6 s)
+  ... 23 M of 45000001 pts (6 s)
+  ... 26 M of 45000001 pts (7 s)
+  ... 28 M of 45000001 pts (8 s)
+  ... 31 M of 45000001 pts (8 s)
+  ... 33 M of 45000001 pts (9 s)
+  ... 36 M of 45000001 pts (10 s)
+  ... 38 M of 45000001 pts (11 s)
+  ... 41 M of 45000001 pts (11 s)
+  ... 44 M of 45000001 pts (12 s)
+batched Z + vartheta for 45.0 M points: 12 s
+N(1e5) = 138065 (from list) -> N(1e6) from walk = 1747104 (new zeros 1609039)
+S(1e6) from walk-count = -40.5086   (pending mpmath 2K verification)
+
+S(t) stats (t in [100001, 1000000]):
+  max |S| = 42.6664 at t = 988102.00
+  min  S  = -42.6664 at t = 988102.00
+  max  S  = -1.5060 at t = 154725.00
+  mean |S| = 16.9038
+  GUE scale sqrt(ln ln 1e6) = 1.62 ;  ln(T)/2pi = 2.20
+
+per-decade max|S| (growth envelope):
+  [100000, 200000):  max|S| =   6.3406   mean|S| = 3.0545
+  [200000, 300000):  max|S| =   8.6017   mean|S| = 5.5368
+  [300000, 400000):  max|S| =  10.6786   mean|S| = 8.9462
+  [400000, 500000):  max|S| =  14.4498   mean|S| = 10.7203
+  [500000, 600000):  max|S| =  16.1517   mean|S| = 13.0009
+  [600000, 700000):  max|S| =  22.5354   mean|S| = 17.3452
+  [700000, 800000):  max|S| =  30.5570   mean|S| = 25.3898
+  [800000, 900000):  max|S| =  34.5031   mean|S| = 31.1108
+  [900000, 1000000):  max|S| =  42.6664   mean|S| = 37.0295
+  [1000000, 1100000):  max|S| =  40.5086   mean|S| = 40.5086
+
+total 13 s

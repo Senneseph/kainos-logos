@@ -1,0 +1,10 @@
+{"id": "vague_01", "description": "three digits, then the dash thing"}
+{"id": "vague_02", "description": "a phone number"}
+{"id": "vague_03", "description": "a line thing"}
+{"id": "vague_04", "description": "end of string, the mark thing"}
+{"id": "vague_05", "description": "either a hyphen or the slant thing"}
+{"id": "vague_06", "description": "exactly two letters, followed by a phone number"}
+{"id": "vague_07", "description": "a glyph, then a digit"}
+{"id": "vague_08", "description": "beginning of string, the dash thing"}
+{"id": "vague_09", "description": "a space, then the numeral thing"}
+{"id": "vague_10", "description": "one or more words, then the slant thing"}

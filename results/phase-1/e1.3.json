@@ -1,0 +1,131 @@
+{
+  "after": {
+    "confidence": 1.0,
+    "escalation": null,
+    "pcre": "\\d{3}-\\d{3}-\\d{4}",
+    "trace": [
+      {
+        "assertion_ids": [
+          "taught-us-phone-number"
+        ],
+        "kind": "ref",
+        "realization": "\\d{3}-\\d{3}-\\d{4}",
+        "resolved_to": "Literal('\\\\d{3}-\\\\d{3}-\\\\d{4}')",
+        "status": "resolved",
+        "surface": "american phone number",
+        "via": "american phone number"
+      }
+    ]
+  },
+  "after_restart": {
+    "confidence": 1.0,
+    "escalation": null,
+    "pcre": "\\d{3}-\\d{3}-\\d{4}",
+    "trace": [
+      {
+        "assertion_ids": [
+          "taught-us-phone-number"
+        ],
+        "kind": "ref",
+        "realization": "\\d{3}-\\d{3}-\\d{4}",
+        "resolved_to": "Literal('\\\\d{3}-\\\\d{3}-\\\\d{4}')",
+        "status": "resolved",
+        "surface": "american phone number",
+        "via": "american phone number"
+      }
+    ]
+  },
+  "assertion_present": true,
+  "before": {
+    "confidence": 0.0,
+    "escalation": {
+      "candidates": [
+        "american",
+        "american phone number"
+      ],
+      "recommended_action": "ask_human",
+      "status": "requires_context"
+    },
+    "pcre": null,
+    "trace": [
+      {
+        "assertion_ids": [],
+        "candidates": [
+          "american",
+          "american phone number"
+        ],
+        "kind": "ref",
+        "status": "UNSEEN",
+        "surface": "american phone number"
+      }
+    ]
+  },
+  "config": {
+    "description": "an American phone number",
+    "provenance": "Source(uri='user_instruction', version='1')",
+    "restart_note": "fresh InMemoryCodexStore rebuilt from store.dump(); pipeline rebuilt by describe()",
+    "taught_pattern": "\\d{3}-\\d{3}-\\d{4}",
+    "weight_frozen_note": "the deterministic kernel has no weights \u2014 the 'frozen weights' of C2 is the identical kernel code; everything that changed is CODEX state"
+  },
+  "explain": {
+    "assertion": {
+      "confidence": 1.0,
+      "context": {
+        "domain": "contact-info"
+      },
+      "exception": null,
+      "id": "taught-us-phone-number",
+      "object": "\\d{3}-\\d{3}-\\d{4}",
+      "polarity": true,
+      "provenance": {
+        "derived": false,
+        "evidence": [],
+        "observer": "user",
+        "source": {
+          "authority": null,
+          "hash": null,
+          "media_type": "text/plain",
+          "retrieved_at": null,
+          "uri": "user_instruction",
+          "version": "1"
+        },
+        "verified": true
+      },
+      "relation": {
+        "id": "realizes_as",
+        "kind": "relation",
+        "labels": [
+          "realizes_as"
+        ]
+      },
+      "status": "established",
+      "subject": {
+        "id": "american phone number",
+        "kind": "entity",
+        "labels": [
+          "American phone number",
+          "US phone number"
+        ]
+      },
+      "validity": null
+    },
+    "chain": [],
+    "id": "taught-us-phone-number",
+    "provenance": {
+      "derived": false,
+      "evidence": [],
+      "observer": "user",
+      "source": {
+        "authority": null,
+        "hash": null,
+        "media_type": "text/plain",
+        "retrieved_at": null,
+        "uri": "user_instruction",
+        "version": "1"
+      },
+      "verified": true
+    }
+  },
+  "judge": true,
+  "passed": true
+}

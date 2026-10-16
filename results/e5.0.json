@@ -1,0 +1,23 @@
+{
+  "config": {
+    "commit": "3d4ffb1",
+    "dataset_hash": null,
+    "runs": [
+      "shared-view",
+      "contradiction-talk"
+    ],
+    "seed": 1
+  },
+  "evidence": [
+    "results/phase-5/e5.0.json",
+    "results/phase-5/shared-view.json",
+    "results/phase-5/contradiction-talk.json"
+  ],
+  "hypothesis": "View-isolated CODEX agents form supported, auditable mental models of each other through a budgeted assertion-delta channel; the white-box ToM audit reads formation/correctness/support back and contradictions survive as disputed pairs (never averaged) \u2014 deterministically.",
+  "metric": "acceptance checks passed (0\u201312)",
+  "name": "e5.0",
+  "passed": true,
+  "skipped": false,
+  "threshold": "12/12",
+  "value": 12.0
+}

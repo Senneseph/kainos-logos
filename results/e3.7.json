@@ -1,0 +1,40 @@
+{
+  "config": {
+    "commit": "8fb8682",
+    "dataset_hash": null,
+    "fork_isolation": true,
+    "negative_control_passed": true,
+    "promotion": {
+      "assertion_count": 1,
+      "source": {
+        "as_promoted_ws_PROJECT_GAME_fork_transport_decision_r0": "workspace_PROJECT_GAME_fork"
+      },
+      "status": {
+        "as_promoted_ws_PROJECT_GAME_fork_transport_decision_r0": "candidate"
+      }
+    },
+    "query_accuracy": 1.0,
+    "recursion_depth": 2,
+    "seed": 0,
+    "source_versioning": {
+      "analyses": 2,
+      "latest_version": 2,
+      "stale_on_hash_change": [
+        "data/e3.7_game_notes.txt:1",
+        "data/e3.7_game_notes.txt:2"
+      ],
+      "stale_on_same_hash": [],
+      "v1_immutable_after_v2": true
+    }
+  },
+  "evidence": [
+    "results/phase-3/e3.7.json"
+  ],
+  "hypothesis": "a WORKSPACE container holds, nests, forks, revises and QUERIES IRs \u2014 'what did we decide?' is a graph query (no reprocessing) \u2014 and promotion discipline holds: the CODEX gains only explicit, provenance-carrying candidates; un-promoted content is invisible",
+  "metric": "query accuracy on the transport decision (latest IR, post-revision); recursion depth exercised (>= 2); promote() output = candidate assertions with source=workspace_<id>; negative control: un-promoted content returns NO CODEX assertions",
+  "name": "e3.7",
+  "passed": true,
+  "skipped": false,
+  "threshold": "all four checks pass; no un-promoted content visible in the CODEX (the anti-corruption invariant, P12)",
+  "value": 1.0
+}

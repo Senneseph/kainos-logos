@@ -1,0 +1,27 @@
+{
+  "m3": {
+    "note": "Scavenge M3 scale probe (sweep 2026-08-21/22): full-scan query() latency. Step D gate needs a materialization win at fanout 2-256 on a REAL workload; the measured knee decides.",
+    "store_245_official_e6_4_final": {
+      "mean_ns": 6030,
+      "median_ns": 5359,
+      "n_queries": 4000,
+      "p95_ns": 11761
+    },
+    "store_5000_synthetic": {
+      "mean_ns": 132271,
+      "median_ns": 137634,
+      "n_queries": 4000,
+      "p95_ns": 162150
+    }
+  },
+  "m6": {
+    "concepts": 149,
+    "median_ns_per_selection_step": 2684289,
+    "note": "Scavenge M6 scale probe (sweep 2026-08-21/22): plain info-gain selection cost on the real E2 corpus. The M6 upper-bound variant can only beat this by early-terminating the candidate scan \u2014 which needs a cheap tight IG bound.",
+    "questions": 17,
+    "selection_steps": 200,
+    "split_calls_per_selection": 22.25,
+    "split_calls_total": 4450,
+    "trivial_bound_ig_upper": "H(H) for EVERY question (zero pruning power): a tight IG bound requires exactly the oracle-split evaluations it would save"
+  }
+}

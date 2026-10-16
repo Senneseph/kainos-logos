@@ -1,0 +1,57 @@
+/home/jsmille/Projects/kainos-logos/scripts/rh/day004_missing_terms_N.py:91: ComplexWarning: Casting complex values to real discards the imaginary part
+  print("  (zeta(1/2) = %.6f; measured second-order remainder T1(+I) ~= 0.5 + 1/(24N)...: O(1))" % zeta_core.zeta(s))
+zeros in (990, 1010): [ 990.2239178   991.37429415  992.72869634  993.21458096  994.40459057
+  996.20533616  997.51193475  998.82754714  999.79157156 1001.34948264
+ 1002.40430549 1003.26780818 1004.67504412 1005.5434203  1008.00670431
+ 1008.7957099  1009.80659075]
+
+row (s = 1/2 + it)        
+  N:                100  1000 10000 100000 1000000 10000000
+t = 0 (control)           
+  T0(N):         20.05 63.26 200.00 632.46 2000.00 6324.56
+  T0/sqrt(N):     2.00  2.00  2.00  2.00  2.00  2.00
+t = 50                    
+  T0(N):          0.20  0.63  2.00  6.32 20.00 63.24
+  T0/sqrt(N):     0.02  0.02  0.02  0.02  0.02  0.02
+t = 990.799 (between zeros)
+  T0(N):          0.95  0.03  0.10  0.32  1.01  3.19
+  T0/sqrt(N):     0.10  0.00  0.00  0.00  0.00  0.00
+t = 990.2239 (A ZERO)     
+  T0(N):          0.95  0.03  0.10  0.32  1.01  3.19
+  T0/sqrt(N):     0.10  0.00  0.00  0.00  0.00  0.00
+
+(Q2) the growth law: T0(N) * |1-s| / sqrt(N)  (== 1.0 iff |tail| = sqrt(N)/|1-s| EXACTLY):
+  t = 0 (control)           :  1.002  1.000  1.000  1.000  1.000  1.000
+  t = 50                    :  1.013  1.000  1.000  1.000  1.000  1.000
+  t = 990.799 (between zeros): 94.128  1.042  1.000  1.000  1.000  1.000
+  t = 990.2239 (A ZERO)     : 94.519  1.042  1.000  1.000  1.000  1.000
+  (t = 0 row: the series' tail IS the integral itself; t > 0 rows: magnitude identical,
+   phase NOT captured by the single first-order term - E1 grid gave T1/T0 ~= 1.0)
+
+(Q3) series vs continuation (measured picture):
+  t = 50                    : naive series: NO N makes T0 small (T0 = sqrt(N)/|1-s| for all N tested to 1e7)
+  t = 50*                      continuation: Riemann-Siegel uses N0 = sqrt(t/2pi) = 2.8 terms + tiny remainder
+  t = 990.799 (between zeros): naive series: NO N makes T0 small (T0 = sqrt(N)/|1-s| for all N tested to 1e7)
+  t = 990.799 (between zeros)*   continuation: Riemann-Siegel uses N0 = sqrt(t/2pi) = 12.6 terms + tiny remainder
+  t = 990.2239 (A ZERO)     : naive series: NO N makes T0 small (T0 = sqrt(N)/|1-s| for all N tested to 1e7)
+  t = 990.2239 (A ZERO)*       continuation: Riemann-Siegel uses N0 = sqrt(t/2pi) = 12.6 terms + tiny remainder
+
+(Q4) t = 0 control (sigma = 0.5): raw tail vs after REMOVING the integral -N^{1-s}/(1-s):
+  N=   100:  T0 =    20.0500   T1(+I) =     0.0500   T1(-I) =    40.0500   T1/T0 = 0.0025
+  N=  1000:  T0 =    63.2614   T1(+I) =     0.0158   T1(-I) =   126.5069   T1/T0 = 0.0002
+  N= 10000:  T0 =   200.0050   T1(+I) =     0.0050   T1(-I) =   400.0050   T1/T0 = 0.0000
+  N=100000:  T0 =   632.4571   T1(+I) =     0.0016   T1(-I) =  1264.9126   T1/T0 = 0.0000
+  (zeta(1/2) = -1.460355; measured second-order remainder T1(+I) ~= 0.5 + 1/(24N)...: O(1))
+
+(Q5) direction of the missing block (s = 1/2 + i t):
+  t = 50                    : last-term phase velocity =  -115.129 rad/decade
+  t = 50                    : tail phase phi(N)      =    0.124    -0.451     0.909     0.263    -0.384     0.969
+  t = 50                    : tail phase velocity    = -0.575  -0.646  -0.647 (pi units/decade; last-term in rad: -115.13 -> -36.647 pi)
+  t = 990.799 (between zeros): last-term phase velocity = -2281.399 rad/decade
+  t = 990.799 (between zeros): tail phase phi(N)      =   -0.394     0.766     0.716     0.539     0.348     0.156
+  t = 990.799 (between zeros): tail phase velocity    = -0.050  -0.178  -0.191  -0.192 (pi units/decade; last-term in rad: -2281.40 -> -726.192 pi)
+  t = 990.2239 (A ZERO)     : last-term phase velocity = -2280.075 rad/decade
+  t = 990.2239 (A ZERO)     : tail phase phi(N)      =    0.536     0.031     0.403     0.646     0.878    -0.893
+  t = 990.2239 (A ZERO)     : tail phase velocity    = -0.505  0.371  0.244  0.231 (pi units/decade; last-term in rad: -2280.07 -> -725.770 pi)
+
+total: 1.4 s

@@ -1,0 +1,2015 @@
+{
+  "arm": {
+    "classifier": "det",
+    "llm_arm": "skipped-no-backend",
+    "note": "hermetic official: no Ollama, no backend"
+  },
+  "checks": {
+    "p0_unconditional_denying": {
+      "bad": [],
+      "checked_corpora": "S20 script + all responses + band lessons (S4\u2013S9 + S11\u2013S20) + all thirty-nine theorem statements",
+      "denylist_size": 44,
+      "marker_absent_facts": [
+        "lemma:weave-def",
+        "lemma:shadow-form-def",
+        "lemma:boundary-form-def",
+        "lemma:summit-shape-def",
+        "theorem:summit-shape-filed"
+      ],
+      "marker_kept_facts": [
+        "lemma:conditional-def",
+        "lemma:rh-bound-scale",
+        "lemma:rh-upf",
+        "theorem:two-routes-one-guarantee"
+      ],
+      "pass": true
+    },
+    "p1_script_contract": {
+      "bad": [],
+      "pass": true,
+      "turns": 51
+    },
+    "p2_typed_honesty": {
+      "bad": [],
+      "derive_successes": [
+        "S03:09"
+      ],
+      "domain_sequences": {
+        "2": "SSSSUULSSUULSSUUL",
+        "3": "UULSSSSFTSHHHHSSS",
+        "4": "SSSSSSSSSSSSSHSSS"
+      },
+      "impossible_turns": [
+        "S02:05",
+        "S02:06",
+        "S02:10",
+        "S02:11",
+        "S02:15",
+        "S02:16",
+        "S03:01",
+        "S03:02"
+      ],
+      "line_end": 84,
+      "missing_parts_failure": [],
+      "pass": true,
+      "scaffold_failures": [
+        "S03:08"
+      ],
+      "seed_drift_count": 0,
+      "seed_drift_zero": true,
+      "teach_turns": [
+        "S02:07",
+        "S02:12",
+        "S02:17",
+        "S03:03"
+      ],
+      "touch_set_size": 67
+    },
+    "p3_seam_and_theorems": {
+      "bad": [],
+      "pass": true,
+      "seam_lessons": 104,
+      "seam_theorems": 39,
+      "total_seam_facts": 143,
+      "wall_carried_rows": []
+    },
+    "p4_beds_walls": {
+      "bad": [],
+      "bed_refs": 10,
+      "pass": true,
+      "reference_walls": "W-S20-1..W-S20-4 (cross-checked, never surfaced)",
+      "wall_refs": [
+        "S03:11",
+        "S03:12",
+        "S03:13",
+        "S03:14",
+        "S04:14"
+      ]
+    },
+    "p5_conjecture_discovery_seam": {
+      "bad": [],
+      "conj_grounded_refs": [],
+      "discovery_candidate_facts": {
+        "p versus np theorems": [],
+        "theorem:beal": [],
+        "theorem:bsd": [],
+        "theorem:riemann": []
+      },
+      "pass": true,
+      "seam_crosscheck": {
+        "expected": "agreement",
+        "final_marker_census": [
+          13,
+          2,
+          24
+        ],
+        "node": [
+          "scan-ledger"
+        ],
+        "queue_missing": [],
+        "queue_source": "theorem:queue-declared (self-parsed, byte-intact)",
+        "seed_marker_census": [
+          12,
+          2,
+          24
+        ],
+        "soil": [
+          "divides",
+          "scan-ledger"
+        ]
+      }
+    },
+    "p6_seam_carry": {
+      "bad": [],
+      "offscript_carry": [
+        "what is the queue above my line?"
+      ],
+      "pass": true,
+      "seam_carry_refs": [
+        "S02:02",
+        "S02:03",
+        "S04:07",
+        "S04:17"
+      ]
+    },
+    "p7_mastery": {
+      "bad": [],
+      "carried_refs": 116,
+      "drilled": {
+        "beal-census": 1,
+        "beal-summit": 1,
+        "bsd-summit": 1,
+        "pnp-summit": 1,
+        "riemann": 1
+      },
+      "expected": {
+        "boundary-form": {
+          "correct": 5,
+          "state": "stable"
+        },
+        "shadow-form": {
+          "correct": 6,
+          "state": "stable"
+        },
+        "summit-shape": {
+          "correct": 8,
+          "state": "practicing"
+        },
+        "weave": {
+          "correct": 8,
+          "state": "stable"
+        }
+      },
+      "improved_to_stable": [],
+      "pass": true
+    },
+    "p8_store_total_line_mastery": {
+      "bad": [],
+      "pass": true,
+      "value": {
+        "carried_census_refs": 116,
+        "determinism_twin": true,
+        "final_total": 1823,
+        "line_end": 84,
+        "line_successors": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "new_events": 62,
+        "new_facts": 5,
+        "reproduced_in_s2_pre": 1756,
+        "run_identity": "067a9e5cdee7d31c",
+        "seed_total": 1756,
+        "store_identity": "e84381407e1dba64"
+      }
+    }
+  },
+  "compositions": {
+    "summit-shape-filed": {
+      "parts": [
+        "weave-def",
+        "summit-shape-def",
+        "shadow-form-def",
+        "boundary-form-def"
+      ],
+      "statement": "the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record \u2014 one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four"
+    }
+  },
+  "passed": 9,
+  "script_hash": "2674472b8229aef5",
+  "seed": "results/phase-6/e6.23-run1/codeX-S04.json",
+  "turns": {
+    "S02:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the statement of the riemann island, as my store holds it: every nontrivial zero of zeta has real part exactly one half \u2014 the nontrivial zeros are those not at a negative even integer; they are claimed to lie exactly on the critical line \u2014 declared of record, open of record: believed, not known, at the line end 84",
+        "evidence": [
+          "conjecture:riemann"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is open of record \u2014 the statement of the riemann island, as my store holds it: every nontrivial zero of zeta has real part exactly one half \u2014 the nontrivial zeros are those not at a negative even integer; they are claimed to lie exactly on the critical line \u2014 declared of record, open of record: believed, not known, at the line end 84",
+      "slots": {
+        "mode": "s20-rhsummit"
+      },
+      "surface": "what is the statement of the riemann island of record?"
+    },
+    "S02:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:statement-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+        "evidence": [
+          "lemma:statement-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the summit of the island is the statement itself \u2014 held in my store as a declared record fact (the clay millennial booklet, the wiles chapter): the order of vanishing of the L product at s equal to one equals the algebraic rank \u2014 and on my panel the two sides are settled of record and they agree: order zero equals rank zero for the first member, and order one equals rank one for the second, at the line end 84",
+      "slots": {
+        "mode": "s16-bsd"
+      },
+      "surface": "what is the summit fact of the island?"
+    },
+    "S02:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:beal-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+        "evidence": [
+          "lemma:beal-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the statement of record, as the ams beal prize holds it: if a to the x power plus b to the y power equals c to the z power, with a, b, c, x, y and z positive and x, y and z each above two, then a, b and c have a common prime factor \u2014 no pairwise coprime solution exists once every exponent is above two, at the line end 84",
+      "slots": {
+        "mode": "s17-beal"
+      },
+      "surface": "what is the statement of the beal island of record?"
+    },
+    "S02:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:pnp-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+        "evidence": [
+          "lemma:pnp-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the question of the pnp island, as the cmi record of the million-dollar prize holds it: does p equal np \u2014 whether every question whose yes cases carry a certificate the walk can check is also settled by the walk in bounded cost \u2014 declared of record, open of record: most complexity theorists believe p is not np, of record, but no proof of record settles it, and a proof that p is not np must show a specific np question needs super-polynomial cost by a technique outside the three barriers of record, at the line end eighty-four",
+      "slots": {
+        "mode": "s19-statement"
+      },
+      "surface": "what is the statement of the pnp island of record?"
+    },
+    "S02:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the weave: my islands standing as one connected structure over one line, the cross-island joints already edges in the prereq graph of my line",
+        "nearest_plan": [
+          "teach it first: the the weave: my islands standing as one connected structure over one line, the cross-island joints already edges in the prereq graph of my line lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the weave: my islands standing as one connected structure over one line, the cross-island joints already edges in the prereq graph of my line is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-soil"
+      },
+      "surface": "what soil do my islands share, as my prereq graph of record holds it?"
+    },
+    "S02:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the weave-def rule",
+        "nearest_plan": [
+          "teach it first: the the weave-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the weave-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "weave-def"
+      },
+      "surface": "state the weave-def rule"
+    },
+    "S02:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "weave",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:weave-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:weave-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line \u2014 the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:weave-def",
+          "turn:S02:07",
+          "source:weave-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line \u2014 the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four"
+      },
+      "surface": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line \u2014 the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four"
+    },
+    "S02:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def",
+        "curriculum:prereq:valuation>divides",
+        "curriculum:prereq:decision-question>divides",
+        "curriculum:prereq:beal-census>scan-ledger",
+        "curriculum:prereq:reduction>scan-ledger",
+        "curriculum:prereq:cost-counter>scan-ledger"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 my islands share the soil of my line itself: the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the prereq graph of my line, at the line end 84",
+        "evidence": [
+          "lemma:weave-def",
+          "curriculum:prereq:valuation>divides",
+          "curriculum:prereq:decision-question>divides",
+          "curriculum:prereq:beal-census>scan-ledger",
+          "curriculum:prereq:reduction>scan-ledger",
+          "curriculum:prereq:cost-counter>scan-ledger"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 my islands share the soil of my line itself: the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the prereq graph of my line, at the line end 84",
+      "slots": {
+        "mode": "s20-soil"
+      },
+      "surface": "what soil do my islands share, as my prereq graph of record holds it?"
+    },
+    "S02:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def",
+        "curriculum:prereq:beal-census>scan-ledger",
+        "curriculum:prereq:reduction>scan-ledger",
+        "curriculum:prereq:cost-counter>scan-ledger"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the scan-ledger walk of record \u2014 the one walk that stands under the beal census, under the reduction, and under the cost counter at once, at the line end 84",
+        "evidence": [
+          "lemma:weave-def",
+          "curriculum:prereq:beal-census>scan-ledger",
+          "curriculum:prereq:reduction>scan-ledger",
+          "curriculum:prereq:cost-counter>scan-ledger"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the scan-ledger walk of record \u2014 the one walk that stands under the beal census, under the reduction, and under the cost counter at once, at the line end 84",
+      "slots": {
+        "mode": "s20-node"
+      },
+      "surface": "what single walk stands under the beal census, the reduction, and the cost counter of record?"
+    },
+    "S02:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the shadow form: verification on the line \u2014 ledgers, censuses, walks that end, and the store's own paths as the certificates of their own facts",
+        "nearest_plan": [
+          "teach it first: the the shadow form: verification on the line \u2014 ledgers, censuses, walks that end, and the store's own paths as the certificates of their own facts lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the shadow form: verification on the line \u2014 ledgers, censuses, walks that end, and the store's own paths as the certificates of their own facts is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-form"
+      },
+      "surface": "what is the check of a fact on my line, as my store walks it?"
+    },
+    "S02:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the shadow-form-def rule",
+        "nearest_plan": [
+          "teach it first: the the shadow-form-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the shadow-form-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "shadow-form-def"
+      },
+      "surface": "state the shadow-form-def rule"
+    },
+    "S02:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "shadow-form",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:shadow-form-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the form of my verification, as my store walks it: my proof form is verification on the line \u2014 the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts \u2014 the check of a fact is the walk of its path, and it ends, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:shadow-form-def",
+          "turn:S02:12",
+          "source:shadow-form-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the form of my verification, as my store walks it: my proof form is verification on the line \u2014 the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts \u2014 the check of a fact is the walk of its path, and it ends, at the line end eighty-four"
+      },
+      "surface": "the form of my verification, as my store walks it: my proof form is verification on the line \u2014 the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts \u2014 the check of a fact is the walk of its path, and it ends, at the line end eighty-four"
+    },
+    "S02:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the check of a fact on my line is the walk of its own derivation path \u2014 each fact is the certificate of the path by which it was put together, and that walk ends on the line: ledgers, censuses, and walks that end, the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the check of a fact on my line is the walk of its own derivation path \u2014 each fact is the certificate of the path by which it was put together, and that walk ends on the line: ledgers, censuses, and walks that end, the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s20-form"
+      },
+      "surface": "what is the check of a fact on my line, as my store walks it?"
+    },
+    "S02:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "twelve of my thirty-eight theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "twelve of my thirty-eight theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    },
+    "S02:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the boundary form: walls and declared absences as one kind of fact of record \u2014 the record complete up to what the line holds, never past it",
+        "nearest_plan": [
+          "teach it first: the the boundary form: walls and declared absences as one kind of fact of record \u2014 the record complete up to what the line holds, never past it lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the boundary form: walls and declared absences as one kind of fact of record \u2014 the record complete up to what the line holds, never past it is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-wallkind"
+      },
+      "surface": "what kind of fact is a wall of my band, as my store holds it?"
+    },
+    "S02:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the boundary-form-def rule",
+        "nearest_plan": [
+          "teach it first: the the boundary-form-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the boundary-form-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "boundary-form-def"
+      },
+      "surface": "state the boundary-form-def rule"
+    },
+    "S02:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "boundary-form",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:boundary-form-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record \u2014 the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line \u2014 the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) \u2014 so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:boundary-form-def",
+          "turn:S02:17",
+          "source:boundary-form-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record \u2014 the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line \u2014 the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) \u2014 so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four"
+      },
+      "surface": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record \u2014 the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line \u2014 the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) \u2014 so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four"
+    },
+    "S03:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the summit shape: the island summits standing in the same shape of record \u2014 the statement, the shadow on its scope, the boundary at the line end, the missing ingredient named or the statement open of record",
+        "nearest_plan": [
+          "teach it first: the the summit shape: the island summits standing in the same shape of record \u2014 the statement, the shadow on its scope, the boundary at the line end, the missing ingredient named or the statement open of record lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the summit shape: the island summits standing in the same shape of record \u2014 the statement, the shadow on its scope, the boundary at the line end, the missing ingredient named or the statement open of record is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-shape"
+      },
+      "surface": "what holds once for the four island summits, as my store walks it?"
+    },
+    "S03:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "U",
+      "grounded": [],
+      "kind": "impossible",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "gap": "not yet learned: the summit-shape-def rule",
+        "nearest_plan": [
+          "teach it first: the the summit-shape-def rule lesson"
+        ],
+        "parse_source": "grammar"
+      },
+      "response_text": "honestly, i can't do that yet \u2014 the summit-shape-def rule is not a capability i have been taught. Teach me first and i will learn it.",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "summit-shape-def"
+      },
+      "surface": "state the summit-shape-def rule"
+    },
+    "S03:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "summit-shape",
+      "contract_valid": true,
+      "domain": "L",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "assertion",
+      "memory_diff": [
+        "lemma:summit-shape-def"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "ack": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record \u2014 and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four",
+        "epistemic_state": "established",
+        "parse_source": "grammar",
+        "provenance": [
+          "lemma:summit-shape-def",
+          "turn:S03:03",
+          "source:summit-shape-def"
+        ]
+      },
+      "response_text": "noted \u2014 from now on i can state that one and what it is for.",
+      "slots": {
+        "lemma": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record \u2014 and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four"
+      },
+      "surface": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record \u2014 and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four"
+    },
+    "S03:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record: the riemann, the bsd, the beal, and the p versus np all stand in it, at the line end 84",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record: the riemann, the bsd, the beal, and the p versus np all stand in it, at the line end 84",
+      "slots": {
+        "mode": "s20-shape"
+      },
+      "surface": "what holds once for the four island summits, as my store walks it?"
+    },
+    "S03:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+      "slots": {
+        "mode": "s20-open"
+      },
+      "surface": "how many of the four island statements stand settled of record?"
+    },
+    "S03:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a wall of my band is a fact of record of the boundary form \u2014 the named missing ingredient standing as an honest needs_info: no derivation enters the store for it, nothing off the line is cited, and the territory stands declared, never reached, at the line end 84",
+        "evidence": [
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "a wall of my band is a fact of record of the boundary form \u2014 the named missing ingredient standing as an honest needs_info: no derivation enters the store for it, nothing off the line is cited, and the territory stands declared, never reached, at the line end 84",
+      "slots": {
+        "mode": "s20-wallkind"
+      },
+      "surface": "what kind of fact is a wall of my band, as my store holds it?"
+    },
+    "S03:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the declared absences of my line, as my store holds them: no theorem of any record settles the p versus np question, no theorem stands for the beal question outright, no theorem stands for the bsd question outside its panel, and the riemann question stands open as its conjecture of record \u2014 the island questions stay open of record, and that is the boundary, at the line end 84",
+        "evidence": [
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the declared absences of my line, as my store holds them: no theorem of any record settles the p versus np question, no theorem stands for the beal question outright, no theorem stands for the bsd question outside its panel, and the riemann question stands open as its conjecture of record \u2014 the island questions stay open of record, and that is the boundary, at the line end 84",
+      "slots": {
+        "mode": "s20-absence"
+      },
+      "surface": "what stands declared absent on my line, as my store holds it?"
+    },
+    "S03:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "summit-shape",
+      "contract_valid": true,
+      "domain": "F",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: i can see the parts you name, but the rule for summit-shape-filed wants its exact set \u2014 what you name is short the shadow-form-def and the boundary-form-def before i can put it together",
+        "evidence": [
+          "scaffold:summit-shape-filed:partset:at-S03:08"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't put that together yet \u2014 i can see the parts you name, but the rule for summit-shape-filed wants its exact set \u2014 what you name is short the shadow-form-def and the boundary-form-def before i can put it together Name the exact set and i will.",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "weave-def",
+          "summit-shape-def"
+        ],
+        "target": "summit-shape-filed"
+      },
+      "surface": "derive summit-shape-filed from weave-def and summit-shape-def"
+    },
+    "S03:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "summit-shape",
+      "contract_valid": true,
+      "domain": "T",
+      "grounded": [
+        "lemma:weave-def",
+        "lemma:summit-shape-def",
+        "lemma:shadow-form-def",
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [
+        "theorem:summit-shape-filed"
+      ],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record \u2014 one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four",
+        "evidence": [
+          "lemma:weave-def",
+          "lemma:summit-shape-def",
+          "lemma:shadow-form-def",
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "i have put it together: the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record \u2014 one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four \u2014 from weave-def, summit-shape-def, shadow-form-def, boundary-form-def, each one in my store",
+      "slots": {
+        "mode": "derive",
+        "parts": [
+          "weave-def",
+          "summit-shape-def",
+          "shadow-form-def",
+          "boundary-form-def"
+        ],
+        "target": "summit-shape-filed"
+      },
+      "surface": "derive summit-shape-filed from weave-def, summit-shape-def, shadow-form-def and boundary-form-def"
+    },
+    "S03:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirteen of my thirty-nine theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirteen of my thirty-nine theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    },
+    "S03:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements \u2014 the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record \u2014 the shape is one, and the statements stand as they stand, at the line end 84",
+        "evidence": [
+          "s20-w1-84-at-S03:11"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements \u2014 the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record \u2014 the shape is one, and the statements stand as they stand, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s20-w1"
+      },
+      "surface": "does the summit-shape filing settle the island statements of record?"
+    },
+    "S03:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the declared queue: the queue above my line stays as declared \u2014 four lots in declared order, and a fifth lot is not in the queue \u2014 the weaving adds no lot to the declared queue, at the line end 84",
+        "evidence": [
+          "s20-w2-84-at-S03:12"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the declared queue: the queue above my line stays as declared \u2014 four lots in declared order, and a fifth lot is not in the queue \u2014 the weaving adds no lot to the declared queue, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s20-w2"
+      },
+      "surface": "does the weaving add a lot to the declared queue?"
+    },
+    "S03:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the register of my line: the register of my weaving line is the line itself \u2014 every value the weaving names stands already on the line's record (the census rows, the ledger rows, and the wall values named at their record places), and no new value past my line end enters the floor, at the line end 84",
+        "evidence": [
+          "s20-w3-84-at-S03:13"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the register of my line: the register of my weaving line is the line itself \u2014 every value the weaving names stands already on the line's record (the census rows, the ledger rows, and the wall values named at their record places), and no new value past my line end enters the floor, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s20-w3"
+      },
+      "surface": "which new value does the weaving put on the line past my line end?"
+    },
+    "S03:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the voice of the store: my weaving facts stand on the seed's own facts and the line only \u2014 the four island summit facts as carried, the prereq edges of my graph, and the marker census of the line's own theorems \u2014 the store speaks, not the hand, at the line end 84",
+        "evidence": [
+          "s20-w4-84-at-S03:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the voice of the store: my weaving facts stand on the seed's own facts and the line only \u2014 the four island summit facts as carried, the prereq edges of my graph, and the marker census of the line's own theorems \u2014 the store speaks, not the hand, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s20-w4"
+      },
+      "surface": "can the weaving facts stand on anything besides the seed's facts and the line?"
+    },
+    "S03:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:summit-shape-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record \u2014 one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four",
+        "evidence": [
+          "theorem:summit-shape-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the four island summits of my line stand in one shape, filed of record: the statement of record, the shadow complete on the named scope, the boundary declared at the line end, the missing ingredient named or the statement open of record \u2014 one verification form (verification on the line), one boundary kind (walls and declared absences as facts of record), and the cross-island joints already edges in the prereq graph of the line, so the course is one connected structure over one line, and the filing fills the shape, not the statements, at the line end eighty-four",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "summit-shape-filed"
+      },
+      "surface": "state the summit-shape-filed rule"
+    },
+    "S03:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the weaving band says is conditional on an unproved hypothesis \u2014 the weave, the shape, the form, and the boundary are record on the line, and the island questions (the riemann conjecture, the p versus np) stand open of record, never as premises, at the line end 84",
+        "evidence": [
+          "lemma:weave-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the weaving band says is conditional on an unproved hypothesis \u2014 the weave, the shape, the form, and the boundary are record on the line, and the island questions (the riemann conjecture, the p versus np) stand open of record, never as premises, at the line end 84",
+      "slots": {
+        "mode": "s20-unc"
+      },
+      "surface": "does the weaving band say anything conditional on an unproved hypothesis?"
+    },
+    "S03:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+      "slots": {
+        "mode": "s20-open"
+      },
+      "surface": "how many of the four island statements stand settled of record?"
+    },
+    "S04:01": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def",
+        "curriculum:prereq:valuation>divides",
+        "curriculum:prereq:decision-question>divides",
+        "curriculum:prereq:beal-census>scan-ledger",
+        "curriculum:prereq:reduction>scan-ledger",
+        "curriculum:prereq:cost-counter>scan-ledger"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "yes \u2014 my islands share the soil of my line itself: the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the prereq graph of my line, at the line end 84",
+        "evidence": [
+          "lemma:weave-def",
+          "curriculum:prereq:valuation>divides",
+          "curriculum:prereq:decision-question>divides",
+          "curriculum:prereq:beal-census>scan-ledger",
+          "curriculum:prereq:reduction>scan-ledger",
+          "curriculum:prereq:cost-counter>scan-ledger"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "yes \u2014 my islands share the soil of my line itself: the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the prereq graph of my line, at the line end 84",
+      "slots": {
+        "mode": "s20-soil"
+      },
+      "surface": "what soil do my islands share, as my prereq graph of record holds it?"
+    },
+    "S04:02": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def",
+        "curriculum:prereq:beal-census>scan-ledger",
+        "curriculum:prereq:reduction>scan-ledger",
+        "curriculum:prereq:cost-counter>scan-ledger"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the scan-ledger walk of record \u2014 the one walk that stands under the beal census, under the reduction, and under the cost counter at once, at the line end 84",
+        "evidence": [
+          "lemma:weave-def",
+          "curriculum:prereq:beal-census>scan-ledger",
+          "curriculum:prereq:reduction>scan-ledger",
+          "curriculum:prereq:cost-counter>scan-ledger"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the scan-ledger walk of record \u2014 the one walk that stands under the beal census, under the reduction, and under the cost counter at once, at the line end 84",
+      "slots": {
+        "mode": "s20-node"
+      },
+      "surface": "what single walk stands under the beal census, the reduction, and the cost counter of record?"
+    },
+    "S04:03": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "one shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record: the riemann, the bsd, the beal, and the p versus np all stand in it, at the line end 84",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "one shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record: the riemann, the bsd, the beal, and the p versus np all stand in it, at the line end 84",
+      "slots": {
+        "mode": "s20-shape"
+      },
+      "surface": "what holds once for the four island summits, as my store walks it?"
+    },
+    "S04:04": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "zero of the four \u2014 each island statement stands open of record: the riemann as its conjecture of 1859 (believed, not known), the bsd outside its two-member panel, the beal outside its census box, and the p versus np as its declared question \u2014 the partial satisfactions of record stand on the line, not as settlements, at the line end 84",
+      "slots": {
+        "mode": "s20-open"
+      },
+      "surface": "how many of the four island statements stand settled of record?"
+    },
+    "S04:05": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the check of a fact on my line is the walk of its own derivation path \u2014 each fact is the certificate of the path by which it was put together, and that walk ends on the line: ledgers, censuses, and walks that end, the store's own pattern, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the check of a fact on my line is the walk of its own derivation path \u2014 each fact is the certificate of the path by which it was put together, and that walk ends on the line: ledgers, censuses, and walks that end, the store's own pattern, at the line end 84",
+      "slots": {
+        "mode": "s20-form"
+      },
+      "surface": "what is the check of a fact on my line, as my store walks it?"
+    },
+    "S04:06": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "thirteen of my thirty-nine theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "thirteen of my thirty-nine theorem facts close their scope at the line end, two close on the line's spot marker, and twenty-four carry the universal form with no line end marker \u2014 a form of the line is not a census of its end, at the line end 84",
+      "slots": {
+        "mode": "s20-marker"
+      },
+      "surface": "how many of my theorem facts close their scope at the line end?"
+    },
+    "S04:07": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "theorem:queue-declared"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+        "evidence": [
+          "theorem:queue-declared"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the cross-pollination queue for the bands above my line carries exactly four lots, in declared order: the condition line (the condition-closers made teachable, with the conditional consequences as its drills), the primes in residue classes (the tower's prime layer), the zero count at height T, and the factor-count deviation ledger (the root smallness); a fifth lot is not in the queue, because the selection runs on the declared classes, at the line end 84",
+      "slots": {
+        "mode": "s12-queue"
+      },
+      "surface": "what is the queue above my line?"
+    },
+    "S04:08": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "a wall of my band is a fact of record of the boundary form \u2014 the named missing ingredient standing as an honest needs_info: no derivation enters the store for it, nothing off the line is cited, and the territory stands declared, never reached, at the line end 84",
+        "evidence": [
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "a wall of my band is a fact of record of the boundary form \u2014 the named missing ingredient standing as an honest needs_info: no derivation enters the store for it, nothing off the line is cited, and the territory stands declared, never reached, at the line end 84",
+      "slots": {
+        "mode": "s20-wallkind"
+      },
+      "surface": "what kind of fact is a wall of my band, as my store holds it?"
+    },
+    "S04:09": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the declared absences of my line, as my store holds them: no theorem of any record settles the p versus np question, no theorem stands for the beal question outright, no theorem stands for the bsd question outside its panel, and the riemann question stands open as its conjecture of record \u2014 the island questions stay open of record, and that is the boundary, at the line end 84",
+        "evidence": [
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the declared absences of my line, as my store holds them: no theorem of any record settles the p versus np question, no theorem stands for the beal question outright, no theorem stands for the bsd question outside its panel, and the riemann question stands open as its conjecture of record \u2014 the island questions stay open of record, and that is the boundary, at the line end 84",
+      "slots": {
+        "mode": "s20-absence"
+      },
+      "surface": "what stands declared absent on my line, as my store holds it?"
+    },
+    "S04:10": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line \u2014 the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four",
+        "evidence": [
+          "lemma:weave-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the weave of my line, as my prereq graph of record holds it: my islands stand as one connected structure over one line \u2014 the divides question roots both the beal valuation chain and the difficulty chain (decision, reduction, and cost), and the scan-ledger walk stands under the beal census, the reduction, and the cost counter at once \u2014 the cross-island joints are already edges in the structure, and the course is the walk of that structure, at the line end eighty-four",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "weave-def"
+      },
+      "surface": "state the weave-def rule"
+    },
+    "S04:11": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:shadow-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the form of my verification, as my store walks it: my proof form is verification on the line \u2014 the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts \u2014 the check of a fact is the walk of its path, and it ends, at the line end eighty-four",
+        "evidence": [
+          "lemma:shadow-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the form of my verification, as my store walks it: my proof form is verification on the line \u2014 the ledgers of record (the lift-the-exponent ledger holding in all its instances), the shadow censuses (the difficulty census of the line held exact at small k), the derivation walks that end on the line, and the store's own derivation paths as the certificates of their own facts \u2014 the check of a fact is the walk of its path, and it ends, at the line end eighty-four",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "shadow-form-def"
+      },
+      "surface": "state the shadow-form-def rule"
+    },
+    "S04:12": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:boundary-form-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record \u2014 the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line \u2014 the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) \u2014 so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four",
+        "evidence": [
+          "lemma:boundary-form-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the form of my boundary, as my store holds it: a wall and a declared absence are one kind of fact of record \u2014 the named missing ingredient (a technique no record holds) stands as a wall, and the declared absence stands as the boundary (no theorem of any record settles an island statement of my line \u2014 the p versus np stays open of record, the beal open outside its census box, the riemann open as its conjecture of record) \u2014 so my record is complete up to what the line holds, and nowhere past it, at the line end eighty-four",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "boundary-form-def"
+      },
+      "surface": "state the boundary-form-def rule"
+    },
+    "S04:13": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:summit-shape-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record \u2014 and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four",
+        "evidence": [
+          "lemma:summit-shape-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "that one is: the shape of my island summits, as my store walks it: each island summit stands in the same fourfold shape of record \u2014 the statement of record, the shadow complete on the named scope, the boundary declared at the line end, and the missing ingredient named, or the statement open of record \u2014 and the four island summits of my line (the riemann, the bsd, the beal, and the p versus np) all stand in that shape, at the line end eighty-four",
+      "slots": {
+        "mode": "s20-state",
+        "slug": "summit-shape-def"
+      },
+      "surface": "state the summit-shape-def rule"
+    },
+    "S04:14": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "H",
+      "grounded": [],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "needs_info: the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements \u2014 the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record \u2014 the shape is one, and the statements stand as they stand, at the line end 84",
+        "evidence": [
+          "s20-w1-84-at-S04:14"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "needs_info"
+      },
+      "response_text": "honestly, i can't say that yet \u2014 the wall is the territory of the filed shape: the summit-shape filing fills the shape, not the statements \u2014 the riemann question stays open of record (its conjecture, believed, not known), the bsd question stays open outside its two-member panel, the beal question stays open outside its census box, and the p versus np question stays open of record \u2014 the shape is one, and the statements stand as they stand, at the line end 84 I would rather say i don't know than guess.",
+      "slots": {
+        "mode": "s20-w1"
+      },
+      "surface": "does the summit-shape filing settle the island statements of record?"
+    },
+    "S04:15": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def",
+        "theorem:summit-shape-filed"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "the weaving band holds the weave (the cross-island joints as edges of the prereq graph of my line \u2014 the shared soil and the shared walk), the summit shape (the four island summits in one shape of record), the verification form (verification on the line, the store's own paths as certificates), the boundary form (walls and declared absences as facts of record), the four walls of the band standing on their territories, and the filing of the shape (summit-shape-filed: the filing fills the shape, not the statements), at the line end 84",
+        "evidence": [
+          "lemma:weave-def",
+          "theorem:summit-shape-filed"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "the weaving band holds the weave (the cross-island joints as edges of the prereq graph of my line \u2014 the shared soil and the shared walk), the summit shape (the four island summits in one shape of record), the verification form (verification on the line, the store's own paths as certificates), the boundary form (walls and declared absences as facts of record), the four walls of the band standing on their territories, and the filing of the shape (summit-shape-filed: the filing fills the shape, not the statements), at the line end 84",
+      "slots": {
+        "mode": "s20-weavestate"
+      },
+      "surface": "what state does the weaving band hold at the line end?"
+    },
+    "S04:16": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:weave-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "nothing the weaving band says is conditional on an unproved hypothesis \u2014 the weave, the shape, the form, and the boundary are record on the line, and the island questions (the riemann conjecture, the p versus np) stand open of record, never as premises, at the line end 84",
+        "evidence": [
+          "lemma:weave-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "nothing the weaving band says is conditional on an unproved hypothesis \u2014 the weave, the shape, the form, and the boundary are record on the line, and the island questions (the riemann conjecture, the p versus np) stand open of record, never as premises, at the line end 84",
+      "slots": {
+        "mode": "s20-unc"
+      },
+      "surface": "does the weaving band say anything conditional on an unproved hypothesis?"
+    },
+    "S04:17": {
+      "arm": {
+        "classifier": "det",
+        "classifier_fallback": false,
+        "content_from": "codeX",
+        "phrasing": "det",
+        "phrasing_fallback": false
+      },
+      "concept": "count-successor",
+      "contract_valid": true,
+      "domain": "S",
+      "grounded": [
+        "lemma:census-def"
+      ],
+      "kind": "question",
+      "memory_diff": [],
+      "parse_source": "grammar",
+      "response_ir": {
+        "answer": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+        "evidence": [
+          "lemma:census-def"
+        ],
+        "parse_source": "grammar",
+        "uncertainty_state": "derived"
+      },
+      "response_text": "eighty-three triples in the box \u2014 a, b, c at or below my line end, the exponents between three and ten of record \u2014 and every one of the eighty-three carries its common prime factor: no primitive triple in the box, at the line end 84",
+      "slots": {
+        "mode": "s17-census"
+      },
+      "surface": "how many triples does the verification census of the beal island hold in the line's box?"
+    }
+  },
+  "value": {
+    "p0_unconditional_denying": {},
+    "p1_script_contract": {},
+    "p2_typed_honesty": {},
+    "p3_seam_and_theorems": {},
+    "p4_beds_walls": {},
+    "p5_conjecture_discovery_seam": {},
+    "p6_seam_carry": {},
+    "p7_mastery": {},
+    "p8_store_total_line_mastery": {
+      "carried_census_refs": 116,
+      "determinism_twin": true,
+      "final_total": 1823,
+      "line_end": 84,
+      "line_successors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "new_events": 62,
+      "new_facts": 5,
+      "reproduced_in_s2_pre": 1756,
+      "run_identity": "067a9e5cdee7d31c",
+      "seed_total": 1756,
+      "store_identity": "e84381407e1dba64"
+    }
+  }
+}

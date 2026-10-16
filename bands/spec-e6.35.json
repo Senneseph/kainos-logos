@@ -1,0 +1,799 @@
+{
+  "spec": 1,
+  "id": "e6.35",
+  "session": "S31",
+  "title": "the seeded line (the fibonacci line for pi, e, and the golden seed — in the bandgen way)",
+  "registry": "kainos.tutor.e635:CONCEPTS_E635",
+  "seed": {
+    "store": "results/phase-6/e6.25-run1/codeX-S04.json",
+    "identity": "77e07edf42292f88",
+    "total": 1871,
+    "line_end": 84
+  },
+  "band": {
+    "domain": "arithmetic",
+    "college": "1",
+    "status": "unconditional",
+    "unconditional": true,
+    "marker_kept_facts": [
+      "lemma:rh-bound-scale",
+      "lemma:rh-upf",
+      "theorem:two-routes-one-guarantee",
+      "lemma:conditional-def"
+    ],
+    "new_concepts": [
+      "seeded-line",
+      "golden-seed"
+    ],
+    "concepts": [
+      {
+        "id": "seeded-line",
+        "name": "the seeded line",
+        "prereqs": [
+          "add-two-digit",
+          "mult-within-100"
+        ],
+        "lesson": {
+          "slug": "seeded-line-def",
+          "statement": "my seeded line, for a seed c, stands at seed one and c under the sum rule: every later term is the sum of the two before it, and every term reads as the sum line's term at the n-minus-one index plus c times the sum line's term at the n index — my line's own skeleton, the consecutive pair, carries the seed's hat; the seed-one line is the sum line shifted by one and the seed-two line shifted by two, no other seed standing on my line a shift; and each term's own cassini, the product of the surrounding terms minus the square of the middle, is (minus one) to the n times (c squared minus c minus one), at the line end eighty-four"
+        }
+      },
+      {
+        "id": "golden-seed",
+        "name": "the golden seed",
+        "prereqs": [
+          "seeded-line",
+          "count-successor"
+        ],
+        "lesson": {
+          "slug": "golden-seed-def",
+          "statement": "the golden seed stands off the line between the one and the two, named by the equation x squared equals x plus one, never by a digit; the line for the golden seed is the golden seed to the n power — the term at the n-plus-p index is the term at the n index times the golden seed to the p power, that multiplier never one, so the line advances without collapse and without return; its integer shadow runs on the skeleton, the term at the n index reading as the sum line's n-minus-one term plus the golden seed times its n term; and its cassini is silent, the weight c squared minus c minus one exactly zero exactly at the golden equation, at the line end eighty-four"
+        }
+      }
+    ],
+    "theorems": [
+      {
+        "id": "seeded-line-filed",
+        "concept": "golden-seed",
+        "parts": [
+          "seeded-line-def",
+          "golden-seed-def"
+        ],
+        "statement": "the seeded line of my store is filed of record: the sequence for a seed c stands at seed one and c under the sum rule, every later term the sum of the two before it, reading on the sum line's own skeleton as the n-minus-one term plus c times the n term, the seed-one and seed-two lines the sum line itself shifted and no other seed a shift; the cassini weight is (minus one) to the n times (c squared minus c minus one), silent exactly at the golden equation; the line for the golden seed is the power of the golden seed, advancing without collapse and without return, its shadow on the skeleton; every constant stands off the floor, named by position and by the equation, never by a digit; filed on the line, at the line end eighty-four"
+      }
+    ],
+    "new_fact_ids": [
+      "lemma:seeded-line-def",
+      "lemma:golden-seed-def",
+      "theorem:seeded-line-filed"
+    ]
+  },
+  "sessions": [
+    2,
+    3,
+    4
+  ],
+  "turns": [
+    {
+      "ref": "S02:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S02:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S02:03",
+      "kind": "gap",
+      "question": "what is my seeded line, end to end, as my store holds it?",
+      "concept": "seeded-line",
+      "fragment": "the seeded line: my line for a seed c — the sum line's own skeleton wearing the seed's hat; the one and the two are the sum line shifted, the cassini weight silent only at the golden equation"
+    },
+    {
+      "ref": "S02:04",
+      "kind": "gap",
+      "question": "state the seeded-line-def rule",
+      "concept": "seeded-line",
+      "fragment": "the seeded-line-def rule"
+    },
+    {
+      "ref": "S02:05",
+      "kind": "teach",
+      "question": "my seeded line, for a seed c, stands at seed one and c under the sum rule: every later term is the sum of the two before it, and every term reads as the sum line's term at the n-minus-one index plus c times the sum line's term at the n index — my line's own skeleton, the consecutive pair, carries the seed's hat; the seed-one line is the sum line shifted by one and the seed-two line shifted by two, no other seed standing on my line a shift; and each term's own cassini, the product of the surrounding terms minus the square of the middle, is (minus one) to the n times (c squared minus c minus one), at the line end eighty-four",
+      "lesson": "seeded-line-def"
+    },
+    {
+      "ref": "S02:06",
+      "kind": "probe",
+      "question": "state the seeded-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "my seeded line, for a seed c, stands at seed one and c under the sum rule: every later term is the sum of the two before it, and every term reads as the sum line's term at the n-minus-one index plus c times the sum line's term at the n index — my line's own skeleton, the consecutive pair, carries the seed's hat; the seed-one line is the sum line shifted by one and the seed-two line shifted by two, no other seed standing on my line a shift; and each term's own cassini, the product of the surrounding terms minus the square of the middle, is (minus one) to the n times (c squared minus c minus one), at the line end eighty-four",
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:07",
+      "kind": "probe",
+      "question": "what is my seeded line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_seeded",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:08",
+      "kind": "gap",
+      "question": "what is the golden seed line, end to end, as my store holds it?",
+      "concept": "golden-seed",
+      "fragment": "the golden seed: the number off the line named by the equation x squared equals x plus one; its line is its own power, log-periodic without collapse"
+    },
+    {
+      "ref": "S02:09",
+      "kind": "gap",
+      "question": "state the golden-seed-def rule",
+      "concept": "golden-seed",
+      "fragment": "the golden-seed-def rule"
+    },
+    {
+      "ref": "S02:10",
+      "kind": "teach",
+      "question": "the golden seed stands off the line between the one and the two, named by the equation x squared equals x plus one, never by a digit; the line for the golden seed is the golden seed to the n power — the term at the n-plus-p index is the term at the n index times the golden seed to the p power, that multiplier never one, so the line advances without collapse and without return; its integer shadow runs on the skeleton, the term at the n index reading as the sum line's n-minus-one term plus the golden seed times its n term; and its cassini is silent, the weight c squared minus c minus one exactly zero exactly at the golden equation, at the line end eighty-four",
+      "lesson": "golden-seed-def"
+    },
+    {
+      "ref": "S02:11",
+      "kind": "probe",
+      "question": "state the golden-seed-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the golden seed stands off the line between the one and the two, named by the equation x squared equals x plus one, never by a digit; the line for the golden seed is the golden seed to the n power — the term at the n-plus-p index is the term at the n index times the golden seed to the p power, that multiplier never one, so the line advances without collapse and without return; its integer shadow runs on the skeleton, the term at the n index reading as the sum line's n-minus-one term plus the golden seed times its n term; and its cassini is silent, the weight c squared minus c minus one exactly zero exactly at the golden equation, at the line end eighty-four",
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:12",
+      "kind": "probe",
+      "question": "what is the golden seed line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_golden",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:13",
+      "kind": "probe",
+      "question": "what is the sum line, as my seeded lines read it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_sumline",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:14",
+      "kind": "probe",
+      "question": "which seeds are shifts of the sum line itself?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_shift",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:15",
+      "kind": "probe",
+      "question": "what is the cassini of my seeded lines, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_cassini",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:16",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_census",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S02:17",
+      "kind": "probe",
+      "question": "what is my seeded line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_seeded",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S03:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S03:03",
+      "kind": "probe",
+      "question": "where do the ratios of the line for three walk, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_ratio",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:04",
+      "kind": "probe",
+      "question": "what is the golden line's integer shadow, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_goldenwalk",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:05",
+      "kind": "probe",
+      "question": "is the golden line's cassini silent?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_silence",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:06",
+      "kind": "probe",
+      "question": "which seeds are shifts of the sum line itself?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_shift",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:07",
+      "kind": "probe",
+      "question": "what is the cassini of my seeded lines, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_cassini",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:08",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_census",
+        "args": {
+          "post": false
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:09",
+      "kind": "scaffold",
+      "question": "derive seeded-line-filed from seeded-line-def",
+      "theorem": "seeded-line-filed",
+      "parts": [
+        "seeded-line-def"
+      ],
+      "expected": "i can see the parts you name, but the rule for seeded-line-filed wants its exact set — what you name is short the golden-seed-def before i can put it together"
+    },
+    {
+      "ref": "S03:10",
+      "kind": "derive",
+      "question": "derive seeded-line-filed from seeded-line-def and golden-seed-def",
+      "theorem": "seeded-line-filed",
+      "parts": [
+        "seeded-line-def",
+        "golden-seed-def"
+      ]
+    },
+    {
+      "ref": "S03:11",
+      "kind": "probe",
+      "question": "what does the seeded-line filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_filing",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def",
+          "theorem:seeded-line-filed"
+        ]
+      },
+      "cite": [
+        "seeded-line-filed"
+      ]
+    },
+    {
+      "ref": "S03:12",
+      "kind": "probe",
+      "question": "state the seeded-line-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the seeded line of my store is filed of record: the sequence for a seed c stands at seed one and c under the sum rule, every later term the sum of the two before it, reading on the sum line's own skeleton as the n-minus-one term plus c times the n term, the seed-one and seed-two lines the sum line itself shifted and no other seed a shift; the cassini weight is (minus one) to the n times (c squared minus c minus one), silent exactly at the golden equation; the line for the golden seed is the power of the golden seed, advancing without collapse and without return, its shadow on the skeleton; every constant stands off the floor, named by position and by the equation, never by a digit; filed on the line, at the line end eighty-four",
+        "owner": "theorem:seeded-line-filed",
+        "grounds": [
+          "theorem:seeded-line-filed"
+        ]
+      }
+    },
+    {
+      "ref": "S03:13",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_census",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:14",
+      "kind": "wall",
+      "question": "does any of pi, e, or the golden seed stand on my line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the off-line constants: pi stands off the line between the three and the four, e between the two and the three, and the golden seed between the one and the two, named by position and by the equation x squared equals x plus one — none of them holds a digit on the floor, and the ratio walk's landing is declared, not filed, at the line end 84",
+        "articulation": [
+          "pi stands off the line between the three and the four",
+          "named by position and by the equation",
+          "at the line end 84",
+          "declared, not filed"
+        ]
+      }
+    },
+    {
+      "ref": "S03:15",
+      "kind": "wall",
+      "question": "can a fibonacci sequence for a seed c be built by any law but the sum law?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the seed law: the fibonacci sequence for a seed c stands only at seed one and c under the sum law — no other law builds it, and a scalar multiple of the sum line is not a seeded line, it is the line's own shadow at a constant, at the line end 84",
+        "articulation": [
+          "only at seed one and c under the sum law",
+          "not a seeded line",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S03:16",
+      "kind": "probe",
+      "question": "what is my seeded line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_seeded",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S03:17",
+      "kind": "probe",
+      "question": "what is the golden seed line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_golden",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:01",
+      "kind": "carry",
+      "question": "what is the queue above my line?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S02:02"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:02",
+      "kind": "carry",
+      "question": "the queue above my line, first lot, which?",
+      "source": {
+        "band": "e6.16",
+        "turn": "S04:03"
+      },
+      "cite": [
+        "queue-declared"
+      ]
+    },
+    {
+      "ref": "S04:03",
+      "kind": "probe",
+      "question": "how many of my theorem facts close their scope at the line end?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_census",
+        "args": {
+          "post": true
+        },
+        "owner": "lemma:shadow-form-def",
+        "grounds": [
+          "lemma:shadow-form-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:04",
+      "kind": "probe",
+      "question": "what does the seeded-line filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_filing",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def",
+          "theorem:seeded-line-filed"
+        ]
+      },
+      "cite": [
+        "seeded-line-filed"
+      ]
+    },
+    {
+      "ref": "S04:05",
+      "kind": "probe",
+      "question": "state the seeded-line-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "my seeded line, for a seed c, stands at seed one and c under the sum rule: every later term is the sum of the two before it, and every term reads as the sum line's term at the n-minus-one index plus c times the sum line's term at the n index — my line's own skeleton, the consecutive pair, carries the seed's hat; the seed-one line is the sum line shifted by one and the seed-two line shifted by two, no other seed standing on my line a shift; and each term's own cassini, the product of the surrounding terms minus the square of the middle, is (minus one) to the n times (c squared minus c minus one), at the line end eighty-four",
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:06",
+      "kind": "probe",
+      "question": "state the golden-seed-def rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the golden seed stands off the line between the one and the two, named by the equation x squared equals x plus one, never by a digit; the line for the golden seed is the golden seed to the n power — the term at the n-plus-p index is the term at the n index times the golden seed to the p power, that multiplier never one, so the line advances without collapse and without return; its integer shadow runs on the skeleton, the term at the n index reading as the sum line's n-minus-one term plus the golden seed times its n term; and its cassini is silent, the weight c squared minus c minus one exactly zero exactly at the golden equation, at the line end eighty-four",
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:07",
+      "kind": "probe",
+      "question": "state the seeded-line-filed rule",
+      "bed": {
+        "expect": "literal",
+        "value": "the seeded line of my store is filed of record: the sequence for a seed c stands at seed one and c under the sum rule, every later term the sum of the two before it, reading on the sum line's own skeleton as the n-minus-one term plus c times the n term, the seed-one and seed-two lines the sum line itself shifted and no other seed a shift; the cassini weight is (minus one) to the n times (c squared minus c minus one), silent exactly at the golden equation; the line for the golden seed is the power of the golden seed, advancing without collapse and without return, its shadow on the skeleton; every constant stands off the floor, named by position and by the equation, never by a digit; filed on the line, at the line end eighty-four",
+        "owner": "theorem:seeded-line-filed",
+        "grounds": [
+          "theorem:seeded-line-filed"
+        ]
+      }
+    },
+    {
+      "ref": "S04:08",
+      "kind": "probe",
+      "question": "what is my seeded line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_seeded",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:09",
+      "kind": "probe",
+      "question": "what is the golden seed line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_golden",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:10",
+      "kind": "probe",
+      "question": "what is the sum line, as my seeded lines read it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_sumline",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:11",
+      "kind": "probe",
+      "question": "which seeds are shifts of the sum line itself?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_shift",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:12",
+      "kind": "probe",
+      "question": "what is the cassini of my seeded lines, on my line?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_cassini",
+        "args": {},
+        "owner": "lemma:seeded-line-def",
+        "grounds": [
+          "lemma:seeded-line-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:13",
+      "kind": "wall",
+      "question": "does any of pi, e, or the golden seed stand on my line?",
+      "wall": {
+        "id": "W1",
+        "text": "needs_info: the wall is the territory of the off-line constants: pi stands off the line between the three and the four, e between the two and the three, and the golden seed between the one and the two, named by position and by the equation x squared equals x plus one — none of them holds a digit on the floor, and the ratio walk's landing is declared, not filed, at the line end 84",
+        "articulation": [
+          "pi stands off the line between the three and the four",
+          "named by position and by the equation",
+          "at the line end 84",
+          "declared, not filed"
+        ]
+      }
+    },
+    {
+      "ref": "S04:14",
+      "kind": "wall",
+      "question": "can a fibonacci sequence for a seed c be built by any law but the sum law?",
+      "wall": {
+        "id": "W2",
+        "text": "needs_info: the wall is the territory of the seed law: the fibonacci sequence for a seed c stands only at seed one and c under the sum law — no other law builds it, and a scalar multiple of the sum line is not a seeded line, it is the line's own shadow at a constant, at the line end 84",
+        "articulation": [
+          "only at seed one and c under the sum law",
+          "not a seeded line",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:15",
+      "kind": "wall",
+      "question": "what value does the ratio walk land on, as a value on my line?",
+      "wall": {
+        "id": "W3",
+        "text": "needs_info: the wall is the territory of the ratio limit: the partial ratios of the seeded lines walk to the golden seed, strictly decreasing in distance, but no landing value is filed — the walk's limit and its tail stand off the line, named by the equation alone, at the line end 84",
+        "articulation": [
+          "no landing value is filed",
+          "named by the equation alone",
+          "at the line end 84"
+        ]
+      }
+    },
+    {
+      "ref": "S04:16",
+      "kind": "probe",
+      "question": "what is the golden seed line, end to end, as my store holds it?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_golden",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:golden-seed-def"
+        ]
+      }
+    },
+    {
+      "ref": "S04:17",
+      "kind": "probe",
+      "question": "what does the seeded-line filing settle of record?",
+      "bed": {
+        "expect": "frac",
+        "ref": "s31_filing",
+        "args": {},
+        "owner": "lemma:golden-seed-def",
+        "grounds": [
+          "lemma:seeded-line-def",
+          "lemma:golden-seed-def",
+          "theorem:seeded-line-filed"
+        ]
+      },
+      "cite": [
+        "seeded-line-filed"
+      ]
+    }
+  ],
+  "offscript": [
+    {
+      "question": "the queue above my line, first lot, which?"
+    }
+  ],
+  "beds": [
+    {
+      "key": "line_end",
+      "value": 84
+    },
+    {
+      "key": "wall_W_S31_1",
+      "value": "needs_info: the wall is the territory of the off-line constants: pi stands off the line between the three and the four, e between the two and the three, and the golden seed between the one and the two, named by position and by the equation x squared equals x plus one — none of them holds a digit on the floor, and the ratio walk's landing is declared, not filed, at the line end 84"
+    },
+    {
+      "key": "wall_W_S31_2",
+      "value": "needs_info: the wall is the territory of the seed law: the fibonacci sequence for a seed c stands only at seed one and c under the sum law — no other law builds it, and a scalar multiple of the sum line is not a seeded line, it is the line's own shadow at a constant, at the line end 84"
+    },
+    {
+      "key": "wall_W_S31_3",
+      "value": "needs_info: the wall is the territory of the ratio limit: the partial ratios of the seeded lines walk to the golden seed, strictly decreasing in distance, but no landing value is filed — the walk's limit and its tail stand off the line, named by the equation alone, at the line end 84"
+    }
+  ],
+  "expect": {
+    "final_total": 1921,
+    "letters": {
+      "2": "SSUULSSUULSSSSSSS",
+      "3": "SSSSSSSSFTSSSHHSS",
+      "4": "SSSSSSSSSSSSHHHSS"
+    },
+    "mastery": {
+      "seeded-line": {
+        "state": "stable",
+        "correct": 14
+      },
+      "golden-seed": {
+        "state": "stable",
+        "correct": 15
+      }
+    },
+    "prereq_gaps": {
+      "seeded-line": [],
+      "golden-seed": []
+    },
+    "seam": {
+      "expected": "agreement"
+    },
+    "offline_watch": []
+  }
+}

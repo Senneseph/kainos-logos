@@ -1,0 +1,53 @@
+{
+  "config": {
+    "checks": 8,
+    "checks_passed": 8,
+    "commit": "4b5f756",
+    "dataset_hash": null,
+    "declared_B": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48
+    ],
+    "deviations": [
+      "D-e5d (12/48 = declared regime, not an equilibrium; 41/48 incentive record)",
+      "D-e5e (replaced unsupported per-episode direction check before freeze)",
+      "D-e5f (analytic leakage integrates the two values x four draws)"
+    ],
+    "seed": 0,
+    "seeds": {
+      "episodes": 5102,
+      "leakage": 5103,
+      "samples": 5000
+    }
+  },
+  "evidence": [
+    "results/phase-5/e5.2.json",
+    "results/phase-5/e5.2-V0-V0-00.json",
+    "results/phase-5/e5.2-V0-V0-03.json",
+    "results/phase-5/e5.2-V1-V1-00.json",
+    "results/phase-5/e5.2-V1-V1-03.json",
+    "results/phase-5/e5.2-V2-V2-00.json",
+    "results/phase-5/e5.2-V2-V2-03.json",
+    "results/phase-5/e5.2-V1-V2-00.json",
+    "results/phase-5/e5.2-V1-V2-03.json",
+    "results/phase-5/e5.2-V2-V1-00.json",
+    "results/phase-5/e5.2-V2-V1-03.json"
+  ],
+  "hypothesis": "Under incentive, conditioning on more of the partner's model improves the competitive estimate exactly as information theory predicts: V2 (full transcript) achieves the Bayes lower bound and beats V1 (R1 only) head-to-head, V1 beats the zero-information ablation V0, deception is detected with full posterior mass by V2 (48/48) but only 8/48 by V1, and leakage is 4.58/4.67 of the 5.58 available bits \u2014 exact, pre-registered, and bit-identical on re-execution.",
+  "metric": "acceptance checks passed (0-8)",
+  "name": "e5.2",
+  "passed": true,
+  "skipped": false,
+  "threshold": "8/8",
+  "value": 1.0
+}

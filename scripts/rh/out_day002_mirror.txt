@@ -1,0 +1,121 @@
+  zeta(2)    err 2.22e-16
+  zeta(3)    err 4.44e-16
+  zeta(1/2)  err 6.88e-15
+  FE check (9 points)  max err 5.90e-12
+  first zero [14.134725141734695]  (expected 14.1347251417...)
+  zeta_core self-test GREEN
+
+== M2  I(sigma + i gamma_k) at the first five zeros ==
+  gamma1 = 14.134725:
+    0.00:3.458e-01  0.10:2.140e-01  0.20:1.172e-01  0.30:5.111e-02  0.40:1.263e-02  0.45:3.149e-03  0.49:1.258e-04  0.50:2.317e-29  0.51:1.258e-04  0.55:3.149e-03  0.60:1.263e-02  0.70:5.111e-02  0.80:1.172e-01  0.90:2.140e-01  1.00:3.458e-01
+  gamma2 = 21.022040:
+    0.00:7.939e-01  0.10:4.728e-01  0.20:2.511e-01  0.30:1.070e-01  0.40:2.607e-02  0.45:6.476e-03  0.49:2.585e-04  0.50:2.488e-29  0.51:2.585e-04  0.55:6.476e-03  0.60:2.607e-02  0.70:1.070e-01  0.80:2.511e-01  0.90:4.728e-01  1.00:7.939e-01
+  gamma3 = 25.010858:
+    0.00:1.223e+00  0.10:7.147e-01  0.20:3.736e-01  0.30:1.573e-01  0.40:3.805e-02  0.45:9.434e-03  0.49:3.764e-04  0.50:2.681e-29  0.51:3.764e-04  0.55:9.434e-03  0.60:3.805e-02  0.70:1.573e-01  0.80:3.736e-01  0.90:7.147e-01  1.00:1.223e+00
+  gamma4 = 30.424876:
+    0.00:1.208e+00  0.10:6.854e-01  0.20:3.495e-01  0.30:1.444e-01  0.40:3.452e-02  0.45:8.534e-03  0.49:3.401e-04  0.50:5.308e-28  0.51:3.401e-04  0.55:8.534e-03  0.60:3.452e-02  0.70:1.444e-01  0.80:3.495e-01  0.90:6.854e-01  1.00:1.208e+00
+  gamma5 = 32.935062:
+    0.00:1.400e+00  0.10:7.863e-01  0.20:3.975e-01  0.30:1.632e-01  0.40:3.884e-02  0.45:9.591e-03  0.49:3.821e-04  0.50:3.041e-28  0.51:3.821e-04  0.55:9.591e-03  0.60:3.884e-02  0.70:1.632e-01  0.80:3.975e-01  0.90:7.863e-01  1.00:1.400e+00
+  (values I(sigma+i*gamma); the column at 0.50 is the on-line trough,
+   and it must be the minimum of each row -- checked below)
+  rows where 0.50 is the minimum: 5 / 5
+
+== M3  floor(sigma) = min over t in [10, 60] of I(sigma + i t) ==
+   sigma   floor(I)       argmin t        (note)
+    0.05   2.7477e-01     14.120      
+    0.10   2.1374e-01     14.120      
+    0.15   1.6141e-01     14.120      
+    0.20   1.1721e-01     14.120      
+    0.25   8.0633e-02     14.120      
+    0.30   5.1192e-02     14.140      
+    0.35   2.8617e-02     14.140      
+    0.40   1.2677e-02     14.140      
+    0.45   3.1864e-03     14.140      
+    0.50   7.2899e-06     40.920      <- line: grid floor 7e-6 (true min = 0 at gamma7; dt=0.02)
+    0.55   3.1864e-03     14.140      
+    0.60   1.2677e-02     14.140      
+    0.65   2.8617e-02     14.140      
+    0.70   5.1192e-02     14.140      
+    0.75   8.0633e-02     14.120      
+    0.80   1.1721e-01     14.120      
+    0.85   1.6141e-01     14.120      
+    0.90   2.1374e-01     14.120      
+    0.95   2.7477e-01     14.120      
+  all OFF-LINE floors > 0: True  (min off-line floor 3.186e-03)
+
+== M4  the leaked function L12(s) = (1 + 2^-s) beta(s) ==
+  (a) the real rotation of beta (root number +1), PROVEN at dps 50:
+      psi(t) = t*ln(4/pi) + 2*im*logGamma(3/4 + it/2),  Zb(t) = Re[exp(+i psi/2) beta(1/2+it)], |Zb| = |beta|
+      the numpy check below runs at the PAIR-SERIES floor (2|s|/sqrt(4P));
+      the dps-50 proof (Im <= 3.4e-50) is in out_mpmath_audit_beta.txt
+      max |Im rotation check| (8 points, 1e6 pairs) = 2.48e-04
+  (b) on-line beta zeros -- the numpy pair-series floor is too loose to
+      certify zeros on the line; the dps-50 mpmath audit (out_mpmath_audit_beta.txt):
+        zero 1: 6.020948904697597    zero 2: 10.24377030416655
+        zero 3: 12.98809801231242     (|L12| ~ 1e-39 at each; no zero below zero 1)
+      I12 at these zeros (dps 50) <= 2.8e-77: collapsed on-line orbits
+  (c) the leak zero s0 = i*pi/ln2 (sigma = 0), and its empty mirror:
+      t0 = pi/ln2 = 4.532360142
+      |L12(s0)|        = 4.627237e-16   (roundoff of an EXACT algebraic zero: 2^-s0 = e^-i pi = -1; dps-50: 1.2e-50)
+      |L12(1 - s0-c)|  = 5.692554e-01   (mirror slot -- EMPTY means this is nonzero)
+      I12(s0)          = 3.240518e-01   > 0  <-- the mirror break, as a number
+
+== M6  the four mirrors (owner's day-2 note): the orbit of a zero ==
+  symmetries of the zero set of any real-coefficient L-function with
+  a functional equation (points written as (sigma, t)):
+    C   : (sigma, t) -> (sigma, -t)     conjugation (flip t)
+    M   : (sigma, t) -> (1-sigma, -t)   FE mirror (point-flip about (1/2, 0))
+    C*M : (sigma, t) -> (1-sigma, t)    reflection in the sigma = 1/2 line
+  together with the identity: the KLEIN 4-GROUP -- the symmetry group of
+  a rectangle centered at (1/2, 0).  A point thus has up to FOUR mirror
+  slots: itself, C, M, C*M.  (Not a single rotating i-operator: see (d).)
+  (a) zeta zeros (on the line): |zeta| at each of the 4 slots:
+    gamma =  14.134725   itself:3.40e-15   C:3.40e-15   M:3.40e-15   C*M:3.40e-15
+    gamma =  21.022040   itself:3.53e-15   C:3.53e-15   M:3.53e-15   C*M:3.53e-15
+    gamma =  25.010858   itself:3.66e-15   C:3.66e-15   M:3.66e-15   C*M:3.66e-15
+    gamma =  30.424876   itself:1.63e-14   C:1.63e-14   M:1.63e-14   C*M:1.63e-14
+      on the line, M and C coincide (both send (1/2,g) -> (1/2,-g)) and
+      C*M is the identity: the 4-slot orbit COLLAPSES to the 2 on-axis
+      points (gamma and -gamma).  This is the RH case, in orbit language.
+  (b) the leak zero s0 = i*pi/ln2 (sigma = 0) for L12 = (1+2^-s) beta:
+    slot itself -> point ( 0.00,  +4.53236)   FULL (zero)
+    slot C     -> point ( 0.00,  -4.53236)   FULL (zero)
+    slot M     -> point ( 1.00,  -4.53236)   EMPTY (|L12| = 0.5693)
+    slot C*M   -> point ( 1.00,  +4.53236)   EMPTY (|L12| = 0.5693)
+      the leak orbit is HALF-FILLED: the zero + its conjugate C, while the
+      two mirror slots M, C*M (at sigma = 1) are empty.  Half-orbit = the
+      measurable signature of a BROKEN mirror (imprimitive function).
+  (c) a genuine off-line zero (RH violation, FE-consistent) would have ALL
+      FOUR slots full at 4 DISTINCT points: a full quartet off the axis.
+  TRICHOTOMY of zero-orbits (all three now measured or pinned down):
+    on-line (RH)      : collapsed 2-orbit ON the axis, all slots full
+    off-line quartet  : 4 distinct full slots, symmetric about the axis = RH FALSE
+    leaked half-orbit : 2 full + 2 empty slots                          = broken mirror
+  (d) the literal cyclic i-rotation (owner's 4-step cycle) -- measured ABSENT:
+      rotate (1/2, gamma1 = 14.134725) by 90 deg about (1/2,0) -> -13.634725 + 0i:
+        |zeta| = 7.460e-02   (not a zero)
+      rotate by 270 deg -> 14.634725 + 0i:
+        |zeta| = 1.000039   (not a zero)
+      there is NO order-4 rotation in the zeta zero set: the four-fold
+      structure is two independent REFLECTIONS (the Klein four-group),
+      not one rotating operator.  The COUNT of four the owner observed is
+      exactly right; the mechanism is a product of mirrors, not i^2 = -1.
+      Arithmetic echo: 4 = 2^2 = '1/2 squared' -- the same 4 that decides
+      the two-squares story (day-001 Q5); the rectangle is one 1/2-axis
+      crossed with another.
+
+== M5  verdict ==
+  The mirror-sum energy I(s) = |f(s)|^2 + |f(1-s-c)|^2 separates the two
+  cases with a single scalar:
+    * self-reciprocal f, zero ON the isometric line: I = 0 + 0 = 0
+    * mirror-broken f, zero off the line, empty mirror: I = 0 + c^2 > 0
+  For zeta itself I reaches 0 ONLY at the on-line zeros in every measured
+  strip slice (M2, M3); the leak test (M4) shows the moment the mirror
+  breaks, the same invariant becomes strictly positive at the new zero.
+  With M6, THE OPEN (THM-LEVEL) QUESTION gets its orbit-language form:
+    prove that for the primitive completed zeta, a zero's orbit can only
+    be the COLLAPSED ON-AXIS one (case a) -- the full off-axis quartet
+    (case c) and the empty mirror slots together are impossible.
+  That statement IS the Riemann Hypothesis, phrased as a claim about which
+  of the three zero-orbit types can occur -- a claim this script can
+  evaluate pointwise.

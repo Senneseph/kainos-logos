@@ -1,0 +1,40 @@
+{
+  "checks": 11,
+  "checks_passed": 11,
+  "config": {
+    "commit": "46a2ca0",
+    "script": "e3.7-project-game",
+    "seed": null,
+    "source_hash": "15a9604847d9870ce97dd179002000e5d09fe8c4b6feaaf7e529ac06de6533b2",
+    "source_uri": "data/e3.7_game_notes.txt",
+    "structure": "PROJECT_GAME \u2192 {WORLD \u2192 TRANSPORT, COMBAT}"
+  },
+  "fork_isolation": true,
+  "negative_control_passed": true,
+  "notes": [
+    "root.query('transport') \u2192 1 row(s), depth 2",
+    "negative control: combat rows in codex = 0, original-route rows = 0"
+  ],
+  "passed": true,
+  "promotion": {
+    "assertion_count": 1,
+    "source": {
+      "as_promoted_ws_PROJECT_GAME_fork_transport_decision_r0": "workspace_PROJECT_GAME_fork"
+    },
+    "status": {
+      "as_promoted_ws_PROJECT_GAME_fork_transport_decision_r0": "candidate"
+    }
+  },
+  "query_accuracy": 1.0,
+  "recursion_depth": 2,
+  "source_versioning": {
+    "analyses": 2,
+    "latest_version": 2,
+    "stale_on_hash_change": [
+      "data/e3.7_game_notes.txt:1",
+      "data/e3.7_game_notes.txt:2"
+    ],
+    "stale_on_same_hash": [],
+    "v1_immutable_after_v2": true
+  }
+}

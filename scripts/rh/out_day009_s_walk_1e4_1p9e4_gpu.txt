@@ -1,0 +1,9 @@
+N(1e4) from zero list = 10142
+zeros in window: 11069  min gap: 0.035535430906747933  dt/gmin = 0.007035231981738168
+GPU-vs-host Z_rs (post-fix d3): max |diff| = 4.941e-11
+[dt] dt=2.5e-04: N(1.9e4) = 21173  (new zeros: 11031)  elapsed 2.8 s
+[dt/2] dt=1.3e-04: N(1.9e4) = 21191  (new zeros: 11049)  elapsed 6.3 s
+[stability] dt vs dt/2 flip counts agree: False  (N: 21173 vs 21191)
+S_file(1e4)=0.0347  S_file(1.9e4)=-37.7768
+max|S| on window = 38.4568   (min -38.4568 / max +0.0347)
+written S_t_walk_1e4_1p9e4_gpu_dt00025.txt (36000001 rows)

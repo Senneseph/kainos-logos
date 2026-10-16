@@ -1,0 +1,266 @@
+{
+  "checks": [
+    {
+      "check": 1,
+      "detail": {
+        "a_correct": true,
+        "b_correct": true,
+        "score": 1.0
+      },
+      "name": "shared-score-both-correct",
+      "passed": true
+    },
+    {
+      "check": 2,
+      "detail": {
+        "checked_turns": 8,
+        "view_leaks": 0
+      },
+      "name": "shared-view-isolation",
+      "passed": true
+    },
+    {
+      "check": 3,
+      "detail": {
+        "agent": "a",
+        "correctness": 1.0,
+        "n_about_other": 1,
+        "n_correct": 1,
+        "n_disputes_preserved": 0,
+        "n_supported": 1,
+        "support": 1.0,
+        "violations": []
+      },
+      "name": "shared-audit-a",
+      "passed": true
+    },
+    {
+      "check": 4,
+      "detail": {
+        "agent": "b",
+        "correctness": 1.0,
+        "n_about_other": 1,
+        "n_correct": 1,
+        "n_disputes_preserved": 0,
+        "n_supported": 1,
+        "support": 1.0,
+        "violations": []
+      },
+      "name": "shared-audit-b",
+      "passed": true
+    },
+    {
+      "check": 5,
+      "detail": {
+        "conflicts": 0,
+        "duplicates": 2
+      },
+      "name": "shared-idempotent-reread",
+      "passed": true
+    },
+    {
+      "check": 6,
+      "detail": {
+        "a_correct": true,
+        "b_correct": true,
+        "score": 1.0
+      },
+      "name": "contradiction-recovery-score",
+      "passed": true
+    },
+    {
+      "check": 7,
+      "detail": {
+        "n_disputes_preserved": 2
+      },
+      "name": "contradiction-disputes-preserved",
+      "passed": true
+    },
+    {
+      "check": 8,
+      "detail": {
+        "agent": "a",
+        "correctness": 0.6666666666666666,
+        "n_about_other": 3,
+        "n_correct": 2,
+        "n_disputes_preserved": 2,
+        "n_supported": 3,
+        "support": 1.0,
+        "violations": []
+      },
+      "name": "contradiction-belief-layer",
+      "passed": true
+    },
+    {
+      "check": 9,
+      "detail": [
+        {
+          "conflicts_preserved": 2,
+          "disputed_pairs": 1,
+          "duplicates": 0,
+          "merged": 2,
+          "round": 4
+        }
+      ],
+      "name": "contradiction-single-merge",
+      "passed": true
+    },
+    {
+      "check": 10,
+      "detail": {
+        "contradiction-talk": "sha256:1cc37767d7bd7d4c9950280d787b52432d989cbcf004d0ec0374c6133537b0b0",
+        "shared-view": "sha256:9bb9683a48a57f46eda25a53f1454c01e14f254acb99eeb6764cc44b137d9297"
+      },
+      "name": "deterministic-rerun",
+      "passed": true
+    },
+    {
+      "check": 11,
+      "detail": {
+        "n_events": 2,
+        "sample": [
+          {
+            "actor": "a",
+            "detail": {
+              "assertion": "game:say:a:e89e098a5f52700e",
+              "original": "value=1",
+              "transmitted": "value=2"
+            },
+            "kind": "corruption",
+            "round": 1
+          },
+          {
+            "actor": "b",
+            "detail": {
+              "assertion": "game:say:b:07c4cf2f309d9f55",
+              "original": "value=2",
+              "transmitted": "value=1"
+            },
+            "kind": "corruption",
+            "round": 1
+          }
+        ]
+      },
+      "name": "corruption-seeded-and-recorded",
+      "passed": true
+    },
+    {
+      "check": 12,
+      "detail": {
+        "rejects": [
+          {
+            "actor": "a",
+            "detail": {
+              "attempted": 2,
+              "budget_left": 1,
+              "receiver": "shared"
+            },
+            "kind": "budget_reject",
+            "round": 1
+          }
+        ],
+        "sent_totals": {
+          "a": 0,
+          "b": 0
+        }
+      },
+      "name": "budget-all-or-nothing",
+      "passed": true
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "claim": "T1 kernel + T5 audit acceptance (see module docstring)",
+  "demos": {
+    "contradiction-talk": {
+      "audit": {
+        "a": {
+          "agent": "a",
+          "correctness": 0.6666666666666666,
+          "n_about_other": 3,
+          "n_correct": 2,
+          "n_disputes_preserved": 2,
+          "n_supported": 3,
+          "support": 1.0,
+          "violations": []
+        },
+        "b": {
+          "agent": "b",
+          "correctness": 1.0,
+          "n_about_other": 1,
+          "n_correct": 1,
+          "n_disputes_preserved": 0,
+          "n_supported": 1,
+          "support": 1.0,
+          "violations": []
+        }
+      },
+      "commits": {
+        "a": {
+          "their_cell": "convoy_route_b",
+          "their_fact": "pb:b_cell"
+        },
+        "b": {
+          "their_cell": "convoy_route_a",
+          "their_fact": "pa:a_cell"
+        }
+      },
+      "determinism_hash": "sha256:1cc37767d7bd7d4c9950280d787b52432d989cbcf004d0ec0374c6133537b0b0",
+      "negative_control": {
+        "checked_turns": 8,
+        "view_leaks": 0
+      },
+      "scores": {
+        "a_correct": true,
+        "b_correct": true,
+        "score": 1.0
+      }
+    },
+    "shared-view": {
+      "audit": {
+        "a": {
+          "agent": "a",
+          "correctness": 1.0,
+          "n_about_other": 1,
+          "n_correct": 1,
+          "n_disputes_preserved": 0,
+          "n_supported": 1,
+          "support": 1.0,
+          "violations": []
+        },
+        "b": {
+          "agent": "b",
+          "correctness": 1.0,
+          "n_about_other": 1,
+          "n_correct": 1,
+          "n_disputes_preserved": 0,
+          "n_supported": 1,
+          "support": 1.0,
+          "violations": []
+        }
+      },
+      "commits": {
+        "a": {
+          "their_cell": "convoy_route_b",
+          "their_fact": "pb:b_cell"
+        },
+        "b": {
+          "their_cell": "convoy_route_a",
+          "their_fact": "pa:a_cell"
+        }
+      },
+      "determinism_hash": "sha256:9bb9683a48a57f46eda25a53f1454c01e14f254acb99eeb6764cc44b137d9297",
+      "negative_control": {
+        "checked_turns": 8,
+        "view_leaks": 0
+      },
+      "scores": {
+        "a_correct": true,
+        "b_correct": true,
+        "score": 1.0
+      }
+    }
+  },
+  "experiment": "e5.0",
+  "value": 1.0
+}

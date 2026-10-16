@@ -1,0 +1,21 @@
+{
+  "config": {
+    "commit": "ccb1f4a",
+    "coverage_delta": 0.349,
+    "dataset_hash": null,
+    "dimensions_grown": 6,
+    "n_games": 200,
+    "seed": 0,
+    "unknown_delta": -340
+  },
+  "evidence": [
+    "results/phase-2/e2.2.json",
+    "results/phase-2/growth.md"
+  ],
+  "hypothesis": "coverage rises and the EXCEPTION remainder falls as games learn (A2)",
+  "metric": "coverage_mean / unknown_cells sampled every 25 games over 200 (from an empty CODEX)",
+  "name": "e2.2",
+  "passed": true,
+  "threshold": "coverage strictly up and unknown cells strictly down across the run",
+  "value": 0.349
+}

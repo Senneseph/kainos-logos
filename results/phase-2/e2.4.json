@@ -1,0 +1,102 @@
+{
+  "accuracy": 1.0,
+  "baseline_accuracy": 0.0,
+  "config": {
+    "identifiable_in_corpus": 20,
+    "labels_given": 0,
+    "n_holdout": 12,
+    "property_base": "CODEX seed (established q20_corpus/1) + category",
+    "seed": 99
+  },
+  "experiment": "e2.4",
+  "holdout": [
+    "canoe",
+    "carrot",
+    "elephant",
+    "forest",
+    "frog",
+    "helicopter",
+    "horse",
+    "house",
+    "park",
+    "shopping_cart",
+    "shrimp",
+    "wheelchair"
+  ],
+  "hypothesis": "a label-held-out concept is recognized by conjoining learned properties",
+  "passed": true,
+  "per_target": [
+    {
+      "conjunction_size": 6,
+      "correct": true,
+      "guess": "canoe",
+      "target": "canoe"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "carrot",
+      "target": "carrot"
+    },
+    {
+      "conjunction_size": 3,
+      "correct": true,
+      "guess": "elephant",
+      "target": "elephant"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "forest",
+      "target": "forest"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "frog",
+      "target": "frog"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "helicopter",
+      "target": "helicopter"
+    },
+    {
+      "conjunction_size": 3,
+      "correct": true,
+      "guess": "horse",
+      "target": "horse"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "house",
+      "target": "house"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "park",
+      "target": "park"
+    },
+    {
+      "conjunction_size": 6,
+      "correct": true,
+      "guess": "shopping_cart",
+      "target": "shopping_cart"
+    },
+    {
+      "conjunction_size": 4,
+      "correct": true,
+      "guess": "shrimp",
+      "target": "shrimp"
+    },
+    {
+      "conjunction_size": 6,
+      "correct": true,
+      "guess": "wheelchair",
+      "target": "wheelchair"
+    }
+  ]
+}

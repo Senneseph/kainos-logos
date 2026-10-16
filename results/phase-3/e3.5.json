@@ -1,0 +1,72 @@
+{
+  "config": {
+    "seed": 20260820,
+    "n_dots": 200,
+    "n_terms": 32,
+    "n_hist": 4096,
+    "bits_per_value": 8,
+    "formats": {
+      "phi": "1 sign + 4 exponent (bias 7) + 3 mantissa; midpoint quanta over [1, phi)",
+      "fp8": "E4M3 (bias 7, max 448, subnormals to 2^-9)",
+      "int8": "symmetric -127..127 calibrated to dataset range R=3.62327"
+    },
+    "ingest_ops_model": {
+      "phi": 6,
+      "fp8": 6,
+      "int8": 3
+    },
+    "ingest_policy": "each dataset value quantized once (cold cache); total shared across the task",
+    "error_metric": "per-dot |y_hat - y| / ||y_ref||_2 (shared reference scale over all dots \u2014 robust vs a per-dot denominator, which is unstable for near-zero 32-term dot products); err_per_op = total rel err / total ops",
+    "mac_ops_counted": "live per format: phi = sign xor + exponent add + mass add per pair, carries (div+mul+sub+add), fold (mul+add per level); fp8/int8 = mul+add per pair + 1 dequant scale",
+    "hist_bin_policy": "phi bins from its own code field (0 ops); fp8/int8 via precomputed code->bin LUT (storage, not ops)",
+    "lut_build_ops_one_time": 64,
+    "mass_product_policy": "plan-faithful: the exact product of the two quantized mantissas is the added mass (64-valued one-time table); no per-product re-quantization; re-quantization only via Fibonacci-carry division and the final fold",
+    "verdict_rule": "adopt iff (1) phi MAC err_per_op(ingest-incl) <= 0.9 * min(fp8,int8) AND (2) phi hist L1 <= max(fp8,int8) L1 AND (3) phi ops_per_result(ingest-incl) <= min(fp8,int8); else reject. Experiment passes on producing an explicit verdict with documented margin (P8: reject is a valid outcome)."
+  },
+  "per_format": {
+    "phi": {
+      "mac_rms_rel_err_refnorm": 0.0018581514231768522,
+      "mac_total_rel_err_refnorm": 0.3014641206161846,
+      "mac_ops_per_result_mac_only": 141.71,
+      "mac_ops_per_result_ingest_incl": 334.67,
+      "mac_err_per_op_mac_only": 1.0636656573854512e-05,
+      "mac_err_per_op_ingest_incl": 4.503901165568838e-06,
+      "hist_l1_err": 0.0,
+      "lut_build_ops_one_time": 64
+    },
+    "fp8": {
+      "mac_rms_rel_err_refnorm": 0.002469860947353986,
+      "mac_total_rel_err_refnorm": 0.39187361281535976,
+      "mac_ops_per_result_mac_only": 65.0,
+      "mac_ops_per_result_ingest_incl": 257.96,
+      "mac_err_per_op_mac_only": 3.014412406271998e-05,
+      "mac_err_per_op_ingest_incl": 7.595627477425953e-06,
+      "hist_l1_err": 0.06982421875
+    },
+    "int8": {
+      "mac_rms_rel_err_refnorm": 0.07065309289948797,
+      "mac_total_rel_err_refnorm": 11.278045435814832,
+      "mac_ops_per_result_mac_only": 65.0,
+      "mac_ops_per_result_ingest_incl": 161.48,
+      "mac_err_per_op_mac_only": 0.000867541956601141,
+      "mac_err_per_op_ingest_incl": 0.00034920873903315677,
+      "hist_l1_err": 0.53955078125
+    }
+  },
+  "margins": {
+    "phi_mac_err_per_op_ingest_incl": 4.503901165568838e-06,
+    "min_base_mac_err_per_op_ingest_incl": 7.595627477425953e-06,
+    "phi_hist_l1": 0.0,
+    "max_base_hist_l1": 0.53955078125,
+    "phi_ops_per_result_ingest_incl": 334.67,
+    "min_base_ops_per_result_ingest_incl": 161.48,
+    "checks": {
+      "c1_err_per_op_10pct": true,
+      "c2_hist_not_worse": true,
+      "c3_ops_not_worse": false
+    }
+  },
+  "verdict": "reject",
+  "verdict_note": "rejects; ops/result 334.7 > min(base) 161.5",
+  "passed": true
+}

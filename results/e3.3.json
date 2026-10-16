@@ -1,0 +1,34 @@
+{
+  "config": {
+    "checks": {
+      "both_values_retained_established": true,
+      "converged_identical_knowledge": true,
+      "disputed_count_zero": true,
+      "distinct_contexts_ge_2": true,
+      "new_context_term_ge_1": true,
+      "no_averaging": true
+    },
+    "commit": "11f85da",
+    "converged": true,
+    "dataset_hash": null,
+    "disputed_after": {
+      "node_arctic_summer": 0,
+      "node_arctic_winter": 0
+    },
+    "idempotent_remerge": true,
+    "new_context_terms": [
+      "ctx:time:polar_bear"
+    ],
+    "seed": 0
+  },
+  "evidence": [
+    "results/phase-3/e3.3.json"
+  ],
+  "hypothesis": "a contradiction between two nodes becomes a new context TERM \u2014 never a blended fact",
+  "metric": "new context TERM >= 1; both conflicting assertions retained established under distinct contexts; disputed -> 0; nodes converged on identical knowledge; zero averaged/blended facts",
+  "name": "e3.3",
+  "passed": true,
+  "skipped": false,
+  "threshold": ">= 1 new context TERM, both conflicting assertions retained as established under distinct contexts, disputed -> 0, nodes converged, zero averaged/blended facts",
+  "value": 1.0
+}

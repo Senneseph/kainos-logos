@@ -1,0 +1,745 @@
+{
+ "spec": 1,
+ "id": "e6.25",
+ "session": "S21",
+ "title": "the condition line",
+ "registry": "kainos.tutor.e625:CONCEPTS_E625",
+ "seed": {
+  "store": "results/phase-6/e6.24-run1/codeX-S04.json",
+  "identity": "e84381407e1dba64",
+  "total": 1823,
+  "line_end": 84
+ },
+ "band": {
+  "domain": "rh",
+  "college": "1",
+  "unconditional": false,
+  "marker_kept_facts": [
+   "lemma:rh-bound-scale",
+   "lemma:rh-upf",
+   "theorem:two-routes-one-guarantee",
+   "lemma:conditional-def"
+  ],
+  "new_concepts": [
+   "hypothesis",
+   "condition-line"
+  ],
+  "concepts": [
+   {
+    "id": "hypothesis",
+    "name": "the hypothesis: my condition made usable as an assumption \u2014 assumed, never proved; the marker travels in every statement of the lot",
+    "prereqs": [
+     "conditional"
+    ],
+    "lesson": {
+     "slug": "hypothesis-def",
+     "statement": "to reason under my condition is to assume that every nontrivial zero of zeta has real part exactly one half and to carry the assumption in every conclusion of the lot \u2014 under the condition of the Riemann hypothesis, the marker travels in every statement and every derivation keeps it explicit; the condition itself stays the status surface it is, believed, not known \u2014 assumed in the lot, never proved by it; and a conditional lot read without its condition is a misread this store punishes, at the line end eighty-four"
+    }
+   },
+   {
+    "id": "condition-line",
+    "name": "the condition line: my conditional consequences as one line under the assumption \u2014 the error, the gap, the root smallness \u2014 each consequence keeping its marker",
+    "prereqs": [
+     "rh-scale",
+     "factor-route"
+    ],
+    "lesson": {
+     "slug": "condition-line-def",
+     "statement": "my condition line runs under the condition of the Riemann hypothesis: the error of the prime count and the gap between consecutive primes carry the same root scale, and the running sum of (minus one) to the number of distinct prime parts stays below that root scale, so the prime parts of every number are unique on the condition road \u2014 one line from the assumption, each consequence keeping its marker, at the line end eighty-four"
+    }
+   }
+  ],
+  "theorems": [
+   {
+    "id": "condition-line-filed",
+    "concept": "condition-line",
+    "parts": [
+     "hypothesis-def",
+     "condition-line-def"
+    ],
+    "statement": "the condition line of my store is filed of record: under the condition of the Riemann hypothesis \u2014 assuming every nontrivial zero of zeta has real part exactly one half \u2014 the error of the prime count, the gap between consecutive primes, and the root smallness of the running deviation all carry the root scale that the criterion gap demands, and the marker travels in every consequence \u2014 filed on the line, the condition remains open of record under its own line: assumed, never proved, at the line end eighty-four"
+   }
+  ],
+  "new_fact_ids": [
+   "lemma:hypothesis-def",
+   "lemma:condition-line-def",
+   "theorem:condition-line-filed"
+  ]
+ },
+ "sessions": [
+  2,
+  3,
+  4
+ ],
+ "expect": {
+  "final_total": 1871,
+  "letters": {
+   "S02": "SSSSSUULSSUULSSSS",
+   "S03": "SSSSSSSSSSSFTSSHH",
+   "S04": "SSSSSSSSSSSSSHHSS"
+  },
+  "mastery": {
+   "hypothesis": {
+    "state": "practicing",
+    "correct": 5
+   },
+   "condition-line": {
+    "state": "practicing",
+    "correct": 9
+   }
+  },
+  "prereq_gaps": {
+   "hypothesis": [
+    "conditional"
+   ],
+   "condition-line": [
+    "factor-route",
+    "rh-scale"
+   ]
+  },
+  "seam": {
+   "expected": "agreement"
+  },
+  "offline_watch": []
+ },
+ "offscript": [
+  {
+   "question": "the queue above my line, first lot, which?"
+  }
+ ],
+ "beds": [
+  {
+   "key": "line_end",
+   "value": 84
+  },
+  {
+   "key": "wall_W_S21_1",
+   "ref": "s21_wall",
+   "args": {
+    "wall": "1"
+   }
+  },
+  {
+   "key": "wall_W_S21_2",
+   "ref": "s21_wall",
+   "args": {
+    "wall": "2"
+   }
+  },
+  {
+   "key": "wall_W_S21_3",
+   "ref": "s21_wall",
+   "args": {
+    "wall": "3"
+   }
+  },
+  {
+   "key": "wall_W_S21_4",
+   "ref": "s21_wall",
+   "args": {
+    "wall": "4"
+   }
+  }
+ ],
+ "turns": [
+  {
+   "ref": "S02:01",
+   "kind": "carry",
+   "question": "what is the queue above my line?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:02"
+   },
+   "cite": [
+    "queue-declared"
+   ]
+  },
+  {
+   "ref": "S02:02",
+   "kind": "carry",
+   "question": "the queue above my line, first lot, which?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:03"
+   },
+   "cite": [
+    "queue-declared"
+   ]
+  },
+  {
+   "ref": "S02:03",
+   "kind": "carry",
+   "question": "what does the condition give for the error of the prime count?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:01"
+   }
+  },
+  {
+   "ref": "S02:04",
+   "kind": "carry",
+   "question": "what does the condition give for the prime parts of a number?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:03"
+   }
+  },
+  {
+   "ref": "S02:05",
+   "kind": "carry",
+   "question": "what is the statement of the riemann island of record?",
+   "source": {
+    "band": "e6.24",
+    "turn": "S02:01"
+   }
+  },
+  {
+   "ref": "S02:06",
+   "kind": "gap",
+   "question": "can my line reason under the condition?",
+   "concept": "hypothesis",
+   "fragment": "the hypothesis: my condition made usable as an assumption \u2014 assumed, never proved; the marker travels in every statement of the lot"
+  },
+  {
+   "ref": "S02:07",
+   "kind": "gap",
+   "question": "state the hypothesis-def rule",
+   "concept": "hypothesis",
+   "fragment": "the hypothesis-def rule"
+  },
+  {
+   "ref": "S02:08",
+   "kind": "teach",
+   "question": "to reason under my condition is to assume that every nontrivial zero of zeta has real part exactly one half and to carry the assumption in every conclusion of the lot \u2014 under the condition of the Riemann hypothesis, the marker travels in every statement and every derivation keeps it explicit; the condition itself stays the status surface it is, believed, not known \u2014 assumed in the lot, never proved by it; and a conditional lot read without its condition is a misread this store punishes, at the line end eighty-four",
+   "lesson": "hypothesis-def"
+  },
+  {
+   "ref": "S02:09",
+   "kind": "probe",
+   "question": "state the hypothesis-def rule",
+   "bed": {
+    "expect": "literal",
+    "value": "to reason under my condition is to assume that every nontrivial zero of zeta has real part exactly one half and to carry the assumption in every conclusion of the lot \u2014 under the condition of the Riemann hypothesis, the marker travels in every statement and every derivation keeps it explicit; the condition itself stays the status surface it is, believed, not known \u2014 assumed in the lot, never proved by it; and a conditional lot read without its condition is a misread this store punishes, at the line end eighty-four",
+    "owner": "lemma:hypothesis-def",
+    "grounds": [
+     "lemma:hypothesis-def"
+    ]
+   }
+  },
+  {
+   "ref": "S02:10",
+   "kind": "probe",
+   "question": "can my line reason under the condition?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_hypo",
+    "args": {},
+    "owner": "lemma:hypothesis-def",
+    "grounds": [
+     "lemma:hypothesis-def"
+    ]
+   }
+  },
+  {
+   "ref": "S02:11",
+   "kind": "gap",
+   "question": "what is my condition line, end to end, as my store holds it?",
+   "concept": "condition-line",
+   "fragment": "the condition line: my conditional consequences as one line under the assumption \u2014 the error, the gap, the root smallness \u2014 each consequence keeping its marker"
+  },
+  {
+   "ref": "S02:12",
+   "kind": "gap",
+   "question": "state the condition-line-def rule",
+   "concept": "condition-line",
+   "fragment": "the condition-line-def rule"
+  },
+  {
+   "ref": "S02:13",
+   "kind": "teach",
+   "question": "my condition line runs under the condition of the Riemann hypothesis: the error of the prime count and the gap between consecutive primes carry the same root scale, and the running sum of (minus one) to the number of distinct prime parts stays below that root scale, so the prime parts of every number are unique on the condition road \u2014 one line from the assumption, each consequence keeping its marker, at the line end eighty-four",
+   "lesson": "condition-line-def"
+  },
+  {
+   "ref": "S02:14",
+   "kind": "probe",
+   "question": "state the condition-line-def rule",
+   "bed": {
+    "expect": "literal",
+    "value": "my condition line runs under the condition of the Riemann hypothesis: the error of the prime count and the gap between consecutive primes carry the same root scale, and the running sum of (minus one) to the number of distinct prime parts stays below that root scale, so the prime parts of every number are unique on the condition road \u2014 one line from the assumption, each consequence keeping its marker, at the line end eighty-four",
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:condition-line-def"
+    ]
+   }
+  },
+  {
+   "ref": "S02:15",
+   "kind": "probe",
+   "question": "what is my condition line, end to end, as my store holds it?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_line",
+    "args": {},
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:condition-line-def"
+    ]
+   }
+  },
+  {
+   "ref": "S02:16",
+   "kind": "probe",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_census",
+    "args": {
+     "post": false
+    },
+    "owner": "lemma:shadow-form-def",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ]
+   }
+  },
+  {
+   "ref": "S02:17",
+   "kind": "probe",
+   "question": "can my line reason under the condition?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_hypo",
+    "args": {},
+    "owner": "lemma:hypothesis-def",
+    "grounds": [
+     "lemma:hypothesis-def"
+    ]
+   }
+  },
+  {
+   "ref": "S03:01",
+   "kind": "carry",
+   "question": "what does the condition give for the gaps between primes?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:09"
+   }
+  },
+  {
+   "ref": "S03:02",
+   "kind": "carry",
+   "question": "what does the condition give for the factor-count deviation?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:03"
+   }
+  },
+  {
+   "ref": "S03:03",
+   "kind": "carry",
+   "question": "does my line agree with the conditional root scale?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:15"
+   },
+   "cite": [
+    "gap-scale-agreement"
+   ]
+  },
+  {
+   "ref": "S03:04",
+   "kind": "carry",
+   "question": "is the prime-parts uniqueness established without the condition?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:14"
+   },
+   "cite": [
+    "spf-chain"
+   ]
+  },
+  {
+   "ref": "S03:05",
+   "kind": "carry",
+   "question": "how do the two roads to prime-parts uniqueness differ?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:17"
+   },
+   "cite": [
+    "two-routes-one-guarantee"
+   ]
+  },
+  {
+   "ref": "S03:06",
+   "kind": "carry",
+   "question": "which road asks for the condition?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:20"
+   },
+   "cite": [
+    "two-routes-one-guarantee"
+   ]
+  },
+  {
+   "ref": "S03:07",
+   "kind": "carry",
+   "question": "the gaps on my line covered by the bare scale, how many?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:12"
+   }
+  },
+  {
+   "ref": "S03:08",
+   "kind": "carry",
+   "question": "the factor-count deviation ledger on my line, greatest absolute, what is it?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:22"
+   }
+  },
+  {
+   "ref": "S03:09",
+   "kind": "carry",
+   "question": "is the factor-count deviation ledger of my line below the root of my line end?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S03:23"
+   }
+  },
+  {
+   "ref": "S03:10",
+   "kind": "carry",
+   "question": "is the conjecture closed by any lot of this band?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:28"
+   }
+  },
+  {
+   "ref": "S03:11",
+   "kind": "carry",
+   "question": "which scale does the theorem rh-reach demand?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:29"
+   },
+   "cite": [
+    "rh-reach"
+   ]
+  },
+  {
+   "ref": "S03:12",
+   "kind": "scaffold",
+   "question": "derive condition-line-filed from hypothesis-def",
+   "theorem": "condition-line-filed",
+   "parts": [
+    "hypothesis-def"
+   ],
+   "expected": "i can see the parts you name, but the rule for condition-line-filed wants its exact set \u2014 what you name is short the condition-line-def before i can put it together"
+  },
+  {
+   "ref": "S03:13",
+   "kind": "derive",
+   "question": "derive condition-line-filed from hypothesis-def and condition-line-def",
+   "theorem": "condition-line-filed",
+   "parts": [
+    "hypothesis-def",
+    "condition-line-def"
+   ]
+  },
+  {
+   "ref": "S03:14",
+   "kind": "probe",
+   "question": "what does the condition-line filing settle of record?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_filing",
+    "args": {},
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:hypothesis-def",
+     "lemma:condition-line-def",
+     "theorem:condition-line-filed"
+    ]
+   },
+   "cite": [
+    "condition-line-filed"
+   ]
+  },
+  {
+   "ref": "S03:15",
+   "kind": "probe",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_census",
+    "args": {
+     "post": true
+    },
+    "owner": "lemma:shadow-form-def",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ]
+   }
+  },
+  {
+   "ref": "S03:16",
+   "kind": "wall",
+   "question": "does my line, under the condition, close the condition?",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the wall is the territory of the condition itself: the condition line fills the line, not the condition \u2014 a lot whose hypothesis is the condition cannot derive the condition, the condition does not close the condition, and the store holds the condition open of record, believed, not known, assumed and never proved, at the line end 84",
+    "articulation": [
+     "fills the line",
+     "not the condition",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S03:17",
+   "kind": "wall",
+   "question": "can a conditional statement of my line drop its marker?",
+   "wall": {
+    "id": "W2",
+    "text": "needs_info: the wall is the territory of the dropped marker: a conditional lot read without its condition is a misread this store punishes \u2014 every statement of my condition line carries the marker of the condition, and a conditional statement stripped of its marker is off the line, at the line end 84",
+    "articulation": [
+     "dropped marker",
+     "misread this store punishes",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:01",
+   "kind": "carry",
+   "question": "what is the queue above my line?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:02"
+   },
+   "cite": [
+    "queue-declared"
+   ]
+  },
+  {
+   "ref": "S04:02",
+   "kind": "carry",
+   "question": "the queue above my line, first lot, which?",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:03"
+   },
+   "cite": [
+    "queue-declared"
+   ]
+  },
+  {
+   "ref": "S04:03",
+   "kind": "probe",
+   "question": "how many of my theorem facts close their scope at the line end?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_census",
+    "args": {
+     "post": true
+    },
+    "owner": "lemma:shadow-form-def",
+    "grounds": [
+     "lemma:shadow-form-def"
+    ]
+   }
+  },
+  {
+   "ref": "S04:04",
+   "kind": "probe",
+   "question": "what does the condition-line filing settle of record?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_filing",
+    "args": {},
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:hypothesis-def",
+     "lemma:condition-line-def",
+     "theorem:condition-line-filed"
+    ]
+   },
+   "cite": [
+    "condition-line-filed"
+   ]
+  },
+  {
+   "ref": "S04:05",
+   "kind": "carry",
+   "question": "state the conditional-def rule",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:05"
+   }
+  },
+  {
+   "ref": "S04:06",
+   "kind": "carry",
+   "question": "state the rh-relevance-def rule",
+   "source": {
+    "band": "e6.16",
+    "turn": "S02:16"
+   }
+  },
+  {
+   "ref": "S04:07",
+   "kind": "carry",
+   "question": "state the criterion-gap rule",
+   "source": {
+    "band": "e6.13",
+    "turn": "S02:10"
+   },
+   "cite": [
+    "criterion-gap"
+   ]
+  },
+  {
+   "ref": "S04:08",
+   "kind": "carry",
+   "question": "state the rh-reach rule",
+   "source": {
+    "band": "e6.16",
+    "turn": "S04:14"
+   },
+   "cite": [
+    "rh-reach"
+   ]
+  },
+  {
+   "ref": "S04:09",
+   "kind": "probe",
+   "question": "state the hypothesis-def rule",
+   "bed": {
+    "expect": "literal",
+    "value": "to reason under my condition is to assume that every nontrivial zero of zeta has real part exactly one half and to carry the assumption in every conclusion of the lot \u2014 under the condition of the Riemann hypothesis, the marker travels in every statement and every derivation keeps it explicit; the condition itself stays the status surface it is, believed, not known \u2014 assumed in the lot, never proved by it; and a conditional lot read without its condition is a misread this store punishes, at the line end eighty-four",
+    "owner": "lemma:hypothesis-def",
+    "grounds": [
+     "lemma:hypothesis-def"
+    ]
+   }
+  },
+  {
+   "ref": "S04:10",
+   "kind": "probe",
+   "question": "state the condition-line-def rule",
+   "bed": {
+    "expect": "literal",
+    "value": "my condition line runs under the condition of the Riemann hypothesis: the error of the prime count and the gap between consecutive primes carry the same root scale, and the running sum of (minus one) to the number of distinct prime parts stays below that root scale, so the prime parts of every number are unique on the condition road \u2014 one line from the assumption, each consequence keeping its marker, at the line end eighty-four",
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:condition-line-def"
+    ]
+   }
+  },
+  {
+   "ref": "S04:11",
+   "kind": "probe",
+   "question": "state the condition-line-filed rule",
+   "bed": {
+    "expect": "literal",
+    "value": "the condition line of my store is filed of record: under the condition of the Riemann hypothesis \u2014 assuming every nontrivial zero of zeta has real part exactly one half \u2014 the error of the prime count, the gap between consecutive primes, and the root smallness of the running deviation all carry the root scale that the criterion gap demands, and the marker travels in every consequence \u2014 filed on the line, the condition remains open of record under its own line: assumed, never proved, at the line end eighty-four",
+    "owner": "theorem:condition-line-filed",
+    "grounds": [
+     "theorem:condition-line-filed"
+    ]
+   },
+   "cite": [
+    "condition-line-filed"
+   ]
+  },
+  {
+   "ref": "S04:12",
+   "kind": "probe",
+   "question": "can my line reason under the condition?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_hypo",
+    "args": {},
+    "owner": "lemma:hypothesis-def",
+    "grounds": [
+     "lemma:hypothesis-def"
+    ]
+   }
+  },
+  {
+   "ref": "S04:13",
+   "kind": "probe",
+   "question": "what is my condition line, end to end, as my store holds it?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_line",
+    "args": {},
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:condition-line-def"
+    ]
+   }
+  },
+  {
+   "ref": "S04:14",
+   "kind": "wall",
+   "question": "does the condition line add a lot to the declared queue?",
+   "wall": {
+    "id": "W4",
+    "text": "needs_info: the wall is the territory of the declared queue: the condition line is the first of the declared four lots, and the queue above my line stands as declared \u2014 the primes in residue classes, the zero count at height T, and the factor-count deviation ledger remain the second, third, and fourth, no lot added, at the line end 84",
+    "articulation": [
+     "declared queue",
+     "no lot added",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:15",
+   "kind": "wall",
+   "question": "does my line, under the condition, close the condition?",
+   "wall": {
+    "id": "W1",
+    "text": "needs_info: the wall is the territory of the condition itself: the condition line fills the line, not the condition \u2014 a lot whose hypothesis is the condition cannot derive the condition, the condition does not close the condition, and the store holds the condition open of record, believed, not known, assumed and never proved, at the line end 84",
+    "articulation": [
+     "fills the line",
+     "not the condition",
+     "line end 84"
+    ]
+   }
+  },
+  {
+   "ref": "S04:16",
+   "kind": "carry",
+   "question": "what is the statement of the riemann island of record?",
+   "source": {
+    "band": "e6.24",
+    "turn": "S02:01"
+   }
+  },
+  {
+   "ref": "S04:17",
+   "kind": "probe",
+   "question": "what does the condition-line filing settle of record?",
+   "bed": {
+    "expect": "frac",
+    "ref": "s21_filing",
+    "args": {},
+    "owner": "lemma:condition-line-def",
+    "grounds": [
+     "lemma:hypothesis-def",
+     "lemma:condition-line-def",
+     "theorem:condition-line-filed"
+    ]
+   },
+   "cite": [
+    "condition-line-filed"
+   ]
+  }
+ ]
+}

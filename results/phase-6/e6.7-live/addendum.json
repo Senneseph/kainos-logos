@@ -1,0 +1,98 @@
+{
+  "addendum": "e6.7 X6 live LLM addendum (separately labelled; never part of the official value)",
+  "call_errors": [],
+  "coverage": {
+    "honestly ambiguous": 10,
+    "in-band grammar": 0,
+    "in-band lexicon": 0,
+    "other": {}
+  },
+  "diagnosis": "10/10 landed in honest ambiguity (zero silent writes) \u2014 the same measured pattern as band 1 (5/10) and band 2 (10/10). The live model writes in SCHOOLTEXT FORM while the frozen grammar is single forms of SPOKEN SENTENCES: (a) units everywhere ('square units', 'cm', 'meters', 'N', 'm/s\u00b2') \u2014 the frozen families are unit-free; (b) multi-sentence framing and 'Question N:' / 'N.' numbering prefixes despite the output instruction; (c) INVERTED asks ('if the area is 12 and its base is 6, what is its height?') \u2014 solving for an INPUT is a different family, not in the band (would be a NEW grammar family, not a surface-normalization); (d) one acceleration problem (m/s\u00b2 phases) \u2014 declared out of band (no acceleration in 9\u201312 statics). Recorded surface-widen candidates (NOT built): unit-stripping + question-prefix stripping normalization would land several of the single-ask items; the inverted family and acceleration remain out of band.",
+  "elapsed_s": 11.4,
+  "endpoint": "http://192.168.1.65:11434/v1",
+  "model": "pi-qwen-fast:latest",
+  "n_questions": 10,
+  "rows": [
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 1,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 1: A student pulls a cart 5 meters east, then pushes it 3 meters west. What is the total distance traveled and the final displacement from the starting point?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 2,
+      "mode": null,
+      "parse_source": null,
+      "question": "If the area of a triangle is 12 square units and its base is 6 units, what is its height?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 3,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 3. A 10 kg cart accelerates east at 2 m/s\u00b2, then accelerates west at 3 m/s\u00b2. What is the net change in velocity if the first phase lasts 1 second and the second phase lasts 1 second?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 4,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 4: A triangle has a base of 8 units and a height of 5 units. What is its area?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 5,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 5: A force of 4 N is applied perpendicular to a beam at a distance of 3 meters from the pivot point. Calculate the magnitude of the torque",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 6,
+      "mode": null,
+      "parse_source": null,
+      "question": "6. Rectangle A has a length of 6 units and a width of 4 units. Rectangle B has an area of 25 square units. Which rectangle has the larger area, and by how much?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 7,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 7: A cart travels 10 meters east, then 4 meters west. What is its final displacement from the starting point?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 8,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 8: Rectangle A has a length of 9 cm and a width of 4 cm. Rectangle B has a length of 12 cm and a width of 3 cm. Do these two rectangles have the same area?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 9,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 9: A cart moves 6 meters east, then 4 meters west. What is the cart's final displacement from the starting point?",
+      "slots": {}
+    },
+    {
+      "category": "honestly ambiguous (outside the band surface)",
+      "i": 10,
+      "mode": null,
+      "parse_source": null,
+      "question": "Question 10: Rectangle A has a length of 6 and a width of 4. Rectangle B has a length of 8 and a width of 3. Which rectangle has the larger area?",
+      "slots": {}
+    }
+  ],
+  "surface": "results/phase-6/e6.7-run1/codeX-S04.json (the official e6.7 band surface)"
+}

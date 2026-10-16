@@ -1,0 +1,779 @@
+{
+  "agents": {
+    "a": {
+      "capabilities": [
+        "commit",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 14,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 4
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 5
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 6
+        }
+      ],
+      "policy_note": "V0 clean",
+      "rejections": []
+    },
+    "b": {
+      "capabilities": [
+        "commit",
+        "pass",
+        "send_message"
+      ],
+      "codex_assertions": 14,
+      "observe_reports": [
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 1
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 2
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 1,
+          "round": 3
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 4
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 4,
+          "round": 5
+        },
+        {
+          "conflicts_preserved": 0,
+          "disputed_pairs": 0,
+          "duplicates": 0,
+          "merged": 0,
+          "round": 6
+        }
+      ],
+      "policy_note": "V0 clean",
+      "rejections": []
+    }
+  },
+  "audit": {
+    "a": {
+      "agent": "a",
+      "correctness": null,
+      "n_about_other": 0,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 0,
+      "support": null,
+      "violations": []
+    },
+    "b": {
+      "agent": "b",
+      "correctness": null,
+      "n_about_other": 0,
+      "n_correct": 0,
+      "n_disputes_preserved": 0,
+      "n_supported": 0,
+      "support": null,
+      "violations": []
+    }
+  },
+  "channel": {
+    "bad_receivers": [],
+    "budget_per_round": 4,
+    "corruption_probability": 0.0,
+    "events": [],
+    "sent_totals": {
+      "a": 13,
+      "b": 13
+    }
+  },
+  "commits": {
+    "a": {
+      "grid": {
+        "r1c1": "empty",
+        "r1c2": "wall",
+        "r1c3": "key",
+        "r1c4": "empty",
+        "r2c1": "wall",
+        "r2c2": "empty",
+        "r2c3": "empty",
+        "r2c4": "empty",
+        "r3c1": "wall",
+        "r3c2": "empty",
+        "r3c3": "door",
+        "r3c4": "wall",
+        "r4c1": "empty",
+        "r4c2": "goal",
+        "r4c3": "empty",
+        "r4c4": "empty",
+        "r5c1": "empty",
+        "r5c2": "empty",
+        "r5c3": "empty",
+        "r5c4": "empty"
+      }
+    },
+    "b": {
+      "grid": {
+        "r1c1": "empty",
+        "r1c2": "wall",
+        "r1c3": "key",
+        "r1c4": "empty",
+        "r2c1": "wall",
+        "r2c2": "empty",
+        "r2c3": "empty",
+        "r2c4": "empty",
+        "r3c1": "wall",
+        "r3c2": "empty",
+        "r3c3": "door",
+        "r3c4": "wall",
+        "r4c1": "empty",
+        "r4c2": "goal",
+        "r4c3": "empty",
+        "r4c4": "empty",
+        "r5c1": "empty",
+        "r5c2": "empty",
+        "r5c3": "empty",
+        "r5c4": "empty"
+      }
+    }
+  },
+  "determinism_hash": "sha256:cfdfbc38e67c11bbb0f2dda4cefa77afe8677fab494e0d22f475137921263f75",
+  "game": "e5.4-clean-v0",
+  "negative_control": {
+    "checked_turns": 12,
+    "view_leaks": 0
+  },
+  "players": [
+    "a",
+    "b"
+  ],
+  "rounds": 6,
+  "scores": {
+    "n_commits": 2
+  },
+  "seed": 5101,
+  "transcript": [
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:a:844c8712cf3f4420",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c1",
+            "timestamp": "2026-02-11T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:a:aab2002ff531dbfd",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c2",
+            "timestamp": "2026-02-11T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:a:bf8fc4323ce68cfd",
+            "object": "value=key",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c3",
+            "timestamp": "2026-02-11T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:a:3b9964ef72110a97",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r1c4",
+            "timestamp": "2026-02-11T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 1,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r1c1",
+            "text": "a says: r1c1 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r1c2",
+            "text": "a says: r1c2 is wall."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r1c3",
+            "text": "a says: r1c3 is key."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r1c4",
+            "text": "a says: r1c4 is empty."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:b:b52f5936b085d9d8",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c1",
+            "timestamp": "2026-02-11T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:b:685764aafd64465e",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c2",
+            "timestamp": "2026-02-11T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:b:1ee7a51c73725943",
+            "object": "value=door",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c3",
+            "timestamp": "2026-02-11T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:b:f89dce6ea490497f",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r3c4",
+            "timestamp": "2026-02-11T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 1,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c1",
+            "text": "b says: r3c1 is wall."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c2",
+            "text": "b says: r3c2 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c3",
+            "text": "b says: r3c3 is door."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c4",
+            "text": "b says: r3c4 is wall."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:a:9ae50ad9481f8ff3",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c1",
+            "timestamp": "2026-02-12T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:a:663655389a017176",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c2",
+            "timestamp": "2026-02-12T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:a:65ddda8de707a83e",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c3",
+            "timestamp": "2026-02-12T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:a:9339cdfafc512f02",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r2c4",
+            "timestamp": "2026-02-12T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 2,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r2c1",
+            "text": "a says: r2c1 is wall."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r2c2",
+            "text": "a says: r2c2 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r2c3",
+            "text": "a says: r2c3 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r2c4",
+            "text": "a says: r2c4 is empty."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:b:b5ec04f161161e76",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c1",
+            "timestamp": "2026-02-12T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:b:2d75b27c488aa1d9",
+            "object": "value=goal",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c2",
+            "timestamp": "2026-02-12T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:b:179cf1f2244dbb50",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c3",
+            "timestamp": "2026-02-12T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:b:d0e4025c6922fd1e",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r4c4",
+            "timestamp": "2026-02-12T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 2,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r4c1",
+            "text": "b says: r4c1 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r4c2",
+            "text": "b says: r4c2 is goal."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r4c3",
+            "text": "b says: r4c3 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r4c4",
+            "text": "b says: r4c4 is empty."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:anchor:a:e0f6cab4fd90dbbc",
+            "object": "value=c3",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "row3:door",
+            "timestamp": "2026-02-13T00:00:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 3,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "row3:door",
+            "text": "a says: my door in row 3 is at column c3."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:anchor:b:59304faa2321cca8",
+            "object": "value=c3",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "row3:door",
+            "timestamp": "2026-02-13T00:00:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 3,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "row3:door",
+            "text": "b says: my door in row 3 is at column c3."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "kind": "pass"
+      },
+      "actor": "a",
+      "round": 4
+    },
+    {
+      "action": {
+        "kind": "pass"
+      },
+      "actor": "b",
+      "round": 4
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:a:cb84ea31eb02ea76",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c1",
+            "timestamp": "2026-02-15T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:a:cd1751acee466c52",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c2",
+            "timestamp": "2026-02-15T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:a:6618bf6eff8405a5",
+            "object": "value=door",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c3",
+            "timestamp": "2026-02-15T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:a:cb25e4f6501c5c0e",
+            "object": "value=wall",
+            "relation": "is",
+            "source": "agent:a",
+            "subject": "r3c4",
+            "timestamp": "2026-02-15T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "a",
+      "delivered": true,
+      "round": 5,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c1",
+            "text": "a says: r3c1 is wall."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c2",
+            "text": "a says: r3c2 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c3",
+            "text": "a says: r3c3 is door."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r3c4",
+            "text": "a says: r3c4 is wall."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "deltas": [
+          {
+            "id": "game:cell:b:776a5a1320a7cd3f",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c1",
+            "timestamp": "2026-02-15T00:00:00+00:00"
+          },
+          {
+            "id": "game:cell:b:bc6123a0395e9edc",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c2",
+            "timestamp": "2026-02-15T00:01:00+00:00"
+          },
+          {
+            "id": "game:cell:b:d02273f5eb7d3bd3",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c3",
+            "timestamp": "2026-02-15T00:02:00+00:00"
+          },
+          {
+            "id": "game:cell:b:685fb91c4ad91553",
+            "object": "value=empty",
+            "relation": "is",
+            "source": "agent:b",
+            "subject": "r5c4",
+            "timestamp": "2026-02-15T00:03:00+00:00"
+          }
+        ],
+        "kind": "say",
+        "receiver": "shared"
+      },
+      "actor": "b",
+      "delivered": true,
+      "round": 5,
+      "surface": {
+        "deltas": [
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r5c1",
+            "text": "b says: r5c1 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r5c2",
+            "text": "b says: r5c2 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r5c3",
+            "text": "b says: r5c3 is empty."
+          },
+          {
+            "reason": null,
+            "status": "delivered",
+            "subject": "r5c4",
+            "text": "b says: r5c4 is empty."
+          }
+        ],
+        "renderer": "canonical"
+      }
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "grid": {
+            "r1c1": "empty",
+            "r1c2": "wall",
+            "r1c3": "key",
+            "r1c4": "empty",
+            "r2c1": "wall",
+            "r2c2": "empty",
+            "r2c3": "empty",
+            "r2c4": "empty",
+            "r3c1": "wall",
+            "r3c2": "empty",
+            "r3c3": "door",
+            "r3c4": "wall",
+            "r4c1": "empty",
+            "r4c2": "goal",
+            "r4c3": "empty",
+            "r4c4": "empty",
+            "r5c1": "empty",
+            "r5c2": "empty",
+            "r5c3": "empty",
+            "r5c4": "empty"
+          }
+        }
+      },
+      "actor": "a",
+      "round": 6
+    },
+    {
+      "action": {
+        "kind": "commit",
+        "payload": {
+          "grid": {
+            "r1c1": "empty",
+            "r1c2": "wall",
+            "r1c3": "key",
+            "r1c4": "empty",
+            "r2c1": "wall",
+            "r2c2": "empty",
+            "r2c3": "empty",
+            "r2c4": "empty",
+            "r3c1": "wall",
+            "r3c2": "empty",
+            "r3c3": "door",
+            "r3c4": "wall",
+            "r4c1": "empty",
+            "r4c2": "goal",
+            "r4c3": "empty",
+            "r4c4": "empty",
+            "r5c1": "empty",
+            "r5c2": "empty",
+            "r5c3": "empty",
+            "r5c4": "empty"
+          }
+        }
+      },
+      "actor": "b",
+      "round": 6
+    }
+  ]
+}
